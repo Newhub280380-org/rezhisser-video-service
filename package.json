@@ -2,7 +2,7 @@
   "name": "rezhisser-video-service",
   "version": "1.0.0",
   "private": true,
-  "description": "Minimal Node.js service with a health endpoint, CORS allowlist, rate limiting and a video job API (local simulation by default, optional Replicate provider).",
+  "description": "Rezhisser: Russian ad-director web app with a rule-based planner, allowlisted model routing and a video job API (offline demo by default; Replicate only in a gated private beta).",
   "main": "src/server.js",
   "engines": {
     "node": ">=18"
