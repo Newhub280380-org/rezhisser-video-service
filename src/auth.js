@@ -87,8 +87,11 @@ function createAuth({ accessKey, sessionTtlMs = 8 * 60 * 60 * 1000, now = Date.n
     },
     checkCsrf(req, session) {
       const header = req.headers['x-csrf-token'];
-      if (!session || typeof header !== 'string' || header.length !== session.csrfToken.length) return false;
-      return crypto.timingSafeEqual(Buffer.from(header), Buffer.from(session.csrfToken));
+      if (!session || typeof header !== 'string') return false;
+      const given = Buffer.from(header);
+      const expectedToken = Buffer.from(session.csrfToken);
+      if (given.length !== expectedToken.length) return false;
+      return crypto.timingSafeEqual(given, expectedToken);
     },
     sessionCookie(session, secure) {
       const maxAge = Math.max(0, Math.floor((session.expiresAt - now()) / 1000));
