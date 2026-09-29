@@ -21,7 +21,7 @@ const jsCode = js.replace(/\/\*[\s\S]*?\*\//g, '').replace(/^\s*\/\/.*$/gm, '');
 
 test('the UI is served at /, /app and /app/ with a strict CSP', async () => {
   await beta.withServer({}, async ({ base }) => {
-    for (const pathname of ['/', '/app', '/app/']) {
+    for (const pathname of ['/', '/app', '/app/', '/app' + '/'.repeat(5000)]) {
       const res = await fetch(`${base}${pathname}`);
       assert.equal(res.status, 200, pathname);
       assert.match(res.headers.get('content-type'), /^text\/html/);

@@ -245,7 +245,7 @@ review for your jurisdiction.
 | `SESSION_TTL_MS` | `28800000` | Beta session lifetime (5 min – 24 h). |
 | `LOGIN_RATE_LIMIT_MAX` / `LOGIN_RATE_LIMIT_WINDOW_MS` | `5` / `900000` | Login attempts per IP (global limit is 10×). |
 | `IMAGE_MAX_BYTES` | `262144` | Max decoded upload size (16 KB – 5 MB). |
-| `PUBLIC_ORIGIN` | – | Optional. Explicit origin (e.g. `https://rezhisser-video-service.onrender.com`) used for the same-origin check. Otherwise it is derived from `Host` and `X-Forwarded-Proto`. |
+| `PUBLIC_ORIGIN` | – | Optional. Explicit origin (e.g. `https://rezhisser-video-service.onrender.com`, no path) used for the same-origin check and the `Secure` cookie flag; an invalid value stops startup. Otherwise it is derived from `Host` and `X-Forwarded-Proto`. |
 | `REPLICATE_API_TOKEN` | – | **Secret.** Server-side only. |
 | `REPLICATE_MODEL` | – | Legacy single model (`owner/model[:version]`). |
 | `REPLICATE_ESTIMATED_COST_USD` | – | Estimate for the legacy profile. |

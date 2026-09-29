@@ -383,12 +383,14 @@ function buildProviderInput(profile, plan, { clipDuration, image } = {}) {
   return input;
 }
 
-const IMAGE_SIGNATURES = {
-  'image/png': (buf) => buf.length > 8 && buf.readUInt32BE(0) === 0x89504e47,
-  'image/jpeg': (buf) => buf.length > 3 && buf[0] === 0xff && buf[1] === 0xd8 && buf[2] === 0xff,
-  'image/webp': (buf) =>
-    buf.length > 12 && buf.toString('ascii', 0, 4) === 'RIFF' && buf.toString('ascii', 8, 12) === 'WEBP',
-};
+const IMAGE_SIGNATURES = new Map([
+  ['image/png', (buf) => buf.length > 8 && buf.readUInt32BE(0) === 0x89504e47],
+  ['image/jpeg', (buf) => buf.length > 3 && buf[0] === 0xff && buf[1] === 0xd8 && buf[2] === 0xff],
+  [
+    'image/webp',
+    (buf) => buf.length > 12 && buf.toString('ascii', 0, 4) === 'RIFF' && buf.toString('ascii', 8, 12) === 'WEBP',
+  ],
+]);
 
 function validateImage(value, maxBytes) {
   if (value === undefined || value === null || value === '') return null;
@@ -403,7 +405,8 @@ function validateImage(value, maxBytes) {
   if (buffer.length > maxBytes) {
     throw new RoutingError('image_too_large', `Изображение больше ${Math.round(maxBytes / 1024)} КБ.`);
   }
-  if (!IMAGE_SIGNATURES[match[1]](buffer)) {
+  const signature = IMAGE_SIGNATURES.get(match[1]);
+  if (!signature || !signature(buffer)) {
     throw new RoutingError('invalid_image', 'Файл не похож на изображение заявленного типа.');
   }
   return {

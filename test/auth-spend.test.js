@@ -352,3 +352,18 @@ test('paid jobs and briefs are hidden from anonymous job listings', async () => 
     assert.equal((await browser.quote(PAID_BODY)).status, 401);
   });
 });
+
+test('PUBLIC_ORIGIN is validated and pins the same-origin check', async () => {
+  for (const bad of ['not a url', 'https://x.example/path', 'ftp://x.example', 'https://x.example?a=1']) {
+    assert.throws(() => createApp({ publicOrigin: bad, logger: beta.silentLogger() }), /PUBLIC_ORIGIN/, bad);
+  }
+  await beta.withServer(beta.paidOptions({ publicOrigin: 'https://rezhisser.example///' }), async ({ base, app }) => {
+    assert.equal(app.config.publicOrigin, 'https://rezhisser.example');
+    // The real Host no longer counts as "same origin" once PUBLIC_ORIGIN is set.
+    assert.equal((await beta.client(base).login()).status, 403);
+    const pinned = beta.client(base, { origin: 'https://rezhisser.example' });
+    const res = await pinned.login();
+    assert.equal(res.status, 200);
+    assert.match(res.headers.get('set-cookie'), /; Secure/);
+  });
+});

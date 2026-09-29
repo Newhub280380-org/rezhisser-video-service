@@ -74,6 +74,29 @@ function parseMoney(value) {
   return Number.isFinite(parsed) && parsed > 0 ? Math.min(parsed, 10000) : 0;
 }
 
+// Removes trailing slashes in linear time (a regex like /\/+$/ can backtrack).
+function stripTrailingSlashes(value) {
+  let end = value.length;
+  while (end > 0 && value.charCodeAt(end - 1) === 47) end -= 1;
+  return value.slice(0, end);
+}
+
+// PUBLIC_ORIGIN must be a bare http(s) origin; anything else fails at startup.
+function parsePublicOrigin(value) {
+  const raw = stripTrailingSlashes(String(value || '').trim());
+  if (!raw) return '';
+  let parsed;
+  try {
+    parsed = new URL(raw);
+  } catch {
+    throw new Error('PUBLIC_ORIGIN must be an origin such as https://example.onrender.com.');
+  }
+  if (!['http:', 'https:'].includes(parsed.protocol) || parsed.origin !== raw) {
+    throw new Error('PUBLIC_ORIGIN must be an origin such as https://example.onrender.com.');
+  }
+  return parsed.origin;
+}
+
 function loadConfig(env = process.env, overrides = {}) {
   const allowedOrigins = parseList(env.ALLOWED_ORIGINS);
   const { replicate: replicateOverrides, ...rest } = overrides;
@@ -103,7 +126,7 @@ function loadConfig(env = process.env, overrides = {}) {
     loginRateLimitWindowMs: clamp(parseNumber(env.LOGIN_RATE_LIMIT_WINDOW_MS, 900000), 1000, 86400000),
     imageMaxBytes: clamp(parseNumber(env.IMAGE_MAX_BYTES, 262144), 16384, 5242880),
     // Optional explicit public origin of this service (e.g. https://x.onrender.com).
-    publicOrigin: (env.PUBLIC_ORIGIN || '').trim().replace(/\/+$/, ''),
+    publicOrigin: env.PUBLIC_ORIGIN || '',
     replicate: {
       apiToken: env.REPLICATE_API_TOKEN || '',
       model: (env.REPLICATE_MODEL || '').trim(),
@@ -321,6 +344,7 @@ const PAID_WARNINGS = [
 
 function createApp(options = {}) {
   const config = loadConfig(process.env, options);
+  config.publicOrigin = parsePublicOrigin(config.publicOrigin);
   const limiter = createRateLimiter({
     max: config.rateLimitMax,
     windowMs: config.rateLimitWindowMs,
@@ -556,7 +580,7 @@ function createApp(options = {}) {
     }
 
     const url = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
-    const pathname = url.pathname.replace(/\/+$/, '') || '/';
+    const pathname = stripTrailingSlashes(url.pathname) || '/';
 
     if (!pathname.startsWith('/api/') && staticFiles.handle(req, res, pathname)) {
       return;
