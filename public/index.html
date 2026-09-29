@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Режиссёр рекламных роликов: бриф простыми словами → раскадровка, крючок, призыв и подбор видеомодели. Демо-режим бесплатный и без настоящего видео.">
+  <title>Режиссёр — рекламный ролик из брифа</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/app.css">
+  <script src="/assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#brief">Перейти к брифу</a>
+
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Режиссёр — на главную">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name">Режиссёр</span>
+    </a>
+    <p class="mode-badge" id="mode-badge" data-mode="demo" role="status">Демо / без настоящего видео</p>
+    <div class="topbar-actions">
+      <span class="beta-chip" id="beta-chip" hidden>Бета-доступ</span>
+      <button type="button" class="btn btn-ghost" id="login-btn">Вход для беты</button>
+      <button type="button" class="btn btn-ghost" id="logout-btn" hidden>Выйти</button>
+    </div>
+  </header>
+
+  <div class="banner banner-error" id="global-error" role="alert" hidden>
+    <p id="global-error-text"></p>
+    <button type="button" class="btn btn-small" id="global-retry">Повторить</button>
+  </div>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Рекламное бюро в одном окне · закрытая бета</p>
+        <h1 id="hero-title">Опишите продукт простыми словами — <em>режиссёр</em> соберёт ролик.</h1>
+        <p class="lede">Режиссёр разбирает бриф, придумывает крючок и призыв, расписывает кадры, свет и камеру и сам подбирает видеомодель. Разбираться в нейросетях не нужно.</p>
+      </div>
+      <ol class="steps">
+        <li><span class="step-n">01</span><strong>Бриф</strong><span>Что рекламируем, для кого и где покажем.</span></li>
+        <li><span class="step-n">02</span><strong>Раскадровка</strong><span>Крючок, кадры по секундам, визуальный стиль, промпт.</span></li>
+        <li><span class="step-n">03</span><strong>Рендер</strong><span>Демо — бесплатно. Настоящее видео — только в бете и после подтверждения цены.</span></li>
+      </ol>
+      <p class="honesty" id="honesty-note">
+        Сейчас сервис работает в <strong>демо-режиме</strong>: раскадровка настоящая, а видео не создаётся и деньги не списываются.
+        Режиссёр работает по правилам и шаблонам — это не нейросеть.
+      </p>
+    </section>
+
+    <div class="workspace">
+      <section class="panel panel-brief" id="brief" aria-labelledby="brief-title" tabindex="-1">
+        <div class="panel-head">
+          <h2 id="brief-title">Бриф</h2>
+          <button type="button" class="btn btn-link" id="example-btn">Заполнить пример</button>
+        </div>
+
+        <form id="brief-form" novalidate>
+          <fieldset>
+            <legend>Продукт</legend>
+            <div class="field">
+              <label for="f-product">Что рекламируем <span class="req" aria-hidden="true">*</span></label>
+              <input id="f-product" name="product" type="text" required maxlength="120" autocomplete="off" placeholder="Например: холодный кофе «Утро» в банке" aria-describedby="f-product-hint">
+              <p class="hint" id="f-product-hint">Название и суть — одной фразой.</p>
+            </div>
+            <div class="field">
+              <label for="f-offer">Главная выгода или оффер</label>
+              <input id="f-offer" name="offer" type="text" maxlength="200" autocomplete="off" placeholder="Без сахара, бодрит на 4 часа">
+            </div>
+            <div class="field">
+              <label for="f-audience">Для кого</label>
+              <input id="f-audience" name="audience" type="text" maxlength="200" autocomplete="off" placeholder="Студенты и айтишники 20–30 лет">
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Задача и площадка</legend>
+            <div class="field-row">
+              <div class="field">
+                <label for="f-goal">Цель ролика</label>
+                <select id="f-goal" name="goal"></select>
+              </div>
+              <div class="field">
+                <label for="f-platform">Где покажем</label>
+                <select id="f-platform" name="platform"></select>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="f-aspect">Формат кадра</label>
+                <select id="f-aspect" name="aspect"></select>
+              </div>
+              <fieldset class="field chips" id="f-duration">
+                <legend class="label">Длительность</legend>
+              </fieldset>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Стиль и голос</legend>
+            <div class="mood-grid" id="f-mood" role="radiogroup" aria-label="Настроение"></div>
+            <div class="field-row">
+              <div class="field">
+                <label for="f-voice">Голос / тон</label>
+                <select id="f-voice" name="voice"></select>
+              </div>
+              <div class="field">
+                <label for="f-cta">Призыв (необязательно)</label>
+                <input id="f-cta" name="cta" type="text" maxlength="60" autocomplete="off" placeholder="Попробуйте сегодня">
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-notes">Обязательно учесть</label>
+              <textarea id="f-notes" name="notes" rows="2" maxlength="300" placeholder="Логотип в конце, без людей в кадре…"></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Фото продукта <span class="optional">необязательно</span></legend>
+            <div class="upload">
+              <label class="upload-drop" for="f-image">
+                <span class="upload-title">Добавить фото</span>
+                <span class="hint" id="f-image-hint">PNG, JPEG или WebP. С фото режиссёр выберет модель «фото → видео». Фото уменьшается в браузере перед отправкой.</span>
+              </label>
+              <input id="f-image" name="image" type="file" accept="image/png,image/jpeg,image/webp" class="visually-hidden" aria-describedby="f-image-hint">
+              <figure class="upload-preview" id="image-preview" hidden>
+                <img id="image-preview-img" alt="Загруженное фото продукта">
+                <figcaption>
+                  <span id="image-preview-meta"></span>
+                  <button type="button" class="btn btn-link" id="image-remove">Убрать фото</button>
+                </figcaption>
+              </figure>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Режим и модель</legend>
+            <div class="tier" role="radiogroup" aria-label="Режим генерации">
+              <label class="tier-option">
+                <input type="radio" name="tier" value="demo" checked>
+                <span><strong>Демо</strong><small>Бесплатно · видео не создаётся</small></span>
+              </label>
+              <label class="tier-option" id="tier-paid-label">
+                <input type="radio" name="tier" value="paid" id="tier-paid" disabled aria-describedby="tier-paid-reason">
+                <span><strong>Настоящее видео</strong><small id="tier-paid-reason">Закрыто: нужна настройка сервера и вход в бету</small></span>
+              </label>
+            </div>
+            <div class="field">
+              <label for="f-model">Модель</label>
+              <select id="f-model" name="modelId" aria-describedby="f-model-hint"></select>
+              <p class="hint" id="f-model-hint">«Авто» — режиссёр сам выберет модель и объяснит почему.</p>
+            </div>
+          </fieldset>
+
+          <div class="form-error" id="form-error" role="alert" hidden></div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" id="plan-btn">
+              <span class="btn-label">Собрать раскадровку</span>
+              <span class="spinner" aria-hidden="true"></span>
+            </button>
+            <p class="hint">Бесплатно. Ничего не генерируется, пока вы не нажмёте «Рендер».</p>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel panel-plan" id="plan" aria-labelledby="plan-title" aria-busy="false">
+        <div class="panel-head">
+          <h2 id="plan-title">Раскадровка</h2>
+          <span class="engine-badge" id="engine-badge" hidden>По правилам · без ИИ</span>
+        </div>
+
+        <div class="empty-state" id="plan-empty">
+          <div class="clapper" aria-hidden="true"></div>
+          <p><strong>Здесь появится раскадровка.</strong></p>
+          <p class="hint">Заполните бриф (или нажмите «Заполнить пример») и нажмите «Собрать раскадровку».</p>
+        </div>
+
+        <div class="plan-loading" id="plan-loading" hidden>
+          <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton short"></div>
+          <p class="hint">Режиссёр раскладывает бриф по кадрам…</p>
+        </div>
+
+        <div class="plan-body" id="plan-body" hidden>
+          <article class="hook-card">
+            <p class="eyebrow">Крючок · первые секунды</p>
+            <p class="hook" id="plan-hook"></p>
+            <p class="cta-line">Призыв: <strong id="plan-cta"></strong></p>
+          </article>
+
+          <div class="plan-grid">
+            <section aria-labelledby="cb-title">
+              <h3 id="cb-title">Креативный бриф</h3>
+              <dl class="kv" id="plan-creative"></dl>
+            </section>
+            <section aria-labelledby="vd-title">
+              <h3 id="vd-title">Визуальное решение</h3>
+              <dl class="kv" id="plan-visual"></dl>
+            </section>
+          </div>
+
+          <section aria-labelledby="sb-title">
+            <h3 id="sb-title">Кадры</h3>
+            <ol class="storyboard" id="plan-shots"></ol>
+          </section>
+
+          <section class="selection" aria-labelledby="sel-title">
+            <h3 id="sel-title">Выбор модели</h3>
+            <div class="selection-card" id="selection-card"></div>
+          </section>
+
+          <details class="prompt-details">
+            <summary>Промпт для видеомодели (для специалистов)</summary>
+            <pre id="plan-prompt"></pre>
+            <button type="button" class="btn btn-small" id="copy-prompt">Скопировать промпт</button>
+          </details>
+
+          <ul class="notes" id="plan-notes"></ul>
+          <p class="disclaimer" id="plan-disclaimer"></p>
+
+          <section class="render" aria-labelledby="render-title">
+            <h3 id="render-title">Рендер</h3>
+            <div id="render-demo">
+              <p class="render-note"><span class="badge badge-demo">Демо</span> Запуск бесплатный. Сервис покажет процесс, но <strong>видео не будет создано</strong>.</p>
+              <button type="button" class="btn btn-primary" id="demo-render-btn">
+                <span class="btn-label">Запустить демо-рендер</span>
+                <span class="spinner" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div id="render-paid" hidden>
+              <p class="render-note"><span class="badge badge-paid">Платно</span> Настоящая генерация через внешнего провайдера. Сначала получите оценку стоимости.</p>
+              <button type="button" class="btn btn-secondary" id="quote-btn">
+                <span class="btn-label">Получить оценку стоимости</span>
+                <span class="spinner" aria-hidden="true"></span>
+              </button>
+              <div class="quote" id="quote" hidden>
+                <p class="quote-price"><span id="quote-price"></span><small id="quote-meta"></small></p>
+                <ul class="warnings" id="quote-warnings"></ul>
+                <p class="hint" id="quote-budget"></p>
+                <label class="confirm">
+                  <input type="checkbox" id="quote-confirm">
+                  <span>Я понимаю, что это <strong>платная генерация</strong>, сумма — оценка, а при ошибке или таймауте деньги могут не вернуться.</span>
+                </label>
+                <button type="button" class="btn btn-danger" id="paid-render-btn" disabled>
+                  <span class="btn-label">Подтвердить и запустить платную генерацию</span>
+                  <span class="spinner" aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
+            <div class="form-error" id="render-error" role="alert" hidden></div>
+          </section>
+        </div>
+      </section>
+    </div>
+
+    <section class="panel panel-jobs" id="jobs" aria-labelledby="jobs-title">
+      <div class="panel-head">
+        <h2 id="jobs-title">Рендеры</h2>
+        <button type="button" class="btn btn-link" id="clear-history" hidden>Очистить историю</button>
+      </div>
+      <div class="job-current" id="job-current" aria-live="polite" hidden></div>
+      <p class="empty-inline" id="history-empty">Пока пусто. Запустите демо-рендер — он появится здесь.</p>
+      <ul class="history" id="history"></ul>
+      <p class="hint">История хранится только в этом браузере. На бесплатном тарифе Render задания на сервере стираются при каждом перезапуске.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p><strong>Честно о сервисе.</strong> Режиссёр работает на детерминированных правилах и шаблонах — это не нейросеть. Демо-рендер ничего не генерирует. Настоящая генерация доступна только участникам закрытой беты после настройки сервера, с оценкой стоимости и явным подтверждением. Приём платежей и аккаунты пользователей ещё не реализованы.</p>
+    <p>Это отдельное приложение сервиса rezhisser-video-service. Сайт business-41.pazi.dev этим обновлением не изменялся.</p>
+  </footer>
+
+  <dialog class="dialog" id="login-dialog" aria-labelledby="login-title" aria-describedby="login-desc">
+    <form id="login-form" novalidate>
+      <h2 id="login-title">Вход для закрытой беты</h2>
+      <p class="hint" id="login-desc">Ключ выдаёт владелец сервиса. Он отправляется только на этот сервер и не сохраняется в браузере.</p>
+      <div class="field">
+        <label for="login-key">Ключ доступа</label>
+        <input id="login-key" name="accessKey" type="password" autocomplete="current-password" required maxlength="512">
+      </div>
+      <div class="form-error" id="login-error" role="alert" hidden></div>
+      <div class="dialog-actions">
+        <button type="button" class="btn btn-ghost" id="login-cancel">Отмена</button>
+        <button type="submit" class="btn btn-primary" id="login-submit">
+          <span class="btn-label">Войти</span>
+          <span class="spinner" aria-hidden="true"></span>
+        </button>
+      </div>
+    </form>
+  </dialog>
+</body>
+</html>
