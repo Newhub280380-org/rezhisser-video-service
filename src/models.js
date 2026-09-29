@@ -383,14 +383,18 @@ function buildProviderInput(profile, plan, { clipDuration, image } = {}) {
   return input;
 }
 
-const IMAGE_SIGNATURES = new Map([
-  ['image/png', (buf) => buf.length > 8 && buf.readUInt32BE(0) === 0x89504e47],
-  ['image/jpeg', (buf) => buf.length > 3 && buf[0] === 0xff && buf[1] === 0xd8 && buf[2] === 0xff],
-  [
-    'image/webp',
-    (buf) => buf.length > 12 && buf.toString('ascii', 0, 4) === 'RIFF' && buf.toString('ascii', 8, 12) === 'WEBP',
-  ],
-]);
+function hasImageSignature(mime, buf) {
+  switch (mime) {
+    case 'image/png':
+      return buf.length > 8 && buf.readUInt32BE(0) === 0x89504e47;
+    case 'image/jpeg':
+      return buf.length > 3 && buf[0] === 0xff && buf[1] === 0xd8 && buf[2] === 0xff;
+    case 'image/webp':
+      return buf.length > 12 && buf.toString('ascii', 0, 4) === 'RIFF' && buf.toString('ascii', 8, 12) === 'WEBP';
+    default:
+      return false;
+  }
+}
 
 function validateImage(value, maxBytes) {
   if (value === undefined || value === null || value === '') return null;
@@ -405,8 +409,7 @@ function validateImage(value, maxBytes) {
   if (buffer.length > maxBytes) {
     throw new RoutingError('image_too_large', `Изображение больше ${Math.round(maxBytes / 1024)} КБ.`);
   }
-  const signature = IMAGE_SIGNATURES.get(match[1]);
-  if (!signature || !signature(buffer)) {
+  if (!hasImageSignature(match[1], buffer)) {
     throw new RoutingError('invalid_image', 'Файл не похож на изображение заявленного типа.');
   }
   return {
