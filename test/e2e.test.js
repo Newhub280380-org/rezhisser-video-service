@@ -224,7 +224,7 @@ test('configuration falls back to documented defaults', () => {
   assert.equal(config.rateLimitMax, 30);
   assert.equal(config.rateLimitWindowMs, 60000);
   assert.deepEqual(config.allowedOrigins, DEFAULT_ALLOWED_ORIGINS);
-  assert.ok(DEFAULT_ALLOWED_ORIGINS.includes(ALLOWED_ORIGIN));
+  assert.equal(DEFAULT_ALLOWED_ORIGINS[0], ALLOWED_ORIGIN);
 
   const custom = loadConfig({
     ALLOWED_ORIGINS: 'https://a.example, https://b.example',

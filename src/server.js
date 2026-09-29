@@ -199,8 +199,9 @@ function createApp(options = {}) {
       return;
     }
     if (origin) {
+      // Credentials are intentionally not allowed: the API is stateless and
+      // requires no cookies or authorization headers.
       res.setHeader('Access-Control-Allow-Origin', origin);
-      res.setHeader('Access-Control-Allow-Credentials', 'true');
     }
 
     const url = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
@@ -208,7 +209,7 @@ function createApp(options = {}) {
 
     if (req.method === 'OPTIONS') {
       res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-      res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+      res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
       res.setHeader('Access-Control-Max-Age', '600');
       res.writeHead(204);
       res.end();
