@@ -1,0 +1,15 @@
+{
+  "name": "rezhisser-video-service",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Minimal Node.js service with a health endpoint, CORS allowlist, rate limiting and a local (simulated) video job API.",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test \"test/**/*.test.js\""
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: rezhisser-video-service
+    runtime: node
+    plan: free
+    buildCommand: npm install --omit=dev
+    startCommand: node src/server.js
+    healthCheckPath: /api/health
+    envVars:
+      - key: ALLOWED_ORIGINS
+        value: https://business-41.pazi.dev
+      - key: RATE_LIMIT_MAX
+        value: "30"
+      - key: RATE_LIMIT_WINDOW_MS
+        value: "60000"
+      - key: DATA_DIR
+        value: /opt/render/project/src/data
