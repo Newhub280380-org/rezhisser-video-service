@@ -2,7 +2,7 @@
   "name": "rezhisser-video-service",
   "version": "1.0.0",
   "private": true,
-  "description": "Minimal Node.js service with a health endpoint, CORS allowlist, rate limiting and a local (simulated) video job API.",
+  "description": "Minimal Node.js service with a health endpoint, CORS allowlist, rate limiting and a video job API (local simulation by default, optional Replicate provider).",
   "main": "src/server.js",
   "engines": {
     "node": ">=18"

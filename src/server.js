@@ -5,6 +5,26 @@ const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
 
+const { createLocalSimulationProvider } = require('./providers/local-simulation.js');
+const { createReplicateProvider } = require('./providers/replicate.js');
+
+const KNOWN_PROVIDERS = ['local-simulation', 'replicate'];
+const DEFAULT_PROVIDER = 'local-simulation';
+// Request fields that could redirect spend or leak credentials. Model, token and
+// endpoint are server-side configuration only.
+const FORBIDDEN_JOB_FIELDS = [
+  'model',
+  'version',
+  'token',
+  'apiToken',
+  'apiKey',
+  'apiBaseUrl',
+  'baseUrl',
+  'url',
+  'webhook',
+  'input',
+];
+
 const DEFAULT_ALLOWED_ORIGINS = [
   'https://business-41.pazi.dev',
   'http://localhost:3000',
@@ -26,8 +46,13 @@ function parseNumber(value, fallback) {
   return Number.isFinite(parsed) && parsed > 0 ? parsed : fallback;
 }
 
+function clamp(value, min, max) {
+  return Math.min(max, Math.max(min, value));
+}
+
 function loadConfig(env = process.env, overrides = {}) {
   const allowedOrigins = parseList(env.ALLOWED_ORIGINS);
+  const { replicate: replicateOverrides, ...rest } = overrides;
   return {
     host: env.HOST || '0.0.0.0',
     port: parseNumber(env.PORT, 3000),
@@ -37,7 +62,19 @@ function loadConfig(env = process.env, overrides = {}) {
     dataDir: env.DATA_DIR || path.join(process.cwd(), 'data'),
     // How long a simulated job stays "processing" before it is marked as finished.
     simulationDurationMs: parseNumber(env.SIMULATION_DURATION_MS, 3000),
-    ...overrides,
+    videoProvider: (env.VIDEO_PROVIDER || DEFAULT_PROVIDER).trim().toLowerCase(),
+    replicate: {
+      apiToken: env.REPLICATE_API_TOKEN || '',
+      model: (env.REPLICATE_MODEL || '').trim(),
+      apiBaseUrl: env.REPLICATE_API_BASE_URL || 'https://api.replicate.com/v1',
+      pollIntervalMs: clamp(parseNumber(env.REPLICATE_POLL_INTERVAL_MS, 5000), 1000, 60000),
+      maxWaitMs: clamp(parseNumber(env.REPLICATE_MAX_WAIT_MS, 600000), 10000, 1800000),
+      requestTimeoutMs: clamp(parseNumber(env.REPLICATE_REQUEST_TIMEOUT_MS, 30000), 1000, 120000),
+      maxConcurrent: clamp(parseNumber(env.REPLICATE_MAX_CONCURRENT, 1), 1, 10),
+      extraInput: env.REPLICATE_EXTRA_INPUT_JSON || '',
+      ...replicateOverrides,
+    },
+    ...rest,
   };
 }
 
@@ -84,7 +121,9 @@ function createRateLimiter({ max, windowMs }) {
   };
 }
 
-function createJobStore(dataDir, simulationDurationMs) {
+const TERMINAL_STATUSES = new Set(['succeeded', 'failed']);
+
+function createJobStore(dataDir, resolveProvider) {
   fs.mkdirSync(dataDir, { recursive: true });
 
   const jobPath = (id) => path.join(dataDir, `${id}.json`);
@@ -108,39 +147,40 @@ function createJobStore(dataDir, simulationDurationMs) {
   }
 
   function advance(job, now = Date.now()) {
-    if (job.status === 'succeeded') return job;
-    const elapsed = now - new Date(job.createdAt).getTime();
-    if (elapsed >= simulationDurationMs) {
-      return write({
-        ...job,
-        status: 'succeeded',
-        progress: 100,
-        completedAt: new Date(now).toISOString(),
-        result: {
-          simulated: true,
-          videoUrl: null,
-          note:
-            'No video was generated. This service runs a local simulation only and is not connected to any video provider.',
-        },
-      });
-    }
-    const progress = Math.min(99, Math.floor((elapsed / simulationDurationMs) * 100));
-    if (job.status === 'processing' && progress === job.progress) return job;
-    return write({ ...job, status: 'processing', progress });
+    if (TERMINAL_STATUSES.has(job.status)) return job;
+    const provider = resolveProvider(job.provider || DEFAULT_PROVIDER);
+    const patch = provider
+      ? provider.refresh(job, now)
+      : {
+          status: 'failed',
+          completedAt: new Date(now).toISOString(),
+          error: {
+            code: 'provider_unavailable',
+            message: `Provider "${job.provider}" is not enabled on this server.`,
+          },
+        };
+    return patch ? write({ ...job, ...patch }) : job;
   }
 
   return {
-    create(prompt, now = Date.now()) {
+    create(prompt, provider, now = Date.now()) {
       return write({
         id: crypto.randomUUID(),
         prompt,
+        provider: provider.name,
         status: 'queued',
         progress: 0,
-        simulated: true,
+        simulated: !provider.realVideoGeneration,
+        realVideoGeneration: provider.realVideoGeneration,
         createdAt: new Date(now).toISOString(),
         completedAt: null,
         result: null,
+        error: null,
       });
+    },
+    update(id, patch) {
+      const job = read(id);
+      return job ? write({ ...job, ...patch }) : null;
     },
     get(id, now = Date.now()) {
       const job = read(id);
@@ -180,13 +220,37 @@ function readBody(req, limitBytes = 64 * 1024) {
   });
 }
 
+function createProviders(config) {
+  if (!KNOWN_PROVIDERS.includes(config.videoProvider)) {
+    throw new Error(
+      `Unsupported VIDEO_PROVIDER "${config.videoProvider}". Use one of: ${KNOWN_PROVIDERS.join(', ')}.`,
+    );
+  }
+  const providers = new Map();
+  providers.set(
+    DEFAULT_PROVIDER,
+    createLocalSimulationProvider({ simulationDurationMs: config.simulationDurationMs }),
+  );
+  // The Replicate provider is only constructed (and can only make network
+  // calls) when it is explicitly selected by server configuration.
+  if (config.videoProvider === 'replicate') {
+    providers.set(
+      'replicate',
+      createReplicateProvider({ ...config.replicate, fetchImpl: config.fetchImpl, logger: config.logger }),
+    );
+  }
+  return providers;
+}
+
 function createApp(options = {}) {
   const config = loadConfig(process.env, options);
   const limiter = createRateLimiter({
     max: config.rateLimitMax,
     windowMs: config.rateLimitWindowMs,
   });
-  const jobs = createJobStore(config.dataDir, config.simulationDurationMs);
+  const providers = createProviders(config);
+  const defaultProvider = providers.get(config.videoProvider);
+  const jobs = createJobStore(config.dataDir, (name) => providers.get(name));
 
   const server = http.createServer(async (req, res) => {
     applySecurityHeaders(res);
@@ -238,8 +302,8 @@ function createApp(options = {}) {
           status: 'ok',
           uptimeSeconds: Math.floor(process.uptime()),
           timestamp: new Date().toISOString(),
-          videoProvider: 'local-simulation',
-          realVideoGeneration: false,
+          videoProvider: defaultProvider.name,
+          realVideoGeneration: defaultProvider.realVideoGeneration,
         });
         return;
       }
@@ -253,6 +317,32 @@ function createApp(options = {}) {
           sendJson(res, 400, { error: 'invalid_json' });
           return;
         }
+        if (!payload || typeof payload !== 'object' || Array.isArray(payload)) {
+          sendJson(res, 400, { error: 'invalid_json' });
+          return;
+        }
+        const forbidden = FORBIDDEN_JOB_FIELDS.find((field) =>
+          Object.prototype.hasOwnProperty.call(payload, field),
+        );
+        if (forbidden) {
+          sendJson(res, 400, { error: 'field_not_allowed', field: forbidden });
+          return;
+        }
+        let provider = defaultProvider;
+        if (payload.provider !== undefined) {
+          if (typeof payload.provider !== 'string' || !KNOWN_PROVIDERS.includes(payload.provider)) {
+            sendJson(res, 400, { error: 'unsupported_provider', supported: KNOWN_PROVIDERS });
+            return;
+          }
+          provider = providers.get(payload.provider);
+          if (!provider) {
+            sendJson(res, 400, {
+              error: 'provider_not_enabled',
+              enabled: Array.from(providers.keys()),
+            });
+            return;
+          }
+        }
         const prompt = typeof payload.prompt === 'string' ? payload.prompt.trim() : '';
         if (!prompt) {
           sendJson(res, 400, { error: 'prompt_required' });
@@ -262,7 +352,19 @@ function createApp(options = {}) {
           sendJson(res, 400, { error: 'prompt_too_long' });
           return;
         }
-        sendJson(res, 201, { job: jobs.create(prompt) });
+        if (provider.canAccept && !provider.canAccept()) {
+          sendJson(res, 503, { error: 'provider_busy' }, { 'Retry-After': '30' });
+          return;
+        }
+        const job = jobs.create(prompt, provider);
+        provider.start(job, (patch) => {
+          try {
+            jobs.update(job.id, patch);
+          } catch (error) {
+            console.error(`failed to persist job ${job.id}: ${error.code || 'error'}`);
+          }
+        });
+        sendJson(res, 201, { job });
         return;
       }
 
@@ -293,19 +395,31 @@ function createApp(options = {}) {
     }
   });
 
-  return { server, config, jobs, limiter };
+  function closeProviders() {
+    for (const provider of providers.values()) provider.close();
+  }
+
+  return { server, config, jobs, limiter, providers, closeProviders };
 }
 
 function start(options = {}) {
-  const app = createApp(options);
+  let app;
+  try {
+    app = createApp(options);
+  } catch (error) {
+    console.error(`configuration error: ${error.message}`);
+    process.exit(1);
+  }
   app.server.listen(app.config.port, app.config.host, () => {
     const address = app.server.address();
     console.log(`rezhisser-video-service listening on http://${app.config.host}:${address.port}`);
     console.log(`data directory: ${app.config.dataDir}`);
+    console.log(`video provider: ${app.config.videoProvider}`);
   });
 
   const shutdown = (signal) => {
     console.log(`received ${signal}, shutting down`);
+    app.closeProviders();
     app.server.close(() => {
       console.log('server closed');
       process.exit(0);
@@ -323,4 +437,4 @@ if (require.main === module) {
   start();
 }
 
-module.exports = { createApp, start, loadConfig, DEFAULT_ALLOWED_ORIGINS };
+module.exports = { createApp, start, loadConfig, DEFAULT_ALLOWED_ORIGINS, KNOWN_PROVIDERS };

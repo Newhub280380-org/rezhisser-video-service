@@ -15,3 +15,24 @@ services:
         value: "60000"
       - key: DATA_DIR
         value: /opt/render/project/src/data
+      # Video provider. Keep "local-simulation" (no real video, no spend) until a
+      # Replicate token and a tested model are configured in the Render dashboard.
+      - key: VIDEO_PROVIDER
+        value: local-simulation
+      # Secret: set the value only in the Render dashboard. Never commit it.
+      - key: REPLICATE_API_TOKEN
+        sync: false
+      # Required only when VIDEO_PROVIDER=replicate, e.g. "owner/model" or
+      # "owner/model:version". Set it in the dashboard after testing the model.
+      - key: REPLICATE_MODEL
+        sync: false
+      - key: REPLICATE_API_BASE_URL
+        value: https://api.replicate.com/v1
+      - key: REPLICATE_POLL_INTERVAL_MS
+        value: "5000"
+      - key: REPLICATE_MAX_WAIT_MS
+        value: "600000"
+      - key: REPLICATE_REQUEST_TIMEOUT_MS
+        value: "30000"
+      - key: REPLICATE_MAX_CONCURRENT
+        value: "1"
