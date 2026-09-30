@@ -4,7 +4,9 @@
 //
 // Spend-safety properties:
 // - only constructed when VIDEO_PROVIDER=replicate and a token + model are set;
-// - the model, token and API base URL come from server configuration only;
+// - the model, input mapping, token and API base URL come from server
+//   configuration only (allowlisted model profiles, see src/models.js);
+// - billable jobs are gated by src/auth.js and src/spend.js in the server;
 // - every HTTP request has a timeout, polling is bounded by maxWaitMs and a
 //   hard poll-count cap, and predictions are cancelled (best effort) when the
 //   wait budget is exceeded or the service shuts down;
@@ -144,10 +146,10 @@ function validateReplicateConfig(config = {}) {
       'VIDEO_PROVIDER=replicate requires REPLICATE_API_TOKEN to be set.',
     );
   }
-  if (!config.model) {
+  if (!config.model && !config.allowNoDefaultModel) {
     throw new ProviderError(
       'provider_misconfigured',
-      'VIDEO_PROVIDER=replicate requires REPLICATE_MODEL to be set.',
+      'VIDEO_PROVIDER=replicate requires REPLICATE_MODEL (or VIDEO_MODEL_PROFILES_JSON) to be set.',
     );
   }
   for (const key of ['pollIntervalMs', 'maxWaitMs', 'requestTimeoutMs', 'maxConcurrent']) {
@@ -157,7 +159,7 @@ function validateReplicateConfig(config = {}) {
   }
   return {
     apiToken: config.apiToken.trim(),
-    model: parseModel(config.model),
+    model: config.model ? parseModel(config.model) : null,
     apiBaseUrl: parseBaseUrl(config.apiBaseUrl || 'https://api.replicate.com/v1'),
     extraInput: parseExtraInput(config.extraInput),
   };
@@ -253,12 +255,29 @@ function createReplicateProvider(config = {}) {
     }
   }
 
-  function createPrediction(prompt, signal) {
-    const input = { ...extraInput, prompt };
-    if (model.version) {
-      return request('POST', '/predictions', { version: model.version, input }, signal);
+  // `spec` is either a prompt string (legacy single REPLICATE_MODEL) or a
+  // server-built { model: { owner, name, version }, input } from an
+  // allowlisted model profile. It never comes from the HTTP request directly.
+  function resolveSpec(spec) {
+    if (typeof spec === 'string') {
+      if (!model) throw new ProviderError('provider_misconfigured', 'No default REPLICATE_MODEL is configured.');
+      return { target: model, input: { ...extraInput, prompt: spec } };
     }
-    const modelPath = `/models/${encodeURIComponent(model.owner)}/${encodeURIComponent(model.name)}/predictions`;
+    if (!spec || !spec.model || !spec.input || typeof spec.input !== 'object') {
+      throw new ProviderError('provider_misconfigured', 'Invalid prediction request.');
+    }
+    const target = parseModel(
+      `${spec.model.owner}/${spec.model.name}${spec.model.version ? `:${spec.model.version}` : ''}`,
+    );
+    return { target, input: { ...spec.input } };
+  }
+
+  function createPrediction(spec, signal) {
+    const { target, input } = resolveSpec(spec);
+    if (target.version) {
+      return request('POST', '/predictions', { version: target.version, input }, signal);
+    }
+    const modelPath = `/models/${encodeURIComponent(target.owner)}/${encodeURIComponent(target.name)}/predictions`;
     return request('POST', modelPath, { input }, signal);
   }
 
@@ -274,9 +293,9 @@ function createReplicateProvider(config = {}) {
     }
   }
 
-  async function generate(prompt, { signal, onPrediction } = {}) {
+  async function generate(spec, { signal, onPrediction } = {}) {
     const deadline = now() + maxWaitMs;
-    let prediction = await createPrediction(prompt, signal);
+    let prediction = await createPrediction(spec, signal);
     const id = prediction && prediction.id;
     if (typeof id !== 'string' || !PREDICTION_ID_PATTERN.test(id)) {
       throw new ProviderError('provider_invalid_response', 'Replicate API did not return a valid prediction id.');
@@ -340,11 +359,11 @@ function createReplicateProvider(config = {}) {
     },
     // Starts the prediction in the background. The active entry is registered
     // synchronously so that refresh() never mistakes a new job for an orphan.
-    start(job, update) {
+    start(job, update, spec) {
       if (closed) throw new ProviderError('provider_closed', 'Provider is shutting down.');
       const controller = new AbortController();
       active.set(job.id, controller);
-      return generate(job.prompt, {
+      return generate(spec || job.prompt, {
         signal: controller.signal,
         onPrediction: (predictionId) =>
           update({ status: 'processing', progress: 0, providerPredictionId: predictionId }),

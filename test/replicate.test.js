@@ -10,6 +10,7 @@ const os = require('node:os');
 const path = require('node:path');
 
 const { createApp, loadConfig } = require('../src/server.js');
+const beta = require('./helpers/beta.js');
 const {
   createReplicateProvider,
   extractVideoUrl,
@@ -323,110 +324,111 @@ test('extractVideoUrl handles common output shapes and rejects unsafe URLs', () 
   assert.equal(extractVideoUrl({ text: 'hello' }), null);
 });
 
-test('replicate jobs run end to end through the API with a mocked provider', async () => {
-  const { fetchImpl } = fakeReplicate({
+test('replicate jobs run end to end through the gated beta flow with a mocked provider', async () => {
+  const { fetchImpl, calls } = fakeReplicate({
     pollStates: [{ status: 'processing' }, { status: 'succeeded', output: VIDEO_URL }],
   });
   const logger = silentLogger();
-  await withServer(
-    {
-      videoProvider: 'replicate',
-      fetchImpl,
-      logger,
-      replicate: { apiToken: FAKE_TOKEN, model: 'acme/video-model', apiBaseUrl: BASE, pollIntervalMs: 1, maxWaitMs: 5000 },
-    },
-    async ({ base, dataDir }) => {
-      const health = await (await fetch(`${base}/api/health`)).json();
-      assert.equal(health.videoProvider, 'replicate');
-      assert.equal(health.realVideoGeneration, true);
+  await beta.withServer(beta.paidOptions({ fetchImpl, logger }), async ({ base, dataDir }) => {
+    const health = await (await fetch(`${base}/api/health`)).json();
+    assert.equal(health.videoProvider, 'replicate');
+    assert.equal(health.realVideoGeneration, true);
+    assert.equal(health.paidGenerationEnabled, true);
 
-      const res = await postJob(base, { prompt: 'coffee ad', provider: 'replicate' });
-      assert.equal(res.status, 201);
-      const { job } = await res.json();
-      assert.equal(job.provider, 'replicate');
-      assert.equal(job.simulated, false);
-      assert.equal(job.realVideoGeneration, true);
+    // The legacy public prompt API can no longer start a billable prediction.
+    const legacy = await postJob(base, { prompt: 'coffee ad', provider: 'replicate' });
+    assert.equal(legacy.status, 401);
+    assert.equal(calls.length, 0);
 
-      const finished = await waitForTerminal(base, job.id);
-      assert.equal(finished.status, 'succeeded');
-      assert.equal(finished.result.simulated, false);
-      assert.equal(finished.result.videoUrl, VIDEO_URL);
-      assert.equal(finished.result.providerPredictionId, 'pred123');
+    const browser = beta.client(base);
+    assert.equal((await browser.login()).status, 200);
+    const { quote, job: created } = await browser.quoteAndRun({ brief: beta.BRIEF });
+    assert.equal(quote.status, 201);
+    assert.equal(quote.json.quote.estimateUsd, 0.5);
+    assert.equal(created.status, 201);
+    const { job } = created.json;
+    assert.equal(job.provider, 'replicate');
+    assert.equal(job.simulated, false);
+    assert.equal(job.realVideoGeneration, true);
+    assert.equal(job.paid, true);
 
-      const local = await postJob(base, { prompt: 'coffee ad', provider: 'local-simulation' });
-      assert.equal((await local.json()).job.simulated, true);
+    const finished = await browser.waitForTerminal(job.id);
+    assert.equal(finished.status, 'succeeded');
+    assert.equal(finished.result.simulated, false);
+    assert.equal(finished.result.videoUrl, VIDEO_URL);
+    assert.equal(finished.result.providerPredictionId, 'pred123');
 
-      const stored = fs.readdirSync(dataDir).map((file) => fs.readFileSync(path.join(dataDir, file), 'utf8'));
-      assert.ok(stored.every((content) => !content.includes(FAKE_TOKEN)));
-    },
-  );
+    // Legacy REPLICATE_MODEL profile: official-model endpoint, prompt only.
+    const create = calls.find((call) => call.method === 'POST');
+    assert.equal(create.url, `${BASE}/models/acme/video-model/predictions`);
+    assert.deepEqual(Object.keys(create.body.input), ['prompt']);
+    assert.equal(create.body.input.prompt, finished.prompt);
+
+    const local = await postJob(base, { prompt: 'coffee ad', provider: 'local-simulation' });
+    assert.equal((await local.json()).job.simulated, true);
+
+    const stored = fs.readdirSync(dataDir).map((file) => fs.readFileSync(path.join(dataDir, file), 'utf8'));
+    assert.ok(stored.every((content) => !content.includes(FAKE_TOKEN)));
+  });
   assert.ok(logger.messages.every((message) => !message.includes(FAKE_TOKEN)));
 });
 
 test('failed replicate jobs are persisted with an explicit error', async () => {
   const { fetchImpl } = fakeReplicate({ pollStates: [{ status: 'failed', error: 'model crashed' }] });
-  await withServer(
-    {
-      videoProvider: 'replicate',
-      fetchImpl,
-      replicate: { apiToken: FAKE_TOKEN, model: 'acme/video-model', apiBaseUrl: BASE, pollIntervalMs: 1 },
-    },
-    async ({ base }) => {
-      const { job } = await (await postJob(base, { prompt: 'x' })).json();
-      const finished = await waitForTerminal(base, job.id);
-      assert.equal(finished.status, 'failed');
-      assert.equal(finished.error.code, 'provider_prediction_failed');
-      assert.equal(finished.result, null);
-    },
-  );
+  await beta.withServer(beta.paidOptions({ fetchImpl }), async ({ base }) => {
+    const browser = beta.client(base);
+    await browser.login();
+    const { job } = await browser.quoteAndRun({ brief: beta.BRIEF });
+    assert.equal(job.status, 201);
+    const finished = await browser.waitForTerminal(job.json.job.id);
+    assert.equal(finished.status, 'failed');
+    assert.equal(finished.error.code, 'provider_prediction_failed');
+    assert.equal(finished.result, null);
+  });
 });
 
 test('concurrent replicate jobs are capped and shutdown aborts in-flight jobs', async () => {
-  const fetchImpl = (url, init) =>
-    new Promise((resolve, reject) => {
+  let predictions = 0;
+  const fetchImpl = (url, init) => {
+    predictions += 1;
+    return new Promise((resolve, reject) => {
       init.signal.addEventListener('abort', () => reject(new Error('aborted')));
     });
-  await withServer(
-    {
-      videoProvider: 'replicate',
-      fetchImpl,
-      replicate: { apiToken: FAKE_TOKEN, model: 'acme/video-model', apiBaseUrl: BASE, maxConcurrent: 1 },
-    },
-    async ({ base, app }) => {
-      const first = await postJob(base, { prompt: 'one' });
-      assert.equal(first.status, 201);
-      const { job } = await first.json();
+  };
+  await beta.withServer(beta.paidOptions({ fetchImpl }), async ({ base, app }) => {
+    const browser = beta.client(base);
+    await browser.login();
+    const first = await browser.quoteAndRun({ brief: beta.BRIEF });
+    assert.equal(first.job.status, 201);
+    const { job } = first.job.json;
 
-      const second = await postJob(base, { prompt: 'two' });
-      assert.equal(second.status, 503);
-      assert.equal((await second.json()).error, 'provider_busy');
+    const second = await browser.quoteAndRun({ brief: { ...beta.BRIEF, product: 'Другой продукт' } });
+    assert.equal(second.job.status, 503);
+    assert.equal(second.job.json.error, 'provider_busy');
+    assert.equal(predictions, 1);
 
-      app.closeProviders();
-      const finished = await waitForTerminal(base, job.id);
-      assert.equal(finished.status, 'failed');
-      assert.equal(finished.error.code, 'provider_aborted');
-    },
-  );
+    app.closeProviders();
+    const finished = await browser.waitForTerminal(job.id);
+    assert.equal(finished.status, 'failed');
+    assert.equal(finished.error.code, 'provider_aborted');
+  });
 });
 
 test('replicate jobs left in progress by a restart are marked interrupted, not retried', async () => {
   const { fetchImpl, calls } = fakeReplicate();
-  await withServer(
-    {
-      videoProvider: 'replicate',
-      fetchImpl,
-      replicate: { apiToken: FAKE_TOKEN, model: 'acme/video-model', apiBaseUrl: BASE },
-    },
-    async ({ base, dataDir }) => {
-      const id = '11111111-1111-4111-8111-111111111111';
-      fs.writeFileSync(
-        path.join(dataDir, `${id}.json`),
-        JSON.stringify({ id, prompt: 'x', provider: 'replicate', status: 'processing', progress: 0, createdAt: new Date().toISOString() }),
-      );
-      const { job } = await (await fetch(`${base}/api/jobs/${id}`)).json();
-      assert.equal(job.status, 'failed');
-      assert.equal(job.error.code, 'provider_interrupted');
-    },
-  );
+  await beta.withServer(beta.paidOptions({ fetchImpl }), async ({ base, dataDir }) => {
+    const id = '11111111-1111-4111-8111-111111111111';
+    fs.writeFileSync(
+      path.join(dataDir, `${id}.json`),
+      JSON.stringify({ id, prompt: 'x', provider: 'replicate', status: 'processing', progress: 0, createdAt: new Date().toISOString() }),
+    );
+    // Paid jobs are private: anonymous readers get 401.
+    assert.equal((await fetch(`${base}/api/jobs/${id}`)).status, 401);
+    const browser = beta.client(base);
+    await browser.login();
+    const { json } = await browser.get(`/api/jobs/${id}`);
+    assert.equal(json.job.status, 'failed');
+    assert.equal(json.job.error.code, 'provider_interrupted');
+  });
   assert.equal(calls.length, 0);
 });

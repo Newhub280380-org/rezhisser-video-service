@@ -15,10 +15,35 @@ services:
         value: "60000"
       - key: DATA_DIR
         value: /opt/render/project/src/data
+      # NOTE: render.yaml is only applied to Blueprint services. A Web Service
+      # created manually in the dashboard ignores this file; set variables in
+      # Render -> Environment instead (see docs/DEPLOY_RENDER.md).
+      #
       # Video provider. Keep "local-simulation" (no real video, no spend) until a
       # Replicate token and a tested model are configured in the Render dashboard.
       - key: VIDEO_PROVIDER
         value: local-simulation
+      # Rule-based director only. Any value other than "none" stops startup.
+      - key: DIRECTOR_ADVISOR
+        value: none
+      # Paid generation stays locked unless ALL safeguards are configured.
+      - key: PAID_GENERATION_ENABLED
+        value: "false"
+      # Secret (>= 24 random chars) for the private beta. Dashboard only.
+      - key: BETA_ACCESS_KEY
+        sync: false
+      # 0 = paid generation locked. Estimates only, not a provider hard cap.
+      - key: PAID_DAILY_BUDGET_USD
+        value: "0"
+      - key: PAID_DAILY_JOB_LIMIT
+        value: "3"
+      - key: PAID_TOTAL_JOB_LIMIT
+        value: "20"
+      # Operator allowlist of verified Replicate model profiles (JSON). See README.
+      - key: VIDEO_MODEL_PROFILES_JSON
+        sync: false
+      - key: PUBLIC_ORIGIN
+        sync: false
       # Secret: set the value only in the Render dashboard. Never commit it.
       - key: REPLICATE_API_TOKEN
         sync: false
