@@ -77,8 +77,17 @@ function loadOrCreateSecret(file) {
   }
   const secret = crypto.randomBytes(48).toString('base64url');
   fs.mkdirSync(path.dirname(file), { recursive: true });
-  fs.writeFileSync(file, secret, { mode: 0o600 });
-  if (process.platform !== 'win32') fs.chmodSync(file, 0o600);
+  const tempFile = path.join(path.dirname(file), `.${path.basename(file)}-${crypto.randomBytes(8).toString('hex')}.tmp`);
+  try {
+    fs.writeFileSync(tempFile, secret, { flag: 'wx', mode: 0o600 });
+    if (process.platform !== 'win32') fs.chmodSync(tempFile, 0o600);
+    fs.renameSync(tempFile, file);
+  } catch (error) {
+    try {
+      fs.unlinkSync(tempFile);
+    } catch {}
+    throw error;
+  }
   return secret;
 }
 
