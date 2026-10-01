@@ -403,6 +403,33 @@ only pages of the service open inside the window, other `http(s)` links
 (payment pages, docs) open in the system browser and other schemes are
 blocked; all permission requests (camera, notifications, …) are denied.
 
+## Owl Browser client (standalone desktop app)
+
+`owl-client/` is a separate, minimal Electron app that talks **directly** to a
+cloud Owl Browser instance (default `https://trial-04421511.owlbrowser.net`,
+API at `/api/`). No backend server, no Режиссёр, no video generation: one
+window with a task field, an optional start site, Run/Stop buttons and a
+result/log area. It is its own npm package and does not ship `src/` or `public/`.
+
+> **По-русски:**
+> 1. `cd owl-client && npm install && npm start` — откроется окно «Owl Browser».
+> 2. Внизу «Подключение»: адрес уже `https://trial-04421511.owlbrowser.net`
+>    (можно указать и `…/api/`), вставьте токен доступа из кабинета Owl Browser → «Сохранить».
+>    Токен хранится зашифрованным (системное хранилище ОС) и никогда не попадает в окно.
+> 3. Напишите задачу (например, «найди на YouTube топ-10 видео про AI и выпиши просмотры»),
+>    при желании стартовый сайт → «Запустить». Ход выполнения и результат — в логе. «Стоп» отменяет задачу.
+> 4. Установщик: `npm run dist:win` / `dist:mac` / `dist:linux` → `owl-client/dist/`.
+
+| Variable | Default | Description |
+| --- | --- | --- |
+| `OWL_BROWSER_URL` | `https://trial-04421511.owlbrowser.net` | Overrides the saved instance URL (`https://`; `http://` only for localhost). |
+| `OWL_BROWSER_TOKEN` | – | Overrides the saved access token (sent in the Authorization header as a bearer token). |
+
+Flow per task: `browser_create_context` → `browser_navigate` (only with a start
+site) → `browser_nla` (async job) → poll `/jobs/{id}` → `browser_close_context`.
+Security: sandboxed window with a strict CSP and no network access of its own;
+all Owl API calls are made by the main process.
+
 ## Deploying to Render
 
 See **[docs/DEPLOY_RENDER.md](docs/DEPLOY_RENDER.md)** (Russian, step by step)
@@ -427,4 +454,5 @@ no billing:
 - `test/library.test.js`, `test/studio.test.js`: library coverage and search; Studio CSP, sinks, ids and RU/中文 translations.
 - `test/automation.test.js`, `test/automation-runs.test.js`: task CRUD, Owl Browser executor against a fake Owl API, simulation, run queue limits, blocked internal URLs, run history per user.
 - `test/desktop.test.js`: desktop config and navigation rules, local secret, the bundled local server (dashboard, runs, sign-in kept across restarts) and the hardened Electron settings. Electron is not needed to run it.
+- `test/owl-client.test.js`: the standalone Owl Browser client against a fake Owl API (task flow, token header, Stop/cancel, timeouts, errors), encrypted settings and the hardened window.
 - `test/frontend.test.js`: UI routes and CSP, static allowlist (no traversal), no `innerHTML`/`eval`/third-party origins, no secrets in assets, every referenced element exists, accessibility basics, and a demo flow with network disabled.

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Owl Browser — клиент</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Owl Browser</h1>
+    <p id="connection" class="muted">Загрузка настроек…</p>
+  </header>
+
+  <main>
+    <form id="task-form" class="card">
+      <label for="task">Задача</label>
+      <textarea id="task" rows="5" required placeholder="Например: открой YouTube, найди видео про генерацию видео и выпиши названия и просмотры топ-10"></textarea>
+      <label for="start-url">Стартовый сайт <span class="muted">(необязательно)</span></label>
+      <input id="start-url" type="url" placeholder="https://www.youtube.com" autocomplete="off">
+      <div class="actions">
+        <button id="run" type="submit">Запустить</button>
+        <button id="stop" type="button" class="secondary" disabled>Стоп</button>
+        <span id="status" class="muted" role="status" aria-live="polite"></span>
+      </div>
+    </form>
+
+    <section class="card">
+      <div class="row">
+        <h2>Результат и лог</h2>
+        <button id="clear" type="button" class="secondary small">Очистить</button>
+      </div>
+      <pre id="log" aria-live="polite"></pre>
+    </section>
+
+    <details class="card">
+      <summary>Подключение</summary>
+      <form id="settings-form">
+        <label for="url">Адрес Owl Browser</label>
+        <input id="url" type="url" required autocomplete="off">
+        <label for="token">Токен доступа</label>
+        <input id="token" type="password" autocomplete="off" placeholder="оставьте пустым, чтобы не менять">
+        <label class="inline"><input id="clear-token" type="checkbox"> Удалить сохранённый токен</label>
+        <div class="actions">
+          <button id="save" type="submit">Сохранить</button>
+          <span id="settings-status" class="muted" role="status" aria-live="polite"></span>
+        </div>
+      </form>
+    </details>
+  </main>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

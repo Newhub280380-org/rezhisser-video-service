@@ -1,0 +1,46 @@
+{
+  "name": "owl-browser-client",
+  "productName": "Owl Browser Client",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Standalone desktop client (Electron) for a cloud Owl Browser instance: type a task, run it in the cloud browser, see the result.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder",
+    "dist:win": "electron-builder --win",
+    "dist:mac": "electron-builder --mac",
+    "dist:linux": "electron-builder --linux"
+  },
+  "license": "MIT",
+  "build": {
+    "appId": "dev.owlbrowser.client",
+    "productName": "Owl Browser Client",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "owl-api.js",
+      "settings.js",
+      "renderer/**",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg",
+      "category": "public.app-category.productivity"
+    },
+    "linux": {
+      "target": "AppImage",
+      "category": "Utility"
+    }
+  },
+  "devDependencies": {
+    "electron": "44.5.1",
+    "electron-builder": "26.15.3"
+  }
+}
