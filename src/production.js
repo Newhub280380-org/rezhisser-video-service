@@ -586,7 +586,7 @@ function createProductionApi({
     if (method === 'DELETE' && projectMatch) {
       const user = await requireUser(req, res);
       if (!user) return true;
-      const id = decodeURIComponent(projectMatch[1]);
+      const id = projectMatch[1];
       const removed = UUID_PATTERN.test(id) && (await db.deleteProject(id, user.id));
       sendJson(res, removed ? 200 : 404, removed ? { deleted: true } : { error: 'project_not_found' });
       return true;
