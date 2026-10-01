@@ -83,9 +83,7 @@ function createVideoPipeline({ db, provider, storage, billing, logger = console,
     }
   }
 
-  async function runReal(job, input) {
-    // Reserve a provider slot immediately so canAccept() sees queued jobs.
-    const release = provider.acquire();
+  async function runReal(job, input, release = provider.acquire()) {
     let taskId;
     try {
       taskId = await provider.submit(input);
@@ -118,8 +116,9 @@ function createVideoPipeline({ db, provider, storage, billing, logger = console,
 
   return {
     // Fire-and-forget; returns the promise for tests.
-    start(job, input) {
-      return track(job.billingSource === 'demo' ? runDemo(job) : runReal(job, input), job);
+    // `release` is a provider slot already reserved by the caller.
+    start(job, input, release) {
+      return track(job.billingSource === 'demo' ? runDemo(job) : runReal(job, input, release || undefined), job);
     },
     // Re-attaches pollers to jobs left running by a previous process.
     async resume() {

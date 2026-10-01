@@ -114,7 +114,7 @@ test('reset emails are not sent with Host-derived links when PUBLIC_ORIGIN is mi
     });
     assert.equal(res.status, 202);
     await new Promise((resolve) => setTimeout(resolve, 20));
-    assert.equal(services.calls.filter((c) => c.url.startsWith('https://api.resend.com')).length, 0);
+    assert.equal(services.calls.filter((c) => new URL(c.url).origin === 'https://api.resend.com').length, 0);
     assert.ok(errors.some((l) => l.includes('PUBLIC_ORIGIN')));
   });
 
@@ -166,5 +166,20 @@ test('health reports production checks', async () => {
     assert.equal(body.checks.storage, 'configured');
     assert.deepEqual(body.checks.payments, ['yookassa', 'stripe']);
     assert.ok(body.checks.library >= 80);
+  });
+});
+
+test('in production without email delivery no reset tokens are created', async () => {
+  const services = fakeServices();
+  const logs = [];
+  const logger = { ...silentLogger(), log: (line) => logs.push(String(line)), error: (line) => logs.push(String(line)) };
+  await withServer(productionOptions(services, { logger, nodeEnv: 'production' }), async ({ base, app }) => {
+    const api = accountClient(base);
+    await api.register('prod@example.com', 'password-123');
+    assert.equal((await api.post('/api/auth/forgot-password', { email: 'prod@example.com' })).status, 202);
+    await new Promise((resolve) => setTimeout(resolve, 20));
+    assert.equal(logs.some((l) => l.includes('token=')), false);
+    assert.ok(logs.some((l) => l.includes('RESEND_API_KEY')));
+    assert.equal(await app.db.deleteExpiredPasswordResets(Date.now() + 86400000), 0);
   });
 });

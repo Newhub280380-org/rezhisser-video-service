@@ -205,6 +205,8 @@ function createProductionApi({
     if (user && mailer.configured && !config.publicOrigin) {
       // Links built from the Host header could point to an attacker's domain.
       logger.error('password reset email not sent: PUBLIC_ORIGIN must be set when email delivery is enabled');
+    } else if (user && !mailer.configured && config.nodeEnv === 'production') {
+      logger.error('password reset email not sent: RESEND_API_KEY and MAIL_FROM are not configured');
     } else if (user) {
       const token = crypto.randomBytes(32).toString('base64url');
       await db.createPasswordReset({ tokenHash: hashResetToken(token), userId: user.id, expiresAt: new Date(now() + RESET_TTL_MS).toISOString() });
@@ -303,8 +305,17 @@ function createProductionApi({
         return;
       }
     }
-    const billingSource = demo ? 'demo' : await billing.consumeGeneration(user);
+    // Reserve the provider slot before any await so parallel requests cannot
+    // exceed SEEDANCE_MAX_CONCURRENT; the pipeline releases it.
+    const release = demo ? null : seedance.acquire();
+    let billingSource;
     let job;
+    try {
+      billingSource = demo ? 'demo' : await billing.consumeGeneration(user);
+    } catch (error) {
+      if (release) release();
+      throw error;
+    }
     try {
       job = await db.createVideoJob({
         id: crypto.randomUUID(),
@@ -322,11 +333,12 @@ function createProductionApi({
         costUsd: 0,
       });
     } catch (error) {
+      if (release) release();
       if (!demo) await billing.refundGeneration({ userId: user.id, billingSource, id: null });
       throw error;
     }
+    pipeline.start(job, { prompt, image: image ? image.dataUrl : null, aspect, duration }, release);
     if (!demo) await billing.recordGeneration(user.id, billingSource, job.id);
-    pipeline.start(job, { prompt, image: image ? image.dataUrl : null, aspect, duration });
     const fresh = await db.getUserById(user.id);
     sendJson(res, 201, { job: publicJob(job), subscription: billing.usageSummary(fresh) });
   }

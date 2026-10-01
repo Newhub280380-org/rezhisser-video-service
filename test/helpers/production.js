@@ -77,7 +77,7 @@ function fakeServices({ seedanceStates = [{ status: 'succeeded', content: { vide
       return new Response(Buffer.from('fake-mp4-bytes'), { status: 200, headers: { 'Content-Type': 'video/mp4', 'Content-Length': '14' } });
     }
 
-    if (url.startsWith(S3_ENDPOINT)) {
+    if (new URL(url).origin === S3_ENDPOINT) {
       const key = new URL(url).pathname;
       if (control.s3Status !== 200) return new Response(null, { status: control.s3Status });
       if (method === 'PUT') objects.set(key, body);
@@ -85,7 +85,7 @@ function fakeServices({ seedanceStates = [{ status: 'succeeded', content: { vide
       return new Response(null, { status: method === 'DELETE' ? 204 : 200 });
     }
 
-    if (url.startsWith('https://api.resend.com')) return json(200, { id: 'email_1' });
+    if (new URL(url).origin === 'https://api.resend.com') return json(200, { id: 'email_1' });
 
     throw new Error(`unexpected network call: ${method} ${url}`);
   }

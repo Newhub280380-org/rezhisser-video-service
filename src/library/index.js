@@ -87,7 +87,11 @@ function createLibrary(items = loadItems()) {
   );
 
   function facets(list) {
-    const count = (field) => list.reduce((acc, item) => ({ ...acc, [item[field]]: (acc[item[field]] || 0) + 1 }), {});
+    const count = (field) =>
+      list.reduce((acc, item) => {
+        acc[item[field]] = (acc[item[field]] || 0) + 1;
+        return acc;
+      }, {});
     return { region: count('region'), country: count('country'), language: count('language'), category: count('category'), type: count('type'), trend: count('trend') };
   }
 

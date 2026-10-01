@@ -160,11 +160,24 @@ function createS3Storage({
       const timer = setTimeout(() => controller.abort(), timeoutMs);
       let buffer;
       try {
-        const res = await fetchImpl(parsed.toString(), { signal: controller.signal });
+        // No redirects: they could leave https or point somewhere unexpected.
+        const res = await fetchImpl(parsed.toString(), { signal: controller.signal, redirect: 'error' });
         if (!res.ok) throw new StorageError('source_error', `Source download failed with HTTP ${res.status}.`);
         const declared = Number(res.headers.get('content-length'));
         if (Number.isFinite(declared) && declared > maxObjectBytes) throw new StorageError('source_too_large', 'Video is too large.');
-        buffer = Buffer.from(await res.arrayBuffer());
+        const chunks = [];
+        let total = 0;
+        if (res.body) {
+          for await (const chunk of res.body) {
+            total += chunk.length;
+            if (total > maxObjectBytes) {
+              controller.abort();
+              throw new StorageError('source_too_large', 'Video is too large.');
+            }
+            chunks.push(Buffer.from(chunk));
+          }
+        }
+        buffer = Buffer.concat(chunks, total);
       } catch (error) {
         if (error instanceof StorageError) throw error;
         throw new StorageError('source_unreachable', 'Could not download the generated video.');

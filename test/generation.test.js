@@ -308,3 +308,36 @@ test('cleanup cron deletes videos older than the retention period', async () => 
   assert.deepEqual(await runCleanup({ db, storage, logger: silentLogger() }), { expired: 0, failed: 1, resets: 0 });
   assert.equal((await db.getVideoJob(freshJob.id)).status, 'succeeded');
 });
+
+test('S3 copy enforces the size cap while streaming and refuses redirects', async () => {
+  const seen = [];
+  const fetchImpl = async (url, init = {}) => {
+    seen.push({ url, redirect: init.redirect });
+    if (url.startsWith('https://cdn.test/')) {
+      // No Content-Length: the cap must be enforced on the streamed bytes.
+      return new Response(new ReadableStream({
+        pull(controller) {
+          controller.enqueue(new Uint8Array(64));
+        },
+      }), { status: 200 });
+    }
+    return new Response(null, { status: 200 });
+  };
+  const storage = createS3Storage({ endpoint: S3_ENDPOINT, bucket: 'rezhisser-videos', accessKeyId: 'id', secretAccessKey: 'secret', fetchImpl, maxObjectBytes: 1000 });
+  await assert.rejects(storage.copyFromUrl('https://cdn.test/endless.mp4', 'videos/x.mp4'), (e) => e.code === 'source_too_large');
+  assert.equal(seen[0].redirect, 'error');
+  assert.equal(seen.length, 1, 'nothing uploaded');
+});
+
+test('parallel job requests cannot exceed SEEDANCE_MAX_CONCURRENT', async () => {
+  const services = fakeServices({ seedanceStates: [{ status: 'running' }] });
+  await withServer(productionOptions(services, { seedance: { maxConcurrent: 2 } }), async ({ base, app }) => {
+    const api = accountClient(base);
+    await api.register();
+    await upgrade(app, api, 'studio');
+    const results = await Promise.all(Array.from({ length: 5 }, (_, i) => api.post('/api/jobs', { prompt: `Ролик ${i}` })));
+    const statuses = results.map((r) => r.status).sort();
+    assert.deepEqual(statuses, [201, 201, 503, 503, 503]);
+    assert.equal(app.seedance.activeCount(), 2);
+  });
+});

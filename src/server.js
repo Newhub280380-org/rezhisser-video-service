@@ -1084,12 +1084,15 @@ function start(options = {}) {
   }
   const ready = app.config.autoMigrate ? app.db.migrate() : Promise.resolve();
   ready
-    .then(() => app.pipeline.resume())
+    .then(() => {
+      listen();
+      return app.pipeline.resume();
+    })
     .catch((error) => {
       console.error(`database error: ${error.code || error.message}`);
       process.exit(1);
     });
-  app.server.listen(app.config.port, app.config.host, () => {
+  const listen = () => app.server.listen(app.config.port, app.config.host, () => {
     const address = app.server.address();
     console.log(`rezhisser-video-service listening on http://${app.config.host}:${address.port}`);
     console.log(`data directory: ${app.config.dataDir}`);
