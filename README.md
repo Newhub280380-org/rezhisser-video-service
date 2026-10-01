@@ -27,6 +27,7 @@ server-side allowlist and explains why.
 | Paid render via Replicate | 🔒 Locked by default. Needs a private-beta session, a quote and confirmation. Tested only with a fake API. |
 | Optional LLM advisor | ⛔ Not implemented. `DIRECTOR_ADVISOR` accepts only `none`; any other value stops startup. |
 | Studio at `/studio` (RU / 中文): register, login, password reset, dashboard, pricing, library, remix, video history | ✅ See [Production stack](#production-stack). |
+| Browser task dashboard at `/automation`: user-owned URL, instruction, region and enabled state | ✅ Task management only. Owl Browser execution, AI-provider configuration, run history, and Electron are not implemented. |
 | Accounts (email + scrypt password, JWT), PostgreSQL | ✅ In-memory/JSON store when `DATABASE_URL` is not set (development only). |
 | Payments: YooKassa (primary) + Stripe (fallback), RUB/KZT/USD/CNY | ✅ When keys are configured. Tested with fake provider APIs only. |
 | Real video via ByteDance Seedance 2.5 (ModelArk) + S3/Backblaze storage | ✅ When `SEEDANCE_API_KEY`/`SEEDANCE_MODEL` and `S3_*` are set. Tested with fake APIs only. |
@@ -210,6 +211,8 @@ Account endpoints take the JWT in the `Authorization` header (`Bearer <token>`, 
 | `POST` | `/api/auth/login` | `{ email, password }` → JWT. Rate limited. |
 | `POST` | `/api/auth/forgot-password` / `/api/auth/reset-password` | Email link (needs `PUBLIC_ORIGIN` + Resend) / `{ token, password }`. |
 | `GET` | `/api/user/profile` | User, subscription (tier, limits, credits) and usage. |
+| `GET/POST` | `/api/automation/tasks` (with bearer token) | List or create up to 100 site tasks for the signed-in user. |
+| `PUT/DELETE` | `/api/automation/tasks/:id` (with bearer token) | Edit or delete an owned site task. |
 | `POST` | `/api/payment/checkout` | `{ product: pro\|studio\|credits_10\|credits_50, currency, provider? }` → `{ payment, confirmationUrl }`. |
 | `GET` | `/api/payment/history` | Payments and usage events. |
 | `POST` | `/api/payment/webhook/yookassa`, `/api/payment/webhook/stripe` | Provider webhooks. |

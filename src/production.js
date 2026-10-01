@@ -24,6 +24,8 @@ const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{
 const LOCALES = ['ru', 'zh', 'en'];
 const ASPECTS = ['9:16', '16:9', '1:1'];
 const MAX_PROJECTS = 500;
+const MAX_AUTOMATION_TASKS = 100;
+const AUTOMATION_REGIONS = ['US', 'EU', 'UK', 'CA', 'AU', 'JP', 'SG'];
 const FORBIDDEN_JOB_FIELDS = ['model', 'version', 'token', 'apiKey', 'apiBaseUrl', 'baseUrl', 'url', 'webhook', 'input', 'cost', 'price', 'provider', 'billingSource'];
 
 function cleanText(value, max) {
@@ -387,6 +389,80 @@ function createProductionApi({
     sendJson(res, 201, { project });
   }
 
+  function automationTaskInput(payload, existing = {}) {
+    const name = cleanText(payload.name === undefined ? existing.name : payload.name, 120);
+    const urlText = cleanText(payload.url === undefined ? existing.url : payload.url, 2048);
+    const instruction = cleanText(payload.instruction === undefined ? existing.instruction : payload.instruction, 4000);
+    const region = payload.region === undefined ? (existing.region || 'US') : String(payload.region).toUpperCase();
+    let url;
+    try {
+      url = new URL(urlText);
+    } catch {
+      url = null;
+    }
+    if (!url || !['http:', 'https:'].includes(url.protocol) || url.username || url.password) {
+      return { error: 'invalid_url' };
+    }
+    if (!name) return { error: 'name_required' };
+    if (!instruction) return { error: 'instruction_required' };
+    if (!AUTOMATION_REGIONS.includes(region)) return { error: 'invalid_region' };
+    if (payload.enabled !== undefined && typeof payload.enabled !== 'boolean') return { error: 'invalid_enabled' };
+    return {
+      name,
+      url: url.toString(),
+      instruction,
+      region,
+      enabled: payload.enabled === undefined ? (existing.enabled !== false) : payload.enabled,
+    };
+  }
+
+  async function automationTasks(req, res, user) {
+    if (req.method === 'GET') {
+      const tasks = await db.listAutomationTasks(user.id, { limit: MAX_AUTOMATION_TASKS });
+      sendJson(res, 200, { tasks: tasks.map(({ userId, ...task }) => task) }, { 'Cache-Control': 'no-store' });
+      return;
+    }
+    const payload = await readJson(req, res, 8 * 1024);
+    if (!payload) return;
+    const input = automationTaskInput(payload);
+    if (input.error) {
+      sendJson(res, 400, { error: input.error });
+      return;
+    }
+    if ((await db.listAutomationTasks(user.id, { limit: MAX_AUTOMATION_TASKS })).length >= MAX_AUTOMATION_TASKS) {
+      sendJson(res, 409, { error: 'too_many_automation_tasks' });
+      return;
+    }
+    const { userId, ...task } = await db.createAutomationTask({ id: crypto.randomUUID(), userId: user.id, ...input });
+    sendJson(res, 201, { task });
+  }
+
+  async function updateAutomationTask(req, res, user, id) {
+    if (!UUID_PATTERN.test(id)) {
+      sendJson(res, 404, { error: 'automation_task_not_found' });
+      return;
+    }
+    const existing = await db.getAutomationTask(id, user.id);
+    if (!existing) {
+      sendJson(res, 404, { error: 'automation_task_not_found' });
+      return;
+    }
+    if (req.method === 'DELETE') {
+      await db.deleteAutomationTask(id, user.id);
+      sendJson(res, 200, { deleted: true });
+      return;
+    }
+    const payload = await readJson(req, res, 8 * 1024);
+    if (!payload) return;
+    const input = automationTaskInput(payload, existing);
+    if (input.error) {
+      sendJson(res, 400, { error: input.error });
+      return;
+    }
+    const { userId, ...task } = await db.updateAutomationTask(id, user.id, input);
+    sendJson(res, 200, { task });
+  }
+
   async function health() {
     let database = 'ok';
     try {
@@ -504,6 +580,18 @@ function createProductionApi({
       const id = decodeURIComponent(projectMatch[1]);
       const removed = UUID_PATTERN.test(id) && (await db.deleteProject(id, user.id));
       sendJson(res, removed ? 200 : 404, removed ? { deleted: true } : { error: 'project_not_found' });
+      return true;
+    }
+
+    if (pathname === '/api/automation/tasks' && (method === 'GET' || method === 'POST')) {
+      const user = await requireUser(req, res);
+      if (user) await automationTasks(req, res, user);
+      return true;
+    }
+    const automationTaskMatch = pathname.match(/^\/api\/automation\/tasks\/([^/]+)$/);
+    if (automationTaskMatch && ['PUT', 'DELETE'].includes(method)) {
+      const user = await requireUser(req, res);
+      if (user) await updateAutomationTask(req, res, user, decodeURIComponent(automationTaskMatch[1]));
       return true;
     }
 

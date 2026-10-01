@@ -40,6 +40,10 @@ const COLUMNS = {
     id: 'id', userId: 'user_id', kind: 'kind', title: 'title', libraryItemId: 'library_item_id',
     prompt: 'prompt', brief: 'brief', createdAt: 'created_at', updatedAt: 'updated_at',
   },
+  automation_tasks: {
+    id: 'id', userId: 'user_id', name: 'name', url: 'url', instruction: 'instruction', region: 'region',
+    enabled: 'enabled', createdAt: 'created_at', updatedAt: 'updated_at',
+  },
 };
 const JSON_COLUMNS = new Set(['brief', 'error']);
 const NUMERIC_FIELDS = new Set(['costUsd', 'videoBytes', 'amountMinor']);
@@ -258,6 +262,24 @@ function createPostgresDatabase({ connectionString, ssl, pool: injectedPool, lib
     },
     async deleteProject(id, userId) {
       const result = await query('DELETE FROM projects WHERE id = $1 AND user_id = $2', [id, userId]);
+      return result.rowCount === 1;
+    },
+    createAutomationTask(task) {
+      const sql = insertSql('automation_tasks', task);
+      return one('automation_tasks', sql.text, sql.values);
+    },
+    listAutomationTasks(userId, { limit = 100 } = {}) {
+      return many('automation_tasks', 'SELECT * FROM automation_tasks WHERE user_id = $1 ORDER BY created_at DESC LIMIT $2', [userId, limit]);
+    },
+    getAutomationTask(id, userId) {
+      return one('automation_tasks', 'SELECT * FROM automation_tasks WHERE id = $1 AND user_id = $2', [id, userId]);
+    },
+    updateAutomationTask(id, userId, patch) {
+      const sql = updateSql('automation_tasks', id, patch, 'user_id = $1', [userId]);
+      return one('automation_tasks', sql.text, sql.values);
+    },
+    async deleteAutomationTask(id, userId) {
+      const result = await query('DELETE FROM automation_tasks WHERE id = $1 AND user_id = $2', [id, userId]);
       return result.rowCount === 1;
     },
   };

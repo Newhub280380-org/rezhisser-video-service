@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Список задач автоматизации сайтов.">
+  <title>Автоматизация сайтов — Режиссёр</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/automation.css">
+  <script src="/assets/automation.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a href="/studio" class="brand">Режиссёр Studio</a>
+    <nav aria-label="Разделы"><a href="/studio">Studio</a><a href="/automation" aria-current="page">Автоматизация сайтов</a></nav>
+  </header>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Управление задачами</p>
+      <h1>Автоматизация сайтов</h1>
+      <p>Сохраняйте адрес сайта, инструкцию и желаемый регион для каждой задачи.</p>
+    </section>
+    <section class="notice" aria-labelledby="availability-title">
+      <h2 id="availability-title">Исполнение пока не подключено</h2>
+      <p>Эта версия сохраняет и редактирует задачи, но не открывает сайты: Owl Browser и AI-провайдер ещё не подключены. Не вводите сюда пароли или другие секреты.</p>
+    </section>
+    <section id="login-required" class="panel" hidden>
+      <h2>Войдите в аккаунт</h2>
+      <p>Задачи сохраняются отдельно для каждого аккаунта.</p>
+      <a class="button primary" href="/studio#/login">Войти или создать аккаунт</a>
+    </section>
+    <div id="workspace" hidden>
+      <div class="columns">
+        <section class="panel">
+          <h2 id="form-title">Новая задача</h2>
+          <form id="task-form">
+            <label for="task-name">Название</label>
+            <input id="task-name" name="name" maxlength="120" required>
+            <label for="task-url">URL сайта</label>
+            <input id="task-url" name="url" type="url" maxlength="2048" placeholder="https://example.com" required>
+            <label for="task-instruction">Инструкция для агента</label>
+            <textarea id="task-instruction" name="instruction" rows="6" maxlength="4000" required></textarea>
+            <label for="task-region">Регион/IP провайдера</label>
+            <select id="task-region" name="region">
+              <option value="US">США</option>
+              <option value="EU">Европа</option>
+              <option value="UK">Великобритания</option>
+              <option value="CA">Канада</option>
+              <option value="AU">Австралия</option>
+              <option value="JP">Япония</option>
+              <option value="SG">Сингапур</option>
+            </select>
+            <label class="check"><input id="task-enabled" name="enabled" type="checkbox" checked> Задача активна</label>
+            <p class="error" id="form-error" role="alert" hidden></p>
+            <div class="actions">
+              <button class="button primary" type="submit" id="save-button">Сохранить</button>
+              <button class="button" type="button" id="cancel-edit" hidden>Отмена</button>
+            </div>
+          </form>
+        </section>
+        <section class="panel" aria-labelledby="tasks-title">
+          <div class="section-heading">
+            <h2 id="tasks-title">Мои задачи</h2>
+            <label class="filter-label" for="task-filter">Показать</label>
+            <select id="task-filter">
+              <option value="all">Все</option>
+              <option value="enabled">Активные</option>
+              <option value="paused">Приостановленные</option>
+            </select>
+          </div>
+          <p id="empty-state" class="muted">Задач пока нет.</p>
+          <ul id="task-list" class="task-list" aria-live="polite"></ul>
+          <p id="list-error" class="error" role="alert" hidden></p>
+        </section>
+      </div>
+      <section class="panel run-history">
+        <h2>Запуски и журнал</h2>
+        <p class="muted">История выполнений появится после подключения и настройки Owl Browser API. Сейчас автоматические запуски отключены.</p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

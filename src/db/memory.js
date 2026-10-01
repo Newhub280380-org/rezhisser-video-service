@@ -9,7 +9,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 
-const TABLES = ['users', 'passwordResets', 'videoJobs', 'payments', 'usageEvents', 'projects'];
+const TABLES = ['users', 'passwordResets', 'videoJobs', 'payments', 'usageEvents', 'projects', 'automationTasks'];
 
 function clone(value) {
   return value === undefined || value === null ? null : JSON.parse(JSON.stringify(value));
@@ -340,6 +340,37 @@ function createMemoryDatabase({ file = null } = {}) {
         const project = state.projects.get(id);
         if (!project || project.userId !== userId) return false;
         state.projects.delete(id);
+        return true;
+      });
+    },
+    async createAutomationTask(task) {
+      return mutate(() => {
+        const now = nowIso();
+        const row = { enabled: true, createdAt: now, updatedAt: now, ...task };
+        state.automationTasks.set(row.id, row);
+        return row;
+      });
+    },
+    async listAutomationTasks(userId, { limit = 100 } = {}) {
+      return clone(Array.from(state.automationTasks.values()).filter((task) => task.userId === userId).sort(byNewest).slice(0, limit));
+    },
+    async getAutomationTask(id, userId) {
+      const task = state.automationTasks.get(id);
+      return task && task.userId === userId ? clone(task) : null;
+    },
+    async updateAutomationTask(id, userId, patch) {
+      return mutate(() => {
+        const task = state.automationTasks.get(id);
+        if (!task || task.userId !== userId) return null;
+        Object.assign(task, patch, { updatedAt: nowIso() });
+        return task;
+      });
+    },
+    async deleteAutomationTask(id, userId) {
+      return mutate(() => {
+        const task = state.automationTasks.get(id);
+        if (!task || task.userId !== userId) return false;
+        state.automationTasks.delete(id);
         return true;
       });
     },
