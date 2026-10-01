@@ -21,6 +21,18 @@ const {
 const { createAuth } = require('./auth.js');
 const { createSpendGuard } = require('./spend.js');
 const { createStaticHandler } = require('./static.js');
+const { createDatabase } = require('./db/index.js');
+const { createTokenService } = require('./accounts.js');
+const { createBilling } = require('./billing/index.js');
+const { loadProducts } = require('./billing/plans.js');
+const { createYooKassaClient } = require('./billing/yookassa.js');
+const { createStripeClient } = require('./billing/stripe.js');
+const { createSeedanceProvider } = require('./providers/seedance.js');
+const { createS3Storage } = require('./storage/s3.js');
+const { createLibrary } = require('./library/index.js');
+const { createMailer } = require('./mailer.js');
+const { createVideoPipeline } = require('./pipeline.js');
+const { createProductionApi } = require('./production.js');
 
 const KNOWN_PROVIDERS = ['local-simulation', 'replicate'];
 const DEFAULT_PROVIDER = 'local-simulation';
@@ -99,8 +111,72 @@ function parsePublicOrigin(value) {
 
 function loadConfig(env = process.env, overrides = {}) {
   const allowedOrigins = parseList(env.ALLOWED_ORIGINS);
-  const { replicate: replicateOverrides, ...rest } = overrides;
+  const {
+    replicate: replicateOverrides,
+    seedance: seedanceOverrides,
+    s3: s3Overrides,
+    yookassa: yookassaOverrides,
+    stripe: stripeOverrides,
+    mail: mailOverrides,
+    ...rest
+  } = overrides;
   return {
+    nodeEnv: env.NODE_ENV || 'development',
+    // PostgreSQL connection string (Railway sets DATABASE_URL). Without it an
+    // in-process store in DATA_DIR/accounts is used (development only).
+    databaseUrl: env.DATABASE_URL || '',
+    databaseSsl: env.DATABASE_SSL || '',
+    autoMigrate: (env.DB_AUTO_MIGRATE || 'true').trim().toLowerCase() !== 'false',
+    jwtSecret: env.JWT_SECRET || '',
+    jwtTtlSeconds: clamp(parseNumber(env.JWT_TTL_SECONDS, 604800), 300, 2592000),
+    pricesJson: env.PRICES_JSON || '',
+    proVideosPerPeriod: clamp(parseNumber(env.PRO_VIDEOS_PER_PERIOD, 50), 1, 100000),
+    // Empty = unlimited (Studio tier).
+    studioVideosPerPeriod: env.STUDIO_VIDEOS_PER_PERIOD ? clamp(parseNumber(env.STUDIO_VIDEOS_PER_PERIOD, 1000), 1, 1000000) : null,
+    videoRetentionDays: clamp(parseNumber(env.VIDEO_RETENTION_DAYS, 30), 1, 3650),
+    videoUrlTtlSeconds: clamp(parseNumber(env.VIDEO_URL_TTL_SECONDS, 3600), 60, 604800),
+    seedance: {
+      apiKey: env.SEEDANCE_API_KEY || '',
+      model: (env.SEEDANCE_MODEL || '').trim(),
+      apiBaseUrl: env.SEEDANCE_API_BASE_URL || 'https://ark.ap-southeast.bytepluses.com/api/v3',
+      imageRole: env.SEEDANCE_IMAGE_ROLE || 'first_frame',
+      resolution: env.SEEDANCE_RESOLUTION || '720p',
+      generateAudio: (env.SEEDANCE_GENERATE_AUDIO || 'true').trim().toLowerCase() !== 'false',
+      extraInput: env.SEEDANCE_EXTRA_INPUT_JSON || '',
+      pollIntervalMs: clamp(parseNumber(env.SEEDANCE_POLL_INTERVAL_MS, 5000), 1000, 60000),
+      maxWaitMs: clamp(parseNumber(env.SEEDANCE_MAX_WAIT_MS, 900000), 1000, 3600000),
+      requestTimeoutMs: clamp(parseNumber(env.SEEDANCE_REQUEST_TIMEOUT_MS, 30000), 1000, 120000),
+      maxConcurrent: clamp(parseNumber(env.SEEDANCE_MAX_CONCURRENT, 4), 1, 100),
+      ...seedanceOverrides,
+    },
+    s3: {
+      endpoint: env.S3_ENDPOINT || '',
+      region: env.S3_REGION || 'us-east-1',
+      bucket: env.S3_BUCKET || '',
+      accessKeyId: env.S3_ACCESS_KEY_ID || '',
+      secretAccessKey: env.S3_SECRET_ACCESS_KEY || '',
+      forcePathStyle: (env.S3_FORCE_PATH_STYLE || 'true').trim().toLowerCase() !== 'false',
+      ...s3Overrides,
+    },
+    yookassa: {
+      shopId: env.YOOKASSA_SHOP_ID || '',
+      secretKey: env.YOOKASSA_SECRET_KEY || '',
+      apiBaseUrl: env.YOOKASSA_API_BASE_URL || 'https://api.yookassa.ru/v3',
+      currencies: parseList(env.YOOKASSA_CURRENCIES || 'RUB,KZT').map((c) => c.toUpperCase()),
+      ...yookassaOverrides,
+    },
+    stripe: {
+      secretKey: env.STRIPE_SECRET_KEY || '',
+      webhookSecret: env.STRIPE_WEBHOOK_SECRET || '',
+      apiBaseUrl: env.STRIPE_API_BASE_URL || 'https://api.stripe.com/v1',
+      currencies: parseList(env.STRIPE_CURRENCIES || 'USD,CNY,KZT,RUB').map((c) => c.toUpperCase()),
+      ...stripeOverrides,
+    },
+    mail: {
+      resendApiKey: env.RESEND_API_KEY || '',
+      from: env.MAIL_FROM || '',
+      ...mailOverrides,
+    },
     host: env.HOST || '0.0.0.0',
     port: parseNumber(env.PORT, 3000),
     allowedOrigins: allowedOrigins.length > 0 ? allowedOrigins : DEFAULT_ALLOWED_ORIGINS,
@@ -342,6 +418,67 @@ const PAID_WARNINGS = [
   'Оценка учитывается в дневном бюджете сразу при запуске, даже если генерация потом завершится ошибкой.',
 ];
 
+// Accounts, billing, Seedance, storage and the content library.
+function createProductionStack(config, { loginLimiter, globalLoginLimiter, helpers }) {
+  const production = config.nodeEnv === 'production';
+  let jwtSecret = config.jwtSecret;
+  if (!jwtSecret) {
+    if (production && config.databaseUrl) throw new Error('JWT_SECRET (>= 32 chars) is required in production.');
+    // Development: tokens are valid until the process restarts.
+    jwtSecret = crypto.randomBytes(48).toString('base64url');
+  }
+  const fetchImpl = config.fetchImpl || globalThis.fetch;
+  const logger = config.logger || console;
+  const library = createLibrary();
+  const db =
+    config.database ||
+    createDatabase({
+      databaseUrl: config.databaseUrl,
+      databaseSsl: config.databaseSsl,
+      dataDir: path.join(config.dataDir, 'accounts'),
+      libraryItems: library.items,
+    });
+  const tokens = createTokenService({ secret: jwtSecret, ttlSeconds: config.jwtTtlSeconds });
+  const seedance = createSeedanceProvider({ ...config.seedance, fetchImpl });
+  const storage = createS3Storage({ ...config.s3, fetchImpl });
+  const billing = createBilling({
+    db,
+    products: loadProducts(config.pricesJson),
+    yookassa: createYooKassaClient({ ...config.yookassa, fetchImpl }),
+    stripe: createStripeClient({ ...config.stripe, fetchImpl }),
+    limits: { proVideosPerPeriod: config.proVideosPerPeriod, studioVideosPerPeriod: config.studioVideosPerPeriod },
+    logger,
+  });
+  const mailer = createMailer({ apiKey: config.mail.resendApiKey, from: config.mail.from, fetchImpl, logger, production });
+  const pipeline = createVideoPipeline({
+    db,
+    provider: seedance,
+    storage,
+    billing,
+    logger,
+    pollIntervalMs: config.seedance.pollIntervalMs,
+    maxWaitMs: config.seedance.maxWaitMs,
+    retentionDays: config.videoRetentionDays,
+    demoDurationMs: config.simulationDurationMs,
+  });
+  const api = createProductionApi({
+    config,
+    db,
+    library,
+    billing,
+    tokens,
+    seedance,
+    storage,
+    mailer,
+    pipeline,
+    loginLimiter,
+    globalLoginLimiter,
+    helpers,
+    logger,
+  });
+  return { api, db, library, billing, seedance, storage, pipeline, tokens };
+}
+
 function createApp(options = {}) {
   const config = loadConfig(process.env, options);
   config.publicOrigin = parsePublicOrigin(config.publicOrigin);
@@ -369,6 +506,21 @@ function createApp(options = {}) {
     windowMs: config.loginRateLimitWindowMs,
   });
   const staticFiles = createStaticHandler();
+  const production = createProductionStack(config, {
+    loginLimiter,
+    globalLoginLimiter,
+    helpers: {
+      sendJson,
+      readJson,
+      readBody,
+      requestOrigin: (req) => requestOrigin(req, config),
+      clientIp,
+      createPlan,
+      validateImage: (value, maxBytes) => validateImage(value, maxBytes),
+      BriefError,
+      RoutingError,
+    },
+  });
 
   // Paid generation is available only when every safeguard is configured.
   function paidStatus() {
@@ -613,16 +765,20 @@ function createApp(options = {}) {
 
     try {
       if (req.method === 'GET' && pathname === '/api/health') {
-        sendJson(res, 200, {
-          status: 'ok',
+        const checks = await production.api.health();
+        sendJson(res, checks.database === 'ok' ? 200 : 503, {
+          status: checks.database === 'ok' ? 'ok' : 'degraded',
           uptimeSeconds: Math.floor(process.uptime()),
           timestamp: new Date().toISOString(),
           videoProvider: defaultProvider.name,
           realVideoGeneration: defaultProvider.realVideoGeneration,
           paidGenerationEnabled: paidStatus().available,
+          checks,
         });
         return;
       }
+
+      if (await production.api.handle(req, res, pathname)) return;
 
       if (req.method === 'GET' && pathname === '/api/config') {
         const session = sessionFor(req);
@@ -894,9 +1050,28 @@ function createApp(options = {}) {
 
   function closeProviders() {
     for (const provider of providers.values()) provider.close();
+    production.pipeline.close();
   }
 
-  return { server, config, jobs, limiter, providers, profiles, auth, spend, paidStatus, closeProviders };
+  return {
+    server,
+    config,
+    jobs,
+    limiter,
+    providers,
+    profiles,
+    auth,
+    spend,
+    paidStatus,
+    closeProviders,
+    db: production.db,
+    library: production.library,
+    billing: production.billing,
+    seedance: production.seedance,
+    storage: production.storage,
+    pipeline: production.pipeline,
+    tokens: production.tokens,
+  };
 }
 
 function start(options = {}) {
@@ -907,11 +1082,22 @@ function start(options = {}) {
     console.error(`configuration error: ${error.message}`);
     process.exit(1);
   }
+  const ready = app.config.autoMigrate ? app.db.migrate() : Promise.resolve();
+  ready
+    .then(() => app.pipeline.resume())
+    .catch((error) => {
+      console.error(`database error: ${error.code || error.message}`);
+      process.exit(1);
+    });
   app.server.listen(app.config.port, app.config.host, () => {
     const address = app.server.address();
     console.log(`rezhisser-video-service listening on http://${app.config.host}:${address.port}`);
     console.log(`data directory: ${app.config.dataDir}`);
     console.log(`video provider: ${app.config.videoProvider}`);
+    console.log(`database: ${app.db.kind}${app.db.kind === 'memory' ? ' (development only — set DATABASE_URL)' : ''}`);
+    console.log(`seedance: ${app.seedance ? `configured (${app.seedance.model})` : 'not configured (account jobs: demo only)'}`);
+    console.log(`storage: ${app.storage ? `s3 bucket ${app.storage.bucket}` : 'not configured (provider URLs are kept)'}`);
+    console.log(`payments: ${app.billing.providers.map((p) => p.name).join(', ') || 'not configured'}`);
     const paid = app.paidStatus();
     console.log(
       paid.available
@@ -924,6 +1110,7 @@ function start(options = {}) {
     console.log(`received ${signal}, shutting down`);
     app.closeProviders();
     app.server.close(() => {
+      app.db.close().catch(() => null);
       console.log('server closed');
       process.exit(0);
     });

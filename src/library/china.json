@@ -1,0 +1,1733 @@
+{
+  "region": "china",
+  "version": 1,
+  "items": [
+    {
+      "id": "cn-beauty-001",
+      "region": "china",
+      "country": "cn",
+      "language": "zh",
+      "category": "beauty",
+      "type": "ad",
+      "title": "早八水光",
+      "description": "早八水光用具体场景展示 {product} 的吸引力。",
+      "prompt": "为 {brand} 制作竖屏短视频，主角是 {product}。清晨浴室有雾气，镜前是一张刚醒来的脸。手指轻点产品，肌肤从暗沉到透亮，微距展示质地推开和吸收。 镜头从极近质感特写开始，慢慢推到人物表情，再用三段快速剪辑展示使用步骤、细节优势和真实反应。光线干净柔和，有城市感和高级留白，节奏前一秒抓人，中段给证据，结尾给明确行动。屏幕文字写「早八也要发光」，字幕简洁有力。声音使用原创流行节奏、轻微 whoosh、清晰中文旁白，不出现真实品牌、明星或影视片段。 使用 {photo} 作为第一帧和产品外观参考。",
+      "promptEn": "Create a vertical short video for {brand}, starring {product}. 清晨浴室有雾气，镜前是一张刚醒来的脸。 手指轻点产品，肌肤从暗沉到透亮，微距展示质地推开和吸收。 Start with an extreme texture close-up, push toward the person, then use three fast cuts to show steps, advantages, and real reaction. Clean soft light, urban premium negative space, first-second hook, proof in the middle, clear action at the end. On-screen text: \"早八也要发光\". Sound uses original pop beat, subtle whooshes, clear Mandarin voice-over, no real brands, celebrities, or film clips. Use {photo} as first frame and product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "beauty",
+        "短视频",
+        "种草"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "{product}进入特写画面",
+            "text": "先看这一秒"
+          },
+          {
+            "t": "2-5s",
+            "visual": "真实使用、细节和人物反应",
+            "text": "细节很能打"
+          },
+          {
+            "t": "5-8s",
+            "visual": "快速展示效果和质感",
+            "text": "效果看得见"
+          },
+          {
+            "t": "8-10s",
+            "visual": "品牌收尾和行动提示",
+            "text": "现在了解"
+          }
+        ],
+        "dialogue": [],
+        "audio": "原创流行节奏、轻微 whoosh、清晰中文旁白和真实环境声。",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "cn-beauty-002",
+      "region": "china",
+      "country": "cn",
+      "language": "zh",
+      "category": "beauty",
+      "type": "ad",
+      "title": "通勤补光瓶",
+      "description": "通勤补光瓶用具体场景展示 {product} 的吸引力。",
+      "prompt": "为 {brand} 制作竖屏短视频，主角是 {product}。地铁站口、咖啡杯和匆忙脚步形成都市节奏。女主拿出产品，在自然光下快速补状态，镜头捕捉脸颊光泽。 镜头从极近质感特写开始，慢慢推到人物表情，再用三段快速剪辑展示使用步骤、细节优势和真实反应。光线干净柔和，有城市感和高级留白，节奏前一秒抓人，中段给证据，结尾给明确行动。屏幕文字写「把好气色带出门」，字幕简洁有力。声音使用原创流行节奏、轻微 whoosh、清晰中文旁白，不出现真实品牌、明星或影视片段。 使用 {photo} 作为第一帧和产品外观参考。",
+      "promptEn": "Create a vertical short video for {brand}, starring {product}. 地铁站口、咖啡杯和匆忙脚步形成都市节奏。 女主拿出产品，在自然光下快速补状态，镜头捕捉脸颊光泽。 Start with an extreme texture close-up, push toward the person, then use three fast cuts to show steps, advantages, and real reaction. Clean soft light, urban premium negative space, first-second hook, proof in the middle, clear action at the end. On-screen text: \"把好气色带出门\". Sound uses original pop beat, subtle whooshes, clear Mandarin voice-over, no real brands, celebrities, or film clips. Use {photo} as first frame and product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "beauty",
+        "短视频",
+        "种草"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "{product}进入特写画面",
+            "text": "先看这一秒"
+          },
+          {
+            "t": "2-5s",
+            "visual": "真实使用、细节和人物反应",
+            "text": "细节很能打"
+          },
+          {
+            "t": "5-8s",
+            "visual": "快速展示效果和质感",
+            "text": "效果看得见"
+          },
+          {
+            "t": "8-10s",
+            "visual": "品牌收尾和行动提示",
+            "text": "现在了解"
+          }
+        ],
+        "dialogue": [],
+        "audio": "原创流行节奏、轻微 whoosh、清晰中文旁白和真实环境声。",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "cn-beauty-003",
+      "region": "china",
+      "country": "cn",
+      "language": "zh",
+      "category": "beauty",
+      "type": "ad",
+      "title": "熬夜急救",
+      "description": "熬夜急救用具体场景展示 {product} 的吸引力。",
+      "prompt": "为 {brand} 制作竖屏短视频，主角是 {product}。夜晚书桌、电脑蓝光和一盏暖灯形成对比。产品被打开，质地像水膜覆盖皮肤，第二天切到清爽笑容。 镜头从极近质感特写开始，慢慢推到人物表情，再用三段快速剪辑展示使用步骤、细节优势和真实反应。光线干净柔和，有城市感和高级留白，节奏前一秒抓人，中段给证据，结尾给明确行动。屏幕文字写「熬夜脸快速下线」，字幕简洁有力。声音使用原创流行节奏、轻微 whoosh、清晰中文旁白，不出现真实品牌、明星或影视片段。 使用 {photo} 作为第一帧和产品外观参考。",
+      "promptEn": "Create a vertical short video for {brand}, starring {product}. 夜晚书桌、电脑蓝光和一盏暖灯形成对比。 产品被打开，质地像水膜覆盖皮肤，第二天切到清爽笑容。 Start with an extreme texture close-up, push toward the person, then use three fast cuts to show steps, advantages, and real reaction. Clean soft light, urban premium negative space, first-second hook, proof in the middle, clear action at the end. On-screen text: \"熬夜脸快速下线\". Sound uses original pop beat, subtle whooshes, clear Mandarin voice-over, no real brands, celebrities, or film clips. Use {photo} as first frame and product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "beauty",
+        "短视频",
+        "种草"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "{product}进入特写画面",
+            "text": "先看这一秒"
+          },
+          {
+            "t": "2-5s",
+            "visual": "真实使用、细节和人物反应",
+            "text": "细节很能打"
+          },
+          {
+            "t": "5-8s",
+            "visual": "快速展示效果和质感",
+            "text": "效果看得见"
+          },
+          {
+            "t": "8-10s",
+            "visual": "品牌收尾和行动提示",
+            "text": "现在了解"
+          }
+        ],
+        "dialogue": [],
+        "audio": "原创流行节奏、轻微 whoosh、清晰中文旁白和真实环境声。",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "cn-beauty-004",
+      "region": "china",
+      "country": "cn",
+      "language": "zh",
+      "category": "beauty",
+      "type": "ad",
+      "title": "镜头友好妆前",
+      "description": "镜头友好妆前用具体场景展示 {product} 的吸引力。",
+      "prompt": "为 {brand} 制作竖屏短视频，主角是 {product}。直播灯亮起前，桌面摆满刷具和干净背景。模特用产品打底，粉底更服帖，镜头在半脸对比间切换。 镜头从极近质感特写开始，慢慢推到人物表情，再用三段快速剪辑展示使用步骤、细节优势和真实反应。光线干净柔和，有城市感和高级留白，节奏前一秒抓人，中段给证据，结尾给明确行动。屏幕文字写「上镜不怕近看」，字幕简洁有力。声音使用原创流行节奏、轻微 whoosh、清晰中文旁白，不出现真实品牌、明星或影视片段。 使用 {photo} 作为第一帧和产品外观参考。",
+      "promptEn": "Create a vertical short video for {brand}, starring {product}. 直播灯亮起前，桌面摆满刷具和干净背景。 模特用产品打底，粉底更服帖，镜头在半脸对比间切换。 Start with an extreme texture close-up, push toward the person, then use three fast cuts to show steps, advantages, and real reaction. Clean soft light, urban premium negative space, first-second hook, proof in the middle, clear action at the end. On-screen text: \"上镜不怕近看\". Sound uses original pop beat, subtle whooshes, clear Mandarin voice-over, no real brands, celebrities, or film clips. Use {photo} as first frame and product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "beauty",
+        "短视频",
+        "种草"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "{product}进入特写画面",
+            "text": "先看这一秒"
+          },
+          {
+            "t": "2-5s",
+            "visual": "真实使用、细节和人物反应",
+            "text": "细节很能打"
+          },
+          {
+            "t": "5-8s",
+            "visual": "快速展示效果和质感",
+            "text": "效果看得见"
+          },
+          {
+            "t": "8-10s",
+            "visual": "品牌收尾和行动提示",
+            "text": "现在了解"
+          }
+        ],
+        "dialogue": [],
+        "audio": "原创流行节奏、轻微 whoosh、清晰中文旁白和真实环境声。",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "cn-beauty-005",
+      "region": "china",
+      "country": "cn",
+      "language": "zh",
+      "category": "beauty",
+      "type": "ad",
+      "title": "成分实验室",
+      "description": "成分实验室用具体场景展示 {product} 的吸引力。",
+      "prompt": "为 {brand} 制作竖屏短视频，主角是 {product}。透明实验台、滴管、玻璃反光和冷白光。产品质地在玻璃片上铺开，旁白解释温和、保湿、日常可用。 镜头从极近质感特写开始，慢慢推到人物表情，再用三段快速剪辑展示使用步骤、细节优势和真实反应。光线干净柔和，有城市感和高级留白，节奏前一秒抓人，中段给证据，结尾给明确行动。屏幕文字写「成分简单，效果不简单」，字幕简洁有力。声音使用原创流行节奏、轻微 whoosh、清晰中文旁白，不出现真实品牌、明星或影视片段。 使用 {photo} 作为第一帧和产品外观参考。",
+      "promptEn": "Create a vertical short video for {brand}, starring {product}. 透明实验台、滴管、玻璃反光和冷白光。 产品质地在玻璃片上铺开，旁白解释温和、保湿、日常可用。 Start with an extreme texture close-up, push toward the person, then use three fast cuts to show steps, advantages, and real reaction. Clean soft light, urban premium negative space, first-second hook, proof in the middle, clear action at the end. On-screen text: \"成分简单，效果不简单\". Sound uses original pop beat, subtle whooshes, clear Mandarin voice-over, no real brands, celebrities, or film clips. Use {photo} as first frame and product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "beauty",
+        "短视频",
+        "种草"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "{product}进入特写画面",
+            "text": "先看这一秒"
+          },
+          {
+            "t": "2-5s",
+            "visual": "真实使用、细节和人物反应",
+            "text": "细节很能打"
+          },
+          {
+            "t": "5-8s",
+            "visual": "快速展示效果和质感",
+            "text": "效果看得见"
+          },
+          {
+            "t": "8-10s",
+            "visual": "品牌收尾和行动提示",
+            "text": "现在了解"
+          }
+        ],
+        "dialogue": [],
+        "audio": "原创流行节奏、轻微 whoosh、清晰中文旁白和真实环境声。",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "cn-beauty-006",
+      "region": "china",
+      "country": "cn",
+      "language": "zh",
+      "category": "beauty",
+      "type": "ad",
+      "title": "约会前十分钟",
+      "description": "约会前十分钟用具体场景展示 {product} 的吸引力。",
+      "prompt": "为 {brand} 制作竖屏短视频，主角是 {product}。衣帽间暖光、耳环、香氛和手机倒计时。女主快速使用产品，脸部状态提升，最后自信走向门口。 镜头从极近质感特写开始，慢慢推到人物表情，再用三段快速剪辑展示使用步骤、细节优势和真实反应。光线干净柔和，有城市感和高级留白，节奏前一秒抓人，中段给证据，结尾给明确行动。屏幕文字写「十分钟，刚刚好」，字幕简洁有力。声音使用原创流行节奏、轻微 whoosh、清晰中文旁白，不出现真实品牌、明星或影视片段。 使用 {photo} 作为第一帧和产品外观参考。",
+      "promptEn": "Create a vertical short video for {brand}, starring {product}. 衣帽间暖光、耳环、香氛和手机倒计时。 女主快速使用产品，脸部状态提升，最后自信走向门口。 Start with an extreme texture close-up, push toward the person, then use three fast cuts to show steps, advantages, and real reaction. Clean soft light, urban premium negative space, first-second hook, proof in the middle, clear action at the end. On-screen text: \"十分钟，刚刚好\". Sound uses original pop beat, subtle whooshes, clear Mandarin voice-over, no real brands, celebrities, or film clips. Use {photo} as first frame and product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "beauty",
+        "短视频",
+        "种草"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "{product}进入特写画面",
+            "text": "先看这一秒"
+          },
+          {
+            "t": "2-5s",
+            "visual": "真实使用、细节和人物反应",
+            "text": "细节很能打"
+          },
+          {
+            "t": "5-8s",
+            "visual": "快速展示效果和质感",
+            "text": "效果看得见"
+          },
+          {
+            "t": "8-10s",
+            "visual": "品牌收尾和行动提示",
+            "text": "现在了解"
+          }
+        ],
+        "dialogue": [],
+        "audio": "原创流行节奏、轻微 whoosh、清晰中文旁白和真实环境声。",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "cn-beauty-007",
+      "region": "china",
+      "country": "cn",
+      "language": "zh",
+      "category": "beauty",
+      "type": "ad",
+      "title": "敏感肌轻声说",
+      "description": "敏感肌轻声说用具体场景展示 {product} 的吸引力。",
+      "prompt": "为 {brand} 制作竖屏短视频，主角是 {product}。白色卧室、柔软床品、低饱和画面。产品轻柔上脸，镜头强调不拉扯、不厚重、舒适的表情。 镜头从极近质感特写开始，慢慢推到人物表情，再用三段快速剪辑展示使用步骤、细节优势和真实反应。光线干净柔和，有城市感和高级留白，节奏前一秒抓人，中段给证据，结尾给明确行动。屏幕文字写「温柔一点，也有效」，字幕简洁有力。声音使用原创流行节奏、轻微 whoosh、清晰中文旁白，不出现真实品牌、明星或影视片段。 使用 {photo} 作为第一帧和产品外观参考。",
+      "promptEn": "Create a vertical short video for {brand}, starring {product}. 白色卧室、柔软床品、低饱和画面。 产品轻柔上脸，镜头强调不拉扯、不厚重、舒适的表情。 Start with an extreme texture close-up, push toward the person, then use three fast cuts to show steps, advantages, and real reaction. Clean soft light, urban premium negative space, first-second hook, proof in the middle, clear action at the end. On-screen text: \"温柔一点，也有效\". Sound uses original pop beat, subtle whooshes, clear Mandarin voice-over, no real brands, celebrities, or film clips. Use {photo} as first frame and product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "beauty",
+        "短视频",
+        "种草"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "{product}进入特写画面",
+            "text": "先看这一秒"
+          },
+          {
+            "t": "2-5s",
+            "visual": "真实使用、细节和人物反应",
+            "text": "细节很能打"
+          },
+          {
+            "t": "5-8s",
+            "visual": "快速展示效果和质感",
+            "text": "效果看得见"
+          },
+          {
+            "t": "8-10s",
+            "visual": "品牌收尾和行动提示",
+            "text": "现在了解"
+          }
+        ],
+        "dialogue": [],
+        "audio": "原创流行节奏、轻微 whoosh、清晰中文旁白和真实环境声。",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "cn-beauty-008",
+      "region": "china",
+      "country": "cn",
+      "language": "zh",
+      "category": "beauty",
+      "type": "ad",
+      "title": "空瓶理由",
+      "description": "空瓶理由用具体场景展示 {product} 的吸引力。",
+      "prompt": "为 {brand} 制作竖屏短视频，主角是 {product}。桌上一排空瓶，手写便签和自然光。用户把产品放到最前面，快速回放每天坚持使用的片段。 镜头从极近质感特写开始，慢慢推到人物表情，再用三段快速剪辑展示使用步骤、细节优势和真实反应。光线干净柔和，有城市感和高级留白，节奏前一秒抓人，中段给证据，结尾给明确行动。屏幕文字写「用完才敢推荐」，字幕简洁有力。声音使用原创流行节奏、轻微 whoosh、清晰中文旁白，不出现真实品牌、明星或影视片段。 使用 {photo} 作为第一帧和产品外观参考。",
+      "promptEn": "Create a vertical short video for {brand}, starring {product}. 桌上一排空瓶，手写便签和自然光。 用户把产品放到最前面，快速回放每天坚持使用的片段。 Start with an extreme texture close-up, push toward the person, then use three fast cuts to show steps, advantages, and real reaction. Clean soft light, urban premium negative space, first-second hook, proof in the middle, clear action at the end. On-screen text: \"用完才敢推荐\". Sound uses original pop beat, subtle whooshes, clear Mandarin voice-over, no real brands, celebrities, or film clips. Use {photo} as first frame and product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "beauty",
+        "短视频",
+        "种草"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "{product}进入特写画面",
+            "text": "先看这一秒"
+          },
+          {
+            "t": "2-5s",
+            "visual": "真实使用、细节和人物反应",
+            "text": "细节很能打"
+          },
+          {
+            "t": "5-8s",
+            "visual": "快速展示效果和质感",
+            "text": "效果看得见"
+          },
+          {
+            "t": "8-10s",
+            "visual": "品牌收尾和行动提示",
+            "text": "现在了解"
+          }
+        ],
+        "dialogue": [],
+        "audio": "原创流行节奏、轻微 whoosh、清晰中文旁白和真实环境声。",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "cn-tech-001",
+      "region": "china",
+      "country": "cn",
+      "language": "zh",
+      "category": "tech",
+      "type": "ad",
+      "title": "口袋工作站",
+      "description": "口袋工作站用具体场景展示 {product} 的吸引力。",
+      "prompt": "为 {brand} 制作竖屏短视频，主角是 {product}。咖啡馆、高铁座位和会议室快速切换。主角用产品拍摄、记录、剪辑和分享，动作连贯像一天压缩成十秒。 镜头从极近质感特写开始，慢慢推到人物表情，再用三段快速剪辑展示使用步骤、细节优势和真实反应。光线干净柔和，有城市感和高级留白，节奏前一秒抓人，中段给证据，结尾给明确行动。屏幕文字写「效率装进口袋」，字幕简洁有力。声音使用原创流行节奏、轻微 whoosh、清晰中文旁白，不出现真实品牌、明星或影视片段。 使用 {photo} 作为第一帧和产品外观参考。",
+      "promptEn": "Create a vertical short video for {brand}, starring {product}. 咖啡馆、高铁座位和会议室快速切换。 主角用产品拍摄、记录、剪辑和分享，动作连贯像一天压缩成十秒。 Start with an extreme texture close-up, push toward the person, then use three fast cuts to show steps, advantages, and real reaction. Clean soft light, urban premium negative space, first-second hook, proof in the middle, clear action at the end. On-screen text: \"效率装进口袋\". Sound uses original pop beat, subtle whooshes, clear Mandarin voice-over, no real brands, celebrities, or film clips. Use {photo} as first frame and product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "tech",
+        "短视频",
+        "种草"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "{product}进入特写画面",
+            "text": "先看这一秒"
+          },
+          {
+            "t": "2-5s",
+            "visual": "真实使用、细节和人物反应",
+            "text": "细节很能打"
+          },
+          {
+            "t": "5-8s",
+            "visual": "快速展示效果和质感",
+            "text": "效果看得见"
+          },
+          {
+            "t": "8-10s",
+            "visual": "品牌收尾和行动提示",
+            "text": "现在了解"
+          }
+        ],
+        "dialogue": [],
+        "audio": "原创流行节奏、轻微 whoosh、清晰中文旁白和真实环境声。",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "cn-tech-002",
+      "region": "china",
+      "country": "cn",
+      "language": "zh",
+      "category": "tech",
+      "type": "ad",
+      "title": "桌面小宇宙",
+      "description": "桌面小宇宙用具体场景展示 {product} 的吸引力。",
+      "prompt": "为 {brand} 制作竖屏短视频，主角是 {product}。极简桌面、机械键盘、氛围灯和整齐线缆。产品启动后灯光联动，镜头从俯拍切到屏幕反光和手部操作。 镜头从极近质感特写开始，慢慢推到人物表情，再用三段快速剪辑展示使用步骤、细节优势和真实反应。光线干净柔和，有城市感和高级留白，节奏前一秒抓人，中段给证据，结尾给明确行动。屏幕文字写「桌面马上升级」，字幕简洁有力。声音使用原创流行节奏、轻微 whoosh、清晰中文旁白，不出现真实品牌、明星或影视片段。 使用 {photo} 作为第一帧和产品外观参考。",
+      "promptEn": "Create a vertical short video for {brand}, starring {product}. 极简桌面、机械键盘、氛围灯和整齐线缆。 产品启动后灯光联动，镜头从俯拍切到屏幕反光和手部操作。 Start with an extreme texture close-up, push toward the person, then use three fast cuts to show steps, advantages, and real reaction. Clean soft light, urban premium negative space, first-second hook, proof in the middle, clear action at the end. On-screen text: \"桌面马上升级\". Sound uses original pop beat, subtle whooshes, clear Mandarin voice-over, no real brands, celebrities, or film clips. Use {photo} as first frame and product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "tech",
+        "短视频",
+        "种草"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "{product}进入特写画面",
+            "text": "先看这一秒"
+          },
+          {
+            "t": "2-5s",
+            "visual": "真实使用、细节和人物反应",
+            "text": "细节很能打"
+          },
+          {
+            "t": "5-8s",
+            "visual": "快速展示效果和质感",
+            "text": "效果看得见"
+          },
+          {
+            "t": "8-10s",
+            "visual": "品牌收尾和行动提示",
+            "text": "现在了解"
+          }
+        ],
+        "dialogue": [],
+        "audio": "原创流行节奏、轻微 whoosh、清晰中文旁白和真实环境声。",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "cn-tech-003",
+      "region": "china",
+      "country": "cn",
+      "language": "zh",
+      "category": "tech",
+      "type": "ad",
+      "title": "旅行不断电",
+      "description": "旅行不断电用具体场景展示 {product} 的吸引力。",
+      "prompt": "为 {brand} 制作竖屏短视频，主角是 {product}。机场、登机口和窗边云层连续出现。旅行者拿出产品，手机、耳机、相机依次恢复电量。 镜头从极近质感特写开始，慢慢推到人物表情，再用三段快速剪辑展示使用步骤、细节优势和真实反应。光线干净柔和，有城市感和高级留白，节奏前一秒抓人，中段给证据，结尾给明确行动。屏幕文字写「电量焦虑退退退」，字幕简洁有力。声音使用原创流行节奏、轻微 whoosh、清晰中文旁白，不出现真实品牌、明星或影视片段。 使用 {photo} 作为第一帧和产品外观参考。",
+      "promptEn": "Create a vertical short video for {brand}, starring {product}. 机场、登机口和窗边云层连续出现。 旅行者拿出产品，手机、耳机、相机依次恢复电量。 Start with an extreme texture close-up, push toward the person, then use three fast cuts to show steps, advantages, and real reaction. Clean soft light, urban premium negative space, first-second hook, proof in the middle, clear action at the end. On-screen text: \"电量焦虑退退退\". Sound uses original pop beat, subtle whooshes, clear Mandarin voice-over, no real brands, celebrities, or film clips. Use {photo} as first frame and product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "tech",
+        "短视频",
+        "种草"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "{product}进入特写画面",
+            "text": "先看这一秒"
+          },
+          {
+            "t": "2-5s",
+            "visual": "真实使用、细节和人物反应",
+            "text": "细节很能打"
+          },
+          {
+            "t": "5-8s",
+            "visual": "快速展示效果和质感",
+            "text": "效果看得见"
+          },
+          {
+            "t": "8-10s",
+            "visual": "品牌收尾和行动提示",
+            "text": "现在了解"
+          }
+        ],
+        "dialogue": [],
+        "audio": "原创流行节奏、轻微 whoosh、清晰中文旁白和真实环境声。",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "cn-tech-004",
+      "region": "china",
+      "country": "cn",
+      "language": "zh",
+      "category": "tech",
+      "type": "ad",
+      "title": "会议降噪术",
+      "description": "会议降噪术用具体场景展示 {product} 的吸引力。",
+      "prompt": "为 {brand} 制作竖屏短视频，主角是 {product}。开放办公区很吵，屏幕上会议即将开始。产品开启后环境噪声被视觉化压低，人物声音变清晰。 镜头从极近质感特写开始，慢慢推到人物表情，再用三段快速剪辑展示使用步骤、细节优势和真实反应。光线干净柔和，有城市感和高级留白，节奏前一秒抓人，中段给证据，结尾给明确行动。屏幕文字写「把吵闹关小」，字幕简洁有力。声音使用原创流行节奏、轻微 whoosh、清晰中文旁白，不出现真实品牌、明星或影视片段。 使用 {photo} 作为第一帧和产品外观参考。",
+      "promptEn": "Create a vertical short video for {brand}, starring {product}. 开放办公区很吵，屏幕上会议即将开始。 产品开启后环境噪声被视觉化压低，人物声音变清晰。 Start with an extreme texture close-up, push toward the person, then use three fast cuts to show steps, advantages, and real reaction. Clean soft light, urban premium negative space, first-second hook, proof in the middle, clear action at the end. On-screen text: \"把吵闹关小\". Sound uses original pop beat, subtle whooshes, clear Mandarin voice-over, no real brands, celebrities, or film clips. Use {photo} as first frame and product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "tech",
+        "短视频",
+        "种草"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "{product}进入特写画面",
+            "text": "先看这一秒"
+          },
+          {
+            "t": "2-5s",
+            "visual": "真实使用、细节和人物反应",
+            "text": "细节很能打"
+          },
+          {
+            "t": "5-8s",
+            "visual": "快速展示效果和质感",
+            "text": "效果看得见"
+          },
+          {
+            "t": "8-10s",
+            "visual": "品牌收尾和行动提示",
+            "text": "现在了解"
+          }
+        ],
+        "dialogue": [],
+        "audio": "原创流行节奏、轻微 whoosh、清晰中文旁白和真实环境声。",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "cn-tech-005",
+      "region": "china",
+      "country": "cn",
+      "language": "zh",
+      "category": "tech",
+      "type": "ad",
+      "title": "新手也会拍",
+      "description": "新手也会拍用具体场景展示 {product} 的吸引力。",
+      "prompt": "为 {brand} 制作竖屏短视频，主角是 {product}。夜市霓虹、人群、美食摊位和手持镜头。主角用产品一键拍出稳定画面，前后对比明显但不过度夸张。 镜头从极近质感特写开始，慢慢推到人物表情，再用三段快速剪辑展示使用步骤、细节优势和真实反应。光线干净柔和，有城市感和高级留白，节奏前一秒抓人，中段给证据，结尾给明确行动。屏幕文字写「随手拍也高级」，字幕简洁有力。声音使用原创流行节奏、轻微 whoosh、清晰中文旁白，不出现真实品牌、明星或影视片段。 使用 {photo} 作为第一帧和产品外观参考。",
+      "promptEn": "Create a vertical short video for {brand}, starring {product}. 夜市霓虹、人群、美食摊位和手持镜头。 主角用产品一键拍出稳定画面，前后对比明显但不过度夸张。 Start with an extreme texture close-up, push toward the person, then use three fast cuts to show steps, advantages, and real reaction. Clean soft light, urban premium negative space, first-second hook, proof in the middle, clear action at the end. On-screen text: \"随手拍也高级\". Sound uses original pop beat, subtle whooshes, clear Mandarin voice-over, no real brands, celebrities, or film clips. Use {photo} as first frame and product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "tech",
+        "短视频",
+        "种草"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "{product}进入特写画面",
+            "text": "先看这一秒"
+          },
+          {
+            "t": "2-5s",
+            "visual": "真实使用、细节和人物反应",
+            "text": "细节很能打"
+          },
+          {
+            "t": "5-8s",
+            "visual": "快速展示效果和质感",
+            "text": "效果看得见"
+          },
+          {
+            "t": "8-10s",
+            "visual": "品牌收尾和行动提示",
+            "text": "现在了解"
+          }
+        ],
+        "dialogue": [],
+        "audio": "原创流行节奏、轻微 whoosh、清晰中文旁白和真实环境声。",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "cn-fashion-001",
+      "region": "china",
+      "country": "cn",
+      "language": "zh",
+      "category": "fashion",
+      "type": "ad",
+      "title": "高街一镜换装",
+      "description": "高街一镜换装用具体场景展示 {product} 的吸引力。",
+      "prompt": "为 {brand} 制作竖屏短视频，主角是 {product}。街角玻璃橱窗和斑马线构成城市背景。模特每走过一根路灯就切换一次产品搭配，动作干净利落。 镜头从极近质感特写开始，慢慢推到人物表情，再用三段快速剪辑展示使用步骤、细节优势和真实反应。光线干净柔和，有城市感和高级留白，节奏前一秒抓人，中段给证据，结尾给明确行动。屏幕文字写「今天穿得很会」，字幕简洁有力。声音使用原创流行节奏、轻微 whoosh、清晰中文旁白，不出现真实品牌、明星或影视片段。 使用 {photo} 作为第一帧和产品外观参考。",
+      "promptEn": "Create a vertical short video for {brand}, starring {product}. 街角玻璃橱窗和斑马线构成城市背景。 模特每走过一根路灯就切换一次产品搭配，动作干净利落。 Start with an extreme texture close-up, push toward the person, then use three fast cuts to show steps, advantages, and real reaction. Clean soft light, urban premium negative space, first-second hook, proof in the middle, clear action at the end. On-screen text: \"今天穿得很会\". Sound uses original pop beat, subtle whooshes, clear Mandarin voice-over, no real brands, celebrities, or film clips. Use {photo} as first frame and product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "fashion",
+        "短视频",
+        "种草"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "{product}进入特写画面",
+            "text": "先看这一秒"
+          },
+          {
+            "t": "2-5s",
+            "visual": "真实使用、细节和人物反应",
+            "text": "细节很能打"
+          },
+          {
+            "t": "5-8s",
+            "visual": "快速展示效果和质感",
+            "text": "效果看得见"
+          },
+          {
+            "t": "8-10s",
+            "visual": "品牌收尾和行动提示",
+            "text": "现在了解"
+          }
+        ],
+        "dialogue": [],
+        "audio": "原创流行节奏、轻微 whoosh、清晰中文旁白和真实环境声。",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "cn-fashion-002",
+      "region": "china",
+      "country": "cn",
+      "language": "zh",
+      "category": "fashion",
+      "type": "ad",
+      "title": "通勤不无聊",
+      "description": "通勤不无聊用具体场景展示 {product} 的吸引力。",
+      "prompt": "为 {brand} 制作竖屏短视频，主角是 {product}。写字楼电梯、工牌、咖啡和清晨阳光。产品让基础款有层次，镜头展示面料、剪裁和走路动态。 镜头从极近质感特写开始，慢慢推到人物表情，再用三段快速剪辑展示使用步骤、细节优势和真实反应。光线干净柔和，有城市感和高级留白，节奏前一秒抓人，中段给证据，结尾给明确行动。屏幕文字写「基础款也有态度」，字幕简洁有力。声音使用原创流行节奏、轻微 whoosh、清晰中文旁白，不出现真实品牌、明星或影视片段。 使用 {photo} 作为第一帧和产品外观参考。",
+      "promptEn": "Create a vertical short video for {brand}, starring {product}. 写字楼电梯、工牌、咖啡和清晨阳光。 产品让基础款有层次，镜头展示面料、剪裁和走路动态。 Start with an extreme texture close-up, push toward the person, then use three fast cuts to show steps, advantages, and real reaction. Clean soft light, urban premium negative space, first-second hook, proof in the middle, clear action at the end. On-screen text: \"基础款也有态度\". Sound uses original pop beat, subtle whooshes, clear Mandarin voice-over, no real brands, celebrities, or film clips. Use {photo} as first frame and product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "fashion",
+        "短视频",
+        "种草"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "{product}进入特写画面",
+            "text": "先看这一秒"
+          },
+          {
+            "t": "2-5s",
+            "visual": "真实使用、细节和人物反应",
+            "text": "细节很能打"
+          },
+          {
+            "t": "5-8s",
+            "visual": "快速展示效果和质感",
+            "text": "效果看得见"
+          },
+          {
+            "t": "8-10s",
+            "visual": "品牌收尾和行动提示",
+            "text": "现在了解"
+          }
+        ],
+        "dialogue": [],
+        "audio": "原创流行节奏、轻微 whoosh、清晰中文旁白和真实环境声。",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "cn-fashion-003",
+      "region": "china",
+      "country": "cn",
+      "language": "zh",
+      "category": "fashion",
+      "type": "ad",
+      "title": "周末松弛感",
+      "description": "周末松弛感用具体场景展示 {product} 的吸引力。",
+      "prompt": "为 {brand} 制作竖屏短视频，主角是 {product}。书店、花店和树影下的长椅。女主穿着产品慢慢走过城市角落，画面有胶片颗粒。 镜头从极近质感特写开始，慢慢推到人物表情，再用三段快速剪辑展示使用步骤、细节优势和真实反应。光线干净柔和，有城市感和高级留白，节奏前一秒抓人，中段给证据，结尾给明确行动。屏幕文字写「松弛但不随便」，字幕简洁有力。声音使用原创流行节奏、轻微 whoosh、清晰中文旁白，不出现真实品牌、明星或影视片段。 使用 {photo} 作为第一帧和产品外观参考。",
+      "promptEn": "Create a vertical short video for {brand}, starring {product}. 书店、花店和树影下的长椅。 女主穿着产品慢慢走过城市角落，画面有胶片颗粒。 Start with an extreme texture close-up, push toward the person, then use three fast cuts to show steps, advantages, and real reaction. Clean soft light, urban premium negative space, first-second hook, proof in the middle, clear action at the end. On-screen text: \"松弛但不随便\". Sound uses original pop beat, subtle whooshes, clear Mandarin voice-over, no real brands, celebrities, or film clips. Use {photo} as first frame and product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "fashion",
+        "短视频",
+        "种草"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "{product}进入特写画面",
+            "text": "先看这一秒"
+          },
+          {
+            "t": "2-5s",
+            "visual": "真实使用、细节和人物反应",
+            "text": "细节很能打"
+          },
+          {
+            "t": "5-8s",
+            "visual": "快速展示效果和质感",
+            "text": "效果看得见"
+          },
+          {
+            "t": "8-10s",
+            "visual": "品牌收尾和行动提示",
+            "text": "现在了解"
+          }
+        ],
+        "dialogue": [],
+        "audio": "原创流行节奏、轻微 whoosh、清晰中文旁白和真实环境声。",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "cn-luxury-001",
+      "region": "china",
+      "country": "cn",
+      "language": "zh",
+      "category": "luxury",
+      "type": "ad",
+      "title": "低调贵气",
+      "description": "低调贵气用具体场景展示 {product} 的吸引力。",
+      "prompt": "为 {brand} 制作竖屏短视频，主角是 {product}。安静酒店大堂、石材墙面和柔和顶光。产品只出现局部细节：金属、皮革、边线，人物动作克制。 镜头从极近质感特写开始，慢慢推到人物表情，再用三段快速剪辑展示使用步骤、细节优势和真实反应。光线干净柔和，有城市感和高级留白，节奏前一秒抓人，中段给证据，结尾给明确行动。屏幕文字写「不大声，也被看见」，字幕简洁有力。声音使用原创流行节奏、轻微 whoosh、清晰中文旁白，不出现真实品牌、明星或影视片段。 使用 {photo} 作为第一帧和产品外观参考。",
+      "promptEn": "Create a vertical short video for {brand}, starring {product}. 安静酒店大堂、石材墙面和柔和顶光。 产品只出现局部细节：金属、皮革、边线，人物动作克制。 Start with an extreme texture close-up, push toward the person, then use three fast cuts to show steps, advantages, and real reaction. Clean soft light, urban premium negative space, first-second hook, proof in the middle, clear action at the end. On-screen text: \"不大声，也被看见\". Sound uses original pop beat, subtle whooshes, clear Mandarin voice-over, no real brands, celebrities, or film clips. Use {photo} as first frame and product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "luxury",
+        "短视频",
+        "种草"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "{product}进入特写画面",
+            "text": "先看这一秒"
+          },
+          {
+            "t": "2-5s",
+            "visual": "真实使用、细节和人物反应",
+            "text": "细节很能打"
+          },
+          {
+            "t": "5-8s",
+            "visual": "快速展示效果和质感",
+            "text": "效果看得见"
+          },
+          {
+            "t": "8-10s",
+            "visual": "品牌收尾和行动提示",
+            "text": "现在了解"
+          }
+        ],
+        "dialogue": [],
+        "audio": "原创流行节奏、轻微 whoosh、清晰中文旁白和真实环境声。",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "cn-luxury-002",
+      "region": "china",
+      "country": "cn",
+      "language": "zh",
+      "category": "luxury",
+      "type": "ad",
+      "title": "礼物开箱仪式",
+      "description": "礼物开箱仪式用具体场景展示 {product} 的吸引力。",
+      "prompt": "为 {brand} 制作竖屏短视频，主角是 {product}。深色桌面、丝带、卡片和暖色聚光。手慢慢打开产品包装，镜头捕捉收礼人的惊喜眼神。 镜头从极近质感特写开始，慢慢推到人物表情，再用三段快速剪辑展示使用步骤、细节优势和真实反应。光线干净柔和，有城市感和高级留白，节奏前一秒抓人，中段给证据，结尾给明确行动。屏幕文字写「这一刻值得被记住」，字幕简洁有力。声音使用原创流行节奏、轻微 whoosh、清晰中文旁白，不出现真实品牌、明星或影视片段。 使用 {photo} 作为第一帧和产品外观参考。",
+      "promptEn": "Create a vertical short video for {brand}, starring {product}. 深色桌面、丝带、卡片和暖色聚光。 手慢慢打开产品包装，镜头捕捉收礼人的惊喜眼神。 Start with an extreme texture close-up, push toward the person, then use three fast cuts to show steps, advantages, and real reaction. Clean soft light, urban premium negative space, first-second hook, proof in the middle, clear action at the end. On-screen text: \"这一刻值得被记住\". Sound uses original pop beat, subtle whooshes, clear Mandarin voice-over, no real brands, celebrities, or film clips. Use {photo} as first frame and product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "luxury",
+        "短视频",
+        "种草"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "{product}进入特写画面",
+            "text": "先看这一秒"
+          },
+          {
+            "t": "2-5s",
+            "visual": "真实使用、细节和人物反应",
+            "text": "细节很能打"
+          },
+          {
+            "t": "5-8s",
+            "visual": "快速展示效果和质感",
+            "text": "效果看得见"
+          },
+          {
+            "t": "8-10s",
+            "visual": "品牌收尾和行动提示",
+            "text": "现在了解"
+          }
+        ],
+        "dialogue": [],
+        "audio": "原创流行节奏、轻微 whoosh、清晰中文旁白和真实环境声。",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "cn-meme-001",
+      "region": "china",
+      "country": "cn",
+      "language": "zh",
+      "category": "memes",
+      "type": "meme",
+      "title": "两个美容师",
+      "description": "两个美容师用原创喜剧片风格配音聊天，最后把犹豫反转成想买。",
+      "prompt": "使用 {photo} 作为第一帧和 {product} 外观参考。竖屏中文互联网梗视频：两个美容师在明亮美容院看着产品，它像一双让人纠结的新鞋；镜头拍镜子、灯、口型同步近景和内心独白气泡。 镜头要有快速推拉、表情定格、弹幕式吐槽、夸张 UI 和清晰产品特写，但不要丑化真实人物。中段展示 {brand} 的 {product} 如何带来反转或解决尴尬，结尾给产品英雄镜头和行动提示。屏幕文字写「懂了，必须入」。声音必须是原创网络感节奏、whoosh、record scratch、提示音或用户提供的授权音乐；不使用真实品牌、明星、影视片段、平台水印或未授权台词。",
+      "promptEn": "Use {photo} as first frame and reference for {product}. Vertical Chinese internet meme: 两个美容师在明亮美容院看着产品，它像一双让人纠结的新鞋；镜头拍镜子、灯、口型同步近景和内心独白气泡。 Use fast push-ins, reaction freezes, bullet-comment captions, exaggerated UI, and clear product close-ups without mocking real people. In the middle, show how {brand} and {product} create the reversal or solve the awkward moment, ending with a hero product shot and CTA. On-screen text: \"懂了，必须入\". Sound must be original internet-style beat, whooshes, record scratch, beeps, or user-supplied licensed music; no real brands, celebrities, film clips, platform watermarks, or unauthorized lines.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "hot",
+      "tags": [
+        "梗",
+        "反转",
+        "种草"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "梗点开场和产品第一眼",
+            "text": "两个美容师"
+          },
+          {
+            "t": "2-5s",
+            "visual": "尴尬或反差升级",
+            "text": "事情不对劲"
+          },
+          {
+            "t": "5-8s",
+            "visual": "{product} 带来反转",
+            "text": "懂了，必须入"
+          },
+          {
+            "t": "8-10s",
+            "visual": "英雄镜头和行动提示",
+            "text": "现在了解"
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "你买了新的这个吗？"
+          },
+          {
+            "speaker": "A",
+            "line": "还没有，正在想，你觉得怎么样？"
+          },
+          {
+            "speaker": "A",
+            "line": "我觉得有点太夸张，我不会买。"
+          },
+          {
+            "speaker": "A",
+            "line": "明白了……那就是好东西，得买。"
+          }
+        ],
+        "audio": "原创中文网络感节奏或用户提供的授权音乐；不使用真实品牌、明星、影视片段或平台水印。",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "cn-meme-002",
+      "region": "china",
+      "country": "cn",
+      "language": "zh",
+      "category": "memes",
+      "type": "meme",
+      "title": "买家秀 vs 卖家秀",
+      "description": "反差梗展示问题，再让产品救场。",
+      "prompt": "使用 {photo} 作为第一帧和 {product} 外观参考。竖屏中文互联网梗视频：第一秒是理想卖家秀，立刻 record scratch 切到买家秀式混乱现场，最后用正确方法救场。 镜头要有快速推拉、表情定格、弹幕式吐槽、夸张 UI 和清晰产品特写，但不要丑化真实人物。中段展示 {brand} 的 {product} 如何带来反转或解决尴尬，结尾给产品英雄镜头和行动提示。屏幕文字写「这才对味」。声音必须是原创网络感节奏、whoosh、record scratch、提示音或用户提供的授权音乐；不使用真实品牌、明星、影视片段、平台水印或未授权台词。",
+      "promptEn": "Use {photo} as first frame and reference for {product}. Vertical Chinese internet meme: 第一秒是理想卖家秀，立刻 record scratch 切到买家秀式混乱现场，最后用正确方法救场。 Use fast push-ins, reaction freezes, bullet-comment captions, exaggerated UI, and clear product close-ups without mocking real people. In the middle, show how {brand} and {product} create the reversal or solve the awkward moment, ending with a hero product shot and CTA. On-screen text: \"这才对味\". Sound must be original internet-style beat, whooshes, record scratch, beeps, or user-supplied licensed music; no real brands, celebrities, film clips, platform watermarks, or unauthorized lines.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "hot",
+      "tags": [
+        "梗",
+        "反转",
+        "种草"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "梗点开场和产品第一眼",
+            "text": "买家秀 vs 卖家秀"
+          },
+          {
+            "t": "2-5s",
+            "visual": "尴尬或反差升级",
+            "text": "事情不对劲"
+          },
+          {
+            "t": "5-8s",
+            "visual": "{product} 带来反转",
+            "text": "这才对味"
+          },
+          {
+            "t": "8-10s",
+            "visual": "英雄镜头和行动提示",
+            "text": "现在了解"
+          }
+        ],
+        "dialogue": [],
+        "audio": "原创中文网络感节奏或用户提供的授权音乐；不使用真实品牌、明星、影视片段或平台水印。",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "cn-meme-003",
+      "region": "china",
+      "country": "cn",
+      "language": "zh",
+      "category": "memes",
+      "type": "meme",
+      "title": "钱买不到？",
+      "description": "先讲情绪价值，最后用商品反转成可购买的快乐。",
+      "prompt": "使用 {photo} 作为第一帧和 {product} 外观参考。竖屏中文互联网梗视频：人物看城市夜景说有些快乐钱买不到，停顿后拿起产品认真补一句但这个可以。 镜头要有快速推拉、表情定格、弹幕式吐槽、夸张 UI 和清晰产品特写，但不要丑化真实人物。中段展示 {brand} 的 {product} 如何带来反转或解决尴尬，结尾给产品英雄镜头和行动提示。屏幕文字写「但这个可以」。声音必须是原创网络感节奏、whoosh、record scratch、提示音或用户提供的授权音乐；不使用真实品牌、明星、影视片段、平台水印或未授权台词。",
+      "promptEn": "Use {photo} as first frame and reference for {product}. Vertical Chinese internet meme: 人物看城市夜景说有些快乐钱买不到，停顿后拿起产品认真补一句但这个可以。 Use fast push-ins, reaction freezes, bullet-comment captions, exaggerated UI, and clear product close-ups without mocking real people. In the middle, show how {brand} and {product} create the reversal or solve the awkward moment, ending with a hero product shot and CTA. On-screen text: \"但这个可以\". Sound must be original internet-style beat, whooshes, record scratch, beeps, or user-supplied licensed music; no real brands, celebrities, film clips, platform watermarks, or unauthorized lines.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "hot",
+      "tags": [
+        "梗",
+        "反转",
+        "种草"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "梗点开场和产品第一眼",
+            "text": "钱买不到？"
+          },
+          {
+            "t": "2-5s",
+            "visual": "尴尬或反差升级",
+            "text": "事情不对劲"
+          },
+          {
+            "t": "5-8s",
+            "visual": "{product} 带来反转",
+            "text": "但这个可以"
+          },
+          {
+            "t": "8-10s",
+            "visual": "英雄镜头和行动提示",
+            "text": "现在了解"
+          }
+        ],
+        "dialogue": [],
+        "audio": "原创中文网络感节奏或用户提供的授权音乐；不使用真实品牌、明星、影视片段或平台水印。",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "cn-meme-004",
+      "region": "china",
+      "country": "cn",
+      "language": "zh",
+      "category": "memes",
+      "type": "meme",
+      "title": "打工人回血",
+      "description": "把下班后的疲惫拍成游戏回血梗。",
+      "prompt": "使用 {photo} 作为第一帧和 {product} 外观参考。竖屏中文互联网梗视频：办公室冷光里能量条见底，回家后产品出现，能量一格格恢复，房间变暖。 镜头要有快速推拉、表情定格、弹幕式吐槽、夸张 UI 和清晰产品特写，但不要丑化真实人物。中段展示 {brand} 的 {product} 如何带来反转或解决尴尬，结尾给产品英雄镜头和行动提示。屏幕文字写「今晚充满」。声音必须是原创网络感节奏、whoosh、record scratch、提示音或用户提供的授权音乐；不使用真实品牌、明星、影视片段、平台水印或未授权台词。",
+      "promptEn": "Use {photo} as first frame and reference for {product}. Vertical Chinese internet meme: 办公室冷光里能量条见底，回家后产品出现，能量一格格恢复，房间变暖。 Use fast push-ins, reaction freezes, bullet-comment captions, exaggerated UI, and clear product close-ups without mocking real people. In the middle, show how {brand} and {product} create the reversal or solve the awkward moment, ending with a hero product shot and CTA. On-screen text: \"今晚充满\". Sound must be original internet-style beat, whooshes, record scratch, beeps, or user-supplied licensed music; no real brands, celebrities, film clips, platform watermarks, or unauthorized lines.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "hot",
+      "tags": [
+        "梗",
+        "反转",
+        "种草"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "梗点开场和产品第一眼",
+            "text": "打工人回血"
+          },
+          {
+            "t": "2-5s",
+            "visual": "尴尬或反差升级",
+            "text": "事情不对劲"
+          },
+          {
+            "t": "5-8s",
+            "visual": "{product} 带来反转",
+            "text": "今晚充满"
+          },
+          {
+            "t": "8-10s",
+            "visual": "英雄镜头和行动提示",
+            "text": "现在了解"
+          }
+        ],
+        "dialogue": [],
+        "audio": "原创中文网络感节奏或用户提供的授权音乐；不使用真实品牌、明星、影视片段或平台水印。",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "cn-meme-005",
+      "region": "china",
+      "country": "cn",
+      "language": "zh",
+      "category": "memes",
+      "type": "meme",
+      "title": "朋友说不买",
+      "description": "朋友嘴上说不需要，手却很诚实。",
+      "prompt": "使用 {photo} 作为第一帧和 {product} 外观参考。竖屏中文互联网梗视频：朋友先摆手说不需要，随后偷瞄、靠近、打开购买页，最后小声问链接。 镜头要有快速推拉、表情定格、弹幕式吐槽、夸张 UI 和清晰产品特写，但不要丑化真实人物。中段展示 {brand} 的 {product} 如何带来反转或解决尴尬，结尾给产品英雄镜头和行动提示。屏幕文字写「链接发我」。声音必须是原创网络感节奏、whoosh、record scratch、提示音或用户提供的授权音乐；不使用真实品牌、明星、影视片段、平台水印或未授权台词。",
+      "promptEn": "Use {photo} as first frame and reference for {product}. Vertical Chinese internet meme: 朋友先摆手说不需要，随后偷瞄、靠近、打开购买页，最后小声问链接。 Use fast push-ins, reaction freezes, bullet-comment captions, exaggerated UI, and clear product close-ups without mocking real people. In the middle, show how {brand} and {product} create the reversal or solve the awkward moment, ending with a hero product shot and CTA. On-screen text: \"链接发我\". Sound must be original internet-style beat, whooshes, record scratch, beeps, or user-supplied licensed music; no real brands, celebrities, film clips, platform watermarks, or unauthorized lines.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "hot",
+      "tags": [
+        "梗",
+        "反转",
+        "种草"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "梗点开场和产品第一眼",
+            "text": "朋友说不买"
+          },
+          {
+            "t": "2-5s",
+            "visual": "尴尬或反差升级",
+            "text": "事情不对劲"
+          },
+          {
+            "t": "5-8s",
+            "visual": "{product} 带来反转",
+            "text": "链接发我"
+          },
+          {
+            "t": "8-10s",
+            "visual": "英雄镜头和行动提示",
+            "text": "现在了解"
+          }
+        ],
+        "dialogue": [],
+        "audio": "原创中文网络感节奏或用户提供的授权音乐；不使用真实品牌、明星、影视片段或平台水印。",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "cn-meme-006",
+      "region": "china",
+      "country": "cn",
+      "language": "zh",
+      "category": "memes",
+      "type": "meme",
+      "title": "妈见夸",
+      "description": "妈妈终于夸了的温暖产品梗。",
+      "prompt": "使用 {photo} 作为第一帧和 {product} 外观参考。竖屏中文互联网梗视频：妈妈审视产品，主角紧张展示，妈妈点头说这个还行，全场慢动作鼓掌。 镜头要有快速推拉、表情定格、弹幕式吐槽、夸张 UI 和清晰产品特写，但不要丑化真实人物。中段展示 {brand} 的 {product} 如何带来反转或解决尴尬，结尾给产品英雄镜头和行动提示。屏幕文字写「妈见夸」。声音必须是原创网络感节奏、whoosh、record scratch、提示音或用户提供的授权音乐；不使用真实品牌、明星、影视片段、平台水印或未授权台词。",
+      "promptEn": "Use {photo} as first frame and reference for {product}. Vertical Chinese internet meme: 妈妈审视产品，主角紧张展示，妈妈点头说这个还行，全场慢动作鼓掌。 Use fast push-ins, reaction freezes, bullet-comment captions, exaggerated UI, and clear product close-ups without mocking real people. In the middle, show how {brand} and {product} create the reversal or solve the awkward moment, ending with a hero product shot and CTA. On-screen text: \"妈见夸\". Sound must be original internet-style beat, whooshes, record scratch, beeps, or user-supplied licensed music; no real brands, celebrities, film clips, platform watermarks, or unauthorized lines.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "hot",
+      "tags": [
+        "梗",
+        "反转",
+        "种草"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "梗点开场和产品第一眼",
+            "text": "妈见夸"
+          },
+          {
+            "t": "2-5s",
+            "visual": "尴尬或反差升级",
+            "text": "事情不对劲"
+          },
+          {
+            "t": "5-8s",
+            "visual": "{product} 带来反转",
+            "text": "妈见夸"
+          },
+          {
+            "t": "8-10s",
+            "visual": "英雄镜头和行动提示",
+            "text": "现在了解"
+          }
+        ],
+        "dialogue": [],
+        "audio": "原创中文网络感节奏或用户提供的授权音乐；不使用真实品牌、明星、影视片段或平台水印。",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "cn-live-001",
+      "region": "china",
+      "country": "cn",
+      "language": "zh",
+      "category": "live-commerce",
+      "type": "live-commerce",
+      "title": "美妆限时秒杀",
+      "description": "美妆限时秒杀突出 {product} 的直播转化点。",
+      "prompt": "为 {brand} 制作直播带货竖屏切片，主推 {product}。直播间有柔光灯、产品台、弹幕贴片和倒计时，主播把 {product} 推到镜头前，用手部演示讲清质地、功能、适用人群和优惠。镜头先抓产品近景，再切主播表情、价格牌、库存数字和领取按钮。节奏像真实直播高光：第一秒喊利益点，中段给细节和效果，结尾明确说上链接、限时秒杀或领取优惠。使用 {photo} 作为第一帧和产品参考。屏幕文字写「限时秒杀，先到先得」，保留可替换价格区域。声音是原创直播节奏、普通话口播、倒计时提示音，不出现真实平台水印或品牌。",
+      "promptEn": "Create a vertical live-commerce highlight for {brand}, selling {product}. The livestream room has soft lights, product table, comment stickers, and countdown. The host brings {product} close to camera and demonstrates texture, function, audience, and offer. Start with product close-up, then host expression, price card, stock number, and claim button. Pace like a real livestream highlight: first-second benefit, middle detail and result, final clear link-up, flash sale, or coupon CTA. Use {photo} as first frame and product reference. On-screen text: \"限时秒杀，先到先得\", editable price area. Sound: original livestream beat, Mandarin host voice, countdown beeps, no real platform watermark or brand.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "hot",
+      "tags": [
+        "直播",
+        "秒杀",
+        "上链接"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "主播把 {product} 推到镜头前",
+            "text": "限时秒杀，先到先得"
+          },
+          {
+            "t": "2-5s",
+            "visual": "手部演示和卖点贴片",
+            "text": "看细节"
+          },
+          {
+            "t": "5-8s",
+            "visual": "倒计时、价格和弹幕提醒",
+            "text": "限时秒杀"
+          },
+          {
+            "t": "8-10s",
+            "visual": "主播指向链接区域",
+            "text": "现在上链接"
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "家人们看这里，{product} 这波真的划算。"
+          },
+          {
+            "speaker": "A",
+            "line": "倒计时结束就恢复，先拍先发。"
+          }
+        ],
+        "audio": "原创直播间节奏、普通话主播口播、倒计时提示音和弹幕音效；不使用真实平台水印或品牌音乐。",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta",
+          "price"
+        ]
+      }
+    },
+    {
+      "id": "cn-live-002",
+      "region": "china",
+      "country": "cn",
+      "language": "zh",
+      "category": "live-commerce",
+      "type": "live-commerce",
+      "title": "三秒看卖点",
+      "description": "三秒看卖点突出 {product} 的直播转化点。",
+      "prompt": "为 {brand} 制作直播带货竖屏切片，主推 {product}。直播间有柔光灯、产品台、弹幕贴片和倒计时，主播把 {product} 推到镜头前，用手部演示讲清质地、功能、适用人群和优惠。镜头先抓产品近景，再切主播表情、价格牌、库存数字和领取按钮。节奏像真实直播高光：第一秒喊利益点，中段给细节和效果，结尾明确说上链接、限时秒杀或领取优惠。使用 {photo} 作为第一帧和产品参考。屏幕文字写「3 秒懂为什么买」，保留可替换价格区域。声音是原创直播节奏、普通话口播、倒计时提示音，不出现真实平台水印或品牌。",
+      "promptEn": "Create a vertical live-commerce highlight for {brand}, selling {product}. The livestream room has soft lights, product table, comment stickers, and countdown. The host brings {product} close to camera and demonstrates texture, function, audience, and offer. Start with product close-up, then host expression, price card, stock number, and claim button. Pace like a real livestream highlight: first-second benefit, middle detail and result, final clear link-up, flash sale, or coupon CTA. Use {photo} as first frame and product reference. On-screen text: \"3 秒懂为什么买\", editable price area. Sound: original livestream beat, Mandarin host voice, countdown beeps, no real platform watermark or brand.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "hot",
+      "tags": [
+        "直播",
+        "秒杀",
+        "上链接"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "主播把 {product} 推到镜头前",
+            "text": "3 秒懂为什么买"
+          },
+          {
+            "t": "2-5s",
+            "visual": "手部演示和卖点贴片",
+            "text": "看细节"
+          },
+          {
+            "t": "5-8s",
+            "visual": "倒计时、价格和弹幕提醒",
+            "text": "限时秒杀"
+          },
+          {
+            "t": "8-10s",
+            "visual": "主播指向链接区域",
+            "text": "现在上链接"
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "家人们看这里，{product} 这波真的划算。"
+          },
+          {
+            "speaker": "A",
+            "line": "倒计时结束就恢复，先拍先发。"
+          }
+        ],
+        "audio": "原创直播间节奏、普通话主播口播、倒计时提示音和弹幕音效；不使用真实平台水印或品牌音乐。",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta",
+          "price"
+        ]
+      }
+    },
+    {
+      "id": "cn-live-003",
+      "region": "china",
+      "country": "cn",
+      "language": "zh",
+      "category": "live-commerce",
+      "type": "live-commerce",
+      "title": "倒计时补货",
+      "description": "倒计时补货突出 {product} 的直播转化点。",
+      "prompt": "为 {brand} 制作直播带货竖屏切片，主推 {product}。直播间有柔光灯、产品台、弹幕贴片和倒计时，主播把 {product} 推到镜头前，用手部演示讲清质地、功能、适用人群和优惠。镜头先抓产品近景，再切主播表情、价格牌、库存数字和领取按钮。节奏像真实直播高光：第一秒喊利益点，中段给细节和效果，结尾明确说上链接、限时秒杀或领取优惠。使用 {photo} 作为第一帧和产品参考。屏幕文字写「补货这波别错过」，保留可替换价格区域。声音是原创直播节奏、普通话口播、倒计时提示音，不出现真实平台水印或品牌。",
+      "promptEn": "Create a vertical live-commerce highlight for {brand}, selling {product}. The livestream room has soft lights, product table, comment stickers, and countdown. The host brings {product} close to camera and demonstrates texture, function, audience, and offer. Start with product close-up, then host expression, price card, stock number, and claim button. Pace like a real livestream highlight: first-second benefit, middle detail and result, final clear link-up, flash sale, or coupon CTA. Use {photo} as first frame and product reference. On-screen text: \"补货这波别错过\", editable price area. Sound: original livestream beat, Mandarin host voice, countdown beeps, no real platform watermark or brand.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "hot",
+      "tags": [
+        "直播",
+        "秒杀",
+        "上链接"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "主播把 {product} 推到镜头前",
+            "text": "补货这波别错过"
+          },
+          {
+            "t": "2-5s",
+            "visual": "手部演示和卖点贴片",
+            "text": "看细节"
+          },
+          {
+            "t": "5-8s",
+            "visual": "倒计时、价格和弹幕提醒",
+            "text": "限时秒杀"
+          },
+          {
+            "t": "8-10s",
+            "visual": "主播指向链接区域",
+            "text": "现在上链接"
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "家人们看这里，{product} 这波真的划算。"
+          },
+          {
+            "speaker": "A",
+            "line": "倒计时结束就恢复，先拍先发。"
+          }
+        ],
+        "audio": "原创直播间节奏、普通话主播口播、倒计时提示音和弹幕音效；不使用真实平台水印或品牌音乐。",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta",
+          "price"
+        ]
+      }
+    },
+    {
+      "id": "cn-live-004",
+      "region": "china",
+      "country": "cn",
+      "language": "zh",
+      "category": "live-commerce",
+      "type": "live-commerce",
+      "title": "老板加赠",
+      "description": "老板加赠突出 {product} 的直播转化点。",
+      "prompt": "为 {brand} 制作直播带货竖屏切片，主推 {product}。直播间有柔光灯、产品台、弹幕贴片和倒计时，主播把 {product} 推到镜头前，用手部演示讲清质地、功能、适用人群和优惠。镜头先抓产品近景，再切主播表情、价格牌、库存数字和领取按钮。节奏像真实直播高光：第一秒喊利益点，中段给细节和效果，结尾明确说上链接、限时秒杀或领取优惠。使用 {photo} 作为第一帧和产品参考。屏幕文字写「今晚加赠不加价」，保留可替换价格区域。声音是原创直播节奏、普通话口播、倒计时提示音，不出现真实平台水印或品牌。",
+      "promptEn": "Create a vertical live-commerce highlight for {brand}, selling {product}. The livestream room has soft lights, product table, comment stickers, and countdown. The host brings {product} close to camera and demonstrates texture, function, audience, and offer. Start with product close-up, then host expression, price card, stock number, and claim button. Pace like a real livestream highlight: first-second benefit, middle detail and result, final clear link-up, flash sale, or coupon CTA. Use {photo} as first frame and product reference. On-screen text: \"今晚加赠不加价\", editable price area. Sound: original livestream beat, Mandarin host voice, countdown beeps, no real platform watermark or brand.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "hot",
+      "tags": [
+        "直播",
+        "秒杀",
+        "上链接"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "主播把 {product} 推到镜头前",
+            "text": "今晚加赠不加价"
+          },
+          {
+            "t": "2-5s",
+            "visual": "手部演示和卖点贴片",
+            "text": "看细节"
+          },
+          {
+            "t": "5-8s",
+            "visual": "倒计时、价格和弹幕提醒",
+            "text": "限时秒杀"
+          },
+          {
+            "t": "8-10s",
+            "visual": "主播指向链接区域",
+            "text": "现在上链接"
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "家人们看这里，{product} 这波真的划算。"
+          },
+          {
+            "speaker": "A",
+            "line": "倒计时结束就恢复，先拍先发。"
+          }
+        ],
+        "audio": "原创直播间节奏、普通话主播口播、倒计时提示音和弹幕音效；不使用真实平台水印或品牌音乐。",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta",
+          "price"
+        ]
+      }
+    },
+    {
+      "id": "cn-live-005",
+      "region": "china",
+      "country": "cn",
+      "language": "zh",
+      "category": "live-commerce",
+      "type": "live-commerce",
+      "title": "新客专属",
+      "description": "新客专属突出 {product} 的直播转化点。",
+      "prompt": "为 {brand} 制作直播带货竖屏切片，主推 {product}。直播间有柔光灯、产品台、弹幕贴片和倒计时，主播把 {product} 推到镜头前，用手部演示讲清质地、功能、适用人群和优惠。镜头先抓产品近景，再切主播表情、价格牌、库存数字和领取按钮。节奏像真实直播高光：第一秒喊利益点，中段给细节和效果，结尾明确说上链接、限时秒杀或领取优惠。使用 {photo} 作为第一帧和产品参考。屏幕文字写「新客先领券」，保留可替换价格区域。声音是原创直播节奏、普通话口播、倒计时提示音，不出现真实平台水印或品牌。",
+      "promptEn": "Create a vertical live-commerce highlight for {brand}, selling {product}. The livestream room has soft lights, product table, comment stickers, and countdown. The host brings {product} close to camera and demonstrates texture, function, audience, and offer. Start with product close-up, then host expression, price card, stock number, and claim button. Pace like a real livestream highlight: first-second benefit, middle detail and result, final clear link-up, flash sale, or coupon CTA. Use {photo} as first frame and product reference. On-screen text: \"新客先领券\", editable price area. Sound: original livestream beat, Mandarin host voice, countdown beeps, no real platform watermark or brand.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "hot",
+      "tags": [
+        "直播",
+        "秒杀",
+        "上链接"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "主播把 {product} 推到镜头前",
+            "text": "新客先领券"
+          },
+          {
+            "t": "2-5s",
+            "visual": "手部演示和卖点贴片",
+            "text": "看细节"
+          },
+          {
+            "t": "5-8s",
+            "visual": "倒计时、价格和弹幕提醒",
+            "text": "限时秒杀"
+          },
+          {
+            "t": "8-10s",
+            "visual": "主播指向链接区域",
+            "text": "现在上链接"
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "家人们看这里，{product} 这波真的划算。"
+          },
+          {
+            "speaker": "A",
+            "line": "倒计时结束就恢复，先拍先发。"
+          }
+        ],
+        "audio": "原创直播间节奏、普通话主播口播、倒计时提示音和弹幕音效；不使用真实平台水印或品牌音乐。",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta",
+          "price"
+        ]
+      }
+    },
+    {
+      "id": "cn-live-006",
+      "region": "china",
+      "country": "cn",
+      "language": "zh",
+      "category": "live-commerce",
+      "type": "live-commerce",
+      "title": "最后一波上链接",
+      "description": "最后一波上链接突出 {product} 的直播转化点。",
+      "prompt": "为 {brand} 制作直播带货竖屏切片，主推 {product}。直播间有柔光灯、产品台、弹幕贴片和倒计时，主播把 {product} 推到镜头前，用手部演示讲清质地、功能、适用人群和优惠。镜头先抓产品近景，再切主播表情、价格牌、库存数字和领取按钮。节奏像真实直播高光：第一秒喊利益点，中段给细节和效果，结尾明确说上链接、限时秒杀或领取优惠。使用 {photo} 作为第一帧和产品参考。屏幕文字写「上链接，最后一波」，保留可替换价格区域。声音是原创直播节奏、普通话口播、倒计时提示音，不出现真实平台水印或品牌。",
+      "promptEn": "Create a vertical live-commerce highlight for {brand}, selling {product}. The livestream room has soft lights, product table, comment stickers, and countdown. The host brings {product} close to camera and demonstrates texture, function, audience, and offer. Start with product close-up, then host expression, price card, stock number, and claim button. Pace like a real livestream highlight: first-second benefit, middle detail and result, final clear link-up, flash sale, or coupon CTA. Use {photo} as first frame and product reference. On-screen text: \"上链接，最后一波\", editable price area. Sound: original livestream beat, Mandarin host voice, countdown beeps, no real platform watermark or brand.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "hot",
+      "tags": [
+        "直播",
+        "秒杀",
+        "上链接"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "主播把 {product} 推到镜头前",
+            "text": "上链接，最后一波"
+          },
+          {
+            "t": "2-5s",
+            "visual": "手部演示和卖点贴片",
+            "text": "看细节"
+          },
+          {
+            "t": "5-8s",
+            "visual": "倒计时、价格和弹幕提醒",
+            "text": "限时秒杀"
+          },
+          {
+            "t": "8-10s",
+            "visual": "主播指向链接区域",
+            "text": "现在上链接"
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "家人们看这里，{product} 这波真的划算。"
+          },
+          {
+            "speaker": "A",
+            "line": "倒计时结束就恢复，先拍先发。"
+          }
+        ],
+        "audio": "原创直播间节奏、普通话主播口播、倒计时提示音和弹幕音效；不使用真实平台水印或品牌音乐。",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta",
+          "price"
+        ]
+      }
+    }
+  ]
+}

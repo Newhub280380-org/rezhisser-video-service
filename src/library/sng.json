@@ -1,0 +1,2939 @@
+{
+  "region": "sng",
+  "version": 1,
+  "items": [
+    {
+      "id": "ru-fashion-001",
+      "region": "sng",
+      "country": "ru",
+      "language": "ru",
+      "category": "fashion",
+      "type": "ad",
+      "title": "Пальто на бегу",
+      "description": "Пальто на бегу показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Осенняя московская улица после дождя, отражения витрин на асфальте. Героиня надевает товар, ловит такси, ткань красиво движется на ветру. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Выглядит дороже, чем стоит». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Осенняя московская улица после дождя, отражения витрин на асфальте. Героиня надевает товар, ловит такси, ткань красиво движется на ветру. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Выглядит дороже, чем стоит\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "fashion",
+        "ru",
+        "reels"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "ru-fashion-002",
+      "region": "sng",
+      "country": "ru",
+      "language": "ru",
+      "category": "fashion",
+      "type": "ad",
+      "title": "Лифт-лук",
+      "description": "Лифт-лук показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Зеркальный лифт бизнес-центра, утренний свет и быстрые смены образов. Модель собирает три образа вокруг товара щелчком пальцев. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Один предмет — три образа». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Зеркальный лифт бизнес-центра, утренний свет и быстрые смены образов. Модель собирает три образа вокруг товара щелчком пальцев. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Один предмет — три образа\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "fashion",
+        "ru",
+        "reels"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "ru-fashion-003",
+      "region": "sng",
+      "country": "ru",
+      "language": "ru",
+      "category": "fashion",
+      "type": "ad",
+      "title": "Свидание за 10 секунд",
+      "description": "Свидание за 10 секунд показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Тёплое кафе, вечерние огни и крупные планы ткани. Героиня меняет casual на elegant, товар становится главным акцентом. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Когда нужен вау-эффект». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Тёплое кафе, вечерние огни и крупные планы ткани. Героиня меняет casual на elegant, товар становится главным акцентом. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Когда нужен вау-эффект\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "fashion",
+        "ru",
+        "reels"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "ru-fashion-004",
+      "region": "sng",
+      "country": "ru",
+      "language": "ru",
+      "category": "fashion",
+      "type": "ad",
+      "title": "Северный минимализм",
+      "description": "Северный минимализм показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Снежный парк, пар изо рта, чистая графика кадра. Герой поправляет товар и уверенно идёт сквозь снег. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Тепло без лишнего шума». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Снежный парк, пар изо рта, чистая графика кадра. Герой поправляет товар и уверенно идёт сквозь снег. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Тепло без лишнего шума\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "fashion",
+        "ru",
+        "reels"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "ru-beauty-001",
+      "region": "sng",
+      "country": "ru",
+      "language": "ru",
+      "category": "beauty",
+      "type": "ad",
+      "title": "Сияние после метро",
+      "description": "Сияние после метро показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Ванная с неоном, зеркало с каплями и честный утренний свет. Девушка наносит товар, кожа выглядит свежее без тяжёлых фильтров. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Минус усталость, плюс сияние». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Ванная с неоном, зеркало с каплями и честный утренний свет. Девушка наносит товар, кожа выглядит свежее без тяжёлых фильтров. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Минус усталость, плюс сияние\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "beauty",
+        "ru",
+        "reels"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "ru-beauty-002",
+      "region": "sng",
+      "country": "ru",
+      "language": "ru",
+      "category": "beauty",
+      "type": "ad",
+      "title": "Бьюти-детектив",
+      "description": "Бьюти-детектив показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Косметичка на столе, свет как в расследовании, макро-улики. Рука выбирает товар, половина лица показывает до и после. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Нашли виновника сияния». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Косметичка на столе, свет как в расследовании, макро-улики. Рука выбирает товар, половина лица показывает до и после. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Нашли виновника сияния\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "beauty",
+        "ru",
+        "reels"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "ru-beauty-003",
+      "region": "sng",
+      "country": "ru",
+      "language": "ru",
+      "category": "beauty",
+      "type": "ad",
+      "title": "Пятиминутный глэм",
+      "description": "Пятиминутный глэм показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Гримерка перед вечеринкой, лампы вокруг зеркала и мягкий дым. Героиня раскрывает товар в трёх движениях под вращающуюся камеру. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Готово до первого такта». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Гримерка перед вечеринкой, лампы вокруг зеркала и мягкий дым. Героиня раскрывает товар в трёх движениях под вращающуюся камеру. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Готово до первого такта\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "beauty",
+        "ru",
+        "reels"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "ru-beauty-004",
+      "region": "sng",
+      "country": "ru",
+      "language": "ru",
+      "category": "beauty",
+      "type": "ad",
+      "title": "Честный крупный план",
+      "description": "Честный крупный план показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Дневной свет у окна, чистый фон и макросъёмка текстуры. Модель показывает товар без ретуши, формула ложится ровно. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Кожа любит честность». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Дневной свет у окна, чистый фон и макросъёмка текстуры. Модель показывает товар без ретуши, формула ложится ровно. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Кожа любит честность\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "beauty",
+        "ru",
+        "reels"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "ru-cars-001",
+      "region": "sng",
+      "country": "ru",
+      "language": "ru",
+      "category": "cars",
+      "type": "ad",
+      "title": "Ночной тест-драйв",
+      "description": "Ночной тест-драйв показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Пустой проспект, мокрый асфальт, неоновые отражения на кузове. Водитель кладёт товар в салон, приборная панель оживает. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Салон, в который хочется вернуться». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Пустой проспект, мокрый асфальт, неоновые отражения на кузове. Водитель кладёт товар в салон, приборная панель оживает. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Салон, в который хочется вернуться\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "cars",
+        "ru",
+        "reels"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "ru-cars-002",
+      "region": "sng",
+      "country": "ru",
+      "language": "ru",
+      "category": "cars",
+      "type": "ad",
+      "title": "Гаражный апгрейд",
+      "description": "Гаражный апгрейд показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Тёплый гараж, инструменты на стене, луч света через ворота. Мастер устанавливает товар, двигатель звучит глубже и чище. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Апгрейд без драмы». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Тёплый гараж, инструменты на стене, луч света через ворота. Мастер устанавливает товар, двигатель звучит глубже и чище. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Апгрейд без драмы\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "cars",
+        "ru",
+        "reels"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "ru-cars-003",
+      "region": "sng",
+      "country": "ru",
+      "language": "ru",
+      "category": "cars",
+      "type": "ad",
+      "title": "Пробка не бесит",
+      "description": "Пробка не бесит показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Утренний затор, кофе в подстаканнике, спокойный салон. Герой включает товар, стресс улицы сменяется уютом внутри. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Пробка стала паузой». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Утренний затор, кофе в подстаканнике, спокойный салон. Герой включает товар, стресс улицы сменяется уютом внутри. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Пробка стала паузой\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "cars",
+        "ru",
+        "reels"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "ru-cars-004",
+      "region": "sng",
+      "country": "ru",
+      "language": "ru",
+      "category": "cars",
+      "type": "ad",
+      "title": "Дача-рейд",
+      "description": "Дача-рейд показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Загородная дорога, пыль, открытый багажник и семейный смех. Товар помогает собрать поездку без суеты, финал снят дроном. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Собрались и поехали». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Загородная дорога, пыль, открытый багажник и семейный смех. Товар помогает собрать поездку без суеты, финал снят дроном. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Собрались и поехали\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "cars",
+        "ru",
+        "reels"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "ru-food-001",
+      "region": "sng",
+      "country": "ru",
+      "language": "ru",
+      "category": "food",
+      "type": "ad",
+      "title": "Первый глоток дня",
+      "description": "Первый глоток дня показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Кухня на рассвете, пар над кружкой, золотой свет по столу. Герой пробует товар, мир ускоряется, улыбка появляется до уведомлений. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «День начинается вкусно». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Кухня на рассвете, пар над кружкой, золотой свет по столу. Герой пробует товар, мир ускоряется, улыбка появляется до уведомлений. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"День начинается вкусно\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "food",
+        "ru",
+        "reels"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "ru-food-002",
+      "region": "sng",
+      "country": "ru",
+      "language": "ru",
+      "category": "food",
+      "type": "ad",
+      "title": "Хруст на весь чат",
+      "description": "Хруст на весь чат показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Вечер с друзьями, диван, настольная игра и крупный план закуски. Товар исчезает из миски, микрофон ловит честный хруст. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Тот самый хруст». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Вечер с друзьями, диван, настольная игра и крупный план закуски. Товар исчезает из миски, микрофон ловит честный хруст. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Тот самый хруст\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "food",
+        "ru",
+        "reels"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "ru-food-003",
+      "region": "sng",
+      "country": "ru",
+      "language": "ru",
+      "category": "food",
+      "type": "ad",
+      "title": "Обед без очереди",
+      "description": "Обед без очереди показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Офисная кухня, таймер, ноутбук рядом, динамичный монтаж. Сотрудник готовит товар, коллеги оборачиваются на аромат. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Вкусно до дедлайна». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Офисная кухня, таймер, ноутбук рядом, динамичный монтаж. Сотрудник готовит товар, коллеги оборачиваются на аромат. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Вкусно до дедлайна\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "food",
+        "ru",
+        "reels"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "ru-food-004",
+      "region": "sng",
+      "country": "ru",
+      "language": "ru",
+      "category": "food",
+      "type": "ad",
+      "title": "Семейный соус",
+      "description": "Семейный соус показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Домашний стол, руки разных поколений, мягкий вечерний свет. Бабушка добавляет товар, блюдо становится главным героем ужина. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Секрет на столе». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Домашний стол, руки разных поколений, мягкий вечерний свет. Бабушка добавляет товар, блюдо становится главным героем ужина. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Секрет на столе\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "food",
+        "ru",
+        "reels"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "ru-memes-001",
+      "region": "sng",
+      "country": "ru",
+      "language": "ru",
+      "category": "memes",
+      "type": "meme",
+      "title": "Когда скидка нашла тебя",
+      "description": "Когда скидка нашла тебя показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Обычная квартира, герой грустно листает телефон под драматичный свет. Внезапно появляется товар, лицо героя меняется как в эпическом трейлере. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Скидка вошла в чат». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Обычная квартира, герой грустно листает телефон под драматичный свет. Внезапно появляется товар, лицо героя меняется как в эпическом трейлере. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Скидка вошла в чат\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 5,
+      "trend": "hot",
+      "tags": [
+        "memes",
+        "ru",
+        "reels"
+      ],
+      "needsPhoto": false,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "ru-memes-002",
+      "region": "sng",
+      "country": "ru",
+      "language": "ru",
+      "category": "memes",
+      "type": "meme",
+      "title": "Начальник не узнает",
+      "description": "Начальник не узнает показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Офис, герой опаздывает, камера трясётся как репортаж. Товар помогает собраться за секунды, коллеги смотрят в замедлении. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Собрался за 5 секунд». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Офис, герой опаздывает, камера трясётся как репортаж. Товар помогает собраться за секунды, коллеги смотрят в замедлении. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Собрался за 5 секунд\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 5,
+      "trend": "hot",
+      "tags": [
+        "memes",
+        "ru",
+        "reels"
+      ],
+      "needsPhoto": false,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "ru-memes-003",
+      "region": "sng",
+      "country": "ru",
+      "language": "ru",
+      "category": "memes",
+      "type": "meme",
+      "title": "Мама сказала нормально",
+      "description": "Мама сказала нормально показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Кухня, мама строго оценивает покупку, герой нервно держит товар. После демонстрации мама кивает, появляется победный крупный план. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Одобрено мамой». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Кухня, мама строго оценивает покупку, герой нервно держит товар. После демонстрации мама кивает, появляется победный крупный план. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Одобрено мамой\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 5,
+      "trend": "hot",
+      "tags": [
+        "memes",
+        "ru",
+        "reels"
+      ],
+      "needsPhoto": false,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "ru-memes-004",
+      "region": "sng",
+      "country": "ru",
+      "language": "ru",
+      "category": "memes",
+      "type": "meme",
+      "title": "Друг попросил ссылку",
+      "description": "Друг попросил ссылку показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Вечеринка, друг делает вид, что не заинтересован, но камера ловит телефон. Он тайно фотографирует товар и просит ссылку шёпотом. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Скинь ссылку». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Вечеринка, друг делает вид, что не заинтересован, но камера ловит телефон. Он тайно фотографирует товар и просит ссылку шёпотом. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Скинь ссылку\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 5,
+      "trend": "hot",
+      "tags": [
+        "memes",
+        "ru",
+        "reels"
+      ],
+      "needsPhoto": false,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "kz-halal-001",
+      "region": "sng",
+      "country": "kz",
+      "language": "ru",
+      "category": "halal",
+      "type": "ad",
+      "title": "Халал без сомнений",
+      "description": "Халал без сомнений показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Семейный дастархан в Алматы, тёплый свет, аккуратная сервировка. Хозяин показывает состав, гости пробуют с уважительной улыбкой. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Чистый выбор каждый день». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Семейный дастархан в Алматы, тёплый свет, аккуратная сервировка. Хозяин показывает состав, гости пробуют с уважительной улыбкой. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Чистый выбор каждый день\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "halal",
+        "kz",
+        "local"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "kz-halal-002",
+      "region": "sng",
+      "country": "kz",
+      "language": "ru",
+      "category": "halal",
+      "type": "ad",
+      "title": "После намаза",
+      "description": "После намаза показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Спокойный двор у мечети, вечерний свет, друзья встречаются после молитвы. Товар появляется как удобный и уважительный выбор для перекуса. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Вкусно и спокойно». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Спокойный двор у мечети, вечерний свет, друзья встречаются после молитвы. Товар появляется как удобный и уважительный выбор для перекуса. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Вкусно и спокойно\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "halal",
+        "kz",
+        "local"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "kz-halal-003",
+      "region": "sng",
+      "country": "kz",
+      "language": "ru",
+      "category": "halal",
+      "type": "ad",
+      "title": "Проверено семьёй",
+      "description": "Проверено семьёй показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Кухня с казахскими орнаментами, мама открывает упаковку. Семья выбирает товар для общего стола и доверяет деталям. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Для своих — лучшее». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Кухня с казахскими орнаментами, мама открывает упаковку. Семья выбирает товар для общего стола и доверяет деталям. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Для своих — лучшее\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "halal",
+        "kz",
+        "local"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "kz-tech-001",
+      "region": "sng",
+      "country": "kz",
+      "language": "ru",
+      "category": "tech",
+      "type": "ad",
+      "title": "Гаджет для степи",
+      "description": "Гаджет для степи показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Открытая степь, ветер, автомобиль у горизонта, чистое небо. Путешественник использует товар, чтобы снять маршрут и остаться на связи. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Технологии там, где простор». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Открытая степь, ветер, автомобиль у горизонта, чистое небо. Путешественник использует товар, чтобы снять маршрут и остаться на связи. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Технологии там, где простор\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "tech",
+        "kz",
+        "local"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "kz-tech-002",
+      "region": "sng",
+      "country": "kz",
+      "language": "ru",
+      "category": "tech",
+      "type": "ad",
+      "title": "Алматы в кармане",
+      "description": "Алматы в кармане показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Городские улицы, метро, кофейня и быстрый ритм стартап-дня. Основатель показывает звонки, заметки, оплату и съёмку одним потоком. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Успевай больше». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Городские улицы, метро, кофейня и быстрый ритм стартап-дня. Основатель показывает звонки, заметки, оплату и съёмку одним потоком. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Успевай больше\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "tech",
+        "kz",
+        "local"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "kz-tech-003",
+      "region": "sng",
+      "country": "kz",
+      "language": "ru",
+      "category": "tech",
+      "type": "ad",
+      "title": "Умный дом к чаю",
+      "description": "Умный дом к чаю показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Современная квартира, чайник закипает, свет меняется голосом. Дом реагирует на товар плавно, вечер становится уютнее. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Дом слушает тебя». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Современная квартира, чайник закипает, свет меняется голосом. Дом реагирует на товар плавно, вечер становится уютнее. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Дом слушает тебя\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "tech",
+        "kz",
+        "local"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "kz-humor-001",
+      "region": "sng",
+      "country": "kz",
+      "language": "ru",
+      "category": "humor",
+      "type": "meme",
+      "title": "Аға, это надо",
+      "description": "Аға, это надо показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Рынок, продавец и покупатель спорят дружелюбно, вокруг живой шум. Товар решает спор одним показом, все смеются, камера зумит. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Аға одобрил». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Рынок, продавец и покупатель спорят дружелюбно, вокруг живой шум. Товар решает спор одним показом, все смеются, камера зумит. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Аға одобрил\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 5,
+      "trend": "hot",
+      "tags": [
+        "humor",
+        "kz",
+        "local"
+      ],
+      "needsPhoto": false,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "kz-humor-002",
+      "region": "sng",
+      "country": "kz",
+      "language": "ru",
+      "category": "humor",
+      "type": "meme",
+      "title": "Пять минут по-казахски",
+      "description": "Пять минут по-казахски показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Семейный сбор, все говорят «уже выходим», но никто не готов. Товар ускоряет героя, монтаж прыгает по времени. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Я уже готов». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Семейный сбор, все говорят «уже выходим», но никто не готов. Товар ускоряет героя, монтаж прыгает по времени. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Я уже готов\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 5,
+      "trend": "hot",
+      "tags": [
+        "humor",
+        "kz",
+        "local"
+      ],
+      "needsPhoto": false,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "kz-humor-003",
+      "region": "sng",
+      "country": "kz",
+      "language": "ru",
+      "category": "humor",
+      "type": "meme",
+      "title": "Когда апашка спросила",
+      "description": "Когда апашка спросила показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Дом, апашка внимательно смотрит на покупку героя. Герой объясняет товар так убедительно, что апашка просит два. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Апашка сказала: бери». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Дом, апашка внимательно смотрит на покупку героя. Герой объясняет товар так убедительно, что апашка просит два. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Апашка сказала: бери\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 5,
+      "trend": "hot",
+      "tags": [
+        "humor",
+        "kz",
+        "local"
+      ],
+      "needsPhoto": false,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "tj-crafts-001",
+      "region": "sng",
+      "country": "tj",
+      "language": "ru",
+      "category": "crafts",
+      "type": "ad",
+      "title": "Узор из рук",
+      "description": "Узор из рук показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Мастерская в Худжанде, деревянный стол, нити и узоры под боковым светом. Мастер создаёт товар, камера идёт за руками и фактурой. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Ручная работа с душой». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Мастерская в Худжанде, деревянный стол, нити и узоры под боковым светом. Мастер создаёт товар, камера идёт за руками и фактурой. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Ручная работа с душой\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "crafts",
+        "tj",
+        "local"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "tj-crafts-002",
+      "region": "sng",
+      "country": "tj",
+      "language": "ru",
+      "category": "crafts",
+      "type": "ad",
+      "title": "Сундук мастера",
+      "description": "Сундук мастера показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Старинный сундук, ткани, керамика и луч света в пыли. Товар достают как семейную ценность и показывают в современном доме. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Традиция живёт дома». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Старинный сундук, ткани, керамика и луч света в пыли. Товар достают как семейную ценность и показывают в современном доме. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Традиция живёт дома\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "crafts",
+        "tj",
+        "local"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "tj-crafts-003",
+      "region": "sng",
+      "country": "tj",
+      "language": "ru",
+      "category": "crafts",
+      "type": "ad",
+      "title": "Базарная жемчужина",
+      "description": "Базарная жемчужина показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Колоритный базар, добрые лица, макро фактуры ткани и глины. Покупатель находит товар, мастер объясняет смысл детали. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Подарок со смыслом». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Колоритный базар, добрые лица, макро фактуры ткани и глины. Покупатель находит товар, мастер объясняет смысл детали. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Подарок со смыслом\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "crafts",
+        "tj",
+        "local"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "tj-fashion-001",
+      "region": "sng",
+      "country": "tj",
+      "language": "ru",
+      "category": "fashion",
+      "type": "ad",
+      "title": "Нежный хиджаб-лук",
+      "description": "Нежный хиджаб-лук показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Светлый двор, цветущие деревья, уважительный modest fashion образ. Героиня сочетает товар с хиджабом, стиль выглядит современно и скромно. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Скромно, красиво, уверенно». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Светлый двор, цветущие деревья, уважительный modest fashion образ. Героиня сочетает товар с хиджабом, стиль выглядит современно и скромно. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Скромно, красиво, уверенно\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "fashion",
+        "tj",
+        "local"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "tj-fashion-002",
+      "region": "sng",
+      "country": "tj",
+      "language": "ru",
+      "category": "fashion",
+      "type": "ad",
+      "title": "Пастель для праздника",
+      "description": "Пастель для праздника показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Семейный праздник, пастельные ткани, спокойные улыбки и мягкий свет. Модель показывает modest-образ без спешки и подчёркивает достоинство. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Красота без лишнего». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Семейный праздник, пастельные ткани, спокойные улыбки и мягкий свет. Модель показывает modest-образ без спешки и подчёркивает достоинство. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Красота без лишнего\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "fashion",
+        "tj",
+        "local"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "tj-fashion-003",
+      "region": "sng",
+      "country": "tj",
+      "language": "ru",
+      "category": "fashion",
+      "type": "ad",
+      "title": "Городская скромность",
+      "description": "Городская скромность показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Современная улица Душанбе, чистые линии и кофе в руках. Хиджаб, аксессуары и товар собраны гармонично, финал — уверенный взгляд. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Стиль, который уважает». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Современная улица Душанбе, чистые линии и кофе в руках. Хиджаб, аксессуары и товар собраны гармонично, финал — уверенный взгляд. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Стиль, который уважает\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "fashion",
+        "tj",
+        "local"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "uz-cotton-001",
+      "region": "sng",
+      "country": "uz",
+      "language": "ru",
+      "category": "cotton",
+      "type": "ad",
+      "title": "Хлопок на коже",
+      "description": "Хлопок на коже показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Белая спальня, утренний свет, ткань крупным планом. Хлопковый товар мягко расправляется, герой касается ткани и улыбается. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Мягкость, которую видно». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Белая спальня, утренний свет, ткань крупным планом. Хлопковый товар мягко расправляется, герой касается ткани и улыбается. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Мягкость, которую видно\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "cotton",
+        "uz",
+        "local"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "uz-cotton-002",
+      "region": "sng",
+      "country": "uz",
+      "language": "ru",
+      "category": "cotton",
+      "type": "ad",
+      "title": "Футболка без компромисса",
+      "description": "Футболка без компромисса показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Солнечная улица Ташкента, свежий ветер, минималистичный образ. Камера показывает плотность хлопка, швы и посадку в движении. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Дышит вместе с тобой». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Солнечная улица Ташкента, свежий ветер, минималистичный образ. Камера показывает плотность хлопка, швы и посадку в движении. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Дышит вместе с тобой\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "cotton",
+        "uz",
+        "local"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "uz-cotton-003",
+      "region": "sng",
+      "country": "uz",
+      "language": "ru",
+      "category": "cotton",
+      "type": "ad",
+      "title": "Белое золото",
+      "description": "Белое золото показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Поле хлопка на рассвете, затем чистая студия с готовым изделием. Монтаж связывает сырьё и товар, финал показывает честную фактуру. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «От поля до дома». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Поле хлопка на рассвете, затем чистая студия с готовым изделием. Монтаж связывает сырьё и товар, финал показывает честную фактуру. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"От поля до дома\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "cotton",
+        "uz",
+        "local"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "uz-heritage-001",
+      "region": "sng",
+      "country": "uz",
+      "language": "ru",
+      "category": "heritage",
+      "type": "ad",
+      "title": "Орнамент сегодня",
+      "description": "Орнамент сегодня показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Самаркандская мозаика, современный шоурум, насыщенный синий цвет. Товар появляется на фоне узоров, камера соединяет наследие и дизайн. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Традиция в новом ритме». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Самаркандская мозаика, современный шоурум, насыщенный синий цвет. Товар появляется на фоне узоров, камера соединяет наследие и дизайн. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Традиция в новом ритме\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "heritage",
+        "uz",
+        "local"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "uz-heritage-002",
+      "region": "sng",
+      "country": "uz",
+      "language": "ru",
+      "category": "heritage",
+      "type": "ad",
+      "title": "Чайхана бренда",
+      "description": "Чайхана бренда показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Уютная чайхана, пиала, деревянный стол и живой разговор. Герои выбирают товар, потому что он знакомый, но современный. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Свое, но новое». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Уютная чайхана, пиала, деревянный стол и живой разговор. Герои выбирают товар, потому что он знакомый, но современный. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Свое, но новое\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "heritage",
+        "uz",
+        "local"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "uz-heritage-003",
+      "region": "sng",
+      "country": "uz",
+      "language": "ru",
+      "category": "heritage",
+      "type": "ad",
+      "title": "Базар будущего",
+      "description": "Базар будущего показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Базар, световые вывески, ремесленные детали рядом с упаковками. Товар проходит путь от прилавка до стильной витрины. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Корни видны сразу». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Базар, световые вывески, ремесленные детали рядом с упаковками. Товар проходит путь от прилавка до стильной витрины. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Корни видны сразу\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "heritage",
+        "uz",
+        "local"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "kg-tourism-001",
+      "region": "sng",
+      "country": "kg",
+      "language": "ru",
+      "category": "tourism",
+      "type": "ad",
+      "title": "Иссык-Куль зовёт",
+      "description": "Иссык-Куль зовёт показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Берег Иссык-Куля, прозрачная вода, горы в лёгкой дымке. Путешественник показывает товар как повод сорваться в поездку. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Выходные ближе, чем кажется». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Берег Иссык-Куля, прозрачная вода, горы в лёгкой дымке. Путешественник показывает товар как повод сорваться в поездку. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Выходные ближе, чем кажется\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "tourism",
+        "kg",
+        "local"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "kg-tourism-002",
+      "region": "sng",
+      "country": "kg",
+      "language": "ru",
+      "category": "tourism",
+      "type": "ad",
+      "title": "Юрта на закате",
+      "description": "Юрта на закате показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Высокогорное пастбище, юрта, лошади, золотой закат. Товар помогает открыть маршрут и сохранить момент у огня. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Настоящий отдых звучит тихо». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Высокогорное пастбище, юрта, лошади, золотой закат. Товар помогает открыть маршрут и сохранить момент у огня. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Настоящий отдых звучит тихо\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "tourism",
+        "kg",
+        "local"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "kg-tourism-003",
+      "region": "sng",
+      "country": "kg",
+      "language": "ru",
+      "category": "tourism",
+      "type": "ad",
+      "title": "Маршрут без фильтра",
+      "description": "Маршрут без фильтра показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Горная тропа, чистый воздух, ручей и рюкзак. Товар помогает спланировать путь от карты к реальному виду. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Красиво по-настоящему». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Горная тропа, чистый воздух, ручей и рюкзак. Товар помогает спланировать путь от карты к реальному виду. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Красиво по-настоящему\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "tourism",
+        "kg",
+        "local"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "kg-outdoor-001",
+      "region": "sng",
+      "country": "kg",
+      "language": "ru",
+      "category": "outdoor",
+      "type": "ad",
+      "title": "Ветер не отменяет",
+      "description": "Ветер не отменяет показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Горный перевал, сильный ветер, герой застёгивает куртку. Товар выдерживает погоду, камера проходит вдоль ботинок и рюкзака. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Собран для высоты». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Горный перевал, сильный ветер, герой застёгивает куртку. Товар выдерживает погоду, камера проходит вдоль ботинок и рюкзака. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Собран для высоты\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "outdoor",
+        "kg",
+        "local"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "kg-outdoor-002",
+      "region": "sng",
+      "country": "kg",
+      "language": "ru",
+      "category": "outdoor",
+      "type": "ad",
+      "title": "Кемпинг за минуту",
+      "description": "Кемпинг за минуту показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Поляна у озера, палатка, горелка и смех друзей. Герои быстро раскладывают товар, порядок появляется без суеты. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Лагерь готов». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Поляна у озера, палатка, горелка и смех друзей. Герои быстро раскладывают товар, порядок появляется без суеты. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Лагерь готов\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "outdoor",
+        "kg",
+        "local"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "kg-outdoor-003",
+      "region": "sng",
+      "country": "kg",
+      "language": "ru",
+      "category": "outdoor",
+      "type": "ad",
+      "title": "Тропа после дождя",
+      "description": "Тропа после дождя показывает {product} в живой ситуации и быстро объясняет пользу.",
+      "prompt": "Вертикальный ролик для {brand}: главный герой кадра — {product}. Лесная тропа, мокрые камни, капли на листьях. Товар помогает идти уверенно и открывает широкий горный вид. Камера начинает с цепляющего макро, затем делает плавный проезд к лицу героя, переходит в быстрые склейки деталей, реального применения и честной реакции. Свет кинематографичный: мягкие блики, натуральная кожа, живые тени, без глянцевой фальши. Темп: крючок в первую секунду, доказательство пользы в середине, эмоциональный финал и понятный CTA. На экране текст «Когда тропа зовёт». Звук: оригинальный современный бит, whoosh, короткие паузы и уверенный русский закадровый голос, без реальных брендов, знаменитостей и чужих клипов. Используй {photo} как первый кадр и точный референс внешнего вида товара.",
+      "promptEn": "Vertical video for {brand}: {product} is the hero of the frame. Лесная тропа, мокрые камни, капли на листьях. Товар помогает идти уверенно и открывает широкий горный вид. The camera starts with a hook macro shot, then glides toward the person, cuts quickly through details, real use, and honest reaction. Cinematic light: soft highlights, natural skin, living shadows, no fake gloss. Pacing: first-second hook, proof of value in the middle, emotional ending and clear CTA. On-screen text: \"Когда тропа зовёт\". Sound: original modern beat, whooshes, short pauses, confident Russian voice-over, no real brands, celebrities, or copied clips. Use {photo} as the first frame and exact product reference.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "rising",
+      "tags": [
+        "outdoor",
+        "kg",
+        "local"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крупный план {product} в руках героя",
+            "text": "Смотри сюда"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Реальное применение, детали и эмоции",
+            "text": "Проверяем в деле"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Быстрый монтаж результата и фактуры",
+            "text": "Результат виден"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный кадр бренда и CTA",
+            "text": "Попробовать сейчас"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Современный оригинальный бит, лёгкие whoosh-переходы и чистый русский голос за кадром.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "sng-meme-001",
+      "region": "sng",
+      "country": "sng",
+      "language": "ru",
+      "category": "memes",
+      "type": "meme",
+      "title": "Два косметолога",
+      "description": "Салонный диалог превращает сомнение в желание купить {product}.",
+      "prompt": "Для {brand} используй {photo} как первый кадр и референс товара: в уютном салоне красоты две косметолога обсуждают {product}, который в истории играет роль новых сапог. Камера начинается с общего плана зеркал и ламп, затем переходит на синхронные крупные планы губ, рук и выразительных взглядов. Сделай оригинальную озвучку в стиле классической комедии, без копирования фильмов, актёров или брендов. После фразы Веры включи резкий зум, мысленный пузырь и внутренний монолог. Финал: {product} на пьедестале, текст «Надо брать». Темп быстрый, ироничный, с салонными звуками и мягким светом.",
+      "promptEn": "For {brand}: Use {photo} as the first frame and product reference: in a cozy beauty salon, two cosmetologists discuss {product}, which plays the role of new boots. Start wide on mirrors and vanity lights, then cut to lip-synced close-ups, expressive eyes, and hands. Use an original voice-over in the style of a classic comedy, without copying films, actors, or brands. After Vera’s line, push in, show a thought bubble and inner monologue. End with {product} on a pedestal, text: Need to buy it. Fast ironic pacing, salon ambience, soft light.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "hot",
+      "tags": [
+        "мем",
+        "салон",
+        "липсинк",
+        "сапоги"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Две косметолога у зеркала смотрят на {product}",
+            "text": "Новые сапоги?"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Липсинк диалога, крупные планы лиц",
+            "text": "Как вам нравятся?"
+          },
+          {
+            "t": "5-8s",
+            "visual": "Вера делает серьёзное лицо, затем зум в мысли",
+            "text": "Я бы такие не взяла"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Мысль-пузырь и героический кадр {product}",
+            "text": "Надо брать"
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "Вы купили новые сапоги?"
+          },
+          {
+            "speaker": "A",
+            "line": "Да нет ещё, вот думаю. Как вам нравятся?"
+          },
+          {
+            "speaker": "A",
+            "line": "По-моему, очень вульгарные, я бы такие не взяла"
+          },
+          {
+            "speaker": "A",
+            "line": "А, понятно… значит, хорошие сапоги, надо брать"
+          }
+        ],
+        "audio": "Оригинальная русская озвучка в стиле классической комедии или пользовательский лицензированный трек; синхронизация губ, без реальных фильмов, актёров и брендов.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "sng-meme-002",
+      "region": "sng",
+      "country": "sng",
+      "language": "ru",
+      "category": "memes",
+      "type": "meme",
+      "title": "Ожидание vs реальность",
+      "description": "Контраст показывает проблему и смешной выход через {product}.",
+      "prompt": "Сними вертикальный мем для {brand}: используй {photo} как первый кадр и референс {product}. В начале идеальная мечта ломается record scratch и бытовым провалом, камера делает резкие jump cut, комедийный зум, стоп-кадр и крупные подписи. Затем появляется {product}, который неожиданно исправляет ситуацию или раскрывает панчлайн. Свет кинематографичный, но поведение героев бытовое и узнаваемое; темп быстрый, первая секунда обязана цеплять. На экране текст «А вот теперь нормально», финал с понятным CTA. Звук: оригинальный вирусный сигнал, whoosh, record scratch и смешной басовый удар. Не использовать реальные фильмы, названия, актёров, знаменитостей, товарные знаки или чужие клипы.",
+      "promptEn": "Shoot a vertical meme for {brand}: use {photo} as the first frame and reference for {product}. At the start, идеальная мечта ломается record scratch и бытовым провалом; the camera uses sharp jump cuts, comic zoom, freeze frames, and bold captions. Then {product} appears and unexpectedly fixes the situation or reveals the punchline. Cinematic light, everyday recognizable behavior, fast pacing, first second must hook. On-screen text: \"А вот теперь нормально\", final clear CTA. Sound: original viral cue, whooshes, record scratch, funny bass hit. No real films, titles, actors, celebrities, trademarks, or copied clips.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "hot",
+      "tags": [
+        "мем",
+        "reels",
+        "шаблон"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крючок и крупный план героя",
+            "text": "Ожидание vs реальность"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Комедийный провал или драматичная пауза",
+            "text": "Что-то пошло не так"
+          },
+          {
+            "t": "5-8s",
+            "visual": "{product} появляется как решение",
+            "text": "А вот теперь нормально"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный freeze-frame и CTA",
+            "text": "Сохрани шаблон"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Оригинальная комедийная озвучка и пользовательский лицензированный трек; без реальных фильмов, актёров и брендов.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "sng-meme-003",
+      "region": "sng",
+      "country": "sng",
+      "language": "ru",
+      "category": "memes",
+      "type": "meme",
+      "title": "Это не купишь за деньги",
+      "description": "Ценности раскрываются товарным панчлайном.",
+      "prompt": "Сними вертикальный мем для {brand}: используй {photo} как первый кадр и референс {product}. В начале герой серьёзно смотрит в дождь и говорит о счастье, камера делает резкие jump cut, комедийный зум, стоп-кадр и крупные подписи. Затем появляется {product}, который неожиданно исправляет ситуацию или раскрывает панчлайн. Свет кинематографичный, но поведение героев бытовое и узнаваемое; темп быстрый, первая секунда обязана цеплять. На экране текст «Это — можно», финал с понятным CTA. Звук: оригинальный вирусный сигнал, whoosh, record scratch и смешной басовый удар. Не использовать реальные фильмы, названия, актёров, знаменитостей, товарные знаки или чужие клипы.",
+      "promptEn": "Shoot a vertical meme for {brand}: use {photo} as the first frame and reference for {product}. At the start, герой серьёзно смотрит в дождь и говорит о счастье; the camera uses sharp jump cuts, comic zoom, freeze frames, and bold captions. Then {product} appears and unexpectedly fixes the situation or reveals the punchline. Cinematic light, everyday recognizable behavior, fast pacing, first second must hook. On-screen text: \"Это — можно\", final clear CTA. Sound: original viral cue, whooshes, record scratch, funny bass hit. No real films, titles, actors, celebrities, trademarks, or copied clips.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "hot",
+      "tags": [
+        "мем",
+        "reels",
+        "шаблон"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крючок и крупный план героя",
+            "text": "Это не купишь за деньги"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Комедийный провал или драматичная пауза",
+            "text": "Что-то пошло не так"
+          },
+          {
+            "t": "5-8s",
+            "visual": "{product} появляется как решение",
+            "text": "Это — можно"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный freeze-frame и CTA",
+            "text": "Сохрани шаблон"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Оригинальная комедийная озвучка и пользовательский лицензированный трек; без реальных фильмов, актёров и брендов.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "sng-hook-001",
+      "region": "sng",
+      "country": "sng",
+      "language": "ru",
+      "category": "reels",
+      "type": "hook",
+      "title": "Первый секундный хук",
+      "description": "Шаблон для TikTok/Reels с резкими склейками.",
+      "prompt": "Сними вертикальный мем для {brand}: используй {photo} как первый кадр и референс {product}. В начале первая секунда останавливает скролл надписью «Подожди!», камера делает резкие jump cut, комедийный зум, стоп-кадр и крупные подписи. Затем появляется {product}, который неожиданно исправляет ситуацию или раскрывает панчлайн. Свет кинематографичный, но поведение героев бытовое и узнаваемое; темп быстрый, первая секунда обязана цеплять. На экране текст «Вот как надо», финал с понятным CTA. Звук: оригинальный вирусный сигнал, whoosh, record scratch и смешной басовый удар. Не использовать реальные фильмы, названия, актёров, знаменитостей, товарные знаки или чужие клипы.",
+      "promptEn": "Shoot a vertical meme for {brand}: use {photo} as the first frame and reference for {product}. At the start, первая секунда останавливает скролл надписью «Подожди!»; the camera uses sharp jump cuts, comic zoom, freeze frames, and bold captions. Then {product} appears and unexpectedly fixes the situation or reveals the punchline. Cinematic light, everyday recognizable behavior, fast pacing, first second must hook. On-screen text: \"Вот как надо\", final clear CTA. Sound: original viral cue, whooshes, record scratch, funny bass hit. No real films, titles, actors, celebrities, trademarks, or copied clips.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "hot",
+      "tags": [
+        "мем",
+        "reels",
+        "шаблон"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крючок и крупный план героя",
+            "text": "Первый секундный хук"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Комедийный провал или драматичная пауза",
+            "text": "Что-то пошло не так"
+          },
+          {
+            "t": "5-8s",
+            "visual": "{product} появляется как решение",
+            "text": "Вот как надо"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный freeze-frame и CTA",
+            "text": "Сохрани шаблон"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Оригинальная комедийная озвучка и пользовательский лицензированный трек; без реальных фильмов, актёров и брендов.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "sng-meme-004",
+      "region": "sng",
+      "country": "sng",
+      "language": "ru",
+      "category": "memes",
+      "type": "meme",
+      "title": "Эпик ради мелочи",
+      "description": "Блокбастерная сцена раскрывает смешной бытовой провал.",
+      "prompt": "Сними вертикальный мем для {brand}: используй {photo} как первый кадр и референс {product}. В начале герой идёт как спаситель мира, но забыл простую вещь, камера делает резкие jump cut, комедийный зум, стоп-кадр и крупные подписи. Затем появляется {product}, который неожиданно исправляет ситуацию или раскрывает панчлайн. Свет кинематографичный, но поведение героев бытовое и узнаваемое; темп быстрый, первая секунда обязана цеплять. На экране текст «Теперь легенда», финал с понятным CTA. Звук: оригинальный вирусный сигнал, whoosh, record scratch и смешной басовый удар. Не использовать реальные фильмы, названия, актёров, знаменитостей, товарные знаки или чужие клипы.",
+      "promptEn": "Shoot a vertical meme for {brand}: use {photo} as the first frame and reference for {product}. At the start, герой идёт как спаситель мира, но забыл простую вещь; the camera uses sharp jump cuts, comic zoom, freeze frames, and bold captions. Then {product} appears and unexpectedly fixes the situation or reveals the punchline. Cinematic light, everyday recognizable behavior, fast pacing, first second must hook. On-screen text: \"Теперь легенда\", final clear CTA. Sound: original viral cue, whooshes, record scratch, funny bass hit. No real films, titles, actors, celebrities, trademarks, or copied clips.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "hot",
+      "tags": [
+        "мем",
+        "reels",
+        "шаблон"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крючок и крупный план героя",
+            "text": "Эпик ради мелочи"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Комедийный провал или драматичная пауза",
+            "text": "Что-то пошло не так"
+          },
+          {
+            "t": "5-8s",
+            "visual": "{product} появляется как решение",
+            "text": "Теперь легенда"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный freeze-frame и CTA",
+            "text": "Сохрани шаблон"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Оригинальная комедийная озвучка и пользовательский лицензированный трек; без реальных фильмов, актёров и брендов.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    },
+    {
+      "id": "sng-meme-005",
+      "region": "sng",
+      "country": "sng",
+      "language": "ru",
+      "category": "memes",
+      "type": "meme",
+      "title": "Курьер в слоу-мо",
+      "description": "Доставка {product} становится событием дня.",
+      "prompt": "Сними вертикальный мем для {brand}: используй {photo} как первый кадр и референс {product}. В начале дверной звонок запускает драматичный slow motion с курьером, камера делает резкие jump cut, комедийный зум, стоп-кадр и крупные подписи. Затем появляется {product}, который неожиданно исправляет ситуацию или раскрывает панчлайн. Свет кинематографичный, но поведение героев бытовое и узнаваемое; темп быстрый, первая секунда обязана цеплять. На экране текст «День спасён», финал с понятным CTA. Звук: оригинальный вирусный сигнал, whoosh, record scratch и смешной басовый удар. Не использовать реальные фильмы, названия, актёров, знаменитостей, товарные знаки или чужие клипы.",
+      "promptEn": "Shoot a vertical meme for {brand}: use {photo} as the first frame and reference for {product}. At the start, дверной звонок запускает драматичный slow motion с курьером; the camera uses sharp jump cuts, comic zoom, freeze frames, and bold captions. Then {product} appears and unexpectedly fixes the situation or reveals the punchline. Cinematic light, everyday recognizable behavior, fast pacing, first second must hook. On-screen text: \"День спасён\", final clear CTA. Sound: original viral cue, whooshes, record scratch, funny bass hit. No real films, titles, actors, celebrities, trademarks, or copied clips.",
+      "negativePrompt": "blurry, watermark, distorted hands, extra fingers, text artifacts, real brand logos, celebrity likeness, low resolution, flicker",
+      "aspect": "9:16",
+      "duration": 10,
+      "trend": "hot",
+      "tags": [
+        "мем",
+        "reels",
+        "шаблон"
+      ],
+      "needsPhoto": true,
+      "template": {
+        "shots": [
+          {
+            "t": "0-2s",
+            "visual": "Крючок и крупный план героя",
+            "text": "Курьер в слоу-мо"
+          },
+          {
+            "t": "2-5s",
+            "visual": "Комедийный провал или драматичная пауза",
+            "text": "Что-то пошло не так"
+          },
+          {
+            "t": "5-8s",
+            "visual": "{product} появляется как решение",
+            "text": "День спасён"
+          },
+          {
+            "t": "8-10s",
+            "visual": "Финальный freeze-frame и CTA",
+            "text": "Сохрани шаблон"
+          }
+        ],
+        "dialogue": [],
+        "audio": "Оригинальная комедийная озвучка и пользовательский лицензированный трек; без реальных фильмов, актёров и брендов.",
+        "editable": [
+          "product",
+          "brand",
+          "offer",
+          "audience",
+          "cta"
+        ]
+      }
+    }
+  ]
+}
