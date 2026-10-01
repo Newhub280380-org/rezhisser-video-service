@@ -7,3 +7,4 @@ logs/
 !.env.example
 .DS_Store
 coverage/
+desktop/dist/

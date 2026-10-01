@@ -27,7 +27,9 @@ server-side allowlist and explains why.
 | Paid render via Replicate | 🔒 Locked by default. Needs a private-beta session, a quote and confirmation. Tested only with a fake API. |
 | Optional LLM advisor | ⛔ Not implemented. `DIRECTOR_ADVISOR` accepts only `none`; any other value stops startup. |
 | Studio at `/studio` (RU / 中文): register, login, password reset, dashboard, pricing, library, remix, video history | ✅ See [Production stack](#production-stack). |
-| Browser task dashboard at `/automation`: user-owned URL, instruction, region and enabled state | ✅ Task management only. Owl Browser execution, AI-provider configuration, run history, and Electron are not implemented. |
+| Browser task dashboard at `/automation`: user-owned URL, instruction, region and enabled state | ✅ Tasks, «Запустить» button, run status, log and history. |
+| Owl Browser execution (`src/automation/`) | ✅ Real runs when `OWL_BROWSER_URL` + `OWL_BROWSER_TOKEN` are set (the AI provider is configured on the Owl Browser server). Otherwise runs are **simulated** and labelled so. Tested with a fake Owl API only. |
+| Desktop app (Electron, `desktop/`) | ✅ Windows/macOS/Linux installer. Opens the cloud service or runs the bundled server locally. See [Desktop app](#desktop-app). |
 | Accounts (email + scrypt password, JWT), PostgreSQL | ✅ In-memory/JSON store when `DATABASE_URL` is not set (development only). |
 | Payments: YooKassa (primary) + Stripe (fallback), RUB/KZT/USD/CNY | ✅ When keys are configured. Tested with fake provider APIs only. |
 | Real video via ByteDance Seedance 2.5 (ModelArk) + S3/Backblaze storage | ✅ When `SEEDANCE_API_KEY`/`SEEDANCE_MODEL` and `S3_*` are set. Tested with fake APIs only. |
@@ -53,6 +55,9 @@ Mobile: [plan](docs/screenshots/mobile-2-plan.jpg) · Beta login: [dialog](docs/
 npm start          # http://0.0.0.0:3000 — open http://localhost:3000/
 npm test           # node:test, no network
 ```
+
+Desktop app (Electron): `cd desktop && npm install && npm start` — see
+[Desktop app](#desktop-app).
 
 Requires Node.js 18 or newer (the test glob needs Node 21+). There are no
 dependencies to install.
@@ -213,6 +218,9 @@ Account endpoints take the JWT in the `Authorization` header (`Bearer <token>`, 
 | `GET` | `/api/user/profile` | User, subscription (tier, limits, credits) and usage. |
 | `GET/POST` | `/api/automation/tasks` (with bearer token) | List or create up to 100 site tasks for the signed-in user. |
 | `PUT/DELETE` | `/api/automation/tasks/:id` (with bearer token) | Edit or delete an owned site task. |
+| `POST` | `/api/automation/tasks/:id/runs` (with bearer token) | Start a run of an enabled owned task → `202 { run }` (`queued`). One active run per task, at most 3 per user. |
+| `GET` | `/api/automation/tasks/:id/runs`, `/api/automation/runs` | Run history (newest first, last 50 kept per task) and `executor: { name, simulated }`. |
+| `GET` | `/api/automation/runs/:id` | One run: `status` (`queued`/`running`/`succeeded`/`failed`), `log`, `summary`, `error`. |
 | `POST` | `/api/payment/checkout` | `{ product: pro\|studio\|credits_10\|credits_50, currency, provider? }` → `{ payment, confirmationUrl }`. |
 | `GET` | `/api/payment/history` | Payments and usage events. |
 | `POST` | `/api/payment/webhook/yookassa`, `/api/payment/webhook/stripe` | Provider webhooks. |
@@ -319,6 +327,12 @@ review for your jurisdiction.
 | `REPLICATE_MAX_WAIT_MS` | `600000` | 10 s – 30 min. On timeout the prediction is cancelled (best effort; may still be billed). |
 | `REPLICATE_REQUEST_TIMEOUT_MS` | `30000` | Per HTTP request. |
 | `REPLICATE_MAX_CONCURRENT` | `1` | Concurrent predictions (1–10). |
+| `OWL_BROWSER_URL` / `OWL_BROWSER_TOKEN` | – | Self-hosted Owl Browser server and its **secret** token. Set both for real automation runs; without them runs are simulated. |
+| `OWL_BROWSER_API_PREFIX` | `/api` | Path prefix of the Owl Browser REST API. |
+| `OWL_BROWSER_ALLOW_HTTP` | `false` | `true` allows an `http://` Owl URL (private network only). |
+| `OWL_BROWSER_PROXIES_JSON` | – | Region → proxy URL, e.g. `{"EU":"socks5://eu-proxy.example:1080"}`. |
+| `OWL_BROWSER_MAX_CONCURRENT` | `2` | Runs executed at once (1–20). |
+| `OWL_BROWSER_POLL_INTERVAL_MS` / `OWL_BROWSER_MAX_WAIT_MS` / `OWL_BROWSER_REQUEST_TIMEOUT_MS` | `2000` / `600000` / `30000` | Job polling, max run time, per-request timeout. |
 
 ## API
 
@@ -359,6 +373,35 @@ Note: when `VIDEO_PROVIDER=replicate`, the legacy `POST /api/jobs {prompt}`
 without `provider` returns `401` (it would otherwise be billable). Clients
 should send `provider: "local-simulation"` or use the brief flow.
 
+## Desktop app
+
+The desktop app (`desktop/`, Electron) shows the same `/automation`
+dashboard (and `/studio`, `/`) in its own window. It is a separate npm
+package, so the cloud deployment never installs Electron.
+
+> **По-русски, что делать дальше:**
+> 1. Установите Node.js 20+ (https://nodejs.org).
+> 2. В папке репозитория: `cd desktop && npm install && npm start` — откроется окно
+>    «Режиссёр» с панелью задач Owl Browser. Без настроек сервер запускается
+>    **на вашем компьютере** (127.0.0.1), задачи выполняются в режиме симуляции.
+> 3. Чтобы окно открывало **облачный** сервис: `REZHISSER_URL=https://ваш-сервис.onrender.com npm start`
+>    (Windows PowerShell: `$env:REZHISSER_URL="https://…"; npm start`).
+> 4. Чтобы задачи реально выполнялись в Owl Browser, задайте `OWL_BROWSER_URL` и
+>    `OWL_BROWSER_TOKEN` на облачном сервере (Render → Environment) или перед `npm start`
+>    в локальном режиме.
+> 5. Установщик: `npm run dist:win` (Windows, `.exe`), `npm run dist:mac` (`.dmg`, собирать на Mac),
+>    `npm run dist:linux` (`.AppImage`). Файлы появятся в `desktop/dist/`.
+
+| Variable | Default | Description |
+| --- | --- | --- |
+| `REZHISSER_URL` | – | Cloud service origin (`https://…`; `http://` only for localhost). Without it the bundled server runs on `127.0.0.1` with a random port, data in the app's user-data folder and a stable local JWT secret. |
+| `REZHISSER_START_PATH` | `/automation` | First page: `/automation`, `/studio` or `/`. |
+
+Security: context isolation, sandboxed renderer and no Node.js in pages;
+only pages of the service open inside the window, other `http(s)` links
+(payment pages, docs) open in the system browser and other schemes are
+blocked; all permission requests (camera, notifications, …) are denied.
+
 ## Deploying to Render
 
 See **[docs/DEPLOY_RENDER.md](docs/DEPLOY_RENDER.md)** (Russian, step by step)
@@ -381,4 +424,6 @@ no billing:
 - `test/payments.test.js`: YooKassa and Stripe checkout, webhook verification (re-fetch, signature, amount mismatch, replay), refunds, provider outage.
 - `test/generation.test.js`: Seedance requests, Free/Pro/Studio/credits accounting, refunds on failure, S3 SigV4 (AWS reference vector), library remix, projects, restart resume, cleanup cron.
 - `test/library.test.js`, `test/studio.test.js`: library coverage and search; Studio CSP, sinks, ids and RU/中文 translations.
+- `test/automation.test.js`, `test/automation-runs.test.js`: task CRUD, Owl Browser executor against a fake Owl API, simulation, run queue limits, blocked internal URLs, run history per user.
+- `test/desktop.test.js`: desktop config and navigation rules, local secret, the bundled local server (dashboard, runs, sign-in kept across restarts) and the hardened Electron settings. Electron is not needed to run it.
 - `test/frontend.test.js`: UI routes and CSP, static allowlist (no traversal), no `innerHTML`/`eval`/third-party origins, no secrets in assets, every referenced element exists, accessibility basics, and a demo flow with network disabled.
