@@ -219,7 +219,8 @@ Account endpoints take the JWT in the `Authorization` header (`Bearer <token>`, 
 | `GET/POST` | `/api/automation/tasks` (with bearer token) | List or create up to 100 site tasks for the signed-in user. |
 | `PUT/DELETE` | `/api/automation/tasks/:id` (with bearer token) | Edit or delete an owned site task. |
 | `POST` | `/api/automation/tasks/:id/runs` (with bearer token) | Start a run of an enabled owned task → `202 { run }` (`queued`). One active run per task, at most 3 per user. |
-| `GET` | `/api/automation/tasks/:id/runs`, `/api/automation/runs` | Run history (newest first, last 50 kept per task) and `executor: { name, simulated }`. |
+| `GET` | `/api/automation/tasks/:id/runs` | Task run history as `{ runs }` (newest first, last 50 kept per task). |
+| `GET` | `/api/automation/runs` | Account run history as `{ runs, executor: { name, simulated } }`. |
 | `GET` | `/api/automation/runs/:id` | One run: `status` (`queued`/`running`/`succeeded`/`failed`), `log`, `summary`, `error`. |
 | `POST` | `/api/payment/checkout` | `{ product: pro\|studio\|credits_10\|credits_50, currency, provider? }` → `{ payment, confirmationUrl }`. |
 | `GET` | `/api/payment/history` | Payments and usage events. |
@@ -380,7 +381,7 @@ dashboard (and `/studio`, `/`) in its own window. It is a separate npm
 package, so the cloud deployment never installs Electron.
 
 > **По-русски, что делать дальше:**
-> 1. Установите Node.js 20+ (https://nodejs.org).
+> 1. Установите Node.js 22.12+ (https://nodejs.org), требуется Electron 44.
 > 2. В папке репозитория: `cd desktop && npm install && npm start` — откроется окно
 >    «Режиссёр» с панелью задач Owl Browser. Без настроек сервер запускается
 >    **на вашем компьютере** (127.0.0.1), задачи выполняются в режиме симуляции.

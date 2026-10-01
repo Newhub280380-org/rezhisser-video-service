@@ -67,8 +67,15 @@ test('desktop local secret is created once with private permissions and reused',
     assert.ok(first.length >= 32);
     assert.equal(loadOrCreateSecret(file), first);
     if (process.platform !== 'win32') assert.equal(fs.statSync(file).mode & 0o777, 0o600);
+    if (process.platform !== 'win32') {
+      fs.chmodSync(file, 0o644);
+      assert.equal(loadOrCreateSecret(file), first);
+      assert.equal(fs.statSync(file).mode & 0o777, 0o600);
+      fs.chmodSync(file, 0o644);
+    }
     fs.writeFileSync(file, 'short');
     assert.notEqual(loadOrCreateSecret(file), 'short');
+    if (process.platform !== 'win32') assert.equal(fs.statSync(file).mode & 0o777, 0o600);
   } finally {
     fs.rmSync(dir, { recursive: true, force: true });
   }
@@ -134,6 +141,7 @@ test('desktop package is a hardened Electron shell that bundles the server', () 
   assert.deepEqual(resources, ['../src->server/src', '../public->server/public']);
 
   const main = fs.readFileSync(path.join(DESKTOP_DIR, 'main.js'), 'utf8');
+  assert.match(main, /classifyNavigation\(url, origin\) === 'external'/);
   assert.match(main, /contextIsolation: true/);
   assert.match(main, /nodeIntegration: false/);
   assert.match(main, /sandbox: true/);

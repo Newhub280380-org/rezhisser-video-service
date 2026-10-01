@@ -68,13 +68,17 @@ function classifyNavigation(target, origin) {
 function loadOrCreateSecret(file) {
   try {
     const existing = fs.readFileSync(file, 'utf8').trim();
-    if (existing.length >= 32) return existing;
+    if (existing.length >= 32) {
+      if (process.platform !== 'win32') fs.chmodSync(file, 0o600);
+      return existing;
+    }
   } catch (error) {
     if (error.code !== 'ENOENT') throw error;
   }
   const secret = crypto.randomBytes(48).toString('base64url');
   fs.mkdirSync(path.dirname(file), { recursive: true });
   fs.writeFileSync(file, secret, { mode: 0o600 });
+  if (process.platform !== 'win32') fs.chmodSync(file, 0o600);
   return secret;
 }
 
