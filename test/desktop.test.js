@@ -74,11 +74,11 @@ test('desktop local secret is created once with private permissions and reused',
       fs.chmodSync(file, 0o644);
     }
     fs.writeFileSync(file, 'short');
-    const oldInode = process.platform !== 'win32' ? fs.statSync(file).ino : null;
+    const replacedInode = fs.statSync(file).ino;
     assert.notEqual(loadOrCreateSecret(file), 'short');
     if (process.platform !== 'win32') {
       assert.equal(fs.statSync(file).mode & 0o777, 0o600);
-      assert.notEqual(fs.statSync(file).ino, oldInode);
+      assert.notEqual(fs.statSync(file).ino, replacedInode);
     }
   } finally {
     fs.rmSync(dir, { recursive: true, force: true });

@@ -77,15 +77,27 @@ function loadOrCreateSecret(file) {
   }
   const secret = crypto.randomBytes(48).toString('base64url');
   fs.mkdirSync(path.dirname(file), { recursive: true });
-  const tempFile = path.join(path.dirname(file), `.${path.basename(file)}-${crypto.randomBytes(8).toString('hex')}.tmp`);
+  const temporaryFile = path.join(
+    path.dirname(file),
+    `.${path.basename(file)}.${process.pid}.${crypto.randomBytes(8).toString('hex')}.tmp`,
+  );
+  let descriptor;
+  let temporaryFileCreated = false;
   try {
-    fs.writeFileSync(tempFile, secret, { flag: 'wx', mode: 0o600 });
-    if (process.platform !== 'win32') fs.chmodSync(tempFile, 0o600);
-    fs.renameSync(tempFile, file);
+    descriptor = fs.openSync(temporaryFile, 'wx', 0o600);
+    temporaryFileCreated = true;
+    if (process.platform !== 'win32') fs.chmodSync(temporaryFile, 0o600);
+    fs.writeFileSync(descriptor, secret, 'utf8');
+    fs.closeSync(descriptor);
+    descriptor = undefined;
+    fs.renameSync(temporaryFile, file);
   } catch (error) {
-    try {
-      fs.unlinkSync(tempFile);
-    } catch {}
+    if (descriptor !== undefined) {
+      try { fs.closeSync(descriptor); } catch {}
+    }
+    if (temporaryFileCreated) {
+      try { fs.unlinkSync(temporaryFile); } catch {}
+    }
     throw error;
   }
   return secret;
