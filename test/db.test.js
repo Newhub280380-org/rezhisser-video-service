@@ -106,6 +106,25 @@ async function contract(t, db) {
     assert.equal(await db.deleteProject(projectId, id), true);
     assert.equal(await db.countProjects(id), 0);
   });
+
+  await t.test('automation tasks are scoped to their owner', async () => {
+    const taskId = crypto.randomUUID();
+    const task = await db.createAutomationTask({
+      id: taskId,
+      userId: id,
+      name: 'Site task',
+      url: 'https://example.com/',
+      instruction: 'Review the page.',
+      region: 'EU',
+    });
+    assert.equal(task.enabled, true);
+    assert.equal((await db.listAutomationTasks(id)).length, 1);
+    assert.equal(await db.getAutomationTask(taskId, crypto.randomUUID()), null);
+    assert.equal(await db.updateAutomationTask(taskId, crypto.randomUUID(), { enabled: false }), null);
+    assert.equal((await db.updateAutomationTask(taskId, id, { enabled: false })).enabled, false);
+    assert.equal(await db.deleteAutomationTask(taskId, crypto.randomUUID()), false);
+    assert.equal(await db.deleteAutomationTask(taskId, id), true);
+  });
 }
 
 test('memory repository satisfies the contract', async (t) => {
@@ -119,8 +138,13 @@ test('memory repository persists to a JSON snapshot', async () => {
     const db = createDatabase({ dataDir: dir });
     await db.createUser({ id, email: 'persist@example.com', passwordHash: 'h' });
     await db.addCredits(id, 7);
+    const task = await db.createAutomationTask({
+      id: crypto.randomUUID(), userId: id, name: 'Persistent task', url: 'https://example.com/',
+      instruction: 'Check the page.', region: 'US',
+    });
     const reopened = createDatabase({ dataDir: dir });
     assert.equal((await reopened.getUserByEmail('persist@example.com')).credits, 7);
+    assert.equal((await reopened.listAutomationTasks(id))[0].id, task.id);
   } finally {
     fs.rmSync(dir, { recursive: true, force: true });
   }
