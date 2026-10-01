@@ -343,8 +343,9 @@ function createMemoryDatabase({ file = null } = {}) {
         return true;
       });
     },
-    async createAutomationTask(task) {
+    async createAutomationTask(task, { limit } = {}) {
       return mutate(() => {
+        if (limit !== undefined && Array.from(state.automationTasks.values()).filter((item) => item.userId === task.userId).length >= limit) return null;
         const now = nowIso();
         const row = { enabled: true, createdAt: now, updatedAt: now, ...task };
         state.automationTasks.set(row.id, row);

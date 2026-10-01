@@ -148,15 +148,16 @@
       enabled: $('task-enabled').checked,
     };
     var button = $('save-button');
+    var submittedId = state.editingId;
     button.disabled = true;
     showError($('form-error'), '');
     try {
-      var path = '/api/automation/tasks' + (state.editingId ? '/' + encodeURIComponent(state.editingId) : '');
-      var result = await api(path, state.editingId ? 'PUT' : 'POST', payload);
-      if (state.editingId) state.tasks = state.tasks.map(function (task) { return task.id === result.task.id ? result.task : task; });
+      var path = '/api/automation/tasks' + (submittedId ? '/' + encodeURIComponent(submittedId) : '');
+      var result = await api(path, submittedId ? 'PUT' : 'POST', payload);
+      if (submittedId) state.tasks = state.tasks.map(function (task) { return task.id === result.task.id ? result.task : task; });
       else state.tasks.unshift(result.task);
       renderTasks();
-      resetForm();
+      if (state.editingId === submittedId) resetForm();
     } catch (error) {
       showError($('form-error'), error.message);
     } finally {
