@@ -209,6 +209,9 @@ test('projects and favorites', async () => {
     const api = accountClient(base);
     assert.equal((await api.get('/api/projects')).status, 401);
     await api.register();
+    const malformedId = await api.del('/api/projects/%');
+    assert.equal(malformedId.status, 404);
+    assert.equal(malformedId.json.error, 'project_not_found');
     const fav = await api.post('/api/projects', { kind: 'favorite', libraryItemId: 'sng-meme-001' });
     assert.equal(fav.status, 201);
     assert.equal(fav.json.project.title.length > 0, true);
