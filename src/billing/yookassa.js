@@ -31,6 +31,7 @@ function createYooKassaClient({ shopId, secretKey, apiBaseUrl = 'https://api.yoo
     const res = await requestJson(fetchImpl, `${base}${path}`, {
       method, headers, body: body ? JSON.stringify(body) : undefined, timeoutMs, service: 'yookassa',
     });
+    if (method === 'GET' && res.status === 404) return null;
     if (!res.ok || !res.json) {
       throw new ExternalError('yookassa_error', `YooKassa returned HTTP ${res.status}.`, res.status);
     }
@@ -62,11 +63,13 @@ function createYooKassaClient({ shopId, secretKey, apiBaseUrl = 'https://api.yoo
     async getPayment(id) {
       if (typeof id !== 'string' || !ID_PATTERN.test(id)) return null;
       const data = await call('GET', `/payments/${encodeURIComponent(id)}`);
+      if (!data) return null;
       return { id: data.id, status: data.status, paid: data.paid === true, amount: parseAmount(data.amount), metadata: data.metadata || {} };
     },
     async getRefund(id) {
       if (typeof id !== 'string' || !ID_PATTERN.test(id)) return null;
       const data = await call('GET', `/refunds/${encodeURIComponent(id)}`);
+      if (!data) return null;
       return { id: data.id, status: data.status, paymentId: data.payment_id, amount: parseAmount(data.amount) };
     },
   };

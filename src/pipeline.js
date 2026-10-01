@@ -59,8 +59,7 @@ function createVideoPipeline({ db, provider, storage, billing, logger = console,
     return db.updateVideoJob(job.id, patch);
   }
 
-  async function poll(job, startedAt) {
-    const release = provider.acquire();
+  async function poll(job, startedAt, release = provider.acquire()) {
     try {
       while (!closed) {
         if (now() - startedAt > maxWaitMs) {
@@ -85,15 +84,24 @@ function createVideoPipeline({ db, provider, storage, billing, logger = console,
   }
 
   async function runReal(job, input) {
+    // Reserve a provider slot immediately so canAccept() sees queued jobs.
+    const release = provider.acquire();
     let taskId;
     try {
       taskId = await provider.submit(input);
     } catch (error) {
+      release();
       logger.error(`seedance submit for job ${job.id} failed: ${error.code || 'error'}`);
       return fail(job, { code: 'provider_error', message: 'Сервис генерации не принял задачу.' });
     }
-    const updated = await db.updateVideoJob(job.id, { status: 'processing', providerTaskId: taskId });
-    return poll(updated, Date.parse(job.createdAt) || now());
+    let updated;
+    try {
+      updated = await db.updateVideoJob(job.id, { status: 'processing', providerTaskId: taskId });
+    } catch (error) {
+      release();
+      throw error;
+    }
+    return poll(updated, Date.parse(job.createdAt) || now(), release);
   }
 
   async function runDemo(job) {

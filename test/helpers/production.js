@@ -79,10 +79,10 @@ function fakeServices({ seedanceStates = [{ status: 'succeeded', content: { vide
 
     if (url.startsWith(S3_ENDPOINT)) {
       const key = new URL(url).pathname;
-      if (control.s3Status !== 200) return new Response('', { status: control.s3Status });
+      if (control.s3Status !== 200) return new Response(null, { status: control.s3Status });
       if (method === 'PUT') objects.set(key, body);
       if (method === 'DELETE') objects.delete(key);
-      return new Response('', { status: method === 'DELETE' ? 204 : 200 });
+      return new Response(null, { status: method === 'DELETE' ? 204 : 200 });
     }
 
     if (url.startsWith('https://api.resend.com')) return json(200, { id: 'email_1' });

@@ -1,7 +1,9 @@
 # rezhisser-video-service — «Режиссёр»
 
-Node.js service (built-in modules only, **no dependencies**) with a Russian
-web app for planning video ads. You write an ad brief in plain words. A
+Node.js service (built-in modules plus `pg` for PostgreSQL) with a Russian
+web app for planning video ads and a commercial **Studio** (`/studio`):
+accounts, subscriptions, payments, Seedance 2.5 generation and a content
+library for the CIS and China. You write an ad brief in plain words. A
 **rule-based director** turns it into a creative brief, a hook and call to
 action, a shot list and a model prompt, then picks a video model from a
 server-side allowlist and explains why.
@@ -24,7 +26,10 @@ server-side allowlist and explains why.
 | Demo render (`local-simulation`) | ✅ No network, no cost, **no video**: the result says "демонстрация: видео не создавалось". |
 | Paid render via Replicate | 🔒 Locked by default. Needs a private-beta session, a quote and confirmation. Tested only with a fake API. |
 | Optional LLM advisor | ⛔ Not implemented. `DIRECTOR_ADVISOR` accepts only `none`; any other value stops startup. |
-| User accounts, payments, invoices | ⛔ Not implemented. The service is **not ready to sell**. |
+| Studio at `/studio` (RU / 中文): register, login, password reset, dashboard, pricing, library, remix, video history | ✅ See [Production stack](#production-stack). |
+| Accounts (email + scrypt password, JWT), PostgreSQL | ✅ In-memory/JSON store when `DATABASE_URL` is not set (development only). |
+| Payments: YooKassa (primary) + Stripe (fallback), RUB/KZT/USD/CNY | ✅ When keys are configured. Tested with fake provider APIs only. |
+| Real video via ByteDance Seedance 2.5 (ModelArk) + S3/Backblaze storage | ✅ When `SEEDANCE_API_KEY`/`SEEDANCE_MODEL` and `S3_*` are set. Tested with fake APIs only. |
 
 > **Honest limitation:** no real Replicate model, price or input schema has
 > been verified in this repository (replicate.com could not be reached from
@@ -159,6 +164,62 @@ Legacy setup: if `VIDEO_MODEL_PROFILES_JSON` is empty, `REPLICATE_MODEL`
 becomes the single `replicate-default` text-to-video profile (input: `prompt`
 plus `REPLICATE_EXTRA_INPUT_JSON`). Its estimate comes from
 `REPLICATE_ESTIMATED_COST_USD`.
+
+## Production stack
+
+The commercial product runs **next to** the legacy demo / private-beta API
+(which is unchanged). Deployment: [docs/DEPLOY_RAILWAY.md](docs/DEPLOY_RAILWAY.md)
+(Railway + PostgreSQL + cron + Backblaze B2). All variables: [`.env.example`](.env.example).
+
+| Part | Where |
+| --- | --- |
+| DB schema (users, video_jobs, payments, usage_events, projects, library_items, password_resets) | `src/db/schema.sql`, `src/db/postgres.js`, `src/db/memory.js`; `npm run db:migrate` |
+| Auth: scrypt hashes, HS256 JWT bound to a token version (password reset revokes old tokens) | `src/accounts.js` |
+| Billing: products, tiers, credits, checkout, webhooks, refunds | `src/billing/*` |
+| Seedance 2.5 provider + job pipeline (poll, store, refund on failure, resume after restart) | `src/providers/seedance.js`, `src/pipeline.js` |
+| S3 client (SigV4, presigned downloads) and 30-day cleanup cron | `src/storage/s3.js`, `src/cron/cleanup.js` (`npm run cron:cleanup`) |
+| Content library: 53 CIS items (RU, KZ, TJ, UZ, KG) + 30 Chinese (中文) items | `src/library/sng.json`, `src/library/china.json` |
+
+**Plans.** Free — demo only. Pro — $5 / 30 days, 50 videos. Studio — $20 /
+30 days, unlimited. Credits (10 / 50 videos) are pay-as-you-go and are used
+after the plan allowance. Prices for RUB/KZT/CNY are in `src/billing/plans.js`
+and can be overridden with `PRICES_JSON`. A failed generation returns the
+video/credit automatically.
+
+**Payments.** RUB and KZT go to YooKassa, USD and CNY to Stripe (configurable).
+YooKassa notifications are unsigned, so the server re-reads each payment from
+the YooKassa API and checks amount and currency before granting anything.
+Stripe events are verified with `STRIPE_WEBHOOK_SECRET`. Entitlements are
+granted once per payment (guarded state transition) and revoked on full refunds.
+
+**Content library.** Every card is a ready template: Russian/Chinese prompt,
+an English model prompt with `{product}`, `{brand}`, `{photo}` placeholders,
+negative prompt, format, duration and a shot list (and dialogue for memes,
+e.g. «Два косметолога» lip-sync meme, expectation-vs-reality, «это не купишь
+за деньги», 直播带货 live-commerce hooks). Memes use original dialogue
+"in the style of" a comedy, never copyrighted film footage or audio.
+
+### Account API
+
+Account endpoints take the JWT in the `Authorization` header (`Bearer <token>`, same origin only).
+
+| Method | Path | Description |
+| --- | --- | --- |
+| `GET` | `/api/plans` | Tiers, products with prices, payment providers. |
+| `POST` | `/api/auth/register` | `{ email, password, locale? }` → `{ token, expiresAt, user, subscription }`. |
+| `POST` | `/api/auth/login` | `{ email, password }` → JWT. Rate limited. |
+| `POST` | `/api/auth/forgot-password` / `/api/auth/reset-password` | Email link (needs `PUBLIC_ORIGIN` + Resend) / `{ token, password }`. |
+| `GET` | `/api/user/profile` | User, subscription (tier, limits, credits) and usage. |
+| `POST` | `/api/payment/checkout` | `{ product: pro\|studio\|credits_10\|credits_50, currency, provider? }` → `{ payment, confirmationUrl }`. |
+| `GET` | `/api/payment/history` | Payments and usage events. |
+| `POST` | `/api/payment/webhook/yookassa`, `/api/payment/webhook/stripe` | Provider webhooks. |
+| `POST` | `/api/library/search` | `{ query?, region?, country?, language?, category?, type?, trend?, limit?, offset? }` → `{ total, items, facets }`. Public. |
+| `GET` | `/api/library/:id` | Full prompt + template. Public. |
+| `GET/POST` | `/api/projects`, `DELETE /api/projects/:id` | Saved projects and favorite prompts. |
+| `POST` | `/api/jobs` (with bearer token) | `{ brief }` or `{ prompt }` or `{ libraryItemId, fields? }`, plus `image?`, `aspect?`, `duration?`, `demo?` → Seedance job (uses plan/credits; `402` when nothing is left). |
+| `GET` | `/api/jobs`, `/api/jobs/:id` (with bearer token) | Own jobs with signed video/download URLs. |
+
+Without a bearer token `/api/jobs` keeps the legacy behaviour described below.
 
 ## Safety model for paid generation
 
@@ -312,4 +373,9 @@ no billing:
 - `test/director.test.js`: determinism, validation, shot timings, "rule-based" labelling, fail-closed advisor setting.
 - `test/models.test.js`: profile validation, auto/manual routing, no cross-tier fallback, per-model input mapping, and the **actual endpoint URL and request body** reaching the fake provider for versioned and unversioned profiles.
 - `test/auth-spend.test.js`: locked-by-default reasons, each missing safeguard, and that unauthenticated, CSRF-less, cross-origin and legacy requests cause **zero predictions**. Also login rate limit, cookie flags, quotes (mismatch, expiry, single use, other session), idempotent replay, budget and job caps, ledger persistence, and private job listings.
+- `test/db.test.js`: repository contract for the in-memory store and, with `TEST_DATABASE_URL=postgres://…` (a throwaway database — tables are dropped), for PostgreSQL.
+- `test/accounts.test.js`: password hashing, JWT forgery/expiry, register/login/profile, password reset (single use, revokes old tokens, no Host-header links), login rate limit.
+- `test/payments.test.js`: YooKassa and Stripe checkout, webhook verification (re-fetch, signature, amount mismatch, replay), refunds, provider outage.
+- `test/generation.test.js`: Seedance requests, Free/Pro/Studio/credits accounting, refunds on failure, S3 SigV4 (AWS reference vector), library remix, projects, restart resume, cleanup cron.
+- `test/library.test.js`, `test/studio.test.js`: library coverage and search; Studio CSP, sinks, ids and RU/中文 translations.
 - `test/frontend.test.js`: UI routes and CSP, static allowlist (no traversal), no `innerHTML`/`eval`/third-party origins, no secrets in assets, every referenced element exists, accessibility basics, and a demo flow with network disabled.

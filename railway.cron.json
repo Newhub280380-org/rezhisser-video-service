@@ -1,0 +1,12 @@
+{
+  "$schema": "https://railway.com/railway.schema.json",
+  "build": {
+    "builder": "RAILPACK",
+    "buildCommand": "npm ci --omit=dev"
+  },
+  "deploy": {
+    "startCommand": "npm run cron:cleanup",
+    "cronSchedule": "17 3 * * *",
+    "restartPolicyType": "NEVER"
+  }
+}
