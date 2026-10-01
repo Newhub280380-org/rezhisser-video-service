@@ -98,6 +98,19 @@ CREATE TABLE IF NOT EXISTS projects (
 );
 CREATE INDEX IF NOT EXISTS projects_user_created_idx ON projects (user_id, created_at DESC);
 
+CREATE TABLE IF NOT EXISTS automation_tasks (
+  id UUID PRIMARY KEY,
+  user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  name TEXT NOT NULL,
+  url TEXT NOT NULL,
+  instruction TEXT NOT NULL,
+  region TEXT NOT NULL DEFAULT 'US',
+  enabled BOOLEAN NOT NULL DEFAULT true,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+CREATE INDEX IF NOT EXISTS automation_tasks_user_created_idx ON automation_tasks (user_id, created_at DESC);
+
 -- Content library mirror (source of truth: src/library/*.json, upserted by
 -- the migration so the data can be queried or joined in SQL).
 CREATE TABLE IF NOT EXISTS library_items (
