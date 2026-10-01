@@ -22,8 +22,9 @@
       <p>Сохраняйте адрес сайта, инструкцию и желаемый регион для каждой задачи.</p>
     </section>
     <section class="notice" aria-labelledby="availability-title">
-      <h2 id="availability-title">Исполнение пока не подключено</h2>
-      <p>Эта версия сохраняет и редактирует задачи, но не открывает сайты: Owl Browser и AI-провайдер ещё не подключены. Не вводите сюда пароли или другие секреты.</p>
+      <h2 id="availability-title">Исполнение задач</h2>
+      <p id="executor-note">Задачи выполняет Owl Browser на сервере: он открывает сайт и его AI-агент следует инструкции. Если Owl Browser не настроен, запуски идут в режиме симуляции и сайт не открывается.</p>
+      <p>Не вводите сюда пароли или другие секреты.</p>
     </section>
     <section id="login-required" class="panel" hidden>
       <h2>Войдите в аккаунт</h2>
@@ -75,8 +76,13 @@
         </section>
       </div>
       <section class="panel run-history">
-        <h2>Запуски и журнал</h2>
-        <p class="muted">История выполнений появится после подключения и настройки Owl Browser API. Сейчас автоматические запуски отключены.</p>
+        <div class="section-heading">
+          <h2 id="runs-title">Запуски и журнал</h2>
+          <button class="button" type="button" id="refresh-runs">Обновить</button>
+        </div>
+        <p id="runs-empty" class="muted">Запусков пока нет. Нажмите «Запустить» у задачи.</p>
+        <ul id="run-list" class="run-list" aria-live="polite" aria-labelledby="runs-title"></ul>
+        <p id="runs-error" class="error" role="alert" hidden></p>
       </section>
     </div>
   </main>

@@ -33,6 +33,9 @@ const { createLibrary } = require('./library/index.js');
 const { createMailer } = require('./mailer.js');
 const { createVideoPipeline } = require('./pipeline.js');
 const { createProductionApi } = require('./production.js');
+const { createOwlBrowserExecutor } = require('./automation/owl-browser.js');
+const { createSimulationExecutor } = require('./automation/simulation.js');
+const { createAutomationRunner } = require('./automation/runner.js');
 
 const KNOWN_PROVIDERS = ['local-simulation', 'replicate'];
 const DEFAULT_PROVIDER = 'local-simulation';
@@ -118,6 +121,7 @@ function loadConfig(env = process.env, overrides = {}) {
     yookassa: yookassaOverrides,
     stripe: stripeOverrides,
     mail: mailOverrides,
+    owlBrowser: owlBrowserOverrides,
     ...rest
   } = overrides;
   return {
@@ -176,6 +180,19 @@ function loadConfig(env = process.env, overrides = {}) {
       resendApiKey: env.RESEND_API_KEY || '',
       from: env.MAIL_FROM || '',
       ...mailOverrides,
+    },
+    // Owl Browser executes automation tasks. Without it runs are simulated.
+    owlBrowser: {
+      url: (env.OWL_BROWSER_URL || '').trim(),
+      token: env.OWL_BROWSER_TOKEN || '',
+      apiPrefix: env.OWL_BROWSER_API_PREFIX === undefined ? '/api' : env.OWL_BROWSER_API_PREFIX,
+      allowHttp: (env.OWL_BROWSER_ALLOW_HTTP || '').trim().toLowerCase() === 'true',
+      proxiesJson: env.OWL_BROWSER_PROXIES_JSON || '',
+      requestTimeoutMs: clamp(parseNumber(env.OWL_BROWSER_REQUEST_TIMEOUT_MS, 30000), 1000, 120000),
+      pollIntervalMs: clamp(parseNumber(env.OWL_BROWSER_POLL_INTERVAL_MS, 2000), 1, 60000),
+      maxWaitMs: clamp(parseNumber(env.OWL_BROWSER_MAX_WAIT_MS, 600000), 1000, 3600000),
+      maxConcurrent: clamp(parseNumber(env.OWL_BROWSER_MAX_CONCURRENT, 2), 1, 20),
+      ...owlBrowserOverrides,
     },
     host: env.HOST || '0.0.0.0',
     port: parseNumber(env.PORT, 3000),
@@ -461,9 +478,14 @@ function createProductionStack(config, { loginLimiter, globalLoginLimiter, helpe
     retentionDays: config.videoRetentionDays,
     demoDurationMs: config.simulationDurationMs,
   });
+  const executor =
+    createOwlBrowserExecutor({ ...config.owlBrowser, fetchImpl }) ||
+    createSimulationExecutor({ durationMs: config.simulationDurationMs });
+  const automation = createAutomationRunner({ db, executor, logger, maxConcurrent: config.owlBrowser.maxConcurrent });
   const api = createProductionApi({
     config,
     db,
+    automation,
     library,
     billing,
     tokens,
@@ -476,7 +498,7 @@ function createProductionStack(config, { loginLimiter, globalLoginLimiter, helpe
     helpers,
     logger,
   });
-  return { api, db, library, billing, seedance, storage, pipeline, tokens };
+  return { api, db, library, billing, seedance, storage, pipeline, tokens, automation };
 }
 
 function createApp(options = {}) {
@@ -1051,6 +1073,7 @@ function createApp(options = {}) {
   function closeProviders() {
     for (const provider of providers.values()) provider.close();
     production.pipeline.close();
+    production.automation.close();
   }
 
   return {
@@ -1071,6 +1094,7 @@ function createApp(options = {}) {
     storage: production.storage,
     pipeline: production.pipeline,
     tokens: production.tokens,
+    automation: production.automation,
   };
 }
 
@@ -1086,7 +1110,7 @@ function start(options = {}) {
   ready
     .then(() => {
       listen();
-      return app.pipeline.resume();
+      return Promise.all([app.pipeline.resume(), app.automation.resume()]);
     })
     .catch((error) => {
       console.error(`database error: ${error.code || error.message}`);
@@ -1101,6 +1125,7 @@ function start(options = {}) {
     console.log(`seedance: ${app.seedance ? `configured (${app.seedance.model})` : 'not configured (account jobs: demo only)'}`);
     console.log(`storage: ${app.storage ? `s3 bucket ${app.storage.bucket}` : 'not configured (provider URLs are kept)'}`);
     console.log(`payments: ${app.billing.providers.map((p) => p.name).join(', ') || 'not configured'}`);
+    console.log(`automation: ${app.automation.executor.simulated ? 'simulation (set OWL_BROWSER_URL + OWL_BROWSER_TOKEN for real runs)' : app.automation.executor.name}`);
     const paid = app.paidStatus();
     console.log(
       paid.available
