@@ -9,7 +9,9 @@
 const fs = require('node:fs');
 const path = require('node:path');
 
-const TABLES = ['users', 'passwordResets', 'videoJobs', 'payments', 'usageEvents', 'projects', 'automationTasks'];
+const TABLES = ['users', 'passwordResets', 'videoJobs', 'payments', 'usageEvents', 'projects', 'automationTasks', 'automationRuns'];
+
+const ACTIVE_RUN_STATUSES = new Set(['queued', 'running']);
 
 function clone(value) {
   return value === undefined || value === null ? null : JSON.parse(JSON.stringify(value));
@@ -372,7 +374,71 @@ function createMemoryDatabase({ file = null } = {}) {
         const task = state.automationTasks.get(id);
         if (!task || task.userId !== userId) return false;
         state.automationTasks.delete(id);
+        for (const run of state.automationRuns.values()) {
+          if (run.taskId === id) state.automationRuns.delete(run.id);
+        }
         return true;
+      });
+    },
+    async createAutomationRun(run) {
+      return mutate(() => {
+        for (const item of state.automationRuns.values()) {
+          if (item.taskId === run.taskId && ACTIVE_RUN_STATUSES.has(item.status)) return null;
+        }
+        const now = nowIso();
+        const row = {
+          simulated: false, providerJobId: null, summary: null, log: [], error: null,
+          startedAt: null, completedAt: null, createdAt: now, updatedAt: now, ...run,
+        };
+        state.automationRuns.set(row.id, row);
+        return row;
+      });
+    },
+    async updateAutomationRun(id, patch) {
+      return mutate(() => {
+        const run = state.automationRuns.get(id);
+        if (!run) return null;
+        Object.assign(run, patch, { updatedAt: nowIso() });
+        return run;
+      });
+    },
+    async getAutomationRun(id, userId) {
+      const run = state.automationRuns.get(id);
+      return run && run.userId === userId ? clone(run) : null;
+    },
+    async listAutomationRuns(userId, { taskId = null, limit = 50 } = {}) {
+      return clone(
+        Array.from(state.automationRuns.values())
+          .filter((run) => run.userId === userId && (!taskId || run.taskId === taskId))
+          .sort(byNewest)
+          .slice(0, limit),
+      );
+    },
+    async failStaleAutomationRuns(before, error) {
+      return mutate(() => {
+        const cutoff = new Date(before).toISOString();
+        let count = 0;
+        for (const run of state.automationRuns.values()) {
+          if (ACTIVE_RUN_STATUSES.has(run.status) && run.createdAt < cutoff) {
+            const now = nowIso();
+            Object.assign(run, { status: 'failed', error, completedAt: now, updatedAt: now });
+            count += 1;
+          }
+        }
+        return count;
+      });
+    },
+    async pruneAutomationRuns(taskId, keep) {
+      return mutate(() => {
+        const runs = Array.from(state.automationRuns.values()).filter((run) => run.taskId === taskId).sort(byNewest);
+        let count = 0;
+        for (const run of runs.slice(keep)) {
+          if (!ACTIVE_RUN_STATUSES.has(run.status)) {
+            state.automationRuns.delete(run.id);
+            count += 1;
+          }
+        }
+        return count;
       });
     },
   };

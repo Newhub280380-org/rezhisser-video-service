@@ -111,6 +111,30 @@ CREATE TABLE IF NOT EXISTS automation_tasks (
 );
 CREATE INDEX IF NOT EXISTS automation_tasks_user_created_idx ON automation_tasks (user_id, created_at DESC);
 
+-- Run history for automation tasks (Owl Browser or local simulation).
+CREATE TABLE IF NOT EXISTS automation_runs (
+  id UUID PRIMARY KEY,
+  task_id UUID NOT NULL REFERENCES automation_tasks(id) ON DELETE CASCADE,
+  user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  task_name TEXT NOT NULL,
+  url TEXT NOT NULL,
+  status TEXT NOT NULL CHECK (status IN ('queued', 'running', 'succeeded', 'failed')),
+  executor TEXT NOT NULL,
+  simulated BOOLEAN NOT NULL DEFAULT false,
+  provider_job_id TEXT,
+  summary TEXT,
+  log JSONB,
+  error JSONB,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  started_at TIMESTAMPTZ,
+  completed_at TIMESTAMPTZ
+);
+CREATE INDEX IF NOT EXISTS automation_runs_user_created_idx ON automation_runs (user_id, created_at DESC);
+CREATE INDEX IF NOT EXISTS automation_runs_task_created_idx ON automation_runs (task_id, created_at DESC);
+-- At most one active run per task, enforced atomically across instances.
+CREATE UNIQUE INDEX IF NOT EXISTS automation_runs_one_active_idx ON automation_runs (task_id) WHERE status IN ('queued', 'running');
+
 -- Content library mirror (source of truth: src/library/*.json, upserted by
 -- the migration so the data can be queried or joined in SQL).
 CREATE TABLE IF NOT EXISTS library_items (

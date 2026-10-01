@@ -135,6 +135,31 @@ async function contract(t, db) {
     assert.equal(attempts.filter(Boolean).length, 2);
     assert.equal((await db.listAutomationTasks(id)).length, 2);
   });
+
+  await t.test('automation runs allow one active run per task and keep history', async () => {
+    const taskId = crypto.randomUUID();
+    await db.createAutomationTask({ id: taskId, userId: id, name: 'Run task', url: 'https://example.com/', instruction: 'Check.', region: 'US' });
+    const base = { taskId, userId: id, taskName: 'Run task', url: 'https://example.com/', executor: 'simulation', simulated: true };
+    const runId = crypto.randomUUID();
+    const run = await db.createAutomationRun({ id: runId, status: 'queued', log: [{ at: new Date().toISOString(), message: 'queued' }], ...base });
+    assert.equal(run.status, 'queued');
+    assert.equal(run.log[0].message, 'queued');
+    assert.equal(await db.createAutomationRun({ id: crypto.randomUUID(), status: 'queued', ...base }), null);
+    assert.equal(await db.getAutomationRun(runId, crypto.randomUUID()), null);
+    const done = await db.updateAutomationRun(runId, { status: 'succeeded', summary: 'ok', completedAt: new Date().toISOString() });
+    assert.equal(done.status, 'succeeded');
+    assert.equal(done.summary, 'ok');
+    const second = await db.createAutomationRun({ id: crypto.randomUUID(), status: 'running', ...base });
+    assert.ok(second);
+    assert.equal(await db.failStaleAutomationRuns(Date.now() + 1000, { code: 'interrupted', message: 'restart' }), 1);
+    const runs = await db.listAutomationRuns(id, { taskId });
+    assert.equal(runs.length, 2);
+    assert.equal(runs.find((item) => item.id === second.id).error.code, 'interrupted');
+    assert.equal(await db.pruneAutomationRuns(taskId, 1), 1);
+    assert.equal((await db.listAutomationRuns(id)).length, 1);
+    assert.equal(await db.deleteAutomationTask(taskId, id), true);
+    assert.deepEqual(await db.listAutomationRuns(id, { taskId }), []);
+  });
 }
 
 test('memory repository satisfies the contract', async (t) => {
@@ -163,7 +188,7 @@ test('memory repository persists to a JSON snapshot', async () => {
 test('postgres repository satisfies the contract', { skip: !process.env.TEST_DATABASE_URL && 'set TEST_DATABASE_URL to run' }, async (t) => {
   const { Pool } = require('pg');
   const pool = new Pool({ connectionString: process.env.TEST_DATABASE_URL });
-  await pool.query('DROP TABLE IF EXISTS usage_events, automation_tasks, projects, payments, video_jobs, password_resets, library_items, users CASCADE');
+  await pool.query('DROP TABLE IF EXISTS usage_events, automation_runs, automation_tasks, projects, payments, video_jobs, password_resets, library_items, users CASCADE');
   const library = createLibrary();
   const db = createDatabase({ pool, libraryItems: library.items });
   try {

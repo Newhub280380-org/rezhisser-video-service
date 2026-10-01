@@ -129,9 +129,12 @@ test('automation dashboard is allowlisted and uses safe same-origin API renderin
   assert.ok(ROUTES['/automation']);
   assert.ok(ROUTES['/assets/automation.js']);
   assert.ok(ROUTES['/assets/automation.css']);
-  assert.match(html, /Исполнение пока не подключено/);
+  assert.match(html, /Исполнение задач/);
   assert.match(html, /Запуски и журнал/);
+  assert.match(html, /id="run-list"/);
   assert.match(js, /\/api\/automation\/tasks/);
+  assert.match(js, /\/api\/automation\/runs/);
+  assert.match(js, /'\/runs', 'POST'/);
   assert.match(js, /textContent/);
   for (const sink of ['innerHTML', 'outerHTML', 'insertAdjacentHTML', 'eval(']) assert.ok(!js.includes(sink));
   assert.doesNotMatch(html + js + css, /https?:\/\/(?!example\.com)/i);
@@ -140,7 +143,7 @@ test('automation dashboard is allowlisted and uses safe same-origin API renderin
     const page = await fetch(`${base}/automation`);
     assert.equal(page.status, 200);
     assert.match(page.headers.get('content-security-policy'), /default-src 'none'/);
-    assert.match(await page.text(), /Owl Browser и AI-провайдер ещё не подключены/);
+    assert.match(await page.text(), /режиме симуляции/);
     assert.equal((await fetch(`${base}/assets/automation.js`)).status, 200);
     assert.equal((await fetch(`${base}/assets/automation.css`)).status, 200);
   });

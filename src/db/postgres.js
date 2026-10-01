@@ -44,8 +44,14 @@ const COLUMNS = {
     id: 'id', userId: 'user_id', name: 'name', url: 'url', instruction: 'instruction', region: 'region',
     enabled: 'enabled', createdAt: 'created_at', updatedAt: 'updated_at',
   },
+  automation_runs: {
+    id: 'id', taskId: 'task_id', userId: 'user_id', taskName: 'task_name', url: 'url', status: 'status',
+    executor: 'executor', simulated: 'simulated', providerJobId: 'provider_job_id', summary: 'summary',
+    log: 'log', error: 'error', createdAt: 'created_at', updatedAt: 'updated_at', startedAt: 'started_at',
+    completedAt: 'completed_at',
+  },
 };
-const JSON_COLUMNS = new Set(['brief', 'error']);
+const JSON_COLUMNS = new Set(['brief', 'error', 'log']);
 const NUMERIC_FIELDS = new Set(['costUsd', 'videoBytes', 'amountMinor']);
 
 function toRow(table, row) {
@@ -307,6 +313,47 @@ function createPostgresDatabase({ connectionString, ssl, pool: injectedPool, lib
     async deleteAutomationTask(id, userId) {
       const result = await query('DELETE FROM automation_tasks WHERE id = $1 AND user_id = $2', [id, userId]);
       return result.rowCount === 1;
+    },
+    // Returns null when the task already has a queued or running run.
+    async createAutomationRun(run) {
+      const sql = insertSql('automation_runs', run);
+      try {
+        return await one('automation_runs', sql.text, sql.values);
+      } catch (error) {
+        if (error.code === '23505') return null;
+        throw error;
+      }
+    },
+    updateAutomationRun(id, patch) {
+      const sql = updateSql('automation_runs', id, patch);
+      return one('automation_runs', sql.text, sql.values);
+    },
+    getAutomationRun(id, userId) {
+      return one('automation_runs', 'SELECT * FROM automation_runs WHERE id = $1 AND user_id = $2', [id, userId]);
+    },
+    listAutomationRuns(userId, { taskId = null, limit = 50 } = {}) {
+      if (taskId) {
+        return many('automation_runs', 'SELECT * FROM automation_runs WHERE user_id = $1 AND task_id = $2 ORDER BY created_at DESC LIMIT $3', [userId, taskId, limit]);
+      }
+      return many('automation_runs', 'SELECT * FROM automation_runs WHERE user_id = $1 ORDER BY created_at DESC LIMIT $2', [userId, limit]);
+    },
+    // Marks queued/running runs created before `before` as failed (e.g. after a restart).
+    async failStaleAutomationRuns(before, error) {
+      const result = await query(
+        `UPDATE automation_runs SET status = 'failed', error = $2, completed_at = now(), updated_at = now()
+         WHERE status IN ('queued', 'running') AND created_at < $1`,
+        [new Date(before).toISOString(), JSON.stringify(error)],
+      );
+      return result.rowCount;
+    },
+    // Keeps the newest `keep` finished runs of a task.
+    async pruneAutomationRuns(taskId, keep) {
+      const result = await query(
+        `DELETE FROM automation_runs WHERE task_id = $1 AND status IN ('succeeded', 'failed') AND id NOT IN (
+           SELECT id FROM automation_runs WHERE task_id = $1 ORDER BY created_at DESC LIMIT $2)`,
+        [taskId, keep],
+      );
+      return result.rowCount;
     },
   };
 }

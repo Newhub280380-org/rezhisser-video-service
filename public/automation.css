@@ -49,6 +49,17 @@ textarea { resize: vertical; }
 .task-meta { color: #a7a3bf; font-size: 13px; }
 .error { color: #ff8181; }
 .run-history { margin-top: 20px; }
+.notice p + p { margin-top: 6px; }
+.run-list { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.run { padding: 16px; border: 1px solid #ffffff1a; border-radius: 12px; background: #ffffff05; }
+.run h3 { margin: 0; font-size: 16px; }
+.run-status { padding: 3px 8px; border-radius: 999px; font-size: 12px; color: #b9b6d3; background: #ffffff10; }
+.run-status.running, .run-status.queued { color: #59e2dc; background: #59e2dc1a; }
+.run-status.succeeded { color: #62e0a1; background: #62e0a11a; }
+.run-status.failed { color: #ff8181; background: #ff81811a; }
+.run-summary { white-space: pre-wrap; overflow-wrap: anywhere; color: #d0cde0; }
+.run-log { margin: 8px 0 0; padding-left: 20px; color: #b9b6d3; font-size: 13px; overflow-wrap: anywhere; }
+details summary { cursor: pointer; color: #59e2dc; }
 @media (max-width: 760px) {
   .columns { grid-template-columns: 1fr; }
   .topbar { align-items: flex-start; flex-direction: column; }

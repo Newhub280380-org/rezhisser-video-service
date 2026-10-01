@@ -18,6 +18,7 @@ const {
 const { BillingError } = require('./billing/index.js');
 const { CURRENCIES, TIERS, PERIOD_MS } = require('./billing/plans.js');
 const { LibraryError } = require('./library/index.js');
+const { AutomationError, publicRun } = require('./automation/runner.js');
 
 const RESET_TTL_MS = 60 * 60 * 1000;
 const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/;
@@ -25,6 +26,8 @@ const LOCALES = ['ru', 'zh', 'en'];
 const ASPECTS = ['9:16', '16:9', '1:1'];
 const MAX_PROJECTS = 500;
 const MAX_AUTOMATION_TASKS = 100;
+const MAX_AUTOMATION_RUNS_LISTED = 50;
+const AUTOMATION_RUN_ERRORS = { automation_run_active: 409, too_many_active_runs: 429, automation_busy: 503, automation_unavailable: 503 };
 const AUTOMATION_REGIONS = ['US', 'EU', 'UK', 'CA', 'AU', 'JP', 'SG'];
 const FORBIDDEN_JOB_FIELDS = ['model', 'version', 'token', 'apiKey', 'apiBaseUrl', 'baseUrl', 'url', 'webhook', 'input', 'cost', 'price', 'provider', 'billingSource'];
 
@@ -46,6 +49,7 @@ function fillPlaceholders(template, fields = {}) {
 function createProductionApi({
   config,
   db,
+  automation,
   library,
   billing,
   tokens,
@@ -472,6 +476,28 @@ function createProductionApi({
     sendJson(res, 200, { task });
   }
 
+  async function ownedTask(res, user, id) {
+    const task = UUID_PATTERN.test(id) ? await db.getAutomationTask(id, user.id) : null;
+    if (!task) sendJson(res, 404, { error: 'automation_task_not_found' });
+    return task;
+  }
+
+  async function startAutomationRun(res, user, id) {
+    const task = await ownedTask(res, user, id);
+    if (!task) return;
+    if (!task.enabled) {
+      sendJson(res, 409, { error: 'automation_task_disabled', message: 'Задача приостановлена. Включите её, чтобы запустить.' });
+      return;
+    }
+    try {
+      const run = await automation.start(task);
+      sendJson(res, 202, { run: publicRun(run) }, { 'Cache-Control': 'no-store' });
+    } catch (error) {
+      if (!(error instanceof AutomationError)) throw error;
+      sendJson(res, AUTOMATION_RUN_ERRORS[error.code] || 409, { error: error.code, message: error.message });
+    }
+  }
+
   async function health() {
     let database = 'ok';
     try {
@@ -483,6 +509,7 @@ function createProductionApi({
       database,
       databaseKind: db.kind,
       seedance: seedance ? 'configured' : 'not_configured',
+      automation: automation.executor.name,
       storage: storage ? 'configured' : 'not_configured',
       payments: billing.providers.map((p) => p.name),
       library: library.size,
@@ -601,6 +628,40 @@ function createProductionApi({
     if (automationTaskMatch && ['PUT', 'DELETE'].includes(method)) {
       const user = await requireUser(req, res);
       if (user) await updateAutomationTask(req, res, user, automationTaskMatch[1]);
+      return true;
+    }
+
+    const automationRunsMatch = pathname.match(/^\/api\/automation\/tasks\/([^/]+)\/runs$/);
+    if (automationRunsMatch && ['GET', 'POST'].includes(method)) {
+      const user = await requireUser(req, res);
+      if (!user) return true;
+      if (method === 'POST') {
+        await startAutomationRun(res, user, automationRunsMatch[1]);
+        return true;
+      }
+      const task = await ownedTask(res, user, automationRunsMatch[1]);
+      if (task) {
+        const runs = await db.listAutomationRuns(user.id, { taskId: task.id, limit: MAX_AUTOMATION_RUNS_LISTED });
+        sendJson(res, 200, { runs: runs.map(publicRun) }, { 'Cache-Control': 'no-store' });
+      }
+      return true;
+    }
+    if (method === 'GET' && pathname === '/api/automation/runs') {
+      const user = await requireUser(req, res);
+      if (user) {
+        const runs = await db.listAutomationRuns(user.id, { limit: MAX_AUTOMATION_RUNS_LISTED });
+        sendJson(res, 200, { runs: runs.map(publicRun), executor: automation.executor }, { 'Cache-Control': 'no-store' });
+      }
+      return true;
+    }
+    const automationRunMatch = pathname.match(/^\/api\/automation\/runs\/([^/]+)$/);
+    if (method === 'GET' && automationRunMatch) {
+      const user = await requireUser(req, res);
+      if (!user) return true;
+      const id = automationRunMatch[1];
+      const run = UUID_PATTERN.test(id) ? await db.getAutomationRun(id, user.id) : null;
+      if (run) sendJson(res, 200, { run: publicRun(run) }, { 'Cache-Control': 'no-store' });
+      else sendJson(res, 404, { error: 'automation_run_not_found' });
       return true;
     }
 
