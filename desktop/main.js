@@ -35,7 +35,7 @@ async function resolveTarget() {
 
 function lockDown(contents, origin) {
   contents.setWindowOpenHandler(({ url }) => {
-    if (classifyNavigation(url, origin) !== 'deny') shell.openExternal(url).catch(() => null);
+    if (classifyNavigation(url, origin) === 'external') shell.openExternal(url).catch(() => null);
     return { action: 'deny' };
   });
   contents.on('will-navigate', (event, url) => {
