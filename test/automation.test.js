@@ -2,6 +2,7 @@
 
 const test = require('node:test');
 const assert = require('node:assert/strict');
+const crypto = require('node:crypto');
 const fs = require('node:fs');
 const path = require('node:path');
 const { PUBLIC_DIR, ROUTES } = require('../src/static.js');
@@ -59,6 +60,64 @@ test('automation tasks validate URLs, regions, and required instructions', async
       assert.equal(result.status, 400);
       assert.equal(result.json.error, error);
     }
+  });
+});
+
+test('concurrent automation task creates enforce the per-account limit', async () => {
+  const services = fakeServices();
+  await withServer(productionOptions(services), async ({ base, app }) => {
+    const api = accountClient(base);
+    const email = 'automation-limit@example.com';
+    assert.equal((await api.register(email)).status, 201);
+    const user = await app.db.getUserByEmail(email);
+    for (let i = 0; i < 99; i += 1) {
+      await app.db.createAutomationTask({
+        id: crypto.randomUUID(),
+        userId: user.id,
+        name: `Task ${i}`,
+        url: 'https://example.com/',
+        instruction: 'Review the page.',
+        region: 'US',
+      });
+    }
+
+    const payload = { name: 'Final task', url: 'https://example.com/', instruction: 'Review the page.' };
+    const results = await Promise.all([
+      api.post('/api/automation/tasks', payload),
+      api.post('/api/automation/tasks', payload),
+    ]);
+    assert.deepEqual(results.map((result) => result.status).sort(), [201, 409]);
+    assert.equal((await app.db.listAutomationTasks(user.id, { limit: 101 })).length, 100);
+  });
+});
+
+test('automation task routes report missing rows when mutations lose a race', async () => {
+  const services = fakeServices();
+  await withServer(productionOptions(services), async ({ base, app }) => {
+    const api = accountClient(base);
+    assert.equal((await api.register('automation-race@example.com')).status, 201);
+    const created = await api.post('/api/automation/tasks', {
+      name: 'Task',
+      url: 'https://example.com/',
+      instruction: 'Review the page.',
+    });
+    const { id } = created.json.task;
+
+    const malformedId = await api.del('/api/automation/tasks/%');
+    assert.equal(malformedId.status, 404);
+    assert.equal(malformedId.json.error, 'automation_task_not_found');
+
+    const update = app.db.updateAutomationTask;
+    app.db.updateAutomationTask = async () => null;
+    const updated = await api.request('PUT', `/api/automation/tasks/${id}`, { name: 'Updated task' });
+    assert.equal(updated.status, 404);
+    assert.equal(updated.json.error, 'automation_task_not_found');
+    app.db.updateAutomationTask = update;
+
+    app.db.deleteAutomationTask = async () => false;
+    const deleted = await api.del(`/api/automation/tasks/${id}`);
+    assert.equal(deleted.status, 404);
+    assert.equal(deleted.json.error, 'automation_task_not_found');
   });
 });
 

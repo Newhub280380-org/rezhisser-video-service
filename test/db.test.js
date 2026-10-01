@@ -124,6 +124,16 @@ async function contract(t, db) {
     assert.equal((await db.updateAutomationTask(taskId, id, { enabled: false })).enabled, false);
     assert.equal(await db.deleteAutomationTask(taskId, crypto.randomUUID()), false);
     assert.equal(await db.deleteAutomationTask(taskId, id), true);
+    const attempts = await Promise.all(Array.from({ length: 3 }, (_, index) => db.createAutomationTask({
+      id: crypto.randomUUID(),
+      userId: id,
+      name: `Bounded task ${index}`,
+      url: 'https://example.com/',
+      instruction: 'Review the page.',
+      region: 'US',
+    }, { limit: 2 })));
+    assert.equal(attempts.filter(Boolean).length, 2);
+    assert.equal((await db.listAutomationTasks(id)).length, 2);
   });
 }
 
@@ -153,7 +163,7 @@ test('memory repository persists to a JSON snapshot', async () => {
 test('postgres repository satisfies the contract', { skip: !process.env.TEST_DATABASE_URL && 'set TEST_DATABASE_URL to run' }, async (t) => {
   const { Pool } = require('pg');
   const pool = new Pool({ connectionString: process.env.TEST_DATABASE_URL });
-  await pool.query('DROP TABLE IF EXISTS usage_events, projects, payments, video_jobs, password_resets, library_items, users CASCADE');
+  await pool.query('DROP TABLE IF EXISTS usage_events, automation_tasks, projects, payments, video_jobs, password_resets, library_items, users CASCADE');
   const library = createLibrary();
   const db = createDatabase({ pool, libraryItems: library.items });
   try {

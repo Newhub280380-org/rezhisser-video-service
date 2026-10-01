@@ -264,9 +264,35 @@ function createPostgresDatabase({ connectionString, ssl, pool: injectedPool, lib
       const result = await query('DELETE FROM projects WHERE id = $1 AND user_id = $2', [id, userId]);
       return result.rowCount === 1;
     },
-    createAutomationTask(task) {
+    async createAutomationTask(task, { limit } = {}) {
       const sql = insertSql('automation_tasks', task);
-      return one('automation_tasks', sql.text, sql.values);
+      if (limit === undefined) return one('automation_tasks', sql.text, sql.values);
+      const client = await pool.connect();
+      let inTransaction = false;
+      try {
+        await client.query('BEGIN');
+        inTransaction = true;
+        await client.query('SELECT id FROM users WHERE id = $1 FOR UPDATE', [task.userId]);
+        const count = await client.query('SELECT count(*)::int AS n FROM automation_tasks WHERE user_id = $1', [task.userId]);
+        if (count.rows[0].n >= limit) {
+          await client.query('ROLLBACK');
+          inTransaction = false;
+          return null;
+        }
+        const result = await client.query(sql.text, sql.values);
+        await client.query('COMMIT');
+        inTransaction = false;
+        return toRow('automation_tasks', result.rows[0]);
+      } catch (error) {
+        if (inTransaction) {
+          try {
+            await client.query('ROLLBACK');
+          } catch {}
+        }
+        throw error;
+      } finally {
+        client.release();
+      }
     },
     listAutomationTasks(userId, { limit = 100 } = {}) {
       return many('automation_tasks', 'SELECT * FROM automation_tasks WHERE user_id = $1 ORDER BY created_at DESC LIMIT $2', [userId, limit]);

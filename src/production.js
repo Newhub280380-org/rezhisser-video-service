@@ -429,12 +429,16 @@ function createProductionApi({
       sendJson(res, 400, { error: input.error });
       return;
     }
-    if ((await db.listAutomationTasks(user.id, { limit: MAX_AUTOMATION_TASKS })).length >= MAX_AUTOMATION_TASKS) {
+    const task = await db.createAutomationTask(
+      { id: crypto.randomUUID(), userId: user.id, ...input },
+      { limit: MAX_AUTOMATION_TASKS },
+    );
+    if (!task) {
       sendJson(res, 409, { error: 'too_many_automation_tasks' });
       return;
     }
-    const { userId, ...task } = await db.createAutomationTask({ id: crypto.randomUUID(), userId: user.id, ...input });
-    sendJson(res, 201, { task });
+    const { userId, ...publicTask } = task;
+    sendJson(res, 201, { task: publicTask });
   }
 
   async function updateAutomationTask(req, res, user, id) {
@@ -448,8 +452,8 @@ function createProductionApi({
       return;
     }
     if (req.method === 'DELETE') {
-      await db.deleteAutomationTask(id, user.id);
-      sendJson(res, 200, { deleted: true });
+      const deleted = await db.deleteAutomationTask(id, user.id);
+      sendJson(res, deleted ? 200 : 404, deleted ? { deleted: true } : { error: 'automation_task_not_found' });
       return;
     }
     const payload = await readJson(req, res, 8 * 1024);
@@ -459,7 +463,12 @@ function createProductionApi({
       sendJson(res, 400, { error: input.error });
       return;
     }
-    const { userId, ...task } = await db.updateAutomationTask(id, user.id, input);
+    const updated = await db.updateAutomationTask(id, user.id, input);
+    if (!updated) {
+      sendJson(res, 404, { error: 'automation_task_not_found' });
+      return;
+    }
+    const { userId, ...task } = updated;
     sendJson(res, 200, { task });
   }
 
@@ -591,7 +600,7 @@ function createProductionApi({
     const automationTaskMatch = pathname.match(/^\/api\/automation\/tasks\/([^/]+)$/);
     if (automationTaskMatch && ['PUT', 'DELETE'].includes(method)) {
       const user = await requireUser(req, res);
-      if (user) await updateAutomationTask(req, res, user, decodeURIComponent(automationTaskMatch[1]));
+      if (user) await updateAutomationTask(req, res, user, automationTaskMatch[1]);
       return true;
     }
 
