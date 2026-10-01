@@ -22,6 +22,7 @@
 | Переменная | Значение |
 | --- | --- |
 | `NODE_ENV` | `production` |
+| `DB_AUTO_MIGRATE` | `false` (миграцию уже делает pre-deploy `npm run db:migrate`) |
 | `JWT_SECRET` | 48+ случайных символов (`node -e "console.log(require('crypto').randomBytes(48).toString('base64url'))"`) |
 | `SEEDANCE_API_KEY`, `SEEDANCE_MODEL` | ключ и id модели/endpoint Seedance 2.5 из консоли ModelArk |
 | `SEEDANCE_API_BASE_URL` | BytePlus: `https://ark.ap-southeast.bytepluses.com/api/v3`, Volcengine (КНР): `https://ark.cn-beijing.volces.com/api/v3` |

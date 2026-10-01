@@ -337,8 +337,13 @@ function createProductionApi({
       if (!demo) await billing.refundGeneration({ userId: user.id, billingSource, id: null });
       throw error;
     }
+    try {
+      if (!demo) await billing.recordGeneration(user.id, billingSource, job.id);
+    } catch (error) {
+      // The ledger entry is informational; never strand a reserved slot.
+      logger.error(`usage event for job ${job.id} failed: ${error.code || 'error'}`);
+    }
     pipeline.start(job, { prompt, image: image ? image.dataUrl : null, aspect, duration }, release);
-    if (!demo) await billing.recordGeneration(user.id, billingSource, job.id);
     const fresh = await db.getUserById(user.id);
     sendJson(res, 201, { job: publicJob(job), subscription: billing.usageSummary(fresh) });
   }

@@ -120,7 +120,10 @@ function createVideoPipeline({ db, provider, storage, billing, logger = console,
     start(job, input, release) {
       return track(job.billingSource === 'demo' ? runDemo(job) : runReal(job, input, release || undefined), job);
     },
-    // Re-attaches pollers to jobs left running by a previous process.
+    // Re-attaches pollers to jobs left running by a previous process (close()
+    // stops polling without failing jobs, so they are picked up here). These
+    // tasks already run at the provider, so they take slots even beyond
+    // SEEDANCE_MAX_CONCURRENT; new jobs wait until they drain.
     async resume() {
       const active = await db.listActiveVideoJobs();
       let resumed = 0;
