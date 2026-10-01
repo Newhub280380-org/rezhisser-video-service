@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Режиссёр Studio: библиотека готовых видео-промтов для СНГ и Китая, мемы, Reels, рекламные шаблоны и генерация видео Seedance по подписке.">
+  <title>Режиссёр Studio — видео-промты, мемы и генерация</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/studio.css">
+  <script src="/assets/studio.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#view">Перейти к содержимому</a>
+
+  <header class="bar">
+    <a class="logo" href="#/library" aria-label="Режиссёр Studio">
+      <span class="logo-mark" aria-hidden="true"></span>
+      <span data-i18n="brand">Режиссёр Studio</span>
+    </a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#/library" data-nav="library" data-i18n="nav.library">Библиотека</a>
+      <a href="#/remix" data-nav="remix" data-i18n="nav.remix">Создать</a>
+      <a href="#/history" data-nav="history" data-i18n="nav.history">Мои видео</a>
+      <a href="#/pricing" data-nav="pricing" data-i18n="nav.pricing">Тарифы</a>
+      <a href="/app" data-i18n="nav.director">Режиссёр</a>
+    </nav>
+    <div class="bar-actions">
+      <label class="visually-hidden" for="lang-select" data-i18n="lang">Язык</label>
+      <select id="lang-select" class="lang">
+        <option value="ru">RU</option>
+        <option value="zh">中文</option>
+      </select>
+      <a class="btn btn-ghost" id="nav-login" href="#/login" data-i18n="nav.login">Войти</a>
+      <a class="btn btn-ghost" id="nav-dashboard" href="#/dashboard" hidden data-i18n="nav.dashboard">Кабинет</a>
+      <button type="button" class="btn btn-ghost" id="logout-btn" hidden data-i18n="nav.logout">Выйти</button>
+    </div>
+  </header>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <main id="view" tabindex="-1">
+
+    <!-- Library -->
+    <section class="view" id="view-library" aria-labelledby="hero-title">
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="hero.eyebrow">СНГ · 中国 · Reels · Мемы · Реклама</p>
+          <h1 id="hero-title" data-i18n="hero.title">Готовые видео-идеи: выбрал, вставил фото — получил ролик.</h1>
+          <p class="lede" data-i18n="hero.lede">Сотни рабочих промтов для Seedance: мемы с липсинком, хуки для TikTok, бренды, beauty, авто, 直播带货. Копируйте или запускайте генерацию прямо отсюда.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#/remix" data-i18n="hero.create">Создать видео</a>
+            <a class="btn btn-ghost" href="#/pricing" data-i18n="hero.pricing">Тарифы от $5</a>
+          </div>
+        </div>
+        <div class="stage" id="stage" aria-hidden="true">
+          <div class="cube" id="cube">
+            <div class="face f1">9:16</div>
+            <div class="face f2">REELS</div>
+            <div class="face f3">MEME</div>
+            <div class="face f4">直播</div>
+            <div class="face f5">4K</div>
+            <div class="face f6">AD</div>
+          </div>
+          <div class="ring r1"></div>
+          <div class="ring r2"></div>
+        </div>
+      </div>
+
+      <form class="filters" id="filters" role="search">
+        <div class="field grow">
+          <label for="f-query" data-i18n="f.query">Поиск</label>
+          <input id="f-query" type="search" maxlength="200" autocomplete="off" placeholder="сапоги, 美妆, авто…">
+        </div>
+        <div class="field">
+          <label for="f-region" data-i18n="f.region">Регион</label>
+          <select id="f-region">
+            <option value="" data-i18n="f.all">Все</option>
+            <option value="sng" data-i18n="region.sng">СНГ</option>
+            <option value="china" data-i18n="region.china">Китай 中国</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-country" data-i18n="f.country">Страна</label>
+          <select id="f-country">
+            <option value="" data-i18n="f.all">Все</option>
+            <option value="ru" data-i18n="country.ru">Россия</option>
+            <option value="kz" data-i18n="country.kz">Казахстан</option>
+            <option value="tj" data-i18n="country.tj">Таджикистан</option>
+            <option value="uz" data-i18n="country.uz">Узбекистан</option>
+            <option value="kg" data-i18n="country.kg">Кыргызстан</option>
+            <option value="sng" data-i18n="country.sng">Всё СНГ</option>
+            <option value="cn" data-i18n="country.cn">中国</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-category" data-i18n="f.category">Категория</label>
+          <select id="f-category">
+            <option value="" data-i18n="f.all">Все</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-trend" data-i18n="f.trend">Тренд</label>
+          <select id="f-trend">
+            <option value="" data-i18n="f.all">Все</option>
+            <option value="hot" data-i18n="trend.hot">🔥 Хит</option>
+            <option value="rising" data-i18n="trend.rising">📈 Растёт</option>
+            <option value="evergreen" data-i18n="trend.evergreen">🌲 Вечное</option>
+          </select>
+        </div>
+      </form>
+      <div class="chips" id="type-chips" role="group" aria-label="Тип">
+        <button type="button" class="chip is-active" data-type="" data-i18n="type.all">Всё</button>
+        <button type="button" class="chip" data-type="meme" data-i18n="type.meme">Мемы</button>
+        <button type="button" class="chip" data-type="hook" data-i18n="type.hook">Хуки / Reels</button>
+        <button type="button" class="chip" data-type="ad" data-i18n="type.ad">Реклама</button>
+        <button type="button" class="chip" data-type="ugc" data-i18n="type.ugc">UGC</button>
+        <button type="button" class="chip" data-type="live-commerce" data-i18n="type.live">直播带货</button>
+      </div>
+      <p class="count" id="lib-count" aria-live="polite"></p>
+      <div class="grid" id="lib-grid"></div>
+      <button type="button" class="btn btn-ghost more" id="lib-more" hidden data-i18n="lib.more">Показать ещё</button>
+    </section>
+
+    <!-- Item detail / remix -->
+    <section class="view" id="view-remix" hidden aria-labelledby="remix-title">
+      <h1 id="remix-title" data-i18n="remix.title">Создать видео</h1>
+      <p class="muted" id="remix-source"></p>
+      <form id="remix-form" class="panel two-col" novalidate>
+        <div>
+          <div class="field">
+            <label for="r-product" data-i18n="remix.product">Ваш продукт</label>
+            <input id="r-product" maxlength="120" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="r-brand" data-i18n="remix.brand">Бренд</label>
+            <input id="r-brand" maxlength="80" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="r-prompt" data-i18n="remix.prompt">Промт (можно редактировать)</label>
+            <textarea id="r-prompt" rows="9" maxlength="2000"></textarea>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="r-aspect" data-i18n="remix.aspect">Формат</label>
+              <select id="r-aspect">
+                <option value="9:16">9:16</option>
+                <option value="16:9">16:9</option>
+                <option value="1:1">1:1</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="r-duration" data-i18n="remix.duration">Длительность</label>
+              <select id="r-duration">
+                <option value="5">5 s</option>
+                <option value="10">10 s</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="field">
+            <label for="r-photo" data-i18n="remix.photo">Ваше фото (первый кадр)</label>
+            <input id="r-photo" type="file" accept="image/png,image/jpeg,image/webp">
+          </div>
+          <img id="r-preview" class="preview" alt="" hidden>
+          <div class="template" id="r-template"></div>
+          <div class="actions">
+            <button type="button" class="btn btn-ghost" id="r-copy" data-i18n="remix.copy">Скопировать промт</button>
+            <button type="button" class="btn btn-ghost" id="r-save" data-i18n="remix.save">В избранное</button>
+            <button type="button" class="btn btn-ghost" id="r-demo" data-i18n="remix.demo">Демо (бесплатно)</button>
+            <button type="submit" class="btn btn-primary" id="r-generate" data-i18n="remix.generate">Сгенерировать</button>
+          </div>
+          <p class="muted small" id="r-quota"></p>
+        </div>
+      </form>
+      <div class="panel" id="r-job" hidden>
+        <p id="r-job-status" aria-live="polite"></p>
+        <video id="r-video" controls playsinline hidden></video>
+        <a class="btn btn-ghost" id="r-download" hidden download data-i18n="history.download">Скачать</a>
+      </div>
+    </section>
+
+    <!-- Auth -->
+    <section class="view narrow" id="view-login" hidden aria-labelledby="login-title">
+      <h1 id="login-title" data-i18n="auth.login">Вход</h1>
+      <form id="login-form" class="panel" novalidate>
+        <div class="field">
+          <label for="login-email">Email</label>
+          <input id="login-email" type="email" autocomplete="email" required maxlength="254">
+        </div>
+        <div class="field">
+          <label for="login-password" data-i18n="auth.password">Пароль</label>
+          <input id="login-password" type="password" autocomplete="current-password" required minlength="8" maxlength="128">
+        </div>
+        <button type="submit" class="btn btn-primary wide" data-i18n="auth.login">Вход</button>
+        <p class="links"><a href="#/register" data-i18n="auth.toRegister">Создать аккаунт</a> · <a href="#/forgot" data-i18n="auth.forgot">Забыли пароль?</a></p>
+      </form>
+    </section>
+
+    <section class="view narrow" id="view-register" hidden aria-labelledby="register-title">
+      <h1 id="register-title" data-i18n="auth.register">Регистрация</h1>
+      <form id="register-form" class="panel" novalidate>
+        <div class="field">
+          <label for="register-email">Email</label>
+          <input id="register-email" type="email" autocomplete="email" required maxlength="254">
+        </div>
+        <div class="field">
+          <label for="register-password" data-i18n="auth.newPassword">Пароль (мин. 8 символов)</label>
+          <input id="register-password" type="password" autocomplete="new-password" required minlength="8" maxlength="128">
+        </div>
+        <button type="submit" class="btn btn-primary wide" data-i18n="auth.register">Регистрация</button>
+        <p class="links"><a href="#/login" data-i18n="auth.toLogin">Уже есть аккаунт? Войти</a></p>
+      </form>
+    </section>
+
+    <section class="view narrow" id="view-forgot" hidden aria-labelledby="forgot-title">
+      <h1 id="forgot-title" data-i18n="auth.forgot">Забыли пароль?</h1>
+      <form id="forgot-form" class="panel" novalidate>
+        <div class="field">
+          <label for="forgot-email">Email</label>
+          <input id="forgot-email" type="email" autocomplete="email" required maxlength="254">
+        </div>
+        <button type="submit" class="btn btn-primary wide" data-i18n="auth.sendLink">Отправить ссылку</button>
+      </form>
+    </section>
+
+    <section class="view narrow" id="view-reset" hidden aria-labelledby="reset-title">
+      <h1 id="reset-title" data-i18n="auth.reset">Новый пароль</h1>
+      <form id="reset-form" class="panel" novalidate>
+        <div class="field">
+          <label for="reset-password" data-i18n="auth.newPassword">Пароль (мин. 8 символов)</label>
+          <input id="reset-password" type="password" autocomplete="new-password" required minlength="8" maxlength="128">
+        </div>
+        <button type="submit" class="btn btn-primary wide" data-i18n="auth.save">Сохранить</button>
+      </form>
+    </section>
+
+    <!-- Dashboard -->
+    <section class="view" id="view-dashboard" hidden aria-labelledby="dash-title">
+      <h1 id="dash-title" data-i18n="dash.title">Кабинет</h1>
+      <div class="stats">
+        <div class="stat"><span class="stat-label" data-i18n="dash.tier">Тариф</span><strong id="d-tier">—</strong><span class="muted small" id="d-expires"></span></div>
+        <div class="stat"><span class="stat-label" data-i18n="dash.used">Видео в этом периоде</span><strong id="d-used">—</strong><div class="meter"><div class="meter-fill" id="d-meter"></div></div></div>
+        <div class="stat"><span class="stat-label" data-i18n="dash.credits">Кредиты</span><strong id="d-credits">—</strong></div>
+        <div class="stat"><span class="stat-label" data-i18n="dash.total">Всего видео</span><strong id="d-total">—</strong></div>
+      </div>
+      <p class="muted" id="d-email"></p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#/pricing" data-i18n="dash.upgrade">Повысить тариф / купить кредиты</a>
+        <a class="btn btn-ghost" href="#/history" data-i18n="nav.history">Мои видео</a>
+      </div>
+      <h2 data-i18n="dash.favorites">Избранное</h2>
+      <ul class="list" id="d-projects"></ul>
+      <h2 data-i18n="dash.billing">История платежей</h2>
+      <div class="table-wrap">
+        <table class="table">
+          <thead><tr><th data-i18n="bill.date">Дата</th><th data-i18n="bill.product">Продукт</th><th data-i18n="bill.amount">Сумма</th><th data-i18n="bill.status">Статус</th></tr></thead>
+          <tbody id="d-payments"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="view" id="view-pricing" hidden aria-labelledby="pricing-title">
+      <h1 id="pricing-title" data-i18n="pricing.title">Тарифы</h1>
+      <div class="row">
+        <div class="field">
+          <label for="p-currency" data-i18n="pricing.currency">Валюта</label>
+          <select id="p-currency">
+            <option value="RUB">₽ RUB</option>
+            <option value="KZT">₸ KZT</option>
+            <option value="USD">$ USD</option>
+            <option value="CNY">¥ CNY</option>
+          </select>
+        </div>
+      </div>
+      <div class="plans" id="p-plans">
+        <article class="plan">
+          <h2>Free</h2>
+          <p class="price">0</p>
+          <p class="muted" data-i18n="pricing.free">Библиотека, копирование промтов, демо-режим без настоящего видео.</p>
+        </article>
+      </div>
+      <p class="muted small" data-i18n="pricing.note">Подписка — предоплата за 30 дней, без автосписаний. Оплата: ЮKassa (карты РФ/КЗ, СБП, кошельки) или Stripe (карты по всему миру).</p>
+    </section>
+
+    <!-- History -->
+    <section class="view" id="view-history" hidden aria-labelledby="history-title">
+      <h1 id="history-title" data-i18n="history.title">Мои видео</h1>
+      <p class="muted small" data-i18n="history.retention">Видео хранятся 30 дней — скачайте нужные.</p>
+      <div class="grid" id="h-grid"></div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p data-i18n="foot.legal">Шаблоны мемов используют оригинальную озвучку «в стиле комедии» или вашу лицензированную дорожку — без фрагментов чужих фильмов, логотипов и лиц знаменитостей.</p>
+  </footer>
+</body>
+</html>
