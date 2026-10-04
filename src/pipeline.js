@@ -49,7 +49,6 @@ function createVideoPipeline({ db, provider, storage, billing, logger = console,
         const stored = await storage.copyFromUrl(result.videoUrl, key);
         Object.assign(patch, { videoKey: key, videoBytes: stored.bytes, videoUrl: null });
       } catch (error) {
-        // Keep the provider URL (temporary) rather than losing the video.
         logger.error(`storing job ${job.id} failed: ${error instanceof StorageError ? error.code : 'error'}`);
         patch.videoUrl = result.videoUrl;
       }
@@ -97,7 +96,13 @@ function createVideoPipeline({ db, provider, storage, billing, logger = console,
       updated = await db.updateVideoJob(job.id, { status: 'processing', providerTaskId: taskId });
     } catch (error) {
       release();
-      throw error;
+      try {
+        await provider.cancel(taskId);
+      } catch (cancelError) {
+        logger.error(`seedance cancel for job ${job.id} failed: ${cancelError.code || 'error'}`);
+      }
+      logger.error(`updateVideoJob after submit for job ${job.id} failed: ${error.code || 'error'}`);
+      return fail(job, { code: 'internal_error', message: 'Не удалось сохранить задачу после отправки в сервис генерации.' });
     }
     return poll(updated, Date.parse(job.createdAt) || now(), release);
   }
@@ -115,15 +120,9 @@ function createVideoPipeline({ db, provider, storage, billing, logger = console,
   }
 
   return {
-    // Fire-and-forget; returns the promise for tests.
-    // `release` is a provider slot already reserved by the caller.
     start(job, input, release) {
       return track(job.billingSource === 'demo' ? runDemo(job) : runReal(job, input, release || undefined), job);
     },
-    // Re-attaches pollers to jobs left running by a previous process (close()
-    // stops polling without failing jobs, so they are picked up here). These
-    // tasks already run at the provider, so they take slots even beyond
-    // SEEDANCE_MAX_CONCURRENT; new jobs wait until they drain.
     async resume() {
       const active = await db.listActiveVideoJobs();
       let resumed = 0;
