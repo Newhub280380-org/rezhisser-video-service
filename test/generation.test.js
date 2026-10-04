@@ -3,6 +3,7 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const crypto = require('node:crypto');
+const { createVideoPipeline } = require('../src/pipeline.js');
 const { createSeedanceProvider } = require('../src/providers/seedance.js');
 const { createS3Storage } = require('../src/storage/s3.js');
 const { createMemoryDatabase } = require('../src/db/memory.js');
@@ -248,6 +249,48 @@ test('jobs left running by a restart are resumed or failed with a refund', async
     assert.equal((await db.getVideoJob(orphan.id)).error.code, 'interrupted');
     assert.equal((await db.getUserById(userId)).credits, 1);
   });
+});
+
+test('a DB failure right after a successful Seedance submit does not orphan the task or the reservation', async () => {
+  // Regression test: provider.submit() succeeds (the task is created, and may
+  // already be billed by the provider), but the very next step - persisting
+  // providerTaskId/status='processing' - throws (e.g. a transient DB error).
+  // The pipeline must not just release the concurrency slot and rethrow: the
+  // orphaned provider task must be cancelled and the job must be failed (which
+  // triggers billing.refundGeneration), so the user is never left with a job
+  // that nobody will ever poll and a reservation/credit that is never refunded.
+  let released = false;
+  let cancelledTaskId = null;
+  let refundedJobId = null;
+  const provider = {
+    acquire: () => () => {
+      released = true;
+    },
+    submit: async () => 'orphan-task-1',
+    cancel: async (taskId) => {
+      cancelledTaskId = taskId;
+    },
+    get: async () => ({ status: 'succeeded' }),
+  };
+  const db = {
+    async updateVideoJob(id, patch) {
+      if (patch.status === 'processing') throw Object.assign(new Error('db unavailable'), { code: 'db_error' });
+      return { id, ...patch };
+    },
+  };
+  const billing = {
+    async refundGeneration(job) {
+      refundedJobId = job.id;
+    },
+  };
+  const pipeline = createVideoPipeline({ db, provider, storage: null, billing, logger: { error() {}, log() {} } });
+  const job = { id: 'job-1', userId: 'user-1', createdAt: new Date().toISOString(), billingSource: 'credits' };
+
+  await pipeline.start(job, { prompt: 'x' });
+
+  assert.equal(released, true, 'the concurrency slot must be released');
+  assert.equal(cancelledTaskId, 'orphan-task-1', 'the orphaned provider task must be cancelled');
+  assert.equal(refundedJobId, 'job-1', 'the reserved generation must be refunded');
 });
 
 test('S3 SigV4 presigned URL matches the AWS reference example', () => {
