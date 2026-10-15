@@ -101,9 +101,12 @@ paid generation: locked (provider_not_configured, paid_generation_disabled, acce
   (платный) и укажите его путь в `DATA_DIR`.
 - Работайте **одним экземпляром** сервиса: лимиты и сессии не общие между
   экземплярами.
-- Один общий ключ — это **не** учётные записи пользователей. Для продажи
-  нужны аккаунты, оплата, база данных и хранилище видео (см. README →
-  «Before selling to the public»).
+- Один общий ключ — это **не** учётные записи пользователей. Аккаунты,
+  оплата (ЮKassa/Stripe), база данных и хранилище видео уже есть в этом
+  репозитории как production-стек (см. README → [Production
+  stack](../README.md#production-stack) и
+  [деплой на Railway](DEPLOY_RAILWAY.md)) — на Render для него нужны
+  PostgreSQL и S3-совместимое хранилище, а не локальный диск.
 
 ## 5. Сайт business-41.pazi.dev
 

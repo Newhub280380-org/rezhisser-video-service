@@ -26,10 +26,10 @@ server-side allowlist and explains why.
 | Demo render (`local-simulation`) | ✅ No network, no cost, **no video**: the result says "демонстрация: видео не создавалось". |
 | Paid render via Replicate | 🔒 Locked by default. Needs a private-beta session, a quote and confirmation. Tested only with a fake API. |
 | Optional LLM advisor | ⛔ Not implemented. `DIRECTOR_ADVISOR` accepts only `none`; any other value stops startup. |
-| Studio at `/studio` (RU / 中文): register, login, password reset, dashboard, pricing, library, remix, video history | ✅ See [Production stack](#production-stack). |
-| Accounts (email + scrypt password, JWT), PostgreSQL | ✅ In-memory/JSON store when `DATABASE_URL` is not set (development only). |
+| Studio at `/studio` (RU / 中文): register, login, password reset, dashboard, pricing, library (83 templates: CIS + China), remix, video history | ✅ See [Production stack](#production-stack). |
+| Accounts (email + scrypt password, JWT), PostgreSQL | ✅ In-memory/JSON store (`DATA_DIR/accounts/db.json`) when `DATABASE_URL` is not set (development only). |
 | Payments: YooKassa (primary) + Stripe (fallback), RUB/KZT/USD/CNY | ✅ When keys are configured. Tested with fake provider APIs only. |
-| Real video via ByteDance Seedance 2.5 (ModelArk) + S3/Backblaze storage | ✅ When `SEEDANCE_API_KEY`/`SEEDANCE_MODEL` and `S3_*` are set. Tested with fake APIs only. |
+| Real video via ByteDance Seedance 2.5 (ModelArk) + S3/Backblaze storage | ✅ When `SEEDANCE_API_KEY`/`SEEDANCE_MODEL` and `S3_*` are set. Tested with fake APIs only. Concurrency: `SEEDANCE_MAX_CONCURRENT` (default 4); restarts resume polling (`queued`/`processing` jobs). |
 
 > **Honest limitation:** no real Replicate model, price or input schema has
 > been verified in this repository (replicate.com could not be reached from
@@ -51,10 +51,19 @@ Mobile: [plan](docs/screenshots/mobile-2-plan.jpg) · Beta login: [dialog](docs/
 ```bash
 npm start          # http://0.0.0.0:3000 — open http://localhost:3000/
 npm test           # node:test, no network
+npm run db:migrate # applies src/db/schema.sql + library (needs DATABASE_URL)
+npm run cron:cleanup # retention cleanup (same env as the web service)
 ```
 
-Requires Node.js 18 or newer (the test glob needs Node 21+). There are no
-dependencies to install.
+Requires Node.js 18 or newer (`node --test "test/**/*.test.js"` needs Node
+18+; `npm ci` needs npm 8+ for the lockfile). Production uses `pg`
+(PostgreSQL driver); without `DATABASE_URL` the service uses a local
+JSON store (`DATA_DIR`) for development only. Install only when deploying
+with a database:
+
+```bash
+npm ci --omit=dev   # what railway.json / render.yaml build with
+```
 
 ## How it works
 
@@ -177,12 +186,14 @@ The commercial product runs **next to** the legacy demo / private-beta API
 | Auth: scrypt hashes, HS256 JWT bound to a token version (password reset revokes old tokens) | `src/accounts.js` |
 | Billing: products, tiers, credits, checkout, webhooks, refunds | `src/billing/*` |
 | Seedance 2.5 provider + job pipeline (poll, store, refund on failure, resume after restart) | `src/providers/seedance.js`, `src/pipeline.js` |
-| S3 client (SigV4, presigned downloads) and 30-day cleanup cron | `src/storage/s3.js`, `src/cron/cleanup.js` (`npm run cron:cleanup`) |
+| S3 client (SigV4, presigned downloads) and retention cleanup cron | `src/storage/s3.js`, `src/cron/cleanup.js` (`npm run cron:cleanup`; Railway schedule `17 3 * * *` in `railway.cron.json`; retention `VIDEO_RETENTION_DAYS`, default 30) |
 | Content library: 53 CIS items (RU, KZ, TJ, UZ, KG) + 30 Chinese (中文) items | `src/library/sng.json`, `src/library/china.json` |
+| Video pipeline semantics | `src/pipeline.js`: `queued` → `processing` → `succeeded`/`failed`; stored copies at `videos/<userId>/<jobId>.mp4`; on storage failure the temporary provider URL is kept; `queued`/`processing` jobs resume polling after a restart (they hold Seedance slots first); demo jobs complete without a provider call |
 
-**Plans.** Free — demo only. Pro — $5 / 30 days, 50 videos. Studio — $20 /
-30 days, unlimited. Credits (10 / 50 videos) are pay-as-you-go and are used
-after the plan allowance. Prices for RUB/KZT/CNY are in `src/billing/plans.js`
+**Plans.** Free — demo only. Pro — $5 / 30 days (500 ¢), 50 videos
+(`PRO_VIDEOS_PER_PERIOD`). Studio — $20 / 30 days (2000 ¢), unlimited unless
+`STUDIO_VIDEOS_PER_PERIOD` is set. Credits (`credits_10` — $1.50 / 150 ¢,
+`credits_50` — $6 / 600 ¢) are pay-as-you-go and are used after the plan allowance. Prices for RUB/KZT/CNY are in `src/billing/plans.js`
 and can be overridden with `PRICES_JSON`. A failed generation returns the
 video/credit automatically.
 
@@ -205,19 +216,19 @@ Account endpoints take the JWT in the `Authorization` header (`Bearer <token>`, 
 
 | Method | Path | Description |
 | --- | --- | --- |
-| `GET` | `/api/plans` | Tiers, products with prices, payment providers. |
+| `GET` | `/api/plans` | Tiers (`free`/`pro`/`studio`), products with prices in minor units, payment providers and their currencies, plus Seedance availability. |
 | `POST` | `/api/auth/register` | `{ email, password, locale? }` → `{ token, expiresAt, user, subscription }`. |
-| `POST` | `/api/auth/login` | `{ email, password }` → JWT. Rate limited. |
-| `POST` | `/api/auth/forgot-password` / `/api/auth/reset-password` | Email link (needs `PUBLIC_ORIGIN` + Resend) / `{ token, password }`. |
-| `GET` | `/api/user/profile` | User, subscription (tier, limits, credits) and usage. |
-| `POST` | `/api/payment/checkout` | `{ product: pro\|studio\|credits_10\|credits_50, currency, provider? }` → `{ payment, confirmationUrl }`. |
-| `GET` | `/api/payment/history` | Payments and usage events. |
-| `POST` | `/api/payment/webhook/yookassa`, `/api/payment/webhook/stripe` | Provider webhooks. |
+| `POST` | `/api/auth/login` | `{ email, password }` → JWT. Per-IP + global rate limit. |
+| `POST` | `/api/auth/forgot-password` / `/api/auth/reset-password` | `{ email }` always `200` (needs `PUBLIC_ORIGIN` + Resend for a real mail) / `{ token, password }` (single-use, revokes old JWTs). |
+| `GET` | `/api/user/profile` | User, subscription (tier, limits, credits, `canGenerate`) and usage totals. Bearer JWT. |
+| `POST` | `/api/payment/checkout` | `{ product: pro\|studio\|credits_10\|credits_50, currency, provider? }` → `{ payment, confirmationUrl }`. Bearer JWT. |
+| `GET` | `/api/payment/history` | Payments and usage events. Bearer JWT. |
+| `POST` | `/api/payment/webhook/yookassa`, `/api/payment/webhook/stripe` | Provider webhooks (YooKassa re-read via API; Stripe signature check). |
 | `POST` | `/api/library/search` | `{ query?, region?, country?, language?, category?, type?, trend?, limit?, offset? }` → `{ total, items, facets }`. Public. |
 | `GET` | `/api/library/:id` | Full prompt + template. Public. |
-| `GET/POST` | `/api/projects`, `DELETE /api/projects/:id` | Saved projects and favorite prompts. |
-| `POST` | `/api/jobs` (with bearer token) | `{ brief }` or `{ prompt }` or `{ libraryItemId, fields? }`, plus `image?`, `aspect?`, `duration?`, `demo?` → Seedance job (uses plan/credits; `402` when nothing is left). |
-| `GET` | `/api/jobs`, `/api/jobs/:id` (with bearer token) | Own jobs with signed video/download URLs. |
+| `GET/POST` | `/api/projects`, `DELETE /api/projects/:id` | Saved projects and favorite prompts (`kind: "project"\|"favorite"`, max 500; Studio blocks exact duplicates client-side). Bearer JWT. |
+| `POST` | `/api/jobs` (with bearer token) | `{ prompt?, brief?, libraryItemId?, fields?, remix?, aspect?, duration?, durationSeconds?, image?, imageDataUrl? (+ `image2…5`/`imageDataUrl2…5` for multi-photo prompts) }` (+ `demo:true` for a free demo) → Seedance job (subscription quota first, then credits; `402` when nothing is left). Usage is reserved before the provider call and refunded on failure. `GET` job lists are capped at the newest 100; profile usage totals scan the newest 1000. |
+| `GET` | `/api/jobs`, `/api/jobs/:id` (with bearer token) | Own jobs (newest 100) with signed video/download URLs (`VIDEO_URL_TTL_SECONDS`) or the temporary provider URL. |
 
 Without a bearer token `/api/jobs` keeps the legacy behaviour described below.
 
@@ -255,6 +266,10 @@ Even then, each paid job requires all of the following:
   the daily USD budget, daily job count, total job count, and
   `REPLICATE_MAX_CONCURRENT` (extra jobs get `503 provider_busy`). The
   estimate is counted when the job starts, **even if it later fails**.
+  Account (Seedance) jobs use a separate guard: `SEEDANCE_MAX_CONCURRENT`
+  (default 4); when full, new jobs get `503 seedance_busy` and should be
+  retried. Usage is reserved before the provider call and refunded
+  automatically when the job fails.
 - **Public API is demo-only.** The legacy prompt API (`POST /api/jobs
   {prompt}`) can never start a paid prediction (`401`). Paid jobs, briefs and
   plans are hidden from anonymous `GET /api/jobs`.
@@ -268,7 +283,12 @@ What this does **not** give you, read carefully:
 - **A timeout, cancel, error or restart may NOT reverse charges.** Replicate
   may bill for a prediction that already started. Jobs interrupted by a
   restart are marked `provider_interrupted` and are **not** retried.
-- Sessions and quotes live in memory. The ledger and jobs are files in
+  Account (Seedance) jobs behave differently: usage is reserved before the
+  call and **refunded on failure** (`generation_refund` in
+  `GET /api/payment/history`); Seedance jobs left `queued`/`processing`
+  across a restart **resume polling** instead (see Production stack →
+  Video pipeline).
+- Sessions and quotes live in memory. The private-beta ledger and demo jobs
   `DATA_DIR`. On the Render free plan the disk is **ephemeral**, so a
   restart, deploy or idle spin-down resets the daily/total counters and the
   job history. Use a persistent disk if you rely on these counters. Run
@@ -276,12 +296,13 @@ What this does **not** give you, read carefully:
 - One shared key is **not** a user-account system. Everyone with the key has
   the same rights and there is no per-user attribution.
 
-**Before selling to the public** you still need: real user accounts
-(registration, password reset or OAuth, per-user sessions), payments
-(e.g. Stripe) with per-user prepaid credits deducted atomically in a database,
-per-user quotas, persistent storage (a database plus object storage for
-outputs, because provider output URLs may be temporary), provider webhooks with
-signature checks, reconciliation against real provider invoices, terms of
+**Before selling to the public** (already built here, verify your own
+deployment): real user accounts with per-user JWT sessions, payments with
+per-user prepaid credits deducted atomically in the database, per-user quotas,
+persistent storage (PostgreSQL plus S3-compatible object storage, because
+provider output URLs may be temporary), provider webhooks with signature
+checks (YooKassa re-read, Stripe HMAC), reconciliation via
+`GET /api/payment/history` and provider dashboards, terms of
 service and a content moderation policy, monitoring and alerts, and a legal
 review for your jurisdiction.
 
@@ -291,8 +312,29 @@ review for your jurisdiction.
 | --- | --- | --- |
 | `HOST` / `PORT` | `0.0.0.0` / `3000` | Bind address (Render sets `PORT`). |
 | `ALLOWED_ORIGINS` | `https://business-41.pazi.dev` + local dev origins | CORS allowlist for **other** sites (demo API only, no credentials). The service's own page doesn't need to be listed. |
-| `RATE_LIMIT_MAX` / `RATE_LIMIT_WINDOW_MS` | `30` / `60000` | Per-IP limit for `/api/*`. |
-| `DATA_DIR` | `<cwd>/data` | Job files and `spend-ledger.state`. |
+| `RATE_LIMIT_MAX` / `RATE_LIMIT_WINDOW_MS` | `30` / `60000` | Per-IP limit for `/api/*` (code default; `render.yaml` overrides to `30`; `.env.example` shows `60`). |
+| `DATA_DIR` | `<cwd>/data` | Job files, `accounts/db.json` (dev store) and `spend-ledger.state`. Start command: `node src/server.js`. |
+| `DATABASE_URL` | – | PostgreSQL connection string. Without it the service uses the dev JSON store (`DATA_DIR/accounts/db.json`). Railway: `DATABASE_URL=${{Postgres.DATABASE_URL}}`. |
+| `DATABASE_SSL` | driver default | `disable` \| `require` \| `no-verify`. Railway internal network needs none. |
+| `DB_AUTO_MIGRATE` | `true` | Applies `src/db/schema.sql` + library upsert at startup (idempotent). Set `false` on Railway (pre-deploy `npm run db:migrate` already runs). |
+| `JWT_SECRET` | – | **Secret.** ≥ 32 chars. Startup fails without it when accounts are used (production always). |
+| `JWT_TTL_SECONDS` | `604800` (7 d) | Token lifetime, 300 s – 30 d. |
+| `SEEDANCE_API_KEY` | – | **Secret.** Without it: accounts work, only demo generation. |
+| `SEEDANCE_MODEL` | – | Model/endpoint id from the ModelArk console. Must match `/^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$/`. |
+| `SEEDANCE_API_BASE_URL` | `https://ark.ap-southeast.bytepluses.com/api/v3` | BytePlus (intl) or `https://ark.cn-beijing.volces.com/api/v3` (Volcengine China). Must be `https`. |
+| `SEEDANCE_RESOLUTION` / `SEEDANCE_GENERATE_AUDIO` | `720p` / `true` | Fixed request fields sent with every task. |
+| `SEEDANCE_IMAGE_ROLE` | `first_frame` | How the photo is sent: `first_frame` \| `reference_image` (any string is accepted and forwarded). |
+| `SEEDANCE_EXTRA_INPUT_JSON` | – | Optional fixed fields (object; must not set `model`/`content`/`callback_url`). |
+| `SEEDANCE_POLL_INTERVAL_MS` / `SEEDANCE_MAX_WAIT_MS` / `SEEDANCE_REQUEST_TIMEOUT_MS` | `5000` / `900000` (15 min) / `30000` | Poll every 1–60 s; give up after up to 60 min (timeout cancels the task, best effort — may still be billed). |
+| `SEEDANCE_MAX_CONCURRENT` | `4` | Real-job slots, 1–100. Resumed jobs after a restart take slots first; new jobs wait. |
+| `S3_ENDPOINT` / `S3_REGION` / `S3_BUCKET` / `S3_ACCESS_KEY_ID` / `S3_SECRET_ACCESS_KEY` | `us-east-1` / rest unset | Object storage (Backblaze B2 / AWS S3 / MinIO / R2). Without all four credentials: provider `https` URL is kept instead of a stored copy. Must be `https`; `S3_FORCE_PATH_STYLE` defaults `true`. |
+| `VIDEO_RETENTION_DAYS` | `30` | Cleanup cron (`npm run cron:cleanup`) deletes stored video and marks jobs `expired`, 1–3650 d. |
+| `VIDEO_URL_TTL_SECONDS` | `3600` | Signed playback/download link lifetime, 60 s – 7 d. |
+| `YOOKASSA_SHOP_ID` / `YOOKASSA_SECRET_KEY` | – | Without both: YooKassa unavailable (`503` for its currencies). `YOOKASSA_CURRENCIES` default `RUB,KZT`. |
+| `STRIPE_SECRET_KEY` / `STRIPE_WEBHOOK_SECRET` | – | Without key: Stripe unavailable. Without webhook secret: webhooks return `404`. `STRIPE_CURRENCIES` default `USD,CNY,KZT,RUB`. |
+| `PRO_VIDEOS_PER_PERIOD` / `STUDIO_VIDEOS_PER_PERIOD` | `50` / unlimited | Quota per 30-day period. Studio empty = unlimited. |
+| `PRICES_JSON` | built-ins | Overrides like `{"pro":{"RUB":49900}}`; unknown product/currency or non-positive integer fails startup. |
+| `RESEND_API_KEY` / `MAIL_FROM` | – | Password-reset mail. Without both, no mail is sent (outside production the link is logged). |
 | `SIMULATION_DURATION_MS` | `3000` | Demo job duration. |
 | `VIDEO_PROVIDER` | `local-simulation` | `local-simulation` or `replicate`. |
 | `DIRECTOR_ADVISOR` | `none` | Only `none` is supported; any other value fails startup. |
@@ -322,13 +364,27 @@ review for your jurisdiction.
 | Method | Path | Description |
 | --- | --- | --- |
 | `GET` | `/`, `/app/` | Web app (strict CSP, no inline scripts, no third-party origins). |
-| `GET` | `/api/health` | `{ status, uptimeSeconds, timestamp, videoProvider, realVideoGeneration, paidGenerationEnabled }`. Render health check. |
+| `GET` | `/api/health` | `{ status, uptimeSeconds, timestamp, videoProvider, realVideoGeneration, paidGenerationEnabled, checks }`. `503` + `degraded` when `checks.database` is not `ok`. `checks` also reports `databaseKind`, `seedance`, `storage`, `payments[]`, `library`. |
 | `GET` | `/api/config` | Brief options, public model profiles, director info, `paid: {available, reasons}`, auth state. Contains no secrets. |
 | `POST` | `/api/director/plan` | `{ brief, modelId?, tier?, hasImage? }` → `{ plan, selection }`. Free. |
 | `GET/POST/DELETE` | `/api/session` | Beta login/logout (same-origin only; DELETE needs CSRF). |
 | `POST` | `/api/quotes` | Beta + CSRF. `{ brief, modelId?, image? }` → `{ quote, plan, selection, spend }`. |
-| `POST` | `/api/jobs` | `{ brief, modelId?, image? }` → demo job. Paid: add `tier:"paid"`, `quoteId`, `confirmPaid:true`, `idempotencyKey`. Legacy `{ prompt, provider? }` still works for the local simulation. |
-| `GET` | `/api/jobs`, `/api/jobs/:id` | Anonymous users see only demo jobs; paid jobs need a session. |
+| `POST` | `/api/jobs` | `{ brief, modelId?, image? }` → demo job. Paid: add `tier:"paid"`, `quoteId`, `confirmPaid:true`, `idempotencyKey`. Legacy `{ prompt, provider? }` still works. `model`/`input`/`price` fields are rejected (`400`). |
+| `GET` | `/api/jobs`, `/api/jobs/:id` | Anonymous users see only demo jobs; paid jobs need a session. Private-beta job bodies live in memory and are lost on restart. |
+| `POST` | `/api/auth/register`, `/api/auth/login` | `{ email, password, locale? }` / `{ email, password }` → `{ token, expiresAt, user, subscription }`. Per-IP + global login rate limit; unknown emails still run a dummy scrypt check. Password 8–128 chars. |
+| `GET` | `/api/user/profile` | Bearer JWT → `{ user, subscription }` (`tier`, `credits`, `periodVideosUsed/Limit`, `canGenerate`) + usage totals. |
+| `POST` | `/api/auth/forgot-password`, `/api/auth/reset-password` | `{ email }` always `200` (no account enumeration); `{ token, password }` rotates `tokenVersion` and revokes all old JWTs, single-use. Reset links use `PUBLIC_ORIGIN`, never the `Host` header. |
+| `GET` | `/api/plans` | Public products: `pro`/`studio` subscriptions (30 d, same-tier re-buy extends) + `credits_10`/`credits_50`. Prices in minor units, overridable via `PRICES_JSON`. Also lists tiers, currencies, providers and Seedance availability. |
+| `POST` | `/api/payment/checkout` | Bearer. `{ product, currency, provider? }` → `{ payment, confirmationUrl }`. Unknown product/currency, unavailable provider, or provider outage (`502`) are explicit errors. |
+| `GET` | `/api/payment/history` | Bearer. `{ payments[], usage[] }` — the billing ledger. |
+| `POST` | `/api/payment/webhook/yookassa`, `/api/payment/webhook/stripe` | Provider callbacks. YooKassa is re-read via API (body is never trusted); Stripe checks `Stripe-Signature` (5 min tolerance). Partial YooKassa refunds do not revoke access. |
+| `POST` | `/api/library/search` | `{ region?, country?, language?, category?, type?, trend?, query?, limit?, offset? }` → `{ total, items[], facets }` (83 templates: `sng` + `china`). |
+| `GET` | `/api/library/:id` | One template with shots + prompts. |
+| `GET/POST` | `/api/projects` | Bearer. List (newest first) / save `{ title, libraryItemId?, prompt?, brief?, kind? }`; max 500; no duplicates. Favorites are `kind:"favorite"` (same cap). |
+| `DELETE` | `/api/projects/:id` | Bearer. Deletes only your own project. |
+| `POST` | `/api/jobs` (account) | Bearer (`Authorization` present routes here). `{ prompt?, brief?, libraryItemId?, remix?, aspect?, durationSeconds?, imageDataUrl? }` → Seedance (subscription quota first, then credits; `402` when empty) or demo. Usage is reserved **before** the provider call and refunded on failure. |
+| `GET` | `/api/jobs` (account, 100 max), `/api/jobs/:id` | Bearer. Only your own jobs. `videoUrl` is a signed S3 link (`VIDEO_URL_TTL_SECONDS`) when stored, else the temporary provider `https` URL. |
+| `GET` | `/studio` | Studio UI (RU/中文): library, remix, history, pricing, dashboard. JWT stays in `localStorage`, sent only to this origin. |
 
 Every job says explicitly what it is: `provider`, `simulated`,
 `realVideoGeneration`, `paid`, `modelId`. A demo job always ends with
