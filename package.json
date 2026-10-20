@@ -5,13 +5,16 @@
   "description": "Rezhisser: AI video ad studio — rule-based director, SNS + China content library, accounts (JWT), YooKassa/Stripe billing, Seedance 2.5 generation and S3 storage.",
   "main": "src/server.js",
   "engines": {
-    "node": ">=18"
+    "node": ">=22"
   },
   "scripts": {
     "start": "node src/server.js",
     "db:migrate": "node src/db/migrate.js",
     "cron:cleanup": "node src/cron/cleanup.js",
-    "test": "node --test \"test/**/*.test.js\""
+    "lint": "node scripts/check-syntax.mjs",
+    "smoke": "node scripts/smoke.mjs",
+    "test": "node --test \"test/**/*.test.js\"",
+    "check": "npm run lint && npm test && npm run smoke"
   },
   "license": "MIT",
   "dependencies": {

@@ -1,5 +1,7 @@
 # rezhisser-video-service — «Режиссёр»
 
+[![CI](https://github.com/Newhub280380/rezhisser-video-service/actions/workflows/ci.yml/badge.svg)](https://github.com/Newhub280380/rezhisser-video-service/actions/workflows/ci.yml)
+
 Node.js service (built-in modules plus `pg` for PostgreSQL) with a Russian
 web app for planning video ads and a commercial **Studio** (`/studio`):
 accounts, subscriptions, payments, Seedance 2.5 generation and a content
@@ -51,16 +53,43 @@ Mobile: [plan](docs/screenshots/mobile-2-plan.jpg) · Beta login: [dialog](docs/
 
 ## Local setup
 
+Requires **Node.js 22+** (the test runner uses glob patterns, Node 21+; CI
+runs 22 and 24).
+
 ```bash
+npm ci             # install dependencies (only `pg` is required)
 npm start          # http://0.0.0.0:3000 — open http://localhost:3000/
-npm test           # node:test, no network
+npm test           # node:test, no network, no keys
+npm run lint       # parses every JS file (node --check), no linter deps
+npm run smoke      # starts the service and checks GET /api/health
+npm run check      # lint + test + smoke (what CI runs)
 ```
+
+The service starts **without any keys**: no `DATABASE_URL` → in-memory store,
+no video API → `local-simulation` (demo, no video, no billing), no Owl Browser
+→ simulated automation, no payment keys → payments disabled.
 
 Desktop app (Electron): `cd desktop && npm install && npm start` — see
 [Desktop app](#desktop-app).
 
-Requires Node.js 18 or newer (the test glob needs Node 21+). There are no
-dependencies to install.
+### Which variables to set (names only, no values)
+
+Full template with comments: [`.env.example`](.env.example) — copy it to `.env`
+and fill it in, or paste the same names into Railway / Render → Variables.
+CI never needs any of them.
+
+| Purpose | Variable names (without values) |
+| --- | --- |
+| Core / deploy | `NODE_ENV`, `PORT`, `HOST`, `PUBLIC_ORIGIN`, `ALLOWED_ORIGINS`, `RATE_LIMIT_MAX`, `RATE_LIMIT_WINDOW_MS` |
+| PostgreSQL | `DATABASE_URL`, `DATABASE_SSL`, `DB_AUTO_MIGRATE` |
+| Accounts (JWT) | `JWT_SECRET` (≥ 32 chars), `JWT_TTL_SECONDS` |
+| Video generation (Seedance 2.5 / ModelArk) | `SEEDANCE_API_KEY`, `SEEDANCE_MODEL`, `SEEDANCE_API_BASE_URL`, `SEEDANCE_RESOLUTION`, `SEEDANCE_GENERATE_AUDIO`, `SEEDANCE_IMAGE_ROLE`, `SEEDANCE_EXTRA_INPUT_JSON`, `SEEDANCE_POLL_INTERVAL_MS`, `SEEDANCE_MAX_WAIT_MS`, `SEEDANCE_REQUEST_TIMEOUT_MS`, `SEEDANCE_MAX_CONCURRENT` |
+| Video storage (S3 / Backblaze B2 / MinIO) | `S3_ENDPOINT`, `S3_REGION`, `S3_BUCKET`, `S3_ACCESS_KEY_ID`, `S3_SECRET_ACCESS_KEY`, `S3_FORCE_PATH_STYLE`, `VIDEO_RETENTION_DAYS`, `VIDEO_URL_TTL_SECONDS` |
+| Payments | `YOOKASSA_SHOP_ID`, `YOOKASSA_SECRET_KEY`, `YOOKASSA_CURRENCIES`, `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`, `STRIPE_CURRENCIES`, `PRICES_JSON`, `PRO_VIDEOS_PER_PERIOD`, `STUDIO_VIDEOS_PER_PERIOD` |
+| E-mail (password reset) | `RESEND_API_KEY`, `MAIL_FROM` |
+| Legacy Replicate beta (optional) | `REPLICATE_API_TOKEN`, `VIDEO_PROVIDER`, `VIDEO_MODEL_PROFILES_JSON`, `PAID_GENERATION_ENABLED`, `BETA_ACCESS_KEY`, `PAID_DAILY_BUDGET_USD`, `PAID_DAILY_JOB_LIMIT`, `PAID_TOTAL_JOB_LIMIT` |
+| Owl Browser automation (optional) | `OWL_BROWSER_URL`, `OWL_BROWSER_TOKEN`, `OWL_BROWSER_API_PREFIX`, `OWL_BROWSER_ALLOW_HTTP`, `OWL_BROWSER_PROXIES_JSON`, `OWL_BROWSER_MAX_CONCURRENT` |
+| Desktop app (Electron only) | `REZHISSER_URL`, `REZHISSER_START_PATH` |
 
 ## How it works
 
@@ -428,3 +457,21 @@ no billing:
 - `test/automation.test.js`, `test/automation-runs.test.js`: task CRUD, Owl Browser executor against a fake Owl API, simulation, run queue limits, blocked internal URLs, run history per user.
 - `test/desktop.test.js`: desktop config and navigation rules, local secret, the bundled local server (dashboard, runs, sign-in kept across restarts) and the hardened Electron settings. Electron is not needed to run it.
 - `test/frontend.test.js`: UI routes and CSP, static allowlist (no traversal), no `innerHTML`/`eval`/third-party origins, no secrets in assets, every referenced element exists, accessibility basics, and a demo flow with network disabled.
+
+## CI
+
+`.github/workflows/ci.yml` runs on every push to `main` and every pull
+request. It needs **no secrets** — the service is started in demo mode with an
+in-memory store and no API keys.
+
+| Job | What it does |
+| --- | --- |
+| `test` (Node 22 and 24) | `npm ci` → `npm run lint` → `npm test` (137 tests, no network, no billing) |
+| `smoke` (Node 24) | `npm ci` → `npm run smoke`: starts the service and asserts `GET /api/health` returns `{"status":"ok"}` |
+
+Local equivalent: `npm run check`.
+
+The Electron app in `desktop/` is not built in CI: it needs a large download and
+`electron-builder` requires a native toolchain (MSVC on Windows) that the
+runner does not provide. Its logic is still covered by `test/desktop.test.js`.
+
