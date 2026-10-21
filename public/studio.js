@@ -32,7 +32,7 @@
       'cat.outdoor': 'Outdoor', 'cat.live-commerce': 'Live-commerce', 'cat.luxury': 'Люкс', 'cat.ugc': 'UGC', 'cat.reels': 'Reels',
       'remix.title': 'Создать видео', 'remix.product': 'Ваш продукт', 'remix.brand': 'Бренд', 'remix.prompt': 'Промт (можно редактировать)',
       'remix.aspect': 'Формат', 'remix.duration': 'Длительность', 'remix.photo': 'Ваше фото (первый кадр)', 'remix.copy': 'Скопировать промт',
-      'remix.save': 'В избранное', 'remix.demo': 'Демо (бесплатно)', 'remix.generate': 'Сгенерировать', 'remix.from': 'Шаблон: ',
+      'remix.save': 'В избранное', 'remix.demo': 'Почему нет демо', 'remix.generate': 'Сгенерировать', 'remix.from': 'Шаблон: ',
       'remix.shots': 'Кадры', 'remix.dialogue': 'Диалог', 'remix.audio': 'Звук: ', 'remix.needLogin': 'Войдите, чтобы генерировать видео.',
       'remix.quota': 'Осталось: ', 'remix.unlimited': 'Безлимит (Studio)', 'remix.credits': ' кредитов',
       'auth.login': 'Вход', 'auth.register': 'Регистрация', 'auth.password': 'Пароль', 'auth.newPassword': 'Пароль (мин. 8 символов)',
@@ -42,13 +42,13 @@
       'dash.upgrade': 'Повысить тариф / купить кредиты', 'dash.favorites': 'Избранное', 'dash.billing': 'История платежей', 'dash.until': 'до ',
       'dash.empty': 'Пока пусто.', 'dash.remove': 'Удалить', 'dash.paymentDone': 'Оплата получена — спасибо!', 'dash.paymentPending': 'Ждём подтверждение оплаты…',
       'bill.date': 'Дата', 'bill.product': 'Продукт', 'bill.amount': 'Сумма', 'bill.status': 'Статус',
-      'pricing.title': 'Тарифы', 'pricing.currency': 'Валюта', 'pricing.free': 'Библиотека, копирование промтов, демо-режим без настоящего видео.',
+      'pricing.title': 'Тарифы', 'pricing.currency': 'Валюта', 'pricing.free': 'Библиотека и копирование промтов. Видео — только с тарифом и ключом Seedance.',
       'pricing.note': 'Подписка — предоплата за 30 дней, без автосписаний. Оплата: ЮKassa (карты РФ/КЗ, СБП, кошельки) или Stripe (карты по всему миру).',
       'pricing.buy': 'Оплатить', 'pricing.month': ' / 30 дней', 'pricing.unavailable': 'Оплата пока не подключена',
       'history.title': 'Мои видео', 'history.retention': 'Видео хранятся 30 дней — скачайте нужные.', 'history.download': 'Скачать', 'history.empty': 'Видео ещё нет — выберите шаблон в библиотеке.',
       'status.queued': 'В очереди', 'status.processing': 'Генерация…', 'status.succeeded': 'Готово', 'status.failed': 'Ошибка', 'status.expired': 'Удалено (30 дней)',
       'status.pending': 'Ожидает', 'status.canceled': 'Отменён', 'status.refunded': 'Возврат',
-      'job.demo': 'Демо: настоящее видео не создавалось.', 'copied': 'Промт скопирован', 'saved': 'Сохранено в избранное',
+      'job.demo': 'Демо: настоящее видео не создавалось.', 'job.noFake': 'Демо-ролик не создаётся. Нажмите «Сгенерировать»: сервис либо вызовет Seedance, либо напишет, какого ключа или тарифа не хватает.', 'copied': 'Промт скопирован', 'saved': 'Сохранено в избранное',
       'foot.legal': 'Шаблоны мемов используют оригинальную озвучку «в стиле комедии» или вашу лицензированную дорожку — без фрагментов чужих фильмов, логотипов и лиц знаменитостей.',
       'err.generic': 'Что-то пошло не так. Попробуйте ещё раз.', 'err.network': 'Нет связи с сервером.',
     },
@@ -71,7 +71,7 @@
       'cat.outdoor': '户外', 'cat.live-commerce': '直播带货', 'cat.luxury': '奢侈品', 'cat.ugc': 'UGC', 'cat.reels': '短视频',
       'remix.title': '创作视频', 'remix.product': '你的产品', 'remix.brand': '品牌', 'remix.prompt': '提示词（可编辑）',
       'remix.aspect': '画幅', 'remix.duration': '时长', 'remix.photo': '你的照片（首帧）', 'remix.copy': '复制提示词',
-      'remix.save': '收藏', 'remix.demo': '演示（免费）', 'remix.generate': '生成视频', 'remix.from': '模板：',
+      'remix.save': '收藏', 'remix.demo': '为什么没有演示', 'remix.generate': '生成视频', 'remix.from': '模板：',
       'remix.shots': '分镜', 'remix.dialogue': '台词', 'remix.audio': '声音：', 'remix.needLogin': '请先登录再生成视频。',
       'remix.quota': '剩余：', 'remix.unlimited': '无限量（Studio）', 'remix.credits': ' 点数',
       'auth.login': '登录', 'auth.register': '注册', 'auth.password': '密码', 'auth.newPassword': '密码（至少 8 位）',
@@ -81,13 +81,13 @@
       'dash.upgrade': '升级套餐 / 购买点数', 'dash.favorites': '收藏', 'dash.billing': '支付记录', 'dash.until': '有效期至 ',
       'dash.empty': '暂无内容。', 'dash.remove': '删除', 'dash.paymentDone': '支付成功，谢谢！', 'dash.paymentPending': '正在确认支付…',
       'bill.date': '日期', 'bill.product': '产品', 'bill.amount': '金额', 'bill.status': '状态',
-      'pricing.title': '价格', 'pricing.currency': '货币', 'pricing.free': '素材库、复制提示词、演示模式（不生成真实视频）。',
+      'pricing.title': '价格', 'pricing.currency': '货币', 'pricing.free': '素材库和复制提示词。生成视频需要套餐和 Seedance 密钥。',
       'pricing.note': '套餐为 30 天预付，不自动续费。支付方式：YooKassa 或 Stripe（全球银行卡）。',
       'pricing.buy': '支付', 'pricing.month': ' / 30 天', 'pricing.unavailable': '暂未开通支付',
       'history.title': '我的视频', 'history.retention': '视频保存 30 天，请及时下载。', 'history.download': '下载', 'history.empty': '还没有视频，去素材库选个模板吧。',
       'status.queued': '排队中', 'status.processing': '生成中…', 'status.succeeded': '完成', 'status.failed': '失败', 'status.expired': '已删除（30 天）',
       'status.pending': '待支付', 'status.canceled': '已取消', 'status.refunded': '已退款',
-      'job.demo': '演示：未生成真实视频。', 'copied': '已复制提示词', 'saved': '已收藏',
+      'job.demo': '演示：未生成真实视频。', 'job.noFake': '不会生成演示视频。请点「生成视频」：要么调用 Seedance，要么说明缺少哪个密钥或套餐。', 'copied': '已复制提示词', 'saved': '已收藏',
       'foot.legal': '搞笑梗模板使用“喜剧片风格”原创配音或你自己的授权音轨，不使用电影片段、商标或名人形象。',
       'err.generic': '出错了，请重试。', 'err.network': '无法连接服务器。',
     },
@@ -156,7 +156,9 @@
         return res.json().catch(function () { return {}; }).then(function (json) {
           if (res.status === 401 && state.token && path.indexOf('/api/auth/') !== 0) setToken(null);
           if (!res.ok) {
-            var error = new Error(json.message || t('err.generic'));
+            var message = json.message || t('err.generic');
+            if (json.missing && json.missing.length) message += ' Не задано: ' + json.missing.join(', ') + '.';
+            var error = new Error(message);
             error.code = json.error;
             error.status = res.status;
             throw error;
@@ -431,7 +433,10 @@
     if (state.item) body.libraryItemId = state.item.id;
     if (edited) body.prompt = prompt;
     if (state.image) body.image = state.image;
-    if (demo) body.demo = true;
+    if (demo) {
+      toast(t('job.noFake'), true);
+      return;
+    }
     $('r-generate').disabled = true;
     $('r-demo').disabled = true;
     api('POST', '/api/jobs', body).then(function (data) {

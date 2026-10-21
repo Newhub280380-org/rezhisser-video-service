@@ -114,10 +114,13 @@
   }
 
   function errorText(data, status) {
-    if (data && data.message) return data.message;
-    if (data && data.error && ERROR_MESSAGES[data.error]) return ERROR_MESSAGES[data.error];
-    if (status >= 500) return 'Сервер ответил ошибкой (' + status + '). Попробуйте ещё раз.';
-    return 'Не получилось выполнить запрос' + (data && data.error ? ' (' + data.error + ')' : '') + '.';
+    var message = '';
+    if (data && data.message) message = data.message;
+    else if (data && data.error && ERROR_MESSAGES[data.error]) message = ERROR_MESSAGES[data.error];
+    else if (status >= 500) message = 'Сервер ответил ошибкой (' + status + '). Попробуйте ещё раз.';
+    else message = 'Не получилось выполнить запрос' + (data && data.error ? ' (' + data.error + ')' : '') + '.';
+    if (data && data.missing && data.missing.length) message += ' Не задано: ' + data.missing.join(', ') + '.';
+    return message;
   }
 
   // fetch wrapper: same-origin only, timeout, JSON in/out, CSRF header.
@@ -199,16 +202,23 @@
     var note = $('honesty-note');
     var paid = paidAvailable();
     badge.dataset.mode = paid ? 'paid' : 'demo';
-    badge.textContent = paid ? 'Бета: доступна платная генерация (с подтверждением)' : 'Демо / без настоящего видео';
+    badge.textContent = paid ? 'Бета: доступна платная генерация (с подтверждением)' : 'Провайдер не настроен';
     note.dataset.mode = paid ? 'paid' : 'demo';
     clear(note);
     if (paid) {
       note.appendChild(el('strong', { text: 'Внимание: платная генерация включена. ' }));
-      note.appendChild(document.createTextNode('Режим «Настоящее видео» обращается к внешнему провайдеру и тратит деньги. Перед каждым запуском вы увидите оценку и подтвердите её. Демо-режим по-прежнему бесплатный.'));
+      note.appendChild(document.createTextNode('Режим «Настоящее видео» обращается к внешнему провайдеру и тратит деньги. Перед каждым запуском вы увидите оценку и подтвердите её.'));
     } else {
-      note.appendChild(document.createTextNode('Сейчас сервис работает в '));
-      note.appendChild(el('strong', { text: 'демо-режиме' }));
-      note.appendChild(document.createTextNode(': раскадровка настоящая, а видео не создаётся и деньги не списываются. Режиссёр работает по правилам и шаблонам — это не нейросеть.'));
+      note.appendChild(document.createTextNode('Раскадровка строится по правилам, без нейросети. Видео не имитируется: если провайдер не настроен, сервис перечисляет, какие ключи не заданы.'));
+      var missing = [];
+      var integrations = state.config && state.config.integrations;
+      if (integrations) {
+        ['replicate', 'seedance'].forEach(function (name) {
+          var item = integrations[name];
+          if (item && item.missing) missing = missing.concat(item.missing);
+        });
+      }
+      if (missing.length) note.appendChild(document.createTextNode(' Не задано: ' + missing.join(', ') + '.'));
     }
 
     show($('beta-chip'), state.session.authenticated);
@@ -301,7 +311,7 @@
           ? typeof m.estimatedCostUsd === 'number'
             ? ' · ~' + formatUsd(m.estimatedCostUsd)
             : ''
-          : ' · демо';
+          : ' · без генерации';
         select.appendChild(el('option', { value: m.id, text: m.label + ' — ' + m.kindLabel + suffix }));
       });
     if (Array.prototype.some.call(select.options, function (o) { return o.value === previous; })) select.value = previous;
@@ -572,7 +582,7 @@
     card.appendChild(
       el('div', { className: 'selection-head' }, [
         el('strong', { text: model.label }),
-        el('span', { className: 'badge ' + (model.paid ? 'badge-paid' : 'badge-demo'), text: model.paid ? 'Платно' : 'Демо · без видео' }),
+          el('span', { className: 'badge ' + (model.paid ? 'badge-paid' : 'badge-demo'), text: model.paid ? 'Платно' : 'Без генерации' }),
         el('span', { className: 'badge badge-kind', text: model.kindLabel }),
         el('span', { className: 'badge badge-kind', text: sel.mode === 'auto' ? 'Выбрано автоматически' : 'Выбрано вручную' }),
       ]),
@@ -949,7 +959,7 @@
     showError($('login-error'), '');
     $('login-key').value = '';
     if (state.config && state.config.auth && !state.config.auth.configured) {
-      showError($('login-error'), 'Вход в бету на этом сервере не настроен. Демо-режим доступен без входа.');
+      showError($('login-error'), 'Вход в бету на этом сервере не настроен (нет BETA_ACCESS_KEY).');
     }
     if (typeof dialog.showModal === 'function') dialog.showModal();
     else dialog.setAttribute('open', '');

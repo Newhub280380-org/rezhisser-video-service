@@ -2,32 +2,26 @@
 
 const NAME = 'local-simulation';
 
-// Local simulation provider: makes no network calls and produces no video.
-// Progress is derived lazily from the job's creation time whenever it is read.
-function createLocalSimulationProvider({ simulationDurationMs }) {
+// Kept only so jobs created by older builds can be read. It does not invent a
+// video: the next read marks the job failed and names the real providers.
+function createLocalSimulationProvider() {
   return {
     name: NAME,
     realVideoGeneration: false,
     start() {},
     refresh(job, now = Date.now()) {
-      if (job.status === 'succeeded') return null;
-      const elapsed = now - new Date(job.createdAt).getTime();
-      if (elapsed >= simulationDurationMs) {
-        return {
-          status: 'succeeded',
-          progress: 100,
-          completedAt: new Date(now).toISOString(),
-          result: {
-            simulated: true,
-            videoUrl: null,
-            note:
-              'No video was generated. This service runs a local simulation only and is not connected to any video provider.',
-          },
-        };
-      }
-      const progress = Math.min(99, Math.floor((elapsed / simulationDurationMs) * 100));
-      if (job.status === 'processing' && progress === job.progress) return null;
-      return { status: 'processing', progress };
+      if (job.status === 'failed' || job.status === 'succeeded') return null;
+      return {
+        status: 'failed',
+        progress: 0,
+        completedAt: new Date(now).toISOString(),
+        result: null,
+        error: {
+          code: 'provider_not_configured',
+          message:
+            'Видео не создано: локальная имитация отключена. Задайте VIDEO_PROVIDER=replicate и REPLICATE_API_TOKEN либо SEEDANCE_API_KEY и SEEDANCE_MODEL.',
+        },
+      };
     },
     close() {},
   };

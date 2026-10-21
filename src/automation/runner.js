@@ -1,9 +1,8 @@
 'use strict';
 
-// Automation runner: executes saved site tasks with the configured executor
-// (Owl Browser or local simulation), records each run with its log and result
-// in the database, and limits how many runs execute at once. Status is read
-// back by the dashboard through the account API.
+// Automation runner: executes saved site tasks with Owl Browser, records each
+// run with its log and result, and limits how many runs execute at once.
+// Without Owl Browser credentials the runner refuses the task.
 
 const crypto = require('node:crypto');
 const net = require('node:net');
@@ -15,10 +14,11 @@ const STALE_MARGIN_MS = 5 * 60 * 1000;
 const INTERRUPTED = { code: 'interrupted', message: 'Запуск прерван: сервер был перезапущен.' };
 
 class AutomationError extends Error {
-  constructor(code, message) {
+  constructor(code, message, extra = {}) {
     super(message);
     this.name = 'AutomationError';
     this.code = code;
+    this.missing = extra.missing;
   }
 }
 
@@ -147,12 +147,26 @@ function createAutomationRunner({ db, executor, logger = console, now = Date.now
     }
   }
 
+  const publicExecutor = {
+    name: executor.name,
+    simulated: Boolean(executor.simulated),
+    configured: executor.configured !== false,
+    missing: Array.isArray(executor.missing) ? executor.missing.slice() : [],
+  };
+
   return {
-    executor: { name: executor.name, simulated: Boolean(executor.simulated) },
+    executor: publicExecutor,
 
     // Returns the queued run, or throws AutomationError.
     async start(task) {
       if (closed) throw new AutomationError('automation_unavailable', 'Сервер завершает работу.');
+      if (publicExecutor.configured === false) {
+        throw new AutomationError(
+          'automation_not_configured',
+          'Автоматизация не настроена. Запуск не имитируется: задайте OWL_BROWSER_URL и OWL_BROWSER_TOKEN.',
+          { missing: publicExecutor.missing },
+        );
+      }
       if ((perUser.get(task.userId) || 0) >= maxActivePerUser) {
         throw new AutomationError('too_many_active_runs', 'Слишком много одновременных запусков. Дождитесь завершения текущих.');
       }

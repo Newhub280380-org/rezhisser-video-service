@@ -208,6 +208,8 @@ function createOwlBrowserExecutor({
   return {
     name: NAME,
     simulated: false,
+    configured: true,
+    missing: [],
     maxWaitMs,
     async run(task, { log = async () => {}, setProviderJobId = async () => {}, signal } = {}) {
       const proxy = proxies[task.region];

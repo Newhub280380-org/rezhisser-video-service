@@ -10,13 +10,14 @@ library for the CIS and China. You write an ad brief in plain words. A
 action, a shot list and a model prompt, then picks a video model from a
 server-side allowlist and explains why.
 
-> **Кратко по-русски.** Откройте адрес сервиса (например
-> `https://rezhisser-video-service.onrender.com/`) — там приложение
-> «Режиссёр». По умолчанию это **демо**: раскадровка настоящая, а видео **не
-> создаётся**, деньги **не списываются**, ни Replicate, ни платные ИИ-сервисы
-> не вызываются. Режиссёр работает **по правилам и шаблонам**, это не
-> нейросеть. Платная генерация закрыта, пока оператор явно не настроит
-> **все** предохранители (см. [пошаговую инструкцию для Render](docs/DEPLOY_RENDER.md)).
+> **Кратко по-русски.** Откройте адрес сервиса — там приложение «Режиссёр».
+> Раскадровка строится **по правилам и шаблонам**, это не нейросеть. Видео,
+> оплата, почта и автоматизация браузера ходят во **внешние API**, когда в
+> окружении заданы ключи (`npm start` читает `.env`). Если ключа нет, API
+> отвечает ошибкой и **перечисляет имена переменных**. Фейковый ролик, фейковый
+> платёж и симуляция браузера не возвращаются. Платная генерация через
+> Replicate по-прежнему закрыта, пока не включены все предохранители
+> (см. [пошаговую инструкцию для Render](docs/DEPLOY_RENDER.md)).
 
 ## What you get
 
@@ -25,16 +26,16 @@ server-side allowlist and explains why.
 | Web app at `/` and `/app/` (Russian, responsive, accessible) | ✅ Works without any external account. |
 | Rule-based director (`rule-based-v1`) | ✅ Deterministic, free, offline. Labelled as "по правилам, без ИИ". |
 | Model router (auto or manual choice with a rationale) | ✅ Demo profiles by default. Paid profiles only if the operator configures them. |
-| Demo render (`local-simulation`) | ✅ No network, no cost, **no video**: the result says "демонстрация: видео не создавалось". |
-| Paid render via Replicate | 🔒 Locked by default. Needs a private-beta session, a quote and confirmation. Tested only with a fake API. |
+| Video without provider keys | ✅ Refused. `POST /api/jobs` returns `provider_not_configured` and the missing variable names. Nothing is stored as a successful render. |
+| Paid render via Replicate | 🔒 Real HTTP client. Locked until `VIDEO_PROVIDER=replicate`, `REPLICATE_API_TOKEN`, a model profile, beta access and a budget are set. Needs a session, a quote and confirmation. |
 | Optional LLM advisor | ⛔ Not implemented. `DIRECTOR_ADVISOR` accepts only `none`; any other value stops startup. |
 | Studio at `/studio` (RU / 中文): register, login, password reset, dashboard, pricing, library, remix, video history | ✅ See [Production stack](#production-stack). |
 | Browser task dashboard at `/automation`: user-owned URL, instruction, region and enabled state | ✅ Tasks, «Запустить» button, run status, log and history. |
-| Owl Browser execution (`src/automation/`) | ✅ Real runs when `OWL_BROWSER_URL` + `OWL_BROWSER_TOKEN` are set (the AI provider is configured on the Owl Browser server). Otherwise runs are **simulated** and labelled so. Tested with a fake Owl API only. |
+| Owl Browser execution (`src/automation/`) | ✅ Real HTTP client when `OWL_BROWSER_URL` + `OWL_BROWSER_TOKEN` are set (the AI provider is configured on the Owl Browser server). Otherwise a run is **refused** with those variable names. |
 | Desktop app (Electron, `desktop/`) | ✅ Windows/macOS/Linux installer. Opens the cloud service or runs the bundled server locally. See [Desktop app](#desktop-app). |
 | Accounts (email + scrypt password, JWT), PostgreSQL | ✅ In-memory/JSON store when `DATABASE_URL` is not set (development only). |
-| Payments: YooKassa (primary) + Stripe (fallback), RUB/KZT/USD/CNY | ✅ When keys are configured. Tested with fake provider APIs only. |
-| Real video via ByteDance Seedance 2.5 (ModelArk) + S3/Backblaze storage | ✅ When `SEEDANCE_API_KEY`/`SEEDANCE_MODEL` and `S3_*` are set. Tested with fake APIs only. |
+| Payments: YooKassa (primary) + Stripe (fallback), RUB/KZT/USD/CNY | ✅ Real HTTP clients when the shop/secret keys are set. Without them checkout returns `payment_provider_unavailable` and the missing names. |
+| Real video via ByteDance Seedance 2.5 (ModelArk) + S3/Backblaze storage | ✅ Real HTTP clients when `SEEDANCE_API_KEY`/`SEEDANCE_MODEL` and `S3_*` are set. Without the Seedance key, account jobs return `generation_unavailable`. |
 
 > **Honest limitation:** no real Replicate model, price or input schema has
 > been verified in this repository (replicate.com could not be reached from
@@ -65,9 +66,12 @@ npm run smoke      # starts the service and checks GET /api/health
 npm run check      # lint + test + smoke (what CI runs)
 ```
 
-The service starts **without any keys**: no `DATABASE_URL` → in-memory store,
-no video API → `local-simulation` (demo, no video, no billing), no Owl Browser
-→ simulated automation, no payment keys → payments disabled.
+The service starts **without any keys** (`npm start`): no `DATABASE_URL` →
+in-memory store, no video API → requests are refused and name the missing
+variables, no Owl Browser → automation runs are refused, no payment or mail
+keys → those endpoints say which variables are empty. `npm start` loads `.env`
+when the file exists and does not override variables already set in the
+environment.
 
 Desktop app (Electron): `cd desktop && npm install && npm start` — see
 [Desktop app](#desktop-app).
@@ -94,8 +98,8 @@ CI never needs any of them.
 ## How it works
 
 ```
-Brief (browser) ──► POST /api/director/plan ──► rule-based plan + model choice (free)
-                    POST /api/jobs {brief}   ──► demo job (local simulation, no video)
+Brief (browser) ──► POST /api/director/plan ──► rule-based plan + model choice (free, local)
+                    POST /api/jobs {brief}   ──► real provider, or 503 naming missing keys
 
 Private beta only (paid; locked by default):
   POST /api/session {accessKey} ──► HttpOnly session cookie + CSRF token
@@ -400,8 +404,9 @@ project:
    built.
 
 Note: when `VIDEO_PROVIDER=replicate`, the legacy `POST /api/jobs {prompt}`
-without `provider` returns `401` (it would otherwise be billable). Clients
-should send `provider: "local-simulation"` or use the brief flow.
+without `provider` returns `401` (it would otherwise be billable). Use the
+brief flow with a paid model, a quote and confirmation. `provider: "local-simulation"`
+is refused: it does not create a video.
 
 ## Desktop app
 
@@ -413,7 +418,8 @@ package, so the cloud deployment never installs Electron.
 > 1. Установите Node.js 22.12+ (https://nodejs.org), требуется Electron 44.
 > 2. В папке репозитория: `cd desktop && npm install && npm start` — откроется окно
 >    «Режиссёр» с панелью задач Owl Browser. Без настроек сервер запускается
->    **на вашем компьютере** (127.0.0.1), задачи выполняются в режиме симуляции.
+>    **на вашем компьютере** (127.0.0.1). Запуск задачи без `OWL_BROWSER_URL` и
+>    `OWL_BROWSER_TOKEN` отклоняется и называет эти переменные.
 > 3. Чтобы окно открывало **облачный** сервис: `REZHISSER_URL=https://ваш-сервис.onrender.com npm start`
 >    (Windows PowerShell: `$env:REZHISSER_URL="https://…"; npm start`).
 > 4. Чтобы задачи реально выполнялись в Owl Browser, задайте `OWL_BROWSER_URL` и
@@ -444,7 +450,7 @@ the dashboard, so env vars must be set there by hand.
 `npm test` runs everything with injected fake `fetch`. No token, no network,
 no billing:
 
-- `test/e2e.test.js`: health, CORS, preflight, security headers, rate limit, legacy simulation jobs.
+- `test/e2e.test.js`: health, CORS, preflight, security headers, rate limit, and refusal of unconfigured video jobs.
 - `test/replicate.test.js`: the Replicate adapter (create/poll, timeouts, cancel, errors, URL extraction), plus the gated beta flow end to end, concurrency cap and restart interruption.
 - `test/director.test.js`: determinism, validation, shot timings, "rule-based" labelling, fail-closed advisor setting.
 - `test/models.test.js`: profile validation, auto/manual routing, no cross-tier fallback, per-model input mapping, and the **actual endpoint URL and request body** reaching the fake provider for versioned and unversioned profiles.
@@ -454,19 +460,20 @@ no billing:
 - `test/payments.test.js`: YooKassa and Stripe checkout, webhook verification (re-fetch, signature, amount mismatch, replay), refunds, provider outage.
 - `test/generation.test.js`: Seedance requests, Free/Pro/Studio/credits accounting, refunds on failure, S3 SigV4 (AWS reference vector), library remix, projects, restart resume, cleanup cron.
 - `test/library.test.js`, `test/studio.test.js`: library coverage and search; Studio CSP, sinks, ids and RU/中文 translations.
-- `test/automation.test.js`, `test/automation-runs.test.js`: task CRUD, Owl Browser executor against a fake Owl API, simulation, run queue limits, blocked internal URLs, run history per user.
+- `test/automation.test.js`, `test/automation-runs.test.js`: task CRUD, Owl Browser executor against a scripted Owl API, refusal when the token is missing, run queue limits, blocked internal URLs, run history per user.
 - `test/desktop.test.js`: desktop config and navigation rules, local secret, the bundled local server (dashboard, runs, sign-in kept across restarts) and the hardened Electron settings. Electron is not needed to run it.
-- `test/frontend.test.js`: UI routes and CSP, static allowlist (no traversal), no `innerHTML`/`eval`/third-party origins, no secrets in assets, every referenced element exists, accessibility basics, and a demo flow with network disabled.
+- `test/integrations.test.js`: missing-key reports for video, payments, mail and automation, and `.env` loading that does not override the process.
+- `test/frontend.test.js`: UI routes and CSP, static allowlist (no traversal), no `innerHTML`/`eval`/third-party origins, no secrets in assets, every referenced element exists, accessibility basics, and a render refusal with network disabled.
 
 ## CI
 
 `.github/workflows/ci.yml` runs on every push to `main` and every pull
-request. It needs **no secrets** — the service is started in demo mode with an
-in-memory store and no API keys.
+request. It needs **no secrets** — the service starts with an in-memory store
+and reports missing API keys instead of inventing results.
 
 | Job | What it does |
 | --- | --- |
-| `test` (Node 22 and 24) | `npm ci` → `npm run lint` → `npm test` (137 tests, no network, no billing) |
+| `test` (Node 22 and 24) | `npm ci` → `npm run lint` → `npm test` (140 tests, no network, no billing) |
 | `smoke` (Node 24) | `npm ci` → `npm run smoke`: starts the service and asserts `GET /api/health` returns `{"status":"ok"}` |
 
 Local equivalent: `npm run check`.

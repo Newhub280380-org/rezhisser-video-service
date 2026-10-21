@@ -68,20 +68,19 @@ test('Seedance provider maps running, failed and malformed results', async () =>
   await assert.rejects(provider.get('../../etc'));
 });
 
-test('account jobs: Free tier is demo-only; Pro generates with Seedance and stores to S3', async () => {
+test('account jobs: Free tier cannot generate; Pro calls Seedance and stores to S3', async () => {
   const services = fakeServices({ seedanceStates: [{ status: 'queued' }, { status: 'running' }, { status: 'succeeded', content: { video_url: VIDEO_URL } }] });
   await withServer(productionOptions(services, { simulationDurationMs: 20 }), async ({ base, app }) => {
     const api = accountClient(base);
     await api.register();
 
-    // Free: real generation needs a plan; demo works without billing.
+    // Free: real generation needs a plan. demo:true must not invent a finished video.
     const denied = await api.post('/api/jobs', { brief: BRIEF });
     assert.equal(denied.status, 402);
     assert.equal(denied.json.error, 'upgrade_required');
     const demo = await api.post('/api/jobs', { libraryItemId: 'sng-meme-001', demo: true });
-    assert.equal(demo.status, 201);
-    assert.equal(demo.json.job.simulated, true);
-    assert.equal((await api.waitForJob(demo.json.job.id)).status, 'succeeded');
+    assert.equal(demo.status, 400);
+    assert.equal(demo.json.error, 'demo_disabled');
     assert.equal(services.calls.filter((c) => c.url.startsWith(SEEDANCE_BASE)).length, 0);
 
     await upgrade(app, api, 'pro');
@@ -106,7 +105,7 @@ test('account jobs: Free tier is demo-only; Pro generates with Seedance and stor
 
     const list = await api.get('/api/jobs');
     assert.equal(list.status, 200);
-    assert.equal(list.json.jobs.length, 2);
+    assert.equal(list.json.jobs.length, 1);
 
     // Other users cannot read the job.
     const other = accountClient(base);
@@ -114,7 +113,7 @@ test('account jobs: Free tier is demo-only; Pro generates with Seedance and stor
     assert.equal((await other.get(`/api/jobs/${job.id}`)).status, 404);
 
     const profile = await api.get('/api/user/profile');
-    assert.deepEqual(profile.json.usage, { totalVideos: 1, totalDemos: 1, succeeded: 2 });
+    assert.deepEqual(profile.json.usage, { totalVideos: 1, totalDemos: 0, succeeded: 1 });
   });
 });
 
@@ -184,23 +183,28 @@ test('failed generations refund credits; Pro quota is enforced', async () => {
   });
 });
 
-test('without SEEDANCE_API_KEY only demo jobs are possible', async () => {
+test('without SEEDANCE_API_KEY the API names the missing keys and does not fake a job', async () => {
   await withServer(productionOptions(fakeServices(), { seedance: { apiKey: '' } }), async ({ base }) => {
     const api = accountClient(base);
     await api.register();
     const res = await api.post('/api/jobs', { prompt: 'x' });
     assert.equal(res.status, 503);
     assert.equal(res.json.error, 'generation_unavailable');
-    assert.equal((await api.post('/api/jobs', { prompt: 'x', demo: true })).status, 201);
+    assert.ok(res.json.missing.includes('SEEDANCE_API_KEY'));
+    const demo = await api.post('/api/jobs', { prompt: 'x', demo: true });
+    assert.equal(demo.status, 400);
+    assert.equal(demo.json.error, 'demo_disabled');
+    assert.equal(demo.json.job, undefined);
   });
 });
 
-test('requests without a bearer token keep using the legacy demo /api/jobs', async () => {
+test('requests without a bearer token do not fall through to a fake video job', async () => {
   await withServer(productionOptions(fakeServices()), async ({ base }) => {
     const res = await fetch(`${base}/api/jobs`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ brief: BRIEF }) });
-    assert.equal(res.status, 201);
+    assert.equal(res.status, 503);
     const body = await res.json();
-    assert.equal(body.job.provider, 'local-simulation');
+    assert.equal(body.error, 'provider_not_configured');
+    assert.equal(body.job, undefined);
   });
 });
 

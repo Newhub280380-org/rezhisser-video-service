@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
-  <meta name="description" content="Режиссёр рекламных роликов: бриф простыми словами → раскадровка, крючок, призыв и подбор видеомодели. Демо-режим бесплатный и без настоящего видео.">
+  <meta name="description" content="Режиссёр рекламных роликов: бриф простыми словами → раскадровка, крючок, призыв и подбор видеомодели. Видео создаёт настроенный провайдер; без ключей сервис об этом говорит прямо.">
   <title>Режиссёр — рекламный ролик из брифа</title>
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/app.css">
@@ -18,7 +18,7 @@
       <span class="brand-mark" aria-hidden="true"></span>
       <span class="brand-name">Режиссёр</span>
     </a>
-    <p class="mode-badge" id="mode-badge" data-mode="demo" role="status">Демо / без настоящего видео</p>
+    <p class="mode-badge" id="mode-badge" data-mode="demo" role="status">Провайдер не настроен</p>
     <div class="topbar-actions">
       <a class="btn btn-ghost" href="/studio">Studio · 中文</a>
       <span class="beta-chip" id="beta-chip" hidden>Бета-доступ</span>
@@ -42,11 +42,10 @@
       <ol class="steps">
         <li><span class="step-n">01</span><strong>Бриф</strong><span>Что рекламируем, для кого и где покажем.</span></li>
         <li><span class="step-n">02</span><strong>Раскадровка</strong><span>Крючок, кадры по секундам, визуальный стиль, промпт.</span></li>
-        <li><span class="step-n">03</span><strong>Рендер</strong><span>Демо — бесплатно. Настоящее видео — только в бете и после подтверждения цены.</span></li>
+        <li><span class="step-n">03</span><strong>Рендер</strong><span>Настоящее видео — через настроенный провайдер и после подтверждения цены.</span></li>
       </ol>
       <p class="honesty" id="honesty-note">
-        Сейчас сервис работает в <strong>демо-режиме</strong>: раскадровка настоящая, а видео не создаётся и деньги не списываются.
-        Режиссёр работает по правилам и шаблонам — это не нейросеть.
+        Раскадровка строится по правилам, без нейросети. Видео не имитируется: если провайдер не настроен, сервис перечисляет, какие ключи не заданы.
       </p>
     </section>
 
@@ -140,7 +139,7 @@
             <div class="tier" role="radiogroup" aria-label="Режим генерации">
               <label class="tier-option">
                 <input type="radio" name="tier" value="demo" checked>
-                <span><strong>Демо</strong><small>Бесплатно · видео не создаётся</small></span>
+                <span><strong>Раскадровка</strong><small>Бесплатно · видео не генерируется</small></span>
               </label>
               <label class="tier-option" id="tier-paid-label">
                 <input type="radio" name="tier" value="paid" id="tier-paid" disabled aria-describedby="tier-paid-reason">
@@ -223,9 +222,9 @@
           <section class="render" aria-labelledby="render-title">
             <h3 id="render-title">Рендер</h3>
             <div id="render-demo">
-              <p class="render-note"><span class="badge badge-demo">Демо</span> Запуск бесплатный. Сервис покажет процесс, но <strong>видео не будет создано</strong>.</p>
+              <p class="render-note"><span class="badge badge-demo">Без провайдера</span> Запрос не создаёт ролик. Если ключей нет, ответ назовёт переменные.</p>
               <button type="button" class="btn btn-primary" id="demo-render-btn">
-                <span class="btn-label">Запустить демо-рендер</span>
+                <span class="btn-label">Запросить рендер</span>
                 <span class="spinner" aria-hidden="true"></span>
               </button>
             </div>
@@ -261,14 +260,14 @@
         <button type="button" class="btn btn-link" id="clear-history" hidden>Очистить историю</button>
       </div>
       <div class="job-current" id="job-current" aria-live="polite" hidden></div>
-      <p class="empty-inline" id="history-empty">Пока пусто. Запустите демо-рендер — он появится здесь.</p>
+      <p class="empty-inline" id="history-empty">Пока пусто. Настоящий рендер появится здесь после запуска.</p>
       <ul class="history" id="history"></ul>
       <p class="hint">История хранится только в этом браузере. На бесплатном тарифе Render задания на сервере стираются при каждом перезапуске.</p>
     </section>
   </main>
 
   <footer class="footer">
-    <p><strong>Честно о сервисе.</strong> Режиссёр работает на детерминированных правилах и шаблонах — это не нейросеть. Демо-рендер ничего не генерирует. Настоящая генерация доступна только участникам закрытой беты после настройки сервера, с оценкой стоимости и явным подтверждением. Приём платежей и аккаунты пользователей ещё не реализованы.</p>
+    <p><strong>Честно о сервисе.</strong> Режиссёр работает на детерминированных правилах и шаблонах — это не нейросеть. Видео, оплата, почта и автоматизация браузера вызывают внешние API только когда заданы ключи. Если ключа нет, сервис называет переменную и не подставляет фейковый результат. Платная генерация через Replicate требует оценки и явного подтверждения.</p>
     <p>Это отдельное приложение сервиса rezhisser-video-service. Сайт business-41.pazi.dev этим обновлением не изменялся.</p>
   </footer>
 

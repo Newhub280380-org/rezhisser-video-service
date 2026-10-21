@@ -143,7 +143,7 @@ test('automation dashboard is allowlisted and uses safe same-origin API renderin
     const page = await fetch(`${base}/automation`);
     assert.equal(page.status, 200);
     assert.match(page.headers.get('content-security-policy'), /default-src 'none'/);
-    assert.match(await page.text(), /режиме симуляции/);
+    assert.match(await page.text(), /OWL_BROWSER_URL/);
     assert.equal((await fetch(`${base}/assets/automation.js`)).status, 200);
     assert.equal((await fetch(`${base}/assets/automation.css`)).status, 200);
   });

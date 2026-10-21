@@ -75,8 +75,8 @@
 
   function renderExecutor() {
     if (!state.executor) return;
-    $('executor-note').textContent = state.executor.simulated
-      ? 'Owl Browser не настроен на сервере: запуски идут в режиме симуляции, сайт не открывается. Администратору нужно задать OWL_BROWSER_URL и OWL_BROWSER_TOKEN.'
+    $('executor-note').textContent = state.executor.configured === false
+      ? 'Owl Browser не настроен. Запуск не имитируется. Не задано: ' + (state.executor.missing || ['OWL_BROWSER_URL', 'OWL_BROWSER_TOKEN']).join(', ') + '.'
       : 'Задачи выполняет Owl Browser: он открывает сайт в изолированном контексте, и его AI-агент следует инструкции. Результат и журнал появятся в разделе «Запуски и журнал».';
   }
 

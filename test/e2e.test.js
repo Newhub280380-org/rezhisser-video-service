@@ -47,6 +47,10 @@ test('GET /api/health returns a truthful 200 JSON response', async () => {
     assert.equal(body.status, 'ok');
     assert.equal(body.videoProvider, 'local-simulation');
     assert.equal(body.realVideoGeneration, false);
+    assert.equal(body.integrations.replicate.configured, false);
+    assert.deepEqual(body.integrations.replicate.missing, ['VIDEO_PROVIDER', 'REPLICATE_API_TOKEN']);
+    assert.deepEqual(body.integrations.seedance.missing, ['SEEDANCE_API_KEY', 'SEEDANCE_MODEL']);
+    assert.equal(JSON.stringify(body).includes('Bearer'), false);
     assert.equal(typeof body.uptimeSeconds, 'number');
     assert.ok(!Number.isNaN(Date.parse(body.timestamp)));
   });
@@ -138,7 +142,7 @@ test('rate limit does not apply to non-/api routes', async () => {
   });
 });
 
-test('POST /api/jobs creates a simulated job and persists it under DATA_DIR', async () => {
+test('POST /api/jobs refuses to invent a video when no provider key is set', async () => {
   await withServer({}, async ({ base, dataDir }) => {
     const res = await fetch(`${base}/api/jobs`, {
       method: 'POST',
@@ -146,16 +150,13 @@ test('POST /api/jobs creates a simulated job and persists it under DATA_DIR', as
       body: JSON.stringify({ prompt: 'a cat riding a bicycle' }),
     });
 
-    assert.equal(res.status, 201);
-    const { job } = await res.json();
-    assert.equal(job.prompt, 'a cat riding a bicycle');
-    assert.equal(job.status, 'queued');
-    assert.equal(job.simulated, true);
-    assert.equal(job.result, null);
-
-    const file = path.join(dataDir, `${job.id}.json`);
-    assert.ok(fs.existsSync(file));
-    assert.equal(JSON.parse(fs.readFileSync(file, 'utf8')).id, job.id);
+    assert.equal(res.status, 503);
+    const body = await res.json();
+    assert.equal(body.error, 'provider_not_configured');
+    assert.ok(body.missing.includes('REPLICATE_API_TOKEN'));
+    assert.ok(body.missing.includes('SEEDANCE_API_KEY'));
+    assert.equal(body.job, undefined);
+    assert.deepEqual(fs.readdirSync(dataDir).filter((file) => file.endsWith('.json')), []);
   });
 });
 
@@ -171,39 +172,32 @@ test('POST /api/jobs rejects a missing prompt', async () => {
   });
 });
 
-test('GET /api/jobs/:id completes the simulation and stays honest about the result', async () => {
-  await withServer({ simulationDurationMs: 1 }, async ({ base }) => {
+test('an unconfigured render is not stored and cannot be polled into a fake success', async () => {
+  await withServer({}, async ({ base }) => {
     const created = await fetch(`${base}/api/jobs`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ prompt: 'sunset timelapse' }),
     });
-    const { job } = await created.json();
-
-    await new Promise((resolve) => setTimeout(resolve, 20));
-
-    const res = await fetch(`${base}/api/jobs/${job.id}`);
-    assert.equal(res.status, 200);
-    const body = await res.json();
-    assert.equal(body.job.status, 'succeeded');
-    assert.equal(body.job.progress, 100);
-    assert.equal(body.job.result.simulated, true);
-    assert.equal(body.job.result.videoUrl, null);
+    assert.equal(created.status, 503);
+    const missing = await fetch(`${base}/api/jobs/00000000-0000-4000-8000-000000000099`);
+    assert.equal(missing.status, 404);
   });
 });
 
-test('GET /api/jobs lists created jobs and unknown ids return 404', async () => {
+test('GET /api/jobs lists nothing when generation is not configured', async () => {
   await withServer({}, async ({ base }) => {
-    await fetch(`${base}/api/jobs`, {
+    const created = await fetch(`${base}/api/jobs`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ prompt: 'one' }),
     });
+    assert.equal(created.status, 503);
 
     const list = await fetch(`${base}/api/jobs`);
     assert.equal(list.status, 200);
     const body = await list.json();
-    assert.equal(body.jobs.length, 1);
+    assert.equal(body.jobs.length, 0);
 
     const missing = await fetch(`${base}/api/jobs/00000000-0000-4000-8000-000000000000`);
     assert.equal(missing.status, 404);

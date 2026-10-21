@@ -7,11 +7,12 @@ const crypto = require('node:crypto');
 const { CURRENCIES, PERIOD_MS, TIERS, activeTier, tierLimit, publicProducts } = require('./plans.js');
 
 class BillingError extends Error {
-  constructor(code, message, status = 400) {
+  constructor(code, message, status = 400, extra = {}) {
     super(message);
     this.name = 'BillingError';
     this.code = code;
     this.status = status;
+    this.missing = extra.missing;
   }
 }
 
@@ -30,19 +31,33 @@ function publicPayment(payment) {
   };
 }
 
-function createBilling({ db, products, yookassa = null, stripe = null, limits = {}, logger = console, now = Date.now }) {
+function createBilling({ db, products, yookassa = null, stripe = null, limits = {}, missingKeys = {}, logger = console, now = Date.now }) {
   const providers = [yookassa, stripe].filter(Boolean);
+  const yooMissing = missingKeys.yookassa || [];
+  const stripeMissing = missingKeys.stripe || [];
+  const webhookMissing = missingKeys.stripeWebhook || [];
 
   function chooseProvider(currency, requested) {
     if (requested !== undefined && requested !== null) {
       const provider = providers.find((p) => p.name === requested);
-      if (!provider) throw new BillingError('payment_provider_unavailable', 'Этот способ оплаты не подключён.', 400);
+      if (!provider) {
+        const missing = requested === 'yookassa' ? yooMissing : requested === 'stripe' ? stripeMissing : [];
+        throw new BillingError('payment_provider_unavailable', 'Этот способ оплаты не подключён.', 400, { missing });
+      }
       if (!provider.currencies.includes(currency)) throw new BillingError('currency_not_supported', 'Валюта не поддерживается этим способом оплаты.');
       return provider;
     }
     // YooKassa first (RU/KZ cards, SBP, wallets), Stripe as the global fallback.
     const provider = providers.find((p) => p.currencies.includes(currency));
-    if (!provider) throw new BillingError('payment_provider_unavailable', 'Оплата в этой валюте пока не подключена.', 503);
+    if (!provider) {
+      const missing = providers.length === 0 ? [...yooMissing, ...stripeMissing] : [];
+      throw new BillingError(
+        'payment_provider_unavailable',
+        providers.length === 0 ? 'Оплата не настроена: нет ключей YooKassa или Stripe.' : 'Оплата в этой валюте пока не подключена.',
+        503,
+        { missing },
+      );
+    }
     return provider;
   }
 
@@ -76,7 +91,7 @@ function createBilling({ db, products, yookassa = null, stripe = null, limits = 
     if (tier !== 'free' && (await db.incrementPeriodUsage(user.id, tierLimit(tier, limits)))) return 'subscription';
     if (await db.consumeCredits(user.id, 1)) return 'credits';
     if (tier === 'free') {
-      throw new BillingError('upgrade_required', 'Тариф Free — только демо. Оформите Pro/Studio или купите кредиты.', 402);
+      throw new BillingError('upgrade_required', 'Тариф Free не включает генерацию видео. Оформите Pro/Studio или купите кредиты.', 402);
     }
     throw new BillingError('quota_exceeded', 'Лимит видео на этот период исчерпан. Купите кредиты или перейдите на Studio.', 402);
   }
@@ -195,7 +210,7 @@ function createBilling({ db, products, yookassa = null, stripe = null, limits = 
   }
 
   async function handleYooKassaNotification(body) {
-    if (!yookassa) throw new BillingError('payment_provider_unavailable', 'YooKassa is not configured.', 404);
+    if (!yookassa) throw new BillingError('payment_provider_unavailable', 'YooKassa is not configured.', 404, { missing: yooMissing });
     const event = body && typeof body.event === 'string' ? body.event : '';
     const objectId = body && body.object && typeof body.object.id === 'string' ? body.object.id : '';
     if (!event || !objectId) throw new BillingError('invalid_notification', 'Malformed notification.');
@@ -230,7 +245,10 @@ function createBilling({ db, products, yookassa = null, stripe = null, limits = 
   }
 
   async function handleStripeEvent(rawBody, signature) {
-    if (!stripe || !stripe.webhookConfigured) throw new BillingError('payment_provider_unavailable', 'Stripe webhooks are not configured.', 404);
+    if (!stripe || !stripe.webhookConfigured) {
+      const missing = [...(!stripe ? stripeMissing : []), ...webhookMissing];
+      throw new BillingError('payment_provider_unavailable', 'Stripe webhooks are not configured.', 404, { missing });
+    }
     if (!stripe.verifyWebhook(rawBody, signature, Math.floor(now() / 1000))) {
       throw new BillingError('invalid_signature', 'Invalid Stripe signature.', 400);
     }

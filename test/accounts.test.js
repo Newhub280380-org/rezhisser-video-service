@@ -80,23 +80,18 @@ test('register, login, profile and password reset over HTTP', async () => {
     assert.equal(login.status, 200);
     assert.ok(login.json.token);
 
-    // Forgot password: same answer for unknown emails; link logged in dev.
-    assert.equal((await anon.post('/api/auth/forgot-password', { email: 'nobody@example.com' })).status, 202);
-    assert.equal((await anon.post('/api/auth/forgot-password', { email: 'vera@example.com' })).status, 202);
-    await new Promise((resolve) => setTimeout(resolve, 20));
-    const line = logs.find((l) => l.includes('#/reset?token='));
-    assert.ok(line, 'reset link logged when mail is not configured');
-    const token = line.match(/token=([A-Za-z0-9_-]+)/)[1];
-
-    assert.equal((await anon.post('/api/auth/reset-password', { token: 'x'.repeat(43), password: 'new-password-1' })).status, 400);
-    const reset = await anon.post('/api/auth/reset-password', { token, password: 'new-password-1' });
-    assert.equal(reset.status, 200);
-    assert.equal((await anon.post('/api/auth/reset-password', { token, password: 'new-password-2' })).status, 400);
-
-    // Old sessions are revoked by the password change.
-    assert.equal((await api.get('/api/user/profile')).status, 401);
-    assert.equal((await anon.post('/api/auth/login', { email: 'vera@example.com', password: 'sapogi-2026!' })).status, 401);
-    assert.equal((await anon.post('/api/auth/login', { email: 'vera@example.com', password: 'new-password-1' })).status, 200);
+    // Without mail keys the API says so. It does not log a reset link or pretend the letter went out.
+    const unknown = await anon.post('/api/auth/forgot-password', { email: 'nobody@example.com' });
+    const known = await anon.post('/api/auth/forgot-password', { email: 'vera@example.com' });
+    assert.equal(unknown.status, 503);
+    assert.equal(known.status, 503);
+    assert.equal(known.json.error, 'mail_not_configured');
+    assert.deepEqual(known.json.missing, unknown.json.missing);
+    assert.ok(known.json.missing.includes('RESEND_API_KEY'));
+    assert.ok(known.json.missing.includes('MAIL_FROM'));
+    assert.ok(known.json.missing.includes('PUBLIC_ORIGIN'));
+    assert.equal(logs.some((line) => line.includes('token=')), false);
+    assert.equal(services.calls.some((call) => call.url.includes('resend.com')), false);
   });
 });
 
@@ -112,10 +107,13 @@ test('reset emails are not sent with Host-derived links when PUBLIC_ORIGIN is mi
       headers: { 'Content-Type': 'application/json', Host: 'evil.example' },
       body: JSON.stringify({ email: 'host@example.com' }),
     });
-    assert.equal(res.status, 202);
+    assert.equal(res.status, 503);
+    const body = await res.json();
+    assert.equal(body.error, 'mail_not_configured');
+    assert.deepEqual(body.missing, ['PUBLIC_ORIGIN']);
     await new Promise((resolve) => setTimeout(resolve, 20));
     assert.equal(services.calls.filter((c) => new URL(c.url).origin === 'https://api.resend.com').length, 0);
-    assert.ok(errors.some((l) => l.includes('PUBLIC_ORIGIN')));
+    assert.equal(errors.some((l) => l.includes('token=')), false);
   });
 
   await withServer(
@@ -127,7 +125,14 @@ test('reset emails are not sent with Host-derived links when PUBLIC_ORIGIN is mi
       await new Promise((resolve) => setTimeout(resolve, 20));
       const sent = services.calls.find((c) => c.url === 'https://api.resend.com/emails');
       assert.ok(sent);
-      assert.match(JSON.parse(sent.body).text, /https:\/\/rezhisser\.example\/studio#\/reset\?token=/);
+      const letter = JSON.parse(sent.body).text;
+      assert.match(letter, /https:\/\/rezhisser\.example\/studio#\/reset\?token=/);
+      const token = letter.match(/token=([A-Za-z0-9_-]+)/)[1];
+      assert.equal((await api.post('/api/auth/reset-password', { token: 'x'.repeat(43), password: 'new-password-1' })).status, 400);
+      assert.equal((await api.post('/api/auth/reset-password', { token, password: 'new-password-1' })).status, 200);
+      assert.equal((await api.post('/api/auth/reset-password', { token, password: 'new-password-2' })).status, 400);
+      assert.equal((await api.post('/api/auth/login', { email: 'mail@example.com', password: 'password-123' })).status, 401);
+      assert.equal((await api.post('/api/auth/login', { email: 'mail@example.com', password: 'new-password-1' })).status, 200);
     },
   );
 });
@@ -176,10 +181,12 @@ test('in production without email delivery no reset tokens are created', async (
   await withServer(productionOptions(services, { logger, nodeEnv: 'production' }), async ({ base, app }) => {
     const api = accountClient(base);
     await api.register('prod@example.com', 'password-123');
-    assert.equal((await api.post('/api/auth/forgot-password', { email: 'prod@example.com' })).status, 202);
+    const res = await api.post('/api/auth/forgot-password', { email: 'prod@example.com' });
+    assert.equal(res.status, 503);
+    assert.equal(res.json.error, 'mail_not_configured');
+    assert.ok(res.json.missing.includes('RESEND_API_KEY'));
     await new Promise((resolve) => setTimeout(resolve, 20));
     assert.equal(logs.some((l) => l.includes('token=')), false);
-    assert.ok(logs.some((l) => l.includes('RESEND_API_KEY')));
     assert.equal(await app.db.deleteExpiredPasswordResets(Date.now() + 86400000), 0);
   });
 });
