@@ -1,0 +1,157 @@
+[
+  {
+    "id": "chrome-runway",
+    "title": "Chrome Runway",
+    "prompt": "Create a high-fashion editorial video using my reference photo. Keep my face and identity consistent. Dress me in a sculptural liquid-chrome outfit on a black reflective runway. Slow dolly camera, dramatic rim light, silver reflections, luxury fashion campaign, 9:16, premium art direction."
+  },
+  {
+    "id": "luxury-beauty-ad",
+    "title": "Luxury Beauty Ad",
+    "prompt": "Create a luxury beauty campaign from my reference photo. Keep facial identity and natural skin texture. Add elegant editorial makeup, soft peach background, floating perfume mist, macro close-ups, creamy highlights, slow graceful movement, premium cosmetics advertisement."
+  },
+  {
+    "id": "streetwear-drop",
+    "title": "Streetwear Drop",
+    "prompt": "Turn my reference photo into a streetwear brand campaign. Urban alley background, colored smoke, neon signage reflections, confident walking pose toward camera, bold typography overlay space, gritty but premium commercial look, 16:9."
+  },
+  {
+    "id": "haute-couture-wind",
+    "title": "Haute Couture Wind",
+    "prompt": "Using my reference photo, generate a haute couture runway video. Dramatic wind machine blows an oversized silk gown, slow-motion fabric physics, spotlight from above, dark minimalist runway, elegant confident walk, cinematic fashion film grade."
+  },
+  {
+    "id": "floating-sneaker-lab",
+    "title": "Floating Sneaker Lab",
+    "prompt": "Turn the product in my reference image into a premium 3D product commercial. The sneaker floats in a clean studio, surrounded by transparent glass shards and slow liquid waves. Macro details, softbox reflections, precise product geometry, seamless camera orbit, 4K commercial lighting."
+  },
+  {
+    "id": "glass-bottle-universe",
+    "title": "Glass Bottle Universe",
+    "prompt": "Create a premium advertising film for the product in my reference image. Place it inside a miniature glass universe with tiny planets, liquid reflections and volumetric light. Product remains sharp and readable. Elegant camera rotation, luxury brand art direction, clean final hero shot."
+  },
+  {
+    "id": "watch-macro-orbit",
+    "title": "Watch Macro Orbit",
+    "prompt": "Generate a luxury watch commercial from my reference product photo. Extreme macro shots of gears and metal textures, slow 360-degree camera orbit, dark velvet background, golden rim lighting, subtle lens flares, premium horology advertisement."
+  },
+  {
+    "id": "soda-can-splash",
+    "title": "Soda Can Splash",
+    "prompt": "Create a dynamic commercial for the beverage can in my reference image. High-speed splash of liquid and ice cubes around the product, condensation droplets, vibrant studio lighting, energetic camera whip-pan, punchy FMCG advertisement style, 15 seconds."
+  },
+  {
+    "id": "liquid-melt-portrait",
+    "title": "Liquid Melt Portrait",
+    "prompt": "Use my photo as the main character and preserve my identity. Create a seamless liquid-melting transformation: skin and clothing become glossy translucent fluid, flowing upward and reforming into a polished portrait. Slow motion, realistic viscosity, studio lighting, elegant surrealism, no face distortion."
+  },
+  {
+    "id": "mosaic-identity",
+    "title": "Mosaic Identity",
+    "prompt": "Animate my reference photo as a beautiful identity transformation. The image breaks into hundreds of luminous glass mosaic tiles, swirls through space, then reconstructs the same person in a new outfit. Preserve face, eyes and proportions. Smooth transition, controlled particles, cinematic lighting."
+  },
+  {
+    "id": "glitch-reality-break",
+    "title": "Glitch Reality Break",
+    "prompt": "Take my reference photo and create a glitch-reality transition. Scanlines, chromatic aberration, datamosh artifacts ripple across the frame, then reality stabilizes back into a sharp cinematic shot of me. Cyberpunk color grade, synced to a bass hit, 5 seconds."
+  },
+  {
+    "id": "sand-dissolve",
+    "title": "Sand Dissolve",
+    "prompt": "Using my reference photo, animate a dissolve effect where my silhouette turns into fine golden sand and scatters in the wind, then reassembles back into the original photo in reverse. Desert lighting, warm color grade, slow cinematic motion."
+  },
+  {
+    "id": "neon-rain-cinema",
+    "title": "Neon Rain Cinema",
+    "prompt": "Place the person from my reference photo in a cinematic neon city at night. Wet streets, colorful reflections, rain, shallow depth of field, slow handheld push-in, subtle wind in clothing, emotional expression, premium music-video cinematography, 15 seconds."
+  },
+  {
+    "id": "desert-monument",
+    "title": "Desert Monument",
+    "prompt": "Place the subject from my photo in an epic desert landscape beside a monumental futuristic structure. Golden dust storm, vast scale, low-angle camera, fabric moving in the wind, warm sunset, subtle film grain, realistic textures, high-end science-fiction movie still."
+  },
+  {
+    "id": "noir-detective",
+    "title": "Noir Detective",
+    "prompt": "Turn my reference photo into a classic film-noir detective scene. Black and white grade, venetian blind shadows across the face, cigarette smoke curling in the light beam, slow push-in, dramatic low-key lighting, 1940s cinematography style."
+  },
+  {
+    "id": "anime-hero-transformation",
+    "title": "Anime Hero Transformation",
+    "prompt": "Transform the person in my reference photo into a high-quality anime hero while preserving recognizable facial features. Add wind-blown clothing, glowing energy, dynamic camera orbit and a dramatic sunset sky. Detailed cel shading, expressive eyes, cinematic action pose, consistent character design."
+  },
+  {
+    "id": "studio-ghibli-walk",
+    "title": "Studio Ghibli Walk",
+    "prompt": "Convert my reference photo into a Studio-Ghibli-inspired animated scene. Soft watercolor background, wind moving through tall grass, warm golden-hour light, gentle walking motion, whimsical hand-drawn texture, preserve my likeness in stylized form."
+  },
+  {
+    "id": "creator-product-review",
+    "title": "Creator Product Review",
+    "prompt": "Create a natural vertical UGC product review using my reference photo. The person holds and presents the product confidently, speaks directly to camera, authentic home lighting, handheld smartphone feel, clean lip sync, friendly energy, strong first-second hook, 9:16."
+  },
+  {
+    "id": "morning-routine-hook",
+    "title": "Morning Routine Hook",
+    "prompt": "Using my reference photo, create a viral-style vertical morning routine reel. Fast paced jump cuts, coffee pouring, sunlight through curtains, upbeat trending transition on every beat, punchy on-screen caption space, 9:16, energetic UGC creator style."
+  },
+  {
+    "id": "3-second-hook-reel",
+    "title": "3-Second Hook Reel",
+    "prompt": "Generate a 9:16 reel using my reference photo. First 3 seconds: sudden zoom-in with a bold flash transition and on-screen text hook space. Then smooth transition into the main scene with trending fast-cut editing rhythm, punchy sound-reactive motion, vertical format, optimized for Instagram Reels / TikTok retention."
+  },
+  {
+    "id": "before-after-transformation",
+    "title": "Before/After Transformation",
+    "prompt": "Create a before/after transformation reel using my reference photo as the \"before\" state. Snap-transition on a beat drop reveals a glammed-up \"after\" version — better lighting, styled outfit, confident pose. Vertical 9:16, trending transition style, punchy caption space at top and bottom."
+  },
+  {
+    "id": "day-in-the-life-montage",
+    "title": "Day-in-the-Life Montage",
+    "prompt": "Using my reference photo, generate a day-in-the-life vertical montage reel: quick cuts between waking up, getting ready, going outside, and a closing confident shot. Trending upbeat pacing, soft natural light, aesthetic lifestyle color grade, 9:16, caption-ready layout."
+  },
+  {
+    "id": "titanic-gym-fail",
+    "title": "Titanic → Gym Fail",
+    "prompt": "Create a comedic mashup reel: start with a slow, emotional recreation of the famous ship-bow scene (generic characters, no copyrighted likeness) — dramatic music swelling, arms spread, wind blowing. At the peak emotional beat, hard-cut abruptly to an unrelated clumsy gym-fail scene with the person from my reference photo slipping off a treadmill. Comedic record-scratch sound cue, jarring tonal contrast, meme-style caption space, 9:16."
+  },
+  {
+    "id": "epic-battle-office-printer-rage",
+    "title": "Epic Battle → Office Printer Rage",
+    "prompt": "Generate a meme mashup video: begin with an epic slow-motion battlefield charge, armies clashing, dramatic orchestral swell, generic fantasy characters (no copyrighted likeness). At the climactic sword-clash moment, hard-cut to my reference photo as an office worker furiously hitting a jammed printer in a mundane office. Comedic sound whiplash, deadpan caption space at bottom, 9:16 short-form format."
+  },
+  {
+    "id": "romantic-rain-kiss-cat-knocking-cup",
+    "title": "Romantic Rain Kiss → Cat Knocking Cup",
+    "prompt": "Create a mashup meme reel: open with a slow-motion romantic reunion in the rain, generic characters, emotional swelling music, soft cinematic lighting. Right before the emotional peak, hard-cut to a mundane clip of a cat calmly knocking a cup off a table in a bright kitchen. Comedic tonal whiplash with a sudden silence or funny sound effect, meme caption space, 9:16."
+  },
+  {
+    "id": "superhero-landing-spilled-coffee",
+    "title": "Superhero Landing → Spilled Coffee",
+    "prompt": "Generate a comedic mashup: start with a dramatic superhero three-point landing shot, cracked pavement, dust cloud, epic music sting, generic caped silhouette (no copyrighted likeness). Immediately hard-cut to my reference photo as an ordinary person spilling coffee on a white shirt at a desk. Abrupt tonal contrast, comedic thud sound, deadpan caption space, 9:16 vertical format."
+  },
+  {
+    "id": "slow-mo-explosion-microwave-beep",
+    "title": "Slow-Mo Explosion → Microwave Beep",
+    "prompt": "Create a meme transition video: begin with a big-budget slow-motion explosion scene, debris flying, generic action hero walking away without looking back, intense score. At the peak of the fireball, hard-cut instantly to a plain kitchen with my reference photo waiting awkwardly for a microwave beep. Comedic silence after the cut, meme caption space, 9:16."
+  },
+  {
+    "id": "villain-monologue-wifi-buffering",
+    "title": "Villain Monologue → Wifi Buffering",
+    "prompt": "Generate a comedic mashup reel: start with a dramatic villain monologue in a dark throne room, generic character silhouette, deep reverberating voice, intense lighting. Mid-sentence, hard-cut to a plain loading/buffering spinner animation on a phone screen with my reference photo visible in a video call thumbnail frozen mid-expression. Comedic anti-climax, caption space for punchline text, 9:16."
+  },
+  {
+    "id": "outfit-check-trend",
+    "title": "Outfit Check Trend",
+    "prompt": "Using my reference photo, create a trending outfit-check reel: quick spin to reveal the outfit, snap-zoom on a beat, confident walk toward camera, bright natural lighting, trending audio-sync motion, 9:16, caption space at top."
+  },
+  {
+    "id": "headphones-sound-wave",
+    "title": "Headphones Sound Wave",
+    "prompt": "Create a tech commercial for the headphones in my reference image. Pulsing neon sound-wave visualizations react to a bass drop, product rotates slowly in a dark studio, crisp rim lighting, premium tech-brand aesthetic, 16:9 or 9:16 adaptable."
+  },
+  {
+    "id": "space-station-drift",
+    "title": "Space Station Drift",
+    "prompt": "Place the subject from my reference photo inside a space station observation deck. Stars slowly drifting outside the window, soft blue emergency lighting, weightless hair movement, contemplative mood, slow cinematic dolly, sci-fi film still quality."
+  }
+]
