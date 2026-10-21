@@ -218,11 +218,17 @@ test('Stripe webhooks are disabled without a webhook secret', async () => {
 });
 
 test('payments are unavailable when no provider is configured', async () => {
-  await withServer(productionOptions(fakeServices(), { yookassa: { shopId: '' }, stripe: { secretKey: '' } }), async ({ base }) => {
+  await withServer(productionOptions(fakeServices(), { yookassa: { shopId: '', secretKey: '' }, stripe: { secretKey: '', webhookSecret: '' } }), async ({ base }) => {
     const api = accountClient(base);
     await api.register();
     const res = await api.post('/api/payment/checkout', { product: 'pro', currency: 'RUB' });
     assert.equal(res.status, 503);
-    assert.equal((await yookassaWebhook(base, 'payment.succeeded', 'yk-00000001')).status, 404);
+    assert.equal(res.json.error, 'payment_provider_unavailable');
+    assert.ok(res.json.missing.includes('YOOKASSA_SHOP_ID'));
+    assert.ok(res.json.missing.includes('YOOKASSA_SECRET_KEY'));
+    assert.ok(res.json.missing.includes('STRIPE_SECRET_KEY'));
+    const hook = await yookassaWebhook(base, 'payment.succeeded', 'yk-00000001');
+    assert.equal(hook.status, 404);
+    assert.ok(hook.json.missing.includes('YOOKASSA_SHOP_ID'));
   });
 });

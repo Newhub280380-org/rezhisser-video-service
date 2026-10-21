@@ -28,14 +28,13 @@ const INPUT_FIELD_PATTERN = /^[A-Za-z_][A-Za-z0-9_]{0,63}$/;
 const REPLICATE_MODEL_PATTERN = /^([a-z0-9][a-z0-9._-]*)\/([a-z0-9][a-z0-9._-]*)(?::([a-z0-9]+))?$/i;
 const MAX_ESTIMATE_USD = 100;
 
-// Demo profiles run on the local simulation: no network, no cost, no video.
-// They exist so the whole flow (brief → plan → routing → job) is usable
-// without any external account.
+// Routing presets for the shot list. They are not a video provider: the job
+// API refuses to execute them and names the env vars a real provider needs.
 const DEMO_PROFILES = [
   {
     id: 'demo-cinematic',
-    label: 'Демо: кино-реклама',
-    description: 'Имитация модели для атмосферных сюжетов с людьми и светом.',
+    label: 'Кино-реклама',
+    description: 'Пресет раскадровки для атмосферных сюжетов. Сам ролик не создаёт.',
     kind: 'text-to-video',
     strengths: ['cinematic', 'people'],
     aspectRatios: ['16:9', '9:16', '1:1', '4:5'],
@@ -43,8 +42,8 @@ const DEMO_PROFILES = [
   },
   {
     id: 'demo-social',
-    label: 'Демо: динамичный соцролик',
-    description: 'Имитация быстрой модели для вертикальных роликов в соцсетях.',
+    label: 'Динамичный соцролик',
+    description: 'Пресет раскадровки для вертикальных роликов. Сам ролик не создаёт.',
     kind: 'text-to-video',
     strengths: ['dynamic', 'vertical', 'product'],
     aspectRatios: ['9:16', '1:1', '4:5'],
@@ -52,8 +51,8 @@ const DEMO_PROFILES = [
   },
   {
     id: 'demo-product-photo',
-    label: 'Демо: оживление фото продукта',
-    description: 'Имитация image-to-video: анимирует загруженное фото продукта.',
+    label: 'Оживление фото продукта',
+    description: 'Пресет раскадровки под фото продукта. Сам ролик не создаёт.',
     kind: 'image-to-video',
     strengths: ['product', 'image-anchor'],
     aspectRatios: ['16:9', '9:16', '1:1', '4:5'],

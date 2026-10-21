@@ -19,6 +19,7 @@ const { BillingError } = require('./billing/index.js');
 const { CURRENCIES, TIERS, PERIOD_MS } = require('./billing/plans.js');
 const { LibraryError } = require('./library/index.js');
 const { AutomationError, publicRun } = require('./automation/runner.js');
+const { integrationReport } = require('./integrations.js');
 
 const RESET_TTL_MS = 60 * 60 * 1000;
 const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/;
@@ -27,7 +28,13 @@ const ASPECTS = ['9:16', '16:9', '1:1'];
 const MAX_PROJECTS = 500;
 const MAX_AUTOMATION_TASKS = 100;
 const MAX_AUTOMATION_RUNS_LISTED = 50;
-const AUTOMATION_RUN_ERRORS = { automation_run_active: 409, too_many_active_runs: 429, automation_busy: 503, automation_unavailable: 503 };
+const AUTOMATION_RUN_ERRORS = {
+  automation_run_active: 409,
+  too_many_active_runs: 429,
+  automation_busy: 503,
+  automation_unavailable: 503,
+  automation_not_configured: 503,
+};
 const AUTOMATION_REGIONS = ['US', 'EU', 'UK', 'CA', 'AU', 'JP', 'SG'];
 const FORBIDDEN_JOB_FIELDS = ['model', 'version', 'token', 'apiKey', 'apiBaseUrl', 'baseUrl', 'url', 'webhook', 'input', 'cost', 'price', 'provider', 'billingSource'];
 
@@ -138,7 +145,9 @@ function createProductionApi({
 
   function sendKnownError(res, error) {
     if (error instanceof AccountError || error instanceof BillingError) {
-      sendJson(res, error.status, { error: error.code, message: error.message });
+      const body = { error: error.code, message: error.message };
+      if (error.missing && error.missing.length) body.missing = error.missing;
+      sendJson(res, error.status, body);
       return true;
     }
     if (error instanceof LibraryError) {
@@ -207,16 +216,20 @@ function createProductionApi({
     } catch {
       email = null;
     }
+    const mail = integrationReport(config).mail;
+    if (!mail.configured) {
+      sendJson(res, 503, {
+        error: 'mail_not_configured',
+        message: 'Письмо не отправлено: почтовый сервис не настроен.',
+        missing: mail.missing,
+      });
+      return;
+    }
     const user = email ? await db.getUserByEmail(email) : null;
-    if (user && mailer.configured && !config.publicOrigin) {
-      // Links built from the Host header could point to an attacker's domain.
-      logger.error('password reset email not sent: PUBLIC_ORIGIN must be set when email delivery is enabled');
-    } else if (user && !mailer.configured && config.nodeEnv === 'production') {
-      logger.error('password reset email not sent: RESEND_API_KEY and MAIL_FROM are not configured');
-    } else if (user) {
+    if (user) {
       const token = crypto.randomBytes(32).toString('base64url');
       await db.createPasswordReset({ tokenHash: hashResetToken(token), userId: user.id, expiresAt: new Date(now() + RESET_TTL_MS).toISOString() });
-      const link = `${requestOrigin(req)}/studio#/reset?token=${token}`;
+      const link = `${config.publicOrigin}/studio#/reset?token=${token}`;
       mailer
         .send({
           to: user.email,
@@ -225,7 +238,7 @@ function createProductionApi({
         })
         .catch((error) => logger.error(`password reset mail failed: ${error.code || 'error'}`));
     }
-    // Same answer whether or not the account exists.
+    // Same answer whether or not the account exists. The link uses PUBLIC_ORIGIN, never the Host header.
     sendJson(res, 202, { status: 'sent', message: 'Если такой аккаунт есть, мы отправили письмо со ссылкой.' });
   }
 
@@ -269,6 +282,14 @@ function createProductionApi({
       sendJson(res, 400, { error: 'field_not_allowed', field: forbidden });
       return;
     }
+    if (payload.demo === true) {
+      sendJson(res, 400, {
+        error: 'demo_disabled',
+        message: 'Демо-ролики отключены. Сервис не возвращает имитацию видео. Уберите demo и запросите настоящую генерацию.',
+        missing: integrationReport(config).seedance.missing,
+      });
+      return;
+    }
     const image = validateImage(payload.image, config.imageMaxBytes);
     let item = null;
     if (payload.libraryItemId !== undefined && payload.libraryItemId !== null) {
@@ -296,30 +317,31 @@ function createProductionApi({
       sendJson(res, 400, { error: 'prompt_required', message: 'Нужен бриф, промт или шаблон из библиотеки.' });
       return;
     }
-    if (item && item.needsPhoto && !image && payload.demo !== true) {
+    if (item && item.needsPhoto && !image) {
       sendJson(res, 422, { error: 'image_required', message: 'Этот шаблон работает с вашим фото — загрузите его.' });
       return;
     }
-    const demo = payload.demo === true;
-    if (!demo) {
-      if (!seedance) {
-        sendJson(res, 503, { error: 'generation_unavailable', message: 'Генерация видео не настроена на сервере (SEEDANCE_API_KEY).' });
-        return;
-      }
-      if (!seedance.canAccept()) {
-        sendJson(res, 503, { error: 'provider_busy', message: 'Очередь занята, попробуйте через минуту.' }, { 'Retry-After': '30' });
-        return;
-      }
+    if (!seedance) {
+      sendJson(res, 503, {
+        error: 'generation_unavailable',
+        message: 'Генерация видео не настроена. Задайте SEEDANCE_API_KEY и SEEDANCE_MODEL.',
+        missing: integrationReport(config).seedance.missing,
+      });
+      return;
+    }
+    if (!seedance.canAccept()) {
+      sendJson(res, 503, { error: 'provider_busy', message: 'Очередь занята, попробуйте через минуту.' }, { 'Retry-After': '30' });
+      return;
     }
     // Reserve the provider slot before any await so parallel requests cannot
     // exceed SEEDANCE_MAX_CONCURRENT; the pipeline releases it.
-    const release = demo ? null : seedance.acquire();
+    const release = seedance.acquire();
     let billingSource;
     let job;
     try {
-      billingSource = demo ? 'demo' : await billing.consumeGeneration(user);
+      billingSource = await billing.consumeGeneration(user);
     } catch (error) {
-      if (release) release();
+      release();
       throw error;
     }
     try {
@@ -327,8 +349,8 @@ function createProductionApi({
         id: crypto.randomUUID(),
         userId: user.id,
         status: 'queued',
-        provider: demo ? 'local-simulation' : seedance.name,
-        model: demo ? null : seedance.model,
+        provider: seedance.name,
+        model: seedance.model,
         prompt,
         brief,
         libraryItemId: item ? item.id : null,
@@ -339,12 +361,12 @@ function createProductionApi({
         costUsd: 0,
       });
     } catch (error) {
-      if (release) release();
-      if (!demo) await billing.refundGeneration({ userId: user.id, billingSource, id: null });
+      release();
+      await billing.refundGeneration({ userId: user.id, billingSource, id: null });
       throw error;
     }
     try {
-      if (!demo) await billing.recordGeneration(user.id, billingSource, job.id);
+      await billing.recordGeneration(user.id, billingSource, job.id);
     } catch (error) {
       // The ledger entry is informational; never strand a reserved slot.
       logger.error(`usage event for job ${job.id} failed: ${error.code || 'error'}`);
@@ -494,7 +516,9 @@ function createProductionApi({
       sendJson(res, 202, { run: publicRun(run) }, { 'Cache-Control': 'no-store' });
     } catch (error) {
       if (!(error instanceof AutomationError)) throw error;
-      sendJson(res, AUTOMATION_RUN_ERRORS[error.code] || 409, { error: error.code, message: error.message });
+      const body = { error: error.code, message: error.message };
+      if (error.missing && error.missing.length) body.missing = error.missing;
+      sendJson(res, AUTOMATION_RUN_ERRORS[error.code] || 409, body);
     }
   }
 
@@ -513,6 +537,7 @@ function createProductionApi({
       storage: storage ? 'configured' : 'not_configured',
       payments: billing.providers.map((p) => p.name),
       library: library.size,
+      integrations: integrationReport(config),
     };
   }
 

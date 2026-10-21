@@ -34,8 +34,9 @@ const { createMailer } = require('./mailer.js');
 const { createVideoPipeline } = require('./pipeline.js');
 const { createProductionApi } = require('./production.js');
 const { createOwlBrowserExecutor } = require('./automation/owl-browser.js');
-const { createSimulationExecutor } = require('./automation/simulation.js');
+const { createUnconfiguredExecutor } = require('./automation/unconfigured.js');
 const { createAutomationRunner } = require('./automation/runner.js');
+const { integrationReport } = require('./integrations.js');
 
 const KNOWN_PROVIDERS = ['local-simulation', 'replicate'];
 const DEFAULT_PROVIDER = 'local-simulation';
@@ -181,7 +182,7 @@ function loadConfig(env = process.env, overrides = {}) {
       from: env.MAIL_FROM || '',
       ...mailOverrides,
     },
-    // Owl Browser executes automation tasks. Without it runs are simulated.
+    // Owl Browser executes automation tasks. Without URL and token, runs are refused.
     owlBrowser: {
       url: (env.OWL_BROWSER_URL || '').trim(),
       token: env.OWL_BROWSER_TOKEN || '',
@@ -200,7 +201,7 @@ function loadConfig(env = process.env, overrides = {}) {
     rateLimitMax: parseNumber(env.RATE_LIMIT_MAX, 30),
     rateLimitWindowMs: parseNumber(env.RATE_LIMIT_WINDOW_MS, 60000),
     dataDir: env.DATA_DIR || path.join(process.cwd(), 'data'),
-    // How long a simulated job stays "processing" before it is marked as finished.
+    // Retained so older deployments can still set it. New jobs are not simulated.
     simulationDurationMs: parseNumber(env.SIMULATION_DURATION_MS, 3000),
     videoProvider: (env.VIDEO_PROVIDER || DEFAULT_PROVIDER).trim().toLowerCase(),
     // Rule-based director is always used. No LLM advisor is implemented.
@@ -387,10 +388,7 @@ function createProviders(config) {
     );
   }
   const providers = new Map();
-  providers.set(
-    DEFAULT_PROVIDER,
-    createLocalSimulationProvider({ simulationDurationMs: config.simulationDurationMs }),
-  );
+  providers.set(DEFAULT_PROVIDER, createLocalSimulationProvider());
   // The Replicate provider is only constructed (and can only make network
   // calls) when it is explicitly selected by server configuration.
   let paidProfiles = [];
@@ -458,12 +456,18 @@ function createProductionStack(config, { loginLimiter, globalLoginLimiter, helpe
   const tokens = createTokenService({ secret: jwtSecret, ttlSeconds: config.jwtTtlSeconds });
   const seedance = createSeedanceProvider({ ...config.seedance, fetchImpl });
   const storage = createS3Storage({ ...config.s3, fetchImpl });
+  const integrations = integrationReport(config);
   const billing = createBilling({
     db,
     products: loadProducts(config.pricesJson),
     yookassa: createYooKassaClient({ ...config.yookassa, fetchImpl }),
     stripe: createStripeClient({ ...config.stripe, fetchImpl }),
     limits: { proVideosPerPeriod: config.proVideosPerPeriod, studioVideosPerPeriod: config.studioVideosPerPeriod },
+    missingKeys: {
+      yookassa: integrations.yookassa.missing,
+      stripe: integrations.stripe.missing,
+      stripeWebhook: integrations.stripeWebhook.missing,
+    },
     logger,
   });
   const mailer = createMailer({ apiKey: config.mail.resendApiKey, from: config.mail.from, fetchImpl, logger, production });
@@ -476,11 +480,10 @@ function createProductionStack(config, { loginLimiter, globalLoginLimiter, helpe
     pollIntervalMs: config.seedance.pollIntervalMs,
     maxWaitMs: config.seedance.maxWaitMs,
     retentionDays: config.videoRetentionDays,
-    demoDurationMs: config.simulationDurationMs,
   });
   const executor =
     createOwlBrowserExecutor({ ...config.owlBrowser, fetchImpl }) ||
-    createSimulationExecutor({ durationMs: config.simulationDurationMs });
+    createUnconfiguredExecutor(integrations.automation.missing);
   const automation = createAutomationRunner({ db, executor, logger, maxConcurrent: config.owlBrowser.maxConcurrent });
   const api = createProductionApi({
     config,
@@ -548,7 +551,7 @@ function createApp(options = {}) {
   function paidStatus() {
     const reasons = [];
     if (!providers.has('replicate')) {
-      reasons.push({ code: 'provider_not_configured', message: 'Платный провайдер не подключён (VIDEO_PROVIDER=local-simulation).' });
+      reasons.push({ code: 'provider_not_configured', message: 'Платный провайдер не подключён. Задайте VIDEO_PROVIDER=replicate и REPLICATE_API_TOKEN.' });
     }
     if (!config.paidGenerationEnabled) {
       reasons.push({ code: 'paid_generation_disabled', message: 'Платная генерация выключена (PAID_GENERATION_ENABLED).' });
@@ -638,6 +641,19 @@ function createApp(options = {}) {
   }
 
   const uploadLimitBytes = Math.ceil(config.imageMaxBytes * 1.4) + 64 * 1024;
+
+  function unconfiguredVideoResponse() {
+    const report = integrationReport(config);
+    const paid = paidStatus();
+    return {
+      error: 'provider_not_configured',
+      message: paid.available
+        ? 'Демо-рендер отключён. Видео создаёт только настроенный провайдер: выберите платную модель.'
+        : 'Видео не создано: провайдер не настроен. Сервис не подставляет демо-ролик.',
+      missing: [...report.replicate.missing, ...report.seedance.missing],
+      ...(paid.available ? {} : { reasons: paid.reasons }),
+    };
+  }
 
   function startJob(job, provider, spec) {
     provider.start(
@@ -796,6 +812,7 @@ function createApp(options = {}) {
           realVideoGeneration: defaultProvider.realVideoGeneration,
           paidGenerationEnabled: paidStatus().available,
           checks,
+          integrations: checks.integrations,
         });
         return;
       }
@@ -820,6 +837,7 @@ function createApp(options = {}) {
             imageMaxBytes: config.imageMaxBytes,
             quoteTtlSeconds: Math.round(config.quoteTtlMs / 1000),
           },
+          integrations: integrationReport(config),
         });
         return;
       }
@@ -974,20 +992,7 @@ function createApp(options = {}) {
               createPaidJob(req, res, payload, plan, selection, image);
               return;
             }
-            const provider = providers.get(DEFAULT_PROVIDER);
-            const job = jobs.create(plan.modelPrompt, provider, Date.now(), {
-              paid: false,
-              modelId: selection.profile.id,
-              modelLabel: selection.profile.label,
-              modelKind: selection.profile.kind,
-              clipDuration: selection.clipDuration,
-              estimatedCostUsd: 0,
-              brief: plan.brief,
-              plan,
-              hasImage: Boolean(image),
-            });
-            startJob(job, provider);
-            sendJson(res, 201, { job });
+            sendJson(res, 503, unconfiguredVideoResponse());
           } catch (error) {
             if (!sendDirectorError(res, error)) throw error;
           }
@@ -1029,9 +1034,7 @@ function createApp(options = {}) {
           sendJson(res, 400, { error: 'quote_required', message: 'Используйте бриф, оценку (/api/quotes) и подтверждение.' });
           return;
         }
-        const job = jobs.create(prompt, provider);
-        startJob(job, provider);
-        sendJson(res, 201, { job });
+        sendJson(res, 503, unconfiguredVideoResponse());
         return;
       }
 
@@ -1122,10 +1125,11 @@ function start(options = {}) {
     console.log(`data directory: ${app.config.dataDir}`);
     console.log(`video provider: ${app.config.videoProvider}`);
     console.log(`database: ${app.db.kind}${app.db.kind === 'memory' ? ' (development only — set DATABASE_URL)' : ''}`);
-    console.log(`seedance: ${app.seedance ? `configured (${app.seedance.model})` : 'not configured (account jobs: demo only)'}`);
-    console.log(`storage: ${app.storage ? `s3 bucket ${app.storage.bucket}` : 'not configured (provider URLs are kept)'}`);
-    console.log(`payments: ${app.billing.providers.map((p) => p.name).join(', ') || 'not configured'}`);
-    console.log(`automation: ${app.automation.executor.simulated ? 'simulation (set OWL_BROWSER_URL + OWL_BROWSER_TOKEN for real runs)' : app.automation.executor.name}`);
+    const integrations = integrationReport(app.config);
+    for (const item of Object.values(integrations)) {
+      const missing = item.missing.length ? ` (missing ${item.missing.join(', ')})` : '';
+      console.log(`${item.id}: ${item.configured ? 'configured' : 'not configured'}${missing}`);
+    }
     const paid = app.paidStatus();
     console.log(
       paid.available
@@ -1151,8 +1155,34 @@ function start(options = {}) {
   return app;
 }
 
+// Loads KEY=VALUE lines from .env without overriding variables already set.
+// Values are never logged. Missing file is fine: `npm start` still boots.
+function loadEnvFile(filePath) {
+  let text;
+  try {
+    text = fs.readFileSync(filePath, 'utf8');
+  } catch (error) {
+    if (error && error.code === 'ENOENT') return;
+    throw error;
+  }
+  for (const rawLine of text.split('\n')) {
+    const line = rawLine.trim().replace(/^export\s+/, '');
+    if (!line || line.startsWith('#')) continue;
+    const eq = line.indexOf('=');
+    if (eq <= 0) continue;
+    const key = line.slice(0, eq).trim();
+    if (!/^[A-Za-z_][A-Za-z0-9_]*$/.test(key) || process.env[key] !== undefined) continue;
+    let value = line.slice(eq + 1).trim();
+    if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
+      value = value.slice(1, -1);
+    }
+    process.env[key] = value;
+  }
+}
+
 if (require.main === module) {
+  loadEnvFile(path.join(process.cwd(), '.env'));
   start();
 }
 
-module.exports = { createApp, start, loadConfig, DEFAULT_ALLOWED_ORIGINS, KNOWN_PROVIDERS };
+module.exports = { createApp, start, loadConfig, loadEnvFile, DEFAULT_ALLOWED_ORIGINS, KNOWN_PROVIDERS };

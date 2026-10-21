@@ -53,16 +53,18 @@ test('by default everything is an offline demo and paid generation is locked', a
     assert.equal(paid.status, 422);
     assert.equal(paid.json.error, 'no_models_configured');
 
-    // The demo flow works end to end without any account or network.
+    // The shot list is local. Rendering does not invent a video.
     const plan = await browser.post('/api/director/plan', { brief: beta.BRIEF });
     assert.equal(plan.status, 200);
     assert.equal(plan.json.selection.model.paid, false);
     assert.equal(plan.json.selection.estimateUsd, 0);
     const demo = await browser.post('/api/jobs', { brief: beta.BRIEF, modelId: plan.json.selection.model.id });
-    assert.equal(demo.status, 201);
-    assert.equal(demo.json.job.simulated, true);
-    assert.equal(demo.json.job.paid, false);
-    assert.equal(demo.json.job.result, null);
+    assert.equal(demo.status, 503);
+    assert.equal(demo.json.error, 'provider_not_configured');
+    assert.ok(demo.json.missing.includes('REPLICATE_API_TOKEN'));
+    assert.ok(demo.json.missing.includes('SEEDANCE_API_KEY'));
+    assert.equal(demo.json.job, undefined);
+    assert.deepEqual(config.integrations.replicate.missing, ['VIDEO_PROVIDER', 'REPLICATE_API_TOKEN']);
   });
   assert.equal(networkCalls, 0);
 });
@@ -140,9 +142,11 @@ test('unauthenticated, cross-origin or CSRF-less requests cannot trigger paid pr
     Object.assign(evil.state, browser.state);
     assert.equal((await evil.post('/api/jobs', job)).status, 403);
 
-    // The allowed cross-origin client still gets the demo API (no credentials).
+    // The allowed cross-origin client still gets a public answer (no credentials),
+    // and that answer is a refusal, not a fake video.
     const demo = await pazi.post('/api/jobs', { prompt: 'demo', provider: 'local-simulation' });
-    assert.equal(demo.status, 201);
+    assert.equal(demo.status, 503);
+    assert.equal(demo.json.error, 'provider_not_configured');
     assert.equal(demo.headers.get('access-control-allow-origin'), 'http://localhost:3000');
     assert.equal(demo.headers.get('access-control-allow-credentials'), null);
   });
@@ -329,19 +333,19 @@ test('paid jobs and briefs are hidden from anonymous job listings', async () => 
     await browser.login();
     const { job } = await browser.quoteAndRun(PAID_BODY);
     await browser.waitForTerminal(job.json.job.id);
-    await fetch(`${base}/api/jobs`, {
+    const refused = await fetch(`${base}/api/jobs`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ prompt: 'demo', provider: 'local-simulation' }),
     });
+    assert.equal(refused.status, 503);
 
     const anon = await (await fetch(`${base}/api/jobs`)).json();
-    assert.equal(anon.jobs.length, 1);
-    assert.equal(anon.jobs[0].provider, 'local-simulation');
+    assert.equal(anon.jobs.length, 0);
     assert.equal((await fetch(`${base}/api/jobs/${job.json.job.id}`)).status, 401);
 
     const mine = (await browser.get('/api/jobs')).json;
-    assert.equal(mine.jobs.length, 2);
+    assert.equal(mine.jobs.length, 1);
     assert.ok(mine.jobs.every((item) => item.brief === undefined && item.plan === undefined));
 
     // Logout needs CSRF too, and ends the session.

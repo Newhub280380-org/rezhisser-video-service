@@ -93,7 +93,8 @@ test('desktop local server runs on 127.0.0.1, serves the dashboard, runs tasks a
     assert.match(server.origin, /^http:\/\/127\.0\.0\.1:\d+$/);
     assert.equal(server.app.server.address().address, '127.0.0.1');
     assert.equal(server.app.db.kind, 'memory');
-    assert.equal(server.app.automation.executor.simulated, true);
+    assert.equal(server.app.automation.executor.simulated, false);
+    assert.equal(server.app.automation.executor.configured, false);
 
     const page = await fetch(`${server.origin}/automation`);
     assert.equal(page.status, 200);
@@ -109,15 +110,10 @@ test('desktop local server runs on 127.0.0.1, serves the dashboard, runs tasks a
     });
     assert.equal(created.status, 201);
     const started = await api.post(`/api/automation/tasks/${created.json.task.id}/runs`);
-    assert.equal(started.status, 202);
-    let run = null;
-    for (let i = 0; i < 400; i += 1) {
-      run = (await api.get(`/api/automation/runs/${started.json.run.id}`)).json.run;
-      if (!['queued', 'running'].includes(run.status)) break;
-      await new Promise((resolve) => setTimeout(resolve, 5));
-    }
-    assert.equal(run.status, 'succeeded');
-    assert.equal(run.simulated, true);
+    assert.equal(started.status, 503);
+    assert.equal(started.json.error, 'automation_not_configured');
+    assert.ok(started.json.missing.includes('OWL_BROWSER_URL'));
+    assert.ok(started.json.missing.includes('OWL_BROWSER_TOKEN'));
 
     await server.close();
     await server.close();
@@ -128,7 +124,7 @@ test('desktop local server runs on 127.0.0.1, serves the dashboard, runs tasks a
     assert.equal(tasks.status, 200);
     assert.deepEqual(tasks.json.tasks.map((task) => task.name), ['Desktop task']);
     const runs = await again.get('/api/automation/runs');
-    assert.equal(runs.json.runs.length, 1);
+    assert.equal(runs.json.runs.length, 0);
   } finally {
     await server.close();
     fs.rmSync(userDataDir, { recursive: true, force: true });

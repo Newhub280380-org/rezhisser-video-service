@@ -11,7 +11,7 @@ const CURRENCIES = ['RUB', 'KZT', 'USD', 'CNY'];
 const PERIOD_MS = 30 * 24 * 60 * 60 * 1000;
 
 const TIERS = {
-  free: { id: 'free', label: 'Free', videosPerPeriod: 0, demoOnly: true },
+  free: { id: 'free', label: 'Free', videosPerPeriod: 0, demoOnly: false },
   pro: { id: 'pro', label: 'Pro', videosPerPeriod: 50, demoOnly: false },
   studio: { id: 'studio', label: 'Studio', videosPerPeriod: null, demoOnly: false },
 };

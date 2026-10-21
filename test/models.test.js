@@ -40,7 +40,7 @@ const I2V = {
   estimatedCostUsd: 0.3,
 };
 
-test('demo profiles are free, simulated and never call a provider', () => {
+test('routing presets are free and are not a video provider', () => {
   assert.ok(DEMO_PROFILES.length >= 3);
   for (const profile of DEMO_PROFILES) {
     assert.equal(profile.provider, 'local-simulation');

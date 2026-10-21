@@ -31,7 +31,7 @@ test('the UI is served at /, /app and /app/ with a strict CSP', async () => {
       assert.match(csp, /frame-ancestors 'none'/);
       assert.doesNotMatch(csp, /unsafe-inline|unsafe-eval/);
       assert.equal(res.headers.get('x-content-type-options'), 'nosniff');
-      assert.match(await res.text(), /Демо \/ без настоящего видео/);
+      assert.match(await res.text(), /Провайдер не настроен/);
     }
     for (const [route, entry] of Object.entries(ROUTES)) {
       if (!route.startsWith('/assets/')) continue;
@@ -105,10 +105,10 @@ test('the page has accessibility basics and honest labels', () => {
   }
   assert.match(html, /по правилам/);
   assert.match(html, /pazi\.dev/);
-  assert.match(js, /видео не создавалось/);
+  assert.match(js, /какие ключи не заданы/);
 });
 
-test('the demo flow works over HTTP with no network access at all', async () => {
+test('planning works offline and rendering refuses instead of faking a video', async () => {
   let networkCalls = 0;
   const fetchImpl = async () => {
     networkCalls += 1;
@@ -127,19 +127,17 @@ test('the demo flow works over HTTP with no network access at all', async () => 
     assert.ok(planned.json.plan.shots.length >= 2);
 
     const created = await browser.post('/api/jobs', { brief: beta.BRIEF, modelId: planned.json.selection.model.id });
-    assert.equal(created.status, 201);
-    const done = await browser.waitForTerminal(created.json.job.id);
-    assert.equal(done.status, 'succeeded');
-    assert.equal(done.result.simulated, true);
-    assert.equal(done.result.videoUrl, null);
-    assert.equal(done.plan.engine, 'rule-based-v1');
+    assert.equal(created.status, 503);
+    assert.equal(created.json.error, 'provider_not_configured');
+    assert.ok(created.json.missing.includes('REPLICATE_API_TOKEN'));
+    assert.equal(created.json.job, undefined);
 
     const i2v = await browser.post('/api/jobs', { brief: beta.BRIEF, modelId: 'demo-product-photo' });
     assert.equal(i2v.status, 422);
     assert.equal(i2v.json.error, 'image_required');
     const withPhoto = await browser.post('/api/jobs', { brief: beta.BRIEF, modelId: 'demo-product-photo', image: beta.PNG_1PX });
-    assert.equal(withPhoto.status, 201);
-    assert.equal(withPhoto.json.job.hasImage, true);
+    assert.equal(withPhoto.status, 503);
+    assert.equal(withPhoto.json.error, 'provider_not_configured');
     assert.ok(!JSON.stringify(withPhoto.json).includes(beta.PNG_1PX), 'uploaded image is not echoed back');
   });
   assert.equal(networkCalls, 0);

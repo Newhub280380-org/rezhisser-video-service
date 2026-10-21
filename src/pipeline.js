@@ -8,7 +8,7 @@ const { StorageError } = require('./storage/s3.js');
 
 const DAY_MS = 24 * 60 * 60 * 1000;
 
-function createVideoPipeline({ db, provider, storage, billing, logger = console, now = Date.now, pollIntervalMs = 5000, maxWaitMs = 900000, retentionDays = 30, demoDurationMs = 3000 }) {
+function createVideoPipeline({ db, provider, storage, billing, logger = console, now = Date.now, pollIntervalMs = 5000, maxWaitMs = 900000, retentionDays = 30 }) {
   const timers = new Set();
   let closed = false;
 
@@ -102,11 +102,11 @@ function createVideoPipeline({ db, provider, storage, billing, logger = console,
     return poll(updated, Date.parse(job.createdAt) || now(), release);
   }
 
-  async function runDemo(job) {
-    await db.updateVideoJob(job.id, { status: 'processing' });
-    await sleep(demoDurationMs);
-    if (closed) return null;
-    return db.updateVideoJob(job.id, { status: 'succeeded', completedAt: new Date(now()).toISOString() });
+  function rejectDemo(job) {
+    return fail(job, {
+      code: 'demo_disabled',
+      message: 'Демо-генерация отключена. Видео не подменяется заглушкой.',
+    });
   }
 
   function track(promise, job) {
@@ -118,7 +118,11 @@ function createVideoPipeline({ db, provider, storage, billing, logger = console,
     // Fire-and-forget; returns the promise for tests.
     // `release` is a provider slot already reserved by the caller.
     start(job, input, release) {
-      return track(job.billingSource === 'demo' ? runDemo(job) : runReal(job, input, release || undefined), job);
+      if (job.billingSource === 'demo') {
+        if (release) release();
+        return track(rejectDemo(job), job);
+      }
+      return track(runReal(job, input, release || undefined), job);
     },
     // Re-attaches pollers to jobs left running by a previous process (close()
     // stops polling without failing jobs, so they are picked up here). These
@@ -129,7 +133,7 @@ function createVideoPipeline({ db, provider, storage, billing, logger = console,
       let resumed = 0;
       for (const job of active) {
         if (job.billingSource === 'demo') {
-          await db.updateVideoJob(job.id, { status: 'succeeded', completedAt: new Date(now()).toISOString() });
+          await rejectDemo(job);
         } else if (job.providerTaskId && provider) {
           track(poll(job, Date.parse(job.createdAt)), job);
           resumed += 1;

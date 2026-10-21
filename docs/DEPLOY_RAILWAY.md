@@ -31,8 +31,8 @@
 | `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET` | Stripe Dashboard → Developers |
 | `RESEND_API_KEY`, `MAIL_FROM` | письма «забыли пароль» (без них ссылка не отправляется) |
 
-Без `SEEDANCE_API_KEY` аккаунты работают, но доступен только демо-режим.
-Без ключей оплаты `POST /api/payment/checkout` отвечает `503`.
+Без `SEEDANCE_API_KEY` и `SEEDANCE_MODEL` генерация видео отвечает `503` и называет эти переменные — демо-ролик не создаётся.
+Без ключей оплаты `POST /api/payment/checkout` отвечает `503` и перечисляет `YOOKASSA_*` / `STRIPE_SECRET_KEY`.
 
 ## 3. Вебхуки оплаты
 

@@ -101,16 +101,6 @@ function postJob(base, body) {
   });
 }
 
-async function waitForTerminal(base, id) {
-  for (let i = 0; i < 200; i += 1) {
-    const res = await fetch(`${base}/api/jobs/${id}`);
-    const { job } = await res.json();
-    if (job.status === 'succeeded' || job.status === 'failed') return job;
-    await new Promise((resolve) => setTimeout(resolve, 5));
-  }
-  throw new Error('job did not finish');
-}
-
 test('provider configuration defaults to local simulation with bounded Replicate settings', () => {
   const config = loadConfig({});
   assert.equal(config.videoProvider, 'local-simulation');
@@ -172,7 +162,7 @@ test('parseModel supports owner/model and owner/model:version', () => {
   assert.deepEqual(parseModel('acme/video:abc123'), { owner: 'acme', name: 'video', version: 'abc123' });
 });
 
-test('default local simulation makes no network calls and rejects the replicate provider', async () => {
+test('without a provider key the server makes no network calls and does not fake a video', async () => {
   const calls = [];
   const fetchImpl = async (...args) => {
     calls.push(args);
@@ -186,15 +176,11 @@ test('default local simulation makes no network calls and rejects the replicate 
     assert.equal(health.realVideoGeneration, false);
 
     const created = await postJob(base, { prompt: 'coffee ad' });
-    assert.equal(created.status, 201);
-    const { job } = await created.json();
-    assert.equal(job.provider, 'local-simulation');
-    assert.equal(job.simulated, true);
-    assert.equal(job.realVideoGeneration, false);
-
-    const finished = await waitForTerminal(base, job.id);
-    assert.equal(finished.status, 'succeeded');
-    assert.equal(finished.result.videoUrl, null);
+    assert.equal(created.status, 503);
+    const body = await created.json();
+    assert.equal(body.error, 'provider_not_configured');
+    assert.ok(body.missing.includes('REPLICATE_API_TOKEN'));
+    assert.equal(body.job, undefined);
 
     const rejected = await postJob(base, { prompt: 'coffee ad', provider: 'replicate' });
     assert.equal(rejected.status, 400);
@@ -365,7 +351,8 @@ test('replicate jobs run end to end through the gated beta flow with a mocked pr
     assert.equal(create.body.input.prompt, finished.prompt);
 
     const local = await postJob(base, { prompt: 'coffee ad', provider: 'local-simulation' });
-    assert.equal((await local.json()).job.simulated, true);
+    assert.equal(local.status, 503);
+    assert.equal((await local.json()).error, 'provider_not_configured');
 
     const stored = fs.readdirSync(dataDir).map((file) => fs.readFileSync(path.join(dataDir, file), 'utf8'));
     assert.ok(stored.every((content) => !content.includes(FAKE_TOKEN)));

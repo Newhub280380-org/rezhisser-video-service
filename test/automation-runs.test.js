@@ -6,7 +6,6 @@ const crypto = require('node:crypto');
 const { fakeServices, productionOptions, accountClient, withServer } = require('./helpers/production.js');
 const { createOwlBrowserExecutor, parseProxies, summaryOf } = require('../src/automation/owl-browser.js');
 const { createAutomationRunner, isBlockedHost } = require('../src/automation/runner.js');
-const { createSimulationExecutor } = require('../src/automation/simulation.js');
 const { createMemoryDatabase } = require('../src/db/memory.js');
 
 const OWL_BASE = 'https://owl.test';
@@ -68,9 +67,9 @@ async function createTask(api, changes = {}) {
   return res.json.task;
 }
 
-test('automation runs execute in simulation mode and record status, log and history per user', async () => {
+test('automation runs are refused when Owl Browser is not configured', async () => {
   const services = fakeServices();
-  await withServer(productionOptions(services, { simulationDurationMs: 30 }), async ({ base }) => {
+  await withServer(productionOptions(services), async ({ base }) => {
     const alice = accountClient(base);
     const bob = accountClient(base);
     assert.equal((await alice.register('runs-alice@example.com')).status, 201);
@@ -81,28 +80,21 @@ test('automation runs execute in simulation mode and record status, log and hist
     assert.equal((await bob.post(`/api/automation/tasks/${task.id}/runs`)).status, 404);
 
     const started = await alice.post(`/api/automation/tasks/${task.id}/runs`);
-    assert.equal(started.status, 202);
-    assert.equal(started.json.run.status, 'queued');
-    assert.equal(started.json.run.executor, 'simulation');
-    assert.equal(started.json.run.simulated, true);
-    assert.equal(started.json.run.userId, undefined);
-
-    const again = await alice.post(`/api/automation/tasks/${task.id}/runs`);
-    assert.equal(again.status, 409);
-    assert.equal(again.json.error, 'automation_run_active');
-
-    const run = await waitForRun(alice, started.json.run.id);
-    assert.equal(run.status, 'succeeded');
-    assert.match(run.summary, /Симуляция завершена/);
-    assert.ok(run.startedAt && run.completedAt);
-    assert.ok(run.log.some((entry) => /сайт не открывается/.test(entry.message)));
+    assert.equal(started.status, 503);
+    assert.equal(started.json.error, 'automation_not_configured');
+    assert.equal(started.json.run, undefined);
+    assert.deepEqual(started.json.missing, ['OWL_BROWSER_URL', 'OWL_BROWSER_TOKEN']);
+    assert.match(started.json.message, /не имитир/);
 
     const all = await alice.get('/api/automation/runs');
-    assert.deepEqual(all.json.executor, { name: 'simulation', simulated: true });
-    assert.deepEqual(all.json.runs.map((item) => item.id), [run.id]);
-    assert.deepEqual((await alice.get(`/api/automation/tasks/${task.id}/runs`)).json.runs.map((item) => item.id), [run.id]);
+    assert.deepEqual(all.json.executor, {
+      name: 'unconfigured',
+      simulated: false,
+      configured: false,
+      missing: ['OWL_BROWSER_URL', 'OWL_BROWSER_TOKEN'],
+    });
+    assert.deepEqual(all.json.runs, []);
     assert.deepEqual((await bob.get('/api/automation/runs')).json.runs, []);
-    assert.equal((await bob.get(`/api/automation/runs/${run.id}`)).status, 404);
     assert.equal((await bob.get(`/api/automation/tasks/${task.id}/runs`)).status, 404);
     assert.equal((await alice.get('/api/automation/runs/not-a-uuid')).status, 404);
 
@@ -111,17 +103,18 @@ test('automation runs execute in simulation mode and record status, log and hist
     assert.equal(paused.status, 409);
     assert.equal(paused.json.error, 'automation_task_disabled');
 
-    assert.equal((await alice.del(`/api/automation/tasks/${task.id}`)).status, 200);
-    assert.deepEqual((await alice.get('/api/automation/runs')).json.runs, []);
-
-    const health = await fetch(`${base}/api/health`);
-    assert.equal((await health.json()).checks.automation, 'simulation');
+    const health = await (await fetch(`${base}/api/health`)).json();
+    assert.equal(health.checks.automation, 'unconfigured');
+    assert.equal(health.checks.integrations.automation.configured, false);
+    assert.equal(JSON.stringify(health).includes('owl-token'), false);
   });
 });
 
 test('automation runs refuse local and private network targets', async () => {
   const services = fakeServices();
-  await withServer(productionOptions(services, { simulationDurationMs: 30 }), async ({ base }) => {
+  await withServer(productionOptions(services, {
+    owlBrowser: { url: 'https://owl.example', token: 'owl-test-token' },
+  }), async ({ base }) => {
     const api = accountClient(base);
     assert.equal((await api.register('runs-blocked@example.com')).status, 201);
     const task = await createTask(api, { url: 'http://169.254.169.254/latest/meta-data/' });
@@ -251,7 +244,21 @@ test('runner fails interrupted runs on resume and enforces per-user concurrency'
     tasks.push(task);
   }
   await db.createAutomationRun({ id: crypto.randomUUID(), taskId: tasks[0].id, userId, taskName: 'Task 0', url: 'https://example.com/', status: 'running', executor: 'owl-browser' });
-  const runner = createAutomationRunner({ db, executor: createSimulationExecutor({ durationMs: 5000 }), maxActivePerUser: 2, logger: { error() {} } });
+  const runner = createAutomationRunner({
+    db,
+    executor: {
+      name: 'owl-browser',
+      simulated: false,
+      configured: true,
+      maxWaitMs: 60000,
+      async run() {
+        await new Promise((resolve) => setTimeout(resolve, 5000));
+        return { summary: 'ok' };
+      },
+    },
+    maxActivePerUser: 2,
+    logger: { error() {} },
+  });
   assert.equal(await runner.resume(), 1);
   const [interrupted] = await db.listAutomationRuns(userId, { taskId: tasks[0].id });
   assert.equal(interrupted.status, 'failed');
