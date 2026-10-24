@@ -1,0 +1,65 @@
+id: 022_kling3_long_animation_storyboard_pipeline
+source_file: 22_kling3_long_animation_storyboard_pipeline.md
+title: 'Длинная анимация с постоянными героями: Nano Banana → character sheet → сторибоард → Kling 3.0 start/end → sync аудио'
+intent_tags:
+- talking_head
+- seamless_series
+use_when: 'Длинная анимация с постоянными героями: Nano Banana → character sheet → сторибоард → Kling 3.0 start/end → sync аудио'
+inputs:
+- аудио/голос
+steps:
+- n: 1
+  action: Придумать историю → сторибоард через генерацию картинок.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Создать героев в Nano Banana (один стиль у всех, напр. 3D-анимация), затем character sheet каждого: Nano Banana Pro/2 + загрузить картинку героя + «детальный промпт» (в free Skool-комьюнити —
+    закрыто); 16:9, 4K.'
+  tool:
+  - Nano Banana
+  mode: unknown
+  prompt: unknown
+  input_source: previous_step_output
+  duration: unknown
+  aspect: '16:9'
+- n: 3
+  action: Кадры сцен генерировать с character sheet в референсе (Higgsfield, ~95% работы в нём).
+  tool:
+  - Higgsfield
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: 'Image-to-video: Kling 3.0, стартовый и конечный кадры; продолжение клипа, мультишот; озвучка через voice changer, чтобы голос один и тот же.'
+  tool:
+  - Kling
+  mode: Image-to-video
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 5
+  action: 'Монтаж: клипы собираются в редакторе, лишние кадры подрезаются.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim: []
+output:
+  format: mp4
+  resolution: 4K
+  aspect: '16:9'
+done_criteria: Character sheet с разных углов и один стиль — единая база; очередь кадров заранее фиксирует кадры сцены.
+confidence: C
+prompt_completeness: gaps
+notes: 'Free Skool-школа Dan Kieft: все промпты (нужен вход).'
+source_url: https://www.youtube.com/watch?v=0CjArtUh_Wg
+duplicates_of: []

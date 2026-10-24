@@ -1,0 +1,42 @@
+id: 046_split_screen_mirror_love_story_series
+source_file: 46_split_screen_mirror_love_story_series.md
+title: 'Двойной экран с золотой линией: пары сцен «лево/право» в Seedance 2.5, героев фиксируют в Elements'
+intent_tags:
+- object_alive
+use_when: 'Двойной экран с золотой линией: пары сцен «лево/право» в Seedance 2.5, героев фиксируют в Elements'
+inputs:
+- стартовый кадр
+steps:
+- n: 1
+  action: unknown (в источнике нет нумерованных шагов; см. prompts_verbatim)
+  tool:
+  - Seedance
+  - Higgsfield
+  - Nano Banana
+  - CapCut
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "$17 AND 27 SECONDS. THAT IS WHAT THIS AI LOVE STORY TAKES TO MAKE, AND THE FORMAT BEHIND IT IS PART OF A $15K/MONTH CARTOON BUSINESS\n\nThe first time I watched it, I didn't notice the thin golden line\
+  \ down the middle of the screen.\n\nBy the end I realized the line was the whole story.\n\nTwo newborns lie in two cribs on either side of that line, born on the same day. \n\nYears pass in seconds. \n\
+  \nShe waits for a school bus on the left, he walks down the same street on the right, and the sun sets behind both of them at the same moment.\n\nThen one evening they open the same taxi app and press\
+  \ the same button. \n\nThe line disappears, they share one frame for the first time, and suddenly it is a wedding and two rings. \n\nThe last shot shows them as kids again, sitting on a cloud and waving\
+  \ at you, and that is the moment people send it to someone they love.\n\nNobody says a word, and nobody needs to. \n\nThe split screen tells you from the first second that they have to meet, so you watch\
+  \ only to see how.\n\nI make this kind of video with Claude Code and Higgsfield. \n\nClaude Code writes the script scene by scene, I design both characters in Nano Banana Pro as kids and adults and save\
+  \ them as Elements so their faces never drift, and every scene is generated in Seedance 2.5 as a matching pair for the left and right half. \n\nThe golden line goes on in CapCut.\n\nThis is the start\
+  \ frame prompt\n\n\"3D animated feature film still, vertical frame split by a thin glowing golden line, left half a girl with long brown hair and a yellow backpack, right half a boy with dark curly hair\
+  \ and a green backpack, the same street at sunset in both halves, soft cinematic lighting\"\n\nMost of the $17 goes to retries, because the first attempt at a mirrored pair almost never lines up.\n\n\
+  The full system is in the article below, with five formats that pay, six prompts, the Claude Code setup and the math from $900 to $15,703.\n\nReply \"CARTOON\" and follow me and I will send you everything."
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: Зеркальная пара + общий кадр; лицо фиксируется Elements.
+confidence: B
+prompt_completeness: partial
+notes: X-статья с шестью промптами.
+source_url: https://x.com/dwarffy_/status/2111942075801383315
+duplicates_of: []

@@ -1,0 +1,81 @@
+id: 010_wan_animate_comfy_replace_move
+source_file: 10_wan_animate_comfy_replace_move.md
+title: 'Wan 2.2 Animate в ComfyUI: замена персонажа в видео, перенос движения в новую сцену, рестайл'
+intent_tags:
+- client_in_clip
+- object_alive
+- motion_transfer
+use_when: 'Wan 2.2 Animate в ComfyUI: замена персонажа в видео, перенос движения в новую сцену, рестайл'
+inputs:
+- unknown
+steps:
+- n: 1
+  action: Нужны ComfyUI + Wan 2.2 Animate модели (≥24 GB VRAM, иначе облачный Comfy); воркфлоу перетащить в окно, «Install missing custom nodes».
+  tool:
+  - Wan
+  - ComfyUI
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Загрузить видео заменяемого персонажа (≤1080p, вертикаль/горизонталь).
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Кол-во кадров: автор гонял 300–400 кадров без проблем, в демо 125 кадров (~5 с). Размер выхода под исходный аспект: 576×1024 для 9:16; апскейл потом.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: previous_step_output
+  duration: 5 с
+  aspect: '9:16'
+- n: 4
+  action: 'Загрузить картинку нового персонажа. Два варианта: (а) совсем другой персонаж (чётко виден, не слишком далеко, тело может быть виден не полностью); (б) стилизованная версия того же персонажа
+    — экспортировать кадр из видео, где персонаж лучше виден, превратить в нужный стиль (аниме, claymation, 3D) через image-to-image, подав как референс.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 5
+  action: Нода grow mask with blur → значение expand (по умолчанию 10) — увеличить (автор поставил 25), если новый персонаж крупнее старого.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 6
+  action: 'Режимы: «Replace» (оставляет фон, меняет только человека) и «Move» (берёт движение и переносит в сцену картинки).'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 7
+  action: 'Ускорение: torch compile + Sage Attention (у автора не заработало).'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim: []
+output:
+  format: mp4
+  resolution: 1080p
+  aspect: '9:16'
+done_criteria: Маска вокруг исходного субъекта + референс нового; физика и взаимодействие с предметами в Wan Animate хорошие; позы при вращении держатся.
+confidence: B
+prompt_completeness: gaps
+notes: Файл воркфлоу и список моделей — в описании видео (не открывал).
+source_url: https://www.youtube.com/watch?v=woCP1Q_Htwo
+duplicates_of: []

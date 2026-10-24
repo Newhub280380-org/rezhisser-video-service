@@ -1,0 +1,92 @@
+id: 101_listing_photos_earth_zoom_reel
+source_file: 101_listing_photos_earth_zoom_reel.md
+title: 'Фото объекта → рилс: строка поиска → зум с орбиты к двери (первый/последний кадр) → проход по комнатам'
+intent_tags:
+- seamless_series
+- animal
+use_when: 'Конвейер «папка фото → вертикальный рилс»: интро со строкой поиска, которая печатает мечту; кадр Земли с орбиты (Seedream 5); Seedance 2.5 с Землёй первым кадром и фото фасада последним — непрерывный
+  зум из космоса к двери; каждая комната 5 с одним плавным движением камеры; кроссфейды и музыка. Для '
+inputs:
+- стартовый кадр
+- финальный кадр
+- аудио/голос
+steps:
+- n: 1
+  action: 'Seedance 2.5, 1080p, 4 с: строка поиска печатает текст, камера въезжает.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: 4 с
+  aspect: unknown
+- n: 2
+  action: 'Seedream 5: Земля с орбиты над регионом объекта.'
+  tool:
+  - Seedream
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Seedance 2.5, 5 с: первый кадр = Земля, последний = фото фасада.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: 5 с
+  aspect: unknown
+- n: 4
+  action: Seedance 2.5 по 5 с на каждую комнату; брак с «плывущими» стенами отбраковать.
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: 5 с
+  aspect: unknown
+- n: 5
+  action: Склейка с кроссфейдами 0,5 с, музыка (у listing-video — Seed Audio).
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: 5 с
+  aspect: unknown
+prompts_verbatim:
+- |-
+  ##### listing-reel-earth-zoom | Listing photos to a real-estate reel
+  What you provide
+  Listing photos (exterior first, then 2 to 4 rooms) (image)
+  The property, in one line (text)
+  The search bar line (Your dream home in Scottsdale) (text)
+  What Sensei does
+  A search-bar intro that types the dream
+  An earth zoom from orbit to the front door
+  A slow camera move through each room
+  Crossfades and music, vertical and ready to post
+  The brief Sensei follows
+  Make a vertical 9:16 real-estate reel for {{property}} from the photos in {{listing-photos}} (exterior first, then rooms). 1) Intro on Seedance 2.5 at 1080p, 4 seconds: a clean white search bar on a warm gradient types "{{search-line}}" letter by letter, then the camera pushes into it, keyboard clicks and a whoosh. 2) Make a still of Earth from orbit centred on the property's region on Seedream 5, then a 5-second Seedance 2.5 shot with that still as the first frame and the exterior photo as the last frame: one unbroken, accelerating zoom from space down to the front of the home. 3) Animate each room photo on Seedance 2.5 for 5 seconds with one slow, steady camera move, nothing added or removed; reject any take where walls or furniture warp. Cut everything in order with half-second crossfades over warm acoustic music, faded out at the end.
+- |-
+  ##### listing-video | Listing video from room photos
+  What you provide
+  Room photos, in tour order (3 to 6) (image)
+  The property, in one line (text)
+  What Sensei does
+  A slow camera move for each room
+  Warps checked, bad takes redone
+  Warm music and crossfades between rooms
+  The brief Sensei follows
+  Make a 16:9 listing video of {{property}} from the room photos in {{room-photos}}, in the order given. Animate each photo on Seedance 2.5 for 5 seconds with one slow, steady camera move that suits the room (glide forward, gentle pan, slow rise), no people, nothing added or removed, light moving softly. Reject any take where furniture or walls warp. Make a warm instrumental track on Seed Audio (acoustic guitar and soft piano). Join the rooms with half-second crossfades, about 4 seconds each, music faded in and out.
+output:
+  format: mp4
+  resolution: 1080p
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: запуск агента Sensei — аккаунт PixelDojo
+source_url: https://pixeldojo.ai/recipes/listing-reel-earth-zoom
+duplicates_of: []

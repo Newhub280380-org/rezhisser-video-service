@@ -1,0 +1,240 @@
+id: 108_version_a_b_younger_self_rocks_seedance25
+source_file: 108_version_a_b_younger_self_rocks_seedance25.md
+title: '«Я тогдашний и я сегодняшний»: два фото одного человека (до/после) → драма на скалах, Seedance 2.5, 15 с'
+intent_tags:
+- client_in_clip
+use_when: Две фотографии одного человека в разные периоды (до/после). Версия A (первое фото) мокрая, выбирается из штормового моря, версия B (второе фото) сухая, стоит на скале и протягивает руку; A отказывается
+  и уходит в воду. Символичный 15-секундный рилс «я сегодняшний и я прошлый». Промпт строго держит л
+inputs:
+- фото лица/портрет человека
+- аудио/голос
+- логотип
+steps:
+- n: 1
+  action: VeoSeeBot (или любой доступ к Seedance 2.5) → Seedance 2.5.
+  tool:
+  - Seedance
+  - Veo
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'В референсы: фото себя «до» (=REFERENCE 1, VERSION A) и «после» (=REFERENCE 2, VERSION B).'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: Промпт из комментария (ниже). 9:16, 15 с.
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: 15 с
+  aspect: '9:16'
+prompts_verbatim:
+- "=== https://t.me/reels_by_alsi/790 2026-09-14T14:53:09+00:00\nИнструкция:\n1. Переходим в VeoSeeBot \n2. Нейросеть Seedance 2.5\n3. В раздел с референсами вставляем фото себя до и после\n4. В раздел\
+  \ с промптом вставляем запрос, который я оставила в комментариях ⤵️"
+- |-
+  14 сентября 2026 г., 17:53 МСК
+  VERSION A notices it and slowly looks upward.
+  The camera begins revealing VERSION B standing above them.
+  VERSION B must immediately be recognizable as the person from REFERENCE IMAGE 2.
+  --------------------------------------------------
+  8–12 SECONDS:
+  Wide cinematic shot.
+  Both characters are now visible in the SAME FRAME.
+  VERSION A remains lower down on the rocks, partially surrounded by turbulent seawater.
+  VERSION A is completely wet and continues to match REFERENCE IMAGE 1.
+  VERSION B stands firmly on a higher volcanic rock above VERSION A.
+  VERSION B is completely dry and continues to match REFERENCE IMAGE 2 exactly.
+  VERSION B calmly extends one hand downward toward VERSION A, offering to help them climb out of the water.
+  VERSION A looks upward.
+  For a brief emotional moment, the two characters stare directly at each other.
+  VERSION B keeps their hand extended.
+  Then VERSION B gently reaches slightly closer and wipes some seawater from VERSION A's cheek.
+  Preserve both characters' appearance and clothing throughout the interaction.
+  --------------------------------------------------
+  12–15 SECONDS:
+  Final emotional wide-angle shot.
+  VERSION A looks at VERSION B.
+  Their expression changes from desperation to frustration and restrained anger.
+  VERSION B continues offering their hand.
+  VERSION A refuses to take it.
+  Instead, VERSION A deliberately pulls themselves backward and slides away toward the turbulent water.
+  VERSION B instinctively extends their arm farther, still trying to reach them.
+  VERSION A moves backward into the shallow rough surf and covers their face with both wet hands, overwhelmed with emotion and regret.
+  VERSION B remains standing on the rock above them with their arm extended.
+  Large grey waves crash dramatically against the dark rocks around them.
+  White foam and ocean spray fill the lower part of the frame.
+  --------------------------------------------------
+  CAMERA
+  --------------------------------------------------
+  Cinematic controlled handheld camera.
+  The camera should feel organic and slightly handheld while remaining stable and intentional.
+  No chaotic shaking.
+  Use dramatic low-angle perspectives when filming VERSION A from below.
+  Use intimate eye-level close-ups during emotional moments.
+  Include subtle slow cinematic push-ins.
+  Use shallow depth of field during close-ups.
+  Keep faces sharp, detailed and recognizable.
+  Use a wider cinematic lens for the final shot so BOTH characters, the volcanic rocks and the rough ocean are clearly visible.
+  Add subtle natural motion blur to:
+  — ocean spray,
+  — moving water,
+  — wet fabric,
+  — clothing moving in the wind,
+  — fast hand movements.
+  --------------------------------------------------
+  MOOD AND SYMBOLISM
+  --------------------------------------------------
+  The mood is melancholic, dramatic, emotional and symbolic.
+  VERSION A represents a struggling version of the person.
+  VERSION B represents another version of the person reaching out to them.
+  The interaction should feel emotionally meaningful and cinematic.
+  Do not make the scene horror-like or grotesque.
+  --------------------------------------------------
+  COLOR GRADING AND LIGHTING
+  --------------------------------------------------
+  Cold, desaturated teal-and-grey cinematic color grading.
+  Natural stormy daylight.
+  Soft, diffused overcast lighting.
+  Strong visual contrast between the dark wet rocks, grey ocean, white sea foam, cloudy sky and the characters.
+  Preserve the ORIGINAL COLORS of each character's clothing from their respective reference image.
+  Do not recolor their outfits to match the environment.
+  Subtle realistic film grain.
+  No glamour lighting.
+  No beauty filter.
+  No unnecessary facial retouching.
+  --------------------------------------------------
+  AUDIO
+  --------------------------------------------------
+  NO MUSIC.
+  Only realistic environmental audio:
+  — strong coastal wind,
+  — large waves crashing against rocks,
+  — water splashing,
+  — wet fabric movement,
+  — VERSION A breathing heavily.
+  --------------------------------------------------
+  STRICT REFERENCE CONSISTENCY
+
+  --- (следующий комментарий автора) ---
+
+  14 сентября 2026 г., 17:53 МСК
+  Create a cinematic vertical video, 9:16 aspect ratio, 15 seconds long.
+  REFERENCE IMAGES — EXTREMELY IMPORTANT:
+  Exactly TWO reference images are provided.
+  REFERENCE IMAGE 1 = VERSION A.
+  REFERENCE IMAGE 2 = VERSION B.
+  Use the people shown in the two provided reference images as the EXACT character references for the entire video.
+  Do NOT invent or redesign either character.
+  Copy each person directly from their corresponding reference image.
+  Preserve exactly what is visible in each reference:
+  — facial identity,
+  — facial structure,
+  — eyes,
+  — eyebrows,
+  — nose,
+  — lips,
+  — skin tone and natural skin texture,
+  — hairstyle or headwear,
+  — clothing,
+  — clothing colors,
+  — accessories,
+  — body proportions,
+  — overall appearance.
+  If a specific feature, skin condition, makeup, hairstyle, head covering, accessory or clothing detail is visible in a reference image, preserve it naturally.
+  Do not transfer clothing or styling from one reference to the other.
+  VERSION A must always match REFERENCE IMAGE 1.
+  VERSION B must always match REFERENCE IMAGE 2.
+  If the two reference images show the same person at different stages of life, preserve the visual differences between those two versions while keeping their recognizable identity.
+  --------------------------------------------------
+  ENVIRONMENT
+  --------------------------------------------------
+  The scene takes place on a dramatic, stormy, overcast coastline.
+  Dark, wet volcanic rocks dominate the foreground.
+  Behind them is a rough grey ocean with large crashing waves, white sea foam and realistic water spray.
+  The daylight is cold, soft and diffused beneath a cloudy sky.
+  Use a moody, desaturated teal-and-grey cinematic color palette with subtle realistic film grain.
+  --------------------------------------------------
+  VERSION A
+  --------------------------------------------------
+  VERSION A is the person from REFERENCE IMAGE 1.
+  Copy their appearance and clothing directly from REFERENCE IMAGE 1.
+  Do not replace, redesign or simplify their outfit.
+  At the beginning of the video, VERSION A is completely soaked by the ocean.
+  Their clothing, hair or headwear becomes realistically wet while preserving the original design, shape and coverage shown in the reference.
+  Wet fabric must remain fully opaque.
+  Water runs naturally across their face.
+  Any distinctive facial or styling characteristics visible in REFERENCE IMAGE 1 must remain recognizable.
+  VERSION A looks physically exhausted, desperate and emotionally overwhelmed.
+  --------------------------------------------------
+  VERSION B
+  --------------------------------------------------
+  VERSION B is the person from REFERENCE IMAGE 2.
+  Copy their appearance and clothing directly from REFERENCE IMAGE 2.
+  Do not replace, redesign or simplify their outfit.
+  VERSION B remains completely dry.
+  Their clothing, hairstyle, headwear and accessories must remain consistent with REFERENCE IMAGE 2.
+  VERSION B looks calm, confident, strong and composed.
+  --------------------------------------------------
+  ACTION SEQUENCE
+  --------------------------------------------------
+  0–4 SECONDS:
+  VERSION A struggles through the rough ocean surf between dark, slippery volcanic rocks.
+  They are on their hands and knees, desperately trying to climb out of the water.
+  Their clothing is completely soaked and heavy with seawater.
+  Large waves crash around their lower body and against the rocks.
+  White foam and realistic water spray fill the scene.
+  VERSION A tightly grips a wet black rock and tries to pull themselves upward.
+  Their face remains clearly visible and recognizable as the person from REFERENCE IMAGE 1.
+  --------------------------------------------------
+  4–8 SECONDS:
+  Cut to a dramatic low-angle close-up of VERSION A.
+  VERSION A pauses and slowly raises their head.
+  They look upward while breathing heavily.
+  Water runs down their face.
+  Their facial identity and all distinctive facial characteristics from REFERENCE IMAGE 1 remain clearly visible.
+  Suddenly, a hand slowly enters the frame from above.
+  The hand reaches down toward VERSION A.
+
+  --- (следующий комментарий автора) ---
+
+  14 сентября 2026 г., 17:53 МСК
+  --------------------------------------------------
+  ONLY TWO reference images are provided.
+  REFERENCE 1 controls VERSION A.
+  REFERENCE 2 controls VERSION B.
+  Copy the people from the references as accurately as possible.
+  VERSION A must remain consistent with REFERENCE IMAGE 1 in every shot.
+  VERSION B must remain consistent with REFERENCE IMAGE 2 in every shot.
+  Do not swap their faces.
+  Do not swap their clothing.
+  Do not merge their outfits.
+  Do not invent new clothing.
+  Do not invent new accessories.
+  Do not randomly change hairstyles or headwear.
+  Do not change facial features between shots.
+  Do not beautify or significantly alter either face.
+  Do not change body proportions.
+  Do not add additional characters.
+  Do not add text.
+  Do not add subtitles.
+  Do not add logos.
+  Maintain realistic human anatomy and realistic physical interaction.
+  The two reference identities must remain stable and recognizable throughout the entire 15-second video.
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего существенного (раньше числилось «закрыто, в комментариях» в пакете 49–87)
+source_url: https://t.me/reels_by_alsi/790
+duplicates_of: []

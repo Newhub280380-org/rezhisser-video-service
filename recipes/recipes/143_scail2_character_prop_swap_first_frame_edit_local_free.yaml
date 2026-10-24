@@ -1,0 +1,107 @@
+id: 143_scail2_character_prop_swap_first_frame_edit_local_free
+source_file: 143_scail2_character_prop_swap_first_frame_edit_local_free.md
+title: 'Замена персонажа/предмета в реальном видео бесплатно и локально: правка 1-го кадра (Flux Klein 9B / Krea 2 Identity Edit) → SCAIL 2 по ведущему видео (+ приёмы кропа и реверса)'
+intent_tags:
+- client_in_clip
+- vfx_effect
+use_when: 'Первый кадр ведущего видео редактируется в нового героя (в той же позе и кадре) → SCAIL 2 (на базе Wan 2.1) переносит движение, сохраняя физику (жидкость в бокале, преломление), постоянство объектов
+  и даже дорисовывая эффекты (огонь из кулака). Слабое место — текст в кадре. Комментарии: для дальних '
+inputs:
+- стартовый кадр
+steps:
+- n: 1
+  action: Взять ведущее видео, вытащить первый кадр.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Flux Klein 9B или Krea 2 Identity Edit LoRA: превратить героя/предмет первого кадра в нового (поза и кадр совпадают).'
+  tool:
+  - Flux
+  - Krea
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: Mix Studio (вкладка Edit) → «use as first frame» → режим видео SCAIL 2 → генерация (~2–3 мин на RTX 6000 Pro; на 16 ГБ — заметно дольше).
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: 'Сложные планы: кроп-замена-композит; персонажи за кадром — реверс туда и обратно; доп. референсы объектов.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 5
+  action: Звук — LTX, финальная сборка в обычном монтажёре.
+  tool:
+  - LTX
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  # I ran SCAIL 2 through a bunch of scenarios it should not handle. It handled most of them.
+  r/StableDiffusion u/blackmixture 2026-07-29 score=1478 comments=133 url=https://reddit.com/r/StableDiffusion/comments/1v9rzk8/i_ran_scail_2_through_a_bunch_of_scenarios_it/ link=https://v.redd.it/w0nn5sy995gh1
+
+  I've been testing **SCAIL 2** across a bunch of different scenarios and wanted to share what I found, since most demos out there are single-character dance clips (or jiggle physics). So far SCAIL 2 has impressed me tremendously across the board.
+
+  Video above covers character swaps, complex actions, prop swaps, physics, novel interactions, object permanence, relighting, and 2D motion transfer
+
+  **Findings**:
+
+  **Character swaps are the strongest use case.** The trick is prepping your reference properly. Use Flux Klein 9B or the Krea 2 Identity Edit LoRA to edit your actual first frame into the new character, so the reference is already in roughly the same pose and framing as where the driving video starts. Do that and the results are excellent. Having a great clear start frame also helps a lot.
+
+  **Object permanence held up better than expected.** In the car clip the vehicle becomes completely out of frame and then comes back in, and it stays consistent through the whole thing. I expected it to turn to mush but the whole scene held up pretty well. Not perfect but not bad either.
+
+  **It invents motion it was never given very well.** In the novel interaction section I swapped myself into a live-action Zuko and the fire comes off my fist in a believable arc, even though there is zero fire data in the driving footage. It copies the underlying movement and then adds embellishments that fit. Same with other examples with clothing, hair, etc.
+
+  **The physics test was the biggest surprise.** I swapped a flower for a wine glass. Hand tracking stays locked, the liquid inside sloshes correctly for the motion, and because the glass is transparent the background actually refracts and distorts through the water in a believable way. Nothing in the driving clip told it to do any of that.
+
+  **Weakest spots were text.** You'll notice the speed sign in the back of the character swap where I made myself an old man clip, the text turns into mush, so I'd avoid text for best results.
+
+  **Workflow:** Everything here was made in Mix Studio, my free and open source local interface that runs on top of ComfyUI. **https://github.com/BlackMixture/Mix-Studio**
+
+  Click the Edit tab to edit an image, then press "use as first frame" for video. Set the video mode to SCAIL 2 and you should be set.
+
+  Generated on a #DellProPrecision T2 w/ NVIDIA RTX 6000 Pro. Takes roughly \~2-3 mins per generation
+
+  Video Tutorial: https://youtu.be/w2CokhlBFRA
+
+  **More Examples (Free & No Paywall): https://www.patreon.com/posts/165152499**
+
+  Hope this helps!
+- "--- u/nsfwVariant score=15 parent=t3_1v9rzk8\nNice! I put together a [full character replacement for a complex fight scene](https://files.catbox.moe/5cxfeh.mp4) a few weeks ago but I've been too lazy\
+  \ to post about it (and also too lazy to finish the final touches using regular video editing). Here's the ref character for that: [front view](https://files.catbox.moe/c10yjw.png) | [back view](https://files.catbox.moe/l97fio.png)\n\
+  \nThe model is incredibly capable, if you stack normal video editing skills on top you can make pretty much flawless stuff.\n\n--- u/nsfwVariant score=9 parent=t1_p0hav1k\nThe workflow is a bit modified,\
+  \ but it's for supporting functions (like mask compositing) rather than anything that actually affects the SCAIL model outputs.\n\nMost of the difficulty is figuring out how to do the challenging shots,\
+  \ such as the very zoomed out shot near the start. For those you have to zoom in close so SCAIL recognises & replaces the characters, then composite the zoomed in footage back on top of the zoomed-out\
+  \ footage.\n\nOther times you might need to process a certain shot in *reverse* to make sure SCAIL can handle off-screen characters properly, then re-reverse it back the right way around when you put\
+  \ it back into the full video.\n\nI'll go into more detail when I do a write up about it at some point! But long story short this is done with the basic workflow + some compositing tricks.\n\n--- u/infearia\
+  \ score=8 parent=t3_1v9rzk8\nDidn't occur to me to try SCAIL with props, good find! Regarding object permanence: you know that you can use multiple reference images, so you can add a start frame AND one\
+  \ or more separate reference images of the objects/persons in the clip to keep them consistent?\n\n--- u/Strange_Test7665 score=7 parent=t1_p0fx6us\nYes, I’ve mostly used scail but it can replace 6 ish\
+  \ objects perfectly and swap background all local. Post processing with ltx for some sound and you really can generate video that rival any closed application \n\n--- u/infearia score=6 parent=t1_p0g5c1y\n\
+  Can't check right now if there's an official template in the current ComfyUI build for it, but Kijai included an example workflow a couple of weeks ago as part of his PR:\n\n[https://github.com/Comfy-Org/ComfyUI/pull/14509](https://github.com/Comfy-Org/ComfyUI/pull/14509)"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: видео (v.redd.it) не смотрели; примеры на Patreon автора (бесплатно, не открывали)
+source_url: https://reddit.com/r/StableDiffusion/comments/1v9rzk8/
+duplicates_of: []

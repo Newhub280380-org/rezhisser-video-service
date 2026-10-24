@@ -1,0 +1,298 @@
+id: 132_escalator_outfits_showcase_your_photo_3_flatlays_seedance25
+source_file: 132_escalator_outfits_showcase_your_photo_3_flatlays_seedance25.md
+title: 'Показ образов на эскалаторе: ваше фото + 3 флэтлея одежды → Seedance 2.5 13 с одним планом'
+intent_tags:
+- client_in_clip
+use_when: '«INFINITE ESCALATOR — premium cinematic fashion editorial»: одна неизменная внешность (ваше фото), три строго изолированных образа по трём флэтлеям (обязательно с обувью) и три разные позы; 13
+  с, 9:16.'
+inputs:
+- фото лица/портрет человека
+- стартовый кадр
+- аудио/голос
+steps:
+- n: 1
+  action: Фото (см. пост) в хорошем качестве.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Seedance 2.5 с параметрами из поста (длительность, формат).
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: 5 с
+  aspect: unknown
+- n: 3
+  action: 'Фото + промпт из комментария → генерация; звук — по посту (часть шаблонов: без звука, трек добавить в редакторе).'
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "=== https://t.me/nercpa/313 2026-10-20T02:16:03+00:00\n\U0001F3ECПоказ образов на эскалаторе\n\n1. Заходите в бота @neyrosetkabot\n2. Выбираете ваше фото + 3 фото разных образов (флэтлей или коллаж вещей\
+  \ на белом фоне без людей, обязательно с обувью) в хорошем качестве\n3. Выбираете режим Видео - Seedance 2.5 (13 сек, формат 9:16) и отправляете ваши фото с текстом из комментариев\n4. В любом редакторе\
+  \ можете добавить звук, который находится в комментариях\n\nПРОМПТ В КОММЕНТАРИЯХ \n⬇️⬇️⬇️\n\n⚡️Генерация в один клик \n\n#видео #профсъемка\n  \n    Please open Telegram to view this post\n    VIEW IN\
+  \ TELEGRAM"
+- |-
+  ### comments nercpa/313
+  --- Нейросетка |Промты | Обновления Chat
+  INFINITE ESCALATOR — PREMIUM CINEMATIC FASHION EDITORIAL
+  ONE PERMANENT CHARACTER IDENTITY
+  THREE STRICTLY ISOLATED OUTFITS
+  THREE DISTINCT FASHION POSES
+  NATURAL DIEGETIC SOUND ONLY
+  Generate a premium, photorealistic, 13-second luxury fashion editorial film.
+  OUTPUT FORMAT:
+  Vertical 9:16.
+  One uninterrupted continuous camera shot.
+  One realistically moving escalator.
+  One recurring human character.
+  Three successive appearances in three different outfits.
+  Natural real-world environmental sounds only.
+  NO MUSIC OR AUDIO TRACKS OF ANY KIND.
+  CORE CONCEPT:
+  A single recognizable person appears three times on a continuously moving escalator, wearing a different accurately referenced outfit during each appearance.
+  Only the clothing, accessories, fashion pose and position along the moving escalator change.
+  The camera, environment, escalator speed and lighting remain consistent.
+  The video feels like a genuinely filmed premium luxury fashion campaign.
+  ━━━━━━━━━━━━━━━━━━━━━━━━
+  01 — ABSOLUTE MASTER IDENTITY
+  ━━━━━━━━━━━━━━━━━━━━━━━━
+  @Image1 = THE ONLY HUMAN IDENTITY REFERENCE.
+  Preserve the original recognizable face, eye shape and spacing, nose, lips, jawline, chin, cheekbones, eyebrows, forehead, skin tone, distinctive facial features, hairline, hairstyle, hair length, hair color, apparent age and natural body proportions.
+  The exact same character from @Image1 appears in all three outfits.
+  This is ONE recurring individual, not three different people with a similar appearance.
+  Do not independently reinterpret the face for each outfit.
+  Do not generate a generic fashion-model face.
+  Do not combine multiple identities.
+  Do not borrow any human identity features from wardrobe references.
+  The clothing and background visible in @Image1 are not wardrobe or environment references.
+  ━━━━━━━━━━━━━━━━━━━━━━━━
+  02 — STRICT WARDROBE REFERENCE SYSTEM
+  ━━━━━━━━━━━━━━━━━━━━━━━━
+  @Image2 = LOOK ONE ONLY.
+  @Image3 = LOOK TWO ONLY.
+  @Image4 = LOOK THREE ONLY.
+  Each outfit reference is an independent, closed wardrobe package.
+  OUTFIT EXTRACTION:
+  Extract only clothing and wearable accessories from each outfit reference.
+  These include visible outerwear, tops, bottoms, footwear, handbags, jewelry, belts, headwear, scarves and other explicitly shown fashion accessories.
+  Preserve the exact visible colors, silhouettes, garment lengths, materials, fabric textures, cuts, layering, construction and accessory combinations.
+  If a reference contains isolated clothing pieces or a flat-lay collage, assemble the specified items into one complete wearable outfit.
+  If a reference shows another person wearing the clothes, use that person only as a garment display.
+  Ignore their face, hair, skin, age, physical identity, facial expression, body features and pose.
+  The wearer is always the exact person from @Image1.
+  STRICT OUTFIT ISOLATION:
+  Look One must not contain garments or accessories from @Image3 or @Image4.
+  Look Two must not contain garments or accessories from @Image2 or @Image4.
+  Look Three must not contain garments or accessories from @Image2 or @Image3.
+  Never swap outfits.
+  Never invent replacement garments when the reference already contains a complete outfit.
+  The order is permanent:
+  @Image2 → @Image3 → @Image4.
+  ━━━━━━━━━━━━━━━━━━━━━━━━
+  03 — PERMANENT ESCALATOR ENVIRONMENT
+  ━━━━━━━━━━━━━━━━━━━━━━━━
+  Create a realistic modern indoor inclined escalator.
+  The escalator is a physically ascending mechanical staircase, not a horizontal moving walkway.
+  The central moving staircase contains precisely constructed silver-gray aluminum steps with dense parallel ribbed grooves, dark recessed risers, narrow black mechanical gaps and thin yellow safety markings along both sides.
+  The metallic steps have realistic industrial texture, subtle wear, dimensional shadows and controlled reflections.
+  Both sides contain brushed stainless-steel panels, dark handrails and transparent glass balustrades.
+  The escalator runs vertically through the 9:16 composition.
+  The left and right handrails establish the visual boundaries of the frame.
+  Do not reveal large surrounding areas beyond the handrails.
+  --- Нейросетка |Промты | Обновления Chat
+  Keep the complete moving staircase, both side handrails and narrow adjacent structural elements visible.
+  The escalator extends beyond the upper and lower image boundaries, creating the impression of an endless fashion conveyor.
+  The environment remains identical throughout the video.
+  No additional people, advertisements, signs or distracting background objects.
+  ━━━━━━━━━━━━━━━━━━━━━━━━
+  04 — FIXED CINEMATIC CAMERA
+  ━━━━━━━━━━━━━━━━━━━━━━━━
+  One professional cinema camera is mounted above and slightly in front of the inclined escalator.
+  Use the established moderately elevated overhead-front angle.
+  The perspective is slightly frontal rather than strictly vertical top-down.
+  This angle allows the model's face to be naturally visible from the beginning of each appearance without dramatic head movement.
+  The camera is centered along the escalator axis.
+  Position the camera slightly farther back than a tightly cropped overhead shot, but close enough to maintain recognizable facial details and clear wardrobe readability.
+  Keep the full seated figure and the complete outfit visible during the main central portion of each appearance.
+  Use realistic natural perspective without exaggerated wide-angle distortion.
+  The camera remains rigidly fixed for the entire 13 seconds.
+  No zoom, no pan, no tilt, no orbit, no tracking, no handheld shake, no reframing, no camera cuts.
+  ━━━━━━━━━━━━━━━━━━━━━━━━
+  05 — PHYSICALLY ACCURATE ESCALATOR MOVEMENT
+  ━━━━━━━━━━━━━━━━━━━━━━━━
+  The escalator continuously moves UPWARD from the bottom of the image toward the top.
+  Maintain a constant moderate speed throughout all 13 seconds.
+  The movement is smooth, mechanically realistic and suitable for fashion presentation.
+  The fixed side structures remain stationary.
+  Each appearance of the model is physically seated on a specific moving step.
+  The pelvis is naturally supported by the step.
+  Legs, footwear, hands and accessories interact realistically with the supporting steps.
+  The model and the supporting steps move upward at exactly the same speed.
+  The body remains attached to its supporting step as it passes through the frame.
+  No independent vertical drifting, no floating, no hovering, no sliding across steps, no sudden changes of movement speed.
+  Maintain realistic gravity, body weight, contact shadows and fabric compression.
+  ESCALATOR STEP CONTINUITY:
+  Preserve the exact same physical escalator steps and their ribbed metallic textures continuously from the first frame to the last.
+  Every step moves upward along one uninterrupted mechanical trajectory.
+  The spacing, geometry, yellow edge markings, dark risers and ribbed metal patterns remain temporally consistent.
+  Never regenerate, redraw, replace, reshape or reposition the escalator steps between consecutive frames.
+  No texture popping, no step-pattern resets, no visual jumps in the escalator structure.
+  ━━━━━━━━━━━━━━━━━━━━━━━━
+  06 — THREE DISTINCT LUXURY FASHION POSES
+  ━━━━━━━━━━━━━━━━━━━━━━━━
+  Each appearance has a clearly different premium fashion editorial pose.
+  The poses are naturally elegant, confidently relaxed and physically realistic.
+  Every appearance enters already positioned in its assigned pose.
+  POSE ONE — DIAGONAL EDITORIAL:
+  A relaxed diagonal seated pose.
+  The torso is slightly rotated.
+  One leg extends naturally along the steps while the other remains bent or casually crossed.
+  The arms create an asymmetric, sophisticated silhouette.
+  The pose feels confident, relaxed and effortlessly fashionable.
+  POSE TWO — ASYMMETRIC FASHION LEAN:
+  A distinctly different seated composition.
+  The torso gently leans backward or sideways with natural support from one arm.
+  One knee is positioned differently, creating a more sculptural, asymmetric leg arrangement.
+  The pose feels expressive, refined and fashion-forward.
+  POSE THREE — ELEGANT SEMI-RECLINED:
+  A third visually different semi-reclined editorial pose.
+  The pelvis remains fully supported.
+  The torso and legs create an elegant relaxed silhouette, clearly distinct from the previous two poses.
+  One arm rests naturally while the other contributes to a sophisticated fashion composition.
+  --- Нейросетка |Промты | Обновления Chat
+  All poses must remain age-appropriate, anatomically correct, stable on the moving steps and compatible with the complete outfit.
+  The model makes only one subtle fashion gesture per appearance.
+  Allow small hand adjustments, delicate shoulder movements, natural breathing and realistic fabric motion.
+  Avoid large pose changes during the upward journey.
+  ━━━━━━━━━━━━━━━━━━━━━━━━
+  07 — CONSISTENT FACIAL IDENTITY AND FASHION EXPRESSION
+  ━━━━━━━━━━━━━━━━━━━━━━━━
+  The model's identity does not change when the clothing changes.
+  Preserve stable facial proportions between consecutive video frames.
+  The model's face is naturally oriented toward the slightly angled camera from the beginning of each appearance.
+  No dramatic head lifting.
+  No abrupt head rotations.
+  Allow subtle natural blinking, restrained gaze changes and quiet luxury-fashion expressions.
+  The model remains alive and expressive without exaggerated facial animation.
+  No beauty blur, no artificial skin smoothing, no invented facial features, no identity substitution, no temporal facial deformation.
+  Use soft frontal fill lighting to keep the face readable.
+  Maintain consistent photographic focus across the face and outfit.
+  ━━━━━━━━━━━━━━━━━━━━━━━━
+  08 — PRECISE 13-SECOND APPEARANCE STRUCTURE
+  ━━━━━━━━━━━━━━━━━━━━━━━━
+  The three appearances occur in the fixed wardrobe order:
+  FIRST: @Image2.
+  SECOND: @Image3.
+  THIRD: @Image4.
+  Maintain deliberate spacing between appearances.
+  The next appearance begins entering only when the previous appearance has reached the upper region and begins disappearing beyond the top of the frame.
+  Do not create a crowded queue of characters traveling closely together.
+  00:00–00:04.33 — LOOK ONE:
+  The exact character from @Image1 is already beginning to enter from the bottom of the frame.
+  The character wears only the complete outfit from @Image2.
+  Pose One is already established.
+  The escalator carries the character upward smoothly.
+  The character moves through the central viewing area while maintaining the original recognizable face.
+  By approximately 00:04.33, the first appearance approaches the upper edge.
+  00:04.33–00:06.50 — FIRST EXIT / SECOND ENTRANCE:
+  The first appearance begins disappearing beyond the top edge.
+  Only as this exit begins, the same character enters from the bottom wearing the complete outfit from @Image3.
+  The second appearance is already in Pose Two.
+  The first appearance completes its natural exit while the second travels upward.
+  The two appearances remain physically separated by several moving steps.
+  00:06.50–00:08.67 — LOOK TWO:
+  The second appearance becomes the main subject.
+  The same exact character from @Image1 wears only the outfit from @Image3.
+  The body remains in Pose Two, physically supported by the escalator steps.
+  The character performs one subtle editorial gesture.
+  The face remains the same as in the first appearance.
+  00:08.67–00:10.83 — SECOND EXIT / THIRD ENTRANCE:
+  The second appearance begins disappearing beyond the upper edge.
+  Only then does the third appearance enter from the bottom.
+  The third appearance features the exact same character from @Image1, wearing only the outfit from @Image4.
+  Pose Three is already established.
+  The appearances maintain realistic spacing and identical upward velocity.
+  00:10.83–00:13.00 — LOOK THREE:
+  The third appearance becomes the main subject.
+  The character wears only the complete outfit from @Image4.
+  The face is the same identity from @Image1.
+  The third fashion pose remains elegant and naturally supported.
+  The escalator continues carrying the character upward as the shot ends.
+  The composition suggests an endless, continuously operating fashion presentation.
+  ━━━━━━━━━━━━━━━━━━━━━━━━
+  09 — PREMIUM CINEMATIC VISUAL FINISH
+  ━━━━━━━━━━━━━━━━━━━━━━━━
+  High-end luxury fashion advertising.
+  Sophisticated editorial cinematography.
+  Natural, realistic human anatomy and movement.
+  Soft directional overhead illumination with gentle frontal fill.
+  Moderate contrast and refined tonal separation.
+  Consistent facial illumination.
+  Natural skin texture.
+  Accurate clothing colors and clearly visible garment construction.
+  --- Нейросетка |Промты | Обновления Chat
+  Detailed fabric weave, leather texture, denim, stitching, folds and jewelry reflections.
+  Sharp silver metallic escalator grooves and realistic handrail reflections.
+  Professional cinematic color grading.
+  Subtle analog 35mm film grain.
+  Rich but natural colors.
+  Controlled highlights and detailed shadows.
+  No excessive diffusion, no aggressive beauty filtering, no heavy digital noise, no artificial oversharpening.
+  ━━━━━━━━━━━━━━━━━━━━━━━━
+  10 — STRICT NATURAL SOUND POLICY
+  ━━━━━━━━━━━━━━━━━━━━━━━━
+  AUDIO RULE — ABSOLUTELY NO MUSIC OR PRE-RECORDED AUDIO TRACKS.
+  No soundtrack, no background or ambient music, no melody, no beat, no percussion, no cinematic score, no stock audio, no singing, no vocals, no dialogue, no speech, no voiceover, no narration.
+  The audio must consist ONLY of natural, realistic sounds produced by objects and movements within the scene.
+  PERMITTED NATURAL SOUNDS:
+  The continuous soft mechanical hum of the operating escalator motor.
+  Subtle authentic vibration from the moving escalator mechanism.
+  Gentle metallic sounds caused by the movement of the steps.
+  Soft fabric rustling caused by the model's minor movements.
+  Subtle natural sounds from clothing and accessories touching the body or escalator steps.
+  A very faint, realistic indoor environmental room tone.
+  These sounds must feel naturally recorded on location by a real camera microphone: quiet, restrained, realistic and synchronized with the actual visible actions.
+  No stylized cinematic transitions or impact effects.
+  ━━━━━━━━━━━━━━━━━━━━━━━━
+  11 — FINAL GENERATION PRIORITIES
+  ━━━━━━━━━━━━━━━━━━━━━━━━
+  PRIORITY ONE:
+  One single recurring human identity, exclusively from @Image1.
+  PRIORITY TWO:
+  Exactly the same recognizable face across all three appearances.
+  PRIORITY THREE:
+  Strict wardrobe isolation:
+  Look One = @Image2 only.
+  Look Two = @Image3 only.
+  Look Three = @Image4 only.
+  PRIORITY FOUR:
+  Three clearly distinct premium fashion editorial poses.
+  PRIORITY FIVE:
+  Correct appearance spacing — the next appearance enters only when the previous appearance begins exiting above.
+  PRIORITY SIX:
+  Physically realistic seated body support and synchronized movement with the escalator steps.
+  PRIORITY SEVEN:
+  One stationary elevated overhead-front camera, with escalator handrails as the lateral boundaries.
+  PRIORITY EIGHT:
+  Premium cinematic lighting, realistic photographic detail, natural skin texture, refined color grading and subtle 35mm grain.
+  PRIORITY NINE:
+  Only naturally occurring scene sounds. Absolutely no music, audio tracks, vocals, narration or artificial soundtrack.
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: превью-видео (медиа); бот @neyrosetkabot платный — у нас не запускалось; промпт годится для любой площадки с Seedance 2.5
+source_url: https://t.me/nercpa/313
+duplicates_of: []

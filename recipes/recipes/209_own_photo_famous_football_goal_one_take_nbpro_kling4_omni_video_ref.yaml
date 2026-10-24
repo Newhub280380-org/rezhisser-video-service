@@ -1,0 +1,66 @@
+id: 209_own_photo_famous_football_goal_one_take_nbpro_kling4_omni_video_ref
+source_file: 209_own_photo_famous_football_goal_one_take_nbpro_kling4_omni_video_ref.md
+title: '«Ты забиваешь знаменитый гол»: своё фото → Nano Banana Pro (портрет 1:1) → Kling 4.0 omni с видео-референсом гола, 15 с 9:16, один непрерывный план «телетрансляции»'
+intent_tags:
+- client_in_clip
+- motion_transfer
+use_when: '«Ты забиваешь знаменитый гол»: своё фото → Nano Banana Pro (портрет 1:1) → Kling 4.0 omni с видео-референсом гола, 15 с 9:16, один непрерывный план «телетрансляции»'
+inputs:
+- фото лица/портрет человека
+- видео-референс (движение/клип)
+- аудио/голос
+steps:
+- n: 1
+  action: 'Banana Pro: загрузить своё фото, создать реалистичный ИИ-портрет с сохранением внешности 1:1 (промпт портрета — t.me/promtgs/3983).'
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: '1:1'
+- n: 2
+  action: Kling 4.0 — версия v4.0-omni, качество 720p, пропорция 9:16, длительность 15s, Native Audio ✓.
+  tool:
+  - Kling
+  mode: omni
+  prompt: unknown
+  input_source: unknown
+  duration: 15s
+  aspect: '9:16'
+- n: 3
+  action: Вставить промпт + видео-референс (гол из поста).
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: «Изображение 1» — ИИ-портрет или раскадровка персонажа.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 5
+  action: Сгенерировать.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  Создай фотореалистичное вертикальное видео 9:16 продолжительностью 15 секунд: человек с приложенной фотографии неожиданно становится главным героем эффектной футбольной атаки. Сохрани его узнаваемость 1:1: черты лица, возраст, причёску, телосложение и исходную одежду, без переодевания в футбольную форму. Вечерний стадион, яркие прожекторы, естественные тени на газоне. Камера спортивной трансляции плавно сопровождает атаку одним непрерывным планом, удерживая в кадре игрока, мяч и ворота. Сначала герой принимает передачу и сближается с выбежавшим вратарём. На 2-4 секунде аккуратным касанием подбрасывает мяч над бросившимся голкипером. На 4-7 секунде обегает его и вновь подхватывает опустившийся мяч. На 7-12 секунде резким торможением и сменой направления заставляет двух защитников проскользить мимо в подкатах. В оставшееся время спокойно направляет мяч в открытые ворота. Естественная скорость движений, убедительный контакт обуви с мячом, реалистичные лица и фактура одежды. Исключить смену лица, лишние конечности, слияние игроков, исчезновение или удвоение мяча, скольжение стоп, монтажные скачки и пластиковую кожу.
+output:
+  format: mp4
+  resolution: 720p
+  aspect: '1:1'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: само видео-референс (медиа в посте); бот Cyber AI не запускал
+source_url: https://t.me/promtgs/4125
+duplicates_of: []

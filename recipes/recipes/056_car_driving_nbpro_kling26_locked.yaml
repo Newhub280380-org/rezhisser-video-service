@@ -1,0 +1,59 @@
+id: 056_car_driving_nbpro_kling26_locked
+source_file: 56_car_driving_nbpro_kling26_locked.md
+title: '# 56 — «Катаюсь на Audi RS6 по ночному городу»: селфи → Nano Banana Pro (салон, 35 мм) → Kling 2.6 со строгим запретом на движения лица и камеры'
+intent_tags:
+- client_in_clip
+use_when: 'Шаблон «человек за рулём»: картинка с блоком identity-lock и негативами, затем анимация, где двигается только улица за окном, микро-руль и моргание.'
+inputs:
+- фото лица/портрет человека
+- логотип
+steps:
+- n: 1
+  action: 'Nano Banana Pro: фото (лучше в профиль) + промпт.'
+  tool:
+  - Nano Banana
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Kling 2.6: картинка + промпт анимации.'
+  tool:
+  - Kling
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "Катаем на Audi RS 6 Avant по городу\U0001F6FB\n\nАлгоритм следующий:\n1️⃣ Заходим в бот, загружаем свое фото (желательно в профиль), открываем редактор, выбираем режим Nano Banana Pro \U0001F916, и вставляем\
+  \ этот промпт :\n\nЧеловек из референс-фото за рулём Audi RS 6 avant по городу — одна рука на руле.\nИспользуйте загруженные селфи в качестве точного эталона для идентификации лица.\nНЕ изменяйте и не\
+  \ улучшайте лицо.\nСоздайте ультрареалистичное кинематографическое изображение в формате 4K того же мужчину за рулём черного Audi RS 6 avant на Новом Арбате ночью. Блокировка идентификации (критически\
+  \ важна)\nСохраните точно:\nФорму и цвет глаз\nТон кожи и естественную текстуру (видимые поры)\nПропорции лица\nБез сглаживания. Без улучшения. Без улучшения с помощью ИИ.\nДетали автомобиля и позы\n\
+  Интерьер: Audi RS 6 avant, чёрная кожа с красной строчкой, отделка из карбона, видимая цифровая приборная панель.\n\nПоза:\nЛевая рука держит руль в положении «10 часов»\nПравая рука расслабленно лежит\
+  \ на центральной консоли в руке смартфон iphone 17pro черный\nЕстественный угол запястья\nОтсутствие жесткости роботизированной руки\nРеалистичная анатомия пальцев (5 пальцев, без искажений)\nРемень безопасности\
+  \ виден на груди\nВыражение лица:\nСпокойное, сосредоточенное\nГлаза смотрят на дорогу\nРот закрыт\nУверенное нейтральное выражение лица\nОкружающая среда\nДорога, новый Арбат, ночь\nНебольшое размытие\
+  \ движения только за окном\nИнтерьер остается четким\nКамера\nРакурс со стороны пассажира, показывающий:\nВерхнюю часть туловища\nРуль с логотипом Audi RS 6 avant\n\nЧастично видна приборная панель\n\
+  Объектив: 35 мм\nМалая глубина резкости\nЕстественные тени\nЦвет и качество\nУльтрафотореалистичное изображение\nАвтомобильный коммерческий стиль\nСбалансированное Экспозиция\nБез перенасыщения\nБез преувеличения\
+  \ HDR\nРеалистичные цвета\nСильный негативный эффект\nИзменение лица\nИзменение личности\nИзменение цвета глаз\nИзменение зубов\nСглаживание кожи\nПластичная кожа\nЛишние пальцы\nОтсутствующие пальцы\n\
+  Искаженные руки\nИскажение руля\nИскажение логотипа\nИзменение модели автомобиля\nФальшивые отражения\nМультяшный вид\nГрафика видеоигры\nНЕГАТИВНЫЙ ПРОМПТ\nБез аниме\nБез эффекта CGI\nБез пластиковой\
+  \ кожи\nБез искажения лица\nБез лишних пальцев\nБез размытия лица\nБез стилизованного освещения\nБез артефактов ИИ\n✅Вы также можете изменить данный промт под себя, заменить название автомобиля и пол\
+  \ человека\n\n2️⃣ Далее, загружаете сгенерированное фото, открываем редактор, выбираем режим Kling 2.6\U0001F916\nи пишем такой промпт: \n\nUse the uploaded interior driving image as the exact base frame.\n\
+  Do NOT change:\nCamera angle\nFraming\nPerspective\nLighting direction\nCar interior layout\nFace identity\nHead direction\nPreserve exact facial identity:\nSame eyes, same skin tone, same hairline, same\
+  \ proportions.\nNo beautification. No reshaping.\nAnimation Instructions\nCreate a realistic cinematic driving animation.\nThe camera must remain completely static.\nNo camera movement.\nNo zoom.\nNo\
+  \ reframe.\nNo angle shift.\nThe subject must:\nKeep head facing forward\nKeep eyes looking at the road\nNo talking\nNo lip movement\nNo expression change\nNo head turning\nAllowed motion only:\nVery\
+  \ subtle natural blink\nMinimal breathing movement\nSlight micro steering adjustment\nOutside environment moving naturally (buildings and road motion blur)\nDriving Physics\nCar must remain grounded on\
+  \ road\nNatural suspension movement\nRealistic road speed\nNo floating\nNo exaggerated motion\nQuality\nUltra photorealistic\n4K cinematic\nAutomotive commercial realism\nNatural color grading\nStrong\
+  \ Negative Prompt\nhead turn\neye movement change\ntalking\nlip sync\nexpression change\ncamera shake\ncamera movement\nangle shift\nidentity drift\nface change\nskin smoothing\nfloating car\ngame graphics\n\
+  \n✔️Готово\n\n\U0001F916 Генерировать такой контент можно здесь➡️\n@AiGraff_bot"
+output:
+  format: mp4
+  resolution: 4K
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://t.me/AlisPromptX/249
+duplicates_of: []

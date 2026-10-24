@@ -1,0 +1,92 @@
+id: 107_3d_blockout_one_gen_29s_seedance25
+source_file: 107_3d_blockout_one_gen_29s_seedance25.md
+title: '29 секунд одной генерацией: 3D-блокинг (цветные болванки) как видео-референс камеры и мизансцены + 5 референсов'
+intent_tags:
+- seamless_series
+- motion_transfer
+use_when: 'Сцена собирается в 3D (Higgsfield 3D Jutsu) плоскими цветными блоками в реальном масштабе; анимируется 29-секундный блокинг-ролик с камерой и склейками по секундам, у каждой фигуры свой цвет
+  (синий — герой, оранжевый — охотники, серый/красный — жители). Seedance 2.5 получает 5 референсов: стартовый '
+inputs:
+- видео-референс (движение/клип)
+- стартовый кадр
+- аудио/голос
+steps:
+- n: 1
+  action: Собрать площадку в 3D болванками.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Анимировать блокинг 29 с: камера, 3 склейки, цвет = роль.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: 29 с
+  aspect: unknown
+- n: 3
+  action: 'Референсы в порядке: стартовый кадр, @Video1, @Image1, @Image2, @Audio1.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: 'Промпт блоками: состав, роль каждого рефа, тайминги склеек, камера, действие по окнам, игра, физика, локи персонажей, география + правило 180°, свет, звук, стиль.'
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 5
+  action: Черновик 480p → затем качество выше.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: previous_step_output
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  First time it actually worked: 29 seconds, full camera moves, one single generation on Seedance 2.5 (3D blockout underneath)
+  u/47studios r/HiggsfieldAI score 20 created_utc 1792179747
+  https://www.reddit.com/r/HiggsfieldAI/comments/1x7pxab/
+
+  # Body
+
+  One generation, one prompt, 3 hard cuts. The top half is the final shot (Seedance 2.5, 480p). The bottom half is the 3D blocking video I used as a reference.
+
+  **How I made it:**
+
+  1. **Built the set in 3D first.** The village square at real scale in Higgsfield 3D Jutsu: tower, stalls, road, houses. Just flat-coloured blocks, no textures.
+  2. **Animated a 29 s blocking video.** Camera moves and cuts timed to the second. Each figure has a colour (BLUE = main character, ORANGE = hunters, GREY/RED = villagers), and each one walks its own path.
+  3. **Gave the model 5 references:** a start image, the 3D video, a character sheet, the poster, and the voice line.
+  4. **Wrote the prompt in fixed blocks:** cast count, what each reference is (*copy the camera and positions from the 3D, never its colours or shapes*), cut times, camera, action per time window, acting, physics, character locks, set geography and the 180° rule, lighting, audio and style.
+  5. **Ran a cheap 480p draft first** to check the camera and blocking before paying for higher quality.
+
+  The model is much better at copying a camera move than at inventing one from words, and the 3D gives it something to copy.
+
+  Below are the references in order and the full prompt exactly as I sent it.
+
+  **References (in this order):**
+
+  1. **Start image**: first frame, a top-down drone view of the village entrance
+  2. u/Video **1**: 3D blocking video of the whole clip (camera + colour-coded figures)
+  3. u/Image **1**: character sheet of Captain Hale
+  4. u/Image **2**: the REWARD poster
+  5. u/Audio **1**: Hale's voice line
+output:
+  format: mp4
+  resolution: 480p
+  aspect: unknown
+done_criteria: unknown
+confidence: C
+prompt_completeness: complete
+notes: полный промпт (в посте анонсирован, в тексте отсутствует); похожий метод уже был в схеме 43
+source_url: https://www.reddit.com/r/HiggsfieldAI/comments/1x7pxab/
+duplicates_of: []

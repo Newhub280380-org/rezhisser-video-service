@@ -1,0 +1,61 @@
+id: 175_blow_out_pumpkin_light_moves_into_face_jump_scare_seedance25_10s
+source_file: 175_blow_out_pumpkin_light_moves_into_face_jump_scare_seedance25_10s.md
+title: 'Хэллоуин: задуваете свечу в тыкве — свет переходит в ваши глаза и рот, лицо становится живым фонарём, скример в камеру — Seedance 2.5, 10 с'
+intent_tags:
+- seamless_series
+use_when: 'Одно фото → один непрерывный кадр по грудь в полной темноте: свеча в тыкве гаснет, свет загорается внутри лица, проступает текстура тыквы, пауза, резкий выпад к камере с криком, обрыв в чёрное
+  на 9,7 с.'
+inputs:
+- аудио/голос
+- логотип
+steps:
+- n: 1
+  action: Шаг 1 — подготовить фото(ы) в хорошем качестве (см. пост).
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Шаг 2 — Seedance 2.5 с параметрами из поста (у автора — в боте @neyrosetkabot), фото + промпт из комментариев.
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: 5 с
+  aspect: unknown
+prompts_verbatim:
+- "=== https://t.me/nercpa/324 2026-10-22T10:48:53+00:00\n\U0001F44BНе задувай тыкву\n\n1. Заходите в бота @neyrosetkabot\n2. Выбираете ваше фото в хорошем качестве\n3. Выбираете режим Видео - Seedance\
+  \ 2.5 (10 сек, формат 9:16) и отправляете ваше фото с текстом из комментариев\n\nПРОМПТ В КОММЕНТАРИЯХ \n⬇️⬇️⬇️\n\n⚡️Генерация в один клик \n\n#видео #развлекательное\n  \n    Please open Telegram to\
+  \ view this post\n    VIEW IN TELEGRAM"
+- "Create a 10-second Halloween horror video in vertical 9:16, using @image1 as the only identity reference. Preserve @image's recognisable facial features, hairstyle, clothing and visual style. One continuous\
+  \ chest-up shot against absolute pitch-black darkness. The pumpkin's orange candlelight is the ONLY light source at the start, softly illuminating the subject's face from below and their hands. Everything\
+  \ beyond that light disappears into black. No visible room, background details, ambient light, blue light, moonlight, fill light or rim light. The subject holds a small carved jack-o'-lantern with both\
+  \ hands just below and beside their face. Keep the face and pumpkin together in frame until the final lunge. The camera remains fixed. \n0-2 seconds: The subject looks down at the pumpkin with a small,\
+  \ relaxed smile. Its candle flickers visibly through the carved eyes and grin.\n 2-4 seconds: They bring the pumpkin close to their mouth and gently blow into its carved opening. The candle goes out.\
+  \ \n4-5 seconds: The pumpkin extinguishes completely, plunging the entire image into black for a brief beat of approximately 0.3 seconds. Then the same orange candlelight ignites INSIDE the subject's\
+  \ eyes and mouth. The light has transferred from the pumpkin into the person. From this moment, their glowing face is the ONLY light source. The pumpkin remains extinguished and the background stays completely\
+  \ black. \n5-8 seconds: A supernatural transformation spreads across the face, revealed only by its internal orange glow. The skin develops subtle pumpkin texture and fine carved seams. The eyes become\
+  \ luminous jack-o'-lantern openings and the smile slowly becomes a jagged, glowing pumpkin grin. Keep the original face shape, nose, hair and distinctive features recognisable; the face itself becomes\
+  \ a living lantern. Preserve deep shadows and a completely black background.\n 8-9.2 seconds: The transformed subject stares directly into the camera, unnaturally still. Hold the recognisable glowing\
+  \ pumpkin face clearly. The sound falls silent, creating a short, tense pause. \n9.2-9.7 seconds: A sudden jump scare. Without warning or a preparatory movement, the subject lunges rapidly towards the\
+  \ fixed camera, bringing their glowing face into an extreme close-up. Their jagged grin snaps open as they release one short, piercing horror scream. The scream starts abruptly at full intensity at the\
+  \ exact instant the lunge begins: a frightening human scream with a harsh supernatural edge. No audible build-up or warning breath. The movement must be explosively fast, not slow motion or a gradual\
+  \ camera zoom. Keep the face readable and recognisable. Their hands keep holding the pumpkin below the frame.\n 9.7-10 seconds: Cut abruptly to complete black immediately after the face reaches the lens.\
+  \ End the clip in darkness. Sound: faint candle crackling at the beginning, a natural breath and soft extinguishing hiss, then a low supernatural rumble during the transformation. Complete silence from\
+  \ 8 to 9.2 seconds. At 9.2 seconds, synchronise a sudden, piercing horror scream precisely with the lunge and the mouth snapping open. Give it an immediate sharp attack and a brief low bass impact underneath.\
+  \ The scream is the dominant sound: short, startling and frightening, with a harsh supernatural edge, not a roar, growl, sustained howl or gradual rising shriek. Keep the recording clear without audio\
+  \ clipping. Cut the scream and all sound off abruptly with the final black frame at 9.7 seconds. No music or dialogue. Maintain natural hands, consistent identity and smooth motion before the sudden fast\
+  \ lunge. The effect is magical and bloodless. One continuous shot until the final cut to black. No additional characters, captions, logos or additional light sources."
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: Бот @neyrosetkabot платный — не запускался. Видео не смотрел.
+source_url: https://t.me/nercpa/324
+duplicates_of: []

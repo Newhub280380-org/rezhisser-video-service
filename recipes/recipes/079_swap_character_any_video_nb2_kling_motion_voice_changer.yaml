@@ -1,0 +1,60 @@
+id: 079_swap_character_any_video_nb2_kling_motion_voice_changer
+source_file: 79_swap_character_any_video_nb2_kling_motion_voice_changer.md
+title: '# 79 — Подмена персонажа в любом видео + подмена голоса: Nano Banana 2 → Kling 2.6 Motion Control («match video») → ElevenLabs Voice Changer'
+intent_tags:
+- talking_head
+- client_in_clip
+- motion_transfer
+use_when: '# 79 — Подмена персонажа в любом видео + подмена голоса: Nano Banana 2 → Kling 2.6 Motion Control («match video») → ElevenLabs Voice Changer'
+inputs:
+- стартовый кадр
+- аудио/голос
+steps:
+- n: 1
+  action: 'Image → Nano Banana 2, 2K: сгенерировать персонажа (в примере — инопланетянин-ведущий «Galaxy broadcast»), выбрать 1 из 4.'
+  tool:
+  - Nano Banana
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Вариант A, «персонаж в своём окружении»: Kling 2.6 Motion Control → картинка в Character, своё видео в Video → **match video** (точная копия движения; match image — держит композицию картинки)
+    → промпт пустой.'
+  tool:
+  - Kling
+  mode: Motion Control
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: "Вариант B, «персонаж в исходной сцене видео»: сначала в Nano Banana 2 — картинка персонажа (image 1) + **стартовый кадр видео** (image 2), дословный промпт:\n   `swap the man from @image2 with\
+    \ the alien from @image1`\n   → полученный кадр в Motion Control с тем же видео, match video."
+  tool:
+  - Nano Banana
+  mode: Motion Control
+  prompt: unknown
+  input_source: previous_step_output
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: 'Голос: Edit in Studio → клип на таймлайне → **Use voice changer** → выбрать голос → Change voice (speech-to-speech сохраняет подачу и тайминг).'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim: []
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: gaps
+notes: текст промпта для создания персонажа на экране не продиктован («we're simply going to type out our prompt»); ElevenCreative платный
+source_url: https://www.youtube.com/watch?v=ngBIJsjU8Kg
+duplicates_of: []

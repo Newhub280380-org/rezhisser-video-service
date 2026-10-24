@@ -1,0 +1,73 @@
+id: 092_hidden_camera_lecture_gptimage_wan30
+source_file: 92_hidden_camera_lecture_gptimage_wan30.md
+title: '«Скрытая съёмка на лекции»: фото человека → телефото-кадр → Wan 3.0'
+intent_tags:
+- client_in_clip
+- object_alive
+- vfx_effect
+use_when: Из обычного фото девушки делается «папарацци»-кадр на лекции (ChatGPT Image 2.5, 1:1), затем Wan 3.0 оживляет его на 5 секунд с поминутной раскадровкой 0–1/1–3/3–5 с. Эффект «тайно сняли на телефон».
+inputs:
+- фото лица/портрет человека
+steps:
+- n: 1
+  action: 'Бот → ChatGPT Image 2.5, 1:1: фото + промпт сцены в аудитории.'
+  tool:
+  - GPT Image
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: '1:1'
+- n: 2
+  action: 'Wan 3.0, 720p, 1:1, 5 с: картинка из шага 1 + видео-промпт с таймкодами.'
+  tool:
+  - Wan
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: previous_step_output
+  duration: 5 с
+  aspect: '1:1'
+prompts_verbatim:
+- |-
+  === https://t.me/veo3prompts/2746 2026-10-16T15:26:33+00:00
+  Скрытая съёмка на лекции
+
+  1) Переходи в бота, жми /start -> выбор модели -> ChatGpt Image 2.5 1:1 -> назад -> сгенерировать.
+
+
+  Use the woman from the attached photo as the reference. Keep her face, facial features, hairstyle, hair color and makeup exactly the same — she must be clearly recognizable as the same person.
+
+  Place her in a new scene: a candid telephoto photo in a university lecture hall during a lecture. She is sitting at a wooden tiered desk, wearing a black blazer over a simple black top, with papers and notebooks on her desk. She looks tired and bored, heavy eyelids, sleepy gaze, not posing, unaware of the camera.
+
+  Camera angle: the photo is taken from one or two rows below her and slightly to the side — a diagonal front-side angle, the camera is a bit lower than her and looks slightly up at her. Her body and face are turned in a three-quarter view, her gaze directed off to the side toward the lecturer, not at the camera. She is placed in the center of the frame, slightly higher than the foreground.
+
+  Around her: the tiered rows compressed by the telephoto lens. In the row behind her on the left, a girl with a laptop looking down; behind on the right, a guy in a light grey hoodie. A silver laptop on the desk behind her. In the foreground, out-of-focus shoulders, a grey sleeve and a laptop edge in the lower left, and a blurry head in the lower right corner partially covering the frame.
+
+  Shot on a 200mm telephoto lens, f/2.8, shallow depth of field, natural flat fluorescent classroom lighting, slightly muted colors, realistic skin texture, light film grain. Looks like a real candid photo secretly taken by a classmate from a lower row, documentary style, not a photoshoot.
+
+
+  2) Переходите в бот, /start -> выбор модели -> Wan 3.0 720р -> генерация по фото -> формат 1:1 -> 5 секунд
+
+
+  Realistic candid footage in a university lecture hall. The woman from the image sits at her desk, bored and sleepy, filmed with a telephoto lens from a lower side angle.
+
+  0–1s: she looks off to the side toward the lecturer with a tired, heavy-lidded gaze.
+  1–3s: her eyes slowly lower, her eyelids close, her head gently tilts and dips forward as if she is dozing off.
+  3–5s: she slowly blinks, opens her eyes and lifts her sleepy gaze back to the side.
+
+  Slow, calm, subtle movements, natural breathing, slight head sway, hair moves softly. Other students stay almost still. Fixed camera with very subtle handheld shake, no zoom, no camera movement, no cuts. She does not smile, does not talk, does not look at the camera. Face stays consistent with the image. Documentary style, natural classroom lighting.
+
+
+  Сгенерировать можно тут: @Veo3_official_bot(Seedance 2.5)
+
+  Veo3 | Banana News
+output:
+  format: mp4
+  resolution: 720p
+  aspect: '1:1'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://t.me/veo3prompts/2746
+duplicates_of: []

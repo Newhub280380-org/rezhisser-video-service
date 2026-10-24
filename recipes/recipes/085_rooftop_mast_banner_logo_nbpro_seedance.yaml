@@ -1,0 +1,65 @@
+id: 085_rooftop_mast_banner_logo_nbpro_seedance
+source_file: 85_rooftop_mast_banner_logo_nbpro_seedance.md
+title: '# 85 — Вы на шпиле Эмпайр-Стейт с флагом-логотипом бренда: 4 референса (лицо, лого, сцена) → Nano Banana Pro стартовый кадр → Seedance 2.0 подъём, флаг, поза'
+intent_tags:
+- product_ad
+- client_in_clip
+- meme
+use_when: 'Брендовый вирусный формат: человек на огромной высоте держит большой баннер с вашим логотипом, логотип читается чётко. Промпты дословно, лого и одежда меняются.'
+inputs:
+- стартовый кадр
+- аудио/голос
+- логотип
+steps:
+- n: 1
+  action: 'Nano Banana Pro: фото себя (@image 1), лого (@image 3), референс сцены (@image 4) + промпт шага 1.'
+  tool:
+  - Nano Banana
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Seedance 2.0: картинка + промпт шага 2 (в нём «SOYUZ AI LAB logo» — заменить описанием своего логотипа).'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "Промпты для трендового видео с вершины Empire State Building\n\nШАГ 1: создаем стартовый кадр с собой и с лого/надписью на баннере\n→ заходим в Nana banana \n→ загружаем референсные фотографии (себя\
+  \ и лого)\n→ вставляем промпт Кинематографичный вертикальный кадр 9:16 в документальном стиле, будто аэросъёмка с дрона/вертолёта на огромной высоте над Манхэттеном: молодой мужчина стоит на узкой платформе\
+  \ антенного шпиля-мачты Эмпайр-Стейт-Билдинг, уверенно и триумфально. ВАЖНО — он реально страхуется на высоте: одной рукой крепко держится за металлическую конструкцию мачты (сжимает каркасную скобу/поручень\
+  \ решётки), другой рукой придерживает верхний угол большого чёрного флага-баннера, вытянутого вправо; корпус слегка отклонён от мачты, ноги устойчиво стоят на скобах площадки. Круто позирует. Композицию,\
+  \ кадрирование, ракурс и настроение взять с прикреплённого четвёртого фото (референс сцены @image 4): та же мачта с круглой площадкой, каркасными кольцами-ограждением и красным авиационным маяком; та\
+  \ же дымчатая дневная панорама — бескрайняя сетка кварталов Манхэттена, река, дальний горизонт в смоге заполняют нижние две трети и фон; такая же поза со страховкой за мачту, как у человека на @image\
+  \ 4. НО человек — строго один мужчина с лицом с @image 1. На флаге идеально чётким логотипом с прикреплённого третьего фото (@image 3) Флаг — большой прямоугольный баннер, натянут вправо, ловит ветер\
+  \ с лёгкими волнами. Одет в облегающую чёрную футболку (руки открыты, тату видны), оверсайз широкие чёрные брюки свободного кроя и массивные чёрные ботинки. Свет и палитра: ровный пасмурный дневной свет,\
+  \ плотная городская дымка/смог, приглушённые серо-голубые десатурированные тона, мягкие тени, репортажный аэрореализм. Снято на Sony A7R V, объектив 50мм, f/7.1, ISO 200, большая ГРИП. Высокая зернистость,\
+  \ реалистичная текстура кожи. Игнорировать водяные знаки с референса.\n\nШАГ 2: делаем анимацию\n→ заходим в seedance 2.0\n→ загружаем фото\n→ вставляем промпт\nA tattooed man in a fitted black t-shirt,\
+  \ oversized black pants and heavy black boots, wearing black futuristic mirrored mask sunglasses, clambers up the lattice antenna mast of the Empire State Building at extreme altitude, gripping the steel\
+  \ frame and pulling himself higher. He reaches the top and grabs a rung to steady himself as a large black banner streams wide in the wind, filling much of the frame with a big crisp pink SOYUZ AI LAB\
+  \ logo — a circular crosshair emblem with a four-point star and wordmark, magenta on black. Finally, holding the mast with one hand, he flexes his other arm in a confident bicep pose. The vast hazy Manhattan\
+  \ grid, river and smoggy horizon lie far below.\nCamera cranes upward following his climb, then eases around to reveal the big banner and the city, settling on his bicep flex.\nOvercast hazy daylight,\
+  \ muted desaturated grey-blue tones, soft shadows, cinematic film grain, aerial realism.\nAudio: roaring high-altitude wind, metal creak, fabric snapping and rippling, faint distant city hum.\nMaintain\
+  \ consistent identity, face, curly black hair and beard throughout; keep the right-arm tattoo sleeve and hand rose consistent; reproduce the flag logo exactly from the reference, crisp readable, undistorted\
+  \ and large in frame; anatomically correct hands gripping the mast, smooth stable camera; avoid warping the logo, avoid morphing the face, avoid jitter.\n\nВидео готово."
+- "Как адаптировать тред со стоящими на шпиле руферами\U0001F485\n\nПока инфоповод актуален - еще пару дней - можно на генерировать свои послания на баннере.\n\nИспользуем любой агрегатор, я работаю в этом\
+  \ боте\n\nШАГ 1\n\nВыбираем «Дизайн с ИИ-Нано Банана». Отправляем фото руферов (можно сделать скриншот из оригинального видео: ищем по тегу руферы Нью Йорк) ИЛИ можете взять фото, которое я выложу тут\
+  \ в качестве исходника. \n\nИ просим внести в фото свои изменения:\n_____\n\nСделай похожее фото с этими же людьми. Замени текст на развивающемся баннере на «….». Баннер «…» цвета, текст «….» цвета. Реалистичное\
+  \ изображение. Одежда и фон неизменны. Сделай элементы на фото четкими. \n_____\n\nЛучше брать качество 2к-4к.\n\nШАГ 2\n\nВыбираем Видео будущего-Kling, отправляем фото со своим баннером, которое получилось\
+  \ на шаге 1.\n\nПромпт:\n\n_____\n\nFabric flutters in the wind; a young man and woman stand there, moving slightly in a realistic manner; the camera pans left, circling around them; their clothes sway\
+  \ gently in the breeze."
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: референс-фото сцены (@image 4) — картинка в посте
+source_url: https://t.me/directorsoyuz/3513
+duplicates_of: []

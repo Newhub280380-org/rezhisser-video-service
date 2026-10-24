@@ -1,0 +1,71 @@
+id: 043_blender_previs_3d_blueprint_remake
+source_file: 43_blender_previs_3d_blueprint_remake.md
+title: 'Ремейк вирусного видео через 3D-предвизуализацию: покадровая разборка → Blender-манекены → Seedance заменяет манекенов на вашего героя'
+intent_tags:
+- product_ad
+- talking_head
+- client_in_clip
+- meme
+- motion_transfer
+use_when: 'Ремейк вирусного видео через 3D-предвизуализацию: покадровая разборка → Blender-манекены → Seedance заменяет манекенов на вашего героя'
+inputs:
+- видео-референс (движение/клип)
+steps:
+- n: 1
+  action: unknown (в источнике нет нумерованных шагов; см. prompts_verbatim)
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  here’s how to recreate any viral video with your ai ugc influencer using claude opus 5.5 + blender + seedance 2.5...
+
+  the trick is giving seedance a 3d blueprint instead of a text prompt
+
+  but there’s a smart way to set it up:
+
+  - step 1: pick a viral video whose shots and flow you want to copy (a trend, a ugc ad, a scene)
+  - step 2: ask opus 5.5 to analyze it and pull 15 frames per second, mapping every shot, angle and camera move
+  - step 3: ask opus to rebuild it in blender with simple figures, the set, cameras and motion, then export a 30-sec mp4
+  - step 4: create your ai ugc influencer refs: face, outfit, setting
+  - step 5: give seedance 2.5 the blender mp4 as motion reference plus your influencer refs
+  - step 6: regenerate the 2-3 shots that broke, then cut it together
+
+  who does what:
+
+  - opus 5.5: breaks down the shots, builds the previs, writes the prompts
+  - blender: camera angles, timing, crowd movement
+  - seedance 2.5: turns grey dummies into your influencer, photoreal
+  - you: pick the video, fix the broken shots
+
+  tell seedance the blender render is for motion only: “use the reference for camera and movement, not the look
+
+  photoreal skin, lighting and textures.” if you skip that line, seedance copies the cheap 3d render
+- |-
+  How we remake a viral video without a remake app:
+
+  Step 1: Upload the source clip (MP4 or MOV, up to 10 min).
+
+  Step 2: Send it to our Video Analysis model. Ask for a shot-by-shot prompt: subject, action, camera moves, scene, timing.
+
+  Step 3: Take that prompt and send it to Seedance 2.5, with the original clip as a reference video.
+
+  Step 4: Swap in your own character or product with a reference image. Keep the motion.
+
+  Two API calls. No subscription.
+
+  Video Analysis bills by tokens. Seedance 2.5 bills per clip length and resolution.
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: Серые манекены в Blender дают модели траектории камеры и толпы без внешности оригинала; фраза «use the reference for camera and movement, not the look» защищает от копирования дешёвого 3D.
+confidence: B
+prompt_completeness: partial
+notes: —
+source_url: null
+duplicates_of: []

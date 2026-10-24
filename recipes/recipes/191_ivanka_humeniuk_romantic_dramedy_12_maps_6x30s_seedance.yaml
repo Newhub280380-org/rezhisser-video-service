@@ -1,0 +1,546 @@
+id: 191_ivanka_humeniuk_romantic_dramedy_12_maps_6x30s_seedance
+source_file: 191_ivanka_humeniuk_romantic_dramedy_12_maps_6x30s_seedance.md
+title: 'Короткий фильм ~3 мин с диалогами: 12 «карт» (листы персонажей, реквизит в 2 состояниях, локации, схема рассадки) → 6 сцен Seedance 2.5 по 30 с с FOV, жёсткими склейками и фиксированными голосами'
+intent_tags:
+- talking_head
+- seamless_series
+use_when: 'Автор: «Dropping all the prompt maps + animation (Seedance 2.5) settings for Scene 1 in the thread below! Full workflow for the rest of the scenes is in my G-Drive link.» Принцип: каждая сцена
+  получает только нужные «карты» (@image1…@imageN): трёхпанельные листы персонажей (портрет — единственный ре'
+inputs:
+- фото лица/портрет человека
+- фото в полный рост
+- стартовый кадр
+- аудио/голос
+- фото локации/города
+steps:
+- n: 1
+  action: Карты 01–12 (IMAGE PROMPT 01–12 в PDF).
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Сцена 1 — промпт в треде (ниже), сцены 2–6 — ANIMATION PROMPT 02–06 в PDF.
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: Seedance 2.5, 16:9, 30 с на сцену → монтаж 6 сцен.
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: 30 с
+  aspect: '16:9'
+prompts_verbatim:
+- |-
+  ===== 1907533398794510336 2113582633879748811 2026-10-23T10:45:43.000Z [{'id': '2113582628024566084', 'type': 'replied_to'}]
+  📌Full workflow & all other scenes here:
+  https://t.co/nic9h2UoNj
+  📌 PROMPT 1 (Girl map):
+  Create a three-panel character reference sheet of the woman in @image1 in a single wide 16:9 image.
+  Preserve her exact facial identity, blue eyes, dark espresso-brown hair color, skin tone and natural facial
+  proportions from @image1.
+  The left half contains two full-body views side by side: front and back, identical in scale, with both figures
+  completely visible from above the bun to below the shoes. The right half contains one large
+  head-and-shoulders portrait, facing directly into the camera. All three views share one continuous neutral
+  mid-grey studio backdrop, matching soft lighting and the same warm film color treatment.
+  In the full-body front view, replace the facial features with a smooth, softly blurred skin-toned oval. Keep the
+  hairstyle and head silhouette intact. The large portrait on the right is the only detailed face reference.
+  Restyle her exceptionally long, thick hair into a high, generously sized, loosely sculpted bun at the crown.
+  Preserve the fullness of her hair, with lifted roots and soft volume around the head. Two delicate curved
+  tendrils fall beside her temples toward her jaw, framing the outer edges of her face. Her eyebrows, blue eyes
+  and cheekbones remain clearly visible. The back view shows the gathered hair and the substantial rounded
+  shape of the bun. The hairstyle feels elegant and practical, like a beautiful café waitress in a romantic film
+  from around 2000.
+  Dress her in a fitted ivory fine-knit top with short sleeves and a modest scoop neckline, tucked into a
+  high-waisted black tailored pencil skirt ending at the knees. The skirt has a small functional back vent. Over it,
+  she wears a short deep-burgundy cotton waist apron, extending from the waist to mid-thigh, with two discreet
+  rectangular front pockets. Narrow apron ties wrap around her waist and form a neat bow at the center of her
+  back, clearly visible in the rear view. Her shoes are simple black leather ballet flats with gently rounded toes
+  and low flat heels. Small plain gold stud earrings complete the outfit.
+  Her figure is tall and slender, with a defined narrow waist, long legs and a graceful neck. The clothing follows
+  her natural proportions, with realistic knit texture, tailored seams and soft cotton folds around the apron ties.
+  02
+  The same outfit, fit, hem lengths and hairstyle appear in all three views.
+  In the front view she stands upright, square to the camera, shoulders level, weight evenly balanced, arms
+  relaxed at her sides and hands empty. The back view shows the identical stance turned fully away. In the
+  portrait her head is upright, chin level and both eyes look directly into the lens. Her lips are gently closed with
+  a faint, relaxed smile. Preserve the recognizable face from @image1, with natural skin texture, visible pores
+  and fine facial hairs.
+  Soft frontal studio lighting keeps her features and clothing clearly readable, with gentle shading under the
+  chin and soft contact shadows beneath the shoes. The grey backdrop remains plain throughout the image.
+  The composition consists entirely of the three views and the seamless backdrop.
+  Maintain a glamorous late-1990s to early-2000s 35mm film publicity look: warm natural skin, creamy ivory
+  fabric, rich burgundy cotton, deep readable blacks, fine organic grain and restrained highlight glow. Her face,
+  blue eyes, hair strands and garment details remain clearly resolved. Clean presentation with uninterrupted
+  backdrop between the views.
+
+  📌 PROMPT 2 (Guy map):
+  Create a three-panel character reference sheet of the man in @image1 in one wide 16:9 image. Preserve his
+  exact face, eye color, skin tone, facial proportions and hairstyle from the reference, including the natural
+  swept-back waves and the loose strand near his forehead.
+  The left half of the image contains two full-body figures side by side: a straight-on front view and a complete
+  back view, identical in scale, both visible from above the hair to below the shoes. The right half contains one
+  large head-and-shoulders portrait looking directly into the camera, with his entire hairstyle inside the frame.
+  All three views share one continuous neutral mid-grey studio backdrop.
+  On the full-body front figure, replace the facial features with a smooth, softly blurred skin-toned oval,
+  retaining the head silhouette and hair. The large portrait on the right is the single detailed face reference.
+  He is tall, approximately 188 cm, with broad shoulders, a lean athletic build, a defined waist and long legs. His
+  proportions remain natural and identical across all three views.
+  Dress him in an elegant camel-colored wool-and-cashmere overcoat reaching just below the knees. The coat
+  has broad notched lapels, softly structured shoulders, a single-breasted three-button front, discreet welt
+  pockets and a single center-back vent. He wears it fully unbuttoned, its front panels hanging naturally to
+  reveal the clothing underneath. The fabric is substantial, softly brushed and richly textured, with realistic
+  weight and long vertical folds.
+  Under the overcoat, he wears a dark chocolate-brown tailored wool blazer with a two-button front, worn
+  unbuttoned, over a pale-blue cotton shirt with a pointed collar and the top button undone. The shirt is tucked
+  neatly into high-waisted charcoal-grey wool trousers with a single pleat on each side, a relaxed straight leg
+  and a slight break over the shoes. A dark-brown leather belt with a small brushed-metal buckle completes the
+  waist.
+  His shoes are polished dark-brown leather penny loafers with matching dark socks. A slim rectangular gold
+  wristwatch on a dark-brown leather strap sits on his left wrist, partly visible beneath the cuff. The styling has
+  04
+  the understated elegance of a wealthy young man in a romantic film set around 2000.
+  In both full-body views, he stands upright with shoulders level, weight evenly balanced and arms relaxed
+  slightly away from his sides so the coat silhouette remains readable. His hands are empty. The back view
+  shows the coat's full length, center seam, vent and natural drape.
+  In the large portrait, his face is strictly frontal, head upright, chin level and both eyes directed into the lens.
+  His lips are relaxed and closed. Preserve the exact facial structure, subtle beard shadow and natural skin
+  texture visible in @image1. The portrait includes the camel coat lapels, brown blazer and pale-blue shirt
+  collar.
+  Soft, even studio lighting keeps his face and all clothing details clearly readable, with gentle facial shading,
+  broad highlights on the wool and soft contact shadows beneath both pairs of shoes. The backdrop is plain and
+  continuous, with clean empty space separating the three views.
+  Maintain warm late-1990s to early-2000s 35mm film color: natural warm skin, rich camel wool, deep
+  chocolate tailoring, soft pale-blue cotton and readable charcoal shadows. Fine organic film grain and
+  restrained highlight glow give the image a tactile cinematic finish while the face, hair and garment
+  construction remain clearly resolved.
+
+  📌 PROMPT 3 (Cake box map):
+
+  A photorealistic pastry packaging reference sheet on a uniform medium-grey seamless studio background, horizontal 16:9 composition, divided into two equal side-by-side views. The surface beneath both boxes and the background are the same neutral grey.
+
+  On the left, a closed rectangular ivory cardboard pastry box with a fitted hinged lid, viewed from a slightly elevated three-quarter angle. Matte cardboard, subtle paper texture, clean folded edges and a plain unprinted surface.
+
+  On the right, exactly the same box at the same scale, with its hinged lid fully raised behind it. A higher three-quarter viewing angle clearly reveals the contents: six individual chocolate mousse pastries arranged in two rows of three, each on a small gold pastry board. Comfortable spacing makes every pastry’s complete silhouette visible.
+
+  Each pastry has a playful, stylized penis shape: a smooth rounded elongated form with two rounded lobes at the base, recognisable as a humorous bachelorette-party confection. All six share the same shape and size, with glossy milk-chocolate mirror glaze and a tiny touch of edible gold leaf. Smooth moulded chocolate surfaces and appetising highlights give them the appearance of carefully crafted patisserie desserts.
+
+  The box dimensions, ivory colour and construction are identical in both views. Neatly fitted ivory food-safe paper lines the interior. Both boxes are fully visible with comfortable grey space around them.
+
+  Soft studio lighting, gentle contact shadows, clear high-resolution detail and natural optical sharpness with restrained sharpening. Subtle fine film grain and softly warm highlights, consistent with late-1990s cinematic photography. The entire surrounding background remains solid neutral medium grey.
+
+  📌 PROMPT 4 (Cafe map):
+
+  Create a cinematic location reference photograph of an intimate, elegant neighbourhood café in the year 2000, shortly before closing on an autumn evening. One wide horizontal 16:9 image showing a single coherent interior, photographed at eye level from the customer side, looking diagonally toward the service counter. A natural 28mm lens perspective with straight architectural lines and clearly readable room geography.
+
+  A long service counter occupies the right half of the composition, running from the foreground toward the back wall. It has a polished dark walnut front with recessed wooden panels and a warm ivory stone countertop. The central serving section is a broad, clear, uninterrupted surface, ready for a pastry box and a conversation between a standing customer and the waitress behind the counter. This section of the counter is bare, with the stone surface fully visible.
+
+  Behind the counter is a comfortable working aisle. The rear service wall contains dark wooden shelves, neatly arranged porcelain dishes, a stainless-steel espresso machine and a small period-appropriate cash register at the far end. A wooden doorway in the back wall leads to the kitchen. A small glass pastry display stands at the far end of the counter, leaving the main serving area open.
+
+  On the left side of the room, three small dark wooden tables stand beside burgundy leather banquette seating along the wall. Each table has two bentwood chairs and a small glass sugar dispenser. Above the banquette hang framed botanical prints and warm brass wall sconces with ivory shades. The walls are painted creamy butter yellow above dark wooden wainscoting. The floor is laid with small cream and muted terracotta tiles.
+
+  At the far left, tall street-facing windows and a glazed wooden entrance door reveal a quiet city street at dusk. Soft, cool evening light enters through the windows, balanced by warm pools of light from the wall sconces and three opal-glass pendant lamps above the counter. The entrance, seating area, service counter and kitchen doorway are all clearly visible within the same spatially consistent room.
+
+  The café feels established, lovingly maintained and slightly worn: subtle patina on brass fittings, gentle wear on the leather seats, fine scratches in the wooden furniture and realistic texture in the plaster walls. The tables are neatly reset for the end of the evening. The room is unoccupied so its layout and furnishings are fully visible.
+
+  The visual atmosphere is a romantic feature film from 1999–2000, captured on 35mm film: warm amber practical lighting, creamy highlights, rich walnut brown, muted burgundy and natural shadow detail. Fine film grain, subtle halation around glowing lamps and soft highlight roll-off. Maintain enough depth of field to clearly describe the counter, seating and rear service wall. Photorealistic materials, believable proportions and an inviting, lived-in atmosphere. A clean cinematic location photograph filling the entire frame.
+
+  📌 PROMPT 5 (Animation prompt):
+  SCENE CONTEXT A 30-second scene in a neighbourhood café in the year 2000, near closing time. A headstrong waitress packs her handmade pastries. A wealthy customer approaches to pay, interrupts her work with questions, tastes a sample and asks her to pose as his girlfriend at dinner.  Play this as a lively romantic dramedy with friction, humour and unexpected attraction. She wants to finish her work and refuses to entertain his casual charm. He wants to keep her attention and finds himself having to earn it. Their reactions evolve naturally as they listen to each other.  ACTIVE REFERENCES @image1 — the waitress. Use the detailed portrait for her exact face and the full-body views for her work outfit and high loose bun. @image2 — the customer. Preserve his exact face, hair and clothing, including the unbuttoned camel overcoat. @image3 — the café architecture, counter, furnishings and dusk outside. @image4 — one ivory pastry box and its six chocolate novelty pastries. Preserve their shapes, chocolate glaze, gold decoration and individual gold boards. The panels show two states of the same box.  SPACE AND PROPS She stands behind the counter; he approaches on the customer side. In shared shots he is screen-left, she is screen-right. Keep the camera on the same side of their dialogue axis, maintaining matching eyelines.  The box begins open with five pastries inside. She is placing the sixth into the remaining space, holding its gold board. Beside the box is a small ivory plate with an additional matching dessert cut into two portions and a dessert fork. He samples this separate dessert; the six boxed pastries remain whole.  He carries a folded banknote in his left hand, ready to pay. His right hand is free. The central serving surface contains the box and tasting plate. Cups stay on the background shelves.  CAMERA AND EDITING 16:9, 30 seconds, real-time action. Film coverage with foreground depth, deliberate camera movement, expressive changes in shot size and motivated focus pulls. Hard cuts at the listed boundaries. Stable focal length within each shot. Let performances flow inside the shots, with natural listening and gestures overlapping speech.  0.0–3.0 SECONDS 63° FOV. A short lateral tracking shot moves along the customer side of the counter with the approaching man, revealing the waitress already at work beyond him. The polished counter creates a strong diagonal into the frame. She places the final pastry into the box. He stops opposite her, notices the contents and suppresses a laugh. She remains occupied with packing.  HARD CUT — 3.0–5.5 SECONDS 47° FOV. Low oblique view across the open box: the pastries are sharp in the foreground, his face visible beyond them. Pull focus from the chocolate shapes to his amused expression as he looks up at her. MAN: “Is this the new menu?” He is teasing, expecting an easy smile in return.  HARD CUT — 5.5–10.5 SECONDS 47° FOV. Side-on medium shot of the waitress, her face and hands visible, his coat softly framing one edge. WOMAN: “Test batch for a bachelorette party. My coworkers approved.” She answers with dry impatience while straightening the paper inside the box. She gives him a pointed look on “approved,” then slides the tasting plate toward him with a brisk, controlled gesture: he can taste it and let her finish. The plate stops within his reach. Her delivery has bite and personality; her attention moves naturally between him and her work.  HARD CUT — 10.5–14.5 SECONDS 47° FOV. Counter-height three-quarter medium shot of the man, showing his face and right hand, with the box edge in the foreground. He takes a small forkful from the cut dessert. As he tastes, his teasing manner gives way to spontaneous appreciation. He finishes the bite and lowers the fork onto the plate. She is visible at the edge of frame, briefly watching to see whether he likes it before returning to her work. The banknote remains in his left hand.  HARD CUT — 14.5–20.5 SECONDS 47° FOV. A layered two-shot looking diagonally along the counter, both faces readable. The camera makes a gentle lateral move that settles as their eyes meet. MAN: “You make these yourself?” His interest is genuine now. WOMAN: “After my shifts. I'm saving for my own bakery.” She answers firmly, with pride beneath the impatience. For a moment she engages fully because her bakery matters to her. Then she returns her attention to the box. He watches her and considers his next words.  HARD CUT — 20.5–24.0 SECONDS 29° FOV. Medium close-up of the man from beside her shoulder. A slow, restrained dolly inward makes the conversation feel more personal. MAN: “Have dinner with me tonight?” He attempts an easy invitation, but there is a real question in his eyes. Allow a short listening beat after the line.  HARD CUT — 24.0–30.0 SECONDS 29° FOV. Close-up of the waitress from his eyeline, her face in three-quarter view and his blurred shoulder at the edge. Begin with a very slight forward camera move. She looks up from her work and gives him a brief, sceptical half-smile, amused by his nerve. MAN, naturally offscreen: “With my family. As my girlfriend.” His voice hesitates briefly between the two phrases.  Stay on her throughout his clarification so the audience sees it land. Her half-smile disappears; she stops what she is doing and looks directly at him with an immediate, incredulous reaction. She lets out a short disbelieving breath and settles her right palm on the counter. The camera settles with her. Hold the final moment as she silently sizes him up, ready to challenge him. End after the hand movement is complete, on her living reaction.  ACTING Give the actors room for spontaneous conversational behaviour. She is spirited, quick and proud, with dry humour and a short tolerance for being patronised. Her annoyance changes with the conversation: she dismisses his teasing, briefly cares about his response to her baking, defends her ambition and finally reacts to the audacity of his request.  He starts charming and self-assured, adjusts when she gives him little encouragement, becomes genuinely impressed by the dessert and risks the invitation. His confidence becomes less certain as he waits for her response.  Use connected reactions, natural breaths, shifts of attention and expressive vocal rhythm. Each person listens while the other speaks. Movements arise from packing, tasting and trying to hold or end the conversation. Keep their faces recognisable and their physical behaviour grounded.  LIGHTING AND COLOUR Preserve the café's amber pendant lamps, brass sconces and cool dusk windows. Soft directional side lighting shapes their faces, with darker shadow cheeks and gentle reflected fill preserving their eyes. Photograph from the shadow side. Loose hair, camel wool and chocolate glaze catch warm highlights.  Fixed 4000K white balance. Rich walnut browns, burgundy leather, creamy practical highlights and deep textured shadows. Natural skin colour beneath the warm light. Consistent lighting across all angles.  AUDIO — FIXED CHARACTER VOICES WOMAN VOICE: Adult woman in her mid-twenties; medium pitch, warm clear mezzo speaking voice with a lightly husky lower register, neutral General American accent, natural conversational rhythm, crisp intelligible consonants and restrained expressive inflection. MAN VOICE: Adult man in his early thirties; medium-low pitch, warm resonant baritone with a subtle dry rasp, neutral General American accent, measured conversational rhythm, clear articulation and understated playful inflection.  Preserve these vocal identities. Her delivery is dry, spirited and impatient, becoming firm when discussing her bakery. His delivery moves from playful confidence to sincere curiosity and slightly hesitant persuasion.  Use the written English dialogue exactly. Clear turn-taking and accurate lip synchronisation for visible speakers. His final clarification is heard offscreen while the camera stays on her reaction.  Quiet café room tone, distant traffic, paper rustle, a soft plate scrape, the fork touching porcelain and her final palm contact. Keep dialogue clear and foregrounded.  FILM LOOK Late-1990s theatrical romantic dramedy captured on visibly textured 35mm film. Organic moving grain is clearly perceptible across midtones, skin and shadows at normal playback size. Warm halation surrounds the glowing lamps; bright reflections bloom gently. Rich film-print contrast, creamy highlight roll-off and natural optical sharpness with restrained edge enhancement. Preserve readable eyes, realistic skin and fabric detail beneath the film texture. Natural motion blur and 24 fps cinematic cadence.  CONTINUITY After packing, all six boxed pastries remain whole and in place. The separate tasting dessert retains its missing bite. The box stays open on the same section of counter. After the slide, the tasting plate and fork remain on his side. His banknote stays in his left hand. Maintain exact faces, hair, clothing, screen direction, café geometry and dusk throughout. Reference sheets guide appearance; the output is full-frame cinematic footage.
+- "IMAGE PROMPT 01\n\n\n\n\nPrompt is available in the thread of the main post by @ivanka_humeniuk.\n\n\n\n\n                                                                          01\n\fIMAGE PROMPT\
+  \ 02\n\n\n\n\nPrompt is available in the thread of the main post by @ivanka_humeniuk.\n\n\n\n\n                                                                          02\n\fIMAGE PROMPT 03\n\n\n\n\n\
+  Prompt is available in the thread of the main post by @ivanka_humeniuk.\n\n\n\n\n                                                                          03\n\fIMAGE PROMPT 04\n\n\n\n\nPrompt is available\
+  \ in the thread of the main post by @ivanka_humeniuk.\n\n\n\n\n                                                                          04\n\fIMAGE PROMPT 05\n\n\n\n\nCreate a cinematic character reference\
+  \ sheet of the woman in @image1, dressed for dinner at a wealthy\nfamily’s home in the year 2000. Preserve her exact facial identity, eye colour, skin tone, facial proportions and\nrich dark-brown hair.\n\
+  \nOne wide 16:9 image with three views against a seamless warm light-grey background. On the left, two\nequally sized full-body views, directly from the front and directly from the back, showing her entire\
+  \ figure and\nshoes. On the right, one large head-and-shoulders portrait with her entire hairstyle visible. The front full-body\nface is a softly blurred, featureless skin-toned oval; the large portrait\
+  \ provides the detailed facial reference.\n\nShe wears a beautiful pale powder-blue crepe dress with a square neckline, wide shoulder straps, a fitted\nbodice, a defined waist and a straight skirt ending\
+  \ just below the knees. A small centre-back slit allows natural\nmovement. The fabric has a delicate matte finish, realistic folds and subtle tailoring. Elegant matching\npale-blue leather pumps with\
+  \ pointed toes and slender 10-centimetre stiletto heels, small gold stud earrings\nand a fine gold chain with a tiny oval pendant complete the outfit. Her appearance feels carefully put together\nby a\
+  \ young woman wearing her favourite special-occasion dress.\n\nHer long dark-brown hair is loose, reaching her waist, with the same generous volume and swept-back front\nas the reference. Soft, broad\
+  \ waves fall down her back, with some hair resting over her shoulders. Her eyes\nand cheekbones remain clearly visible. Natural evening makeup, softly defined lashes, delicate rose blush and\nmuted rosy\
+  \ lips.\n\nShe is tall and slim with a defined waist. In the full-body views, she stands straight with relaxed shoulders,\narms naturally at her sides and empty hands. Both shoes and their complete heels\
+  \ are clearly visible within\nthe frame. In the portrait, her head is upright, chin level, looking directly into the camera with a gentle\nclosed-mouth smile. The same dress, hairstyle and jewellery appear\
+  \ consistently in all three views.\n\nA clear, high-resolution photograph with precise focus and natural optical sharpness. Fine facial features,\nindividual strands of hair, fabric texture and jewellery\
+  \ are distinctly resolved, with smooth tonal transitions\n\n\n\n                                                                                                                    05\n\fand restrained\
+  \ microcontrast. Skin retains realistic pores and delicate texture. Edges remain clean and\nnatural, with subtle, balanced sharpening.\n\nSoft flattering studio light. Romantic late-1990s film publicity\
+  \ photography, warm natural skin tones, delicate\npowder-blue fabric, subtle fine 35mm film grain and creamy highlights. Gentle halation is limited to the\nbrightest highlights, preserving clear facial\
+  \ and garment detail. A polished, readable character reference with\nunderstated period glamour.\n\n\n\n\n                                                                                             \
+  \                06\n\fIMAGE PROMPT 06\n\n\n\n\nCreate a three-panel character reference sheet of the man in @image1 in one wide 16:9 image. Use @image1\nas the exact facial identity reference and @image2\
+  \ as the reference for his body proportions and clothing\nbeneath the overcoat. Preserve his exact face, eye color, skin tone, facial proportions and hairstyle, including\nthe natural swept-back waves\
+  \ and the loose strand near his forehead. His indoor outfit consists of the\nchocolate-brown blazer, pale-blue shirt, charcoal trousers, belt, loafers and wristwatch described below. The\nblazer is his\
+  \ outermost garment in all three views.\n\nThe left half of the image contains two full-body figures side by side: a straight-on front view and a complete\nback view, identical in scale, both visible\
+  \ from above the hair to below the shoes. The right half contains one\nlarge head-and-shoulders portrait looking directly into the camera, with his entire hairstyle inside the frame.\nAll three views\
+  \ share one continuous neutral mid-grey studio backdrop.\n\nOn the full-body front figure, replace the facial features with a smooth, softly blurred skin-toned oval,\nretaining the head silhouette and\
+  \ hair. The large portrait on the right is the single detailed face reference.\n\nHe is tall, approximately 188 cm, with broad shoulders, a lean athletic build, a defined waist and long legs. His\nproportions\
+  \ remain natural and identical across all three views.\n\nDress him in the dark chocolate-brown tailored wool blazer visible beneath the overcoat in @image2. The\nblazer has notched lapels, softly structured\
+  \ shoulders, a single-breasted two-button front and a hem covering\nthe seat. He wears it unbuttoned, its front panels hanging naturally to reveal the shirt and belt. The wool has a\nfine visible weave,\
+  \ realistic weight and gentle folds at the elbows. The back view shows the blazer’s tailored\nwaist, center seam and single center-back vent.\n\nUnder the blazer, he wears a pale-blue cotton shirt with\
+  \ a pointed collar and the top button undone. The shirt\nis tucked neatly into high-waisted charcoal-grey wool trousers with a single pleat on each side, a relaxed\nstraight leg and a slight break over\
+  \ the shoes. A dark-brown leather belt with a small brushed-metal buckle\ncompletes the waist.\n\n\n\n                                                                                                 \
+  \                07\n\fHis shoes are polished dark-brown leather penny loafers with matching dark socks. A slim rectangular gold\nwristwatch on a dark-brown leather strap sits on his left wrist, partly\
+  \ visible beneath the cuff. Preserve the\ncolors and styling of these garments and accessories from @image2. The styling has the understated\nelegance of a wealthy young man attending a family dinner\
+  \ in a romantic film set around 2000.\n\nIn both full-body views, he stands upright with shoulders level, weight evenly balanced and arms relaxed\nslightly away from his sides so the blazer silhouette\
+  \ remains readable. His hands are empty. The back view\nshows the identical stance turned fully away. The same outfit, fit and hairstyle appear consistently across all\nthree views.\n\nIn the large portrait,\
+  \ his face is strictly frontal, head upright, chin level and both eyes directed into the lens.\nHis lips are relaxed and closed. Preserve the exact facial structure, subtle beard shadow and natural skin\n\
+  texture visible in @image1, including visible pores and fine facial hairs. The portrait includes the\nchocolate-brown blazer lapels and pale-blue shirt collar.\n\nSoft, even studio lighting keeps his\
+  \ face and all clothing details clearly readable, with gentle facial shading,\nbroad highlights on the wool and soft contact shadows beneath both pairs of shoes. The backdrop is plain and\ncontinuous,\
+  \ with clean empty space separating the three views. The composition consists entirely of the three\nviews and the seamless backdrop.\n\nMaintain warm late-1990s to early-2000s 35mm film color: natural\
+  \ warm skin, deep chocolate tailoring, soft\npale-blue cotton and readable charcoal shadows. Fine organic film grain and restrained highlight glow give\nthe image a tactile cinematic finish while the\
+  \ face, hair and garment construction remain clearly resolved.\n\n\n\n\n                                                                                                                      08\n\fIMAGE\
+  \ PROMPT 07\n\n\n\n\nA wide, high-resolution 16:9 digital composite character reference sheet shows an elegant, very beautiful\n55-year-old European woman with refined matriarchal presence, styled in\
+  \ late-1990s to early-2000s polished\nglamour. The neutral mid-grey studio backdrop stretches evenly across the uninterrupted image,\ncomplemented by soft contact shadows anchoring the figures and subtle\
+  \ photographic grain. The layout\nconsists of three views: on the left half are two full-body shots of identical scale—front and back—both\nfeaturing the woman standing straight, relaxed, hands empty\
+  \ at her sides, dressed in a lustrous champagne\nsilk blouse with a soft draped neckline, long sleeves and buttoned cuffs. The blouse is tucked into a\nhigh-waisted, black velvet restrained A-line midi\
+  \ skirt, cut smoothly through the hips to mid-calf, with soft\nfolds and subtle sheen evident in both figures. Narrow black suede pointed-toe pumps with medium-height\nheels are visible below her skirt.\
+  \ Both ears wear cream pearl studs in gold, along with a matching pearl\nnecklace, a slim gold wristwatch at left, and one hand with a gold-emerald ring – all jewellery is consistent\nacross every angle.\n\
+  \nThe front-view body’s face is a softly blurred pale oval, preserving its head shape, while both the front and\nback feature her voluminous shoulder-length honey-beige-blonde blowout–with a deeper salon-color\
+  \ root,\nbroad sculpted waves and a side part–appearing identical and naturally defined from crown to tip. The back\nshows her hairstyle's rounded shape, neatly tailored blouse cuffs and back pleats,\
+  \ and a smooth skirt closure.\nOn the right half, a large head-and-shoulders portrait fills the frame, showing her face and salon blowout in\nsharp detail. Her elongated oval face features high cheekbones,\
+  \ a defined jawline, a straight nose and softly\nfull lips, plus slightly arched, well-shaped brows (the left brow arched slightly higher). There are visible faint\nlines and texture, faint smile lines,\
+  \ fine individual facial and brow hairs, and subtle pores, all presented with a\ngentle, diffuse soft-focus frontal light. A luxe finish and warm ivory undertones glow across her mature skin,\nwhile natural\
+  \ directional sheen shapes her features. Champagne silk, highly resolved black velvet, and gold\njewelry catch distinct highlights. Her gaze is direct, with clear refined authority, relaxed shoulders\
+  \ square to\nthe camera, and neutral, sophisticated rosewood makeup with brown lash line, muted taupe eyes, subtle\nblush and naturally glossy highlights. Soft, even, studio light maintains excellent\
+  \ definition in her black skirt\nand brightens the detailed fabric textures throughout the cinematic, elegant reference sheet.\n\n\n\n                                                                 \
+  \                                                09\n\fIMAGE PROMPT 08\n\n\n\n\nA wide, 16:9 character reference sheet presents a cinematic arrangement of the same adult woman in three\nviews dressed\
+  \ for a formal dinner, all on a smooth, gradient light-grey studio backdrop. On the left half, two\nmedium-distance full-body portraits display a tall, elegant 27-year-old woman of European descent in\
+  \ direct\nfront and back view. She stands upright with relaxed shoulders and arms, showing the entire silhouette from\ncrown to toes. Her face on the front view is softly blurred into an oval, while the\
+  \ back view displays her full\nhairstyle's volume and length. She wears a luxurious burgundy silk-satin midi dress with a draped cowl\nneckline, bias-cut skirt falling smoothly to mid-calf, and slim shoulder\
+  \ straps, with the back neckline dipping\nstraight beneath the shoulder blades. Visible jewelry includes small polished gold hoop earrings, a slim gold\nbracelet, and a single gold ring. On her feet are\
+  \ black open-toe leather sandals with slender straps and ankle\nbuckles. Her hair—a luminous champagne blonde with natural highlights, mid-back length, thick, large 1990s\nblowout waves and a deep side\
+  \ part—frames her elegant body and is thickly layered and glossy, showing\nroot-shadow and subtle volume. Each view is grounded by soft contact shadows on the smooth neutral\nflooring. The right half\
+  \ holds a closely cropped, detailed head-and-shoulders portrait, with softly focused\n35mm film grain giving skin a luminous, warm quality. Her well-defined oval face, high cheekbones, softly\nangular\
+  \ jaw, straight nose, and almond-shaped grey-green eyes are clearly visible alongside her well-shaped\nbrows and full lips. Her late-1990s inspired makeup is refined: softly defined brown liner, taupe\
+  \ eyeshadow,\nlong separated lashes, subtle rose blush, and muted rose-brown lipstick. Lighting is gentle, frontal, and\ndiffuse, creating natural skin texture, faint warm highlights on rich burgundy\
+  \ satin, and gleaming hair, with\nsoftly rolled-off whites. The palette comprises warm fair skin, rich burgundy, golden jewelry, creamy blonde\nand neutral studio colors. All shots use moderate depth\
+  \ of field with full sharpness on hair and garment\nconstruction. The camera is straight-on in all views for neutral, clinical composition under soft studio lighting\nwith delicate falloff. No visual\
+  \ labels, text, or background clutter is present. The editorial mood is elegant,\nquietly glamorous, and gently nostalgic, reminiscent of 1999-2000 film photography.\n\n\n\n\n                        \
+  \                                                                                          10\n\fIMAGE PROMPT 09\n\n\n\n\nA wide, high-resolution 16:9 character reference sheet presents three photographic\
+  \ views of an elegant\n78-year-old European woman from a wealthy family, posed in a seamless, softly lit warm light-grey studio with\na clean, uninterrupted background. The left half displays two equal-sized,\
+  \ full-length views: one from the front\nand one from the back, both showing the woman’s complete silhouette from the top of her lush, sculpted\nsilver hair to her dark emerald low-heeled suede pumps.\
+  \ Her upright but relaxed posture and the placement\nof her accessories—leaf-shaped gold brooch, matching gold-and-emerald earrings, slim gold watch on her left\nwrist, and plain gold band—remain the\
+  \ same in each view. She wears a modest but luxurious deep\nemerald-green silk-crepe midi dress with three-quarter sleeves, gently fitted waist, boat neckline, and a\nmid-calf skirt with soft draping;\
+  \ the matte, slightly lustrous fabric exhibits clearly visible tailoring. In the front\nfull-body view, her face is replaced by a gently blurred, featureless skin-toned oval to preserve anonymity,\nwhile\
+  \ her intricate salon-style hair is still distinct, showing a sculpted side-parted wave and curled ends at the\nnape. To the right, a large, detailed head-and-shoulders portrait of the same woman offers\
+  \ a direct, level view,\ncapturing expressive features including an oval face, elegant cheekbones, refined nose, prominent smile and\nlaugh lines, visible age spots and pores, and soft natural makeup.\
+  \ Her soft silver hair’s voluminous shape and\ndelicate curls frame her face, contrasting with fair, luminous skin. Jewelry matches exactly across all three\nviews. Studio lighting is soft and flattering,\
+  \ with gentle fill on the face, delicate catchlights, and soft contact\nshadows under her shoes; overall effect suggests a warm, luminous mood reminiscent of late-1990s cinematic\npublicity portraits.\
+  \ The technical quality mimics fine 35mm film: visible natural film grain, creamy skin tones,\ndeep emerald and gold colors, and clear but gentle subsurface skin detail, evoking a refined, glamorous,\
+  \ and\ntimeless mood suitable for an elegant matriarch.\n\n\n\n\n                                                                                                                      11\n\fIMAGE PROMPT\
+  \ 10\n\n\n\n\nA wide 16:9 digital composition functions as a cinematic character reference sheet depicting a handsome\n60-year-old European man from a wealthy family, dressed for an elegant family dinner\
+  \ in the year 2000. The\nseamless light-warm grey background offers a modern studio aesthetic unobstructed by props or distractions,\nwith subtle warm gradients adding depth. The left half arranges two\
+  \ perfectly aligned full-body shots—a direct\nfront view and a direct back view—each meticulously rendering the man's complete silhouette from the crown\nof his classic, medium-brown hair with abundant\
+  \ silver at the temples to his polished dark brown loafers. All\nclothing and accessories remain absolutely identical across all three reference views, echoing continuity in\nthis high-end wardrobe: a\
+  \ dark chocolate-brown wool blazer with engineered fit and two-button notch lapels,\nan unbuttoned warm ivory pointed-collar cotton shirt, charcoal-grey pleated wool trousers with relaxed\nstraight legs,\
+  \ and a dark brown leather belt with a small brushed-gold buckle. His posture feels comfortable,\nupright, and quietly authoritative with broad shoulders relaxed and arms resting naturally by his sides,\
+  \ hands\nempty. Soft contact shadows beneath his shoes ground him realistically against the seamless floor. On his left\nwrist is a slim gold wristwatch with a dark brown leather strap, and a simple gold\
+  \ wedding band on his left ring\nfinger.\n\nIn the front full-body rendering, his face is softly diffused and blurred into a featureless skin-toned oval, fitting\nthe reference design. By contrast, the\
+  \ right side of the sheet features one large, highly detailed,\nhead-and-shoulders portrait showing the exact same man with his entire thick, late-’90s, side-parted hairstyle\nclearly visible. His attractive,\
+  \ mature face displays a broad forehead, square jaw, prominent straight nose,\ndefined cheekbones, deep-set grey-green eyes under strong eyebrows, and realistic warm skin texture with\nmild forehead lines\
+  \ and subtle lines around the eyes and mouth. His expression is calm and observant, with\nlips in a faint, restrained smile and eyes gazing directly into camera. The overall lighting is soft, directional,\n\
+  and cinematic, subtly modeling his facial structure and highlighting silver strands in his hair, the fine weave of\nluxury natural fibers, the polished gold watch and ring, and mature skin details, while\
+  \ maintaining gentle,\nfilmic highlights and soft rolloff. The color palette is dominated by the brown and ivory wardrobe tones and\nwarm skin, with studio lighting that creates rich blacks and creamy\
+  \ whites reminiscent of 1999–2000 romantic\nfilm publicity stills on fine ECN-2 35mm stock. The glamour effect is enhanced further by gentle, organic film\n\n\n\n                                     \
+  \                                                                                12\n\fgrain and delicate, softly rolled specular highlights across the sheet. No extraneous elements or visible text\n\
+  appear; the focus remains solely on the character’s design, pose, and high-status wardrobe in three clean,\nclear contemporary reference views.\n\n\n\n\n                                              \
+  \                                                                   13\n\fIMAGE PROMPT 11\n\n\n\n\nA cinematic wide shot of an elegant dining room in a wealthy family’s home in the year 2000, prepared\
+  \ for an\nintimate evening dinner. An oval polished mahogany dining table with exactly six upholstered chairs and six\nneatly arranged place settings. Ivory porcelain plates with delicate gold rims, silver\
+  \ cutlery, crystal wine\nglasses and folded cream linen napkins. A few serving dishes with dinner food, a crystal water carafe, two low\ncandles and a small low floral arrangement leave comfortable space\
+  \ between the settings. The dessert course\nhas yet to be served.\n\nWarm cream walls with decorative mouldings, dark antique furniture, framed oil paintings, a wooden\nsideboard and tall windows framed\
+  \ by heavy champagne-coloured curtains. Deep blue evening light beyond\nthe windows. A softly glowing chandelier and warm shaded wall lamps create an intimate, inviting\natmosphere. The room feels like\
+  \ an established family home, with expensive furnishings collected over many\nyears. An open doorway at the back leads into the entrance hall.\n\nView from one corner of the room at seated eye level,\
+  \ showing the entire table, all six chairs and the\nsurrounding interior. The room is unoccupied. Romantic late-1990s film atmosphere, warm amber light, rich\nwood tones, creamy highlights, subtle 35mm\
+  \ film grain and gentle halation. Photorealistic, natural wide-angle\nperspective, 16:9.\n\n\n\n\n                                                                                                     \
+  \          14\n\fIMAGE PROMPT 12\n\n\n\n\nCreate a single wide 16:9 seating reference diagram with flat coloured human silhouettes and clean grey\narchitectural outlines.\n\nUse @image8 as the exact background\
+  \ composition. Preserve its camera position, perspective, framing, room\nproportions and furniture placement. Translate the existing room into simple linework while retaining its\nidentifiable architectural\
+  \ and furniture details.\n\n\nREFERENCE ASSIGNMENTS\n@image1 — WOMAN.\n@image2 — MAN.\n@image3 — MOTHER.\n@image4 — SISTER.\n@image5 — GRANDMOTHER.\n@image6 — FATHER.\n@image7 — pastry box.\n@image8 —\
+  \ exact dining-room composition and furniture layout.\n\nROOM — FIXED TO @image8\nPreserve the following elements in their original screen positions:\n\nAt the extreme LEFT edge, retain the partially\
+  \ cropped dark wooden cabinet to the LEFT of the doorway,\ntogether with the partially cropped ornate framed painting directly above it. Both remain visible at the left\nedge, as in @image8.\n\nRetain\
+  \ the open doorway and the tall dark cabinet visible through it in the adjoining room.\n\n\n\n\n                                                                                                       \
+  \         15\n\fImmediately to the RIGHT of the doorway, retain the separate dark wooden sideboard and the small framed\nlandscape painting above it.\n\nRetain the narrow curtained window beside this\
+  \ sideboard.\n\nOn the rear wall, retain the chest of drawers between the windows, its decorative clock and the framed\nlandscape painting with its picture light above.\n\nRetain the tall right-hand window,\
+  \ curtains, and the partially visible console, lamp and framed artwork at the\nfar right.\n\nKeep the chandelier, wall mouldings, elongated dining table and cream upholstered chair shapes in their\nreference\
+  \ positions.\n\nRepresent these elements with simplified grey outlines and flat pale-grey fills. Preserve the visible shapes and\nplacement of the paintings, including simple landscape shapes inside their\
+  \ frames.\n\n\nSEATING\nPlace exactly six seated silhouettes around the existing table. Preserve the table's orientation from @image8.\n\nFATHER sits at the near short end, toward the lower-left foreground,\
+  \ facing Mother.\n\nMOTHER sits at the opposite short end, toward the upper-right background, facing Father.\n\nWOMAN and MAN sit next to each other along the long side nearest the doorway and sideboard.\
+  \ Woman sits\ncloser to Father. Man sits closer to Mother.\n\nSISTER and GRANDMOTHER sit along the opposite long side. Sister sits directly opposite Woman, closer to\nFather. Grandmother sits directly\
+  \ opposite Man, closer to Mother.\n\nEach person occupies one distinct chair and faces inward toward their place setting. Use natural seated\nproportions and clearly separated head silhouettes. Preserve\
+  \ the reference camera position when placing the\nfigures.\n\n\nCOLOUR IDENTIFICATION\nRender each person as a solid flat-colour silhouette with a featureless face and a simple recognisable hair\noutline.\n\
+  \nWOMAN — light cyan.\nMAN — orange.\nMOTHER — violet.\nSISTER — red.\nGRANDMOTHER — green.\nFATHER — cobalt blue.\n\nAdd small legible labels with short leader lines:\n“WOMAN @image1”\n“MAN @image2”\n\
+  “MOTHER @image3”\n“SISTER @image4”\n“GRANDMOTHER @image5”\n\n\n\n                                                                                                              16\n\f“FATHER @image6”\n\n\
+  Position labels in nearby free space, keeping the furniture and paintings readable.\n\n\nBOX LOCATION\nThe closed pastry box from @image7 rests on the existing sideboard immediately to the RIGHT of the\n\
+  doorway, beneath the small landscape painting, behind the couple's side of the table.\n\nIts position is concealed from the camera by the seated figures and chair backs. Use a small annotation with a\n\
+  leader line pointing to that hidden position:\n“@image7 — BOX ON SIDEBOARD, HIDDEN”.\n\nThe sideboard stays in its exact position from @image8.\n\n\nTABLE\nKeep the reference table shape and outline.\
+  \ Indicate six place settings with simple circles, one per person.\nRepresent the existing centrepiece, candles and dinner service with minimal grey outlines.\n\n\nGRAPHIC PRESENTATION\nA clean spatial\
+  \ blocking diagram on white: flat coloured silhouettes, uniform thin grey room outlines and\nsimple sans-serif labels. Use solid fills and plain lines.\n\nThis image communicates seating and room geography\
+  \ only. The original character references establish\nappearance and clothing; @image8 establishes the live-action interior, lighting and cinematic style.\n\n\n\n\n                                    \
+  \                                                                           17\n\fANIMATION PROMPT 01\nPrompt is available in the thread of the main post by @ivanka_humeniuk.\n\n\n\n\n               \
+  \                                                           18\n\fANIMATION PROMPT 02\nSCENE CONTEXT\nA 30-second negotiation at a café counter in the year 2000, shortly before closing. A wealthy customer\
+  \ has\njust asked a headstrong waitress to pretend to be his girlfriend at a family dinner. She challenges him. He\nexplains himself and offers to arrange a tasting with his family's hotel chef. She considers\
+  \ the opportunity and\nsets firm conditions.\n\n\nACTIVE REFERENCES\n@image1 — exact waitress face from the detailed portrait, matching work outfit, high loose bun and\nface-framing strands.\n@image2\
+  \ — exact male face, hairstyle and clothing, including the unbuttoned camel overcoat.\n@image3 — exact café architecture, counter, furnishings and dusk atmosphere.\n@image4 — one open ivory box containing\
+  \ six whole chocolate pastries on individual gold boards. Preserve\ntheir shapes, glaze and decoration.\n\n\nSTARTING STATE AND BLOCKING\nBoth stand opposite each other at the central counter: the man\
+  \ on the customer side, the woman behind it. In\nshared compositions he is screen-left and she is screen-right. Keep matching eyelines and remain on the\nsame side of their dialogue axis.\n\nThe pastry\
+  \ box is open and stationary between them, with its lid toward her. A separate ivory tasting plate sits\non his side, holding a cut sample dessert with one bite missing and a fork resting on the plate.\
+  \ He holds a\nfolded banknote in his left hand; his right hand is free. Her right palm rests on her edge of the marble. Cups\nremain on background shelves.\n\n\nFIRST FRAME\nBegin directly on his medium\
+  \ shot from beside her position behind the counter. He is already looking at her,\nwaiting for her response. Her softly blurred shoulder occupies a small edge of the foreground. Her first line\ncomes\
+  \ from this established offscreen position.\n\n\nCAMERA AND FORMAT\n30 seconds, horizontal 16:9, real-time action. Deliberate cinematic coverage, layered foregrounds, motivated\ncamera movement and expressive\
+  \ changes of shot size. Hard cuts only at the listed boundaries. Stable focal\nlength within each shot. Dialogue moves briskly at a natural conversational pace, leaving the final three\nseconds for the\
+  \ completed handshake.\n\n\n0.0–3.0 SECONDS\n47° FOV, medium shot of the man, camera steady beside her shoulder.\nWOMAN, offscreen: “So you're hiring a girlfriend?”\nHer delivery is sharp and incredulous,\
+  \ with a dry emphasis on “hiring.”\nHe receives the accusation, briefly looks down and meets her eyes again, choosing an honest explanation.\n\n\nHARD CUT — 3.0–7.5 SECONDS\n47° FOV, oblique medium two-shot\
+  \ across the counter.\nMAN: “I told my mother I'm seeing someone. She's expecting us tonight.”\n\n\n                                                                                                   \
+  \             19\n\fHe speaks directly, slightly embarrassed by the predicament. She watches him with a sceptical expression,\none hand still resting on the counter.\n\n\nHARD CUT — 7.5–10.5 SECONDS\n\
+  47° FOV, side-on medium shot of the woman, showing her hands and the box.\nWOMAN: “Should've asked someone earlier.”\nShe delivers the line crisply and turns back to straighten the paper beside the pastries,\
+  \ treating the\nconversation as finished. A short lateral camera move follows her change of attention and settles with the box\nin the foreground.\n\n\nHARD CUT — 10.5–17.5 SECONDS\n29° FOV, medium close-up\
+  \ of the man past her softly blurred shoulder.\nMAN: “One dinner. I'll arrange a tasting with our hotel's chef. Bring your desserts.”\nHe speaks promptly to regain her attention. His teasing manner gives\
+  \ way to a concrete, sincere offer. A\nrestrained dolly inward accompanies the proposal. He gestures once toward her box with his free right hand,\nthen lets the hand settle.\n\n\nHARD CUT — 17.5–21.0\
+  \ SECONDS\n29° FOV, close-up of the woman from his eyeline.\nHer working hands pause below frame. She turns her attention fully back to him; the mention of the chef has\nreached her.\nWOMAN: “You can\
+  \ arrange that?”\nHer voice is quieter but searching, testing whether he means it.\nMAN, offscreen: “Yes.”\nStay on her as she studies his face for a brief beat. She is weighing the opportunity, still\
+  \ guarded.\n\n\nHARD CUT — 21.0–25.5 SECONDS\n47° FOV, slightly low medium shot of the woman from just above the counter, with the open box low in the\nforeground.\nShe squares herself toward him and\
+  \ holds his gaze.\nWOMAN: “Until dessert. And you stay by my side.”\nHer delivery is decisive, with a small pause after the first condition. She makes the terms clear and extends\nher right hand across\
+  \ the counter as she finishes. The gesture is businesslike and confident.\n\n\nHARD CUT — 25.5–30.0 SECONDS\n47° FOV, oblique waist-up two-shot that includes both faces and their hands.\nMAN: “Deal.”\n\
+  He accepts her right hand with his right, reaching through the clear space beside the box. They complete one\nbrief, natural handshake and release by 29 seconds. His left hand keeps the folded banknote.\n\
+  \nRelief brings a small genuine smile to his face. She gives him a pointed, appraising look, checking that he\nunderstands the conditions. Both return their right hands to their own sides of the counter.\
+  \ End with hands\nseparated and the agreement complete, ready for a hard cut.\n\n\nPERFORMANCE\n\n\n\n                                                                                                 \
+  \               20\n\fPlay the scene as two people adjusting to each other in real time. She begins irritated, dismisses his excuse\nand turns back to work. The professional opportunity catches her attention\
+  \ despite herself. She tests his\npromise, makes her decision and takes control of the agreement. Her interest appears through attentive\nlistening and a change in vocal focus.\n\nHe begins caught out,\
+  \ explains the problem and reacts when she dismisses him. He makes the offer earnestly,\nwaits for her judgement and relaxes only after she accepts. Preserve his charm while allowing embarrassment\nand\
+  \ relief to show.\n\nUse fluid conversational gestures, responsive eyes, natural breaths and purposeful pauses. Mouth movements\nfollow the written dialogue; silent reactions use closed lips, gaze and\
+  \ posture. Let the actors listen and\nrespond naturally within the timing.\n\n\nLIGHTING AND COLOUR\nPreserve the café's amber pendant lamps, brass sconces and cool dusk windows. Soft directional side\
+  \ lighting\nshapes their faces, with darker shadow cheeks and gentle reflected fill preserving their eyes. Photograph from\nthe shadow side. Loose hair, camel wool and chocolate glaze catch warm highlights.\n\
+  \nFixed 4000K white balance. Rich walnut browns, burgundy leather, creamy practical highlights and deep\ntextured shadows. Natural skin colour beneath the warm light. Consistent lighting across all angles.\n\
+  \n\nAUDIO — FIXED CHARACTER VOICES\nWOMAN VOICE: Adult woman in her mid-twenties; medium pitch, warm clear mezzo speaking voice with a\nlightly husky lower register, neutral General American accent, natural\
+  \ conversational rhythm, crisp intelligible\nconsonants and restrained expressive inflection.\nMAN VOICE: Adult man in his early thirties; medium-low pitch, warm resonant baritone with a subtle dry rasp,\n\
+  neutral General American accent, measured conversational rhythm, clear articulation and understated playful\ninflection.\n\nPreserve these vocal identities. Her delivery moves from dry impatience to guarded\
+  \ interest and firm\nconditions. His delivery moves from candid embarrassment to earnest persuasion and relief.\n\nSpeak the written English dialogue exactly, with clear turn-taking and accurate lip synchronisation.\
+  \ Offscreen\nlines originate naturally from the other person's position. Quiet café room tone, distant traffic, paper rustle\nand gentle clothing movement. Keep dialogue clear and foregrounded. Vocal\
+  \ sounds consist of the written\ndialogue and quiet natural breathing.\n\n\nFILM LOOK\nLate-1990s theatrical romantic dramedy captured on visibly textured 35mm film. Organic moving grain is\nclearly perceptible\
+  \ across midtones, skin and shadows at normal playback size. Warm halation surrounds the\nglowing lamps; bright reflections bloom gently. Rich film-print contrast, creamy highlight roll-off and natural\n\
+  optical sharpness with restrained edge enhancement. Preserve readable eyes, realistic skin and fabric detail\nbeneath the film texture. Natural motion blur and 24 fps cinematic cadence.\n\n\nCONTINUITY\n\
+  The six boxed pastries remain whole and in place. The open box, tasting plate and resting fork keep their\npositions. The sample retains its missing bite. His banknote stays in his left hand. The handshake\
+  \ uses their\nright hands and finishes with a clear release. Maintain exact faces, hair, clothing, screen direction, café\ngeometry and dusk throughout. Reference sheets guide appearance; the output is\
+  \ full-frame cinematic\nfootage.\n\n\n\n                                                                                                                  21\n\fANIMATION PROMPT 03\nSCENE CONTEXT\nA 20-second\
+  \ romantic-comedy scene in a café in the year 2000. Immediately after agreeing to pose as a\ncouple at his family dinner, a headstrong waitress and a wealthy customer discuss bringing her desserts. She\n\
+  suggests stopping at her place to change. He misreads the invitation; she catches his smirk, puts him in his\nplace and walks into the back room to collect her things.\n\n\nACTIVE REFERENCES\n@image1\
+  \ — exact waitress face, work outfit, burgundy apron, high bun and loose face-framing strands.\n@image2 — exact male face, hairstyle and clothing, including his unbuttoned camel overcoat.\n@image3 — exact\
+  \ café architecture, counter, furnishings and rear kitchen doorway.\n@image4 — one ivory pastry box containing six whole chocolate pastries on individual gold boards.\n\n\nSTARTING STATE AND BLOCKING\n\
+  Their handshake is finished. Both right hands have returned to their own sides of the counter. She stands\nbehind it; he stands on the customer side. In shared compositions he is screen-left and she screen-right.\n\
+  Preserve this dialogue axis.\n\nThe OPEN pastry box rests flat on the central countertop between them. Its base remains in exactly this\nposition throughout the scene, including after she leaves. A tasting\
+  \ plate with the partially eaten sample and\nresting fork sits on his side. His folded banknote stays in his left hand.\n\nHer hands begin empty, resting near her side of the counter. She closes the box\
+  \ later, releases it and walks\naway with empty hands. The closed box remains waiting on the countertop beside him.\n\n\nCAMERA AND EDITING\n20 seconds, horizontal 16:9, real-time action. Seven shots,\
+  \ hard cuts at the specified boundaries. Begin with\none close portrait to contrast with the preceding handshake two-shot, then immediately open into a wider\nmoving composition. Alternate spatial coverage\
+  \ with selective reaction close-ups.\n\nGive the misunderstanding three distinct beats: her invitation, HIS SEPARATE REACTION SHOT, HER SEPARATE\nRESPONSE SHOT. Preserve enough screen time to read both\
+  \ reactions. Camera movements are smooth, short\nand motivated by action.\n\n\n0.0–2.0 SECONDS — HIS OPENING CLOSE-UP\n29° FOV, medium close-up of the man from beside her position. His face and upper\
+  \ chest fill the frame; café\nlights fall out of focus behind him.\nHe nods toward the box below frame.\nMAN: “Bring the desserts, too.”\nHe speaks with easy certainty, looking back at her.\n\n\nHARD\
+  \ CUT — 2.0–5.0 SECONDS — WIDER SPATIAL SHOT\n63° FOV, low oblique waist-up two-shot along the counter. The open box is clearly planted between them in\nthe foreground. Both faces and their hands are\
+  \ visible.\nA short lateral camera move reveals more of her working space as she looks down at the desserts, then back\nat him.\n\n\n                                                                  \
+  \                                             22\n\fWOMAN: “To your mother's? You've seen the shape?”\nShe indicates the contents with an open hand, dryly questioning his judgement. The gesture ends with\
+  \ her\nhand returning to her side of the counter.\n\n\nHARD CUT — 5.0–7.2 SECONDS — HIS ANSWER\n47° FOV, three-quarter medium shot of the man from counter height. The box edge anchors the foreground.\n\
+  MAN: “I've tasted them. Bring them.”\nHe answers with sincere conviction and a small amused smile. He knows what she means and stands by their\ntaste.\n\n\nHARD CUT — 7.2–10.2 SECONDS — HER PRACTICAL\
+  \ INVITATION\n47° FOV, side-on medium shot of the woman, face and hands visible.\nShe lowers the hinged lid until the box is fully closed, then releases it. Its base stays flat in its original position.\n\
+  WOMAN: “Hmm. Can we stop at my place first?”\nShe looks up at him as she asks. Her tone is practical and casual; she is thinking about getting ready for\ndinner. The brief “hmm” is thoughtful.\n\n\nHARD\
+  \ CUT — 10.2–12.5 SECONDS — HIS MISUNDERSTANDING\n29° FOV, dedicated close-up of the man from her eyeline.\nGive his reaction the entire shot. He takes a moment to process “my place.” Then a clearly readable,\n\
+  self-satisfied closed-mouth smirk spreads across his face. One eyebrow lifts and he leans slightly toward her,\nsuddenly pleased with himself.\nA very small camera push draws attention to his mistaken\
+  \ interpretation. He looks directly at her and stays\nsilent. His expression unmistakably suggests that he thinks she is inviting him over romantically.\n\n\nHARD CUT — 12.5–16.5 SECONDS — SHE CATCHES\
+  \ THE SMIRK\n29° FOV, dedicated medium close-up of the woman from his eyeline.\nShe sees his expression. Her eyes briefly narrow in recognition, followed by a tiny incredulous head shake and\na dry half-smile:\
+  \ she knows exactly what he is thinking.\nWOMAN: “Don't get your hopes up. I need to change into a dress.”\nShe delivers the first sentence directly at him, firmly puncturing his assumption. The second\
+  \ is brisk and\nmatter-of-fact, with playful irritation. Her reaction and complete line stay on camera.\n\n\nHARD CUT — 16.5–20.0 SECONDS — COMPLETED DEPARTURE\n63° FOV, medium-wide oblique composition\
+  \ from the customer aisle, showing the woman behind the counter,\nthe man nearer the foreground and the open kitchen doorway a few steps behind her.\nHis smirk softens into a sheepish closed-mouth grin\
+  \ as he straightens. She turns away decisively and walks\nthrough the clear working passage into the back room, hands empty.\n\nA short lateral camera track follows her departure, using the counter as\
+  \ a strong foreground diagonal. She\ncrosses the kitchen threshold and disappears into the back room by the end. He remains on the customer\nside, watching her go.\n\nThe CLOSED BOX stays clearly visible\
+  \ on the countertop where she left it. End on the completed exit and the\nman waiting beside the box.\n\n\n\n\n                                                                                        \
+  \                             23\n\fPERFORMANCE\nKeep the interaction alive through listening and changing intentions. She starts sceptical about the desserts,\nmakes a practical suggestion and immediately\
+  \ recognises his overconfident assumption. Her correction is\nsharp, witty and self-possessed. Her departure finishes the exchange on her terms.\n\nHe genuinely admires her baking. The invitation briefly\
+  \ flatters his ego; his visible smirk gives him away. Her\nreply catches him out, and he accepts the correction with embarrassed amusement.\n\nPlay the comedy at a believable human scale. The distinct\
+  \ reaction shots make the joke readable. Natural\nconversational gestures, connected eye contact and responsive timing. Silent reactions use closed lips, gaze\nand posture.\n\n\nLIGHTING AND COLOUR\n\
+  Preserve the café's amber pendant lamps, brass sconces and cool dusk windows. Soft directional side lighting\nshapes their faces, with darker shadow cheeks and gentle reflected fill preserving their eyes.\
+  \ Photograph from\nthe shadow side. Loose hair, camel wool and chocolate glaze catch warm highlights.\n\nFixed 4000K white balance. Rich walnut browns, burgundy leather, creamy practical highlights and\
+  \ deep\ntextured shadows. Natural skin colour beneath the warm light. Consistent lighting across all angles.\n\n\nAUDIO — FIXED CHARACTER VOICES\nWOMAN VOICE: Adult woman in her mid-twenties; medium pitch,\
+  \ warm clear mezzo speaking voice with a\nlightly husky lower register, neutral General American accent, natural conversational rhythm, crisp intelligible\nconsonants and restrained expressive inflection.\n\
+  MAN VOICE: Adult man in his early thirties; medium-low pitch, warm resonant baritone with a subtle dry rasp,\nneutral General American accent, measured conversational rhythm, clear articulation and understated\
+  \ playful\ninflection.\n\nPreserve these vocal identities. Her delivery moves from sceptical questioning to practical thought, then a\npointed, witty correction. His spoken delivery is assured and lightly\
+  \ amused.\n\nSpeak the written English dialogue exactly, with accurate lip synchronisation and clear turn-taking. Quiet café\nroom tone, distant traffic, the soft closing of the cardboard lid, clothing\
+  \ movement and her departing\nfootsteps. Dialogue remains clear and foregrounded. Vocal sounds consist of the written dialogue and quiet\nnatural breathing.\n\n\nFILM LOOK\nLate-1990s theatrical romantic\
+  \ dramedy captured on visibly textured 35mm film. Organic moving grain is\nclearly perceptible across midtones, skin and shadows at normal playback size. Warm halation surrounds the\nglowing lamps; bright\
+  \ reflections bloom gently. Rich film-print contrast, creamy highlight roll-off and natural\noptical sharpness with restrained edge enhancement. Preserve readable eyes, realistic skin and fabric detail\n\
+  beneath the film texture. Natural motion blur and 24 fps cinematic cadence.\n\n\nCONTINUITY\nThe box rests on the countertop from the first frame through the last. Only its lid moves when she closes it.\
+  \ All\nsix whole pastries stay inside. She releases the closed box before her final exchange and leaves with empty\nhands. The plate and fork retain their positions. His banknote stays in his left hand.\
+  \ Her apron, work outfit and\nbun remain consistent. Maintain exact faces, café geography, screen direction and evening light. Full-frame\ncinematic footage.\n\n\n\n\n                                \
+  \                                                                              24\n\fANIMATION PROMPT 04\nSCENE CONTEXT\nA 30-second live-action romantic dramedy scene at a wealthy family's dinner in\
+  \ the year 2000. A young\nwoman meets her boyfriend's family for the first time. Their polished welcome becomes a social test when his\nsister recognises her as a waitress. The woman answers the condescension\
+  \ firmly and turns the exchange\nagainst her.\n\n\nACTIVE REFERENCES\n@image1 — exact woman's face, loose brown hair and blue dress.\n@image2 — exact young man's face, brown hairstyle, chocolate-brown\
+  \ blazer and pale-blue shirt.\n@image3 — Mother.\n@image4 — Sister.\n@image5 — Grandmother.\n@image6 — Father: the older grey-haired man in his reference clothing.\n@image8 — photographic dining room,\
+  \ furnishings and evening lighting.\n@image9 — fixed seating relationships only.\n\n\nREALISM AND REFERENCE PRIORITY\nFull-frame photorealistic live-action cinema from the first frame: real actors, natural\
+  \ skin texture, dimensional\nclothing and photographic lighting. @image1–@image6 control appearance; @image8 controls the physical\ninterior. @image9 supplies positions only; its colours, outlines and\
+  \ labels are diagram annotations, excluded\nfrom the rendered footage.\n\nBuild each shot from its specified camera position within the photographic room. @image9 is a spatial guide,\nnot a starting frame\
+  \ or a composition to reproduce. Flowers, tableware and furniture have the photographic\nmaterials and detail of @image8.\n\n\nSEATING AND SPACE\nTranslate the coloured figures in @image9 into the corresponding\
+  \ photographic characters:\nCyan — Woman, @image1.\nOrange — Man, @image2.\nViolet — Mother, @image3.\nRed — Sister, @image4.\nGreen — Grandmother, @image5.\nBlue — Father, @image6.\n\nPreserve their\
+  \ exact seating relationships: Father and Mother at opposite short ends; Woman beside Man on\nthe doorway side, Woman nearer Father; Sister directly opposite Woman; Grandmother directly opposite Man.\n\
+  Every camera angle preserves these physical seats.\n\nMan is the young brown-haired person from @image2 seated beside Woman. Father is the older grey-haired\nperson from @image6 seated at the short end.\
+  \ Each appears once.\n\nAll chairs retain the cream upholstery and wooden construction shown in @image8. Character clothing retains\nthe colours and materials from @image1–@image6.\n\n\n\n\n         \
+  \                                                                                                      25\n\fSTARTING STATE AND BLOCKING\nThe pastry box has already been put away on the sideboard before\
+  \ the scene begins and remains offscreen\nthroughout. Both newcomers have empty hands.\n\nMother, Father, Sister and Grandmother are seated at the fully laid table. Woman's chair is already pulled\nback,\
+  \ and she is beginning to lower herself into it. Man steadies its backrest, ready to take his own adjacent\nchair. Woman's seat is opposite Sister; Man's seat is nearer Mother and opposite Grandmother.\n\
+  \nPreserve the architecture and furniture from @image8, including the cabinet and painting LEFT of the\ndoorway. Maintain assigned seats and matching eyelines across cuts.\n\n\nFIRST FRAME AND OPENING\
+  \ CAMERA\nBegin directly on a photographic medium-wide view of the couple, framed from their heads to the chair seats.\n\nThe camera is across the table from the gap between their two chairs, shifted\
+  \ slightly toward Mother's end, at\nseated eye level. This gives an oblique three-quarter view of both people with their faces clearly separated.\nWoman appears screen-left and Man screen-right in this\
+  \ opening composition.\n\nThe young man's exact face from @image2 is immediately readable. Father and the other family members\nremain outside this opening crop, still occupying their assigned seats.\n\
+  \nThe doorway-side wall from @image8 forms the background. A softly blurred table edge sits low in the\nforeground. This is a closer, lower, differently angled composition than @image9.\n\n\nCAMERA AND\
+  \ FORMAT\n30 seconds, horizontal 16:9, real-time action. Deliberate cinematic coverage, layered foregrounds and\nmotivated camera movement. Hard cuts at the listed boundaries; stable focal length within\
+  \ each shot.\nConversation has momentum: speakers respond to what they hear, with natural emphasis and brief listening\nbeats.\n\n\n0.0–4.5 SECONDS\n47° FOV. The medium-wide three-quarter view established\
+  \ in FIRST FRAME AND OPENING CAMERA. A short\nlateral track keeps both faces readable during the seating.\n\nWoman completes the sitting movement already underway. Man briefly steadies her chair, releases\
+  \ it and sits\nin his own adjacent chair. Both are fully seated by the end of the shot. His face and pale-blue shirt remain\nclearly identifiable. Only chair movement, fabric and quiet room tone during\
+  \ the seating.\n\n\nHARD CUT — 4.5–8.5 SECONDS\n29° FOV. Medium close-up of Mother past the woman's blurred shoulder. A restrained dolly inward.\nMOTHER: “At last. We were starting to think he'd made\
+  \ you up.”\nShe delivers the welcome with social energy and pointed humour, briefly including her son with a glance\nbefore returning to the woman. Her voice rises and falls naturally with the teasing\
+  \ remark.\n\n\nHARD CUT — 8.5–11.5 SECONDS\n47° FOV. Medium two-shot of the couple from across the table, in their established adjacent seats on the\ndoorway side.\nWOMAN: “I'm still getting used to the\
+  \ idea myself.”\n\n\n\n\n                                                                                                                26\n\fShe answers promptly with dry wit, meeting Mother's gaze.\
+  \ A small closed-mouth smile softens the joke. The\nman looks toward her, appreciating the quick answer.\n\n\nHARD CUT — 11.5–15.0 SECONDS\n29° FOV. Oblique close-up of Sister in her established seat\
+  \ opposite Woman, through softly blurred crystal. A\nsubtle push-in as she recognises the woman.\nSISTER: “Wait. Didn't you wait on us yesterday?”\n“Wait” interrupts the comfortable moment. She stresses\
+  \ “wait on us,” looking briefly toward Mother to make\nsure the discovery is noticed, then returns her gaze to the woman. Her sweetness carries an unmistakable\nsneer.\n\n\nHARD CUT — 15.0–17.0 SECONDS\n\
+  29° FOV. Close-up of the woman over Sister's shoulder, across the table.\nWOMAN: “Yes. At the café.”\nShe answers immediately and firmly, chin level, eyes directly on Sister. Her voice is clear and grounded.\
+  \ She\nowns the fact, giving Sister nothing to make her apologise for.\n\n\nHARD CUT — 17.0–19.0 SECONDS\n47° FOV. Slightly low medium two-shot of the couple in their unchanged adjacent seats.\nMAN: “That's\
+  \ where we met.”\nHe joins naturally, with warm emphasis on “we,” looking at Sister. His easy certainty makes his support clear.\nThe woman stays engaged with the exchange.\n\n\nHARD CUT — 19.0–22.0 SECONDS\n\
+  29° FOV. Medium close-up of Sister from the table corner, remaining opposite Woman.\nSISTER: “And you still work there?”\nShe leans back and stretches “still,” speaking as though the answer should be\
+  \ obvious. Her eyes remain on\nthe woman, trying to force an uncomfortable explanation.\n\n\nHARD CUT — 22.0–26.0 SECONDS\n29° FOV. Close-up of the woman from Sister's eyeline. A restrained dolly inward\
+  \ strengthens her answer.\nWOMAN: “Of course. Dating doesn't pay the bills.”\n“Of course” is crisp and immediate. She follows with firm, dry emphasis on “pay the bills,” maintaining direct\neye contact.\
+  \ The line has bite and conviction, delivered at conversational volume. A small knowing\nclosed-mouth smile arrives only after she finishes.\n\n\nHARD CUT — 26.0–28.0 SECONDS\n47° FOV. Medium reaction\
+  \ shot of Grandmother at her seat opposite Man, with her neighbour Sister's profile\nat the foreground edge.\nGrandmother lets out a short, clearly audible amused chuckle. She looks directly toward Sister\
+  \ with a knowing\nsmile, enjoying her failed attempt to put the guest in her place. Sister hears it and presses her lips together.\nThe laughter belongs to Grandmother alone.\n\n\nHARD CUT — 28.0–30.0\
+  \ SECONDS\n47° FOV. Intimate medium two-shot of the couple with a gentle sideways camera drift.\n\n\n\n                                                                                                \
+  \               27\n\fThe man turns to the woman with an appreciative closed-mouth smile. She catches his look, then confidently\nreturns her attention to the table. End on their brief shared connection.\n\
+  \n\nPERFORMANCE\nKeep the exchange emotionally alive. The woman wants to make a good impression, but her pride is stronger\nthan her need for approval. Once Sister targets her job, her answers become\
+  \ direct, assured and sharp. She\naddresses Sister as an equal.\n\nSister deliberately disguises contempt as curiosity. Her questions seek a reaction, and she listens to see\nwhether they hurt. Mother's\
+  \ welcome has personality and social authority. Grandmother's chuckle punctures\nSister's superiority. Father follows the exchange attentively.\n\nLet speech carry intention through changes of stress,\
+  \ pace and tone. Gestures and reactions overlap listening\nnaturally. Brief breaths connect the lines; every answer responds to the previous speaker. Silent smiles\nremain closed-mouth.\n\n\nLIGHTING\
+  \ AND COLOUR\nPreserve the dining room's warm lamps, chandelier, candles and deep evening-blue windows from @image8.\nSoft directional side lighting shapes their faces, with darker shadow cheeks and gentle\
+  \ reflected fill preserving\ntheir eyes. Photograph from the shadow side. Hair, crystal and polished wood catch warm highlights.\n\nFixed 4000K white balance. Rich walnut browns, burgundy accents, creamy\
+  \ practical highlights and deep\ntextured shadows. Natural skin colour beneath the warm light. Consistent lighting across all angles.\n\n\nAUDIO — FIXED CHARACTER VOICES\nWOMAN VOICE: Adult woman in her\
+  \ mid-twenties; medium pitch, warm clear mezzo speaking voice with a\nlightly husky lower register, neutral General American accent, natural conversational rhythm, crisp intelligible\nconsonants and restrained\
+  \ expressive inflection.\nMAN VOICE: Adult man in his early thirties; medium-low pitch, warm resonant baritone with a subtle dry rasp,\nneutral General American accent, measured conversational rhythm,\
+  \ clear articulation and understated playful\ninflection.\n\nPreserve these vocal identities while giving the dialogue responsive, expressive delivery. The woman's lower\nregister supports her firm replies;\
+  \ the man's warmth carries his support.\n\nMother speaks with polished, animated hospitality. Sister uses pointed, patronising sweetness with audible\nemphasis on the insulting words. Grandmother's brief\
+  \ chuckle is spontaneous and clearly audible.\n\nSpeak the written English dialogue exactly, with clear turn-taking and accurate lip synchronisation. Quiet\nprivate-home room tone, subtle cutlery, chair\
+  \ movement and fabric rustle. Dialogue remains clear and\nforegrounded, accompanied by natural breathing and Grandmother's specified chuckle.\n\n\nFILM LOOK\nLate-1990s theatrical romantic dramedy captured\
+  \ on visibly textured 35mm film. Organic moving grain is\nclearly perceptible across midtones, skin and shadows at normal playback size. Warm halation surrounds the\nglowing lamps; bright reflections\
+  \ bloom gently. Rich film-print contrast, creamy highlight roll-off and natural\noptical sharpness with restrained edge enhancement. Preserve readable eyes, realistic skin and fabric detail\nbeneath the\
+  \ film texture. Natural motion blur and 24 fps cinematic cadence.\n\n\nCONTINUITY\n\n\n\n                                                                                                              28\n\
+  \fBoth newcomers finish sitting before Mother speaks. All six people retain their assigned seats. Woman\nremains opposite Sister; Man remains opposite Grandmother; Father and Mother remain at opposite\
+  \ short\nends. Preserve exact faces, hair, clothing, table settings, room geometry and evening lighting. The entire\nsequence is full-frame photographic live-action footage, with @image9 used solely to\
+  \ establish seating\nrelationships.\n\n\n\n\n                                                                                                             29\n\fANIMATION PROMPT 05\nSCENE CONTEXT\nA 30-second\
+  \ live-action romantic dramedy scene during a wealthy family's dinner in the year 2000. Sister\nbelittles the guest's ambition to open a bakery. The woman answers firmly. The man retrieves her pastry\
+  \ box\nfrom the sideboard behind the couple and presents its contents. Mother's surprise and Sister's mockery lead\nto Grandmother's delighted final remark.\n\n\nACTIVE REFERENCES\n@image1 — exact woman's\
+  \ face, loose brown hair and blue dress.\n@image2 — exact man's face, hairstyle, brown blazer and pale-blue shirt.\n@image3 — Mother.\n@image4 — Sister.\n@image5 — Grandmother.\n@image6 — Father.\n@image7\
+  \ — ivory pastry box and six chocolate novelty pastries. Preserve the box construction and the\npastries' exact shapes, glaze, decoration and individual gold boards.\n@image8 — photographic dining room,\
+  \ furnishings and evening lighting.\n@image9 — fixed seating relationships only.\n\n\nREALISM AND REFERENCE PRIORITY\nFull-frame photorealistic live-action cinema from the first frame: real actors, natural\
+  \ skin texture, dimensional\nclothing and photographic lighting. @image1–@image6 control appearance; @image8 controls the physical\ninterior. @image9 supplies positions only; its colours, outlines and\
+  \ labels are diagram annotations, excluded\nfrom the rendered footage.\n\n\nSEATING AND SPACE\nTranslate the coloured figures in @image9 into the corresponding photographic characters:\nCyan — Woman,\
+  \ @image1.\nOrange — Man, @image2.\nViolet — Mother, @image3.\nRed — Sister, @image4.\nGreen — Grandmother, @image5.\nBlue — Father, @image6.\n\nPreserve their exact seating relationships: Father and\
+  \ Mother at opposite short ends; Woman beside Man on\nthe doorway side, Woman nearer Father; Sister directly opposite Woman; Grandmother directly opposite Man.\nEvery camera angle preserves these physical\
+  \ seats.\n\nThe closed box rests on the existing sideboard behind the couple, immediately RIGHT of the doorway beneath\nthe small landscape painting. Preserve the sideboard's position from @image8. Man\
+  \ reaches it by standing\nfrom his own chair and stepping into the aisle behind the couple. The separate cabinet and painting LEFT of\nthe doorway remain in place.\n\nThe table is fully set. A clear space\
+  \ in front of the couple accommodates the box.\n\n\n\n\n                                                                                                               30\n\fFIRST FRAME\nBegin directly\
+  \ on Mother's individual medium close-up, looking toward Woman. A softly blurred candle frames\none edge. The couple remain outside this opening composition.\n\n\nCAMERA AND FORMAT\n30 seconds, horizontal\
+  \ 16:9, real-time action. Layered cinematic compositions, motivated camera movement\nand expressive changes of shot size. Hard cuts at the listed boundaries. Stable focal length within each shot.\nMatching\
+  \ eyelines and consistent room geography.\n\n\n0.0–2.5 SECONDS\n29° FOV. Medium close-up of Mother from beside Woman's position. A restrained push-in.\nMOTHER: “What are you saving for?”\nShe asks with\
+  \ active curiosity, giving the guest her full attention.\n\n\nHARD CUT — 2.5–5.5 SECONDS\n47° FOV. Oblique medium shot of Woman, with Man seated beside her at the edge.\nWOMAN: “My own bakery. I make\
+  \ the desserts myself.”\nHer voice gains warmth and energy. She leans slightly into the conversation, proud of her work.\n\n\nHARD CUT — 5.5–8.0 SECONDS\n29° FOV. Close-up of Sister from across the table,\
+  \ softly blurred crystal at the foreground edge.\nSISTER: “Well, he could buy you one.”\nShe glances toward her brother, then back to Woman with a patronising half-smile. The suggestion makes\nWoman's\
+  \ ambition sound like an easy purchase.\n\n\nHARD CUT — 8.0–11.0 SECONDS\n29° FOV. Close-up of Woman over Sister's shoulder. A slight dolly inward.\nWOMAN: “He could. But I'd rather earn it myself.”\n\
+  She answers promptly and firmly, holding Sister's gaze. Put clear, confident emphasis on “earn it myself.”\n\n\nHARD CUT — 11.0–17.0 SECONDS\n63° FOV. Oblique wide shot from the opposite side of the table.\
+  \ Woman and Man occupy their established\nadjacent seats; the sideboard is visible behind them.\nMAN: “You should try what she makes.”\n\nIn one continuous action, he rises from his own chair, turns into\
+  \ the aisle behind the couple and steps to the\nexisting sideboard. He lifts the closed box with both hands, returns to his own place and lowers it onto the\nclear tabletop space in front of the couple.\
+  \ A short lateral camera move keeps the transfer readable.\n\nWoman remains seated. His empty chair stays beside hers. The box settles firmly on the table; he remains\nstanding at his place.\n\n\nHARD\
+  \ CUT — 17.0–21.0 SECONDS\n47° FOV. Elevated close-up looking down into the box from the family's side of the table. The box fills most of\nthe frame.\n\n\n\n\n                                       \
+  \                                                                        31\n\fMan opens the box according to its actual construction in @image7, bringing it into the reference's open\nconfiguration.\
+  \ His hands and the lid clear the camera's view of the contents.\n\nAll six pastries are fully visible on their individual gold boards. Their distinctive chocolate shapes, glaze and\ndecoration are sharply\
+  \ resolved. Hold this unobstructed view for at least two full seconds. Focus remains on\nthe pastries throughout the reveal.\n\n\nHARD CUT — 21.0–23.0 SECONDS\n29° FOV. Close-up of Mother.\nShe looks\
+  \ into the box. Her eyes widen, her lips part and she takes a short audible breath. She looks toward\nher standing son, visibly caught between surprise and maintaining her manners.\n\n\nHARD CUT — 23.0–25.0\
+  \ SECONDS\n29° FOV. Oblique close-up of Sister in her established seat.\nShe examines the pastries, releases a brief mocking scoff and directs a pointed, amused look across the table\nat Woman. She treats\
+  \ the reveal as a new opportunity to judge her.\n\n\nHARD CUT — 25.0–30.0 SECONDS\n47° FOV. Medium close-up of Grandmother at her seat opposite Man. A restrained push-in accompanies her\nleaning forward\
+  \ to inspect the pastries.\nGRANDMOTHER: “Finally. Something interesting at this table.”\n\nHer face brightens with unmistakable delight. Give “Finally” playful satisfaction and “interesting” dry comic\n\
+  emphasis. She looks from the pastries toward Sister, enjoying the disruption of the family's pretensions, then\nlets out a warm, spontaneous chuckle. End on Grandmother's animated reaction and satisfied\
+  \ closed-mouth\nsmile.\n\n\nPERFORMANCE\nPlay the conversation with emotional momentum. Woman is enthusiastic about her bakery and firmly refuses\nSister's attempt to diminish her. Sister's polished sweetness\
+  \ carries deliberate condescension; her scoff after\nthe reveal is openly mocking.\n\nMan presents Woman's work with warm conviction. Mother visibly loses her composure for a moment.\nGrandmother enjoys\
+  \ herself openly, giving the scene its final comic release. Father follows the exchange and\nthe reveal from his assigned seat.\n\nUse responsive eyes, natural breaths, fluid gestures and varied vocal\
+  \ stress. Each answer responds to the\nprevious line. Reactions begin when the characters see or hear their trigger, rather than waiting mechanically\nfor a turn.\n\n\nLIGHTING AND COLOUR\nPreserve the\
+  \ dining room's warm lamps, chandelier, candles and deep evening-blue windows from @image8.\nSoft directional side lighting shapes their faces, with darker shadow cheeks and gentle reflected fill preserving\n\
+  their eyes. Photograph faces from the shadow side. Chocolate glaze and gold boards catch warm, readable\nhighlights.\n\nFixed 4000K white balance. Rich walnut browns, burgundy accents, creamy practical\
+  \ highlights and deep\ntextured shadows. Natural skin colour beneath the warm light. Consistent lighting across all angles.\n\n\n\n\n                                                                  \
+  \                                                  32\n\fAUDIO — FIXED CHARACTER VOICES\nWOMAN VOICE: Adult woman in her mid-twenties; medium pitch, warm clear mezzo speaking voice with a\nlightly husky\
+  \ lower register, neutral General American accent, natural conversational rhythm, crisp intelligible\nconsonants and restrained expressive inflection.\nMAN VOICE: Adult man in his early thirties; medium-low\
+  \ pitch, warm resonant baritone with a subtle dry rasp,\nneutral General American accent, measured conversational rhythm, clear articulation and understated playful\ninflection.\n\nPreserve these vocal\
+  \ identities. Woman moves from enthusiasm to firm, pointed confidence. Man speaks with\nwarm conviction.\n\nMother uses polished, articulate curiosity. Sister speaks with patronising sweetness. Grandmother's\
+  \ mature,\nlightly textured voice carries animated delight and dry comic emphasis. All use natural General American\nEnglish.\n\nSpeak the written dialogue exactly, with clear turn-taking and accurate\
+  \ lip synchronisation. Quiet\nprivate-home ambience, subtle cutlery, chair movement, cardboard rustle and soft box contact. Mother's\nsurprised breath, Sister's short scoff and Grandmother's warm chuckle\
+  \ are distinct reactions. Dialogue stays\nforegrounded.\n\n\nFILM LOOK\nLate-1990s theatrical romantic dramedy captured on visibly textured 35mm film. Organic moving grain is\nclearly perceptible across\
+  \ midtones, skin and shadows at normal playback size. Warm halation surrounds the\nglowing lamps; bright reflections bloom gently. Rich film-print contrast, creamy highlight roll-off and natural\noptical\
+  \ sharpness with restrained edge enhancement. Preserve readable eyes, realistic skin and fabric detail\nbeneath the film texture. Natural motion blur and 24 fps cinematic cadence.\n\n\nCONTINUITY\nOnly\
+  \ Man leaves his chair. Everyone else retains their assigned seat. One closed box travels visibly in his\nhands from the existing sideboard behind the couple to the table. It opens only after resting\
+  \ on the tabletop.\nAll six pastries remain whole and untouched on their gold boards. Man stays standing beside his own chair\nthrough the reactions. Preserve exact faces, clothing, furniture, table service\
+  \ and evening light. End on\nGrandmother.\n\n\n\n\n                                                                                                              33\n\fANIMATION PROMPT 06\nSCENE CONTEXT\n\
+  A 30-second live-action romantic dramedy finale at a wealthy family's dinner in the year 2000. Mother\nrecognises the guest's talent. A question about her son becomes a playful exchange between the couple.\n\
+  Mother offers a professional opportunity, and the evening ends with a whispered invitation and shared\nlaughter.\n\n\nACTIVE REFERENCES\n@image1 — exact woman's face, loose brown hair and blue dress.\n\
+  @image2 — exact man's face, hairstyle, brown blazer and pale-blue shirt.\n@image3 — Mother.\n@image4 — Sister.\n@image5 — Grandmother.\n@image6 — Father.\n@image7 — chocolate pastries, matching shapes,\
+  \ glaze, decoration and gold boards.\n@image8 — photographic dining room, furnishings and evening atmosphere.\n@image9 — fixed seating relationships only.\n\n\nREALISM AND REFERENCE PRIORITY\nFull-frame\
+  \ photorealistic live-action cinema: real actors, natural skin texture, dimensional fabric and\nphotographic lighting. Character references establish appearance; @image8 establishes the interior. Extract\n\
+  seating positions only from @image9. Its coloured silhouettes, outlines and labels remain exclusive to the\nplanning diagram.\n\n\nFIXED SEATING\nTranslate the diagram colours into these photographic\
+  \ characters:\nCyan — Woman, @image1.\nOrange — Man, @image2.\nViolet — Mother, @image3.\nRed — Sister, @image4.\nGreen — Grandmother, @image5.\nBlue — Father, @image6.\n\nFather and Mother occupy opposite\
+  \ short ends. Woman and Man sit beside each other on the doorway side,\nWoman nearer Father. Sister sits directly opposite Woman; Grandmother directly opposite Man. Preserve\nthese neighbours, opposite\
+  \ partners and room positions across every angle. Everyone remains seated\nthroughout.\n\n\nSTARTING STATE\nDessert has been served, one pastry per person on its gold board on a dessert plate. The box\
+  \ has been\ncleared offscreen. Man is seated beside Woman.\n\nMother has just tasted a small forkful. Begin on her fork lowering after the bite. The table service and evening\natmosphere remain consistent\
+  \ with @image8.\n\n\n\n                                                                                                             34\n\fCAMERA AND FORMAT\n30 seconds, horizontal 16:9. Cinematic foreground\
+  \ depth, motivated camera movement and expressive\nchanges of shot size. Hard cuts at the listed boundaries. Stable focal length within each shot. Brisk, natural\nconversational timing, with gestures\
+  \ and listening flowing around the dialogue.\n\n\n0.0–1.0 SECONDS\n29° FOV. Tight oblique detail of Mother's fork lowering beside her pastry, a small bite missing. Warm\nhighlights catch the chocolate\
+  \ glaze, gold board and porcelain.\n\n\nHARD CUT — 1.0–3.0 SECONDS\n29° FOV. Close-up of Mother from beside Woman's position.\nShe finishes swallowing and looks directly toward the guest.\nMOTHER: “This\
+  \ is wonderful.”\nHer appreciation is spontaneous and warm.\n\n\nHARD CUT — 3.0–6.5 SECONDS\n47° FOV. Medium shot of Woman with Man seated beside her at the edge.\nWOMAN: “Thank you.”\nShe smiles with\
+  \ genuine pleasure.\nMOTHER, offscreen: “What do you like about my son?”\nStay on Woman as she glances toward him, finding a mischievous answer.\n\n\nHARD CUT — 6.5–10.0 SECONDS\n29° FOV. Close-up of\
+  \ Woman over Mother's softly blurred shoulder. A restrained push-in.\nWOMAN: “He has excellent taste in exotic desserts.”\nShe answers Mother with playful composure, giving “exotic desserts” a knowing\
+  \ emphasis. As she finishes,\nshe turns her eyes toward Man with a small closed-mouth smile.\n\n\nHARD CUT — 10.0–12.5 SECONDS\n47° FOV. Oblique medium two-shot of the couple, including their faces and\
+  \ elbows.\nMAN: “And women.”\nHe picks up the joke immediately, looking at her with an affectionate, self-satisfied smile.\nShe gives his upper arm one light, playful nudge with her elbow. He yields slightly\
+  \ to the contact, enjoying her\nresponse. Their exchange feels spontaneous.\n\n\nHARD CUT — 12.5–16.5 SECONDS\n47° FOV. Medium shot of Mother through softly blurred crystal. A gentle lateral camera move\
+  \ settles as she\naddresses Woman.\nMOTHER: “I'd like our chef to taste your desserts.”\nShe gestures lightly toward her plate, making a sincere professional offer. Her attention is warm and\nrespectful.\n\
+  \n\nHARD CUT — 16.5–18.0 SECONDS\n29° FOV. Close-up of Woman.\n\n\n\n                                                                                                                 35\n\fWOMAN: “I'd\
+  \ love that.”\nHer voice brightens with genuine pleasure. She meets Mother's gaze, visibly touched that her work has been\ntaken seriously.\n\n\nHARD CUT — 18.0–21.0 SECONDS\n47° FOV. Intimate medium\
+  \ two-shot from the near table corner. The family falls softly into the background.\nMan leans toward Woman, bringing his mouth close to her ear.\nMAN, in a quiet, clearly audible whisper: “Next dinner,\
+  \ just us?”\nShe turns slightly toward him to listen. This is a private exchange between the two of them.\n\n\nHARD CUT — 21.0–24.0 SECONDS\n29° FOV. Close oblique two-shot at their seated eye level,\
+  \ both faces readable.\nWOMAN, whispering back: “Only if your sister stays home.”\nShe gives him a conspiratorial look. He presses his lips into a smile, trying to keep their amusement private.\n\n\n\
+  HARD CUT — 24.0–30.0 SECONDS\n29° FOV. Tight side-angle two-shot showing her mouth near his ear and his face in three-quarter view. A slow,\nsubtle dolly inward.\n\nWoman leans closer and whispers directly\
+  \ into his ear:\nWOMAN: “But bring Grandma. I like her.”\n\nHe listens, then lets out a quiet chuckle as the joke lands. She draws back just enough to see his expression\nand answers with a small spontaneous\
+  \ giggle. Their eyes meet; they lean close, sharing the joke.\n\nEnd on their soft, overlapping laughter and warm faces. The final image stays with the couple.\n\n\nPERFORMANCE\nKeep the dialogue alive\
+  \ with quick responses, playful timing and attentive listening. Woman's dessert joke\nrefers knowingly to the pastries they brought. Man's “And women” is an immediate affectionate comeback,\nprompting\
+  \ her gentle elbow nudge.\n\nMother's offer gives Woman real professional recognition. Her gratitude is sincere before the scene turns into\na private flirtation.\n\nThe final exchange is whispered, intimate\
+  \ and mischievous. Their voices become breathier and quieter as\nthey lean close. Laughter grows from the shared joke, with natural breathing and small shoulder movements.\nPreserve recognisable faces\
+  \ and restrained, closed-mouth smiles between lines.\n\nThe family remains naturally occupied with dessert in the background, allowing the couple their private\nmoment.\n\n\nLIGHTING AND COLOUR\nPreserve\
+  \ the dining room's warm lamps, chandelier, candles and deep evening-blue windows from @image8.\nSoft directional side lighting shapes their faces, with darker shadow cheeks and gentle reflected fill\
+  \ preserving\ntheir eyes. Photograph from the shadow side. Hair, crystal, chocolate glaze and polished wood catch warm\nhighlights.\n\n\n\n\n                                                          \
+  \                                                    36\n\fFixed 4000K white balance. Rich walnut browns, burgundy accents, creamy practical highlights and deep\ntextured shadows. Natural skin colour\
+  \ beneath the warm light. Consistent lighting across all angles.\n\n\nAUDIO — FIXED CHARACTER VOICES\nWOMAN VOICE: Adult woman in her mid-twenties; medium pitch, warm clear mezzo speaking voice with a\n\
+  lightly husky lower register, neutral General American accent, natural conversational rhythm, crisp intelligible\nconsonants and restrained expressive inflection.\nMAN VOICE: Adult man in his early thirties;\
+  \ medium-low pitch, warm resonant baritone with a subtle dry rasp,\nneutral General American accent, measured conversational rhythm, clear articulation and understated playful\ninflection.\n\nPreserve\
+  \ these vocal identities through both normal speech and whispering. Woman moves from playful\nconfidence to genuine gratitude, then conspiratorial warmth. Man's comeback is quick and teasing; his\ninvitation\
+  \ is a soft, intimate whisper.\n\nMother speaks with polished articulation and genuine warmth in natural General American English.\n\nSpeak the written dialogue exactly, with clear turn-taking and accurate\
+  \ lip synchronisation. Mother's offscreen\nquestion originates from her fixed seat. From 18 seconds onward, the couple whisper privately to each other,\nsoftly but intelligibly recorded. Finish with their\
+  \ brief natural giggles and chuckles.\n\nQuiet private-home room tone, delicate cutlery and fabric movement beneath foregrounded voices.\n\n\nFILM LOOK\nLate-1990s theatrical romantic dramedy captured\
+  \ on visibly textured 35mm film. Organic moving grain is\nclearly perceptible across midtones, skin and shadows at normal playback size. Warm halation surrounds the\nglowing lamps; bright reflections\
+  \ bloom gently. Rich film-print contrast, creamy highlight roll-off and natural\noptical sharpness with restrained edge enhancement. Preserve readable eyes, realistic skin and fabric detail\nbeneath the\
+  \ film texture. Natural motion blur and 24 fps cinematic cadence.\n\n\nCONTINUITY\nAll six people retain their assigned seats. Mother's pastry keeps its missing bite. Plates, glasses and desserts\nremain\
+  \ in place. Woman's elbow nudge is a single gentle contact with Man's adjacent upper arm. Both remain\nseated as they lean together to whisper. Preserve exact faces, hair, clothing, room geometry and\
+  \ evening\nlight. End on their shared laughter, completing the story.\n\n\n\n\n                                                                                                              37"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '16:9'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: генератор картинок для «карт» в тексте не назван; видео — Seedance 2.5 (сказано в посте)
+source_url: https://x.com/ivanka_humeniuk/status/2113582628024566084
+duplicates_of: []

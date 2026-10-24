@@ -1,0 +1,45 @@
+id: 063_llama_on_invisible_leash_seedance25_edit
+source_file: 63_llama_on_invisible_leash_seedance25_edit.md
+title: '# 63 — Своё видео «веду невидимый поводок» → Seedance 2.5 Edit дорисовывает ламу (любое животное), которая в конце нюхает объектив'
+intent_tags:
+- client_in_clip
+- animal
+use_when: 'Видео-редактирование реальной съёмки: камера, человек и комната не меняются, добавляется животное на поводке; финал — крупный план морды в объектив.'
+inputs:
+- unknown
+steps:
+- n: 1
+  action: 'Снять себя: заходите в комнату, «тянете» невидимый поводок.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Seedance 2.5 (через VeoSeeBot или любой доступ): видео в референсы + промпт.'
+  tool:
+  - Seedance
+  - Veo
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "Инструкция:\n1. Переходим в VeoSeeBot \n2. Нейросеть Seedance 2.5\n3. В раздел с референсами вставляем свое отснятое видео, где вы заходите в комнату и как бы тяните за собой животное. Также в раздел\
+  \ с промптом вставляем такой запрос (у меня с ламой, можете заменить на свое животное) \nEdit the existing video. Keep the original video, girl, camera angle, location, lighting, and movements unchanged.\n\
+  \nIn the existing video, the girl is already holding an invisible leash and walking into the house. Add a small realistic llama attached to the leash, walking naturally behind her as she enters the house.\n\
+  \nThe llama should follow the girl naturally and stay connected to the leash. After the girl leaves the frame, the llama continues walking toward the camera. At the end, the llama comes extremely close\
+  \ to the camera, looks directly into the lens, and starts sniffing it.\n\nFinish with an extreme close-up of the llama’s face and nose right in front of the camera, as if the llama is curiously sniffing\
+  \ the camera lens.\n\nMake the llama look completely realistic and naturally integrated into the original footage. Do not change anything else in the original video"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://t.me/reels_by_alsi/774
+duplicates_of: []

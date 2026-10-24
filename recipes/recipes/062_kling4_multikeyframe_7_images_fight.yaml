@@ -1,0 +1,50 @@
+id: 062_kling4_multikeyframe_7_images_fight
+source_file: 62_kling4_multikeyframe_7_images_fight.md
+title: '# 62 — Kling 4.0: 7 ключевых кадров (первый/последний + промежуточные) → 19-секундный бой с монтажом между ракурсами'
+intent_tags:
+- seamless_series
+use_when: 'Новая возможность Kling 4.0: загрузить first/last frame + несколько промежуточных кадров; промпт описывает переходы между ними («Keep the action moving between the keyframes rather than pausing
+  on them»).'
+inputs:
+- unknown
+steps:
+- n: 1
+  action: Сделать 7 кадров одной сцены (лицом к лицу → … → человек на одном колене).
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Kling 4.0: first/last frame + multi key frames, промпт ниже.'
+  tool:
+  - Kling
+  mode: first/last frame
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: last_frame
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "\U0001F94A Alien Boxing Match (Kling 4.0) \n\n- Reference(s): Yes (First/last frame + multikey frames)\n- Styles Support:  Realism (tested)\n\n\"19-second photorealistic cinematic science-fiction fight\
+  \ sequence. Use the seven supplied images as key visual anchors, preserving both fighters’ identities, proportions, clothing, blunt armored gloves, and the underground cage arena. Begin with the wide\
+  \ face-off and end with the human on one knee, looking defiantly up at the alien.The human fights with speed, tight boxing technique and evasive footwork; the larger alien uses heavy, forceful punches\
+  \ and relentless forward pressure. They circle briefly before exchanging fast, committed strikes. Cut to an intense close-up of the human behind his raised gloves, sweat running down his face. The alien\
+  \ lands a powerful punch: enter brief extreme slow motion as the glove compresses the human’s cheek, his head turns, and small blood droplets and sweat scatter through the light. Return sharply to real-time\
+  \ action.An overhead shot captures the human ducking beneath a wide hook and stepping inside the alien’s reach. Cut low as he drives a compact counterpunch into the alien’s ribs, making its torso recoil.\
+  \ The alien recovers and forces him against the cage. In a tight, slightly canted shot, the human blocks a heavy punch with both gloves; the steel mesh shudders behind him. A final forceful exchange sends\
+  \ him stumbling away and dropping to one knee. End at floor level: one glove planted in the dust, the other protecting his face, eyes fixed on the exhausted alien still standing across from him.Use deliberate\
+  \ cinematic cuts between the reference angles. Connect each moment with convincing fight choreography, clear punch contact, defensive reactions, realistic balance and weight transfer. Keep the action\
+  \ moving between the keyframes rather than pausing on them. Reserve slow motion for the main facial impact; all other combat is fast and grounded.Soft industrial overhead lighting, muted amber accents,\
+  \ restrained contrast, realistic skin, shallow depth of field in close-ups, clean image without grain. Heavy glove impacts, strained breathing, boots scraping grit, cage rattles and muffled crowd reactions.\
+  \ No dialogue, no music, no sharp weapons, no glowing powers.\"\n\n✨ Get access to Kling 4.0 access now!"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: C
+prompt_completeness: complete
+notes: сами ключевые кадры (картинки); Kling 4.0 на момент поста — только по подписке kling.ai (API с 21 октября, по словам автора)
+source_url: https://t.me/TheProPrompts/352
+duplicates_of: []

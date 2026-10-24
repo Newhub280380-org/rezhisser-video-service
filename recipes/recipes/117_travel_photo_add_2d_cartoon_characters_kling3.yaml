@@ -1,0 +1,43 @@
+id: 117_travel_photo_add_2d_cartoon_characters_kling3
+source_file: 117_travel_photo_add_2d_cartoon_characters_kling3.md
+title: 'Фото из путешествия + 2D-мультперсонажи вокруг: Nano Banana Pro → Kling 3.0'
+intent_tags:
+- client_in_clip
+use_when: 'Своё фото из поездки + картинки 2D-персонажей → Nano Banana Pro вписывает персонажей в фото (плавают в воде, улитка на накидке) → Kling 3.0: человек неподвижен, персонажи двигаются.'
+inputs:
+- фото лица/портрет человека
+steps:
+- n: 1
+  action: 'Nano Banana Pro: своё фото + фото персонажей, промпт по образцу из поста.'
+  tool:
+  - Nano Banana
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Kling 3.0: готовое фото + запрос «Девушка стоит неподвижно, 2Д персонажи двигаются (…)».'
+  tool:
+  - Kling
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "=== https://t.me/reels_by_alsi/614 2026-04-25T19:15:50+00:00\nИдея, как можно показать свои фото с путешествий \U0001F642\n\nИнструкция:\n1. Переходим в VeoSeeBot \n2. Nano Banana Pro\n3. Вставляем свое\
+  \ фото и фото персонажей из мультфильма Пишем похожий промпт:\nНа первом фото добавь 2Д персонажей булькающих в воде со второго фото, на серую накидку девушки посади улитку с третьего фото\nТакже можно\
+  \ попробовать оживить изображения в нейросети Kling 3.0\nВставляете готовое фото и пишете похожий запрос:\nДевушка стоит неподвижно, 2Д персонажи двигаются (машет хвостом, ест мед, подпрыгивает, карабкается\
+  \ по одежде и тд)\n\nПримеры мульт персонажей оставила в комментариях ⤵️\n  \n    Please open Telegram to view this post\n    VIEW IN TELEGRAM\n  \n\n  \n    Please open Telegram to view this post\n \
+  \   VIEW IN TELEGRAM"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B/C
+prompt_completeness: complete
+notes: картинки-примеры мультперсонажей (в комментариях Telegram)
+source_url: https://t.me/reels_by_alsi/614
+duplicates_of: []

@@ -1,0 +1,58 @@
+id: 016_h3_video_reference_location_house
+source_file: 16_h3_video_reference_location_house.md
+title: 'Видео-референс ДОМА: прокатываешь камеру по реальным комнатам, H3 переносит локацию в сцену'
+intent_tags:
+- animal
+- motion_transfer
+use_when: 'Видео-референс ДОМА: прокатываешь камеру по реальным комнатам, H3 переносит локацию в сцену'
+inputs:
+- видео-референс (движение/клип)
+steps:
+- n: 1
+  action: unknown (в источнике нет нумерованных шагов; см. prompts_verbatim)
+  tool:
+  - Seedance
+  - MiniMax H3
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "MiniMax H3 — Another Video Reference Test, But This Time for Locations!\n\nThis time, instead of using a video reference for a character, I'm testing whether we can use one to keep an entire scene consistent.\
+  \ In this case, the inside of a home.\n\nI started with a still image and used Seedance to generate an 8-second video (video included) showing more of the room. But you could use just about any AI video\
+  \ generator, or even grab your cellphone and record a clip yourself.\n\nOne of the biggest problems I've run into when making AI videos is keeping the environment consistent from shot to shot.\n\nBefore\
+  \ this, I relied on AI-generated images, screenshots, or sometimes even DAZ Studio renders to establish a location.\n\nThe problem is that when the camera starts looking around, AI tends to invent things\
+  \ to fill in the gaps. A chair might be there in one shot and gone in the next, furniture changes color, or the room layout suddenly looks completely different.\n\nSo I wanted to test something. What\
+  \ if H3 had a video reference showing more of the actual room instead of just a single image? Would that help it maintain the environment more consistently?\n\nNow, here's a little tip I discovered while\
+  \ testing.\n\nOriginally, generating a 10-second H3 clip using the video reference took around 36 minutes.\n\nSo I went back into Camtasia and used its Add Clip Speed feature to speed up the original\
+  \ 8-second reference video and cut it to just 4 seconds (video included).\n\nThen I reduced the reference resolution from 1280×720 to 640×360. I might even try going lower, perhaps 540p or 480p, to see\
+  \ how far I can push it.\n\nThe result?\n\nOriginal render: approximately 36 minutes\nOptimized reference render: 19 minutes, 17 seconds\n\nThat's nearly half the rendering time.\n\nNow, this is only\
+  \ my first test, and there's still more experimenting to do. I also can't say yet how much of that improvement came from shortening the video versus lowering its resolution.\n\nBut overall, I'm not unhappy\
+  \ with the results.\n\nPrompt:...r34l1sm \n\nFor the target video, reference <Video 1> for the complete interior environment, <Picture 1> for the woman's appearance, and <Picture 2> for the dog's appearance.\n\
+  \nsubject_definitions:\n\n<Subject 1> is the adult woman from <Picture 1>. Preserve her exact facial identity, long brown hair, natural body proportions, clothing, blue jeans, and appearance. There is\
+  \ exactly ONE woman.\n\n<Subject 2> is the small dachshund from <Picture 2>. Preserve its exact breed, black-and-tan coloring, long body, short legs, floppy ears, and natural proportions. There is exactly\
+  \ ONE dog.\n\n<Subject 3> is the house interior from <Video 1>. This video is the MASTER ENVIRONMENT REFERENCE. Preserve the exact kitchen, dining area, living room, furniture arrangement, walls, windows,\
+  \ doorways, flooring, cabinets, and spatial relationships. The reference video establishes the real layout of the house, including areas revealed as the camera moves. Do not redesign, rearrange, or invent\
+  \ rooms or furniture.\n\nintegrated_multimodal_description:\n\n[Shot 1 — 00:00–00:04]\nPhotorealistic cinematic live-action. Natural daytime interior lighting matching <Video 1>.\n\nThe woman stands in\
+  \ the kitchen, clearly visible in a medium-wide shot. She begins walking naturally along the kitchen toward the adjoining living room.\n\nThe camera smoothly tracks alongside and slightly behind her,\
+  \ maintaining the correct kitchen background and architectural layout established by <Video 1>.\n\n[Shot 2 — 00:04–00:07]\nContinue the same uninterrupted camera movement.\n\nAs the woman reaches the\
+  \ living room entrance, she turns RIGHT.\n\nThe camera follows her turn with a smooth, natural pan, revealing the living room from the corresponding angle in <Video 1>.\n\nThe sofa, chairs, windows, walls,\
+  \ and other furniture remain in their original reference positions.\n\nA small dachshund is standing on the floor directly in front of a living room chair, looking up toward the approaching woman.\n\n\
+  [Shot 3 — 00:07–00:10]\nThe woman notices the dachshund and stops walking.\n\nThe camera settles into a natural medium-wide composition showing both the woman and the dog, with the living room clearly\
+  \ visible behind them.\n\nThe dachshund remains standing in front of the chair, tilting its head slightly while looking up at her.\n\nThe woman looks down at the dog and smiles warmly.\n\nEnd with both\
+  \ subjects clearly visible and the surrounding room recognizable from <Video 1>.\n\nCAMERA AND CONTINUITY RULES:\nOne continuous 10-second shot.\nNo cuts, teleportation, or sudden camera jumps.\nSmooth\
+  \ tracking and natural rightward camera rotation.\nMaintain consistent architectural geometry throughout.\nPreserve the exact environment shown in <Video 1>, including previously hidden areas revealed\
+  \ by camera movement.\nDo not mirror or reverse the room.\nNo changing furniture positions.\nNo additional people or animals.\nRealistic walking, natural body mechanics, accurate anatomy.\nNo artificial\
+  \ cinematic lighting changes.\nNo dialogue.\n\noverall_soundscape:\nQuiet natural household ambience. Soft footsteps on the floor, subtle clothing movement, faint room tone, and a gentle sound of the\
+  \ dog's paws shifting on the floor. No barking.\n\nnon_diegetic_music:\nNone."
+output:
+  format: mp4
+  resolution: 480p
+  aspect: unknown
+done_criteria: Реальный видео-референс комнаты держит планировку между шотами; ускоренный в 4 с референс и 640×360 превью сократили рендер с ~36 до 19:17.
+confidence: B
+prompt_completeness: partial
+notes: —
+source_url: https://x.com/EndFolding79421/status/2110497810554536216
+duplicates_of: []

@@ -1,0 +1,86 @@
+id: 105_pop_the_balloon_dating_show_meme_seedance25
+source_file: 105_pop_the_balloon_dating_show_meme_seedance25.md
+title: 'Мем «Pop The Balloon»: 7 референсов → один 30-секундный промпт шоу знакомств со смешным финалом'
+intent_tags:
+- talking_head
+- meme
+use_when: 'Пародия на интернет-шоу знакомств: 5 девушек с шариками, ведущая и «жених» 44 лет из маминого подвала. Структура мема в таймкодах: представление → нелепый ответ → реакции → все пять шариков лопаются
+  → финальная фраза «Was it the basement?». Шесть персонажей сделаны в Grok, один реф — кадр реальной с'
+inputs:
+- unknown
+steps:
+- n: 1
+  action: Сделать картинки персонажей (у автора 6 штук в Grok) + 1 кадр-реф студии шоу.
+  tool:
+  - Grok Imagine
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Промпт и диалог — через текстовую модель (у автора GPT).
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Seedance 2.5, 30 с: 7 референсов + промпт ниже.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: 30 с
+  aspect: unknown
+prompts_verbatim:
+- |-
+  Pop The Balloon or find love
+  u/mars30wine r/Seedance_AI score 31 created_utc 1792514640
+  https://www.reddit.com/r/Seedance_AI/comments/1xax84y/
+
+  7 reference images.  6 made by Grok. 1 reference from the actual show to get the set. Prompt and dialog by GPT Astra medium
+
+  Promt:
+
+  Create a realistic, professionally filmed episode of an internet balloon dating show. Match the studio layout and visual style of the supplied show reference: bright, even lighting, clean studio sound, and natural multicamera coverage. Use the five supplied female character references as five distinct adult contestants, preserving their individual appearances and outfits. They stand shoulder-to-shoulder in one straight line, each holding one inflated red balloon and a small balloon-popping pin. Keep their positions consistent throughout.
+
+
+
+  The host is a Black woman resembling the host in the show reference, wearing an orange dress and holding a handheld microphone. She stands beside Henry, facing the lineup. Henry matches the supplied male reference: an overweight, slovenly 44-year-old man with an obliviously self-satisfied attitude. Play the scene as awkward, deadpan reality television.
+
+
+
+  0–5 seconds: Open on a wide shot establishing all five women, their intact balloons, and the host standing beside Henry across from them. Cut to a medium two-shot as the host cheerfully announces: “Ladies, meet Henry. He’s forty-four. Henry, what are you looking for?” She moves the microphone toward his mouth.
+
+
+
+  5–17 seconds: Medium shot of Henry confidently answering: “I live in my mom’s basement. I’m looking for a woman to move in, cook, clean, and take care of me. Mom’s getting tired of doing everything.” During his uninterrupted answer, cut briefly to the women listening. Their polite expressions gradually turn into disbelief: a raised eyebrow, a wrinkled nose, an incredulous sideways glance. Every balloon remains inflated.
+
+
+
+  17–23 seconds: Slowly pan across the five women’s faces as Henry adds off-camera: “And she needs a job. I’m not paying for everything.” One woman looks toward another as if checking she heard correctly. Another stares at him with her lips pressed together. Keep the reactions distinct, restrained, and believable.
+
+
+
+  23–27 seconds: Cut to a wide shot of the entire lineup. After one silent beat, all five women puncture their balloons in a rapid succession of five sharp pops. Show each balloon visibly bursting exactly once. No balloons pop before Henry finishes speaking.
+
+
+
+  27–30 seconds: Cut to Henry looking baffled. He asks: “Was it the basement?” The host slowly turns toward him with a stunned, speechless expression. End on the awkward silence.
+
+
+
+  Natural movement and accurate lip synchronization. Normal speed throughout. No music, laugh track, subtitles, or exaggerated cartoon reactions. Maintain exactly five female contestants, one host, and Henry.
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: сами 7 картинок-референсов
+source_url: https://www.reddit.com/r/Seedance_AI/comments/1xax84y/
+duplicates_of: []

@@ -1,0 +1,169 @@
+id: 114_dance_video_face_swap_nbpro_seedance_camera_recreate
+source_file: 114_dance_video_face_swap_nbpro_seedance_camera_recreate.md
+title: 'Вставить себя в чужой танцевальный ролик с той же камерой: скрин 1-го кадра → Nano Banana Pro замена человека → Seedance 2.0 (картинка + видео-референс)'
+intent_tags:
+- client_in_clip
+- meme
+- dance
+- motion_transfer
+use_when: Берётся вирусное видео с танцем (у автора — её же ролик на фоне гор, дрон отлетает назад-вверх). Скрин первой секунды → Nano Banana Pro меняет человека на тебя (лучше коллаж своего лица со всех
+  сторон). Затем Seedance 2.0 получает этот кадр как <<<image_1>>> (персонаж) и исходное видео как <<<video_
+inputs:
+- фото в полный рост
+- видео-референс (движение/клип)
+steps:
+- n: 1
+  action: Сделать скрин первой секунды видео-референса.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Nano Banana Pro: скрин + фото/коллаж своего лица, промпт «Замени человека на первом фото на персонажа из второго фото».'
+  tool:
+  - Nano Banana
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Seedance 2.0: картинка из шага 2 + видео-референс в референсы, промпт из комментария (ниже), 9:16, 13 с.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: previous_step_output
+  duration: 13 с
+  aspect: '9:16'
+prompts_verbatim:
+- "=== https://t.me/reels_by_alsi/675 2026-06-08T06:41:08+00:00\n\U0001F520\U0001F520\U0001F520\U0001F520\U0001F520\n\nИнструкция:\n1. Переходим в VeoSeeBot \n2. Делаем скрин первой секунды из моего видео\n\
+  3. В Nano Banana Pro вставляем скрин и фото своего лица, лучше коллаж, где вас видно со всех сторон. Пишем такой промпт:\nЗамени человека на первом фото на персонажа из второго фото \n4. Переходим в seedance\
+  \ 2.0 \nВставляем получившееся изображение и мое готовое видео с танцем в раздел с референсами\nПрикрепляем промпт, который я оставила в комментариях ⤵️\n  \n    Please open Telegram to view this post\n\
+  \    VIEW IN TELEGRAM\n  \n\n  \n    Please open Telegram to view this post\n    VIEW IN TELEGRAM"
+- |-
+  8 июня 2026 г., 12:29 МСК
+  Если вы пропишите в промпте, что нужно оставить одежду, то да
+  Можно заменить на свою
+
+  --- (следующий комментарий автора) ---
+
+  10 июня 2026 г., 7:50 МСК
+  Вы должны все в раздел референсов ставить
+
+  --- (следующий комментарий автора) ---
+
+  8 июня 2026 г., 9:42 МСК
+  [Scene Type: Dance Performance / EXACT Camera Recreation]
+  [Duration: EXACTLY 13 seconds]
+  [Aspect Ratio: 9:16 vertical]
+  <<<image_1>>> = STRICT CHARACTER, FACE, OUTFIT, HAIR, ACCESSORIES, AND STYLE REFERENCE.
+  <<<video_1>>> = STRICT CAMERA MOVEMENT, TIMING, CHOREOGRAPHY, FRAMING, ENVIRONMENT REVEAL, AND MOTION REFERENCE.
+  IMPORTANT:
+  Recreate the ORIGINAL VIDEO camera behavior as closely as possible.
+  The final result must feel like the SAME original dance video, but with the character from <<<image_1>>> replacing the original dancer.
+  ━━━━━━━━━━━━━━━━━━
+  CRITICAL CAMERA RECREATION
+  ━━━━━━━━━━━━━━━━━━
+  The camera movement MUST behave EXACTLY like the original reference video.
+  At the START of the video:
+  - The frame shows MOSTLY SKY behind the character.
+  - Mountains and trees are NOT yet fully visible.
+  - The camera starts relatively LOW and CLOSE to the dancer.
+  As the video progresses:
+  - The camera slowly flies BACKWARD and UPWARD like a smooth cinematic drone.
+  - Because the camera rises higher, the visible landscape in the background gradually MOVES DOWNWARD in frame.
+  - First snowy mountains appear.
+  - Then more mountains become visible.
+  - Then the forest and trees gradually appear lower in frame.
+  - The environment reveal must happen progressively EXACTLY like the reference video.
+  VERY IMPORTANT:
+  The visual effect should feel like:
+  SKY ONLY
+  → snowy mountains appear
+  → mountains become larger
+  → forest appears lower in frame
+  → full landscape reveal.
+  The background reveal must happen NATURALLY and GRADUALLY exactly like the original video timing.
+  DO NOT:
+  - start with full mountains visible
+  - start with trees visible
+  - use a static background
+  - zoom in
+  - move camera toward character
+  - reverse the reveal direction
+  - reveal everything immediately
+  The dancer should slowly become SMALLER in frame over time as the drone pulls away.
+  ━━━━━━━━━━━━━━━━━━
+  CHARACTER CONSISTENCY RULES
+  ━━━━━━━━━━━━━━━━━━
+  - Preserve the EXACT face from <<<image_1>>>.
+  - Preserve the EXACT hairstyle and hair length.
+  - Preserve the EXACT outfit, textures, colors, and accessories.
+  - Maintain perfect identity consistency during:
+    dancing,
+    side angles,
+    turns,
+    hand movement,
+    and full body motion.
+  - No face morphing.
+  - No hairstyle changes.
+  - No outfit mutations.
+  - No duplicate accessories.
+  - No AI flickering.
+  ━━━━━━━━━━━━━━━━━━
+  CHOREOGRAPHY
+  ━━━━━━━━━━━━━━━━━━
+  The character performs the SAME dance choreography, timing, rhythm, energy, body movement, arm movement, hip movement, and pose transitions from <<<video_1>>>.
+  Movement style:
+  - smooth
+  - relaxed
+  - rhythmic
+  - hip-hop / afrobeats inspired
+  - natural body groove
+  - playful confident energy
+  ━━━━━━━━━━━━━━━━━━
+  TIMING STRUCTURE
+  ━━━━━━━━━━━━━━━━━━
+  00:00–00:02
+  - Mostly sky visible.
+  - Character standing relaxed on vehicle roof.
+  - Subtle groove movement begins.
+  - Camera slowly starts moving backward and upward.
+  00:02–00:04
+  - Snowy mountain peaks gradually appear behind character.
+  - Character starts expressive dance movement.
+  00:04–00:07
+  - Mountains become fully visible.
+  - Camera continues smooth drone pullback upward.
+  - Forest line starts appearing lower in frame.
+  00:07–00:10
+  - Trees and landscape become increasingly visible.
+  - Wide cinematic environmental reveal.
+  - Character continues choreography confidently.
+  00:10–00:13
+  - Full landscape now visible:
+    mountains,
+    forest,
+    valley.
+  - Character finishes dance naturally while camera maintains smooth cinematic retreat.
+  ━━━━━━━━━━━━━━━━━━
+  QUALITY
+  ━━━━━━━━━━━━━━━━━━
+  Ultra realistic, cinematic drone footage, photorealistic human movement, realistic environmental depth, natural atmospheric haze, realistic lighting, high temporal consistency, smooth stabilization, professional choreography capture, cinematic environmental reveal identical to the original reference video.
+  ❤
+  3
+  🎉
+  1
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: само видео-референс автора (берётся из поста в Telegram)
+source_url: https://t.me/reels_by_alsi/675
+duplicates_of: []

@@ -1,0 +1,132 @@
+id: 096_pixeldojo_drivein_seedream_seedance_charswap
+source_file: 96_pixeldojo_drivein_seedream_seedance_charswap.md
+title: 'PixelDojo «Drive-In Day»: Character Studio → Seedream 5 кадры → Seedance 2.5 движение+звук → WAN Character Swap → Seed Audio'
+intent_tags:
+- client_in_clip
+- vfx_effect
+use_when: '25-секундный ролик в стиле ТВ-сериала 80-х: надувной трёхголовый дракон громит автокинотеатр. Каждый план — сначала неподвижный кадр Seedream 5 с персонажами из Character Studio (реальные фото
+  людей + персонажи), потом Seedance 2.5 добавляет движение и звуковые эффекты (5 с, 1080p), из каждого клипа'
+inputs:
+- аудио/голос
+- логотип
+steps:
+- n: 1
+  action: 'Character Studio: сохранить героев (реальные фото Брайана и Памелы + персонажи).'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Seedream 5, 9:16: по одному кадру на план, общий «Prime Time» стиль-блок, рефы из Character Studio (11 кадров, 8 в монтаж).'
+  tool:
+  - Seedream
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: '9:16'
+- n: 3
+  action: 'Seedance 2.5: каждый кадр → 5 с, 1080p, 9:16, thinking on, generate audio on, в промпте «Sound effects only, no music, no speech» (9 клипов).'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: 5 с
+  aspect: '9:16'
+- n: 4
+  action: 'Character Swap (WAN Video Character Swap, mode wan-pro): одно фото нового героя + готовый 5-секундный клип → тот же план с новым героем (720×1280, без промпта).'
+  tool:
+  - Wan
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 5
+  action: 'Seed Audio: музыкальная тема 25 с.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: 25 с
+  aspect: unknown
+- n: 6
+  action: 'Монтаж: обрезать каждый клип до лучших 1,4–2,3 с, 9 жёстких склеек, титры, SFX клипов под музыкой на 0,8, лимитер, фейды.
+
+    Урок автора: сдувание просить как «the whole body visibly shrinks; no new heads or necks appear, nothing rises», иначе Seedance отращивает четвёртую шею.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: 3 с
+  aspect: unknown
+prompts_verbatim:
+- "Prime Time: Drive-In Day: how it was made | Pixel Dojo\nSkip to main content\nAll how-tos\nHow it was made\nOct 23, 2026\nPrime Time: Drive-In Day\nOne photo of Gus, a new star in the shot\nA three-headed\
+  \ inflatable dragon crashes a desert drive-in until Circe pulls its valve. Every shot started as a Seedream 5 still with our Character Studio cast, Seedance 2.5 added motion and sound, and Character Swap\
+  \ put Gus into Brian's closing shot.\nSeedream 5\nSeedance 2.5\nCharacter Swap (WAN Video Character Swap)\nAbout \n779.4 credits\n in all.\nMade in Pixel Dojo\nWatch the film\n, with sound\nSound on\n\
+  How it was made\nTap any step to see it.\n1\nWhat went in: Character Studio refs\n2\nThe still (one per shot)\n3\nMotion + sound effects\n4\nCharacter Swap: same shot, new star\n5\nThe finished cut\n\
+  Step \n1\nWhat went in: Character Studio refs\nBrian, Pamela (real photos), Circe, the Pixel Dojo Dragon and Gus Varela, all saved in Character Studio\nStep \n2\nThe still (one per shot)\nSeedream 5\n\
+  Prompt\nCopy prompt\nVertical frame. A giant three-headed inflatable dragon rears up from behind the huge blank white screen of a 1980s desert drive-in movie theater at golden hour, towering three times\
+  \ the height of the screen. All three long necks rise from one round body; three fierce stylized heads with swept-back horns, ear fins and spiky crests, wide jaws of white vinyl fangs and red mouths,\
+  \ puffing harmless orange smoke. Glossy cornflower-blue vinyl parade-balloon with visible seams and air valves, navy hexagon scale print, pale blue belly, small wings (the dragon in images 1 and 2, exactly\
+  \ three heads). Below, rows of boxy unbranded 1980s cars with chrome bumpers parked on gravel, speaker posts, desert mesas and a big orange sky behind. Low heroic angle, dust in the air. The screen is\
+  \ completely blank white with no image or text on it. Shot like a 1980s prime-time action TV series, high production value: 35mm film, warm sun-bleached golden grade, soft highlight halation, light film\
+  \ grain, slightly lifted blacks, heroic low angles, practical stunt look. No on-screen text, no logos, no signs.\nimage size: portrait_9_16\nrefs: The Pixel Dojo Dragon, 2 Character Studio photos\n27.5\
+  \ credits\n · \nThis is the exact prompt of the hook still (first take used). 11 stills rendered at 2.5 credits each, 8 used; the other 7 shared the same Prime Time style block and the cast's Character\
+  \ Studio refs.\nStep \n3\nMotion + sound effects\nSeedance 2.5\nPrompt\nCopy prompt\nThe single blue inflatable dragon head in the image (same exact shape, glossy vinyl balloon, neck entering from the\
+  \ top of the frame) shoves the giant tin popcorn barrel over with a rubbery bump; the barrel tips and rolls, and a huge blizzard of popcorn sprays into the air and rains down over the parked cars, bouncing\
+  \ off roofs and hoods. The head recoils with a springy wobble and puffs orange smoke. Dust swirls. Camera: low angle, quick handheld shake on impact. Keep the 1980s 35mm golden-hour film look. Sound effects\
+  \ only, no music, no speech: a metal clang, popcorn pattering like hail, rubbery squeak.\nresolution: 1080p\naspect ratio: 9:16\nduration: 5\nthinking: on\ngenerate audio: on\n720 credits\n · \nThis is\
+  \ the exact prompt of the popcorn shot. 9 clips at 80 credits each (1080p, 5 s, one was a retake); the best 1.4 to 2.3 s of each made the cut.\nStep \n4\nCharacter Swap: same shot, new star\nCharacter\
+  \ Swap (WAN Video Character Swap)\nmode: wan-pro\nvideo duration: 5.04\noutput: 720x1280\n29.4 credits\n · \nNo text prompt: one photo of Gus from Character Studio plus Brian's 5 s closing clip. 1 take,\
+  \ 29.4 credits; shown at its native 720x1280 inside a framed panel, not upscaled.\nStep \n5\nThe finished cut\nTrims, supers and the Seed Audio score (2.5 credits); the exact steps are under Assembly.\n\
+  Music\nSeed Audio\nPrompt\nCopy prompt\nInstrumental 80s action TV theme, 25 seconds, funk-rock: slap bass, brass stabs, driving drums, wah guitar, big hit on the downbeat, triumphant brass ending. No\
+  \ vocals.\n2.5 credits\nPutting it together\nTrimmed each Seedance clip to its best 1.4-2.3 s (9 shots, hard cuts)\nBig centered supers: title on the hook, SAME SHOT. / NEW STAR. on the swap\nCharacter\
+  \ Swap clip shown at native size in a gold-framed panel\nScore from Seed Audio, clip sound effects under it at 0.8, limiter, 0.6 s fade into the end card, music fades over the last 1.6 s\nTotal: \nabout\
+  \ \n779.4 credits\nThe lesson\nAsk for the deflate as 'the whole body visibly shrinks; no new heads or necks appear, nothing rises', or Seedance grows a fourth neck while the dragon collapses.\nMake your\
+  \ own\nTry \nSeedream 5\nTry \nSeedance 2.5\nTry \nCharacter Swap (WAN Video Character Swap)\nResources\nPricing\nDojo Academy: free video lessons\nAffiliate Program: earn 25% recurring\nCreator Program:\
+  \ get paid for views\nCommunity Gallery\nAll AI Tools\nSensei Recipes\nHow It Was Made\nPreset Library\nUse Cases\nWhat's New\nContests\nPixel Dojo News\nIndustry News\nTop AI Models\nFLUX 3 Klein Generator\n\
+  Qwen Image 2.1 Generator\nFLUX 3 Image Generator\nIdeogram 4.5 Generator\nFLUX.2 Image Generator"
+- |-
+  --- https://x.com/PixelDojoAI/status/2113687857454023033 2026-10-23T17:43:50.000Z conv 2113687857454023033
+  A three-headed inflatable dragon crashed the drive-in. Then we swapped the hero out of his own closing shot. Here's how it was made: https://t.co/KJNBoF55Xm https://t.co/L2vcdVMTgp
+
+  --- https://x.com/PixelDojoAI/status/2113688023267459335 2026-10-23T17:44:29.000Z conv 2113687857454023033
+  Step 1: the cast. Brian, Pamela, Circe, our inflatable dragon and Gus all live in Character Studio, so every shot gets the same faces. https://t.co/xq7s5YtxcA
+
+  --- https://x.com/PixelDojoAI/status/2113688101633892782 2026-10-23T17:44:48.000Z conv 2113687857454023033
+  Step 2: every shot starts as a Seedream 5 still. Hook prompt: "A giant three-headed inflatable dragon rears up from behind the huge blank white screen of a 1980s desert drive-in movie theater at golden hour..." https://t.co/2axd9tFU1j
+
+  --- https://x.com/PixelDojoAI/status/2113688748013850954 2026-10-23T17:47:22.000Z conv 2113687857454023033
+  Step 3: Seedance 2.5 animates each still at 1080p with its own sound effects: "...shoves the giant tin popcorn barrel over with a rubbery bump; the barrel tips and rolls, and a huge blizzard of popcorn sprays into the air..." https://t.co/FFVbmBKb2Y
+
+  --- https://x.com/PixelDojoAI/status/2113688846710038767 2026-10-23T17:47:46.000Z conv 2113687857454023033
+  Step 4: Character Swap. One photo of Gus + Brian's 5-second closing shot. No prompt. Gus takes over the shot with the same motion, camera and light. https://t.co/e9JcNN1yha
+
+  --- https://x.com/PixelDojoAI/status/2113688934844907560 2026-10-23T17:48:07.000Z conv 2113687857454023033
+  Score: Seed Audio, "Instrumental 80s action TV theme, 25 seconds, funk-rock: slap bass, brass stabs, driving drums..." Cut as a trailer: 9 shots, 1.4-2.3 s each.
+
+  --- https://x.com/PixelDojoAI/status/2113689002826203388 2026-10-23T17:48:23.000Z conv 2113687857454023033
+  Cost: about 779 credits total. 720 of that is nine 1080p Seedance clips; the swap was about 29.
+
+  --- https://x.com/PixelDojoAI/status/2113689086347415617 2026-10-23T17:48:43.000Z conv 2113687857454023033
+  Lesson: for a deflate, tell Seedance "the whole body visibly shrinks; no new heads or necks appear." Our first take grew a fourth neck mid-collapse.
+
+  --- https://x.com/PixelDojoAI/status/2113689169361027322 2026-10-23T17:49:03.000Z conv 2113687857454023033
+  Character Swap: https://t.co/sH17Rf9JIk
+  Seedance 2.5: https://t.co/PVg46Heznk
+  Seedream 5: https://t.co/CG346Bd7JS
+output:
+  format: mp4
+  resolution: 1080p
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего; сервис PixelDojo платный (кредиты), цепочку можно собрать на тех же моделях в других местах
+source_url: https://x.com/PixelDojoAI/status/2113687857454023033
+duplicates_of: []

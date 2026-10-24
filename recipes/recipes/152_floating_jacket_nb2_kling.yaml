@@ -1,0 +1,50 @@
+id: 152_floating_jacket_nb2_kling
+source_file: 152_floating_jacket_nb2_kling.md
+title: «Парящая куртка» сама надевается на идущего человека — NanoBanana 2 (снять куртку, повесить в воздухе) → Kling 3.0 i2v
+intent_tags:
+- other
+use_when: 'Скриншот, где человек идёт в куртке. NanoBanana 2 снимает с него куртку и вешает её в воздухе на переднем плане. Kling анимирует: человек подходит, куртка облетает его плащом и надевается.'
+inputs:
+- unknown
+steps:
+- n: 1
+  action: 'Раздел Дизайн → NanoBanana 2: загрузить скриншот, промпт 1.'
+  tool:
+  - Nano Banana
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Раздел видео → Kling, image to video, Kling 3.0, 8–10 с, загрузить полученный кадр, промпт 2.
+  tool:
+  - Kling
+  mode: image to video
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: previous_step_output
+  duration: 8–10 с
+  aspect: unknown
+prompts_verbatim:
+- "Эффект парящей куртки \U0001F97C\n\nЗаходим на «Сайт»\n\nРаздел Дизайн\nНейросеть: NanoBanana 2\nЗагружаем скриншот и пишем промпт: \n[A person walking wearing only a t-shirt and jeans. LOCK the subject\
+  \ completely: keep face, body, pose, proportions, clothing (t-shirt and jeans), lighting, and camera framing unchanged. Remove the jacket from the person's body completely, revealing the t-shirt naturally\
+  \ with no distortion. Recreate the exact same jacket as a separate object levitating in mid-air in the extreme foreground, positioned much closer to the camera and far ahead of the person. The jacket\
+  \ must be significantly larger in scale due to perspective and clearly closer to the camera than the subject. Maintain a wide, obvious gap between the person and the jacket, with several meters of empty\
+  \ walking space between them. The person remains in the mid-ground while the jacket is in the foreground. Maintain correct depth, perspective, and lighting. No duplication, no deformation, no changes\
+  \ to the background.]\n\nДля анимации заходим в раздел видео\nНейросеть:Kling\nМодель: image to video \nВерсия: Kling 3.0\nДлительность: 8-10секунд \n\nЗагружаем полученное изображение и пишем промпт:\n\
+  [A person starts further back in the frame, several steps away from a levitating leather jacket positioned ahead in the foreground. The jacket is clearly closer to the camera and larger in scale, while\
+  \ the person is in the mid-ground. The person walks forward naturally toward the jacket. The camera has subtle natural movement, like a gentle handheld drift, but remains stable and controlled. The person\
+  \ gradually increases in size in frame as they approach. The effect only triggers when the person reaches close proximity to the jacket.\nAt that moment, the jacket lifts and glides smoothly around the\
+  \ person, flying past them and moving behind their body like a flowing cape. The motion is elegant and fluid, as if guided by a magical force. Once behind the person, the jacket quickly wraps forward\
+  \ around the torso and arms, attaching perfectly in one clean motion. The sleeves align and slide onto the arms naturally. The motion feels controlled, cinematic, and slightly magical, not aggressive\
+  \ or chaotic. The person continues walking forward seamlessly after wearing it. Photorealistic. No distortion, no jitter, no extra limbs, no fast chaotic motion.]\n\nГотово ✅"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: Сайт-агрегатор автора (реф-ссылка) не открывался — не нужен, модель доступна где угодно.
+source_url: https://t.me/reelsteacher/894
+duplicates_of: []

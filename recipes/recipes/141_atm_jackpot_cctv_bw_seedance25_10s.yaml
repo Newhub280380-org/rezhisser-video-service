@@ -1,0 +1,100 @@
+id: 141_atm_jackpot_cctv_bw_seedance25_10s
+source_file: 141_atm_jackpot_cctv_bw_seedance25_10s.md
+title: 'Джекпот в банкомате: ваше фото → Seedance 2.5 10 с, ЧБ камера видеонаблюдения'
+intent_tags:
+- client_in_clip
+use_when: 10 с, ЧБ «настоящая запись камеры видеонаблюдения», статичный план в тесной комнате с банкоматом, абсурдный комедийный поворот (джекпот); звук — из комментариев, добавить в редакторе.
+inputs:
+- аудио/голос
+- логотип
+steps:
+- n: 1
+  action: Фото (см. пост) в хорошем качестве.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Seedance 2.5 с параметрами из поста (длительность, формат).
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: 5 с
+  aspect: unknown
+- n: 3
+  action: 'Фото + промпт из комментария → генерация; звук — по посту (часть шаблонов: без звука, трек добавить в редакторе).'
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "=== https://t.me/nercpa/319 2026-10-21T05:48:35+00:00\n\U0001F4B8Джекпот в банкомате\n\n1. Заходите в бота @neyrosetkabot\n2. Выбираете ваше фото в хорошем качестве\n3. Выбираете режим Видео - Seedance\
+  \ 2.5 (10 сек, формат 9:16) и отправляете ваше фото с текстом из комментариев\n4. В любом редакторе можете добавить звук, который находится в комментариях\n\nПРОМПТ В КОММЕНТАРИЯХ \n⬇️⬇️⬇️\n\n⚡️Генерация\
+  \ в один клик \n\n#видео #тренд\n  \n    Please open Telegram to view this post\n    VIEW IN TELEGRAM"
+- |-
+  ### comments nercpa/319
+  --- Нейросетка |Промты | Обновления Chat
+  TASK & FORMAT
+  A 10-second photorealistic vertical video (9:16) that looks like real black-and-white CCTV security camera footage. One continuous static shot, no cuts. Comedic absurd twist.
+
+  REFERENCES
+  @image1 = the main character. Exact face, facial structure, eyes, brows, nose, lips, skin tone, apparent age and gender, hairstyle, hair length and color, body build, clothing and accessories from @image1. The person may be anyone — a man or a woman, any age; the body matches @image1. If @image1 shows only the face or upper body, complete the rest of the body and outfit logically in the same style as the visible clothing. Do not alter gender presentation, age or ethnicity. Same face, hair and outfit in every frame.
+
+  LOCATION
+  A small enclosed ATM room: walls of vertical brushed-steel panels, a glossy dark floor reflecting the round ceiling lights, an ATM built into the right wall with a keypad, a screen and a cash slot. Nobody else is there.
+
+  CAMERA
+  A security camera mounted high in the corner of the ceiling, looking steeply down at the ATM and the person standing at it. Strong fisheye lens: the image is a circle with curved, bent walls and a soft black vignette all around the edges of the frame. Black and white, slightly soft, real CCTV look. The camera never moves.
+
+  TIMELINE
+  0.0–1.8s — CALM
+  The @image1 person stands at the ATM, seen from above in profile, calmly typing a PIN on the keypad with eyes down, an ordinary bored moment. Nothing else moves.
+
+  1.8–2.4s — THE ATM EXPLODES WITH MONEY
+  Suddenly the cash slot blasts out a huge, powerful jet of banknotes, like a firehose, straight into the person's chest. The torrent of bills engulfs them, and its force throws them backward and sideways out of the frame to the left. Banknotes fly everywhere.
+
+  2.4–4.0s — MONEY FOUNTAIN, EMPTY FRAME
+  The person is out of the frame. The ATM keeps gushing a thick, nonstop stream of banknotes that arcs out across the room and rains down; bills flutter through the air, and within seconds the whole floor is covered with a thick layer of scattered banknotes.
+
+  4.0–5.0s — SHE/HE COMES BACK IN SHOCK
+  The person staggers back into the frame from the left, hair messed up, mouth wide open, eyes huge, arms spread out, staring at the gushing ATM in total disbelief.
+
+  5.0–6.0s — GRABBING
+  They rush to the ATM and plunge both arms into the stream of money, scooping up as much as they can.
+
+  6.0–8.5s — HAPPINESS
+  They hug a huge armful of crumpled banknotes to their chest, pressing bundles against their face, overwhelmed with joy, laughing so hard it is almost crying. The stream keeps hitting them and spilling over their arms onto the floor.
+
+  8.5–10.0s — FINAL
+  They turn slightly toward the camera, laughing ecstatically, arms overflowing with cash, bills still raining all around. The ATM keeps spitting money as the video ends.
+
+  REALISM
+  Photorealistic real CCTV footage. Banknotes are real paper money with weight: they flutter, tumble, slide and pile up realistically on the glossy floor. The jet of money has real force. Natural body reactions: real stumbling, real weight. No magic, no glow.
+
+  AUDIO
+  No music.
+  0–1.8s: quiet room tone, soft electronic beeps of the ATM keypad.
+  1.8–2.4s: a sudden loud mechanical whirring roar of the ATM and a huge whoosh and flutter of paper, the person's startled scream.
+  2.4–4.0s: the continuous rushing rustle of thousands of banknotes pouring out and falling, the steady whir of the machine.
+  4.0–5.0s: a shocked gasp.
+  5.0–10.0s: the person's loud, happy, hysterical laughter over the constant rustle of falling money.
+  No speech, no words.
+
+  NEGATIVE
+  color image, moving camera, cuts, a normal flat lens without the fisheye circle, readable text, timestamp overlay, logos, watermarks, readable currency text, a second person, the person's face, hair or outfit changing, money appearing from the air instead of from the ATM, the ATM breaking apart or exploding with fire, smoke, sparks, cartoon look, CGI look, music
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: превью-видео (медиа); бот @neyrosetkabot платный — у нас не запускалось; промпт годится для любой площадки с Seedance 2.5
+source_url: https://t.me/nercpa/319
+duplicates_of: []

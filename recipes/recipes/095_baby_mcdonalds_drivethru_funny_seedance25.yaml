@@ -1,0 +1,59 @@
+id: 095_baby_mcdonalds_drivethru_funny_seedance25
+source_file: 95_baby_mcdonalds_drivethru_funny_seedance25.md
+title: '«Новый сотрудник McDonald’s»: ребёнок на окне раздачи, смешной финал'
+intent_tags:
+- client_in_clip
+- meme
+use_when: 'Фото малыша → 10-секундное «айфонное» видео с водительского места: ребёнок работает на окне выдачи драйв-тру. Один шаг, один промпт, рассчитан на вирусный семейный рилс.'
+inputs:
+- unknown
+steps:
+- n: 1
+  action: 'Seedance 2.5, 480p, генерация по фото, 9:16, 10 секунд: фото ребёнка + промпт.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: '9:16'
+prompts_verbatim:
+- |-
+  === https://t.me/veo3prompts/2719 2026-10-10T12:11:49+00:00
+  Новый сотрудник McDonald’s
+
+  ❗️Отправляй референс фото ребенка и промпт ниже.
+
+  Переходите в бот, /start -> выбор модели -> Seedance 2.5 480p -> генерация по фото -> формат 9:16 -> 10 секунд.
+
+
+  Vertical 9:16, realistic iPhone-style video, one continuous handheld shot from the driver's seat of a car at a McDonald's drive-thru window. Golden-hour daylight outside, warm restaurant lights inside the store, car door and window frame in the foreground, slight natural camera shake, candid, funny and heartwarming.
+
+  Main character: the baby from the reference image. Keep the baby's face, features, skin tone, hair, age and body proportions exactly as in the reference, consistent throughout the whole video. The baby is dressed as a tiny McDonald's crew member — dark gray polo shirt, black apron with a small name tag, black McDonald's cap with the golden "M", small black headset with a mic. The cap, apron and outfit stay exactly the same from start to end.
+
+  At the drive-thru window, a cardboard drink carrier with two McDonald's iced coffees sits on the counter. The baby crew member is inside the store behind the counter, only the baby's little face and tiny hands peeking over the top of the carrier, holding its handle with both hands to hand it over through the window.
+
+  An adult hand reaches out from the driver's seat, grabs the carrier handle and pulls it back into the car. The baby does not let go — the baby keeps clinging tightly to the handle, so the adult's pulling force lifts the baby off the counter and drags the baby through the car window together with the carrier. The baby's body is lifted up into the air, flips over head-first, tiny legs dangling and kicking in the air, then drops softly onto the car seat. The baby is pulled in passively by the adult's arm — the baby does not walk, crawl or climb into the car on their own. The camera follows the baby down in one smooth motion, no cut.
+
+  The baby now sits on the car seat, hugging the drink carrier on the lap with both hands, two McDonald's iced coffees in front. The baby looks up at the camera, shocked and confused with wide eyes. Then the lower lip pouts and trembles, the eyes fill with tears and a few tears roll down the cheeks — sad and about to cry.
+
+  The adult hand reaches in from the left and gently offers a small Korean brand Binggrae banana flavored milk bottle with a straw already inserted, holding it to the baby's mouth.
+
+  The baby grabs the little bottle with both tiny hands and sucks on the straw, cheeks puffing in and out. The crying slowly stops, the eyes soften and the baby calms down, still sniffling with teary eyes but looking content and comforted while sipping. The video ends on this calm, sweet moment.
+
+  Clean video with no text, captions, subtitles, watermarks, icons or UI overlays anywhere.
+
+
+  Сгенерировать можно тут: @Veo3_official_bot(Seedance 2.5)
+
+  Veo3 | Banana News
+output:
+  format: mp4
+  resolution: 480p
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://t.me/veo3prompts/2719
+duplicates_of: []

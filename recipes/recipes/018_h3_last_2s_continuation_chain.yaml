@@ -1,0 +1,83 @@
+id: 018_h3_last_2s_continuation_chain
+source_file: 18_h3_last_2s_continuation_chain.md
+title: 'Бесшовные длинные видео в MiniMax H3: последние 2 секунды предыдущего клипа как <Video 1> + Motion-Context ноды'
+intent_tags:
+- seamless_series
+use_when: 'Бесшовные длинные видео в MiniMax H3: последние 2 секунды предыдущего клипа как <Video 1> + Motion-Context ноды'
+inputs:
+- видео-референс (движение/клип)
+- стартовый кадр
+- финальный кадр
+- аудио/голос
+steps:
+- n: 1
+  action: Первый клип — обычная генерация (10 с).
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: 10 с
+  aspect: unknown
+- n: 2
+  action: 'Для каждого следующего: загрузить последние 2 секунды (48 кадров при 24 fps) предыдущего видео как <Video 1> нодой Load Video (Upload) со skip_frames; референс-картинки героев каждый раз те же
+    — «дрейфа лиц нет».'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: previous_step_output
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'В промпте дословно (rcscs):
+
+    [PROMPT]'
+  tool: unknown
+  mode: unknown
+  prompt:
+  - |-
+    [Shot 1]
+    Target video is a seamless continuation of <Video 1>. First frame of [Shot 1] is the last frame of <Video 1>.
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: Клипы склеить любым видео-джойнером.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 5
+  action: 'Официальный prompting-guide (Diabolicor): префикс summary «[video continuation] from <Video N>» (HF MiniMaxAI/MiniMax-H3 docs/VIDEO_PROMPT_WRITING_GUIDE_ref_en.md; сам гайд не открывал).'
+  tool:
+  - MiniMax H3
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 6
+  action: 'Ноды для переноса латентного движения/аудио-контекста: github ethanfel/ComfyUI-H3-Motion-Context (форк, работает в Ref2V + можно добавить рефы), NikoDemon80/ComfyUI-H3-Motion-Context (оригинал,
+    только FL2V), kitsune123150/minimax-h3-hybrid-cond (смешать i2v+r2v), ckinpdx/ComfyUI-MMH3Tools, jlucasmcrell/ComfyUI-H3-Multishot. Заметка Diabolicor: ComfyUI режет всё, что инжектится вне индексов
+    first/last frame (PR Comfy-Org/ComfyUI #15375).'
+  tool:
+  - MiniMax H3
+  - ComfyUI
+  mode: i2v
+  prompt: unknown
+  input_source: last_frame
+  duration: unknown
+  aspect: unknown
+prompts_verbatim: []
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: Модель получает не только последний кадр, но и 2 секунды движения, а текст жёстко привязывает начало нового шота к последнему кадру старого; референс-картинки каждый раз заново фиксируют
+  лица.
+confidence: B
+prompt_completeness: partial
+notes: Обсуждение на Banodoco Discord (нужен вход).
+source_url: null
+duplicates_of: []

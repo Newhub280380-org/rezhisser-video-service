@@ -1,0 +1,50 @@
+id: 060_rhythm_reference_5_environments_audio_sync
+source_file: 60_rhythm_reference_5_environments_audio_sync.md
+title: '# 60 — Один персонаж + аудио → 15-секундный бёрст-монтаж в 5 разных локациях, склейки по битам (Seedance 2.0, Image1 + Audio1)'
+intent_tags:
+- client_in_clip
+- seamless_series
+- family_photos
+use_when: Ровно 5 локаций × 6 планов = 30 склеек, ритм задаёт загруженный трек. Под «N фото клиента → ролик в разных местах» и рилсы под музыку.
+inputs:
+- фото лица/портрет человека
+- аудио/голос
+steps:
+- n: 1
+  action: 'Seedance 2.0: Image1 — лист/фото персонажа, Audio1 — трек.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Промпт ниже без изменений (можно задать свои локации).
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "\U0001F3B5 Rhythm Reference (Seedance 2.0) \n\n- Reference(s): Yes\n- Styles Support:  Any\n\n\"Use <<<Image1>>> as the strict character reference and <<<Audio1>>> as the timing, rhythm and editing reference.\
+  \ \n\nKeep the character’s exact identity, proportions, hairstyle, outfit, colors and overall style consistent throughout. \n\nCreate a 15-second cinematic burst-cut video showcasing the character across\
+  \ 5 different environments that naturally fit their design, vibe and world. \n\nAUDIO SYNC \nSynchronize the entire edit to <<<Audio1>>> . Cuts, camera accents, transitions and environment changes should\
+  \ land precisely on strong beats, half-beats and musical accents. Let audio1 control the pacing and intensity of the montage. \n\nSTRUCTURE \n- 5 environments total \n- 3 seconds per environment \n- 6\
+  \ burst-cut shots per environment \n- 30 shots total \n\nEach environment must be clearly different in atmosphere, lighting, scale and visual language. \n\nShow each environment through rapid cinematic\
+  \ angles: wide establishing shots, aerials, low angles, side views, tracking shots, close environmental details, medium shots and hero frames. \n\nEvery cut must reveal a new angle, distance, composition\
+  \ or spatial relationship. Avoid repeated framing. Mix static shots, push-ins, pull-backs, tracking, orbit and crane-like movement. \n\nKeep character movement subtle and natural. The focus is environmental\
+  \ variety, cinematic framing and tight synchronization with audio1. \n\nHard constraints: \n- exactly 5 environments \n- exactly 6 shots per environment \n- exactly 30 shots total \n- environment changes\
+  \ must follow audio1’s musical phrasing \n- cuts and motion accents synchronized to audio1 \n- no outfit changes \n- no character duplication \n- no morphing \n- no text or UI \n- no blurry unreadable\
+  \ frames \n- maintain strict character consistency\"\n\n✨ Get access to Seedance 2.0 at OpenArt"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://t.me/TheProPrompts/284
+duplicates_of: []

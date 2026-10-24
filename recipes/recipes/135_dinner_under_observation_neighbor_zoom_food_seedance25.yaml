@@ -1,0 +1,116 @@
+id: 135_dinner_under_observation_neighbor_zoom_food_seedance25
+source_file: 135_dinner_under_observation_neighbor_zoom_food_seedance25.md
+title: 'Ужин под наблюдением: ваше фото + фото еды → Seedance 2.5 15 с, «сосед снимает с зумом в окно»'
+intent_tags:
+- product_ad
+- client_in_clip
+use_when: '15 с, один план «сосед тайком снимает с максимальным зумом окно дома напротив в сумерках»: герой (@image1) ест ваше блюдо/напиток (@image2) так, как его едят на самом деле (блок EATING LOGIC);
+  блюдо и упаковку не менять.'
+inputs:
+- аудио/голос
+steps:
+- n: 1
+  action: Фото (см. пост) в хорошем качестве.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Seedance 2.5 с параметрами из поста (длительность, формат).
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: 5 с
+  aspect: unknown
+- n: 3
+  action: 'Фото + промпт из комментария → генерация; звук — по посту (часть шаблонов: без звука, трек добавить в редакторе).'
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "=== https://t.me/nercpa/291 2026-10-16T09:05:14+00:00\n\U0001F354Ужин под наблюдением\n\n1. Заходите в бота @neyrosetkabot\n2. Выбираете ваше фото и фото еды в хорошем качестве \n3. Выбираете режим Видео\
+  \ - Seedance 2.5 (15 сек, формат 9:16) и отправляете ваши фото с текстом из комментариев\n\nПРОМПТ В КОММЕНТАРИЯХ \n⬇️⬇️⬇️\n\n⚡️Генерация в один клик \n\n#видео #тренд\n  \n    Please open Telegram to\
+  \ view this post\n    VIEW IN TELEGRAM"
+- |-
+  ### comments nercpa/291
+  --- Нейросетка |Промты | Обновления Chat
+  TASK & FORMAT
+  A 15-second photorealistic vertical video (9:16), one continuous shot filmed from far away with a phone at maximum zoom, as if a neighbor is secretly filming a window of the building across the street at dusk. No cuts.
+
+  REFERENCES
+  @image1 = the person in the window. Exact face, facial structure, eyes, brows, nose, lips, skin tone, apparent age and gender, hairstyle, hair length and color, body build, clothing and accessories. The person may be anyone — a child, a teenager, a man or a woman; the body, height and posture always match @image1. If @image1 shows only the face or upper body, complete the rest logically in the same style. Do not alter gender presentation, age or ethnicity.
+  @image2 = the food or drink the person is having. Exact type, shape, size, colors, texture, toppings, and the exact plate, bowl, box, cup or packaging shown. Do not replace it with a different dish, do not redesign it.
+  @image1 and @image2 do not influence the building, the room or the lighting.
+
+  EATING LOGIC
+  The person eats @image2 the way that food is really eaten:
+  - Handheld food (burger, sandwich, wrap, pizza slice, donut, pastry, fruit, snack): held in one or both hands and bitten into.
+  - Food on a plate or in a bowl or box (pasta, noodles, soup, salad, rice, cake, dessert): the dish sits on the small table in front of them; they eat with the fitting utensil — fork, spoon or chopsticks — lifting each portion to the mouth.
+  - A drink (coffee, tea, juice, soda, milkshake): held in the hand and sipped.
+  Portions disappear realistically with each bite or spoonful. @image2 stays the same food in the same dish or packaging throughout.
+
+  LOCATION
+  Blue-hour dusk. A large grey concrete panel apartment block with rows of identical white PVC windows, a few external AC units, most windows dark, a few lit warmly. One window on a middle floor glows deep amber-orange: behind it, a small kitchen with a beige wall, a small table right at the window, a dark brown curtain hanging at one side. The rest of the facade stays cool blue-grey.
+
+  CAMERA
+  Handheld phone at long telephoto zoom from across the street: slight natural shake, slightly soft detail, telephoto compression, mild noise. The camera only moves forward by zooming in slowly and continuously toward the one lit window; it never moves sideways or cuts. The unseen person filming starts laughing later in the video, and their laughter shakes the phone: small jolts at 9–11s, stronger bouncing shake at 12–13.5s, while the window always stays in frame.
+
+  TIMELINE
+  0–2s
+  Wide view of the panel building facade at dusk, a grid of windows, a few lit. The camera starts zooming in slowly toward the one warm amber window.
+
+  2–4s
+  The zoom continues until the lit window fills most of the frame, its white frame and the cold blue facade around it. Inside, the @image1 person sits at the small table by the window, in three-quarter profile, eating @image2, gazing dreamily to the side, unaware of the camera.
+
+  4–7s
+  The camera keeps creeping closer, now framing the window from the windowsill up. The person takes a big bite, spoonful or sip of @image2 and chews or swallows slowly, still looking to the side. Around 6.5s they slowly turn their head and look straight into the lens.
+
+  7–11s
+  The person stares directly into the camera while slowly chewing, the food, utensil or cup still raised near their face. Their expression turns suspicious and annoyed: narrowed eyes, a slight frown, cheeks moving with each chew. They do not stop chewing and do not look away. From 9s the phone gives small jolts in time with the camera operator's suppressed laughter.
+
+  11–12.5s
+  Still staring into the lens, they slowly lower their hand and put the food, utensil or cup down on the table, never breaking eye contact.
+
+  12.5–13.5s
+  They stand up abruptly, reach to the side of the window and grab the dark curtain. The phone bounces with the operator's open laughter, the window still in frame.
+
+  13.5–14s
+  They yank the curtain sharply across the window; at the same moment the room light goes off.
+
+  14–15s
+  The window is dark.
+  --- Нейросетка |Промты | Обновления Chat
+  In the black glass, the faint reflection of bare tree branches against the blue dusk sky. The camera holds on the dark window, settling.
+
+  IDENTITY & FOOD CONSISTENCY
+  The person looks exactly like @image1 in every frame, from the distant first glimpse to the close stare. Their face is clearly readable during the stare at 7–11s. @image2 stays the same food or drink in the same dish or packaging throughout, only getting smaller as it is eaten.
+
+  AUDIO
+  All sound is recorded by the filming phone across the street; the only voice is the unseen camera operator, close to the microphone.
+  0–9s: quiet evening city ambience — distant traffic hum, faint wind, low urban rumble.
+  9–11s: the camera operator starts trying to hold back laughter: short sharp bursts of air through the nose, stifled snorts, small suppressed giggles caught in the throat, getting more frequent.
+  11–12s: a short pause, a held breath, one more stifled snort.
+  12–13.5s: the laughter breaks out — loud, open, uncontrollable laughing right at the microphone, slightly clipping.
+  13.75s: from across the street, the sharp swoosh of a curtain being yanked shut along its rod.
+  14–15s: the laughter fades into breathless giggling, then near silence and the faint distant city hum.
+  No music, no words, no speech, no text. The person in the window makes no sound.
+
+  NEGATIVE
+  cuts, a camera inside the room, a different window lighting up, a different building, the person not looking like @image1, a different food instead of @image2, eating with hands food that needs a utensil, a utensil for handheld food, food floating without a dish, the person in the window smiling or laughing, the person waving, the laughter coming from the person in the window, spoken words, music, text, subtitles, watermarks, the light staying on after the curtain closes, the curtain closing without the light going off, an empty room before the curtain, cartoon look, CGI look
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: превью-видео (медиа); бот @neyrosetkabot платный — у нас не запускалось; промпт годится для любой площадки с Seedance 2.5
+source_url: https://t.me/nercpa/291
+duplicates_of: []

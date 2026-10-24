@@ -1,0 +1,56 @@
+id: 003_minimax_h3_dummy_strategy_swap
+source_file: 03_minimax_h3_dummy_strategy_swap.md
+title: '«Стратегия манекена»: сначала заменить оригинального актёра зелёным манекеном, потом манекен на нужного персонажа'
+intent_tags:
+- client_in_clip
+use_when: '«Стратегия манекена»: сначала заменить оригинального актёра зелёным манекеном, потом манекен на нужного персонажа'
+inputs:
+- unknown
+steps:
+- n: 1
+  action: 'Двухпроходный воркфлоу R2V в ComfyUI (MiniMax H3): проход 1 — оригинальный человек в видео заменяется хромакей-зелёным crash-test dummy (картинка манекена загружается в ноду «Dummy Image»); проход
+    2 — манекен заменяется нужным персонажем.'
+  tool:
+  - MiniMax H3
+  - ComfyUI
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Настройка: загрузить видео и картинку персонажа, обрезать видео в ноде, выбрать режим сэмплинга (Performance / Balance / Quality) отдельно для каждого прохода (автор рекомендует Balance: Performance
+    иногда не заменяет героя в последних секундах), выбрать разрешение в мегапикселях, Run.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Контроль: в превью первого шага новый персонаж должен уже виден оверлеем поверх видео; если нет — своп скорее всего провалится.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: 'Расширения: несколько персонажей = несколько манекенов разных цветов; если подменяешь зелёного героя (Халк) — манекен синий.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim: []
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: Когда оригинал и замена похожи, H3 путает/морфит лица. Нейтральный манекен без лицевых черт работает «каждый раз», и черты оригинала стираются до второго прохода.
+confidence: B
+prompt_completeness: gaps
+notes: Содержимое pastebin (master prompt и граф), видео результата.
+source_url: https://reddit.com/r/StableDiffusion/comments/1vwfxt5/
+duplicates_of: []

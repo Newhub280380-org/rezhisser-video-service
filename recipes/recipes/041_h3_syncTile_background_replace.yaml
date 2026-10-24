@@ -1,0 +1,106 @@
+id: 041_h3_syncTile_background_replace
+source_file: 41_h3_syncTile_background_replace.md
+title: 'Замена фона в длинном 4K-видео (600+ кадров): SyncTile — одна траектория шумоподавления без швов'
+intent_tags:
+- client_in_clip
+- seamless_series
+- vfx_effect
+use_when: 'Замена фона в длинном 4K-видео (600+ кадров): SyncTile — одна траектория шумоподавления без швов'
+inputs:
+- unknown
+steps:
+- n: 1
+  action: '`git clone` [`https://github.com/NyckM/Bruxosdovfx-SyncTile-MiniMax-H3-v5.4`](https://github.com/NyckM/Bruxosdovfx-SyncTile-MiniMax-H3-v5.4) inside `ComfyUI/custom_nodes/` (or copy the `bruxosdovfx-SyncTile`
+    folder). **Delete** `ComfyUI-SyncTile-H3` if present (old version).'
+  tool:
+  - MiniMax H3
+  - ComfyUI
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Restart. The console prints `[bruxosdovfx • SyncTile] v5.5 carregado`.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Also install the **bruxosdovfx Media IO** pack — [https://github.com/NyckM/Video-Util-ComfYUI](https://github.com/NyckM/Video-Util-ComfYUI) (Load Video Pro, Load Image, Save Video Pro — see below).
+    Needs a ComfyUI with the native MiniMax H3 nodes. To write the video file: ffmpeg (on PATH, in `FFMPEG_PATH`, or `pip install imageio-ffmpeg`).
+
+
+    # Background Replace v3 LoRA (summary)
+
+
+    [](https://github.com/NyckM/Bruxosdovfx-SyncTile-MiniMax-H3-v5.4/tree/main#background-replace-v3-lora-summary)
+
+
+    Experimental merge of **five LoRAs by other authors** for MiniMax H3 (not an original training). Download: [Background Replace v3.safetensors](https://huggingface.co/NyckM/Background_Replace_Minimax_H3/blob/main/Background%20Replace%20v3.safetensors)
+    → `models/loras/minimax/`. BF16, \~1.91 GB, rank-concatenation merge (no SVD); no metadata (credits live in this README). Components and weights: Facial Realism CloseUp — prithivMLmods (1.0); H3 Character
+    Swap — Akatz Labs (1.0); Realism People — Lovis Odin / fal (1.0); Head Swap v1.0 r32 — Alissonerdx / Alisson Anjos (0.2); VFX Edit v1.0 r128 — Alissonerdx / Alisson Anjos (0.2). Links in the table in
+    the Portuguese section. Base model: [MiniMax H3 — MiniMaxAI](https://huggingface.co/MiniMaxAI/MiniMax-H3). Load from your LoRA folder at strength **1.0**. It mixes FL2VA and REF2VA sources; the name
+    does not guarantee background replacement. The exact Character Swap version is unconfirmed (metadata says v2, deltas resemble v1.5). Structure validated, **not yet tested in generation**. The source
+    models'' licenses apply; credits do not imply the authors endorse the merge.
+
+
+    # Referências / References / 参考文献
+
+
+    [](https://github.com/NyckM/Bruxosdovfx-SyncTile-MiniMax-H3-v5.4/tree/main#refer%C3%A
+
+    ```'
+  tool:
+  - MiniMax H3
+  - ComfyUI
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  [https://github.com/NyckM/Bruxosdovfx-SyncTile-MiniMax-H3-v5.4/tree/main](https://github.com/NyckM/Bruxosdovfx-SyncTile-MiniMax-H3-v5.4/tree/main)
+
+  Workflow [https://github.com/NyckM/Bruxosdovfx-SyncTile-MiniMax-H3-v5.4/blob/main/workflow/minimaxH3BackgroundSwap\_v18\_LatentF.json](https://github.com/NyckM/Bruxosdovfx-SyncTile-MiniMax-H3-v5.4/blob/main/workflow/minimaxH3BackgroundSwap_v18_LatentF.json)
+
+  # The idea in one sentence
+
+  [](https://github.com/NyckM/Bruxosdovfx-SyncTile-MiniMax-H3-v5.4/tree/main#the-idea-in-one-sentence)
+
+  A large or long video is split into **overlapping regions** (spatial tiles × temporal windows). At every model call all regions are predicted and **blended into one canvas**, so there is **a single denoising trajectory**: no tile seams, no chained clips, and VRAM is one region's.
+
+  # Install
+
+  [](https://github.com/NyckM/Bruxosdovfx-SyncTile-MiniMax-H3-v5.4/tree/main#install)
+
+  **Easy way (Windows):** put `bruxosdovfx_EasyInstall_MiniMaxH3.bat` in the ComfyUI folder (or the ComfyUI-Easy-Install folder) and double-click it. It finds the folders, installs the custom nodes (SyncTile, Media IO, Latent Upscaler, Easy-Use) and downloads models and LoRAs; anything already present with the same name is skipped, and interrupted downloads resume. Options at the top of the file: text encoder int8/nvfp4, VAE light/full, optional LoRAs, update nodes.
+
+  **Manual:**
+
+  1. `git clone` [`https://github.com/NyckM/Bruxosdovfx-SyncTile-MiniMax-H3-v5.4`](https://github.com/NyckM/Bruxosdovfx-SyncTile-MiniMax-H3-v5.4) inside `ComfyUI/custom_nodes/` (or copy the `bruxosdovfx-SyncTile` folder). **Delete** `ComfyUI-SyncTile-H3` if present (old version).
+  2. Restart. The console prints `[bruxosdovfx • SyncTile] v5.5 carregado`.
+  3. Also install the **bruxosdovfx Media IO** pack — [https://github.com/NyckM/Video-Util-ComfYUI](https://github.com/NyckM/Video-Util-ComfYUI) (Load Video Pro, Load Image, Save Video Pro — see below). Needs a ComfyUI with the native MiniMax H3 nodes. To write the video file: ffmpeg (on PATH, in `FFMPEG_PATH`, or `pip install imageio-ffmpeg`).
+
+  # Background Replace v3 LoRA (summary)
+
+  [](https://github.com/NyckM/Bruxosdovfx-SyncTile-MiniMax-H3-v5.4/tree/main#background-replace-v3-lora-summary)
+
+  Experimental merge of **five LoRAs by other authors** for MiniMax H3 (not an original training). Download: [Background Replace v3.safetensors](https://huggingface.co/NyckM/Background_Replace_Minimax_H3/blob/main/Background%20Replace%20v3.safetensors) → `models/loras/minimax/`. BF16, \~1.91 GB, rank-concatenation merge (no SVD); no metadata (credits live in this README). Components and weights: Facial Realism CloseUp — prithivMLmods (1.0); H3 Character Swap — Akatz Labs (1.0); Realism People — Lovis Odin / fal (1.0); Head Swap v1.0 r32 — Alissonerdx / Alisson Anjos (0.2); VFX Edit v1.0 r128 — Alissonerdx / Alisson Anjos (0.2). Links in the table in the Portuguese section. Base model: [MiniMax H3 — MiniMaxAI](https://huggingface.co/MiniMaxAI/MiniMax-H3). Load from your LoRA folder at strength **1.0**. It mixes FL2VA and REF2VA sources; the name does not guarantee background replacement. The exact Character Swap version is unconfirmed (metadata says v2, deltas resemble v1.5). Structure validated, **not yet tested in generation**. The source models' licenses apply; credits do not imply the authors endorse the merge.
+
+  # Referências / References / 参考文献
+
+  [](https://github.com/NyckM/Bruxosdovfx-SyncTile-MiniMax-H3-v5.4/tree/main#refer%C3%A
+output:
+  format: mp4
+  resolution: 4K
+  aspect: unknown
+done_criteria: Большое видео разбито на перекрывающиеся тайлы по пространству и времени, предсказываются вместе и сливаются в один холст → нет швов и нет склеек.
+confidence: B
+prompt_completeness: complete
+notes: Файл воркфлоу.
+source_url: https://github.com/NyckM/Bruxosdovfx-SyncTile-MiniMax-H3-v5.4/tree/main](https://github.com/NyckM/Bruxosdovfx-SyncTile-MiniMax-H3-v5.4/tree/main)
+duplicates_of: []

@@ -1,0 +1,88 @@
+id: 093_two_cats_zombie_drama_seedance25
+source_file: 93_two_cats_zombie_drama_seedance25.md
+title: Драма двух котиков (зомби-сюжет) из двух фото, 24 с одним промптом
+intent_tags:
+- client_in_clip
+- animal
+use_when: 'Два фото своих котов → Seedance 2.5 делает 24-секундную мини-драму: у одного кота «зомби-превращение» поверх его реальной внешности, потом развязка. Блок CHARACTER REFERENCE RULE держит морды
+  и окрас по фото.'
+inputs:
+- unknown
+steps:
+- n: 1
+  action: Seedance 2.5, 480p, генерация по фото, 16:9, 24 секунды.
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: '16:9'
+- n: 2
+  action: '@image1 = кот A, @image2 = кот B + промпт ниже.'
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  === https://t.me/veo3prompts/2737 2026-10-14T11:20:25+00:00
+  Драма котиков
+
+  Загружайте свои 2 фото котиков с промптом ниже.
+
+  Переходите в бот, /start -> выбор модели -> Seedance 2.5 480p -> генерация по фото -> формат 16:9 -> 24 секунд.
+
+
+  CHARACTER REFERENCE RULE
+  If reference images are attached:
+  - Cat A must match @image1 exactly (face, fur color, markings, eye color, proportions) in every shot.
+  - Cat B must match @image2 in identity only (face shape, fur color pattern, markings, eye shape). In the first half, apply a zombie transformation on top of her real appearance: milky clouded eyes, torn fur hanging in ragged strips, bared sharp fangs. After the embrace, she returns to exactly how she looks in @image2.
+  If no reference images are attached: invent two random, distinct, realistic cats of your choice and keep their look consistent throughout the film. Cat B gets the same zombie look in the first half and is fully healed after the embrace.
+
+  FORMAT
+  Photoreal cinematic short, emotional tone, 16:9 widescreen, 24 seconds total, 24 fps, filmed-on-camera feel.
+
+  CHARACTERS
+  Cat A: walks and stands fully upright on his hind legs, moving with human-like posture and gestures.
+  Cat B: in the first half she is undead and infected, with milky, lifeless eyes, ragged fur peeling off in strips, and bared needle-sharp fangs. After the embrace she is fully healed, with a clean, glossy, healthy coat.
+
+  LOCATIONS
+  Location 1: a gloomy log-cabin kitchen after dark. Cast-iron pots line rough timber shelves, a small window spills icy moonlit blue, and worn planks cover the floor.
+  Location 2: a lush meadow at sunset, bathed in honey-gold light, with drifting seeds of white dandelion fluff hanging in the air.
+
+  SHOT LIST
+  0:00–0:01.5: Macro close-up on Cat A's eyes, glistening with tears. He grips a black pistol in both front paws, pointed at the lens, with the barrel soft and blurred in the foreground.
+  0:02–0:02.5: Wide shot from behind Cat A's shoulder. He holds his aim on zombie Cat B as she shambles toward him over the creaking planks.
+  0:03–0:03.5: Frontal medium shot of Cat A standing tall, both paws on the pistol, against shadowy timber walls and the cold blue glow of the window.
+  0:04–0:04.5: Tight close-up on zombie Cat B. Her vacant, milky stare twists into a snarl that exposes her fangs.
+  0:05–0:06.5: Macro shot of Cat A's face as tears trace slowly down his fur.
+  0:06.5–0:08: Cat A holds his aim, trembling, then lets the pistol sink inch by inch.
+  0:08.5–0:09: The pistol slips from his paw and clatters to the floor. He spreads both arms open, inviting an embrace.
+  0:09.5–0:10: Rapid intercut between zombie Cat B's face and Cat A with his eyes shut as a single tear falls.
+  0:10.5: Cat B springs into his arms and clasps him tightly with her front paws. In that instant her fur turns whole and healthy, and she looks exactly like her true self.
+  0:11–0:13: Hard cut to the sunset meadow. The two cats tumble and nuzzle in the grass as dandelion seeds swirl around them in amber light.
+  0:13–0:18: Close-up of Cat B's loving face while Cat A's paw softly strokes her cheek and the top of her head. Cat A lies on his back in the grass, eyes closed, completely at peace.
+  0:18–0:20.5: Cat A's paw rests gently on her face. He gazes upward, serene and fulfilled.
+  0:21–0:22: Wide backlit silhouette of the pair sitting close together against the blazing sunset, framed by tall grass and wildflowers in the foreground.
+  0:22.5–0:24: Close-up with a warm lens flare as Cat A lovingly presses and rubs his head against Cat B's. Fade out. End.
+
+  STYLE
+  Tense horror-thriller mood that melts into a tender, uplifting finale. Shallow depth of field and lifelike, strand-level fur detail throughout. First half: moody low-key lighting with cold blue tones. Second half: radiant golden-hour warmth.
+
+
+  Сгенерировать можно тут: @Veo3_official_bot(Seedance 2.5)
+
+  Veo3 | Banana News
+output:
+  format: mp4
+  resolution: 480p
+  aspect: '16:9'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://t.me/veo3prompts/2737
+duplicates_of: []

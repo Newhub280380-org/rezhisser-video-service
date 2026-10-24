@@ -1,0 +1,103 @@
+id: 174_stones_thrown_become_castle_motivational_parable_your_photo_seedance25_25s
+source_file: 174_stones_thrown_become_castle_motivational_parable_your_photo_seedance25_25s.md
+title: '«Моя боль — моя сила»: толпа бросает в вас камни, вы складываете из них стену, которая вырастает в готический замок — 10 шотов, Seedance 2.5, 25 с'
+intent_tags:
+- seamless_series
+- animal
+use_when: 'Одно фото → мотивационная притча из 10 шотов с жёсткими склейками на заданных секундах: злая толпа, вы стоите неподвижно, камни отскакивают (без крови), вы собираете камни, стена растёт в замок,
+  финал — вы смотрите из окна замка.'
+inputs:
+- аудио/голос
+- логотип
+steps:
+- n: 1
+  action: Шаг 1 — подготовить фото(ы) в хорошем качестве (см. пост).
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Шаг 2 — Seedance 2.5 с параметрами из поста (у автора — в боте @neyrosetkabot), фото + промпт из комментариев.
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: 5 с
+  aspect: unknown
+prompts_verbatim:
+- "=== https://t.me/nercpa/328 2026-10-23T04:01:35+00:00\n\U0001F3F0Моя боль - моя сила\n\n1. Заходите в бота @neyrosetkabot\n2. Выбираете ваше фото в хорошем качестве\n3. Выбираете режим Видео - Seedance\
+  \ 2.5 (25 сек, формат 9:16) и отправляете ваше фото с текстом из комментариев\n\nПРОМПТ В КОММЕНТАРИЯХ \n⬇️⬇️⬇️\n\n⚡️Генерация в один клик \n\n#видео #тренд\n  \n    Please open Telegram to view this\
+  \ post\n    VIEW IN TELEGRAM"
+- |-
+  TASK & FORMAT
+  A 25-second photorealistic cinematic vertical video (9:16), 10 shots with hard cuts at the stated seconds, no transitions. A motivational parable: an angry crowd throws stones at a person; the person calmly gathers the stones and builds them into a wall that rises into a giant gothic castle, and ends up looking down from its window.
+
+  REFERENCES
+  @image1 = the main character. Exact face, facial structure, eyes, brows, nose, lips, skin tone, apparent age and gender, hairstyle, hair length and color, body build, clothing and accessories from @image1. The person may be anyone — a man or a woman; the body matches @image1. If @image1 shows only the face or upper body, complete the rest of the body and outfit logically in the same style as the visible clothing. Do not alter gender presentation, age or ethnicity. Same face, hair and outfit in every shot.
+
+  LOCATION
+  A wide green grassy valley between steep green-and-rocky mountains under a grey overcast sky, cool soft daylight. A big crowd of ordinary people, men and women of different ages in colorful everyday clothes — rain jackets, puffer jackets, coats. In front of the crowd, several small, knee-high piles of grey stones, each about a meter wide, are spaced evenly in a row on the grass, with a small group of people crouching at each pile.
+
+  TIMELINE
+  0.0–2.0s — THE CROWD
+  Wide shot at eye level: the people bend down to the small stone piles in front of them, grab stones and throw them hard toward the camera, furious faces, arms swinging; stones fly through the air toward the lens.
+
+  2.0–5.2s — STANDING STILL
+  Hard cut. A closer shot: the @image1 person stands alone on the grass in the valley, framed from the knees up, the face large and clearly visible, facing the camera, arms down, calm and expressionless, mountains behind. Stones fly in from the side and hit them on the shoulders, chest, arms and legs — never the face — then bounce off and drop into the grass. Each hit leaves only a faint dusty grey mark on the clothes; no blood, no bruises, no wounds, no torn clothes. With each hit the body sways just slightly, but the person does not flinch, does not step back and keeps looking calmly into the camera.
+
+  5.2–7.0s — THE HATERS
+  Hard cut. Handheld close-ups inside the crowd: angry people screaming, teeth bared, one points a finger straight at the camera, another clutches a stone; faces twisted with rage.
+
+  7.0–8.8s — THE FIRST STONE
+  Hard cut. Macro close-up at grass level: a grey stone lying in the green grass. The person’s hand reaches in, grips the stone and lifts it.
+
+  8.8–11.8s — GATHERING
+  Hard cut. Medium shot: the person crouches on the grass among the scattered stones and calmly, methodically picks them up one by one and lays them in a row on the ground, focused and unhurried. During the whole shot stones keep flying into the frame from the side of the crowd: they thud into the grass around the person, bounce and roll, and stay lying there; some land right next to their hands, and the person calmly picks those up too and adds them to the row, without looking toward the crowd.
+
+  11.8–14.6s — THE LINE
+  Hard cut. A close top-down drone shot looking straight down. The frame shows only a short section of the work, about six to eight meters across: a straight line of grey stones laid on the grass runs through the whole frame; the person kneels at its middle, in the center of the frame, large and clearly visible — their head, back, arms and the stone in their hands are easy to see — placing another stone into the line. Along the left edge of the frame, only the front row of the crowd and two or three of their small stone piles are visible, still throwing; the line runs alongside them. Thrown stones keep flying across the frame and dropping onto the grass on both sides of the line: they hit the ground, bounce, roll a little and stay lying there, so more and more scattered stones collect around the person. No stone ever disappears.
+
+  14.6–19.5s — THE WALL RISES
+  Hard cut. One continuous shot.
+
+  At first: a low, rough dry-stone wall right in front of the camera, made of the same rough, uneven, rounded grey field stones as the line, loosely stacked; the person stands behind it, visible from the chest up, looking straight into the lens. The wall rises quickly upward course by course, stones stacking themselves, while the camera tilts up to follow it: the rough stones turn into neat cut-stone masonry, then a castle wall with battlements, the person always standing on top of it, getting farther away. The camera keeps tilting up until it looks almost straight up at a towering gothic tower with pointed spires against the grey sky, the small figure of the person standing at its top.
+
+  19.5–20.4s — THE AWE
+  Hard cut. Close-up on the crowd from the front: people frozen, looking up with open mouths and wide eyes, still holding stones in their hands, stunned.
+
+  20.4–22.0s — THE CASTLE
+  Hard cut. Wide shot from behind the crowd: in front of them, where the person stood, rises a giant pale-grey gothic castle with dozens of sharp pointed spires and towers and a fortress wall, under dramatic grey clouds, mountains behind it.
+
+  22.0–25.0s — THE WINDOW
+  Hard cut. Medium close-up: the person stands in a tall ornate gothic arched window high in the castle, framed by carved stone, looking down at the camera, calm and dignified. At the end a slight confident smile appears on their face. End.
+
+  REALISM
+  Photorealistic, cinematic. Real stone weight and texture, real grass, real overcast light. The stones hit with real weight, bounce, roll and stay where they land; on the person they leave only dusty marks on the clothes.
+
+  AUDIO
+  No music.
+  0–2.0s: the crowd’s angry roar and shouting, stones whooshing through the air.
+  2.0–5.2s: wind in the valley, dull thuds of stones hitting the person’s clothes and dropping into the grass.
+  5.2–7.0s: furious screaming from the crowd, no clear words.
+  7.0–11.8s: quiet wind, stones whooshing in and thudding into the grass, the scrape and soft click of stones being picked up and laid down.
+  11.8–14.6s: distant shouting, wind, stones thudding into the grass.
+  14.6–19.5s: a deep growing rumble and the grinding of stone as the wall rises.
+  19.5–20.4s: a collective stunned gasp.
+  20.4–25.0s: wind around the castle towers, then silence.
+  No speech.
+
+  NEGATIVE
+  stones disappearing or vanishing on impact, stones dissolving into the line, one big stone pile, stones hitting the face, blood, bruises, wounds, torn clothes, the person flinching or crying, the person far away and small in the 2.0–5.2s shot, a high distant drone shot in 11.8–14.6s, the person as a tiny dot in the 11.8–14.6s shot, a smooth cut-stone wall at the very start of the 14.6–19.5s shot, the person’s face, hair or outfit changing between shots, extra cuts, smooth transitions, morphing, a modern building instead of a gothic castle, text, subtitles, logos, watermarks, cartoon look, CGI look, music
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: Бот @neyrosetkabot платный — не запускался. Видео не смотрел.
+source_url: https://t.me/nercpa/328
+duplicates_of: []

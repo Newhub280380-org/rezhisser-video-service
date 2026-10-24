@@ -1,0 +1,157 @@
+id: 050_ufc_fight_two_refs_any_subject_seedance
+source_file: 50_ufc_fight_two_refs_any_subject_seedance.md
+title: '# 50 — Бой UFC двух любых героев (люди, животные, маскоты): 2 листа персонажей → Seedance 2.0 15 с с нокаутом в конце'
+intent_tags:
+- animal
+use_when: 'Два фото → два «листа бойца» (разные ракурсы на белом) в Nano Banana Pro → Seedance 2.0 Fast с двумя картинками-референсами и таймкод-промптом: 15 секунд боя, на 14-й секунде нокаут. Автор прямо
+  пишет, что промпт рассчитан на людей, животных, маскотов и мультяшек.'
+inputs:
+- логотип
+steps:
+- n: 1
+  action: 'Nano Banana Pro, 9:16: по одному фото на каждого бойца, промпты «красный угол» / «синий угол».'
+  tool:
+  - Nano Banana
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: '9:16'
+- n: 2
+  action: 'Seedance 2.0 (FAST) 9:16: обе картинки в «фото-референс», промпт с image1/image2 и таймингом.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: '9:16'
+- n: 3
+  action: Длительность ровно 15 с.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: 15 с
+  aspect: unknown
+prompts_verbatim:
+- |-
+  Видео которое залетает в тренды❤️
+
+  Переходим в БОТ PromptX
+
+  Шаг 1: подготовить две фотки бойцов, для этого открываем Nano Banana pro (СООТНОШЕНИЕ СТОРОН СТРОГО 9:16) и обрабатываем по одной фотке, промпты:
+
+  Первый боец:
+  Фото одного и того же бойца UFC на чистом белом фоне. Разные ракурсы: крупный план лица, средний план, полный рост спереди, сбоку и сзади. Экипировка бойца UFC для красного угла: красно-черные шорты, перчатки UFC, боевая стойка. На шортах и экипировке размещены реалистичные спонсорские логотипы. Профессиональная студийная спортивная фотосессия, официальный UFC media day style, высокая детализация кожи и ткани, фотореализм, 8K.
+  Второй боец:
+  Фото одного и того же бойца UFC на чистом белом фоне. Разные ракурсы: крупный план лица, средний план, полный рост спереди, сбоку и сзади. Экипировка бойца UFC для синего угла: сине-черные шорты, перчатки UFC, боевая стойка. На шортах и экипировке размещены реалистичные спонсорские логотипы. Профессиональная студийная спортивная фотосессия, официальный UFC media day style, высокая детализация кожи и ткани, фотореализм, 8K.
+
+  Шаг 2: открываем режим Seedance 2.0 (FAST) 9:16, там загружаем в ФОТО РЕФЕРЕНС сразу две фотки бойцов и пишем следующий промпт:
+  [Scene Type: UFC Championship Knockout Fight]
+  [Duration: EXACTLY 15 seconds]
+  [Aspect Ratio: 9:16]
+  image1 = RED CORNER FIGHTER REFERENCE.
+  image2 = BLUE CORNER FIGHTER REFERENCE.
+  IMPORTANT:
+  Use ONLY the uploaded reference images.
+  Preserve the exact identity, appearance, body shape, face, fur, skin, clothing, and unique characteristics of both uploaded subjects.
+  This prompt must work with:
+  * men,
+  * women,
+  * animals,
+  * fantasy creatures,
+  * mascots,
+  * cartoon characters.
+  Do not change their identity.
+  FIGHT ENVIRONMENT
+  Professional UFC octagon.
+  Packed arena with thousands of spectators.
+  Bright UFC championship lighting.
+  Loud crowd reactions.
+  Pay-per-view main event atmosphere.
+  Realistic UFC broadcast quality.
+  ACTION RULES
+  This is a brutal championship fight.
+  NO standing still.
+  NO staring contests.
+  NO long clinches.
+  NO excessive grappling.
+  The fight is primarily a striking battle.
+  Both fighters constantly move, attack, defend, counterattack, and pressure forward.
+  Include:
+  * jabs,
+  * hooks,
+  * uppercuts,
+  * overhands,
+  * spinning attacks,
+  * body shots,
+  * low kicks,
+  * body kicks,
+  * head kicks,
+  * blocks,
+  * slips,
+  * dodges,
+  * counters.
+  Every strike should feel powerful and realistic.
+  The fight should look like a scene from a high-budget UFC movie.
+  TIMING
+  00:00–00:03
+  RED and BLUE aggressively circle.
+  Fast jabs.
+  Low kicks.
+  Defensive movement.
+  Immediate action.
+  00:03–00:06
+  Heavy boxing exchange.
+  Hooks and uppercuts from both fighters.
+  Clean impacts.
+  Crowd reacts loudly.
+  00:06–00:09
+  Explosive kickboxing sequence.
+  Body kicks.
+  Head kick attempts.
+  Counters.
+  Both fighters land significant strikes.
+  00:09–00:12
+  Wild exchange in the center of the octagon.
+  Continuous punches and kicks.
+  No pauses.
+  Championship intensity.
+  00:12–00:14
+  RED CORNER fighter takes control.
+  Lands multiple powerful combinations.
+  BLUE CORNER fighter becomes visibly hurt and stunned.
+  00:14–00:15
+  RED CORNER fighter lands a devastating knockout strike to the head.
+  BLUE CORNER fighter collapses dramatically to the canvas.
+  Referee immediately rushes in and waves off the fight.
+  RED CORNER fighter wins by spectacular knockout.
+
+  CAMERA
+  Dynamic UFC broadcast camera.
+  Fast cinematic tracking shots.
+  Close-up impact shots.
+  Professional sports production quality.
+  Smooth camera movement.
+  Realistic fight coverage.
+
+  QUALITY
+  Ultra realistic UFC fight, photorealistic characters, blockbuster movie action, realistic body physics, realistic punch and kick impacts, championship fight atmosphere, dramatic crowd reactions, perfect motion quality, high-energy combat choreography, strong temporal consistency, realistic knockout animation, premium cinematic sports film quality.
+
+  *Обязательно выбираем длительность видео не менее 15секунд.
+  👉 СОЗДАТЬ ФОТО
+
+  🟢 VPN в обход белых списков
+
+  🤖 Генерировать такой контент можно здесь:➡️ PromptX
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://t.me/AlisPromptX/383
+duplicates_of: []

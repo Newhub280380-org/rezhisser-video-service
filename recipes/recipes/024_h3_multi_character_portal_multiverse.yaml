@@ -1,0 +1,55 @@
+id: 024_h3_multi_character_portal_multiverse
+source_file: 24_h3_multi_character_portal_multiverse.md
+title: Несколько персонажей из разных вселенных в одной сцене (R2V с subject_definitions/retention_analysis)
+intent_tags:
+- other
+use_when: Несколько персонажей из разных вселенных в одной сцене (R2V с subject_definitions/retention_analysis)
+inputs:
+- unknown
+steps:
+- n: 1
+  action: unknown (в источнике нет нумерованных шагов; см. prompts_verbatim)
+  tool:
+  - MiniMax H3
+  - ComfyUI
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "Workflow: [github.com/Comfy-Org/workflow\\_templates/blob/main/templates/video\\_minimax\\_h3\\_r2v.json](http://github.com/Comfy-Org/workflow_templates/blob/main/templates/video_minimax_h3_r2v.json)\n\
+  \nUsed multiple reference images for each scene.\n\n**Prompt For Multi Character:**  \n*subject\\_definitions:*\n\n*<Subject 1> is \\[CHARACTER 1\\] from <Picture 1>, preserving the visual identity, costume,\
+  \ proportions, accessories, and visual style shown in the reference image.*\n\n*<Subject 2> is \\[CHARACTER 2\\] from <Picture 2>, preserving the visual identity, costume, proportions, accessories, and\
+  \ visual style shown in the reference image.*\n\n*<Subject 3> is \\[CHARACTER 3\\] from <Picture 3>, preserving the visual identity, costume, proportions, accessories, and visual style shown in the reference\
+  \ image.*\n\n*summary:*\n\n*\\[reference generation\\] A 5-second cinematic multiverse portal arrival. Three characters emerge from a consistent amber-orange portal and take a calm, confident formation.*\n\
+  \n*retention\\_analysis:*\n\n*<Subject 1> (appears in \\[Shot 1\\]): fully\\_preserved - retains the identity, costume, proportions, accessories, and visual style shown in <Picture 1>.*\n\n*<Subject 2>\
+  \ (appears in \\[Shot 1\\]): fully\\_preserved - retains the identity, costume, proportions, accessories, and visual style shown in <Picture 2>.*\n\n*<Subject 3> (appears in \\[Shot 1\\]): fully\\_preserved\
+  \ - retains the identity, costume, proportions, accessories, and visual style shown in <Picture 3>.*\n\n*detailed\\_description:*\n\n*A 5-second cinematic portal-arrival scene at dusk. One stable medium\
+  \ three-shot, framed from the knees up. No dialogue, no combat, no wide landscape, no camera movement, and no crowd.*\n\n*Portal continuity: a large circular amber-orange portal stands behind the characters.\
+  \ It has a bright rotating outer ring, a darker transparent centre, floating gold sparks, gentle smoke, and a low resonant hum. Keep its colour, size, brightness, particle density, and rotation speed\
+  \ consistent across every portal-arrival clip.*\n\n*\\[Shot 1\\] <Subject 1> steps through the portal first and takes the centre position with quiet confidence. <Subject 2> emerges on one side, naturally\
+  \ adjusts or lowers any item they are carrying if applicable, then gives a focused glance toward the unseen distance. <Subject 3> walks through last, takes position on the opposite side, and calmly surveys\
+  \ the scene. The three hold a poised, united stance as the portal flickers and golden particles drift around them. Their expressions and body language remain confident and appropriate to their individual\
+  \ character identities.*\n\n*overall\\_soundscape:*\n\n*Low portal hum, soft wind, subtle movement from clothing or equipment, and drifting golden sparks. No speech.*\n\n\n\n*non\\_diegetic\\_music:*\n\
+  \n*A restrained cinematic rise builds across the shot and resolves on a calm, confident note.*\n\n**Prompt For single characters:**  \n*subject\\_definitions:*\n\n*<Subject 1> is \\[CHARACTER\\] from\
+  \ <Picture 1>, preserving the visual identity, costume, proportions, accessories, and visual style shown in the reference image.*\n\n*summary:*\n\n*\\[reference generation\\] A 5-second cinematic multiverse\
+  \ portal arrival. One character walks through a consistent amber-orange portal, then takes a confident action stance with a subtle grin.*\n\n*retention\\_analysis:*\n\n*<Subject 1> (appears in \\[Shot\
+  \ 1\\] and \\[Shot 2\\]): fully\\_preserved - retains the identity, costume, proportions, accessories, and visual style shown in <Picture 1>.*\n\n*detailed\\_description:*\n\n*A 5-second cinematic portal-arrival\
+  \ scene at dusk. No dialogue, no crowd, no wide landscape, and no combat.*\n\n*Portal continuity: a large circular amber-orange portal stands behind <Subject 1>. It has a bright fiery rotating outer ring,\
+  \ a darker transparent centre, floating gold sparks, gentle smoke, and a low resonant hum. Keep its colour, size, brightness, particle density, and rotation speed consistent across every portal-arrival\
+  \ clip.*\n\n*\\[Shot 1\\] Medium knee-up shot. <Subject 1> walks steadily through the portal toward the camera, then comes to a composed stop. Their costume, silhouette, movement style, and any character-specific\
+  \ accessories remain fully consistent with <Picture 1>. Golden sparks drift around them as the portal flickers behind.*\n\n*\\[Shot 2\\] Close-up of <Subject 1>. They shift into a distinctive, character-appropriate\
+  \ action stance, looking directly ahead with calm confidence. Their expression changes into a subtle smile and restrained grin. Keep the movement natural and controlled, with no exaggerated facial distortion.\
+  \ The portal remains softly visible and out of focus in the background.*\n\n*overall\\_soundscape:*\n\n*Low portal hum, soft wind, subtle movement from clothing or equipment, and drifting golden sparks.\
+  \ No speech.*\n\n*non\\_diegetic\\_music:*\n\n*A restrained cinematic rise builds through the entrance and resolves as <Subject 1> holds the final stance.*"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: Каждому персонажу — отдельный Subject и отдельная retention-строка; сцена задаёт общий свет.
+confidence: B
+prompt_completeness: partial
+notes: —
+source_url: http://github.com/Comfy-Org/workflow_templates/blob/main/templates/video_minimax_h3_r2v.json)
+duplicates_of: []

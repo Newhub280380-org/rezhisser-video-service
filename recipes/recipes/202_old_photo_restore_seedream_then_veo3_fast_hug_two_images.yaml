@@ -1,0 +1,53 @@
+id: 202_old_photo_restore_seedream_then_veo3_fast_hug_two_images
+source_file: 202_old_photo_restore_seedream_then_veo3_fast_hug_two_images.md
+title: 'Старое фото → современный портрет → оживление «обнимаются и машут»: Seedream (реставрация, лицо 99%) → Veo 3 fast с двумя сгенерированными изображениями'
+intent_tags:
+- object_alive
+- family_photos
+use_when: 'Старое фото → современный портрет → оживление «обнимаются и машут»: Seedream (реставрация, лицо 99%) → Veo 3 fast с двумя сгенерированными изображениями'
+inputs:
+- фото лица/портрет человека
+- старое фото
+steps:
+- n: 1
+  action: '**Seedream** (у автора: бот → Дизайн с ИИ → Seedream): загрузить старые фото, промпт 1 — получить современный реалистичный портрет с тем же лицом. Автор: «можно NanoBanana, но будет менее реалистично».'
+  tool:
+  - Nano Banana
+  - Seedream
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: '**Veo 3 fast** (Видео будущего → VEO3 fast): загрузить два сгенерированных изображения, промпт 2.'
+  tool:
+  - Veo
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Предупреждение автора: если на изображении ребёнок — анимация без звука.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  Ultra-realistic recreation of an old vintage photo, keeping the same original face (99% likeness, no alteration). Transform into a modern high-quality digital portrait with vibrant updated colors, smooth realistic skin textures, and natural lighting. The outfit and background should be upgraded into a clean, modern aesthetic while preserving the authenticity of the original pose and expression.
+- |-
+  Камера статична. Женщина и парень обнимают друг друга. Парень и женщина счастливые смотрят друг на друга. Нежная обстановка. Теплые тона. Счастливые лица. В конце смотрят в камеру и машут рукой.
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: нет
+source_url: https://t.me/neiroseti/668
+duplicates_of: []

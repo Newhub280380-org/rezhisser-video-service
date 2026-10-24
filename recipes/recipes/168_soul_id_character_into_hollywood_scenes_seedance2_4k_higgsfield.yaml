@@ -1,0 +1,118 @@
+id: 168_soul_id_character_into_hollywood_scenes_seedance2_4k_higgsfield
+source_file: 168_soul_id_character_into_hollywood_scenes_seedance2_4k_higgsfield.md
+title: 'Себя в голливудские сцены: обучить персонажа Soul ID (≈20 фото) в Higgsfield → вызывать его как элемент в Seedance 2.0 4K (5 сцен с промптами)'
+intent_tags:
+- talking_head
+- client_in_clip
+- seamless_series
+- animal
+- vfx_effect
+use_when: 'Автор говорит, что Seedance 2.0 блокирует загрузку своего лица напрямую, поэтому лицо идёт через персонажа Soul ID в Higgsfield: обучаешь на ~20 фото, и персонаж становится элементом, который
+  вызывается в промпте (в файле — токен вида <<<b9e9949f-…>>>). Дальше в промпте описываешь, во что одет и что'
+inputs:
+- финальный кадр
+- аудио/голос
+steps:
+- n: 1
+  action: 'Шаг 1 — Higgsfield → поиск «Soul ID» → Create character: загрузить ~20 фото (чистое лицо, разные ракурсы, полный рост спереди и в профиль, эмоции). Совет автора: не грузить почти одинаковые фото
+    — у него из-за этого появились артефакты на лице.'
+  tool:
+  - Higgsfield
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Шаг 2 — обучение (≈25 кредитов, 10–15 мин) → персонаж становится элементом.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Шаг 3 — генерация видео Seedance 2.0: выбрать свой элемент (Use), дописать промпт. Учиться на 480p / 6 с, финал — 4K, 16:9, 15 с (автор сделал 7 клипов 4K и использовал 5).'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: 6 с
+  aspect: '16:9'
+- n: 4
+  action: 'Шаг 4 — проблемы, о которых говорит автор: модель сама генерирует музыку (между клипами не совпадает — для серьёзной работы нужен первый/последний кадр); если подать свой голос как аудио, звук
+    смешивается странно.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: last_frame
+  duration: unknown
+  aspect: unknown
+- n: 5
+  action: 'Промпты: 5 сцен ниже (идёт по улице в наушниках, пока за спиной супергероиня бьётся с монстром; секретный агент; мастер кунг-фу с кистью туши; трансформация; драка). <<<b9e…>>> = ваш персонаж
+    Soul ID, <<<image_1/2>>> = картинки других героев.'
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "scene #1 walking in the street \nCreate a two-shot cinematic scene with <<<b9e9949f-31c5-4314-93c6-0d054d7846ad>>> as the main \ncharacter (appearance must remain completely consistent), \n<<<image_2>>>\
+  \ as the superhero (female, one only, normal human \nproportions, extremely fast and agile, capable of flight, \nfires continuous laser beams only from eyes directly at the \nmonster, specializes in high-speed\
+  \ movement, powerful punches, \nand can lift and throw vehicles with realistic weight and \nforce), and <<<image_1>>> as the monster (enormously large, \nskyscraper scale, far larger than surrounding\
+  \ buildings, \nground level, breathes fire, causes physical destruction to \nthe city).\n\nStyle: hyperrealism, ARRI ALEXA, 35mm film texture, natural \ncolor grading, sharp focus, real motion blur, subtle\
+  \ film \ngrain, physically accurate scale, fire smoke debris. No 3D \neffects, no cartoon elements, no special effects.\n\n[Shot 1 — 0:00–0:08] Front tracking shot, camera smoothly \nretreating at eye\
+  \ level, locked on <<<b9e9949f-31c5-4314-93c6-0d054d7846ad>>> walking calmly \ntoward camera in soft morning city light on a busy urban \nsidewalk. <<<b9e9949f-31c5-4314-93c6-0d054d7846ad>>> wearing large\
+  \ over-ear noise cancelling \nheadphones, nodding and swaying slightly as if listening to \nmusic, completely unaware of surroundings. Street packed with \nrush hour traffic and panicked pedestrians desperately\
+  \ fleeing \nthe chaos behind, some dodging between moving vehicles in \nfear. Background fully visible — <<<image_2>>> engaging <<<image_1>>> at \nfull speed, flying directly at the monster, striking\
+  \ with \npowerful punches, firing continuous laser beams from eyes \naimed only at <<<image_1>>>, never hitting buildings vehicles or \npeople. <<<image_2>>> lifts a full-size car with visibly real weight\
+  \ \nand hurls it at <<<image_1>>> — car spinning through air and \nexploding on impact with metal flame and debris. <<<image_1>>> \ntowers over the city simultaneously destroying and crushing \nbuildings,\
+  \ stomping through streets, breathing fire that \nengulfs vehicles and structures. Soft morning light and \nexplosion glow playing naturally across <<<b9e9949f-31c5-4314-93c6-0d054d7846ad>>>'s face and\
+  \ \nbody. <<<b9e9949f-31c5-4314-93c6-0d054d7846ad>>> remains completely calm and unaware. Camera \nstable, highly realistic, dramatic scale contrast.\n\n[Shot 2 — 0:08–0:15] Hard cut to side angle, camera\
+  \ at eye \nlevel tracking <<<b9e9949f-31c5-4314-93c6-0d054d7846ad>>> walking forward in foreground. \n<<<image_2>>> and <<<image_1>>> battling in background — laser beams, \npowerful punches, car flying\
+  \ and exploding against <<<image_1>>>, \nfire and debris contained to impact zones. <<<b9e9949f-31c5-4314-93c6-0d054d7846ad>>> slows \ndown, slides one headphone cup off one ear, begins to turn \nhead\
+  \ toward the chaos, and running away from the frame  physically accurate \nscale, 24fps 180° shutter, 15 seconds.\n\n\nshot 2 secret agent:\n<<<b9e9949f-31c5-4314-93c6-0d054d7846ad>>> wearing a fitted\
+  \ black blazer and white shirt. \nOne continuous 15-second cinematic shot inside a clean dimly \nlit public bathroom — white subway tiles, large wall mirror, \nwhite ceramic sink, flickering fluorescent\
+  \ lights, wet \nreflective floor.\n\n[0:00–0:02] Medium shot. <<<b9e9949f-31c5-4314-93c6-0d054d7846ad>>> at the sink, hands washing, \nexpression calm and focused, eyes locked on own reflection \nin the\
+  \ mirror.\n\n[0:02–0:04] In the mirror reflection — a broad-shouldered \nattacker in dark tactical gear bursts from a stall, grabs \n<<<b9e9949f-31c5-4314-93c6-0d054d7846ad>>> from behind. Camera pushes\
+  \ in slowly. Both slam \ninto the tiled wall. Struggle.\n\n[0:04–0:06] <<<b9e9949f-31c5-4314-93c6-0d054d7846ad>>> drives elbow back hard, breaks free, \nspins and grabs the attacker — smooth camera movement\
+  \ — \nexecutes a powerful judo shoulder throw, slamming the attacker \ninto the metal stall door. Debris and shadows scatter under \nflickering lights.\n\n[0:06–0:09] Camera tilts down, tracks sideways\
+  \ through the \nfight — rapid strikes, blocks, counters — <<<b9e9949f-31c5-4314-93c6-0d054d7846ad>>> dodges \none attack and delivers a devastating counter. Handheld energy, \nmotion blur on fast strikes,\
+  \ eyes sharp and focused throughout.\n\n[0:09–0:11] Camera pulls back fast then slams in close — \n<<<b9e9949f-31c5-4314-93c6-0d054d7846ad>>> grabs attacker's head and drives it into the mirror. \nSuper\
+  \ slow motion — thousands of glass shards fly toward \ncamera, a massive spider-web crack radiating across the mirror. \nHigh contrast, dramatic light burst.\n\n[0:11–0:13] Camera pulls wide slowly. <<<b9e9949f-31c5-4314-93c6-0d054d7846ad>>>\
+  \ standing tall \non the wet bathroom floor, looking down at the attacker. \nCalmly straightens blazer. Broken mirror fragments reflecting \na distorted image. Cold blue cinematic grade.\n\n[0:13–0:15]\
+  \ Profile close-up. <<<b9e9949f-31c5-4314-93c6-0d054d7846ad>>> glances at own \ndistorted reflection in the broken mirror, calmly tucks in \nshirt, smooths jacket, runs a hand through hair. Turns and\
+  \ \nwalks out of frame. Camera holds on the cracked mirror. \nFade to black.\n\n\n\nShot 3: Kungfu Master\n<<<b9e9949f-31c5-4314-93c6-0d054d7846ad>>> wearing <<<image_1>>> white draped linen wrap-robe,\
+  \ \nwide-leg white linen trousers, barefoot, face fully visible. \nStanding center frame in an infinite white void, wielding an \nenormous ink brush. First brush stroke — tiger erupts from \nthe ink and\
+  \ lunges forward low to the ground. Second stroke — \nfirst Chinese dragon coils upward on the left. Third stroke — second \ndragon rises on the right. Figure moves dynamically between \nstrokes, robes\
+  \ and fabric billowing. Final frame — tiger \ncrouched in front, two dragons forming symmetrical arc behind \nthe figure. Camera tracks the figure throughout, slow dolly \npull-back on the final reveal.\
+  \ High contrast black ink against \npure white void. Studio lighting. Cinematic photorealistic, \nfine film grain, 24fps, 15 seconds.\n\n\nshot 4 transformation \n, <<<b9e9949f-31c5-4314-93c6-0d054d7846ad>>>\
+  \ standing on a chaotic city street, obsidian \nhorned monster <<<image_2>>> looming in the background amid smoke and mess. \n<<<b9e9949f-31c5-4314-93c6-0d054d7846ad>>> turns head slowly toward the camera,\
+  \  camera slowly dolly in on his face,  Eyes locked in, determined and heroic look. Lips part — \nsays <<<audio_1>>>\"This time... it's my turn. armor, activate.\"\n\nImmediately — white and black mecha\
+  \ armor begins materializing \nonto the body. Close-up on right hand first — angular white \narmor plates snap onto the forearm and fist, orange energy \nlights flickering on at the joints. Cut to left\
+  \ arm — same \nmaterialization, panels locking into place with mechanical \nprecision. Cut to legs — heavy white armor plates solidifying \nover shins and thighs, hydraulic components clicking into \n\
+  position. Cut to chest — layered white chest armor expands \nand locks, orange core igniting at center. Finally helmet — \nwhite mecha helmet with swept-back horn crown descends and \nseals shut, purple\
+  \ plasma energy crackling along the blade \nextensions on both sides.\n\n<<<b9e9949f-31c5-4314-93c6-0d054d7846ad>>> fully armored. Raises one arm slowly. Twin curved \nplasma blades extend and ignite\
+  \ purple. One powerful swing — \npurple energy arc cuts through the smoky air. Hold on the \narmored figure standing tall, monster behind, ready.\n\nCinematic photorealistic, ARRI ALEXA, 35mm film grain,\
+  \ \nnatural color grade, orange fire glow and purple plasma \nlight playing across the armor surface, 24fps with 96fps \nslow motion on the helmet seal and blade ignition, \n15 seconds.\n\n\nshot 5 flighting\
+  \ scene :\n<<<image_1>>> AEGIS-7 armored figure. <<<image_4>>> destroyed city \nstreet background, <<<image_3>>> obsidian monster ahead. \nMulti-angle cinematic cut sequence.\n\n[0:00–0:03]  <<<image_1>>>\
+  \ sprints toward \n<<<image_3>>> at full speed, purple plasma blades igniting. \nCamera ground level tracking rockets behind <<<image_1>>>, \n\n[0:03–0:06]  <<<image_1>>> leaps — plasma \nblade drives\
+  \ into <<<image_3>>> chest. Impact freeze — lava and \nobsidian shards exploding outward in all directions, \norange magma spraying. Camera shakes violently on impact. \nFeel the weight and force of the\
+  \ hit.\n\n[0:06–0:09] Fast cut to wide shot. <<<image_1>>> on <<<image_3>>> \nback — second powerful downward strike — another massive \nlava explosion. <<<image_3>>> roars. Slow motion on the blade \n\
+  connecting. Camera pulls wide to show full scale of \nmonster staggering.\n\n[0:09–0:12] Hard cut. <<<image_3>>> massive claw swings — \nslow motion — connects with <<<image_1>>> — impact force \nlaunches\
+  \ <<<image_1>>> sideways through the air at enormous \nspeed, crashing into the street, carving a long deep \ngouge through broken asphalt, sparks and debris \nexploding outward.\n\n[0:12–0:15] Fast cut\
+  \ to close. <<<image_1>>> lying on broken \nroad , lay down, head towards sky, armor cracked and smoking. Quick push in — helmet \nis damaged, cracked open, visor shattered —  <<<b9e9949f-31c5-4314-93c6-0d054d7846ad>>>\n\
+  face visible underneath, \nstaring up at camera, \n\nCinematic photorealistic, ARRI ALEXA, 35mm film grain, \norange lava glow and purple plasma light, hard cuts \nbetween angles,, physically accurate\
+  \ impact \nforce and debris physics, 15 seconds."
+output:
+  format: mp4
+  resolution: 4K
+  aspect: '16:9'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: Ничего не закрыто. Higgsfield платный — не запускался. Цены из ролика (4K 15 с ≈ 330 кредитов; 480p 6 с ≈ 18; обучение Soul ID ≈ 25 кредитов, 10–15 мин) — со слов автора.
+source_url: https://www.youtube.com/watch?v=33xE-3vWyw4
+duplicates_of: []

@@ -1,0 +1,113 @@
+id: 124_food_cgi_ad_llm_nb_llm_seedance25_3shots_6s
+source_file: 124_food_cgi_ad_llm_nb_llm_seedance25_3shots_6s.md
+title: 'CGI-реклама блюда для кафе: LLM адаптирует фото-промпт → Nano Banana «левитирующий продукт» → LLM-шаблон на 3 шота → Seedance 2.5 6 с'
+intent_tags:
+- product_ad
+- seamless_series
+- vfx_effect
+use_when: 'Фото блюда → редакционный «левитирующий» кадр в Nano Banana → LLM по шаблону пишет промпт на 6 с из 3 шотов: 360° левитация с CGI-ингредиентами → супер-макро стекающего соуса → эффектный финал;
+  EN + ZH версии, защита от морфинга. В комментариях: делали также во Flow Omni Flash; цена за такое видео «'
+inputs:
+- стартовый кадр
+- аудио/голос
+steps:
+- n: 1
+  action: Фото блюда/десерта.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'LLM (Gemini/Claude): фото + «Исправь этот промпт для продукта с фото:» + образец (круассан, дословно ниже).'
+  tool:
+  - Gemini
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Nano Banana: полученный промпт, качество и соотношение → аппетитное фото.'
+  tool:
+  - Nano Banana
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: previous_step_output
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: 'LLM: фото + мета-промпт из комментария → готовый промпт для анимации.'
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 5
+  action: Seedance 2.5, Omni Reference, высокое качество, 6 с, звук вкл. (длинный промпт — через веб-версию, бот не пропускает).
+  tool:
+  - Seedance
+  mode: Omni
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: 6 с
+  aspect: unknown
+prompts_verbatim:
+- "=== https://t.me/profiobzorov/2027 2026-09-22T14:20:51+00:00\n\U0001F950ОСТОРОЖНО, эстетика и аппетитность зашкаливает\U0001F525\U0001F9C1\n\n✅ ПОДПИШИСЬ на этот канал и погнали!\n\nТакая эффектная и\
+  \ нереально аппетитная анимация привлекает внимание и пробуждает вкусовые сосочки\U0001F609 Поэтому о ней мечтают все заведения города. Ну а кто мы такие, чтобы отказывать?\n\nИНСТРУКЦИЯ:\n\n\U0001F342\
+  Для создания такой анимации нам понадобится фото блюда или десерта.\n\nПереходим в SYNTX:\n\U0001F4F1 ТГ БОТ SYNTX или\n\U0001F4BB WEB ВЕРСИЯ\n\n2️⃣Переходим в раздел LLM-студия на сайте или Текст в БОТЕ\
+  \ \U0001F342 выбираем любимую нейросеть, например, у нас это Gemini или Claude \U0001F342 загружаем фото и вставляем этот сразу с запросом, адаптировать его под ваше блюдо:\n\nИсправь этот промпт для\
+  \ продукта с фото:\nProfessional editorial food photograph, artisan raspberry and cream croissant floating mid-air, slight upward angle, seamless soft vanilla to muted blush pink gradient backdrop. Dramatic\
+  \ warm rim lighting from upper right with soft falloff. Deep golden-brown croissant with extremely crisp, shattering, buttery flaky layers on the outside, revealing a soft, airy, honeycomb-like interior\
+  \ where slightly torn; top ridge enrobed in a thick, glossy bright pink raspberry glaze interlaced with ribbons of smooth white cream, cascading in perfect drips. Lush, vibrant pink raspberry coulis and\
+  \ velvety whipped cream luxuriously oozing from a split in the side, catching the light. Plump, fresh red raspberries resting on the glossy crown, lightly dusted with fine powdered sugar. A few whole\
+  \ raspberries, a single droplet of pink cream, and golden shattered pastry flakes suspended mid-air around the croissant, motion frozen at varying depths. Shallow depth of field, macro detail on flaky\
+  \ crust texture and glossy glaze, high contrast, commercial patisserie food styling, appetizing, 8K, 100mm macro lens.\n\nКопируем получившийся промпт.\n\n3️⃣Далее переходим в раздел  Изображения, Nano\
+  \ Banana, вставляем промпт, выбираем в настройках качество изображения и соотношение сторон. Получаем нереально аппетитное фото\U0001F924\n\n4️⃣С готовым фото возвращаемся в Gemini или Claude. Загружаем\
+  \ фото и большой промпт, который оставили в комментариях. На его основе мы получим качественный готовый промпт именно для анимации вашего продукта\U0001F44F\U0001F3FC\n\n5️⃣Для создания анимации переходим\
+  \ в раздел Видео \U0001F342 нейросеть Seedance 2.5.\nЗагружаем фото и вставляем готовый промпт\U0001F44C\U0001F3FC\n\n\U0001F342В настройках выбираем режим Omni Reference.\n\U0001F342Рекомендуем выбирать\
+  \ высокое качество.\n\U0001F342Длительность как в промпте 6 сек.\n\U0001F342Включаем ползунок звука.\n\n❗️Обратите внимание, отправить длинный промпт для Seedance в ТГ БОТ SYNTX не получится. Для работы\
+  \ используйте WEB ВЕРСИЮ.\n\nТакие видео можно разослать по кафешкам на вашем районе с предложением своих услуг. И сразу собрать первых клиентов \U0001F92D\n\nКстати, для новичков классная новость - промокод\
+  \ на скидку 20% SYNTX-START на первую покупку тарифа Basic\n\nДелитесь вашими результатами \U0001F447\U0001F3FC\n\nПодписаться на ТГ КАНАЛ Профи Контента | Нейросети | ИИ\n  \n    Please open Telegram\
+  \ to view this post\n    VIEW IN TELEGRAM\n  \n\n  \n    Please open Telegram to view this post\n    VIEW IN TELEGRAM"
+- |-
+  ### comments profiobzorov/2027
+  --- Deleted Account
+  выглядит слишком соблазнительно 😏
+  --- ЧАТ Профи Контента
+  Промпт для Seedance:
+  ТВОЯ РОЛЬ: Эксперт-генератор промптов для нейросети Seedance 2.0, специализирующийся на профессиональных CGI фуд-рекламах (food commercials). Твоя задача — превращать фото или идею пользователя в идеальный технический промпт для динамичного рекламного ролика.
+
+  ВАЖНО: Длина видео строго 6 секунд. Ролик должен содержать ровно 3 шота (монтажные склейки). Никакого текста, типографики и голоса (no voiceover, no text) — только саунд-дизайн и музыка.
+
+  ФОРМАТ ОТВЕТА (СТРОГО 3 БЛОКА):
+  RU: Суть видео (1-2 предложения).
+  EN: Промпт на английском (макс. 3500 символов).
+  ZH: Художественный промпт на китайском (макс. 3300 символов).
+
+  ПРАВИЛА НАПИСАНИЯ:
+  База (Первые 20 слов): ВСЕГДА начинай с Subject (ЧТО В КАДРЕ) и Motion (ЧТО ДЕЛАЕТ).
+  Структура: [References] -> [Timing & Shots] -> [Style & Lighting] -> [Audio].
+  Референсы: Если дано фото, пиши слитно: @Image1. Обязательно указывай: "Take exact food design, textures, shape, and colors from @Image1".
+
+  Тайминг и Монтаж (Строго 6 секунд, 3 шота склейками "Cut to:"):
+
+  [0:00-0:02] Шот 1 (Парение и CGI-объем): MS/WS. Эффектная 360-градусная левитация продукта в невесомости. Камера делает динамичный облет (orbiting camera). Вокруг летают CGI-ингредиенты (крошки, капли, специи, ягоды). Идеальная заморозка времени или slow-motion.
+  [0:02-0:04] Шот 2 (Макро-текстура и текучесть): ECU (Extreme Close-Up). Супер-макро кадр. Густой соус, крем, сок, карамель или сыр невероятно аппетитно, глянцево и медленно стекает/капает по текстуре продукта (oozing, dripping, stretching). Фокус на бликах и сочности.
+  [0:04-0:06] Шот 3 (Эффектный финал): MS. Динамичное действие, не дублирующее первый кадр. Например: продукт эпично приземляется на поверхность с красивым разлетом крошек/брызг, ИЛИ камера стремительно наезжает (speed ramp/fast push-in) на разрезанную половину, ИЛИ продукт красиво сжимается, выпуская сок.
+  Камера: На каждой склейке меняй и крупность (ECU, CU, MS), и движение (orbit, macro tracking, slider, speed ramp).
+  Физика: Описывай физику еды (sizzling hot, thick glossy dripping, shattering crispy crust, volumetric splashing).
+  Звук: Только коммерческая музыка (upbeat rhythm, punchy bass) и сочный SFX (swoosh, sizzling, heavy liquid dripping, crispy crunch).
+  Защита: ВСЕГДА заканчивай EN и ZH промпт фразой: "Stable food structure throughout. No morphing. No deformation. Consistent textures. No text, no letters."
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://t.me/profiobzorov/2027
+duplicates_of: []

@@ -1,0 +1,66 @@
+id: 148_crowd_replacement_hero_clones_seedance
+source_file: 148_crowd_replacement_hero_clones_seedance.md
+title: Замена героя и всей массовки в чужом видео (главный — @image1, толпа — клоны @image2) — Seedance 2.5 Omni Reference 30 с
+intent_tags:
+- client_in_clip
+- meme
+- animal
+- dance
+use_when: Берётся вирусное видео с толпой (у автора — собаки танцуют у входа в школу). Первого идущего героя меняют на ваш реф, всех остальных — на клонов второго рефа; хореография, камера и окружение сохраняются.
+inputs:
+- видео-референс (движение/клип)
+steps:
+- n: 1
+  action: Seedance 2.5, режим Omni Reference, 16:9, 30 с, разрешение любое.
+  tool:
+  - Seedance
+  mode: Omni
+  prompt: unknown
+  input_source: user_input
+  duration: 30 с
+  aspect: '16:9'
+- n: 2
+  action: Загрузить @video1 (исходник), @image1 (главный герой), @image2 (персонаж для массовки).
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Вставить промпт; по словам автора, адаптируется: главный один персонаж, массовка — другой.'
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  Итак, ребятки👇
+  ⠀
+  🔗 Ссылка на сайт тут
+  Нейросеть: seedance 2.5
+  Режим: Omni Reference
+  Разрешение: на свой вкус
+  Формат: 16:9
+  Длительность: 30 сек.
+  ⠀
+  📀Видео референс для собак и людей прикрепил
+  ⠀
+  🔧Промпт:
+  CHARACTER REPLACEMENT TASK: Original video = @ video1 | Sample for the main character = @ image1 | Sample for crowd clones = @ image2 ORIGINAL MATERIALS (@ video1): use @ video1 as the base video for motion tracking, choreography, framing, and environment creation. Replace the actors frame by frame, maintaining the identity of movements, speed, and timing. MAIN CHARACTER (@ image1): identify the specific dog that is walking forward with its back to the camera, passes through the crowd, turns around, and stops in the center. Replace ONLY this character, who is the first one to move, with @ image1. Keep the facial features, hairstyle, skin tone, and body type of the character the same as in @ image1. REPLACING CHARACTERS IN A MASSIVE SCENE (@ image2): replace EACH dog with identical clones from @ image2. This applies to all dogs in general, all dogs in the background, in the foreground, in the side rows, and the dancing dogs. Maintain the aggressive, synchronized choreography of body and head movements, as in @ video1. ENVIRONMENT AND CAMERA: the brickwork at the school entrance, the steps, the signs, and the architecture should remain unchanged, as in @ video1. Strictly observe the continuous camera movement away and the reduction in scale.]
+  ⠀
+  Само собой промпт можно адаптировать под себя. Например главный герой один, а массовка другой персонаж и тд.
+  ⠀
+  Буду рад вашим реакциям🚀🔥
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '16:9'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: видео-референс автора приложен к посту файлом (не скачивал)
+source_url: https://t.me/reelsteacher/1018
+duplicates_of: []

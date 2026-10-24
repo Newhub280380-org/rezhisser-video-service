@@ -1,0 +1,160 @@
+id: 145_fruit_drama_talking_characters_cliffhanger_start_frames_veo_kling
+source_file: 145_fruit_drama_talking_characters_cliffhanger_start_frames_veo_kling.md
+title: 'Говорящая фруктовая мини-драма с клиффхэнгером (11M просмотров): сценарий → нарезка на сцены с описанием 1-го кадра → лист героев → стартовые кадры → Veo 3.1 / Kling start-end → CapCut'
+intent_tags:
+- talking_head
+- client_in_clip
+- seamless_series
+use_when: 'Конвейер на серию: LLM пишет весь сценарий сразу (сцена = одна эмоция, короткие реплики, клиффхэнгер в конце) → сценарий режется на клипы с описанием первого кадра → каждый персонаж генерится
+  один раз (спереди и сбоку) → из листа стартовый кадр на каждый клип (10–20 вариантов, берётся лучший) → аним'
+inputs:
+- стартовый кадр
+- финальный кадр
+- аудио/голос
+steps:
+- n: 1
+  action: 'LLM: запрос на полный сценарий (дословно в посте).'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Нарезать на клипы, к каждому — описание первого кадра.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Nano Banana / Midjourney v7 / Flux Kontext: лист каждого персонажа, затем стартовый кадр на клип (промпт в посте).'
+  tool:
+  - Nano Banana
+  - Midjourney
+  - Flux
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: previous_step_output
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: Veo 3.1 (речь вместе с клипом) или Kling start/end frame; промпт клипа — в посте; ElevenLabs для замены реплик.
+  tool:
+  - Kling
+  - Veo
+  - ElevenLabs
+  mode: start/end frame
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 5
+  action: 'CapCut: склейка по репликам, room tone.'
+  tool:
+  - CapCut
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 6
+  action: Публикация с меткой AI.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  A BANANA ASKS FOR ONE SLICE OF PIZZA. 11M VIEWS. $7 TO MAKE. $9,000 IN CONSULTATIONS.
+
+  a pizzeria at lunch, brick walls, warm pendant lights, a checkered floor, steam curling off a fresh tray. at the wooden counter, a banana in a backwards grey cap, a patchy beard, a torn grey shirt, a backpack on one shoulder, jeans gone at the knees. he hasn't eaten in two days. behind the counter, a strawberry with a green leaf ponytail in a green polo and apron, eyes closed, sliding a slice across to him.
+
+  "this is a one time thing, okay?"
+
+  then the boss finds out. her pay gets cut. next time she's fired. so when the banana comes back to say thank you, she shouts him out of the shop, in front of everyone. and when nobody's looking, she hands him another slice.
+
+  "that boss has no idea who I am. but soon enough he's going to find out."
+
+  part one ends there. you have to follow to get part two.
+
+  why it works:
+
+  → you feel sorry for the banana in the first seven seconds
+  → the boss is a villain nobody needs explained
+  → she's cruel in public and kind in private, and the viewer is the only one who knows
+  → the last line is a promise, so the follow is the only way to get the answer
+  → fruit over-emote, so the story reads with the sound off
+  → nobody inspects a cartoon banana for bad hands
+
+  how it's made, step by step:
+
+  1. the script. Claude or ChatGPT writes the whole story at once, scene by scene, with the spoken lines and a cliffhanger in the last one. "write a full script for an animated story with anthropomorphic fruit: someone kind is punished for it, hides what they really are, and the last line promises a reveal. short spoken lines, one emotion per scene."
+  2. the split. the finished script gets cut into separate clips, one scene each, with a description of the first frame.
+  3. character sheet and start frames: Nano Banana, Midjourney v7 or Flux Kontext. generate each character once, front and side, then one start frame per clip from that sheet. 10 to 20 variants, keep the best.
+  4. animation and voices: Veo 3.1 or Sora 2 generate speech together with the clip. Kling in start frame to end frame mode for more control over movement. ElevenLabs for any line that needs replacing.
+  5. assembly: CapCut. join the clips, cut on the line, add room tone.
+  6. post with the AI-generated label on.
+
+  the start-frame prompt:
+
+  "3D animated feature film still, a busy pizzeria with brick walls and warm pendant lights, checkered floor, an anthropomorphic banana in a backwards grey cap with a patchy beard and a torn grey shirt at the counter, an anthropomorphic strawberry with a green leaf ponytail in a green polo and apron handing him a slice of pizza, steam rising, expressive oversized eyes, soft cinematic lighting"
+
+  the clip prompt:
+
+  "The strawberry glances toward the back, slides the slice across the counter and whispers: 'This is a one time thing, okay?' The banana takes it with both hands. Same characters as the reference. Audio: pizzeria ambience, no music."
+
+  the $7 is the retries. the first take is never the one you keep.
+
+  the video isn't what he sells. it's the proof. the $9,000 came from people who watched it and asked how.
+- |-
+  THIS CARTOON COUPLE COST $3 TO MAKE. THE TEA IT ADVERTISED SOLD $7,000.
+
+  3M views. one couple, no actors, no camera.
+
+  a warm pendant lamp over a dinner table, plates half-eaten, a fork in the foreground. a man with wavy brown hair in a burgundy polo leans back, one eyebrow up, half a smile, about to say something he'll regret. across from him, a woman with her hair in a bun and a hoop earring, seen from behind.
+
+  cut to the sofa. he's side-eyeing her, jaw tight. she's turned away in a teal cardigan, cheek on her shoulder, lips pressed together.
+
+  cut to a pilates studio. same woman, high ponytail, teal set, face scrunched in pure effort, hands around the reformer straps, sun through a tall window.
+
+  nobody needs to speak. you read the whole relationship from the faces. the product is a tea, and it sits inside the story instead of in an ad break.
+
+  how it's made, step by step:
+
+  → 1. the script. Claude or ChatGPT writes the whole story in one go: scene by scene, one emotion per scene, the product placed inside the joke. "write a full script for a cartoon couple story, scene by scene, no dialogue, the tea appears naturally, each scene is one clear emotion."
+  → 2. the split. the finished script gets cut into separate clips, one scene each, with a description of the first frame.
+  → 3. character sheet and start frames: Nano Banana, Midjourney v7 or Flux Kontext. both characters generated once, front and side, then one start frame per clip from that sheet. 10 to 20 variants, keep the best.
+  → 4. animation: Kling in start frame to end frame mode, or Veo 3.1 for the cleanest picture. Sora 2 if you want sound generated with it. each clip is generated on its own.
+  → 5. captions and cuts: CapCut. everything gets joined on the beat of the joke.
+  → 6. sound, only where needed: ElevenLabs for a line or room tone.
+  → 7. post with the AI-generated label on.
+
+  the start-frame prompt:
+
+  "3D animated feature film still, a couple at a dinner table under a warm pendant lamp, man with wavy brown hair in a burgundy polo, woman with hair in a bun seen from behind, expressive oversized eyes, exaggerated eyebrows, soft cinematic lighting, shallow depth of field"
+
+  the clip prompt:
+
+  "He raises one eyebrow and smirks, then side-eyes her as she turns away, cheek on her shoulder. Same characters as the reference. Audio: soft room tone, no music."
+
+  the $3 is the retries. the first take is never the one you keep.
+
+  ngl the sofa shot is the whole video. the side-eye is the joke.
+
+  why it sold: people came for a fight every couple has had, and the tea was already in the room when they got there.
+
+  nobody asks a cartoon if it's real. they ask what happens next.
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: видео не смотрели; цифры — со слов автора
+source_url: https://x.com/0xZasti/status/2111950223807479880
+duplicates_of: []

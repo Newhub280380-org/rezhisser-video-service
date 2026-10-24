@@ -1,0 +1,45 @@
+id: 205_brand_logo_balloons_over_night_city_nb_then_veo3
+source_file: 205_brand_logo_balloons_over_night_city_nb_then_veo3.md
+title: 'Логотип бренда зеркальными шарами над вечерним городом: Nano Banana (фото, [ваш бренд]) → Veo 3 (статичная камера, шары колышутся, неон отражается)'
+intent_tags:
+- product_ad
+- beauty_ad
+use_when: 'Логотип бренда зеркальными шарами над вечерним городом: Nano Banana (фото, [ваш бренд]) → Veo 3 (статичная камера, шары колышутся, неон отражается)'
+inputs:
+- логотип
+steps:
+- n: 1
+  action: '**Nano Banana** (у автора через Syntx): промпт 1, вместо [ваш бренд] — название (например, BEAUTYARTS).'
+  tool:
+  - Nano Banana
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: '**Veo 3** (Syntx → Видео будущего → VEO3): загрузить фото, промпт 2.'
+  tool:
+  - Veo
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  Улица современного города высотные здания, вечерний свет, огни витрин, светофоры. В воздухе парят стильные большие серебряные воздушные шары в форме логотипа из слова [ваш бренд] сделанные как надувные зеркальные шары, отражающие городские огни. Рядом еще 3 круглых зеркальных шара разного размера красиво дополняют композицию. Шары выглядят реалистично, блестят, немного колышутся в воздухе. Атмосфера стильного урбанистического кадра, фотореализм.
+- "A static camera shot at night on a bustling city street. Metallic logo-shaped balloons gently sway and expand with the breeze, their glossy surfaces reflecting neon signs, shop windows, and passing car\
+  \ headlights. The balloons shimmer with colorful highlights, moving naturally as if filled with helium. Behind them, tall buildings glow with vibrant advertisements and city lights. Occasional silhouettes\
+  \ of pedestrians and cars create motion in the background, enhancing the realism of the lively night atmosphere. The mood is cinematic, with rich contrast, vivid neon reflections, and a slightly dreamy\
+  \ tone.\n\n✨ Результат: Твой бренд парит на фоне вечернего города, отражая в себе все огни мегаполиса.\n\n\U0001F4F1 НейроДизайн\n  \n    Please open Telegram to view this post\n    VIEW IN TELEGRAM"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: нет (Syntx-бот платный, не запускал; шаги повторяются в любом сервисе с Nano Banana и Veo 3)
+source_url: https://t.me/dizain/1719
+duplicates_of: []

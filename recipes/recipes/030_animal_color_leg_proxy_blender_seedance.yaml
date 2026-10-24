@@ -1,0 +1,90 @@
+id: 030_animal_color_leg_proxy_blender_seedance
+source_file: 30_animal_color_leg_proxy_blender_seedance.md
+title: 'Оживить животное с правильной походкой: 3D-модель → «манекен» с цветными лапами в Blender → Seedance по стартовому кадру'
+intent_tags:
+- animal
+- object_alive
+- motion_transfer
+use_when: 'Оживить животное с правильной походкой: 3D-модель → «манекен» с цветными лапами в Blender → Seedance по стартовому кадру'
+inputs:
+- видео-референс (движение/клип)
+- стартовый кадр
+steps:
+- n: 1
+  action: 'Референс-лист животного (пример — пятнистая гиена): промпт целиком в посте, начало: «Character reference sheet of a spotted hyena, two orthographic views on one image: LEFT: strict side profile…,
+    RIGHT: strict front view. Same scale in both views…» (картинка → 3D-модель Meshy, по имени файла).'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Blender (запуск headless через агента-кодера; автор раньше решил эту задачу для волка): скрипт make_proxy.py красит 4 ноги по весам костей — front-left BLUE, back-left MAGENTA, front-right YELLOW,
+    back-right ORANGE — при сохранённой текстуре тела; две ортокамеры (вид на левый бок и вид спереди), выход seedance_start.png 1920×1080: слева вид сбоку 1280 px | чёрный разделитель | вид спереди 640
+    px, зелёный фон.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Видео-промпт (Seedance omni 1.1), дословно со сохранённого текста поста:
+
+    [PROMPT]'
+  tool:
+  - Seedance
+  mode: omni
+  prompt:
+  - |-
+    PROMPT for video (i used omni 1.1)
+
+    Use the uploaded image as the EXACT first frame. Do not redesign, recolor, restyle, zoom or reframe anything.
+
+    Split-screen technical reference video of the same hyena filmed by two locked-off orthographic cameras at the same time.
+    Left panel: strict side view. Right panel: strict front view. Both panels show the exact same moment, perfectly synchronized.
+
+    MOTION: the hyena WALKS in place, like on a treadmill. Slow calm natural walk, not a trot.
+    Only ONE leg is in the air at any moment, the other three paws stay on the ground.
+    Leg order, repeating: MAGENTA PINK, then BLUE, then ORANGE, then YELLOW.
+    The body stays in the same spot, never moves forward, never turns. Gentle head bob, shoulders and hips sway slightly with each step, tail hangs and sways gently.
+
+    LEG COLORS — the most important rule. Each leg has ONE fixed color for the whole video:
+    front-left = BLUE, back-left = MAGENTA PINK, front-right = YELLOW, back-right = ORANGE.
+    Every color is on exactly one leg. There are never two blue legs, never two pink legs, never two orange legs, never two yellow legs.
+    Pink stays pink, it never turns red. Orange stays orange.
+
+    LEFT PANEL (side view, hyena faces left): we see the hyena's left side.
+    Near legs (closer to us): BLUE front leg and MAGENTA PINK back leg.
+    Far legs (behind them): YELLOW front leg and ORANGE back leg.
+    When the legs cross, the far legs pass behind the near legs and keep their own colors.
+
+    RIGHT PANEL (front view, hyena faces us): on the viewer's right side BLUE front leg with MAGENTA PINK back leg behind it;
+    on the viewer's left side YELLOW front leg with ORANGE back leg behind it.
+
+    CAMERA: never moves. No zoom, no pan, no shake, no cuts. Flat solid green background and the thin black vertical divider line stay unchanged.
+    Fur texture on body, head and tail stays the same. Same scale, same lighting, same hyena. Mouth closed. No text, no new objects.
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: Полный текст поста целиком лежит в raw/x/maxt3chno_2108536985618952448.txt (там же промпт для агента-кодера).
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim: []
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: Цветные лапы дают модели явную информацию, какая нога какая → правильная походка и вес; два вида на одном стартовом кадре.
+confidence: B
+prompt_completeness: partial
+notes: Скрипты make_proxy.py (автор не выложил).
+source_url: https://x.com/maxt3chno/status/2108536985618952448
+duplicates_of: []

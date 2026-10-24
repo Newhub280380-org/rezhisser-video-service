@@ -1,0 +1,103 @@
+id: 097_pixeldojo_frame_one_reference_consistency_seedance
+source_file: 97_pixeldojo_frame_one_reference_consistency_seedance.md
+title: 'PixelDojo «Sinkhole/Glacier»: первый кадр как референс для всех остальных → Seedance 2.5 → Seed Audio (один герой-объект во всех планах)'
+intent_tags:
+- vfx_effect
+use_when: Как удержать один и тот же объект (оранжевый внедорожник) в 7 разных планах. Генерируется «кадр номер один» (Qwen Image 2.1, 2K, 9:16), затем он прикладывается как image 1 ко всем остальным кадрам,
+  и в каждом промпте заново перечисляются детали героя (форма, цвет, каркас, фары, шины). Потом каждый к
+inputs:
+- стартовый кадр
+- аудио/голос
+steps:
+- n: 1
+  action: 'Qwen Image 2.1 (в варианте Glacier — Nano Banana 2.1), 2K, 9:16: кадр 1 с героем.'
+  tool:
+  - Nano Banana
+  - Qwen
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: 1 с
+  aspect: '9:16'
+- n: 2
+  action: 'Остальные 6 кадров: кадр 1 как image 1 + «Use the orange off-road rally truck from image 1 (same shape, color, roll cage, roof lights, knobby tires). New shot…».'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Seedance 2.5: каждый кадр → клип, «Sound effects only, no music, no speech».'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: 'Seed Audio: тайко, бас, струнные.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 5
+  action: Монтаж.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  --- https://x.com/PixelDojoAI/status/2113746868308263173 2026-10-23T21:38:19.000Z conv 2113746868308263173
+  A road falls into the earth and one truck jumps it.
+  Same orange truck in all seven shots: frame one made in Qwen Image 2.1, then attached as the reference for the other six.
+  Full prompt + settings drop in ~2 hours. Bookmark this and follow so you catch it. https://t.co/8bu9aYM0j6
+
+  --- https://x.com/PixelDojoAI/status/2113747017738707127 2026-10-23T21:38:55.000Z conv 2113746868308263173
+  Recipe: Qwen Image 2.1, native 2K, 9:16, 1.5 cr per still. Frame one went back in as image 1 for the other six. Seedance 2.5 animated each at 1080p with native sound, 80 cr per 5 s take.
+
+  Qwen Image 2.1 is unlimited on every plan in Relax mode: https://t.co/gFIQfXcjNv
+
+  --- https://x.com/PixelDojoAI/status/2113777519753384367 2026-10-23T23:40:07.000Z conv 2113746868308263173
+  Here's exactly how we made Sinkhole: one orange truck, seven shots, and it stays the same truck the whole way. https://t.co/UbkVdwAcoV
+
+  --- https://x.com/PixelDojoAI/status/2113777608102134101 2026-10-23T23:40:28.000Z conv 2113746868308263173
+  Step 1: frame one in Qwen Image 2.1, native 2K, 9:16. "An invented red-rock desert highway is collapsing into a colossal sinkhole... one boxy bright orange off-road rally truck... races along the crumbling edge" https://t.co/3wIbbnWPXH
+
+  --- https://x.com/PixelDojoAI/status/2113777712422683012 2026-10-23T23:40:53.000Z conv 2113746868308263173
+  Step 2: attach frame one as image 1 for every other still: "Use the orange off-road rally truck from image 1 (same shape, color, roll cage, roof lights, knobby tires). New shot..." Qwen Image 2.1 takes up to 10 references. https://t.co/35J3ooXpqv
+
+  --- https://x.com/PixelDojoAI/status/2113777802554262012 2026-10-23T23:41:14.000Z conv 2113746868308263173
+  Step 3: Seedance 2.5 animates each still at 1080p with native sound: "The orange truck in the image (same exact shape and color) flies through the air over the dark pit... Sound effects only, no music, no speech" https://t.co/p91u9VgNxG
+
+  --- https://x.com/PixelDojoAI/status/2113777869684080798 2026-10-23T23:41:30.000Z conv 2113746868308263173
+  Step 4: score from Seed Audio: "pounding taiko drums, deep distorted bass pulses, rising string ostinato, big braams on the downbeats" https://t.co/XwMWKLDyBN
+
+  --- https://x.com/PixelDojoAI/status/2113777913535336786 2026-10-23T23:41:41.000Z conv 2113746868308263173
+  Cost: 7 stills 10.5 credits, 9 clip takes 720, music 3. Qwen Image 2.1 itself is unlimited on every Pixel Dojo plan in Relax mode.
+
+  --- https://x.com/PixelDojoAI/status/2113777956820586942 2026-10-23T23:41:51.000Z conv 2113746868308263173
+  Lesson: repeat the hero's details in every reference prompt, or each still invents a new truck.
+
+  --- https://x.com/PixelDojoAI/status/2113778006598541642 2026-10-23T23:42:03.000Z conv 2113746868308263173
+  Qwen Image 2.1: https://t.co/gFIQfXbLXX
+  Seedance 2.5: https://t.co/PVg46He1xM
+- |-
+  --- https://x.com/PixelDojoAI/status/2113727866445983880 2026-10-23T20:22:49.000Z conv 2113384442706465233
+  @Awesome_O_AI The trick was making frame one first, then feeding it back into Nano Banana 2.1 as the reference for the other six stills. Seedance 2.5 animates from each still, so any drift in the stills carries straight into the video.
+output:
+  format: mp4
+  resolution: 1080p
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: полные (несокращённые) тексты промптов; сайт PixelDojo «how-its-made» для Sinkhole не открывал
+source_url: https://x.com/PixelDojoAI/status/2113746868308263173
+duplicates_of: []

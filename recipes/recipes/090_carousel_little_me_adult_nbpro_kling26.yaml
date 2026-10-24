@@ -1,0 +1,71 @@
+id: 090_carousel_little_me_adult_nbpro_kling26
+source_file: 90_carousel_little_me_adult_nbpro_kling26.md
+title: 'Карусель «я маленький и я взрослый»: Nano Banana Pro → Kling 2.6 ×2 → CapCut'
+intent_tags:
+- client_in_clip
+- seamless_series
+use_when: 'Ностальгический рилс: человек сидит на советской карусели во дворе зимой, фон крутится. Делается дважды — со взрослым фото и с детским фото, затем склейка: «тогда и сейчас».'
+inputs:
+- фото лица/портрет человека
+steps:
+- n: 1
+  action: 'Qreator → генератор изображений → Nano Banana Pro: своё фото + промпт зимнего советского двора с каруселью.'
+  tool:
+  - Nano Banana
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Kling 2.6: картинка из шага 1 + промпт вращения фона.'
+  tool:
+  - Kling
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: previous_step_output
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: Повторить шаги 1–2 с детским фото.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: 1–2 с
+  aspect: unknown
+- n: 4
+  action: 'CapCut: склеить два ролика.'
+  tool:
+  - CapCut
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "=== https://t.me/video_ai_prompt/143 2026-02-09T12:43:37+00:00\nСоздаем карусель с маленьким собой и взрослым\n\n1. Переходим на сайт Qreator, выбираем Генератор изображений, Nano Banana Pro, загружаем\
+  \ свое фото, которая нам нужна. Пишем этот промпт:\n\n Winter street scene in the courtyard of typical Soviet/post-Soviet high-rise buildings. In the foreground in the center is a guy portrait of a guy\
+  \ from photo 1, sitting on a metal children's carousel/twister with green painted handrails (the paint is worn in places, rust is visible). The frame was shot at chest level, a light wide-angle effect;\
+  \ the horizontal and diagonal handrails of the carousel cross the bottom of the frame and create a frame.\nThe guy is wearing a simple beige jacket and a plaid scarf, which suits the current circumstances.\n\
+  \n2. Загружаем готовое фото и выбираем Kling 2.6 и пишем промпт:\n\n The character must be on the carousel on the playground, sitting or at the top of the turning wheel. The camera is aimed directly at\
+  \ the character: the face and part of the torso are visible. The character remains static relative to the camera and looks directly into the lens without turning 360 degrees.\nThe background should rotate\
+  \ quickly in a circle, creating the illusion of high speed movement. The background rotation is accentuated by a slight dynamic blur, enhancing the feeling of movement and the transience of time. It's\
+  \ evening or dusk, with soft, subdued lights and an atmosphere of mild nostalgia. The overall style is cinematic\nThe character must keep all the physical characteristics of the original image: face,\
+  \ proportions, facial expressions, clothes, hairstyle — unchanged. Only the surroundings and decorations around it change.\nHis expression is serious, calm, and slightly melancholic. The gaze is focused\
+  \ and directed directly at the camera. Her hair flutters slightly. Style/quality: the feel of a film photograph or an old digital one — light graininess, slightly faded colors, moderately low contrast,\
+  \ soft sharpness. The depth of field is average: the subject is in focus, the background is slightly blurred. The composition is central, the mood is calm, cool, winter everyday life. on his neck, his\
+  \ hands are folded together and lie on his knees. Hair without a cap is dark brown, medium length, wavy/ loose. Keep the girl's facial features from photo 1 unchanged as much as possible.\nBackground:\
+  \ a snow-covered courtyard, smooth white snow without strong footprints. Behind them are panel/brick apartment buildings with balconies and windows, muted beige-gray tones. To the right, in the distance,\
+  \ there are elements of a playground (metal racks). There are bare trees without leaves. The sky is overcast, the light is soft and diffused.\n\nПовторяем тоже самое с детской фотографией и далее получившиеся\
+  \ видео сводим в CapCut.\n\n\U0001FA85 Подписаться\n  \n    Please open Telegram to view this post\n    VIEW IN TELEGRAM\n  \n\n  \n    Please open Telegram to view this post\n    VIEW IN TELEGRAM"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://t.me/video_ai_prompt/143
+duplicates_of: []

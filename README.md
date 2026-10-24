@@ -25,6 +25,7 @@ server-side allowlist and explains why.
 | --- | --- |
 | Web app at `/` and `/app/` (Russian, responsive, accessible) | ✅ Works without any external account. |
 | Rule-based director (`rule-based-v1`) | ✅ Deterministic, free, offline. Labelled as "по правилам, без ИИ". |
+| Recipe library (`recipes/`, 212 workflows) | ✅ `POST /api/director/recipes` picks a recipe and returns a dry-run plan. Live tool calls stay off until a per-job budget is set. |
 | Model router (auto or manual choice with a rationale) | ✅ Demo profiles by default. Paid profiles only if the operator configures them. |
 | Video without provider keys | ✅ Refused. `POST /api/jobs` returns `provider_not_configured` and the missing variable names. Nothing is stored as a successful render. |
 | Paid render via Replicate | 🔒 Real HTTP client. Locked until `VIDEO_PROVIDER=replicate`, `REPLICATE_API_TOKEN`, a model profile, beta access and a budget are set. Needs a session, a quote and confirmation. |
@@ -92,6 +93,7 @@ CI never needs any of them.
 | Payments | `YOOKASSA_SHOP_ID`, `YOOKASSA_SECRET_KEY`, `YOOKASSA_CURRENCIES`, `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`, `STRIPE_CURRENCIES`, `PRICES_JSON`, `PRO_VIDEOS_PER_PERIOD`, `STUDIO_VIDEOS_PER_PERIOD` |
 | E-mail (password reset) | `RESEND_API_KEY`, `MAIL_FROM` |
 | Legacy Replicate beta (optional) | `REPLICATE_API_TOKEN`, `VIDEO_PROVIDER`, `VIDEO_MODEL_PROFILES_JSON`, `PAID_GENERATION_ENABLED`, `BETA_ACCESS_KEY`, `PAID_DAILY_BUDGET_USD`, `PAID_DAILY_JOB_LIMIT`, `PAID_TOTAL_JOB_LIMIT` |
+| Recipe runner (optional live calls) | `RECIPE_DRY_RUN`, `RECIPE_JOB_BUDGET_USD`, `RECIPE_JOB_BUDGET_CREDITS`, `RECIPE_STEP_HOLD_USD` |
 | Owl Browser automation (optional) | `OWL_BROWSER_URL`, `OWL_BROWSER_TOKEN`, `OWL_BROWSER_API_PREFIX`, `OWL_BROWSER_ALLOW_HTTP`, `OWL_BROWSER_PROXIES_JSON`, `OWL_BROWSER_MAX_CONCURRENT` |
 | Desktop app (Electron only) | `REZHISSER_URL`, `REZHISSER_START_PATH` |
 
@@ -128,6 +130,36 @@ supported now, and any other value makes the server refuse to start, so a
 typo can never silently enable a paid API. Adding one would need its own
 provider credentials, a spend cap, tests, and a UI label showing when it was
 used.
+
+### Библиотека рецептов
+
+Режиссёр сам выбирает рецепт и собирает план. Клиент не проходит шаги руками:
+один запрос `POST /api/director/recipes` с текстом (по-русски) и списком
+файлов (`{ "request": "...", "files": [{ "name": "face.jpg", "kind": "face" }] }`).
+Тот же текст можно передать полем `request` в `POST /api/director/plan`.
+
+Сервис читает `recipes/recipes/*.yaml` (212 рецептов: намерение, `use_when`,
+входы, шаги с дословным промптом). По тексту запроса ставятся теги намерения,
+рецепт ранжируется по совпадению тегов и формулировки `use_when`, полноте
+промпта и уверенности. В ответе — выбранный рецепт, причина, запасные варианты
+и вопросы, если не хватает файла. Промпт не переписывается: файл клиента
+подставляется только в уже существующий слот (`Image 1`, `@Image1`, `@Image 1`,
+`[product]` и похожие). Кадры передаются по полю шага: предыдущий результат или
+реальный последний кадр предыдущего ролика (локальный ffmpeg, фиксированные
+аргументы, без оболочки).
+
+По умолчанию это сухой прогон: в плане уже разрешённые промпты и шаги, но
+платные API не вызываются. Чтобы разрешить живые вызовы, нужно одновременно
+`RECIPE_DRY_RUN=false` и явный потолок на задачу — `RECIPE_JOB_BUDGET_USD`
+и/или `RECIPE_JOB_BUDGET_CREDITS` (те же поля можно передать в запросе, они не
+поднимут серверный потолок). В запросе дополнительно `"dryRun": false`. Без
+потолка живой запуск отвечает `budget_required` и ничего не вызывает. Каждый
+платный шаг резервирует локальный холд `RECIPE_STEP_HOLD_USD` (по умолчанию 1) —
+это предохранитель, не цена провайдера. Секреты в репозиторий не кладутся.
+
+Новый рецепт: положите исходные разборы `NNN_slug.md` в каталог и выполните
+`python3 recipes/build.py <каталог-md>`. Скрипт перезапишет `recipes/recipes/*.yaml`,
+`catalog.json`, `router.md`, `tools.md` и `duplicates.md`.
 
 ### Model routing
 

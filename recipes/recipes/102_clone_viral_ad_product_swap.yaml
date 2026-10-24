@@ -1,0 +1,74 @@
+id: 102_clone_viral_ad_product_swap
+source_file: 102_clone_viral_ad_product_swap.md
+title: 'Клон вирусной рекламы под свой товар: видео-правка с заменой товара + проверка утечки старого'
+intent_tags:
+- product_ad
+- client_in_clip
+- meme
+use_when: 'Два варианта: (1) clone — правка исходного ролика: все планы, люди, руки, тайминг те же, товар полностью заменён; (2) remake — новый вертикальный дубль на Seedance 2.0 Reference с исходником
+  и фото товара, новая реплика в том же ритме. В обоих в промпте явно: «nothing from the old product, its colou'
+inputs:
+- фото товара/продукта
+- логотип
+steps:
+- n: 1
+  action: Посмотреть исходный ролик и расписать планы.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: "Clone: видео-правка с фото товара как референсом (замена товара во всех планах) → хук, карточка отзыва, end card с кнопкой.\n   Remake: Seedance 2.0 Reference: исходник + фото товара, структура\
+    \ та же, новая реплика."
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: Сверить с фото товара; при утечке — один пересъём с более жёсткой формулировкой.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  ##### clone-viral-ad | Clone a viral ad for your product
+  What you provide
+  The ad to clone (video)
+  Your product photo (image)
+  Product name and one line about it (text)
+  What Sensei does
+  The ad watched shot by shot
+  Your product swapped into every shot
+  Hook, review card and end card added
+  The brief Sensei follows
+  Clone the ad in {{viral-ad}} for the product in {{product-photo}} ({{product-name}}). Watch the ad first with pixeldojo_look and note every shot. Then use pixeldojo_video verb change on the ad with the product photo as the reference: keep every shot, the people, the hands, the setting and the timing exactly the same, and replace the original product completely with {{product-name}} (say in the prompt that nothing from the old product, its colour or its label may appear). pixeldojo_look at the result against the product photo and make it again once if the old product leaks in. Then finish it with pixeldojo_overlay: a hook in the first seconds, a short review card, and an end card with your headline and a Shop now button in your brand colour. Never copy the original ad's brand, logo or words.
+- |-
+  ##### ad-remake | Remake an ad for your product
+  What you provide
+  The ad to remake (video)
+  Your product photo (image)
+  Product name and one line about it (text)
+  What Sensei does
+  The reference ad watched and broken into shots
+  One vertical take with your product swapped in
+  Checked against your product photo, retaken once if the old product leaks in
+  The brief Sensei follows
+  Remake the ad in {{reference-ad}} for the product in {{product-photo}} ({{product-name}}). Watch the reference first with pixeldojo_look and note its shot structure, pacing, framing, setting and the presenter's energy. Then make one vertical take on Seedance 2.0 Reference with the reference clip and the product photo: keep the structure, replace the product completely (say in the prompt that nothing from the original product, colour or label may appear), and give the presenter a new line in the same rhythm about {{product-name}}. Review the take against the product photo; if the old product or its colours leak in, make it again once with the replacement stated more firmly. Never copy the original ad's brand, logo or words.
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B/C
+prompt_completeness: complete
+notes: агент Sensei — аккаунт PixelDojo
+source_url: https://pixeldojo.ai/recipes/clone-viral-ad
+duplicates_of: []

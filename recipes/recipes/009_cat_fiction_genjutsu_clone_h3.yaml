@@ -1,0 +1,73 @@
+id: 009_cat_fiction_genjutsu_clone_h3
+source_file: 09_cat_fiction_genjutsu_clone_h3.md
+title: 'Клон «Genjutsu»-спама из TikTok локально: вирусный танец → персонаж/животное, покадрово через H3 + Qwen 2.1'
+intent_tags:
+- client_in_clip
+- seamless_series
+- meme
+- animal
+use_when: 'Клон «Genjutsu»-спама из TikTok локально: вирусный танец → персонаж/животное, покадрово через H3 + Qwen 2.1'
+inputs:
+- unknown
+steps:
+- n: 1
+  action: Берёшь вирусное видео (TikTok/YouTube); автор «навайбкодил» ноду, которая скачивает ролик и готовит как референс с мини-таймлайном (чтобы не грузить весь файл).
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Видео ОБЯЗАТЕЛЬНО загружать в 24 fps (можно принудительно в загрузчике), иначе рассинхрон и «всякие странности».
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Сначала один кадр-направитель: стандартный Qwen 2.1 edit template — заменить персонажа на кадре.'
+  tool:
+  - Qwen
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: Дальше шаблон ref2va по умолчанию + LoRA akatz-ai MiniMax-H3-Character-Swap; 352×640, 8 шагов с minimax_h3_ref2v_turbo_8step LoRA; ~250 с на шот на 4090.
+  tool:
+  - MiniMax H3
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: 250 с
+  aspect: unknown
+- n: 5
+  action: 'Работать шот за шотом: несколько шотов в одном прогоне «работали очень плохо».'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 6
+  action: Склейка вручную.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim: []
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: 'Одиночный кадр-направитель + короткие шоты + строгие 24 fps. Автор отмечает: точность передачи исполнения выше любых методов, что пробовал, но ниже Seedance.'
+confidence: B
+prompt_completeness: gaps
+notes: Промпт не опубликован; ноду автор не выложил.
+source_url: https://reddit.com/r/StableDiffusion/comments/1x6saau/
+duplicates_of: []

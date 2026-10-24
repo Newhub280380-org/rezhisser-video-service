@@ -1,0 +1,45 @@
+id: 074_face_stretch_rubber_video_edit
+source_file: 74_face_stretch_rubber_video_edit.md
+title: '# 74 — Резиновое лицо: своё видео «растягиваю щёки» → Seedance 2.0 превращает жест в мультяшное растяжение, речь сохраняется'
+intent_tags:
+- talking_head
+- vfx_effect
+- motion_transfer
+use_when: 'V2V-эффект на говорящем видео (можно в разговорном формате): лицо растягивается за руками и пружинит обратно, губы остаются синхронными с речью.'
+inputs:
+- unknown
+steps:
+- n: 1
+  action: Снять видео с жестом растягивания лица.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Seedance 2.0: видео + промпт.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "Инструкция:\n1. Переходим в VeoSeeBot \n2. Нейросеть Seedance 2.0\n3. Вставляем свое видео, где вы делаете вид, что растягиваете лицо (можно и в разговорном формате)\nИ также такой промпт:\nTurn the\
+  \ person's pretend face-stretching gesture into a real, exaggerated rubbery cartoon effect — smooth and clean, with no glitching, flickering, or warping artifacts. The moment their hands touch their cheeks,\
+  \ the face skin begins stretching outward, following the hand movement exactly and in sync from the video. As the hands pull outward, ALL facial features stretch elastically along with the skin — the\
+  \ eyes widen and stretch sideways, the mouth stretches wide, and the cheeks pull far out to the sides like elastic rubber, tracking the hand motion the whole time. At the end, when the hands let go and\
+  \ release the cheeks, the stretched face springs and shrinks smoothly back to its normal, natural shape, all features returning to normal proportions. Keep the exact same face, identity, skin tone, lighting,\
+  \ background, and camera framing throughout. Keep the mouth movements matched to the original speech"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://t.me/reels_by_alsi/766
+duplicates_of: []

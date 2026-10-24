@@ -1,0 +1,56 @@
+id: 069_family_adults_to_kids_daisy_field_orbit
+source_file: 69_family_adults_to_kids_daisy_field_orbit.md
+title: '# 69 — Семья: 4 фото (взрослые и дети) + видео-референс → Seedance 2.0, одна дуга крана 15 с, за спиной взрослые «превращаются» в детей'
+intent_tags:
+- client_in_clip
+- family_photos
+- motion_transfer
+use_when: 'Подмена героя на окклюзии камерой: камера проходит за спиной героя и выходит уже с ребёнком на месте взрослого. Готовый трёхфазный промпт.'
+inputs:
+- фото лица/портрет человека
+- видео-референс (движение/клип)
+steps:
+- n: 1
+  action: '4 фото: взрослая девушка, девочка, взрослый мужчина, мальчик (+ видео-референс автора).'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Seedance 2.0: всё в референсы, промпт ниже (теги @BOY, @GIRL и т.д.).'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "\U0001F520\U0001F520\U0001F520\U0001F520\U0001F520\U0001F520\U0001F520  \n\U0001F520  \U0001F520\U0001F520\U0001F520\U0001F520\U0001F520\U0001F520\U0001F520 \U0001F90D\n\nИнструкция:\n1. Переходим в\
+  \ VeoSeeBot \n2. Seedance 2.0 \nВставляем в разделе для референсов 4 фото (взрослая девушка, ребенок девочка, взрослый мужчина, ребенок мальчик) и также данное готовое видео\nПишем такой промпт:\nCinematic\
+  \ one-take long shot, 15 seconds, vast windy daisy field beneath a bright blue summer sky with large soft clouds. Natural daylight, soft wind through flowers and fabric, atmosphere calm, nostalgic, poetic,\
+  \ airy, visually elegant.\n\nOpening frame @Main image : A  @BOY Image  young man wearing a loose soft-blue Y2K linen shirt over a white tee and a @GIRL IMAGE  young woman wearing a flowing soft-blue\
+  \ Y2K summer dress stand facing each other approximately two meters apart, posture calm and graceful. The man holds a bouquet of white daisies behind his back.\n\nCamera movement is divided into three\
+  \ continuous phases, single continuous motorized crane arc, perfectly smooth and constant velocity from 0 to 15 seconds, no acceleration, no deceleration, no shake, no jitter, as if mounted on a precision\
+  \ robotic arm on a frictionless track, rightward crane-arc orbital:\n\nPhase One (0–5s): Camera begins at frontal waist height with both figures fully framed. It slowly arcs rightward through their side\
+  \ profile and comes to rest directly behind the woman. Her flowing soft-blue dress naturally and completely fills the entire frame. Foreground daisies blur softly around the edges.\n\nPhase Two (5–10s):\
+  \ Camera continues rightward arc emerging from behind the woman. As the frame opens, the man's position is now occupied by a  @BOY KID Image 3 6-year-old boy wearing the same soft-blue shirt, holding\
+  \ a bouquet of white daisies in front of him, maintaining the same standing position and eye-line toward the woman. Without pause the camera continues its rightward arc while slowly lowering below the\
+  \ boy's waist into a low-angle upward perspective pushing close toward his back. The boy's soft-blue shoulders and the back of his head naturally fill the entire frame with wide-angle distortion.\n\n\
+  Phase Three (10–15s): Camera continues rightward arc emerging from behind the boy. As the frame opens, the woman's position is now occupied by a  @GIRL KID image  6-year-old girl wearing white headband\
+  \ and the same soft-blue dress, the same height as the boy. The boy now holds a single white daisy. Both children stand facing each other with the same elegant posture. Camera settles into a frontal composition\
+  \ of both children then performs a slow gentle pull-back, ending wide and open.\n\nVisual Style: 35mm wide-angle lens, shallow depth of field, Kodak film grain texture, Fujifilm overexposed 35mm slide-film\
+  \ look, bright late-afternoon sunlight, soft atmospheric haze, powder-blue and white summer palette, pale sage-green field tones, painterly blue sky with cream-white clouds, medium contrast, natural highlight\
+  \ roll-off, soft cinematic bloom, natural lens flare, Ambient Sound: Soft wind through flowers\n\nAmbient sound: soft breeze\n\nКак генерировать коллажи для своих персонажей, рассказывала в этом видео"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: «данное готовое видео» (референс движения) — видео в посте, не скачивал
+source_url: https://t.me/reels_by_alsi/674
+duplicates_of: []

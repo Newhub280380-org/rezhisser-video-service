@@ -1,0 +1,68 @@
+id: 047_qwen21_face_head_swap_images
+source_file: 47_qwen21_face_head_swap_images.md
+title: Подмена лица/головы на фото в Qwen Image 2.1 Edit (+ BFS-LoRA)
+intent_tags:
+- beauty_ad
+- client_in_clip
+use_when: Подмена лица/головы на фото в Qwen Image 2.1 Edit (+ BFS-LoRA)
+inputs:
+- unknown
+steps:
+- n: 1
+  action: 'Reddit 1wmuasu (промпт):
+
+    [PROMPT]'
+  tool: unknown
+  mode: unknown
+  prompt:
+  - "To get the workflow, search Comfy's templates for: qwen image 2.1\n\nI used the Qwen Image 2.1: Image Edit workflow. No masking, just the images and a prompt.\n\n\n\nPrompt:\n\nFace swap from <image2>\
+    \ onto <image1>.\n\nSame head size, same hair, same pose, same crop.\n\nFit the new face inside the original face area.\n\nMatch lighting and skin from <image1>., blend the new face into image1 to make\
+    \ it look natural.\n\nenhance the details of the image.\n\nclear focus and sharp focus on the whole image.\n\n\n\nThe original images are on the left. Top is <image1>, bottom is <image2>.\n\nThe middle\
+    \ is the face swap output. You can also swap the whole head(face and hair). Just change face to head in the prompt. That's the image on the right.\n\nYou can take the output and work with it changing\
+    \ outfits, pose, view, location, etc.  \n\nI used a worst case scenario for the swap, a young woman and an old man. If it can make things like this look decent, it will work well for 'normal' usage.\
+    \ \U0001F604\n\nhttps://preview.redd.it/7cg63xd4tyqh1.png?width=5725&format=png&auto=webp&s=829ee851bd830362b72d631266e9a2e6b6f7aabb"
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'BFS (TeksEdge): LoRA добавляет head-swap в Qwen Image 2.1; два изображения (сцена/тело и референс лица), V1.1 — меньше «пластиковой кожи»:
+
+    [PROMPT]'
+  tool:
+  - Qwen
+  mode: unknown
+  prompt:
+  - |-
+    Put yourself in a new scene. Run it locally. Keep more skin detail.
+
+    BFS adds head swapping to Qwen Image 2.1 through ComfyUI.
+
+    Supply two images
+    1) The scene/body you want to keep.
+    2) A reference photo of yourself.
+
+    The workflow aims to transfer your identity while preserving the scene’s pose, lighting and background.
+
+    Think personalized posters, character mockups and creative portraits.
+
+    V1.1 targets that overly smooth, “plastic skin” look. The creator reports better detail across five test pairs, with some tradeoff in expression fidelity.
+
+    LoRA and ComfyUI workflow available now. Requires the matching base model, text encoder and VAE.
+
+    Creator-tested; results vary by image.
+
+    Link in ALT.
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim: []
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: Фраза «Same head size, same hair, same pose, same crop» + подгонка света.
+confidence: B
+prompt_completeness: complete
+notes: Файлы LoRA.
+source_url: https://preview.redd.it/7cg63xd4tyqh1.png?width=5725&format=png&auto=webp&s=829ee851bd830362b72d631266e9a2e6b6f7aabb
+duplicates_of: []

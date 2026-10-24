@@ -1,0 +1,57 @@
+id: 080_infinitetalk_v2v_lipsync_comfyui_free
+source_file: 80_infinitetalk_v2v_lipsync_comfyui_free.md
+title: '# 80 — Бесплатно и локально: перепеть/переозвучить готовое видео — InfiniteTalk V2V (Wan 2.1) в ComfyUI по новой аудиодорожке'
+intent_tags:
+- talking_head
+- motion_transfer
+use_when: '# 80 — Бесплатно и локально: перепеть/переозвучить готовое видео — InfiniteTalk V2V (Wan 2.1) в ComfyUI по новой аудиодорожке'
+inputs:
+- видео-референс (движение/клип)
+- аудио/голос
+steps:
+- n: 1
+  action: ComfyUI + ComfyUI Manager.
+  tool:
+  - ComfyUI
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Workflow автора: https://github.com/bluespork/InfiniteTalk-ComfyUI-workflows/blob/main/InfiniteTalk-V2V.json (основа — kijai: ComfyUI-WanVideoWrapper/example_workflows/wanvideo_InfiniteTalk_V2V_example_02.json).'
+  tool:
+  - ComfyUI
+  mode: V2V
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Модели (из описания): Wan14Bi2vFusioniX.safetensors; Wan2_1-InfiniteTalk-Single_fp8_e4m3fn_scaled_KJ; wan_2.1_vae; clip_vision_h; MelBandRoformer_fp16 (отделяет голос от музыки); umt5-xxl-enc-bf16.'
+  tool: unknown
+  mode: i2v
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: 'На входе: исходное видео + аудио с новой речью (например, из ElevenLabs) → на выходе тот же ролик с новыми губами/мимикой.'
+  tool:
+  - ElevenLabs
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim: []
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: gaps
+notes: ничего (нужна видеокарта; на нашем боксе не запускал)
+source_url: https://www.youtube.com/watch?v=LR4lBimS7O4
+duplicates_of: []

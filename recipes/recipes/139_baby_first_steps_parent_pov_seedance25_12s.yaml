@@ -1,0 +1,149 @@
+id: 139_baby_first_steps_parent_pov_seedance25_12s
+source_file: 139_baby_first_steps_parent_pov_seedance25_12s.md
+title: 'Первые шаги ребёнка от лица родителя: фото папы + фото ребёнка → Seedance 2.5 12 с'
+intent_tags:
+- pov_one_take
+use_when: 'Один план 12 с, 16:9, POV от первого лица родителя, без музыки: @image1 — ребёнок (лицо, возраст, одежда из фото), второе фото — родитель; первые шаги малыша к камере.'
+inputs:
+- unknown
+steps:
+- n: 1
+  action: Фото (см. пост) в хорошем качестве.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Seedance 2.5 с параметрами из поста (длительность, формат).
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: 5 с
+  aspect: unknown
+- n: 3
+  action: 'Фото + промпт из комментария → генерация; звук — по посту (часть шаблонов: без звука, трек добавить в редакторе).'
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "=== https://t.me/nercpa/214 2026-09-15T08:08:47+00:00\n\U0001F476 Первые шаги\n\n1. Заходите в бота @neyrosetkabot\n2. Выбираете фото папы в хорошем качестве\n3.  Выбираете фото ребенка в хорошем качестве\n\
+  4. Выбираете режим Видео - Seedance 2.5 (12 сек) и отправляете ваше фото вместе с текстом  из комментариев\n\nПРОМПТ В КОММЕНТАРИЯХ \n⬇️⬇️⬇️\n\n⚡️Генерация в один клик \n\n#видео #дети\n  \n    Please\
+  \ open Telegram to view this post\n    VIEW IN TELEGRAM"
+- |-
+  ### comments nercpa/214
+  --- Нейросетка |Промты | Обновления Chat
+  BABY'S FIRST STEPS — PARENT'S POV
+  One continuous shot, 12 seconds, 16:9, first-person POV, hyper-realistic
+  live-action quality. No music.
+
+  INPUTS — TWO IMAGES
+
+  @image1 — THE CHILD. The sole reference for the baby: exact face, head
+  shape, eye shape and colour, skin tone, hair colour and amount, build and
+  apparent age. Take their clothing from the photo as well. Preserve their
+  gender exactly as shown.
+
+  @image2 — THE OTHER PARENT. The sole reference for the adult who appears in
+  frame: exact face, facial structure, skin tone, hair colour, length and
+  texture, facial hair as shown, build and apparent age, plus their outfit
+  from the photo. Preserve their gender exactly as shown — male or female,
+  whatever the photo shows.
+
+  Take nothing of either reference's background, pose or lighting. Both stay
+  identical for the whole shot — no face drift, no wardrobe change.
+
+  CAMERA / PERSPECTIVE
+
+  The camera is the eyes of the parent holding the camera position — the
+  child's other parent. They kneel on the floor, lens at roughly 90–100 cm,
+  kneeling height. Straight-line wide-angle, about 24mm equivalent — strictly
+  no fisheye, no GoPro distortion, no barrel warping. Natural head movement
+  and breathing sway, a slight forward lean at the emotional peak. Their face
+  is never shown — only their outstretched arms, forearms and sleeves enter
+  frame. One continuous take: no cuts, no transitions, no fades, no time
+  jumps.
+
+  SETTING
+
+  A warm, lived-in family living room in the evening. Cool blue twilight in
+  the window, warm lamplight inside. Soft flooring, low furniture, ordinary
+  domestic clutter. No country-specific or period-specific details — an
+  everyday home anywhere.
+
+  0–3s | THE RELEASE
+  The camera-parent kneels and slowly opens both arms toward the child. A few
+  steps ahead, the adult from @image2 crouches, warm and focused, steadying
+  the child from @image1 upright under the arms. The camera-parent murmurs
+  softly, encouraging, arms open. The child giggles.
+
+  The adult from @image2 carefully lets go and draws their hands back, staying
+  close, hands hovering just in case. The child's arms come out for balance,
+  little legs wobbling as they find their footing. The adult whispers,
+  delighted and breathless.
+
+  3–7s | THE FIRST STEPS
+  The child lifts one foot — the first step of their life — sets it down,
+  sways, and takes a second. A small, intensely focused face, brow furrowed
+  with effort. The camera-parent's hands tremble slightly with anticipation
+  and edge a little closer along the floor, coaxing.
+
+  The child pushes on — three or four more steps, swaying side to side,
+  tipping forward, a soft startled sound, then catching their balance again.
+  Closer and closer to the camera and the waiting hands. The adult behind
+  cheers them on quietly.
+
+  7–10s | THE LAST TWO STEPS
+  The final steps are almost a lunge. The child's mouth opens in a bright
+  open-mouthed laugh of pure delight, eyes fixed on the outstretched arms.
+
+  10–12s | THE CATCH
+  The child throws themselves into the waiting arms. The camera-parent
+  gathers them up and holds them tight, warm laughter close on the mic, the
+  child filling the frame. The adult from @image2 applauds and calls out
+  joyfully from behind. The shot ends on the embrace — no fade.
+
+  SPEECH
+
+  Soft, natural, improvised encouragement from both parents in the language of
+  the person generating this — short warm phrases, a called name, a cheer at
+  the end. Nothing scripted or performed.
+
+  SOUND
+
+  100% real ambient sound, absolutely no music: the child's babbling, bare
+  feet on the floor, rustling clothes, the parents' laughter and breathing, a
+  faint television in another room, a ticking clock, weather against the
+  window, the background hum of a quiet home.
+
+  STYLE
+
+  Hyperrealism. Photorealistic baby skin, the texture of soft clothing, the
+  faint shine of drool on the lip. Natural cinematic colour — cool blue
+  twilight outside against warm yellow light inside. Shallow but honest depth,
+  handheld human presence, no polish.
+
+  NEGATIVE
+
+  No subtitles, on-screen text or watermark. No music. No cuts, edits or
+  fades. No fisheye, GoPro look or lens distortion.
+  --- Нейросетка |Промты | Обновления Chat
+  The camera-parent's face
+  never appears. No face drift or identity change for either the child or the
+  adult. No gender change. No substituted clothing. No extra people.
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '16:9'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: превью-видео (медиа); бот @neyrosetkabot платный — у нас не запускалось; промпт годится для любой площадки с Seedance 2.5
+source_url: https://t.me/nercpa/214
+duplicates_of: []

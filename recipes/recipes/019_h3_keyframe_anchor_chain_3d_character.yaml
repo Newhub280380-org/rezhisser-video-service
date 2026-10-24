@@ -1,0 +1,57 @@
+id: 019_h3_keyframe_anchor_chain_3d_character
+source_file: 19_h3_keyframe_anchor_chain_3d_character.md
+title: 'Цепочка клипов без дрейфа: последний кадр предыдущего клипа (ffmpeg) как <Picture>-якорь, префикс «keyframe completion + reference generation»'
+intent_tags:
+- seamless_series
+use_when: 'Цепочка клипов без дрейфа: последний кадр предыдущего клипа (ffmpeg) как <Picture>-якорь, префикс «keyframe completion + reference generation»'
+inputs:
+- фото в полный рост
+- финальный кадр
+- аудио/голос
+steps:
+- n: 1
+  action: unknown (в источнике нет нумерованных шагов; см. prompts_verbatim)
+  tool:
+  - MiniMax H3
+  - Qwen
+  - ComfyUI
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  I've been messing with a specific problem for a personal project and wanted to write up what actually worked since I couldn't find much on it. The problem: I have a 3D CG character that needs to stay consistent while dropped into a flat, hand inked 2D world, across a handful of separate \~10 second clips that all need to cut together. Doing this with MiniMax H3's reference to video mode, fully local through ComfyUI.
+
+  Quick setup notes first. Running the ref2va checkpoint (`minimax_h3_ref2va_pruned_int8_convrot.safetensors`) with the `qwen3vl_32b_minimax_h3_nvfp4_awq` text encoder and the video/audio VAEs. I ended up driving it through ComfyUI's HTTP API directly instead of the UI's MediaLoader/PromptBuilder nodes, since those are drag and drop only and I couldn't find any documented way to feed them programmatically. Just wired plain LoadImage nodes into the ref\_images inputs instead, which is basically what ComfyUI's own stock r2v template does anyway.
+
+  Settings that worked for me: res\_multistep sampler, beta scheduler, 20 steps, denoise 1.0, and ref\_image\_size set to max instead of match. Max is genuinely slow, a full length 3 ref clip at \~11s took anywhere from 30 to 50 min on a 5090, but match noticeably tanks character and style fidelity. So I did all my iteration on cheap 5 second match mode test clips and only spent the slow max runs on prompts I already trusted. Resolution was 1344x768, roughly 1MP. I tried pushing past 2MP once and just OOM'd.
+
+  My first attempts just used plain reference generation for every shot, character ref plus a style ref, no continuity mechanism between clips. The character (a leaf mascot, glossy 3D CG look) kept drifting toward a generic rounded blob shape after a couple generations. I tried throwing negative prompts at it, "must never be simplified into a round ball or sphere," didn't help at all.
+
+  What actually fixed it was pulling the last frame of the previous clip with ffmpeg and feeding that back in as a picture reference for the next one, and switching the task type tag from "reference generation" to "keyframe completion + reference generation." Anchoring off a real generated frame instead of just the original character image made the shape rock solid across every following shot. Honestly this was the single biggest fix in the whole thing, way more than any wording change to the prompt itself.
+
+  One thing that follows from this: since the next shot depends on that last frame, you have to be really explicit that the shot ends with the full body visible and nothing cropped. I had one clip end on a close up that lost the character's legs, and it wrecked the next shot's anchor. So now I always spell out "entire body, head, arms, legs, feet, fully visible, including in the final frame of the shot," pretty much verbatim in every prompt.
+
+  On prompt structure, full reference mode wants six sections: subject\_definitions (where you define your Picture/Subject tags), summary (one line with a task type prefix), retention\_analysis (fully\_preserved vs weak\_reference per subject and why), detailed\_description (the actual shot by shot writing), overall\_soundscape, and non\_diegetic\_music.
+
+  Biggest lesson from writing the detailed\_description part: let the reference image do the work, don't try to redescribe it. My first pass had a pretty detailed paragraph describing the character's exact geometry, and it actually fought the reference image and made drift worse than just writing something short like "preserve its exact shape and proportions from the reference image without reinterpretation." More text isn't better once you actually have an image to point at.
+
+  Also ran into the classic don't think about a pink elephant problem. I had "no fire, no explosion, no orange blaze" type language in a chase scene because an earlier version had random flames show up, and the next version still had a random fireball in it. What fixed it that time was actually adding even more negative fire language, which is the opposite of what I expected and I don't fully trust it as a real fix, might've just been seed luck. Probably safer in general to just describe what you want instead of piling on negatives for stuff you don't want.
+
+  Couple things prompting just couldn't nail. Motion pacing and syncing a reaction to an audio cue (like a character's startle synced to a siren) were consistently the hardest thing to get right through text, and this is the important part, completely invisible if you're only checking still frames from the output. I had a few clips that looked totally fine from extracted stills and then had bad pacing once actually watched, a weird speed burst mid clip, sluggish timing, stuff like that. If you're doing multi shot generations, don't approve anything off stills alone, actually watch it.
+
+  Random bonus, MiniMax H3 outputs audio natively, there's a VAEDecodeAudio node right alongside the video VAE. Separately I also set up a local XTTS checkpoint for voiceover lines through a small script hitting coqui-tts directly. Can go into that setup too if anyone wants it, didn't want to make this post longer than it already is.
+
+  Also throwing in a Claude Code skill file I wrote up that documents this whole workflow step by step, mostly so I don't have to relearn it myself ne
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: 'Якорь — реально сгенерированный кадр, а не исходный арт: форма персонажа держится во всех шотах. Правило: каждый шот должен заканчиваться полным телом в кадре.'
+confidence: B
+prompt_completeness: partial
+notes: Skill-файл автора для агента-кодера.
+source_url: null
+duplicates_of: []

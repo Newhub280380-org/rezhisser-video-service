@@ -1,0 +1,208 @@
+id: 204_luxury_product_ad_from_reference_frames_seedance20_shot_timeline_docs
+source_file: 204_luxury_product_ad_from_reference_frames_seedance20_shot_timeline_docs.md
+title: 'Премиальная предметная реклама одним промптом: референс из 3–5 кадров + покадровый таймлайн-промпт (Shot 1 (0:00–0:02) … hero shot) → Seedance 2.0, 15 с — 4 разобранных ролика (Tom Ford, Monster,
+  Apple, Rolex) с полными промптами в открытых Google Docs'
+intent_tags:
+- product_ad
+use_when: 'Премиальная предметная реклама одним промптом: референс из 3–5 кадров + покадровый таймлайн-промпт (Shot 1 (0:00–0:02) … hero shot) → Seedance 2.0, 15 с — 4 разобранных ролика (Tom Ford, Monster,
+  Apple, Rolex) с полными промптами в открытых Google Docs'
+inputs:
+- аудио/голос
+- логотип
+steps:
+- n: 1
+  action: unknown (в источнике нет нумерованных шагов; см. prompts_verbatim)
+  tool:
+  - Seedance
+  - Kling
+  - GPT Image
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  Shot 1 (0:00-0:02)
+  Rainy luxury city at night.
+  Wet asphalt reflecting amber lights.
+  Slow cinematic drive forward.
+
+  Shot 2 (0:02-0:03)
+  Camera glides through premium black leather car interior.
+  Luxury stitching visible.
+  Dark atmosphere.
+
+  Shot 3 (0:03-0:04)
+  Extreme macro of black leather texture.
+  Moving highlights reveal the grain.
+
+  Shot 4 (0:04-0:05)
+  Amber smoke begins flowing through darkness.
+  Elegant slow motion.
+
+  Shot 5 (0:05-0:07)
+  Tom Ford Ombré Leather bottle slowly emerges from shadow.
+  Leather folds move around the bottle.
+
+  Shot 6 (0:07-0:08)
+  Close-up of bottle edges.
+  Warm reflections sliding across black glass.
+
+  Shot 7 (0:08-0:10)
+  Slow cinematic orbit around the bottle.
+  Amber smoke swirling.
+
+  Shot 8 (0:10-0:12)
+  Fine perfume mist sprays into frame.
+  Particles illuminated by warm light.
+
+  Shot 9 (0:12-0:13)
+  Smoke transforms into flowing leather ribbons.
+  Luxury cinematic transition.
+
+  Shot 10 (0:13-0:15)
+  Hero shot.
+  Bottle centered on black leather surface.
+  Dark background.
+  Warm amber backlight.
+  Premium Tom Ford commercial ending.
+- |-
+  Shot 1(0:00-0:02): Black void erupts with crackling blue lightning bolts splitting the darkness, volumetric blue fog rolls toward camera, low angle looking up, wide-angle lens, aggressive energy builds, whip pan right into Shot 2.
+  Shot 2(0:02-0:03): Resolves from rightward whip into jagged obsidian rocks exploding upward from ground, blue mist swirling between fragments, debris flying toward camera, handheld shake, speed ramp from slow to full speed, smash cut into Shot 3.
+  Shot 3(0:03-0:04): Hard cut from impact into extreme close-up of black metallic surface covered in condensation droplets, single droplet races downward catching neon blue light, macro lens paper-thin focus, slow motion at 25% speed, tilt down follows the droplet into Shot 4.
+  Shot 4(0:04-0:05): Tilt continues downward into @MACRO, condensation bead magnified on curved can surface, blue claw logo distorted through water droplet, rim light edges the metallic texture, gentle push in, matched zoom accelerates into Shot 5.
+  Shot 5(0:05-0:07): Resolves from zoom into medium shot of can rising through cracking stone surface, blue fog erupting around it, rocks tumbling away, low angle looking up at emerging product, crane up follows the rise, lightning flashes backlight the scene, crane continues into Shot 6.
+  Shot 6 (0:07-0:08): Crane momentum carries into bird's eye view looking down at shattered rock crater, can centered below, blue energy pulses outward in rings across the stone, slow orbit begins clockwise, orbit continues into Shot 7.
+  Shot 7(0:08-0:09): Orbit continues clockwise transitioning to eye level, @CREATIVE composition with can surrounded by swirling blue storm clouds, lightning strikes in background, debris and water droplets suspended mid-air, Steadicam float, speed ramp to slow motion, energy settles hard cut into Shot 8.
+  Shot 8(0:09-0:11): Hard cut into extreme close-up of can's pull tab, finger enters frame and cracks it open, blue mist hisses outward from opening, sound drives the visual, macro lens shallow focus, the hiss blows frame to white flash into Shot 9.
+  Shot 9(0:11-0:12): Flash resolves into medium close-up of blue liquid energy pouring from above, splashing across black rocks, neon blue glow reflects off wet stone surfaces, high-speed capture at 20% speed, tracking shot follows liquid flow downward, pull back reveals into Shot 10.
+  Shot 10(0:12-0:15): Pull back continues revealing @HERO full composition, can commanding frame center atop rocky throne, twin lightning bolts crack behind it, blue fog churns at base, volumetric light shafts pierce through storm, low angle telephoto compression, locked-off hero hold, frame settles.
+  Heavy electronic bass with industrial metal edge, with high-end professional sound effects matching the actions and transitions of the clips.
+- |-
+  Apple-inspired premium smartphone commercial
+  15-second cinematic luxury product advertisement.
+  Shot 1 (0:00–0:02):
+  Complete darkness. A single thin white rim light slowly reveals the silhouette of a premium titanium smartphone standing vertically. Absolute black background. The phone occupies only a small portion of the frame with generous negative space. Locked camera. Very slow push in. Silence and anticipation.
+  Shot 2 (0:02–0:04):
+  Extreme macro of the brushed titanium frame. Soft studio light slowly slides across the satin metal texture, revealing fine machining details. Ultra shallow depth of field. Black background. Macro dolly movement following the edge of the device.
+  Shot 3 (0:04–0:06):
+  Extreme macro of the triple camera module. Crystal-clear lens glass. Elegant white studio reflections moving naturally across the surface. Precision-machined metal rings. Slow focus pull between the lenses. Minimal movement.
+  Shot 4 (0:06–0:09):
+  The device begins emerging from smooth transparent liquid-glass waves. The glass flows gracefully around the phone without splashing. Soft reflections ripple across the surface. White volumetric light gently illuminates the scene. Slow orbit begins around the product.
+  Shot 5 (0:09–0:12):
+  Medium shot. The smartphone floats weightlessly in a dark studio environment. It slowly rotates approximately 30 degrees, revealing its titanium frame and perfectly polished glass. Reflections glide naturally across every surface. Camera continues a smooth cinematic orbit.
+  Shot 6 (0:12–0:15):
+  Final hero shot. The phone stops perfectly centered. Thin white rim light defines every edge while the rest of the frame remains deep black. Very slow push in. Hold on the product for the final seconds. Premium Apple keynote aesthetic.
+  Lighting:
+  Large soft studio lights.
+  Thin white rim lighting.
+  Deep blacks.
+  Natural reflections.
+  No colored lighting.
+
+  Camera:
+  Locked-off.
+  Slow push in.
+  Macro dolly.
+  Focus pull.
+  Smooth orbit.
+  No handheld movement.
+  No fast transitions.
+
+  Color palette:
+  Black.
+  Titanium gray.
+  Silver.
+  White.
+
+  Audio:
+  Minimal ambient atmosphere.
+  Soft cinematic whooshes.
+  Subtle metallic resonance.
+  Glass reflections.
+  No vocals.
+  No heavy music.
+  Quiet premium sound design.
+
+  Style:
+  Premium Apple keynote.
+  Luxury product advertising.
+  Hyper realistic.
+  Ultra detailed.
+  Octane Render quality.
+  Commercial CGI.
+  Minimalism.
+  Photorealistic.
+  8K.
+
+  Negative:
+  No people.
+  No fingerprints.
+  No dust.
+  No scratches.
+  No colorful lights.
+  No explosions.
+  No smoke.
+  No particles.
+  No text.
+  No interface.
+  No watermark.
+  No background objects.
+- |-
+  A cinematic luxury 15-second vertical 16:9 CGI advertisement.
+
+  STYLE: ultra realistic premium CGI, Apple-level product advertising, macro cinematography, shallow depth of field, golden warm reflections, hyper-detailed mechanical realism, cinematic lighting, volumetric light rays, 8K.
+
+  CORE IDEA:
+  The camera begins outside a luxury Rolex watch and dives inside the mechanical world where miniature elite engineers are building and maintaining the movement like a giant industrial megastructure.
+
+  SHOT 1 (0:00–0:02) — HERO INTRO / PRODUCT RECOGNITION
+  Start with a clean, premium studio shot of a Rolex Submariner watch. Black background. Soft controlled lighting. Strong reflections on sapphire glass. Rolex branding clearly visible. Slow cinematic push-in toward the watch face. Suspense building.
+
+  CUT FEEL: smooth macro zoom into the glass surface.
+
+  SHOT 2 (0:02–0:04) — TRANSITION INTO MICRO WORLD
+  Camera pushes through sapphire crystal glass as if entering another dimension. Optical distortion, refraction, cinematic warp transition. The watch face becomes a massive mechanical landscape.
+
+  We fully enter the interior world of gears and steel structures.
+
+  SHOT 3 (0:04–0:07) — INSIDE MECHANISM WORLD REVEAL
+  A vast golden mechanical universe inside the watch movement. Giant interlocking gears rotating slowly. Ruby bearings glowing faint red. Polished steel bridges like skyscrapers.
+
+  Miniature elite engineers in clean industrial uniforms operate cranes, tools, and scaffolding systems. Everything is precise, controlled, engineered.
+
+  Camera performs a slow aerial glide revealing scale.
+
+  SHOT 4 (0:07–0:10) — HERO ACTION MOMENT (CRANE SEQUENCE)
+  Focus on a miniature high-precision crane lowering a glowing ruby jewel bearing into the exact position inside the mechanism.
+
+  Engineers coordinate the operation with hand signals and ropes.
+
+  Slow motion emphasis on precision placement. Mechanical alignment clicks perfectly into place.
+
+  Satisfying engineered motion.
+
+  SHOT 5 (0:10–0:13) — DETAIL + LIFE INSIDE MACHINE
+  Extreme macro shots of gears turning. One engineer polishing golden metal surface. Dust particles floating in warm light beams. Micro movements of machinery synchronized like a living organism.
+
+  Camera slowly tracks across moving gear teeth.
+
+  SHOT 6 (0:13–0:15) — ESCAPE / FINAL HERO MOMENT
+  Camera rapidly pulls back through the mechanism, exiting through the sapphire glass.
+
+  We return to the original Rolex watch hero shot.
+
+  Watch stands still in perfect silence.
+
+  Final hold on product. Luxury feeling. Clean finish.
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '16:9'
+done_criteria: unknown
+confidence: B
+prompt_completeness: partial
+notes: изображения-референсы внутри документов (только как картинки); платный «Клуб ИИ»
+source_url: https://t.me/aivideo_ru/57,
+duplicates_of: []

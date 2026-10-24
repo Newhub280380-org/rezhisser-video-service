@@ -1,0 +1,72 @@
+id: 011_higgsfield_recast_swap_dub
+source_file: 11_higgsfield_recast_swap_dub.md
+title: 'Higgsfield Recast: заменить героя в готовом видео и одновременно дублировать голос на другой язык'
+intent_tags:
+- product_ad
+- talking_head
+- client_in_clip
+use_when: 'Higgsfield Recast: заменить героя в готовом видео и одновременно дублировать голос на другой язык'
+inputs:
+- видео-референс (движение/клип)
+- аудио/голос
+steps:
+- n: 1
+  action: 'Higgsfield → Recast (раздел Character/Video): загрузить исходное видео.'
+  tool:
+  - Higgsfield
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Выбрать персонажа: загрузить своё фото или шаблонного.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Если в видео есть звук — включить дубляж: английский, хинди, итальянский, португальский, русский, турецкий; выбрать голос (в примере женский «Daniel» — название по субтитрам, точность не проверял).'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: 'Фон: по умолчанию «keep original»; можно сменить.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 5
+  action: 'Generate: ~5 минут, в примере 26 кредитов (зависит от длины).'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 6
+  action: 'Применение из видео: ревью товара на вьетнамском → западная модель, английский голос.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim: []
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: Мимика и жесты исходника сохраняются, голос и язык меняются. Это облачная кнопка, без промптов.
+confidence: B
+prompt_completeness: gaps
+notes: —
+source_url: https://www.youtube.com/watch?v=B9ePM50FrC0
+duplicates_of: []

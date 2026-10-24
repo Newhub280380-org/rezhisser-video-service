@@ -1,0 +1,110 @@
+id: 179_image_to_video_long_take_3x10s_real_last_frame_stitch_rules_ilang
+source_file: 179_image_to_video_long_take_3x10s_real_last_frame_stitch_rules_ilang.md
+title: 'Длинный «один дубль» 30 с из одной картинки: 3 сегмента × 10 с, вход каждого следующего — реальный последний кадр предыдущего, приёмка по правилам J1–J4, жёсткая склейка ffmpeg (спецификация iLang
+  IML v1.0)'
+intent_tags:
+- seamless_series
+- animal
+use_when: 'Это не промпт сцены, а регламент-«ТЗ» для агента или оператора, который собирает длинный ролик из одной картинки: сначала из картинки фиксируются константы (палитра, якорь, именованные объекты,
+  эмоция начала/конца, напряжение, масштаб героя, камера). Потом 3 сегмента по 10 с: Seg1 — 3 с статики → ме'
+inputs:
+- стартовый кадр
+- финальный кадр
+steps:
+- n: 1
+  action: 'Perception: извлечь из входной картинки константы (список в тексте) — они неизменны.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Seg1: вход = исходная картинка (кадр 0), 10 с.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: 10 с
+  aspect: unknown
+- n: 3
+  action: Извлечь реальный последний кадр Seg1 → вход Seg2; после генерации взять первый и последний кадр Seg2, проверить J4 (и J1–J3).
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: last_frame
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: То же для Seg3.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 5
+  action: Не прошёл любой из J1–J4 → перегенерировать сегмент.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 6
+  action: ffmpeg hard concat 960×960, 24 fps, h264, без переходов + лог генерации.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  == ai_chuhai 2113428504347812079 conv 2113428504347812079 2026-10-23T00:33:15.000Z
+  # Image-to-Video Long Take · iLang IML v1.0
+
+  ## Perception — extract from input image before generating
+  Scan the input image and lock these constants. All downstream decisions reference them.
+  - **Palette**: dominant hues, saturation range, light source direction and quality
+  - **Anchor**: primary subject position, pose, facing; negative space distribution
+  - **Named anchors**: secondary objects that must follow continuity rules (exit frame naturally if camera pushes past; never vanish, never reappear)
+  - **Emotion**: three words for opening mood
+  - **Emotion end**: three words for closing mood (arc must be monotonic, no reversal)
+  - **Tension**: what is about to happen — the single dramatic thread
+  - **Frame start**: subject scale as % of frame height
+  - **Camera**: locked position relative to subject (never orbit, pan, tilt, or shake)
+
+  Constants are immutable once extracted. Perception wrong → everything downstream wrong.
+
+  ## Judgment — acceptance criteria
+- |-
+  Any rule fails → reject that segment, regenerate. Never stitch a failed segment.
+  "Return to stillness" = motion stops at current framing. Not a pullback to opening wide shot. To pull back, revise J1 first.
+
+  ## Execution
+  - 3 segments × 10s = 30s total. Input image = Seg1 frame 0
+  - Each next segment's input = actual last frame of previous segment (not snapshot, not original image)
+  - Before generating: extract previous segment's last frame. After generating: sample first and last frame of new segment, verify J4 before continuing
+  - Seg1: 3s static → slow push. Seg2: continuous push. Seg3: push decelerates → 5s static hold
+  - Camera: locked angle, forward movement only
+  - Ambient motion (smoke, particles, clouds) stays at or below first-frame intensity — no new sources, no explosions, no added objects
+  - Named anchors exit frame naturally with push; do not delete or teleport them
+  - Stitch: ffmpeg hard concat, 960×960, 24fps, h264, no transitions
+
+  ## Output
+  Deliver stitched video + generation log:
+  - Total segments generated, rejected count, which rule each rejection violated
+  - Stitch quality: visual continuity or jump cut (never claim pixel-identical — generated frames are never pixel-identical)
+  - Note any difference between final frame and opening composition
+  URLS ['https://x.com/ai_chuhai/status/2113428504347812079/video/1']
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: Генератор видео автор не называет (спецификация модель-независимая). В ветке ответов с текстом нет.
+source_url: https://x.com/ai_chuhai/status/2113428504347812079
+duplicates_of: []

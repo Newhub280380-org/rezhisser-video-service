@@ -1,0 +1,72 @@
+id: 053_swap_self_screenshot_nbpro_kling_motion
+source_file: 53_swap_self_screenshot_nbpro_kling_motion.md
+title: '# 53 — Заменить себя на любого персонажа: скрин своего видео → Nano Banana Pro (замена человека, комната та же) → Kling Motion с исходным видео'
+intent_tags:
+- talking_head
+- client_in_clip
+- animal
+- motion_transfer
+use_when: Вариант схемы 15 (Kling Motion Control), но с полным дословным промптом замены для первого кадра, который сохраняет комнату, свет и «фронталку».
+inputs:
+- видео-референс (движение/клип)
+- аудио/голос
+steps:
+- n: 1
+  action: Снять своё видео (движения, эмоции).
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Скриншот кадра.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Nano Banana Pro: скрин + фото нужного персонажа + промпт ниже.'
+  tool:
+  - Nano Banana
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: 'Kling Motion: полученное фото + исходное видео.
+
+    Доп. правила автора из постов #KlingMotion (279 и др.): фото хорошего качества, однотонный фон, «Kling motion передаёт только движения, мимику и голос из видео на ваше фото. Одежду и фон он не передает»,
+    генерация 1–25 мин.'
+  tool:
+  - Kling
+  mode: unknown
+  prompt: unknown
+  input_source: previous_step_output
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "Как заменить себя на любого персонажа? \U0001F4F8\n\nСейчас многие блогеры делают контент на такой замене, рассказываю как повторить:\n\n1️⃣ Снимаем видео с которого будем брать движения и эмоции аватара\
+  \ \n2️⃣ Делаем скриншот на этом видео\n3️⃣ Заходим в Nano Banana Pro, загружаем скриншот и фото модели, которую хотим получить и вводим такой промпт: \n\nReplace the person in the first photo with the\
+  \ person from the second reference image. keeping the exact same camera angle, framing. pose, and lighting. The person from the second image should stand in the same position in the room, with the same\
+  \ head angle and body placement.\nMaintain the natural indoor daylight from the room and the realistic front smartphone camera look. Slight front camera softness. No cinematic lighting, no studio polish,\
+  \ no beauty filters.\nThe appearance must match the second reference image. Same hairstyle, hair texture, makeup, facial features, and overall look.\nUse the clothing from the second reference image.\
+  \ The outfit should follow the body naturally with realistic fabric folds and tension. Keep the same accessories visible in the second image.\nThe body posture must match the original person from the\
+  \ first image so the new person fits naturally into the frame. The result should look like the person from the second image is actually standing in that exact room.\nKeep natural skin texture with visible\
+  \ pores and small imperfections. Maintain realistic shadows and color tones. No smoothing filters. No artificial body enhancement.\nVery important.\nNo glamour lighting.\nNo retouching look.\nKeep proportions\
+  \ realistic.\nDo not change the background or the room.\nThe interior, walls, furniture, lighting sources, and overall framing must remain exactly the same.\n\n4️⃣ После во вкладке «видео» выбираем Kling\
+  \ motion, загружаем туда сгенерированное фото и исходное видео\n\nГотово ✔️ Ставь реакций, если было полезно\n\n\U0001F7E2VPN в обход белых списков\n\n\U0001F916 Генерировать такой контент можно здесь➡️\n\
+  @AiGraff_bot"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://t.me/AlisPromptX/311
+duplicates_of: []

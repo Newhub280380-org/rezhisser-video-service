@@ -1,0 +1,48 @@
+id: 161_stadium_broadcast_capture_photo_edit_then_animate_16x9
+source_file: 161_stadium_broadcast_capture_photo_edit_then_animate_16x9.md
+title: '«Тебя случайно показали на стадионе»: фото → кадр ТВ-трансляции бейсбола (анти-«ИИ-красота») → оживление в горизонтальный эфирный кадр 16:9'
+intent_tags:
+- beauty_ad
+- client_in_clip
+- animal
+- object_alive
+use_when: 'Фото превращается в «захват» спортивной трансляции: обычный зритель на трибуне, которого случайно поймала камера; явные запреты на улучшение лица, глаз, подбородка, блеск кожи; добавлены шум
+  сжатия и размытие. Затем кадр оживляется как горизонтальный ТВ-эфир.'
+inputs:
+- unknown
+steps:
+- n: 1
+  action: 'Шаг 1 — правка фото: своё фото + промпт 1 (строка RU + японский блок: SPOTV KBO, ракурс камеры трибун, соседи, пиво, запреты на «AI-красоту»).'
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Шаг 2 — оживление: результат шага 1 + промпт 2 (EN, «OUTPUT: horizontal 16:9 broadcast frame… NOT portrait orientation»).'
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: previous_step_output
+  duration: unknown
+  aspect: '16:9'
+prompts_verbatim:
+- "=== https://t.me/vse_ai/29 2026-05-11T07:42:04+00:00\n\U0001F525 ТРЕНД: “тебя случайно показали на стадионе”\nДелаем за 2 минуты в @kling_tgbot\n\nВыглядит как реальный ТВ-эфир…\nно это ИИ \U0001F633\
+  \n\nДелается в 2 шага \U0001F447\n\n1️⃣ Изменяем фото\n\n\U0001F4CC Работа с фото → Изменить фото\n\nВставь этот промпт:\n\nСохраняем лицо загруженного человека в его естественном виде, а не в стиле AI-красотки/красавца.\
+  \ \n自然なスタイルで生中継のカメラに偶然映りこんだ一般観客のように生成してください。\nSPOTV KBO 放送のキャプチャーの感じ、観客席のジャンカムの構図、周囲の観客・ビールカップ・応援グッズ・扇風機を自然に配置してください。\n\n重要：\n顔の過補正は禁止\n目の強調は禁止\n顎の強調は禁止\n肌の光沢は禁止\n写真集のような感じは禁止\nインフルエンサーのような感じは禁止\n\n実際の放送のように：\n\
+  わずかにぼやけた生中継画質、圧縮ノイズ、わずかなモーションブレ、現実的な肌の質感、汗と光沢の表現。\n観客席でリラックスして試合を観戦する姿勢、カメラに気づかない自然な表情。\n\n核心は：\n《AI が作った人ではなく、\n《実際に放送で話題になった一般観客\nのような現実感。\n2️⃣ Оживляем фото\n\n\U0001F4CC Оживить фото → следуем шагам\n\
+  \nВставь этот промпт:\n\nrealistic sports broadcast screenshot-style documentary video set in the spectator stands of a Korean professional baseball game. \nthe person sits in stadium seats with natural\
+  \ posture, slightly reacting to the game, subtle head movement, blinking, small эмоции. \ndelicate facial features, natural skin, no beauty filter. \n\nOUTPUT: horizontal 16:9 broadcast frame, realistic\
+  \ TV capture quality, slight blur, compression noise, motion blur, handheld zoom feeling. \nNOT portrait orientation.\n\n\U0001F633 Именно такие видео сейчас залетают в Reels и TikTok\n\n⚡️ В боте это\
+  \ уже собрано по шагам:\n\U0001F449 @kling_tgbot\n\U0001F449 @kling_tgbot\n\U0001F449 @kling_tgbot"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '16:9'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: Бот @kling_tgbot платный — не запускался.
+source_url: https://t.me/vse_ai/29
+duplicates_of: []

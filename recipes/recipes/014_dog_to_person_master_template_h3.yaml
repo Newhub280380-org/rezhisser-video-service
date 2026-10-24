@@ -1,0 +1,64 @@
+id: 014_dog_to_person_master_template_h3
+source_file: 14_dog_to_person_master_template_h3.md
+title: Мастер-шаблон «переснять видео 1:1, заменив собаку/животное на человека с фото» (MiniMax H3)
+intent_tags:
+- talking_head
+- client_in_clip
+- seamless_series
+- animal
+- motion_transfer
+use_when: Мастер-шаблон «переснять видео 1:1, заменив собаку/животное на человека с фото» (MiniMax H3)
+inputs:
+- фото в полный рост
+- видео-референс (движение/клип)
+- стартовый кадр
+- аудио/голос
+steps:
+- n: 1
+  action: 'Модель: MiniMax H3; Video = исходник, Image 1 = полный рост заменяющего персонажа.'
+  tool:
+  - MiniMax H3
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Промпт (дословно):
+
+    [PROMPT]'
+  tool: unknown
+  mode: unknown
+  prompt:
+  - |-
+    Tool: https://www.aivideofree.com/ai-video-editor
+    Model: MiniMax H3
+    Prompt:
+    Use the provided reference video as the exact and complete master template. Recreate the entire video as faithfully as possible from the first frame to the last frame, preserving the original duration, shot sequence, camera angles, framing, camera movements, pacing, scene composition, environment, lighting, background, props, visual effects, and all original details. Use Image 1 as the complete full-body appearance reference for the replacement character. The character must consistently match Image 1, including facial features, hairstyle, skin tone, body shape, body proportions, clothing, and overall appearance. Ignore the background of the uploaded image and use only the character’s appearance.
+    CRITICAL CHARACTER AND MOTION LOCK: Completely replace the dog in the video with the person from Image 1. The replacement character must always match Image 1, even when moving, turning, interacting, changing positions, or appearing from different camera angles. Assign the identity according to the original dog’s role and timing, not screen position. The reference video is the absolute authority for the original performance timing, including exact movement paths, action timing, interactions with other elements, posture changes, and all other actions. Reproduce these movements at precisely the same moments as the original video. Adapt the dog’s original movements into natural human body movements, arm gestures, leg movements, and posture while preserving the original timing, trajectory, and interaction rhythm as closely as possible. Do not change, regenerate, reinterpret, exaggerate, simplify, or retime any core action timing or interaction.
+    Preserve the original lip-sync timing and mouth articulation frame by frame if the dog had any mouth movements, adapted naturally to the human face from Image 1. Maintain realistic physical contact, natural anatomy, accurate spatial relationships, and consistent character appearance throughout every shot. Do not introduce new people, change original actions beyond necessary human adaptation, alter interactions, or modify the choreography. Preserve the complete original video, including every scene, movement, interaction, transition, and ending, without skipping, shortening, freezing, rearranging, or adding any content. Generate the final video completely without audio, including no BGM, music, dialogue, voiceover, ambient sound, or sound effects.
+    Final goal: Reproduce the reference video as faithfully as possible, with only one visual change: the original dog is consistently replaced by the complete head-to-toe appearance of the person from Image 1. All original action timing, interactions, camera work, scene details, and pacing must remain unchanged. The person should appear naturally integrated into the original scene, performing adapted versions of the dog’s original movements at the exact same moments.
+    Avoid visual flickering, identity drift, facial deformation, body distortion, unnatural movement, background changes, camera deviations, or inconsistencies between frames.
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Звук: в этом промпте генерация без аудио (озвучка добавляется потом).'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: previous_step_output
+  duration: unknown
+  aspect: unknown
+prompts_verbatim: []
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '1:1'
+done_criteria: 'Три слоя: «видео — абсолютный авторитет по таймингу», «идентичность привязана к роли оригинального актёра, а не к положению на экране», адаптация движений животного к человеческому телу
+  + явная защита от дрейфа лица.'
+confidence: B
+prompt_completeness: partial
+notes: —
+source_url: https://x.com/AiVideoFree_us/status/2109663627297107985
+duplicates_of: []

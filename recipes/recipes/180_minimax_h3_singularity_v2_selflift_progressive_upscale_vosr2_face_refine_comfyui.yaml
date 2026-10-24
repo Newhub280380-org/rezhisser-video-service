@@ -1,0 +1,101 @@
+id: 180_minimax_h3_singularity_v2_selflift_progressive_upscale_vosr2_face_refine_comfyui
+source_file: 180_minimax_h3_singularity_v2_selflift_progressive_upscale_vosr2_face_refine_comfyui.md
+title: 'Починка MiniMax H3 одним workflow ComfyUI: базовая модель Singularity V2 (быстрое действие без slow-mo, матовая кожа) → SelfLift (low-res → 3D latent upscale → refine в одной ноде) → YOLOv8 + VOSR
+  2.0 1.0x для лиц'
+intent_tags:
+- beauty_ad
+- seamless_series
+use_when: 'Звено «доводки» для конвейера на MiniMax H3: решает три проблемы — «пластиковая» глянцевая кожа на длинных клипах, «плавающее» замедленное движение и долгий рендер в высоком разрешении. Две сборки:
+  r2va (генерация) и face_refine (лица).'
+inputs:
+- unknown
+steps:
+- n: 1
+  action: Базовая модель Minimax-h3_Singularity V2 (huggingface WarmBloodAban/Minimax-h3_Singularity) — быстрая динамика без LoRA на скорость, матовая кожа.
+  tool:
+  - MiniMax H3
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'SelfLift (github facok/comfyui-SelfLift): lowres_scale 0.4, transition_step 4, rho 0 → рендер 1376×768 / 1,5 МП одной нодой.'
+  tool:
+  - ComfyUI
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Sol-Attn: разреженное внимание 0.2–0.9 убирает шум в конце клипа.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: 'Лица: трекинг YOLOv8 + VOSR 2.0 (ylchen333/ComfyUI-VOSR2) на масштабе 1.0x (повышает резкость черт без ресайза); ComfyUI-H3-FaceRefine.'
+  tool:
+  - MiniMax H3
+  - ComfyUI
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 5
+  action: 'Workflow: «minimax_h3_singularity_V2_r2va» и «minimax_h3_singularity_V2_face_refine» (ссылки RunningHub в описании).'
+  tool:
+  - MiniMax H3
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  3 Flaws, 1 Workflow: Fix MiniMax H3 Skin, Motion & Resolution
+  Tired of MiniMax H3 videos that look like shiny, plastic masks, move in floating slow-motion, and take forever to render in high resolution? 🎬 In this tutorial, we solve all three fatal flaws in a single, streamlined ComfyUI workflow!
+  We combine the newly upgraded Singularity V2 base model (which natively expands motion dynamics and eliminates floating slow-mo without speed-correcting LoRAs) with the revolutionary SelfLift extension. SelfLift unifies low-res structural generation, 3D latent upscaling, and high-res refinement into a single, progressive sampling node!
+  🔥 What you'll master in this tutorial:
+  • 🧴 The Plastic Skin Cure: Why specular highlights accumulate over long clips and how Singularity V2 keeps skin matte and natural.
+  • ⚡ Fixing Floating Slow-Mo: Achieving snappy, fast-paced action (bell-grabbing reflexes & rapid martial arts) with zero speed-modifying LoRAs.
+  • 📐 SelfLift 1-Node Progressive Upscaling: Configuring lowres_scale: 0.4, transition_step: 4, and rho: 0 for seamless 1376x768 / 1.5M renders.
+  • 🎛️ The Sol-Attn Window Hack: Why setting sparse attention to 0.2–0.9 eliminates end-stage noise artifacts.
+  • 👤 Simplified Facial Restoration: Using YOLOv8 tracking + VOSR 2.0 at 1.0x scale (feature sharpening without resizing) for crystal-clear faces.
+  • 🧪 Dynamic Motion Stress Tests: From gentle hair-tying to sudden fountain sprints and dual sword duels.
+
+  #runninghub #MiniMaxH3 #SingularityV2 #SelfLift #ComfyUI #AIVideo #PlasticSkinFix #SlowMoFix #LatentUpscale #VOSR2 #AIFilmmaking #GenerativeAI #RunningHub #AITutorial #VideoOptimization #ActionSceneAI
+  ------------------------------------------------------------------------------------------------------------------------
+  resource
+  https://huggingface.co/WarmBloodAban/Minimax-h3_Singularity
+  https://github.com/facok/comfyui-SelfLift
+  https://github.com/Carasibana/ComfyUI-H3-FaceRefine/
+  https://github.com/ylchen333/ComfyUI-VOSR2
+
+  1：minimax_h3_singularity_V2_r2va
+  https://www.runninghub.ai/zh-cn/post/2112840531772866561/?inviteCode=kol02-rh021
+
+  2：minimax_h3_singularity_V2_face_refine
+  https://www.runninghub.ai/zh-cn/post/2112932115164123137/?inviteCode=kol02-rh021
+
+  RunningHub Fan Benefit: Sign up and get 1,000 free compute points.
+  https://www.runninghub.ai/?utm_source=kol02-RH021
+
+  workflow and prompt engineering download：
+  https://github.com/amao2001/ganloss-latent-space/tree/main/workflow/2026-10-23%20singularity%20v2
+
+  ------------------------------------------------------------------------------------------------------------------------
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: C
+prompt_completeness: complete
+notes: Субтитры YouTube — 429. Workflow на RunningHub (регистрация, не входил). Папка workflow и промптов на GitHub (amao2001/ganloss-latent-space) — не открывал (GitHub — в последнюю очередь).
+source_url: https://www.youtube.com/watch?v=n0qavGLdKNE
+duplicates_of: []

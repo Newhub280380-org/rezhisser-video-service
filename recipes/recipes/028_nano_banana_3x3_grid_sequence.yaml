@@ -1,0 +1,64 @@
+id: 028_nano_banana_3x3_grid_sequence
+source_file: 28_nano_banana_3x3_grid_sequence.md
+title: Одна картинка 3×3 = 9 кадров одной сцены с одним героем; затем каждый кадр анимируется
+intent_tags:
+- seamless_series
+use_when: Одна картинка 3×3 = 9 кадров одной сцены с одним героем; затем каждый кадр анимируется
+inputs:
+- unknown
+steps:
+- n: 1
+  action: 'Nano Banana Pro: один промпт, структура (по разбору автора): «cinematic 3x3 grid presenting multiple camera angles» → описание героя и локации → список из 9 ракурсов → style keywords → «consistent
+    subject appearance across all frames» + обязательно добавить строку «images stacked together with no grid lines and no borders and no text».'
+  tool:
+  - Nano Banana
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 4K, 16:9; prompt improver — выключить.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: '16:9'
+- n: 3
+  action: Из сетки вырезать 9 кадров; лицо героя вырезать отдельно и использовать как дополнительный референс для остальных кадров.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: Каждый кадр — в image-to-video (Kling/Higgsfield) с общим движением; склейка.
+  tool:
+  - Kling
+  - Higgsfield
+  mode: image-to-video
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 5
+  action: Менять только subject, location и style keywords (автор убрал синий свет, дал «natural lighting, muted earthy tones»).
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim: []
+output:
+  format: mp4
+  resolution: 4K
+  aspect: '16:9'
+done_criteria: Все 9 ракурсов рисует одна генерация — внешность, свет и окружение совпадают.
+confidence: B
+prompt_completeness: gaps
+notes: Полный промпт сетки (в видео показан картинкой).
+source_url: https://www.youtube.com/watch?v=OA5g63cBp7A
+duplicates_of: []

@@ -1,0 +1,104 @@
+id: 171_traffic_jam_car_takes_off_flips_coffee_chaos_your_photo_car_sheet_seedance25
+source_file: 171_traffic_jam_car_takes_off_flips_coffee_chaos_your_photo_car_sheet_seedance25.md
+title: 'Пробка в большом городе: вы за рулём футуристичной машины жмёте красную кнопку — машина неуклюже взлетает и кувыркается, кофе по салону (абсурдная концовка), Seedance 2.5, 13 с'
+intent_tags:
+- client_in_clip
+use_when: '@image1 — водитель (ваше фото), @image2 — машина (может быть лист с ракурсами — собрать в одну машину). 4 шота: улица спереди → салон, скука, нажатие кнопки → взлёт на струях пара и кувырок →
+  хаос в салоне и крик.'
+inputs:
+- аудио/голос
+- логотип
+steps:
+- n: 1
+  action: Шаг 1 — подготовить фото(ы) в хорошем качестве (см. пост).
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Шаг 2 — Seedance 2.5 с параметрами из поста (у автора — в боте @neyrosetkabot), фото + промпт из комментариев.
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: 5 с
+  aspect: unknown
+- n: 3
+  action: '@image2 — картинка/лист машины (в посте автора — своя машина из комментариев; можно подставить любой авто-лист).'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "=== https://t.me/nercpa/311 2026-10-19T08:47:42+00:00\n\U0001F530Тест-драйв новой теслы\n\n1. Заходите в бота @neyrosetkabot\n2. Выбираете ваше фото в хорошем качестве \n3. Выбираете режим Видео - Seedance\
+  \ 2.5 (13 сек, формат 9:16) и отправляете ваше фото с фото и текстом из комментариев\n\nПРОМПТ В КОММЕНТАРИЯХ \n⬇️⬇️⬇️\n\n⚡️Генерация в один клик \n\n#видео #тренд\n  \n    Please open Telegram to view\
+  \ this post\n    VIEW IN TELEGRAM"
+- |-
+  TASK & FORMAT
+  A 13-second photorealistic vertical video (9:16), shot like a real phone/action-cam clip with three hard cuts: street → car interior → street → car interior. Hard cuts at 1.9s, 5.8s and 8.9s, no transitions. A warm, overcast early-autumn day in a big Russian city. Comedic absurd twist.
+
+  REFERENCES
+  @image1 = the driver. Exact face, facial structure, eyes, brows, nose, lips, skin tone, apparent age and gender, hairstyle, hair length and color, body build, clothing and accessories. The person may be anyone — a man or a woman, any age; the body matches @image1. If @image1 shows only the face or upper body, complete the rest logically in the same style. Do not alter gender presentation, age or ethnicity. Same face, hair and outfit in every frame.
+  @image2 = THE CAR — the only authority for the car. Reproduce exactly: body shape, proportions, angular faceted panels, white paint, black glass canopy, front design, the full-width red rear light bar, the four round thruster nozzles in the black rear panel, the wheels, and the interior if it is shown. @image2 may be a reference sheet with several views: combine them into ONE car; never reproduce the sheet layout, the studio background or several copies of the car. Do not redesign, smooth out or replace it with any other car. The same car in every shot.
+  @image1 and @image2 never mix.
+
+  THE INTERIOR
+  A closed two-seat cabin: a dark matte headliner overhead with a narrow black central spine running from the windshield to the back, thin black pillars, a wide windshield and closed side windows. A low black dashboard with carbon-fiber details, a light-grey rectangular yoke steering wheel, one large horizontal touchscreen standing on the center of the dashboard, a glowing red ambient light strip along the door panel, white sculpted seats, a wide white center console between the seats with two cupholders.
+
+  CLOSED CABIN RULE
+  The car has a fixed solid roof. Inside, the cabin is fully enclosed: the dark headliner is overhead and the roof edge with the top of the windshield frame is visible at the top of every interior shot. The sky and the city are seen ONLY through the windshield and the closed side windows, never directly above the driver. All windows stay closed the whole time. It is never an open-top car or a convertible.
+
+  LOCATION
+  A wide central avenue in a big Russian city: grand pre-revolutionary stone buildings with ornate stucco facades, tall leafy trees along the sidewalks, a modern glass high-rise tower visible in the distance. A dense traffic jam in every lane with everyday cars typical for Russia — Lada sedans, Kia Rio, Hyundai Solaris, Toyota Camry, Volkswagen Polo — and a blue city bus right beside the white car from @image2. Russian street details: white license plates, road signs in Russian style, overhead trolleybus wires. Grey overcast sky, but the air is warm, around +18°C — no cold, no visible breath.
+
+  TIMELINE
+  0–1.9s — STREET, FRONT VIEW
+  The camera stands in the street IN FRONT of the @image2 car, slightly above it, facing its nose head-on: we see its front, hood and black glass canopy, the car stuck in the jam and facing the camera. The blue bus is right beside it, rows of jammed cars stretch behind it into the distance. Nothing moves.
+
+  1.9–5.8s — INTERIOR
+  Hard cut inside the closed cabin, camera low in the back corner on the passenger side, looking toward the driver, the dark roof visible along the top of the frame: the @image1 person sits behind the yoke, bored, scrolling their phone, a paper coffee cup standing in the cupholder; through the closed windows, the jammed cars and old buildings.
+  - Around 4.5s: they let out a long, tired sigh through the mouth — no visible breath, no vapor, no steam — and look up at the endless jam.
+  - 5–5.5s: they lower the phone, reach out with the index finger to the large central touchscreen and tap a big glowing red round button shown on the screen. The button flashes brighter on the tap and the red ambient light strip in the door pulses once. The finger clearly touches the screen surface.
+
+  5.8–8.9s — STREET, CLUMSY TAKEOFF
+
+  Hard cut outside, low shot from behind the car on the street, its red rear light bar and four round nozzles facing the camera.
+  - 5.8–6.4s: the four nozzles and hidden jets under the car fire with a blast of compressed air; thick white vapor clouds billow across the asphalt around the stuck cars.
+  - 6.4–7.2s: the car lifts off unsteadily and shoots straight up on white vapor jets, wobbling.
+  - 7.2–7.6s: it loses balance: the nose pitches up until the car is standing almost vertical in the air.
+  - 7.6–8.9s: it clumsily flips over backward, belly up, tumbling through an uncontrolled somersault high above the avenue, the jets still firing and drawing a crooked, wobbly loop of white vapor trail in the grey sky.
+  The flight is awkward and out of control, never smooth or elegant.
+
+  8.9–13s — INTERIOR, CHAOS
+  Hard cut back inside the closed cabin, same camera position, the dark roof still overhead, the car tumbling upside down: g-force throws the driver around in the seat. The coffee cup tips and the coffee splashes out, flying through the cabin in brown droplets and splattering on the windshield and the headliner; the phone, papers and small objects float, tumble and bounce off the roof and the closed windows — everything stays inside the cabin. The driver grips the yoke with both hands, eyes wide, hair whipped upward and sideways. Through the windshield and side windows the city and sky spin. At the end the driver screams.
+
+  CAMERA
+  Realistic, slightly handheld phone/action-cam look. The first street shot is a front view of the car. Interior shots from the same low back-corner position on the passenger side, always showing the roof edge at the top of the frame, shaking hard during the flight. The takeoff shot is from behind the car, low at street level, tilting up to follow it into the sky.
+
+  REALISM
+  Photorealistic. The jets blast white compressed-air vapor, not fire. Real weight and inertia: the car lifts heavily and wobbles, the flip is clumsy and believable; vapor clouds roll and disperse realistically. Inside, real coffee liquid physics, objects flying with real weight, hair and clothes pushed by g-force.
+
+  AUDIO
+  No music.
+  0–5.8s: real street ambience — idling engines, distant traffic, several drivers honking their horns impatiently; inside the closed car the street noise is muffled; at 4.5s the driver's long, tired sigh; at 5–5.5s a soft electronic touchscreen beep as the button is tapped.
+  5.8–8.9s: a loud hiss and roaring blast of compressed air as the jets fire and the car lifts off, rushing air.
+  8.9–13s: inside the cabin: muffled roaring wind outside, the clatter and thuds of objects hitting the roof and the interior, the splash of coffee, rattling; at the end the driver's loud scream.
+  No speech, no words, no text.
+
+  NEGATIVE
+  an open-top car, a convertible, a missing roof, the sky directly above the driver's head, open windows, objects flying out of the car, visible breath, vapor or steam from the mouth, cold frosty weather, pressing a physical button on the console or armrest, the hand reaching anywhere except the central touchscreen, a car different from @image2, a car changing shape or color between shots, the reference-sheet layout or studio background in the video, several copies of the car, a rear view in the first shot, a smooth controlled flight, a perfect clean loop, the car flying level, flames or fire from the jets, wings, propellers, music, smooth transitions, crossfades, morphing between shots, a second person in the car, the driver's face, hair or outfit changing, spoken words, cartoon look, CGI look, readable text on the screen, plates or signs, subtitles, logos, watermarks
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: Бот @neyrosetkabot платный — не запускался. Видео не смотрел.
+source_url: https://t.me/nercpa/311
+duplicates_of: []

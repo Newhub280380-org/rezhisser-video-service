@@ -1,0 +1,50 @@
+id: 070_drawn_drone_path_on_photo_fpv_seedance
+source_file: 70_drawn_drone_path_on_photo_fpv_seedance.md
+title: '# 70 — Нарисовать путь дрона на фото → Seedance 2.0 FPV-пролёт по нарисованной траектории (негатив убирает красные линии)'
+intent_tags:
+- pov_one_take
+use_when: 'Управление камерой рисунком: в галерее телефона нарисовать линию траектории на фото, загрузить в Seedance; в негативе — «Red lines, red markings…», чтобы линия не попала в кадр.'
+inputs:
+- логотип
+steps:
+- n: 1
+  action: На фото нарисовать путь дрона, сохранить.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Seedance 2.0: фото + промпт (автор советует попросить ChatGPT написать промпт по вашему фото).'
+  tool:
+  - Seedance
+  - GPT Image
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "\U0001F520\U0001F520\U0001F520\U0001F520\n\nИнструкция:\n1. В галерее на фото рисуем путь движения дрона и сохраняем его\n2. Переходим в VeoSeeBot \n3. Seedance 2.0\nВставляем фото и пишем похожий промпт\
+  \ (лучше прислать свое фото chat gpt и попросить его сгенерировать промпт для нейросети сиданс)\nUltra-realistic FPV drone shot in Dubai, inspired by high-end cinematic action sequences. The drone starts\
+  \ low near the road in front of the Museum of the Future and immediately accelerates forward. The camera follows a fast, smooth, continuous flight path through the city, weaving dynamically between skyscrapers\
+  \ and architectural structures.\n\nThe drone rises rapidly from street level, flying upward alongside the Museum of the Future, then curves around its metallic ring-shaped structure, passing extremely\
+  \ close to the Arabic calligraphy surface. It dives through the museum’s central opening, maintaining high speed and precise control.\n\nAfter exiting the opening, the drone banks left and accelerates\
+  \ between the surrounding skyscrapers. The flight continues through narrow gaps between buildings, creating an intense sense of speed and scale. The camera performs smooth banking turns, dramatic parallax,\
+  \ and near-miss flybys past glass facades.\n\nThe drone then climbs sharply between the tall towers in the background, circling around one of the skyscrapers before diving back down toward the urban streets\
+  \ below. Dynamic motion blur, realistic momentum, physically accurate FPV movement, seamless transitions, no cuts, no interruptions. The entire sequence is one continuous drone take.\n\nCinematic golden-hour\
+  \ lighting, realistic reflections on glass buildings, highly detailed architecture, natural shadows, realistic city traffic below, ultra-realistic textures, professional FPV cinematography, 4K HDR, action\
+  \ movie energy, smooth but aggressive flight, immersive perspective, photorealistic.\n\nNegative Prompt:\n\nRed lines, red markings, annotations, drawn paths, arrows, scribbles, overlays, text, captions,\
+  \ logos, watermarks, camera cuts, teleportation, unrealistic building deformation, flickering, jitter, low quality, cartoon style, duplicated buildings, broken geometry, floating objects, unstable camera,\
+  \ excessive motion blur, AI artifacts"
+output:
+  format: mp4
+  resolution: 4K
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://t.me/reels_by_alsi/671
+duplicates_of: []

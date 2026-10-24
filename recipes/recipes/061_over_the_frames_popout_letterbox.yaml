@@ -1,0 +1,56 @@
+id: 061_over_the_frames_popout_letterbox
+source_file: 61_over_the_frames_popout_letterbox.md
+title: '# 61 — Эффект «вылезает за рамку»: персонаж перекрывает чёрные полосы letterbox (Seedance 2.5, 15 с, одна камера)'
+intent_tags:
+- client_in_clip
+- vfx_effect
+use_when: 'Иллюзия 3D-pop-out: чёрные полосы сверху и снизу 15% неподвижны, меч/руки/кроссовки героя заходят на них. Описание внешности в промпте — под конкретную героиню, его надо заменить своим.'
+inputs:
+- unknown
+steps:
+- n: 1
+  action: 'Seedance 2.5: @image1 — референс персонажа.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Промпт ниже (первый абзац с внешностью переписать под себя).
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "\U0001F4F8 Over The Frames  (Seedance 2.5) \n\n- Reference(s): Yes\n- Styles Support:  Anime\n\n\"Use @image1 as the exact character and visual-style reference. Preserve her tan skin, long pointed elf\
+  \ ears, orange-red eyes, voluminous blonde high ponytail, red-orange goggles on top of her head, large gold hoop earrings, purple sleeveless cropped top with the colorful chest graphic, oversized orange-and-black\
+  \ jacket hanging off the shoulders, dark purple/black baggy cargo pants with orange flame-like panels, belts and hanging accessories, chunky multicolor sneakers, and her single curved sword with black,\
+  \ gold and orange detailing. Keep the same sharp, high-detail 2D anime illustration style, angular ink contours, bold graphic colors and painterly cel shading. Do not redesign her clothing, face, sword\
+  \ or proportions.\n\n15-SECOND CONTINUOUS SHOT.\n\nMAIN EFFECT: strong OUT-OF-FRAME / POP-OUT illusion. Two solid black horizontal letterbox bars remain perfectly fixed across the top and bottom 15% of\
+  \ the screen. The background exists only inside the central picture window. The character renders IN FRONT of the bars whenever she moves toward the viewer, so her sword, hands, hair, jacket, sneakers\
+  \ and baggy trousers visibly overlap and cover the black areas.\n\n0–3 SEC: She starts already close to camera in a low sword stance. She suddenly thrusts her EMPTY hand toward the lens, fingertips and\
+  \ orange sleeve extending over the upper black bar. She sweeps the hand diagonally across frame, then instantly pulls it back.\n\n3–6 SEC: She pivots sharply and delivers a fast diagonal sword slash very\
+  \ close to camera. The sword blade crosses visibly onto the upper black bar while her oversized orange jacket and loose trouser fabric flare across the lower bar. Strong wide-angle foreshortening, but\
+  \ the camera itself stays fixed.\n\n6–9 SEC: She plants one foot and launches a hard FRONT KICK directly toward the viewer. Her chunky sneaker becomes huge in perspective and clearly overlaps the lower\
+  \ black bar while the leg remains continuously connected to her body inside the central frame. She retracts immediately and spins back into stance.\n\n9–12 SEC: A compact spinning sword combination: one\
+  \ horizontal cut, one upward flourish, then a tight reverse turn. The sword repeatedly crosses the upper bar while her blonde ponytail, goggles, jacket tails and loose cargo pants sweep over both borders.\
+  \ Keep the action crisp and readable with brief directional smears only.\n\n12–15 SEC: Final explosive forward lunge. She drives the sword diagonally past the lens, the blade extending across the upper\
+  \ black bar while her leading sneaker, jacket and trouser fabric cover a large section of the lower bar. Resolve into a confident close fencing pose, face clearly visible, sword still slightly outside\
+  \ the central window and clothing settling naturally.\n\nThe black bars NEVER move, bend, shake, resize or react. Keep visible black on both sides of every overlap so the frame-break illusion stays obvious.\
+  \ Her silhouette must continue naturally beyond the central frame boundary instead of being cropped.\n\nFast real-time movement throughout. No slow motion, no speed ramps, no camera movement, no zooming,\
+  \ no duplicated sword, no extra limbs, no clothing morphing, no 3D transformation, no text, no dialogue and no background music. Only sword whooshes, kick air bursts, shoe impacts and fabric snaps.\"\n\
+  \n✨ Get access to Seedance 2.5 at OpenArt  \n(20% discount /w code \"L1TMGOQ2\" from all plans)"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://t.me/TheProPrompts/333
+duplicates_of: []

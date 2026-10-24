@@ -1,0 +1,55 @@
+id: 032_seedance_20s_continuous_mapped_refs
+source_file: 32_seedance_20s_continuous_mapped_refs.md
+title: '20 секунд одним непрерывным планом: сюжет/действия поминутно + строгий список референсов'
+intent_tags:
+- beauty_ad
+- client_in_clip
+- seamless_series
+use_when: '20 секунд одним непрерывным планом: сюжет/действия поминутно + строгий список референсов'
+inputs:
+- фото в полный рост
+- стартовый кадр
+steps:
+- n: 1
+  action: unknown (в источнике нет нумерованных шагов; см. prompts_verbatim)
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "Bullied, shoved, her pages torn apart.\nThe wind had other plans.  \n\nCreated with seedance 2.5 on @Sjolt_ai \n\nPrompt:\nOne single continuous 20-second shot, 16:9 landscape, 1080p. NO cuts, NO edits,\
+  \ NO transitions, NO fades, NO title card, NO slow-motion. One unbroken handheld-gimbal camera that moves with the action the entire time. Photoreal supernatural school drama.\n\nSTORY\nA quiet girl is\
+  \ cornered by four classmates in an old shrine courtyard behind her school. They tear out the pressed-flower pages she has been collecting in her journal and shove her down. Her hurt turns to resolve,\
+  \ and the wind itself answers her. She defeats the four one at a time with acrobatic moves that create visible gusts, calls her flying pages back out of the air, and walks away with them.\n\nREFERENCES\n\
+  @image1 = the heroine. One girl shown in two views (full body and face close-up); both views are the SAME person. Keep her exact face, dark teal-black layered shoulder-length hair with side-swept bangs,\
+  \ silver hairclip, brown eyes, small beauty mark, slim build.\n@image2 = four antagonists, mapped left to right: A = tall, long straight black hair, center part (the leader); B = chestnut bob with blunt\
+  \ bangs; C = high black ponytail with white scrunchie; D = wavy dark-brown hair past the shoulders. Keep each face and hairstyle independent and consistent; never swap identities.\nAll five wear the reference\
+  \ uniform exactly: navy double-button blazer with white lapel trim, white shirt, red ribbon tie, plaid pleated knee-length skirt, black tights, brown loafers. No other clothing. Do NOT show the white\
+  \ studio backgrounds, lineup poses or split-screen layouts from the references. All five people are the same real-world scale.\n\nNO DISAPPEARING (CRITICAL)\nExactly five real people exist in this scene\
+  \ from the first frame to the last frame: the heroine, A, B, C and D. NOBODY vanishes, fades, dissolves, turns into leaves or dust, teleports, gets blown out of the scene, or is swallowed by the wind.\
+  \ Wind never removes a person from the shot. When the camera moves away from a character and returns, she is still exactly where she was left. Every defeated girl stays physically on the ground in her\
+  \ defeated position, visible, solid and breathing, until the very last frame. Nobody walks or runs out of the courtyard. The count of people stays at five at all times.\n\nSETTING\nAn old shrine courtyard\
+  \ behind a high school, late-afternoon golden light, soft overcast sky. Gravel and stone-slab ground, two moss-covered stone lanterns, a small wooden shrine gate (torii) in the background, a large ginkgo\
+  \ tree dropping yellow leaves. A low wooden bench on the left. Everything is flat and open, no stairs, no drops, no water. The wind is NOT a storm: it is a controlled, localized swirl of a limited number\
+  \ of yellow ginkgo leaves, light gravel dust and moving hair. The leaves stay thin and sparse, never form a thick cloud or wall, and never cover a person's body or face. Wind is transparent: no glowing\
+  \ beams, no neon, no smoke, no animal shapes, no tornado.\n\nPROPS\nOne small hand-bound journal with a green cloth cover. Exactly five thin washi-paper pages, each holding a pressed flower (a pink cosmos,\
+  \ a blue hydrangea, a red maple leaf, a tiny forget-me-not, a white camellia), are torn out together. The journal is dropped near the heroine's feet and stays there until she picks it up. The five pages\
+  \ float in the air at the left side of the courtyard during the fight and never act as weapons. Two school bags rest against the shrine wall from the start and are never touched.\n\nCAMERA, ONE CONTINUOUS\
+  \ MOVE\nThe camera starts in a tight handheld medium shot on the heroine's face, drifts around her, then follows each action in a smooth flowing path at eye level and side three-quarter angles, mostly\
+  \ medium to medium-full so every acrobatic move is fully visible. It never cuts. It sweeps from character to character with whip-pan-style swings that settle on the next target. After each defeat, the\
+  \ camera glides briefly across the fallen girl so the audience sees she is still there. At the climax the camera does one 100-degree orbit around the heroine at normal speed. In the final seconds the\
+  \ camera slowly pulls back to a medium-wide view that shows all five people.\n\nPERFORMANCE TIMELINE (all in one take)\n\n0–4s: Camera starts close on the heroine, holding her green journal against her\
+  \ chest. A (long black hair) snatches it, holds it out of reach and says in a mocking voice, in English: \"This"
+output:
+  format: mp4
+  resolution: 1080p
+  aspect: '16:9'
+done_criteria: NO cuts/edits/fades + одна камера «gimbal», сюжет разложен на последовательные действия.
+confidence: B
+prompt_completeness: partial
+notes: Конец промпта.
+source_url: https://x.com/Chaemate_/status/2107786193085882582
+duplicates_of: []

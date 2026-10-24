@@ -1,0 +1,41 @@
+id: 064_spiderman_ceiling_hang_video_edit
+source_file: 64_spiderman_ceiling_hang_video_edit.md
+title: '# 64 — Своё видео прыжка → Seedance 2.5: пальцы прилипают к потолку, висите как Человек-паук'
+intent_tags:
+- vfx_effect
+- motion_transfer
+use_when: Короткий V2V-эффект на реальной съёмке, промпт из двух фраз.
+inputs:
+- unknown
+steps:
+- n: 1
+  action: Снять прыжок с поднятой рукой, камера неподвижна.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Seedance 2.5: видео в референс + промпт.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "Инструкция:\n1. Переходим в VeoSeeBot \n2. Нейросеть Seedance 2.5\n3. В раздел с референсом вставляем отснятое видео и в раздел с промптом такой запрос\nDo not change camera angle, camera stays stationary.\n\
+  when the woman in the video jumps up with her arm up, her finger tips stick onto the ceiling and she dangles from the ceiling from her fingers like spiderman, with subtle swaying of her legs and body\
+  \ as she stays suspended off the ground."
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://t.me/reels_by_alsi/775
+duplicates_of: []

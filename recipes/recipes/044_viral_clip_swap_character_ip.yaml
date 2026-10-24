@@ -1,0 +1,55 @@
+id: 044_viral_clip_swap_character_ip
+source_file: 44_viral_clip_swap_character_ip.md
+title: 'Свой персонаж в чужих вирусных клипах (метод Casper): motion transfer каждый день'
+intent_tags:
+- client_in_clip
+- meme
+- animal
+use_when: 'Свой персонаж в чужих вирусных клипах (метод Casper): motion transfer каждый день'
+inputs:
+- unknown
+steps:
+- n: 1
+  action: unknown (в источнике нет нумерованных шагов; см. prompts_verbatim)
+  tool:
+  - Kling
+  - Higgsfield
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  REAL influencers are losing to a dog 😭
+
+  meet casper. an AI italian greyhound with 184K followers and 11.4M likes on tiktok
+
+  he's been to the OLYMPICS. fought in a muay thai ring. deadlifted in the gym
+
+  none of it ever happened
+
+  here's why it WORKS:
+
+  → one face you can NEVER forget
+  → dropped into moments that already went viral
+  → the footage is proven. only the character is new
+
+  how to make your own:
+
+  STEP 1: pick a character so weird people screenshot it
+  STEP 2: find a clip that already has millions of views
+  STEP 3: swap your character in with a motion transfer tool (higgsfield genjutsu, kling)
+  STEP 4: same character. new viral moment. every day
+
+  the hardest part is picking the dog
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: Клип доказанный — меняется только персонаж.
+confidence: C
+prompt_completeness: partial
+notes: —
+source_url: null
+duplicates_of: []

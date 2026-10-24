@@ -1,0 +1,72 @@
+id: 153_symbiote_liquid_to_your_car_seedance
+source_file: 153_symbiote_liquid_to_your_car_seedance.md
+title: Чёрный жидкий «симбиот» собирается в вашу машину — Seedance 2.5, 20 с (480p → апскейл 1080)
+intent_tags:
+- client_in_clip
+use_when: Глянцевая чёрная жидкость течёт по пустому паркингу, захватывает эмблему и превращается в автомобиль с фото клиента. Подходит для дилеров, детейлинга, тюнинга; машину можно менять.
+inputs:
+- фото лица/портрет человека
+steps:
+- n: 1
+  action: 'Seedance 2.5: качество — сначала 480p, если всё устраивает, одной кнопкой апскейл до 1080; формат любой (промпт написан под 9:16); 20 с.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: 20 с
+  aspect: '9:16'
+- n: 2
+  action: Загрузить фото автомобиля и фото-реф симбиота (приложен автором).
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: Вставить промпт из файла.
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "Превращаем симбиота в ваш автомобиль \U0001F5A4\U0001F9EA\n\nЗаходим на «сайт»\nВыбираем нейросеть Seedance 2.5\nНастройки: \nКачество- на выбор. Я создаю в 480, если все устраивает, то одной кнопкой,\
+  \ улучшаю до 1080\nФормат: любой\nПродолжительность: 20сек\n\nПишем промпт (промпт тут), загружаем фото автомобиля и фото симбиота(прикрепил)\n\nЖдем пару минут и готово ✅ \nСтавь реакцию, если полезно\U0001F525\
+  \U0001F447"
+- |-
+  [TASK — SYMBIOTIC LIQUID TRANSFORMS INTO THE PHOTO-DEFINED CAR]
+  Create a 20-second photorealistic cinematic automotive transformation video, vertical 9:16. An irregular glossy black liquid organism flows across an empty underground parking garage, captures a loose vehicle emblem, and progressively transforms into the complete car defined by @image1. Finish with cinematic exterior views of the fully formed car with its headlights on.
+  [REFERENCE ROLES]
+  @image1 defines ONLY the vehicle created during the transformation and its emblem. It does not place an existing car in the opening scene. @ image2 defines the liquid organism's INITIAL shape, surface, and pointed edge extensions. Use @ image2 as a creature reference only; do not copy its background or interface elements.
+  [VEHICLE REFERENCE — @image1]
+  @image1 is a multi-view reference sheet showing ONE vehicle, not several different cars. Use its views together to construct one consistent car. Preserve the exact body shape, proportions, paint color, wheels, tire profile, headlights, grille, bumpers, mirrors, windows, trim, and visible accessories. If the sheet includes an enlarged emblem, use it to define the loose badge and the finished vehicle's badge. Otherwise use the emblem visible on the reference vehicle. Do not invent another brand or borrow a different car's design. Do not display the reference sheet's collage, borders, labels, or multiple vehicle copies.
+  [LOCATION]
+  A dim underground parking garage with a textured gray concrete floor, subtle worn reflections, rectangular concrete columns, black lower wall sections, yellow safety bands, exposed ceiling pipes, fluorescent strip lights, and small red and green parking indicators. A long metal drainage grate runs diagonally along the left side of the opening composition, beside a yellow painted line. White parking-bay markings appear nearby. Maintain the same garage and transformation position throughout. No people.
+  [OPENING SCENE — NO EXISTING VEHICLE]
+  From 00:00 until mechanical assembly begins at 00:05, there is NO vehicle anywhere in the garage. Show only the liquid organism, one detached emblem, concrete, drainage grate, markings, and garage architecture. The car from @image1 must not appear parked in the background, behind the emblem, in reflections, as a silhouette, or partly hidden. The organism approaches only the detached emblem, not an existing car. The transformation creates the scene's first and only vehicle. Between 00:05 and 00:09, show only the progressively forming vehicle; no separate complete car exists.
+  [LIQUID ORGANISM — MATCH @ image2]
+  At the beginning, match the irregular low-profile silhouette shown in @ image2: a flattened, uneven mass of glossy black liquid with a crumpled, folded central ridge and numerous long, sharply tapered liquid extensions spreading sideways and trailing behind. Its footprint is moderately elongated and irregular, but it has no cylindrical snake body or defined head and tail. Its center is uneven and flowing, not a smooth round ball, upright droplet, or spherical abdomen.
+  All pointed extensions are continuous parts of the same liquid surface. They stretch out of the mass and merge back into it. They are not separate anatomical legs: no joints, knees, feet, fixed limb count, symmetrical leg arrangement, or spider-like walking. The central mass stays in direct contact with the concrete, never raised on supporting limbs.
+  The organism flows across the floor as one connected viscous mass. Its front spreads forward, the main body follows, and trailing material draws inward. Edge extensions continuously lengthen, flatten, split, merge, and retract. Its outline changes organically while retaining the reference's low, irregular, pointed appearance.
+  Fine traveling ripples constantly pass across the central body. Small folds rise and settle, and glossy highlights move over the changing surface. This is localized liquid undulation, not rigid shaking, bouncing, or vibration of the entire creature. No frozen smooth shell. No spider, octopus, insect, snake, rigid spikes, eyes, mouth, or humanoid anatomy. A smooth rounded droplet appears ONLY after emblem capture.
+  [LOOSE EMBLEM — FLAT ON THE CONCRETE]
+  One thin detached vehicle badge lies face-up and completely horizontal on the concrete. Its reverse side rests directly against the floor; only its actual material thickness rises above the surface. Match @image1's emblem shape, colors, and design. No stand, pedestal, support, upright pose, tilted display angle, hovering, or levitation. Do not tilt the badge toward the lens to improve readability. Natural foreshortening from the low camera angle is correct. The emblem stays flat and stationary until the liquid claw contacts it.
+  [00:00–00:02.5 — APPROACH]
+  Begin with a low oblique tracking view close to floor level beside the drainage grate, which remains along the left side of the composition. Establish the organism in the initial form shown in @ image2. It flows toward the detached emblem with subtle right-left shifts of its irregular mass. Numerous sharp liquid extensions spread and retract along the floor while fine waves continuously travel over the folded central surface. Do not use a stepping gait or form a ball on legs. The camera follows gently forward. Ahead, the emblem lies flat immediately to the right of the grate. The garage behind it is empty. Establish an oblique camera path that will reveal the future car from a front-three-quarter angle.
+  [00:02.5–00:04 — CAPTURE AND DROPLET]
+  The irregular flowing organism reaches the emblem. Only now does its leading edge briefly rise into a hand-like claw with several curved pointed fingers made of the same liquid. The claw reaches over the badge from above, closes around it at floor level, and collapses over it without holding it upright for display. The spreading body and pointed extensions draw inward. ONLY AFTER CAPTURE does the mass become one smooth rounded droplet completely covering the emblem. This is a brief transformation stage, not the organism's opening shape. Clearly show the sequence: irregular flowing mass, temporary claw, capture, compact droplet. Do not skip directly to a car.
+  [00:04–00:05 — BRANCHING GROWTH]
+  Fine black tendrils burst outward from the droplet, branching across the floor into a spreading root-like network. Thicker strands rise and begin defining the footprint of the future car. The camera starts pulling backward and gradually rising to accommodate the growing structure. Maintain an oblique front-three-quarter viewpoint, approximately 30–45 degrees away from the future car's front centerline. The liquid network is the visible source of the transformation. No pre-existing car appears behind it.
+output:
+  format: mp4
+  resolution: 480p
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: Сайт-агрегатор автора (реф-ссылка) не открывался — не нужен, модель доступна где угодно.
+source_url: https://t.me/reelsteacher/1026
+duplicates_of: []

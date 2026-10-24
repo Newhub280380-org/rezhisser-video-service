@@ -1,0 +1,99 @@
+id: 110_object_falls_through_worlds_nbpro_seedance_insta
+source_file: 110_object_falls_through_worlds_nbpro_seedance_insta.md
+title: 'Предмет падает сквозь разные «миры» + анимация ленты Instagram: Nano Banana Pro → Seedance 2.0 → CapCut'
+intent_tags:
+- product_ad
+use_when: 'Фото товара → Nano Banana Pro ставит его в тематический мир (бумажный, пластилин, LEGO, вязаный…, список подстановок готов) → Seedance 2.0: статичная камера, предмет падает сверху вниз сквозь
+  кадр в стоп-моушн манере, фон оживает. 4–5 стилей, затем в CapCut — как пролистывание постов Instagram, плюс'
+inputs:
+- фото товара/продукта
+steps:
+- n: 1
+  action: 'Nano Banana Pro: фото предмета + промпт «Для фото» с [OBJECT]/[WORLD / THEME]/[ART STYLE].'
+  tool:
+  - Nano Banana
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Seedance 2.0: картинка из шага 1 + промпт «Для видео». Повторить для 4–5 стилей.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: previous_step_output
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: Скрин своих постов в Instagram, вырезать блок с лайками.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: 'CapCut: видео + интерфейс Instagram, анимировать ключами друг за другом (или выложить, записать экран скролла и удалить).'
+  tool:
+  - CapCut
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 5
+  action: Снять руку с предметом крупно, вырезать фон, наложить и ключами увеличить — «гигантская рука».
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 6
+  action: 'Чёрное пятно: чёрный фон в наложении, маска-круг, ключи.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "=== https://t.me/reels_by_alsi/711 2026-06-28T10:18:43+00:00\nИнструкция:\n1. Переходим в VeoSeeBot \n\n2. Нейросеть nano banana pro\nВставляете фото своего предмета и пишете промпт (в скобках введите\
+  \ ваш предмет и стиль) \nПромпт оставила в комментах\n\n3. Нейросеть Seedance 2.0\nВставляете в раздел с референсами получившееся фото из нано банана и также промпт, который есть в комментах ниже \n\n\
+  Так генерируете 4-5 разных стилей, где ваш предмет летит сверху вниз. \n\n4. Делаем скрин ваших постов в инсте и вырезаем часть, где лайки, это нам нужно для анимации\n\n5. Переходим в капкат вставляем\
+  \ сгенерированные видео, интерфейс из инсты и анимируем их ключами, расставив друг за другом. Ещё один вариант — можно выложить эти сгенерированные видео с предметом в инсту, сделать запись экрана скроллинга\
+  \ и быстренько их удалить. Если кто не хочет заморачиваться с анимацией)\n\n6. Отснимите отдельно свою руку с предметом крупным планом, вырежьте фон у этого видео. Наложите поверх основного и ключами\
+  \ сначала сделайте маленький размер, а потом увеличьте. Так рука будет казаться гигантской\n\n7. Чтобы сделать черное пятно, вставьте в наложении черный фон, маской выделите круг и также ключами проанимируйте"
+- "28 июня 2026 г., 13:18 МСК\nДля фото:\nUse the provided reference image of the [OBJECT]. Keep the object exactly the same\n—its shape, proportions, colors, materials, details, and orientation must remain\
+  \ unchanged. Do not redesign or stylize the object itself unless explicitly requested.\nPlace the object inside a \n[WORLD / THEME]\n while fully transforming the surrounding environment into that world.\
+  \ The object should naturally belong to the scene while remaining instantly recognizable.\nCreate the world in the style of \n[ART STYLE]\n.\nThe environment should be rich with thematic details, including\
+  \ matching architecture, landscape, atmosphere, lighting, textures, props, vegetation, weather, and visual effects that reinforce the chosen world.\nMaintain a cinematic composition with the object as\
+  \ the clear focal point. Use realistic depth, layered foreground and background elements, dramatic perspective, and immersive environmental storytelling.\nRender in \nhigh detail\n, with professional\
+  \ lighting, cohesive color grading, and a polished cinematic look.\nVertical composition, 9:16 aspect ratio.\n⸻\nReplace these placeholders:\n[OBJECT]\n → headphones, camera, phone, shoes, backpack, etc.\n\
+  [WORLD / THEME]\n →\nPaper collage world\nClay world\nWool knitted world\nLEGO world\nOrigami world\nBalloon world\nCandy world\nToy miniature world\nLow-poly world\nPixel art world\nCyberpunk city\n\
+  Floating islands\nUnderwater kingdom\nCrystal cave\nAncient ruins\nSpace universe\nDesert planet\nIce kingdom\nMushroom forest\nJapanese ink landscape\nDream clouds\nSteampunk city\nMedieval fantasy\n\
+  Jungle temple\nNeon arcade\nCardboard city\nFabric world\nGlass world\nMarble world\nWooden handcrafted world\nFuturistic laboratory\n[ART STYLE]\n →\nPaper collage\nCut-paper illustration\nStop-motion\
+  \ handmade\nLow-poly 3D\nCute stylized 3D\nPixar-inspired\nClaymation\nFelt and wool craft\nOrigami art\nWatercolor illustration\nGouache painting\nOil painting\nPencil sketch\nPastel drawing\nInk illustration\n\
+  Flat vector illustration\nMiniature diorama\nIsometric illustration\nPhotorealistic CGI\nStylized cinematic 3D\n\n--- (следующий комментарий автора) ---\n\n28 июня 2026 г., 13:19 МСК\nДля видео:\nUse\
+  \ the provided image as the exact visual reference. Preserve the composition, colors, textures, lighting, art style, and all background elements exactly as shown.\nThe animation begins with the original\
+  \ scene exactly as in the image. No moving object is visible.\nAfter about \n1 second\n, \n[OBJECT]\n suddenly enters \nfrom above the top edge of the frame\n.\n[OBJECT]\n immediately begins a \ncontinuous\
+  \ vertical free fall\n through the exact center of the frame.\nImportant:\n[OBJECT] must NEVER stop, NEVER hover, NEVER pause, NEVER freeze, NEVER slow down, NEVER bounce, and NEVER reverse direction.\n\
+  \ It must remain in motion during \nevery single frame\n from the moment it enters until it completely exits through the bottom edge of the screen.\nThe fall should feel handcrafted, using \nslightly\
+  \ jerky stop-motion movement\n with tiny frame-by-frame position changes, while still maintaining one uninterrupted downward motion.\nDuring the fall, \n[OBJECT]\n may only:\nslightly rotate (2–5°),\n\
+  gently wobble,\nmake tiny natural tilts.\nThe object must never become stationary or centered as a hero shot. It is always falling.\nMeanwhile, the background comes to life:\nEvery environmental element\
+  \ moves subtly according to the scene.\nAdd gentle parallax between foreground, midground, and background.\nClouds, paper pieces, buildings, hills, plants, or other background elements should have slow\
+  \ natural movement appropriate to the art style.\nPreserve all textures and visual details exactly as in the reference image.\nAfter \n[OBJECT]\n completely exits through the bottom edge of the frame,\
+  \ only the animated background remains visible for the final second.\nCamera:\n completely static. No zoom, no pan, no cuts.\nAnimation:\n cinematic, high quality, handcrafted feeling, subtle stop-motion\
+  \ imperfections, smooth overall timing with continuous uninterrupted downward motion."
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://t.me/reels_by_alsi/711
+duplicates_of: []

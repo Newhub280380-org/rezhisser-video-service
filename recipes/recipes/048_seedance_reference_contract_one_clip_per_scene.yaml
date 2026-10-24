@@ -1,0 +1,61 @@
+id: 048_seedance_reference_contract_one_clip_per_scene
+source_file: 48_seedance_reference_contract_one_clip_per_scene.md
+title: 'Seedance: «контракт референсов» и «один клип = одна сцена»'
+intent_tags:
+- other
+use_when: 'Seedance: «контракт референсов» и «один клип = одна сцена»'
+inputs:
+- unknown
+steps:
+- n: 1
+  action: 'Каждый референс = отдельная работа: лицо / одежда / локация / движение — не смешивать в одном слоте.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Референсов мало и они различимы; фотореалистичные лица — «монетка».
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: Каждую сцену генерировать отдельным клипом с теми же референсами, затем резать.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: previous_step_output
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: Сетап ~4 с, одно движение камеры, затем «держать».
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: previous_step_output
+  duration: 4 с
+  aspect: unknown
+- n: 5
+  action: 'Структура промпта Seedance 2.5 (из ветки): «Asset mapping + one-sentence brief + timeline + global constraints».'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim: []
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: Модель получает простую задачу на каждый клип.
+confidence: C
+prompt_completeness: gaps
+notes: Полные тексты.
+source_url: null
+duplicates_of: []

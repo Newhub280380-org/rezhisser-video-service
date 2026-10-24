@@ -1,0 +1,57 @@
+id: 160_safari_natgeo_photo_edit_then_animate_lion_kling
+source_file: 160_safari_natgeo_photo_edit_then_animate_lion_kling.md
+title: 'Своё фото → кадр сафари-фильма National Geographic (правка фото) → оживление: лев проходит у камеры — 2 шага'
+intent_tags:
+- client_in_clip
+- object_alive
+use_when: 'Из обычного фото человека делается кадр «вас сняли в сафари-экспедиции» (саванна, закат, львы, слоны), затем этот кадр оживляется: лев проходит мимо камеры на переднем плане, вдали слоны, трава
+  и пыль в воздухе.'
+inputs:
+- фото лица/портрет человека
+- стартовый кадр
+steps:
+- n: 1
+  action: 'Шаг 1 — правка фото (image edit): загрузить своё фото, вставить промпт 1 (RU).'
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Шаг 2 — оживление (image-to-video): результат шага 1 как первый кадр, промпт 2 (RU).'
+  tool: unknown
+  mode: image-to-video
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: previous_step_output
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: Автор делает оба шага в боте @kling_tgbot (меню «Работа с фото → Изменить фото», затем «Оживить фото»).
+  tool:
+  - Kling
+  mode: unknown
+  prompt: unknown
+  input_source: previous_step_output
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "=== https://t.me/vse_ai/38 2026-06-24T13:31:36+00:00\n\U0001F514 А что, если оказаться героем фильма National Geographic?\n\nИз обычной фотографии можно сделать кадр, будто вы участвуете в настоящей\
+  \ сафари-экспедиции ☀️\n\nЛьвы проходят рядом.\nСлоны идут по саванне.\nЗакатное солнце пробивается сквозь пыль.\n\nА затем всё это можно оживить и превратить в кинематографичное видео \U0001F3AC\n\n\
+  Делается в 2 шага ⤵️\n\n1️⃣ Создаем изображение\n\n\U0001F4CC Работа с фото → Изменить фото\n\nВставьте этот промпт:\n\nПревратить фотографию человека в кинематографичный кадр дикой природы в стиле дорогого\
+  \ сафари-документального фильма.\n\nЧеловек находится в африканской саванне среди высокой золотистой травы. Теплый закатный свет, объемные солнечные лучи, атмосфера настоящего сафари.\n\nРядом реалистичные\
+  \ дикие животные: львы, слоны, жирафы и зебры.\n\nСохранить узнаваемость лица человека.\n\nМаксимальный фотореализм, натуральные цвета, реалистичный свет, атмосфера дорогой экспедиции National Geographic.\n\
+  \n2️⃣ Оживляем изображение\n\n\U0001F4CC Оживить фото → следуем шагам\n\nВставьте этот промпт:\n\nСоздать ощущение, будто человек оказался внутри настоящего сафари-фильма.\n\nОгромный лев проходит рядом\
+  \ с камерой на переднем плане.\n\nВдали идут слоны.\n\nВетер двигает траву.\n\nВ воздухе видна солнечная пыль.\n\nКадр выглядит как момент из дорогой экспедиции Netflix Earth.\n\nСверхреалистично, эмоционально,\
+  \ эпично, cinematic wildlife shot.\n\n\U0001F525 Результат выглядит так, будто вас случайно сняли во время дорогой сафари-экспедиции.\n\n⚡️ Повторить можно здесь:\n\n\U0001F449 @kling_tgbot\n\U0001F449\
+  \ @kling_tgbot\n\U0001F449 @kling_tgbot\n  \n    Please open Telegram to view this post\n    VIEW IN TELEGRAM\n  \n\n  \n    Please open Telegram to view this post\n    VIEW IN TELEGRAM"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: Бот @kling_tgbot платный — не запускался. Шаги привязаны к пунктам меню бота («Изменить фото», «Оживить фото»); тот же порядок повторяется в любом редакторе фото + i2v (Kling и т.п.).
+source_url: https://t.me/vse_ai/38
+duplicates_of: []

@@ -1,0 +1,117 @@
+id: 115_fan_blade_outfit_change_overhead_rug_seedance25
+source_file: 115_fan_blade_outfit_change_overhead_rug_seedance25.md
+title: 'Смена образов «лопастью вентилятора»: вид сверху на ковре, каждое перекрытие лопастью = новый образ (Seedance 2.5, 15 с, один план)'
+intent_tags:
+- client_in_clip
+- vfx_effect
+use_when: 'Статичная камера строго сверху: девушка лежит на персидском ковре (иллюзия стены), на переднем плане размытая лопасть потолочного вентилятора. Каждый раз, когда лопасть перекрывает героиню, её
+  образ мгновенно меняется — без морфинга и вспышек. Входные данные: фото себя в разных нарядах на одном фоне'
+inputs:
+- фото лица/портрет человека
+- логотип
+steps:
+- n: 1
+  action: VeoSeeBot → Seedance 2.5.
+  tool:
+  - Seedance
+  - Veo
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Референсы: фото себя в разной одежде на одном фоне.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Промпт: первая часть из поста + продолжение из комментария (образы описать свои). 16:9, 15 с.'
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: 15 с
+  aspect: '16:9'
+prompts_verbatim:
+- "=== https://t.me/reels_by_alsi/793 2026-09-22T13:10:50+00:00\nИнструкция:\n1. Переходим в VeoSeeBot \n2. Нейросеть Seedance 2.5\n3. Вставляем фото себя в разной одежде на одном фоне и такой промпт (образы\
+  \ меняйте под себя): \n\nHorizontal 16:9 cinematic fashion video, 15 seconds, one continuous shot.\n\nShot from a completely fixed static overhead camera looking straight down at the same young hijabi\
+  \ woman lying flat on her back on a large ornate Persian-style rug with a deep red, brown and cream medallion pattern. Her body is positioned horizontally across the wide frame: head toward the left side\
+  \ of the frame, feet toward the right, entire body visible.\n\nThe rug fills almost the entire frame and, because of the strict top-down perspective, creates an optical illusion of a richly patterned\
+  \ vertical wall behind her rather than a floor beneath her. A dark deep-red velvet sofa arm is partially visible along the lower edge of the frame, reinforcing the surreal wall illusion.\n\nSoft warm\
+  \ directional daylight falls across the rug from the upper right, producing gentle natural shadows.\n\nIn the extreme foreground, very close to the camera and slightly out of focus, one blade of a slowly\
+  \ rotating three-blade ceiling fan repeatedly sweeps across the frame in a circular arc. The complete fan is never visible. Only part of the rounded central hub and one blurred blade periodically enter\
+  \ the shot.\n\nThe fan blade is the ONLY transition device.\n\nEvery time the fan blade physically passes in front of the woman and temporarily occludes her body, her entire outfit changes behind it.\
+  \ The transformation is perfectly clean and instantaneous: no morphing, no glowing, no particles, no glitch, no flash, no digital distortion, no warping and no visible transformation animation. The old\
+  \ outfit simply exists before the blade covers her; the new outfit is already there immediately after the blade clears.\n\nCHARACTER CONSISTENCY: The exact same young woman appears throughout the entire\
+  \ video. Preserve her facial identity, facial proportions, eyes, nose, lips, skin tone and body proportions perfectly throughout all four looks. She wears a hijab in every outfit. Never expose her hair.\
+  \ Her face must remain unchanged during every transition. Natural realistic skin texture, no plastic skin, no beauty-filter appearance.\n\nNo on-screen text, logos, captions or watermarks.\n\nSHOT 1 —\
+  \ 0:00–0:00.8 — Settling into frame / LOOK 1\n\nThe woman has just lain down on the rug and makes a small natural adjustment to her position. Her head is toward frame-left and feet toward frame-right.\
+  \ One hand briefly adjusts the edge of her hijab while the other rests near her torso.\n\nLOOK 1: elegant monochromatic cream-white modest outfit. Olive-green silk-textured hijab wrapped neatly around\
+  \ her head and neck, narrow burgundy rectangular sunglasses, oversized flowing cream-white long-sleeve blouse with subtle dark brown piping, long dramatic asymmetrical cream-white layered skirt with dark\
+  \ brown piping along the edges, loose cream trousers underneath, dark brown woven flat shoes, long dark cord necklace with a circular pendant. Sophisticated artistic modest-fashion silhouette.\n\nSHOT\
+  \ 2 — 0:00.8–0:02.0 — Static Look 1\n\nHer body settles completely flat. Legs extend naturally toward the right side of frame. Her head faces directly upward toward the overhead camera.\n\nOne hand rests\
+  \ gently over her stomach while the other lies beside her.\n\nA small black fan remote rests on the rug next to her hand.\n\nShe remains completely still except for subtle natural breathing and maintains\
+  \ calm direct eye contact with the camera.\n\nSHOT 3 — 0:02.0–0:04.0 — Remote\n\nWithout changing her body position, she slowly reaches for the small black remote, wraps her fingers around it and raises\
+  \ it slightly above her torso.\n\nHer thumb presses the button once.\n\nHer gaze remains fixed directly into the camera.\n\nПродолжение в комментариях ⤵️"
+- |-
+  22 сентября 2026 г., 16:11 МСК
+  She maintains calm, confident direct eye contact with the overhead camera.
+  Only subtle natural breathing.
+  Camera remains 100% static for the entire 15 seconds: no pan, no tilt, no zoom, no dolly, no reframing, no camera shake. One uninterrupted continuous take.
+  Photorealistic premium fashion campaign, editorial styling, ARRI Alexa 65 look, Cooke Anamorphic character, realistic textile detail, authentic skin texture, soft cinematic highlight roll-off, subtle film grain, warm natural light, realistic shadows, luxury fashion editorial aesthetic, HDR, IMAX-level detail, 8K realism.
+  Critical negatives: no uncovered hair, no changing face, no changing identity, no extra limbs, no malformed hands, no body deformation, no clothing morphing, no transition particles, no glow, no flash, no glitch, no digital effects, no camera movement, no text, no captions, no watermark. All outfit changes happen exclusively while the physical fan blade completely occludes the relevant part of her body
+
+  --- (следующий комментарий автора) ---
+
+  22 сентября 2026 г., 16:11 МСК
+  SHOT 4 — 0:04.0–0:04.8 — Fan starts
+  The blurred tip of the fan blade slowly enters the extreme foreground from the top of frame.
+  It begins its first smooth rotational sweep.
+  SHOT 5 — 0:04.8–0:06.2 — FIRST FAN TRANSITION / LOOK 1 → LOOK 2
+  The large blurred fan blade sweeps smoothly across her entire body.
+  As it covers each section of her body, LOOK 1 instantly becomes LOOK 2 behind the blade.
+  No transformation is visible.
+  When the blade clears her completely, she is wearing:
+  LOOK 2: oversized pastel powder-blue hoodie with extremely loose balloon sleeves and relaxed streetwear silhouette; neatly wrapped medium-gray hijab completely covering the hair and neck; pale powder-blue docker/beanie cap worn over the hijab; narrow dark burgundy sunglasses; delicate pendant necklace; oversized soft white crossbody shoulder bag worn diagonally across the torso; dramatic asymmetric gray plaid layered skirt/panel wrapped over extremely loose light-gray jogger trousers; pale lavender socks; chunky gray-and-white sneakers.
+  Preserve the exact layered proportions and oversized silhouette of the reference outfit.
+  Her body position, arms, hands, head and facial expression remain pixel-consistent through the transition.
+  SHOT 6 — 0:06.2–0:08.0 — Static LOOK 2
+  The fan blade leaves frame.
+  She lies motionless in the blue-and-gray streetwear outfit. Calm direct eye contact. Only subtle breathing.
+  SHOT 7 — 0:08.0–0:09.5 — SECOND FAN TRANSITION / LOOK 2 → LOOK 3
+  The same blurred fan blade returns from the top and follows exactly the same smooth rotational path.
+  As it passes over her body, LOOK 2 instantly changes into LOOK 3 behind the blade.
+  LOOK 3: architectural oversized gray-and-white modest outfit. Long floor-length gray pinstriped abaya/coat with dramatic oversized sleeves, irregular asymmetric construction, contrasting white pinstriped panels across the shoulders and upper sleeves, visible raw/frayed fabric edges and small black rectangular label detail on one sleeve. Long gray layered garment and loose gray trousers underneath. Gray textured hijab wrapped closely around the head and neck with a long draped section falling vertically down the front. Dark gray baseball cap worn over the hijab with small embroidered patches. Narrow dark sunglasses. Black shoulder bag. Chunky off-white sneakers.
+  The outfit should feel experimental, deconstructed and architectural.
+  Never expose her hair.
+  Her exact pose does not change.
+  SHOT 8 — 0:09.5–0:11.2 — Static LOOK 3
+  Fan exits.
+  She remains completely still in the gray architectural outfit, looking directly upward into the lens.
+  The long fabric naturally spreads slightly across the Persian rug around her body.
+  SHOT 9 — 0:11.2–0:12.7 — THIRD FAN TRANSITION / LOOK 3 → LOOK 4
+  The fan blade enters for the third and final sweep.
+  It slowly travels across her entire body.
+  Behind the blade, LOOK 3 instantly becomes LOOK 4.
+  LOOK 4: soft powder-blue and chocolate-brown modest streetwear outfit. Light icy-blue softly textured hijab wrapped elegantly around the head and neck with a long flowing tail; narrow burgundy rectangular sunglasses; oversized powder-blue wrap cardigan/jacket with extremely wide sleeves, relaxed shoulders and long fabric waist ties; dark chocolate-brown top underneath; extremely voluminous chocolate-brown balloon trousers with a very wide flowing silhouette gathered near the ankles; pink-and-brown patterned flat sneakers with animal-print details; large slouchy dark chocolate-brown shoulder bag covered with irregular small cream-white spots.
+  Preserve the unusual oversized proportions, colors and layering precisely.
+  No morphing. No intermediate clothing. The outfit is simply different once the blade clears.
+  SHOT 10 — 0:12.7–0:15.0 — FINAL STATIC HOLD / LOOK 4
+  The fan blade completely leaves frame.
+  She lies motionless in the final powder-blue and chocolate-brown outfit.
+  One hand loosely holds the fan remote beside her body. The other rests naturally over her torso.
+  Her hijab and clothing fabric settle naturally against the rug with realistic gravity.
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '16:9'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://t.me/reels_by_alsi/793
+duplicates_of: []

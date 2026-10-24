@@ -1,0 +1,106 @@
+id: 172_friday_6pm_backpack_parachute_office_roof_gta_style_seedance25
+source_file: 172_friday_6pm_backpack_parachute_office_roof_gta_style_seedance25.md
+title: 'Пятница 18:00 в стиле GTA: офисный рюкзак оказывается парашютом, вы прыгаете с крыши бизнес-центра и планируете к пляжному бару — Seedance 2.5, 15 с'
+intent_tags:
+- pov_one_take
+use_when: 'Одно фото → один непрерывный кадр от третьего лица в графике «некст-ген открытого мира» без интерфейса: персонаж в своей одежде (жёсткий CHARACTER LOCK), рюкзак раскрывается в парашют, полёт
+  над городом к бару на пляже.'
+inputs:
+- стартовый кадр
+- аудио/голос
+- логотип
+steps:
+- n: 1
+  action: Шаг 1 — подготовить фото(ы) в хорошем качестве (см. пост).
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Шаг 2 — Seedance 2.5 с параметрами из поста (у автора — в боте @neyrosetkabot), фото + промпт из комментариев.
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: 5 с
+  aspect: unknown
+prompts_verbatim:
+- "=== https://t.me/nercpa/307 2026-10-18T07:45:06+00:00\n\U0001F3AEКонец рабочего дня в стиле GTA\n\n1. Заходите в бота @neyrosetkabot\n2. Выбираете ваше фото в хорошем качестве \n3. Выбираете режим Видео\
+  \ - Seedance 2.5 (15 сек, формат 9:16) и отправляете ваше фото с текстом из комментариев\n\nПРОМПТ В КОММЕНТАРИЯХ \n⬇️⬇️⬇️\n\n⚡️Генерация в один клик \n\n#видео #развлекательное\n  \n    Please open Telegram\
+  \ to view this post\n    VIEW IN TELEGRAM"
+- |-
+  @image1 = ABSOLUTE HIGHEST-PRIORITY CHARACTER REFERENCE.
+  Use @image1 for the character's EXACT identity AND complete appearance: exact face, facial proportions, age, gender, skin tone, hairstyle, hair length, hair color, body proportions, body shape, EXACT clothing, shoes, accessories, colors, materials, fit and styling. The person may be anyone — a man or a woman, any age. If @image1 shows only the face or upper body, complete the rest logically in the same style.
+
+  CHARACTER LOCK
+  The character stays visually identical to @image1 for the whole video. Do not redesign, replace, recolor or restyle the clothing. Do not put the character into skydiving gear, sportswear or any outfit that is not in @image1. The backpack and its harness straps are ADDED ON TOP of the exact @image1 clothing. No face, hairstyle, body, outfit or shoe changes.
+
+  FORMAT & STYLE
+  15 seconds, vertical 9:16. One continuous third-person shot, no cuts. Next-generation open-world video game graphics: photorealistic real-time rendering, high-detail game character, realistic skin and fabric, physically based lighting, atmospheric haze, realistic water reflections. It looks like real third-person gameplay from a premium modern open-world game, not a movie. No HUD, no minimap, no interface, no text.
+
+  THE JOKE
+  It is Friday, 18:00. The working week is over. The character's ordinary-looking office laptop backpack is secretly a parachute, and they leave the office the fastest way possible — straight off the roof — and glide down to a beach bar.
+
+  LOCATION — OFFICE ROOFTOP
+  The flat roof of a tall modern glass office tower in the business district of a large sunny coastal city. Grey concrete roof surface with painted maintenance lines, a few boxy grey air-conditioning units and vent pipes, a low concrete parapet with a simple metal railing at the edge. Nothing luxurious: no pool, no furniture, no glass balcony, no garden.
+
+  CITY BELOW
+  Far below: the business district — glass office towers glowing gold in the low sun, busy streets with tiny moving cars. Beyond them: palm-lined avenues, a long sandy beach and a calm sea. On the beach directly ahead, a small wooden beach bar with warm string lights and a few deck chairs is visible as a tiny glowing point, the landing target. Keep the same orientation the whole time: business towers below, beach and sea ahead, sun low over the sea.
+
+  THE BACKPACK
+  From the very first frame the character wears a plain black office laptop backpack — the kind everyone carries to work — with two padded shoulder straps and a thin chest strap with a small red pull handle on it. It looks completely ordinary. It stays on the back the whole time and never disappears. Later the parachute deploys FROM this backpack.
+
+  TIMELINE
+  0–2.5s — FRONT, the only front-facing part
+  Medium shot from the front: the character stands on the office roof, the golden sunset city behind them. Their exact face and outfit from @image1 are clearly visible. They glance at the watch on their wrist (or at their phone if they wear no watch), close their eyes for a second and let out a long, relieved exhale. Then they loosen their tie or open their top collar button, pull a work ID badge on a lanyard over their head and simply let it go — the lanyard flutters away in the wind. A small satisfied smile. Wind moves hair and clothes.
+
+  2.5–3.5s
+  The camera smoothly swings around from the front to a classic third-person position behind the character, without any cut. The ordinary black laptop backpack is now clearly visible on their back. The character turns toward the roof edge.
+
+  3.5–5s
+  Third-person behind the character: they break into a run across the roof, past the grey air-conditioning units, toward the parapet. The concrete roof fills the lower frame, the golden city and the sea ahead. The camera follows with slight game-camera inertia.
+
+  5–5.6s
+  The character jumps onto the parapet and leaps off the building in one smooth move. The roof drops out of the bottom of the frame. The camera follows over the edge without cutting.
+
+  A brief feet-first fall, then they rotate forward into freefall.
+
+  5.6–8.5s
+  Stable belly-to-earth freefall above the business district: body horizontal, arms out to the sides, legs slightly bent, clothes from @image1 rippling hard in the wind, hair streaming. Golden glass towers rush below. The camera stays behind and slightly above the character.
+
+  8.5–9.3s
+  The character pulls the small red handle on the chest strap. The "laptop backpack" pops open and a parachute pack releases from it, lines stretching upward. Nothing appears from empty space.
+
+  9.3–10s
+  A bright orange rectangular ram-air canopy unfolds progressively above the character. The opening force jerks them from horizontal into an upright hanging position. The camera tilts slightly up so the canopy enters the top of the frame.
+
+  10–13s
+  Calm glide over the palm-lined avenues toward the beach, the sun low over the sea, the orange canopy filling the upper frame, suspension lines running down to the backpack straps. The character relaxes, swinging their legs, heading straight for the glowing beach bar. Camera behind and slightly below.
+
+  13–15s
+  A soft landing on the sand right next to the beach bar: a few running steps, the canopy settling down behind them. The character throws both arms up in a happy, relieved "weekend!" gesture, the string lights glowing, the sea shining in the sunset. Hold on this frame to the end.
+
+  LIGHTING
+  Friday evening golden hour: low warm sun over the sea, long shadows, golden reflections on glass towers, a warm orange-pink sky, soft haze over the city.
+
+  MOTION
+  Realistic game-character locomotion: natural run, natural leap, convincing gravity, stable freefall posture, strong wind on hair and clothes, visible opening shock when the canopy inflates, realistic soft landing on sand.
+
+  AUDIO
+  Rooftop wind and distant city traffic; the light whoosh of the badge lanyard flying away; footsteps on concrete; loud rushing wind in freefall; the sharp snap and flutter of the canopy opening; calmer wind during the glide; at the end, gentle waves, soft footsteps in sand and faint, distant relaxed beach-bar music. No speech, no voice-over.
+
+  NEGATIVE
+  outfit replacement, clothing redesign or color change, skydiving suit, sportswear instead of the @image1 clothes, face or hairstyle changes, a parachute backpack that looks technical or military, the backpack disappearing, the parachute appearing from nowhere, an instant fully open canopy, disconnected lines, camera cuts, cinematic orbits, a long frontal sequence after 2.5s, side or first-person camera, luxury rooftop, pool, glass balcony, rooftop furniture, a crash landing, landing in the water, real game logos or franchise elements, HUD, minimap, interface, subtitles, text, watermark
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: Бот @neyrosetkabot платный — не запускался. Видео не смотрел.
+source_url: https://t.me/nercpa/307
+duplicates_of: []

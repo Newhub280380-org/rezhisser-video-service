@@ -1,0 +1,62 @@
+id: 126_ai_blogger_nb_two_refs_edit_veo_russian_speech
+source_file: 126_ai_blogger_nb_two_refs_edit_veo_russian_speech.md
+title: 'ИИ-блогер с речью на русском: Nano Banana (лицо + образ из Pinterest) → правки образа/света → Veo (реплика в кавычках)'
+intent_tags:
+- talking_head
+- object_alive
+use_when: Два референса (лицо крупно + образ) → фото блогера с микрофоном-петличкой → бесконечные вариации образа, локации и света правкой текста → Veo оживляет фото с репликой на чистом русском без жестикуляции
+  и титров.
+inputs:
+- фото лица/портрет человека
+steps:
+- n: 1
+  action: 'Nano Banana: 2 рефа (лицо, образ) + промпт 1 (дословно ниже).'
+  tool:
+  - Nano Banana
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Nano Banana: результат + промпт 2 (смена образа, «золотой час»).'
+  tool:
+  - Nano Banana
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: previous_step_output
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Veo: фото блогера + промпт с репликой в кавычках.'
+  tool:
+  - Veo
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "=== https://t.me/profiobzorov/1997 2026-09-05T07:35:21+00:00\nКАК СОЗДАТЬ ИИ-БЛОГЕРА?\n\n✅ ПОДПИШИСЬ на этот канал и погнали!\n\nВы можете создать своего блогера с любой внешностью, стилем и историей\
+  \ жизни и вести трафик из соцсетей на свой продукт или услугу.\U0001F44C\U0001F3FC\n\nПосмотрите на нашу Настю, которая работает на наш блог уже более года. И продает она не хуже человека\U0001F609\n\n\
+  ИНСТРУКЦИЯ:\n\nПереходим в SYNTX (куда удобно):\n\U0001F4F1 ТГ БОТ SYNTX или\n\U0001F4BB WEB ВЕРСИЯ\n\n1️⃣Создаем фото блогера. Заходим в раздел Изображения ➡️ Nano Banana. Отправляем 2 референса – лицо\
+  \ крупным планом и образ. Мы взяли из Пинтерест. Пишем промпт:\n\nA woman from the first photo wearing a look from The second photo, standing in a sunlit room., пробор посередине. Дорогая укладка. Длинные\
+  \ волосы. Ухоженный вид. She is holding a small square wireless microphone close to her mouth. The light is coming directly from the front (window light). The background is a blurry modern grey interior,\
+  \ very clean and expensive looking. Realistic photography, depth of field, sharp focus on eyes. Реализм. На фоне не должно быть окон. Крупный план. Лицо открыто.\n\n\U0001F4CE Чтобы скопировать промпт,\
+  \ нажмите на него одним коротким касанием – и он скопируется в буфер обмена\n\n2️⃣Можем создать любой образ через новый референс или просто описать что мы хотим изменить. Отправляем получившийся результат\
+  \ и пишем новый промпт: \n\nВолосы собраны сзади, лицо обрамляют мягкие пряди. Шоколадная оверсайз рубашка, из-под которой виден белый кружевной топ. Глубокий вырез декольте. Золотые серьги и браслет.\
+  \ Нюдовая помада. Маленький микрофон пусть держит в той же руке. Легкая улыбка. Поменяй освещение в квартире на «золотой час».\n\n\U0001F4CCИ так до бесконечности, для каждого рилс можно менять и локацию,\
+  \ и образ блогера, и освещение. \n\n3️⃣Теперь оживим нашего блогера. Заходим в нейросеть Veo, отправляем готовое фото блогера, следом промпт:\n\nДевушка блогер говорит на чистом русском языке без акцента\
+  \ и без титров. Она спокойно держит мини микрофон в руке и не жестикулирует: *« Никаких выходных, потраченных на съемки рилс, усталости и выгарания. Я создаю контент 24 на 7 без зарплаты и отпуска. »*\n\
+  \nГотово! Теперь у вас есть свой ИИ-блогер, который готов создавать контент 24/7.\U0001F525\n\nПодписаться на ТГ КАНАЛ Профи Контента | Нейросети | ИИ\n  \n    Please open Telegram to view this post\n\
+  \    VIEW IN TELEGRAM\n  \n\n  \n    Please open Telegram to view this post\n    VIEW IN TELEGRAM"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://t.me/profiobzorov/1997
+duplicates_of: []

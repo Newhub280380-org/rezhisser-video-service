@@ -1,0 +1,55 @@
+id: 054_slime_face_asmr_nbpro_veo31
+source_file: 54_slime_face_asmr_nbpro_veo31.md
+title: '# 54 — ASMR «лицо из слайма»: фото → Nano Banana Pro (мокрая голова на мраморе) → Veo 3.1 (руки мнут лицо как слайм)'
+intent_tags:
+- client_in_clip
+- meme
+- vfx_effect
+use_when: 'Двухшаговый вирусный эффект: изолированная «голова» с глянцевой мокрой кожей → видео, где руки с маникюром сжимают её как слайм.'
+inputs:
+- unknown
+steps:
+- n: 1
+  action: 'Nano Banana Pro, 4K, 9:16: своё фото + промпт.'
+  tool:
+  - Nano Banana
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: '9:16'
+- n: 2
+  action: 'Veo 3.1: картинка из шага 1 + промпт (обратные слэши в тексте — так в оригинале, это экранирование Telegram).'
+  tool:
+  - Veo
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: previous_step_output
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "\U0001F607\U0001F607\U0001F607\U0001F607\U0001F607\U0001F607\U0001F607\U0001F607\U0001F607\U0001F607\U0001F607\nВижу, что вам очень понравилось данное видео и мне в директ пишут, как сделать данное видео\n\
+  Итак, давайте тогда разберём, как я его сделала\U0001FA77\n\U0001F929\U0001F929\U0001F929\U0001F929\U0001F929\U0001F929\U0001F929 \U0001F929 \U0001F929\U0001F929\U0001F929\U0001F929\n\n\U0001FA77\U0001FA77\
+  \U0001FA77БОТ\U0001FA77\U0001FA77\U0001FA77\n\n\U0001F929Загружаем свое фото и открываем редактор\n\U0001F929 Выбираем NanoBanana Pro\U0001F497, качество 4к, соотношение сторон (3:4 публикация, 9:16 рили)\
+  \ \n\U0001F929Вставляем промпт\U0001F929\nUse my uploaded photo as the main reference image.\n\nRecreate the image exactly one-to-one with identical head position, identical facial expression, identical\
+  \ eye direction, identical head tilt, identical framing and composition.\n\nImportant composition rule:\nOnly a single isolated head must be visible, without neck and without shoulders, exactly like in\
+  \ the reference image. The head appears as a standalone object lying flat on the surface.\n\nHead position:\nMatch the exact same tilt and rotation of the head as in the reference. The head lies flat\
+  \ on a wet light gray marble surface, positioned diagonally in the frame. Match the same crop: forehead near the top of the frame, chin near the lower edge.\n\nFacial expression:\nMatch exactly the same\
+  \ neutral relaxed facial expression, same lips position, same eye openness, same gaze direction, same eyebrow position.\n\nSurface and environment:\nThe head lies on a light gray marble surface covered\
+  \ with shallow water. Visible water drops and water streaks around the head.\n\nSkin and texture:\nSkin fully wet with glossy transparent liquid, strong reflections on forehead, cheeks, nose and lips.\
+  \ Ultra-detailed skin pores and natural texture.\n\nHair:\nWet hair slicked tightly back away from the face.\n\nLighting:\nSoft studio beauty lighting from above with glossy highlights on wet skin.\n\n\
+  Style:\nHyper-realistic beauty photography, luxury cosmetic advertisement style, ultra-detailed, 8K resolution.\n\nAspect ratio: 9:16\n\nPriority instructions:\nisolated head only\nno neck\nno shoulders\n\
+  exact same pose\nexact same facial expression\nexact same composition\nstrong reference matching\n\n\U0001F929Готовое изображение снова загружаем и открываем редактор. \n\U0001F929Выбираем режим Veo 3.1\n\
+  \U0001F929Вставляем промпт\U0001F929\n\nКрупный план, статичный кадр\\. Руки девушки с красивым маникюром медленно сжимает глянцевое лицо из слайма на чистой, плоской поверхности\\. Мягкая, желеобразная\
+  \ текстура деформируется\\. Появляются складочки видно как оттягивают слайм Игривое, приятное ASMR\\-видео\\.\n\n*Можете изменять промпт под себя, вы можете придумать другие креативы для видео и воплотить\
+  \ их через наш телеграм бот\U0001F929\n\n\U0001F916 Генерировать такой контент можно здесь\U0001F929\n@AiGraff_bot"
+output:
+  format: mp4
+  resolution: 4K
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://t.me/AlisPromptX/299
+duplicates_of: []

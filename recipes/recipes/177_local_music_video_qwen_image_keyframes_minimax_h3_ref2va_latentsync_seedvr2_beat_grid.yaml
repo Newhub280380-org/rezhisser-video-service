@@ -1,0 +1,118 @@
+id: 177_local_music_video_qwen_image_keyframes_minimax_h3_ref2va_latentsync_seedvr2_beat_grid
+source_file: 177_local_music_video_qwen_image_keyframes_minimax_h3_ref2va_latentsync_seedvr2_beat_grid.md
+title: 'Клип на 4 минуты полностью локально: Qwen-Image 2.1 (мудборд, лист персонажа на 8 ракурсов, 3 ключевых кадра на план) → MiniMax H3 Ref2VA (ключевой кадр = первый кадр, стем ударных/вокала как reference
+  audio) → LatentSync 1.6 → SeedVR2 7B → авто-QA → монтаж по сетке тактов'
+intent_tags:
+- talking_head
+- seamless_series
+- vfx_effect
+use_when: 'Конвейер «музыка → клип»: стемы (Demucs htdemucs_ft + BS-RoFormer) и бит (beat_this) → 74 плана, по одному на такт (3,42 с) → кадры Qwen-Image → видео H3 с аудио-референсом нужного стема → липсинк
+  на поющих планах → апскейл → автоматическая проверка каждого дубля (ArcFace — лицо, DINOv2 — скрытые ск'
+inputs:
+- стартовый кадр
+- аудио/голос
+steps:
+- n: 1
+  action: 'Стемы и бит: Demucs htdemucs_ft + BS-RoFormer; beat_this (~70 BPM, такт 3,42 с) → план на каждый такт.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: 42 с
+  aspect: unknown
+- n: 2
+  action: 'Qwen-Image 2.1 (int8 + turbo LoRA, 8 шагов): мудборд, кастинг (лицо + костюм → лист персонажа на 8 ракурсов), локации, реквизит, 3 ключевых кадра на план (~300 кадров).'
+  tool:
+  - Qwen
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'MiniMax H3 Ref2VA (int8, turbo, 8 шагов): ключевой кадр — первый кадр; reference audio — стем ударных (барабанщики) или вокала (поющие). ~95 с на 4-секундный дубль; 153 дубля на 74 плана.'
+  tool:
+  - MiniMax H3
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: 95 с
+  aspect: unknown
+- n: 4
+  action: LatentSync 1.6 на поющих планах — изолированный вокал после de-reverb.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 5
+  action: SeedVR2 7B → 1080p (~4,5 мин на план).
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 6
+  action: Авто-QA каждого дубля (ArcFace / DINOv2 / SyncNet / Qwen3-VL-8B судья) + ручной просмотр контакт-листа (судья даёт ложные тревоги).
+  tool:
+  - Qwen
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 7
+  action: Монтаж и финиш Python + ffmpeg, склейки точно по сетке бита, официальное аудио без изменений.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  # I made a full 4-minute music video for The Flaming Lips’ “Pompeii am Götterdämmerung” 100% locally on one RTX 4090: Qwen-Image 2.1 + MiniMax H3 + LatentSync + SeedVR2, every cut locked to the bass and drums
+  r/StableDiffusion u/PatBQc 2026-10-24 score=1 comments=0 url=https://reddit.com/r/StableDiffusion/comments/1xdvggj/i_made_a_full_4minute_music_video_for_the_flaming/ link=https://v.redd.it/16li98r3fbxh1
+
+  **Video:** [https://youtu.be/Wwr\_LT4OeNY](https://youtu.be/Wwr_LT4OeNY)
+
+  An unofficial fan video for "Pompeii am Götterdämmerung" by The Flaming Lips (At War with the Mystics, 2006), made with a lot of love for the band. Everything ran locally on a single RTX 4090 with open-weight models: no cloud, no paid APIs.
+
+  **The story:** the last day of Pompeii as a psychedelic twilight of the gods. Marcus, a fresco painter, and his muse Livia choose love over fear while Vesuvius erupts and the old gods collapse in the sky. He paints his own face next to hers on the wall so they stay together. Two thousand years later, an archaeologist uncovers the fresco.
+
+  **The rhythm section leads:**
+
+  * I separated the stems (Demucs htdemucs\_ft + BS-RoFormer) and tracked beats with beat\_this: about 70 BPM, very regular 3.42 s bars.
+  * **74 shots, one per bar**, cut frame-accurately on the beat grid. The big hits land on the eruption (0:48) and on the drums coming back (1:29).
+  * An audio-reactive pass (Python + OpenCV): the kick drum gives a small zoom punch, the fuzz bass drives a breathing halation glow, and snare hits give micro-flashes.
+  * Fun fact: the fuzz bass is so saturated that Demucs files most of it under "other", not "bass".
+  * Some shots are written for the bass: a cup of wine trembling on the bass swells, and a ring of light pulsing around the Earth on the big bass wave at 3:24.
+
+  **Pipeline:**
+
+  1. **Qwen-Image 2.1** (int8 + turbo LoRA, 8 steps, about 2–8 s per image): mood board, casting (face plus costume, then an 8-view character sheet), sets, props, and 3 keyframes per shot. About 300 stills.
+  2. **MiniMax H3 Ref2VA** (int8, turbo, 8 steps): the keyframe is the first frame. Reference audio is the drum stem for the drummers and the vocal stem for the sung shots. About 95 s per 4 s take. 153 takes for 74 shots, about 4 GPU-hours.
+  3. **LatentSync 1.6** on the sung shots, using the isolated vocal after de-reverb.
+  4. **SeedVR2 7B** upscale to 1080p (about 4.5 min per shot, about 5 GPU-hours).
+  5. **Automatic QA on every take**: ArcFace for identity, DINOv2 for hidden cuts and morphs, SyncNet for lips, and a local Qwen3-VL-8B judge for anatomy, duplicates, anachronisms and style. Every take was also reviewed on a contact sheet, because the judge raises false alarms.
+  6. A custom Python + ffmpeg edit and finish, with the official audio left untouched.
+
+  **Three visual registers:** photoreal Pompeii in 79 AD, a living psychedelic Renaissance painting (Jupiter falling from the sky), and Flaming Lips–style cosmic transcendence (iridescent bubble, confetti, nebula).
+
+  Lessons learned are in the first comment. Happy to answer questions!
+
+  *Unofficial and non-commercial; not affiliated with The Flaming Lips or Warner. The characters are fictional.*
+
+  ## COMMENTS (0)
+output:
+  format: mp4
+  resolution: 1080p
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: «Lessons learned» автор вынес в первый комментарий — arctic-shift вернул 0 комментариев. Видео на YouTube не смотрел.
+source_url: https://reddit.com/r/StableDiffusion/comments/1xdvggj/
+duplicates_of: []

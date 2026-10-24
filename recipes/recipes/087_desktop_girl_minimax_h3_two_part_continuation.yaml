@@ -1,0 +1,102 @@
+id: 087_desktop_girl_minimax_h3_two_part_continuation
+source_file: 87_desktop_girl_minimax_h3_two_part_continuation.md
+title: '# 87 — «Девушка на рабочем столе» в 2 частях с бесшовным продолжением: MiniMax H3 (локально, open weights), структурный промпт subject_definitions / retention_analysis / timeline + часть 2 «Continue
+  seamlessly from the automatically inherited final second»'
+intent_tags:
+- seamless_series
+use_when: '# 87 — «Девушка на рабочем столе» в 2 частях с бесшовным продолжением: MiniMax H3 (локально, open weights), структурный промпт subject_definitions / retention_analysis / timeline + часть 2 «Continue
+  seamlessly from the automatically inherited final second»'
+inputs:
+- стартовый кадр
+steps:
+- n: 1
+  action: 'Картинка 16:9: девушка «внутри» рабочего стола Windows, иконки справа (Picture 1 — точный первый кадр). Близко к схеме 59 (Win11 Living Wallpaper), но другая модель и формат промпта.'
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: '16:9'
+- n: 2
+  action: 'MiniMax H3, часть 1 (10–12 с): промпт 1 ниже — засыпает, бьётся лбом, 3 иконки падают, смущённая улыбка; последняя секунда «Hold her downward gaze steadily during the final second for automatic
+    continuation».'
+  tool:
+  - MiniMax H3
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: 10–12 с
+  aspect: unknown
+- n: 3
+  action: 'MiniMax H3, часть 2 — продолжение от унаследованной последней секунды: промпт 2 (integrated_multimodal_description) — расставляет иконки обратно.'
+  tool:
+  - MiniMax H3
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: 'Автор: локально, 16 GB VRAM + 64 GB RAM, sampler «spectrum», без turbo-LoRA, интерполяция до 60 fps.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "subject_definitions:\n\n<Subject 1> is the centered young woman from <Picture 1>, preserving her exact facial identity, shoulder-length dark hair, natural skin appearance, oversized cream sweatshirt\
+  \ with the cat illustration and visible text \"Good Night\", plaid pajama pants, body proportions, and photorealistic rendering.\n\n<Subject 2> is the fixed set of exactly three Windows desktop icons\
+  \ labeled \"Steam\", \"Videos\", and \"Notepad\" from <Picture 1>, including their exact graphics, labels, shortcut arrows, sizes, spacing, and original positions in the rightmost icon column.\n\n<Subject\
+  \ 3> is the remainder of the Windows desktop interface from <Picture 1>, including every unaffected icon, the \"Outlook\" icon, icon grid, bottom taskbar, clock area, and interface geometry.\n\n<Subject\
+  \ 4> is the warm nighttime bedroom from <Picture 1>, including the bed, sleeping cat, bedside lamp, furniture, wall photographs, plants, and all background objects.\n\n<Picture 1> is the exact opening\
+  \ frame of [Shot 1] and the reference for character identity, wardrobe, desktop composition, icon appearance, interface geometry, bedroom lighting, and photorealistic visual style.\n\nsummary:\n\n[keyframe\
+  \ completion + reference generation] Beginning exactly from <Picture 1>, <Subject 1> falls asleep and topples toward screen-left, striking the hard screen plane with a clearly visible forehead impact\
+  \ that knocks exactly the three icons of <Subject 2> downward; she wakes, reacts to the pain, gives the viewer an embarrassed smile, and notices the three fallen icons while <Subject 3> and <Subject 4>\
+  \ remain stable.\n\nretention_analysis:\n\n<Subject 1> (appears throughout [Shot 1]): fully_preserved - Her identity, face, hair, clothing, proportions, and photorealistic appearance remain consistent\
+  \ while her pose and expression animate.\n\n<Subject 2> (appears throughout [Shot 1]): fully_preserved - Exactly one \"Steam\", one \"Videos\", and one \"Notepad\" icon retain their graphics, labels,\
+  \ arrows, scale, and identity while being knocked from their positions.\n\n<Subject 3> (appears throughout [Shot 1]): fully_preserved - Every unaffected icon, including \"Outlook\", remains anchored and\
+  \ the taskbar remains unchanged.\n\n<Subject 4> (appears throughout [Shot 1]): fully_preserved - The bedroom, lighting, furniture, decorations, and sleeping cat remain unchanged.\n\n<Picture 1> ([Shot\
+  \ 1] exact opening frame and appearance reference): fully_preserved - The video starts on its precise composition and retains all established visual anchors.\n\ndetailed_description:\n\nPhotorealistic\
+  \ live-action magical realism within a Windows desktop. Use one continuous Static Shot with the exact fixed 16:9 composition of <Picture 1>; the camera never moves or cuts.\n\n[Shot 1] The shot begins\
+  \ exactly from <Picture 1>. <Subject 1> sits centered and faces the viewer. The three icons of <Subject 2> occupy their original positions in the rightmost desktop-icon column. <Subject 3> and <Subject\
+  \ 4> remain stable.\n\nDuring 00:00.000–00:01.800, her blinking slows, her eyelids close completely, her chin dips, and her shoulders relax as she falls asleep. Her breathing becomes deeper.\n\nDuring\
+  \ 00:01.800–00:03.350, her unsupported upper body tips toward screen-left with increasing speed. Her forehead leads the fall, followed by her shoulders and torso. She remains asleep and does not brace\
+  \ herself. Her hair and loose sleeves trail behind her movement.\n\nAt 00:03.350, her forehead makes direct, unmistakable physical contact with the rightmost icon column and the implied hard glass screen.\
+  \ Show a clear impact frame: her forehead presses slightly against the screen plane, her head stops abruptly, her shoulders jolt forward from inertia, and her hair snaps forward. The desktop interface\
+  \ shudders sharply for two or three frames while the camera remains fixed. The glass does not crack.\n\nThe impact knocks loose exactly three icons and no others: one \"Steam\", one \"Videos\", and one\
+  \ \"Notepad\". \"Outlook\" and every other icon remain firmly anchored. The three affected icons receive a short outward impulse from the contact point before falling. Her head rebounds several centimeters\
+  \ from the screen.\n\nDuring 00:03.500–00:05.200, the three icons fall separately down the desktop plane, bounce lightly, and gather immediately above the lower-left taskbar. The fallen pile must contain\
+  \ exactly three continuously visible icons: one \"Steam\", one \"Videos\", and one \"Notepad\". They retain their graphics, labels, shortcut arrows, orientation, and scale. They do not duplicate, merge,\
+  \ morph, disappear, or pass behind the taskbar.\n\nDuring 00:03.600–00:05.800, her eyes snap open. She recoils with a painful wince and shakes her head twice. During 00:05.800–00:07.600, she presses one\
+  \ hand to the impact point on her forehead and rubs it gently.\n\nDuring 00:07.600–00:09.600, she looks directly at the viewer with embarrassed realization and gives a small, awkward, closed-mouth smile.\
+  \ During 00:09.600–00:12.000, she lowers her hand and looks down-left at the three fallen icons. All three remain visible and stationary through the final frame. Hold her downward gaze steadily during\
+  \ the final second for automatic continuation. The cat remains asleep.\n\noverall_soundscape:\n\nQuiet nighttime bedroom room tone with soft breathing and fabric movement. At 00:03.350, produce a solid\
+  \ forehead-on-glass thump with a short low-frequency impact, followed immediately by a brief interface rattle, exactly three sharp icon-dislodgement clicks, three descending digital clatters, small landing\
+  \ taps, and her startled inhale.\n\nnon_diegetic_music:\n\nN/A \n\nintegrated_multimodal_description: [Shot 1] Continue seamlessly from the automatically inherited final second of the preceding video.\
+  \ Do not reset the scene, repeat the fall, replay the forehead impact, or introduce a cut. Preserve the exact photorealistic woman, facial identity, shoulder-length dark hair, cream sweatshirt with the\
+  \ cat illustration and visible text \"Good Night\", plaid pajama pants, warm nighttime bedroom, sleeping cat, desktop interface, icon grid, taskbar, lighting, and fixed 16:9 composition established in\
+  \ the preceding video. The camera remains completely static.\n\nThe woman begins with her head turned down-left, looking at the four fallen desktop icons—\"Outlook\", \"Notepad\", \"Videos\", and \"Steam\"\
+  —gathered immediately above the taskbar. Their four former positions in the rightmost icon column remain empty. She still shows slight discomfort from striking her forehead.\n\nDuring 00:00.000–00:00.700,\
+  \ she gives her forehead one final gentle rub, lowers her hand, leans forward, and extends her right hand toward the screen plane.\n\nDuring 00:00.700–00:02.500, she pinches only the fallen \"Outlook\"\
+  \ icon between her thumb and index finger. The icon adheres naturally to her fingertips as she lifts it from the pile and places it squarely into its original empty fourth-row position. Its graphic, label,\
+  \ shortcut arrow, orientation, and scale remain unchanged.\n\nDuring 00:02.500–00:04.300, she individually picks up \"Notepad\" and returns it to its original empty third-row position.\n\nDuring 00:04.300–00:06.100,\
+  \ she individually picks up \"Videos\" and returns it to its original empty second-row position.\n\nDuring 00:06.100–00:07.900, she individually picks up \"Steam\" and returns it to its original empty\
+  \ top-row position.\n\nOnly one icon moves at a time. Each icon follows her fingers through one continuous visible path and remains rigid like a flat desktop tile. No icon duplicates, merges, morphs,\
+  \ changes its label, changes size, rotates excessively, disappears, or passes behind the taskbar. Every unaffected icon and every taskbar element remain completely stationary.\n\nDuring 00:07.900–00:09.200,\
+  \ she uses one fingertip to make two small alignment adjustments. The four restored icons settle into a perfectly straight vertical column with the same spacing and former positions they had before the\
+  \ collision.\n\nDuring 00:09.200–00:10.800, she withdraws her hand from the screen plane, sits upright, and carefully checks the restored column from bottom to top. Her expression changes from concentration\
+  \ to visible relief.\n\nDuring 00:10.800–00:12.000, she looks directly at the viewer and gives a small, relieved, embarrassed closed-mouth smile. Hold the completely restored desktop and her final expression\
+  \ steadily for the last half-second. The background cat remains asleep throughout.\n\noverall_soundscape: Continue the preceding quiet nighttime bedroom ambience without an audible transition. Add subtle\
+  \ fabric movement and breathing, one light digital pickup tick as each icon leaves the pile, one clean interface click when each icon returns to its slot, and two very soft adjustment taps during final\
+  \ alignment.\n\nnon_diegetic_music: N/A"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '16:9'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: 'ничего. Шаблон промптов — официальный гайд: https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/docs/VIDEO_PROMPT_WRITING_GUIDE_base_en.md'
+source_url: https://reddit.com/r/StableDiffusion/comments/1wiz8p5/doing_the_desktop_girl_with_minimax_h3/
+duplicates_of: []

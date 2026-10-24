@@ -1,0 +1,105 @@
+id: 119_viral_whippan_one_take_pet_room_photo_seedance25
+source_file: 119_viral_whippan_one_take_pet_room_photo_seedance25.md
+title: 'Вирусный «один дубль с резкими сменами ракурсов под бит» с вашим питомцем/товаром: видео-референс + фото героя + фото комнаты → Seedance 2.5 Omni'
+intent_tags:
+- product_ad
+- client_in_clip
+- meme
+- animal
+- motion_transfer
+use_when: Берётся трендовый ролик, где камера рывками (whip-pan) меняет ракурсы в такт музыке вокруг неподвижного героя. Seedance 2.5 повторяет траекторию и тайминг @video1, но героем становится ваша собака
+  (@image1), а комната — ваша (@image2), чтобы модель не дорисовывала локацию на новых ракурсах. Музыку у
+inputs:
+- фото лица/портрет человека
+- видео-референс (движение/клип)
+- стартовый кадр
+- аудио/голос
+- фото питомца
+- фото локации/города
+steps:
+- n: 1
+  action: Скачать вирусное видео; подготовить фото героя (питомец/товар) и фото комнаты.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'LLM (Gemini/Claude/ChatGPT): загрузить видео + запрос «Проанализируй это видео и напиши мне промпт… в Seedance 2.5 с моей собакой… @video1, @image1 — собака, @image2 — комната» (дословно ниже).'
+  tool:
+  - Seedance
+  - GPT Image
+  - Gemini
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: 5 с
+  aspect: unknown
+- n: 3
+  action: 'Seedance 2.5, режим Omni Reference, высокое качество, длительность/формат как у исходника: @video1 + @image1 + @image2 + промпт (пример автора — в комментарии).'
+  tool:
+  - Seedance
+  mode: Omni
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: Если ошибка из-за музыки — удалить звук из исходника, выключить звук, наложить музыку после.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "=== https://t.me/profiobzorov/2049 2026-09-30T11:12:54+00:00\n\U0001F4A1АДАПТАЦИЯ: ДИНАМИЧНОЕ ВИДЕО ЧЕРЕЗ ИИ \U0001F92F\U0001F3A5\n\n✅ ПОДПИШИСЬ на этот канал и погнали!\n\nВ прошлый раз мы разбирали,\
+  \ как легко адаптировать вирусное видео. Но что если исходник сложный?\n\nНапример: трендовое видео под музыку, где камера резко меняет ракурсы в такт биту, и всё это выглядит как съемка одним кадром\
+  \ без склеек.\U0001F631\n\nРассказываем, как провернуть этот фокус\U0001F90E\n\nИНСТРУКЦИЯ:\n\n\U0001F342Находим вирусное видео и скачиваем его (для этого тренда можете использовать наше видео). Подготавливаем\
+  \ фото нашего главного героя (питомца/товара).\n\nПереходим в SYNTX (куда удобно):\n\U0001F4F1 ТГ БОТ SYNTX или\n\U0001F4BB WEB ВЕРСИЯ\n\n2️⃣Переходим в раздел Текст\U0001F517нейросеть Gemini, Cloude\
+  \ или ChatGPT (что вам больше нравится). Загружаем туда скачанное видео и просим искусственный интеллект проанализировать его, чтобы он сам написал идеальный промпт для генерации. \n\nПример запроса для\
+  \ Gemini:\nПроанализируй это видео и напиши мне промпт для создания такого видео по этому референсу в Seedance 2.5 с моей собакой. В качестве референсов я отправлю это видео, фото собаки и фото комнаты,\
+  \ видео одним кадром без нарезки с резкой сменой ракурсов.\nРеференсы обозначить в промпте как @video1, @image1 -собака, @image2 - комната.\n\U0001F4CEКопируем промпт (свой оставили в комментариях)\U0001F642\
+  ‍↕️\n\n3️⃣ Переходим в раздел Видео нейросеть Seedance 2.5 Загружаем динамичное видео (как референс движения и ритма), наше фото (как референс героя) и фото комнаты (чтобы нейросеть не дорисовывала локацию,\
+  \ так как видео у нас в разных ракурсах.)\nИ вставляем тот самый детальный промпт от Gemini. \n\nНастройки в Seedance:\n\U0001F342 Включаем режим Omni Reference (чтобы нейросеть считала и картинку, и\
+  \ движение).\n\U0001F342 Выбираем высокое качество.\n\U0001F342 Длительность и формат — как у исходника.\n\U0001F342 Секрет: если нейросеть выдает ошибку из-за музыки, уберите её у исходного видео и в\
+  \ настройках выключите ползунок Звука. А наложить музыку можно будет уже на сгенерированное видео, поверьте попадание в биты сохранится\U0001F44C\U0001F3FC\n\nОтправляем на генерацию. ✔️\n\nС такой связкой\
+  \ можно легко адаптировать под себя абсолютно ЛЮБОЙ, даже самый сложный формат видео! \U0001F44C\U0001F3FC\n\nКстати, для новичков классная новость - промокод на скидку 20% SYNTX-START на первую покупку\
+  \ тарифа Basic\n\nПодписаться на ТГ КАНАЛ Профи Контента | Нейросети | ИИ\n  \n    Please open Telegram to view this post\n    VIEW IN TELEGRAM\n  \n\n  \n    Please open Telegram to view this post\n\
+  \    VIEW IN TELEGRAM"
+- |-
+  ### comments profiobzorov/2049
+  --- ЧАТ Профи Контента
+  Промпт для Seedance 2.5:
+  REFERENCES:
+  @video1 is the camera and timing master. Copy its camera movement exactly: same path, same speed, same acceleration, same duration, same lens, same framing, same motion blur, and the animal's position, pose, scale and behavior in frame. Every camera move in @video1 must be reproduced completely and at identical speed, from the first frame to the last frame. Do not inherit its room, furniture, carpet, lighting, color grading or original subject.
+  @image1 defines ONLY the replacement dog. Preserve this dog's face, eye color, fur color, fur pattern, fur length, ear shape, body size and proportions exactly as shown in @image1. The dog wears a bright outfit. Do not inherit the background, floor, furniture or lighting from @image1.
+  @image2 defines ONLY the environment. Preserve this room, its layout, furniture, floor, materials, colors and lighting exactly as shown in @image2. Do not inherit any camera angle or framing from @image2.
+  ---
+  VIDEO PROMPT:
+  Recreate @video1 with the dog from @image1 inside the environment from @image2. The dog sits on the floor of @image2, taking the exact same position, pose, scale, orientation and behavior as the original subject at every moment of the video, head and eyes following the camera the same way. The furniture of @image2 appears where the original room's furniture appeared along the camera path. If the dog is larger or smaller than the original subject, keep its body center and floor position identical and scale the body naturally. The lighting of @image2 wraps the fur naturally, with matching shadows on the floor and correct occlusion as the camera passes furniture. Photorealistic, real fur physics, natural animal motion.
+  Camera lock: the camera is a frame-by-frame copy of @video1. It performs a series of sharp, rapid whip-pan movements to instantly change angles, perfectly synchronized to the beat of the music track. Each camera movement creates motion blur, then the camera abruptly stops at a new angle. The sequence includes: sharp transition from close-up at eye level → high angle looking down from above → low angle looking up from floor level → wide shot showing the entire room → diagonal medium shots from various sides. The full sequence must be completed within the 7-second duration. Do not slow the camera down, do not shorten or cut the move, do not stop early, and do not add any camera move that is not in @video1. Whip-pan speed and motion blur intensity match @video1 exactly. Between sharp movements, the camera is completely static.
+  AUDIO: quiet room tone, soft fur and floor sounds, music track synchronized with camera movements.
+  CONSISTENCY: Exactly one dog. Same dog identity from @image1 and same room from @image2 from first frame to last. Camera path, speed, direction and timing identical to @video1 for the entire duration. The dog remains perfectly still and centered, maintaining eye contact with the camera. The comedic contrast is created between the dog's calm, motionless behavior and the dynamic sharp camera movements around it.
+  NEGATIVE PROMPT: no second animal, no original subject from @video1, no identity change, no breed change, no eye color change, no fur pattern drift, no slow camera, no slow motion, no incomplete sequence, no camera stopping early, no static hold, no shortened camera move, no change to camera path, speed or direction, no new cuts, no original room from @video1, no room layout drift, no flicker, no cartoon, no cheap CGI, no on-screen text, no watermark.
+  --- Ifo Fotp
+  интересно, надо будет попробовать на выходных
+  --- Mary
+  получилось. но собаку на второй половине видео с референса взял
+  --- Стелла Варданян
+  Это что за пушка🤌🤌🤌🤌
+  --- Luna Whitaker
+  Вот это поворот, жду фокус!
+  --- Deleted Account
+  Офигенно, как же это круто!
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://t.me/profiobzorov/2049
+duplicates_of: []

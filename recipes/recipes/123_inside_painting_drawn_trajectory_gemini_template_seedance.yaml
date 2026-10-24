@@ -1,0 +1,92 @@
+id: 123_inside_painting_drawn_trajectory_gemini_template_seedance
+source_file: 123_inside_painting_drawn_trajectory_gemini_template_seedance.md
+title: '«Внутри картины»: рисуешь траекторию камеры на картине → Gemini по шаблону пишет промпт 3D-облёта → Seedance 2.0'
+intent_tags:
+- other
+use_when: 'Развитие приёма 70 (нарисованный путь дрона), но с мета-промптом: Gemini переводит нарисованную на картине стрелку в физическое 3D-движение камеры с параллаксом (передний план быстрее, фон медленнее),
+  запрещает зум/рывки и требует убрать линию из кадра. Готовый промпт + картина с линией → Seedance.'
+inputs:
+- стартовый кадр
+steps:
+- n: 1
+  action: Выбрать картину, нарисовать на ней траекторию камеры.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'LLM (у автора Gemini 3.1 Pro): картина с траекторией + мета-промпт из комментария.'
+  tool:
+  - Gemini
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Seedance 2.0: картина с траекторией + полученный промпт → генерация.
+
+    (Из комментариев: для фото тот же порядок — промпт в Gemini пишется под ваше изображение.)'
+  tool:
+  - Seedance
+  - Gemini
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: previous_step_output
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "=== https://t.me/profiobzorov/1934 2026-08-04T13:17:31+00:00\n\U0001F5BC КАК ОКАЗАТЬСЯ ВНУТРИ КАРТИНЫ? \U0001F468‍\U0001F3A8\n\nТакие ролики за пару дней набрали миллионы просмотров у зарубежных блогеров\U0001F92F\
+  \ Вы задаете траекторию движения камеры, а нейросеть полностью воссоздает её! Получается очень завораживающе.\n\nИНСТРУКЦИЯ:\n1️⃣Выбираем картину, по которой мы будем путешествовать и рисуем на ней траекторию\
+  \ движения камеры.\n\n2️⃣Переходим в SYNTX (куда удобно):\n\U0001F4F1 ТГ БОТ SYNTX или\n\U0001F4BB WEB ВЕРСИЯ\n\n❗️Обратите внимание, если у вас нет Telegram Premium, то отправить длинный промпт в ТГ\
+  \ БОТ SYNTX не получится. Для работы используйте WEB ВЕРСИЮ.\n\n3️⃣Переходим в раздел Текст ⏩ открываем новый чат и выбираем текстовую модель ( у нас это Gemini 3.1 pro. \nОтправляем картину  с траекторией\
+  \ и задание.\n\n\U0001F4CEПромпт оставили для вас в комментариях.\n\n4️⃣Копируем получившийся промпт и переходим в раздел Видео ⏩ нейросеть Seedance 2.0.  \n\n5️⃣Выставляем настройки, загружаем картину\
+  \ с траекторией и вставляем наш получившийся промпт и отправляем на генерацию.\n\n☑ Через пару минут получаем наше видео.\n\n✔️ Подписывайтесь на ТГ КАНАЛ Профи Контента | Нейросети | ИИ, чтобы первыми\
+  \ забирать самые горячие нейро-тренды!\n  \n    Please open Telegram to view this post\n    VIEW IN TELEGRAM\n  \n\n  \n    Please open Telegram to view this post\n    VIEW IN TELEGRAM"
+- |-
+  ### comments profiobzorov/1934
+  --- ЧАТ Профи Контента
+  Промпт для Gemini:
+  You are an elite AI video prompt engineer. I am giving you an image of a painting. I have manually drawn a trajectory line/arrow on it.
+  YOUR GOAL: Translate this drawn 2D line into a highly descriptive, physical 3D camera movement inside a volumetric space. The video AI (like Seedance) usually tries to treat paintings as flat 2D images. Your prompt MUST force the AI to treat this as a real physical movie set with deep Z-axis depth.
+  CRITICAL RULES:
+  ERADICATE THE LINE: The drawn line/arrow is ONLY for your understanding. Explicitly command the AI to remove it.
+  3D VOLUME: Translate the arrow's curve into an orbit, dolly, or arc. If the line goes around a person, describe how the camera reveals their back/side and how background objects shift.
+  EXACT FORMAT: Use the exact structure below. Output ONLY the final prompt in English. No conversational text.
+  USE THIS EXACT TEMPLATE AND TONE:
+  FIRST FRAME: exactly the reference image, full composition, untouched. NO drawn lines, NO arrows, NO trajectory marks from the reference - they must be completely absent. The shot opens on this identical framing and the camera is already easing into motion from the very first frame. It never holds, never hovers.
+  The reference image is a REAL 3D PHYSICAL SPACE with massive depth. [Describe the room/environment: specify what is the foreground, midground, and background wall. Explicitly state this is a 3D space, solid bodies on a real floor, NOT a flat picture.]
+  Preserve everything exactly: [Describe the characters, their poses, clothes, objects, colors, lighting, and original art style/brushwork in extreme detail]. Faces, proportions, costumes, props, scale and layout never change.
+  CAMERA, one unbroken [X] second orbit/arc, no cuts, one direction only:
+  [Look at my drawn arrow. Describe the camera travelling deep into the Z-axis. Example: "The camera arcs right and forward, curving around the subject, crossing the plane the figures stand on and passing behind them. Their backs turn toward the lens while the background sweeps away." Translate the arrow into physical spatial movement through the room].
+  CAMERA RULES: one direction the entire time based on the trajectory. Never reverses. Never zooms in and out (NO digital zoom). No push-pull, no crash zoom, no whip pan, no snap, no shake, no flat panning. Speed eases in over the first half second, builds through the middle of the arc. Momentum, not urgency. A physical camera moving through real volume.
+  CAMERA FEEL: a real gimbal on a moving dolly arc, not a CG rail. Organic, not robotic. Deep spatial penetration into the scene.
+  PARALLAX IS THE POINT: every layer must separate at a different rate as the camera moves. [Explicitly list what occludes what. E.g., "The foreground object moves fastest, blocking the midground character, while the background wall shifts slowly." Describe how angles change in 3D]. This is a solid room being circled, not a flat image being warped.
+  The only motion in the scene: both figures breathe slowly and blink once, flame flickers gently, heavy fabrics settle a fraction. Nothing else moves. Nobody turns, gestures or changes expression. No morphing, stretching, melting or reshaping of faces, hands, bodies or objects. If a detail rotates out of view it simply leaves frame, it is never invented or reshaped.
+  Cinematic, 24fps, shallow depth of field with focus riding the subjects, filmic grade the original palette, fine grain, no colour shift. No captions, watermarks or on-screen writing. No music, foley only, faint room tone.
+  --- Deleted Account
+  А для фотографий?
+  --- Глеб Морозов
+  совпадение, недавно наткнулся на подобный трюк в инсте, где пользователь вписал траекторию движения камеры на картине и нейросеть создала видео, что смотрелось как если бы камера была внутри картинки.
+  --- ЧАТ Профи Контента
+  В Gemini вы создаете промпт для конкретно вашей картины с траекторией, а потом отправляете его в Seedanse
+  --- Зинаида Страво
+  выглядит конечно прикольно, но кажется, что слишком много заморочек с этими настройками
+  --- Людмила Зверева
+  Это офигенно!
+  --- Златовласка
+  Ого какую песню поставили.
+  --- ТА
+  а что за песня?
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://t.me/profiobzorov/1934
+duplicates_of: []

@@ -1,0 +1,72 @@
+id: 100_restore_old_photo_hug_younger_self
+source_file: 100_restore_old_photo_hug_younger_self.md
+title: 'Старое фото: реставрация → «я сегодняшний обнимаю себя маленького» → Seedance первый/последний кадр'
+intent_tags:
+- client_in_clip
+- seamless_series
+- family_photos
+use_when: 'Старое фото → реставрация одной правкой (gpt-image-2-edit) → кадр Seedream 5, где человек сегодня обнимает себя на старом фото → 6-секундный Seedance 2.5 1080p: первый кадр = отреставрированное
+  фото, последний = объятие. Сегодняшний «я» входит сбоку и обнимает.'
+inputs:
+- фото лица/портрет человека
+- стартовый кадр
+- финальный кадр
+- старое фото
+steps:
+- n: 1
+  action: 'gpt-image-2-edit: убрать заломы, трещины, пыль, рамку, вернуть цвет, лицо не менять.'
+  tool:
+  - GPT Image
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Seedream 5, рефом отреставрированное фото (+ фото «сегодня»): объятие щека к щеке в том же месте, тёплый свет.'
+  tool:
+  - Seedream
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: Проверить оба лица.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: 'Seedance 2.5, 1080p, 6 с: первый кадр = отреставрированное фото, последний = объятие; мягкое пианино.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: 6 с
+  aspect: unknown
+prompts_verbatim:
+- |-
+  ##### restore-and-hug-younger-self | Restore an old photo and hug your younger self
+  What you provide
+  The old photo (image)
+  Who you are today (or upload a photo of you now) (text)
+  What Sensei does
+  The old photo restored, the face kept
+  You today, hugging your younger self
+  One tender 6-second shot from the photo to the hug
+  The brief Sensei follows
+  Restore the old photo {{old-photo}} with one edit (gpt-image-2-edit): remove creases, cracks, scratches, dust, torn edges and the border, correct the faded colour and sharpen it, the face, hair and clothes kept exactly the same. Then make a still on Seedream 5 with the restored photo as the reference: the same person then, embracing themself today ({{today}}), cheek to cheek in the same place, warm light. Check both faces against the photos with pixeldojo_look. Then make a 6-second Seedance 2.5 shot at 1080p with the restored photo as the first frame and the embrace as the last frame: the older self walks in from the side and they hug, one continuous tender shot, soft piano and natural ambience.
+output:
+  format: mp4
+  resolution: 1080p
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: запуск самого агента Sensei — нужен аккаунт PixelDojo (платно)
+source_url: https://pixeldojo.ai/recipes/restore-and-hug-younger-self
+duplicates_of: []

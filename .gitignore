@@ -8,3 +8,6 @@ logs/
 .DS_Store
 coverage/
 desktop/dist/
+
+__pycache__/
+*.pyc

@@ -1,0 +1,86 @@
+id: 158_h3_change_angle_sketch_22frames
+source_file: 158_h3_change_angle_sketch_22frames.md
+title: 'Сменить ракурс любой картинки: MiniMax H3 Ref2Vid на 22 кадра + скетч-раскадровка как реф → берёте один кадр'
+intent_tags:
+- other
+use_when: 'Ref2Vid-модель используется как генератор кадров: длина ровно 22 кадра, выход VAE Decode сразу в Save Image. Простой скетч нового ракурса добавляется как ещё один реф и объявляется раскадровкой
+  Shot 1. Из 22 кадров берёте лучший — получается та же сцена и тот же персонаж под новым углом (ключевой ка'
+inputs:
+- unknown
+steps:
+- n: 1
+  action: 'Любой базовый Ref2Vid-воркфлоу H3: длина видео ровно 22 кадра; выход VAE Decode подключить к Preview/Save Image.'
+  tool:
+  - MiniMax H3
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Рефы: фон, персонажи, реквизит.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: Нарисовать простой скетч сцены с нового места/ракурса и добавить последним рефом.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: В промпте описать содержимое скетча и недостающие детали; в subject_definitions добавить строку про storyboard reference.
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 5
+  action: Сгенерировать, выбрать один из 22 кадров.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  <Picture N> is a storyboard reference for [Shot 1], defining its viewpoint and subject placement.
+- |-
+  subject_definitions:
+  <Subject 1> is the stylish, modern open-plan living and dining area in <Picture 1>, featuring an integrated kitchen, characterized by clean lines, a neutral color palette, warm wood accents, and polished concrete floors.
+  <Subject 2> is the woman in <Picture 2>, with long, curly red hair, freckles, wearing a green sweater, blue jeans and sneakers.
+  <Picture 3> is a storyboard reference for [Shot 1], defining its viewpoint and subject placement.
+
+  summary:
+  [reference generation] The target video shows <Subject 2> sitting on the off-white sofa in <Subject 1>.
+
+  retention_analysis:
+  <Subject 1> (appears in [Shot 1]): fully_preserved - the stylish, modern open-plan living and dining area featuring an integrated kitchen is retained.
+  <Subject 2> (appears in [Shot 1]): fully_preserved - the long, curly red hair, freckles, green sweater, blue jeans and sneakers are retained.
+
+  detailed_description:
+  The target video uses a cinematic, live-action style.
+  [Shot 1] A static medium shot frames <Subject 2> - the red-haired woman with freckles, a green sweater and blue jeans - sitting on the plush, off-white sectional sofa adorned with matching throw pillows and a grey blanket casually draped over a sitting cushion in <Subject 1>. The shot starts with the exact composition and subject placement established in <Picture 3>. To the left of the couch is a small decorative side table with a plant on it. <Subject 2> is shown in profile, facing left, with her arms in her lap and her right leg crossed over her left. In the background, the dining and kitchen areas are visible, along with the single white pillar separating them from the sofa.
+
+  overall_soundscape:
+  N/A
+
+  non_diegetic_music:
+  N/A
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://www.reddit.com/r/StableDiffusion/comments/1xd0ter/
+duplicates_of: []

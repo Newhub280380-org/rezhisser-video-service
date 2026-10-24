@@ -1,0 +1,37 @@
+id: 037_h3_transformation_timeline_structure
+source_file: 37_h3_transformation_timeline_structure.md
+title: Превращение одним планом по таймкодам (одежда/образ меняются, камера неподвижна) — структура промпта
+intent_tags:
+- other
+use_when: Превращение одним планом по таймкодам (одежда/образ меняются, камера неподвижна) — структура промпта
+inputs:
+- фото в полный рост
+- стартовый кадр
+steps:
+- n: 1
+  action: unknown (в источнике нет нумерованных шагов; см. prompts_verbatim)
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "Having fun, R2VA, with just a .char (face/body/original wardrobe). Part II had two wardrobe changes from the intial source image (re-wardrobe to a private school uniform and then to Sailor Moon's) in\
+  \ the prompt. int8/20 steps, 864x480 POC, the token limit was close so it'll probably need a latent upscaler vs native 720 generation.  \n\n    Prompt: integrated_multimodal_description: One unbroken,\
+  \ continuously transforming shot — PHOTOREAL LIVE-ACTION, a real woman performing a magical transformation made physical: real skin, real cloth, real hair, true optical depth of field, fine film grain.\
+  \ Absolutely no animation, no anime, no illustration — live-action camera realism throughout, however magical the event. THE CAMERA IS LOCKED OFF FOR THE WHOLE FILM — one steady FULL-BODY hold, her whole\
+  \ figure from head to feet in frame from the first frame to the last; it never pushes in, never pulls back, never zooms, never orbits, never cuts and never drifts.\n    SHE IS CATALINA, the woman of the\
+  \ reference images — the same face, the same features; her face, whenever visible, is exactly her own, photographic and alive, and it is the constant of the film. THE FIGURE ARC, A GAG PLAYED COMPLETELY\
+  \ STRAIGHT: she BEGINS with a modest, unremarkable figure — a small bust under the tailored blazer, an ordinary waist — and THE TRANSFORMATION UPGRADES HER: from the silhouette phase onward her figure\
+  \ is the pronounced hourglass of the reference images — a full, very large bust and a notably slim wais"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: Жёсткий замок камеры + константа лица + расписанный таймлайн.
+confidence: B
+prompt_completeness: partial
+notes: —
+source_url: null
+duplicates_of: []

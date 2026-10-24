@@ -1,0 +1,139 @@
+id: 162_boss_notification_phone_frame_then_driver_throws_phone_car_flies_seedance25_omni
+source_file: 162_boss_notification_phone_frame_then_driver_throws_phone_car_flies_seedance25_omni.md
+title: 'Стартовый кадр «уведомление от босса» на экране телефона → Seedance 2.5 omni: ваше лицо за рулём, телефон летит в окно, родстер взлетает с рампы (смешная концовка)'
+intent_tags:
+- client_in_clip
+- seamless_series
+- meme
+use_when: 'Трёхсоставной omni-референс: @Image1 — стартовый кадр (крупно телефон с уведомлением «Boss: Quick call? I have 47 slides»), @Image2 — ваше лицо, @Video1 — видео взлёта машины (поза, салон, рампа,
+  камера). 4 шота с жёсткими склейками: вибрация телефона → водитель «всё, хватит», выдох → телефон летит '
+inputs:
+- фото лица/портрет человека
+- видео-референс (движение/клип)
+- стартовый кадр
+- аудио/голос
+- логотип
+steps:
+- n: 1
+  action: 'Шаг 1 — картинка стартового кадра: промпт 1 в генератор картинок (автор: ChatGPT или Gemini; по брифу — Gemini); подменить отправителя/текст уведомления на свой.'
+  tool:
+  - GPT Image
+  - Gemini
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Шаг 2 — Seedance 2.5 (omni reference): @Image1 = стартовый кадр (START FRAME), @Image2 = фото лица (анфас, хороший свет, без очков и кепки), @Video1 = видео взлёта (VIDEO REFERENCE).'
+  tool:
+  - Seedance
+  mode: omni
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Настройки: 13 с, 3:4 (или 9:16 для TikTok/Reels), 720p, звук включён. Без фото лица — пропустить @Image2 и описать водителя в промпте.'
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: 13 с
+  aspect: '3:4'
+- n: 4
+  action: 'Ответ автора: если длительность в промпте отличается от длины референса, тайминг следует промпту, результат от генерации к генерации может отличаться.'
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: previous_step_output
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  🎬 Reference order for Seedance 2.5 (omni reference):
+
+  1️⃣ Your phone screen image → upload as the START FRAME
+  2️⃣ Your face photo → upload as an IMAGE REFERENCE (front-facing, close-up, good light, no glasses or cap)
+  3️⃣ The take-off video → upload as a VIDEO REFERENCE
+
+  ⚙️ Settings: 13 sec · 3:4 (or 9:16 for TikTok/Reels) · 720p · sound on
+
+  No face photo? Skip step 2 and describe your driver in the prompt instead 🚗💨
+
+  🚀 How to take off in 2 steps:
+
+  1️⃣ Make your starter frame: paste this prompt into ChatGPT or Gemini and swap
+  in your own message:
+  Vertical 3:4 photo, a cinematic extreme close-up of a modern black iPhone held
+  in two hands, filling almost the entire frame, tilted slightly to the right.
+  Only the edges of the fingers are visible: a thumb at the lower right corner
+  and fingertips at the lower left. The background is almost black, with only a
+  few faint, soft blue bokeh dots. No car interior, no windshield, no other
+  lights or objects.
+
+  The screen is sharp and in focus. At the top: the Dynamic Island, a small
+  status bar with the time "18:24" on the left and signal, Wi-Fi and battery
+  icons on the right. The wallpaper is a soft, blurred blue and white gradient.
+  In the upper middle of the screen there is one large, light frosted-glass
+  Messages notification card spanning the full width of the screen: a green
+  Messages icon on the left, the sender name in large bold black letters next to
+  it, and below it the message in large black letters on one line:
+  Sender: "Boss"
+  Message: "Quick call? I have 47 slides"
+  Perfectly spelled, no brackets, no buttons or extra labels on the card,
+  nothing else written anywhere in the image.
+
+  Dim, cool, low-key lighting, the screen is the brightest part of the image,
+  cinematic 35mm film look, shallow depth of field, photorealistic.
+
+  2️⃣ Bring it to life: upload the image to any AI video generator as the first
+  frame and use this prompt:
+  @Image1 is the first frame: an extreme close-up of a smartphone held in the
+  driver's hands, a work notification on the screen, an almost black background.
+  @Image2 is the driver: use this person's face, hair, skin tone and facial
+  features in Shot 2. Do not use the face of the man from @Video1.
+  @Video1 is the reference for everything else after Shot 1: the driver's pose
+  and framing, the car interior and its teal lighting, the silver-grey futuristic
+  roadster, the giant curved concrete ramp with a thin red neon edge, the dark
+  night space, the camera angles and the exact motion of the car. Keep them
+  exactly as in @Video1. Ignore the timing and the order of shots in @Video1,
+  follow the timeline below.
+
+  Cinematic night car commercial, four shots with hard cuts, low-key lighting
+  with teal and red accents, 35mm film look.
+
+  Shot 1 (0-2s): Exactly as @Image1. The phone stays perfectly still and the
+  notification on the screen does not change at all. The phone buzzes once.
+  <phone buzz, notification chime>
+
+  Shot 2 (2-5s): The driver close-up framed exactly like in @Video1, seen
+  through the windshield, but the driver is the person from @Image2, lit by the
+  same cold teal overhead light. The phone screen faces away from the camera.
+  The driver stares at the phone, freezes, then slowly looks up with a
+  completely done-with-it expression and exhales. <long exhale>
+
+  Shot 3 (5-7s): The rear view of the roadster from @Video1. The phone flies out
+  of the open driver's window, tumbles through the air and clatters onto the
+  concrete floor next to the car. <phone hitting concrete>
+
+  Shot 4 (7-13s): The ramp shot from @Video1, the same wide static camera: the
+  roadster accelerates up the giant curved ramp until it drives straight up the
+  vertical wall, flies off the top edge into the night sky, levels out in the
+  air and three thrusters under the car fire blue-white jets as it flies away.
+  The video ends with the car flying through the dark sky, before any landing.
+  <electric whine rising, jet thrusters roaring>
+
+  Audio: sound effects only, no music, no dialogue. The notification in Shot 1
+  is the only text in the video: no subtitles, no captions, no logos.
+output:
+  format: mp4
+  resolution: 720p
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: Само видео-референс @Video1 (ролик взлёта родстера) — вложение к первому посту ветки, не скачивалось (видео не смотрю). Для шага 1 автор пишет «ChatGPT или Gemini» — по брифу брать только Gemini
+  (или любой другой генератор картинок).
+source_url: https://x.com/EndorphinaGames/status/2112511299963834877
+duplicates_of: []

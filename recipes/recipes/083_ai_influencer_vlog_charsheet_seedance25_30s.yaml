@@ -1,0 +1,67 @@
+id: 083_ai_influencer_vlog_charsheet_seedance25_30s
+source_file: 83_ai_influencer_vlog_charsheet_seedance25_30s.md
+title: '# 83 — Влог AI-инфлюенсера 30 с с несколькими сценами, сменой нарядов и репликами: Nano Banana Pro → лист персонажа → референсы образов → ChatGPT раскладывает по сценам → Seedance 2.5 (audio, 30
+  с) одним проходом'
+intent_tags:
+- other
+use_when: '# 83 — Влог AI-инфлюенсера 30 с с несколькими сценами, сменой нарядов и репликами: Nano Banana Pro → лист персонажа → референсы образов → ChatGPT раскладывает по сценам → Seedance 2.5 (audio,
+  30 с) одним проходом'
+inputs:
+- фото в полный рост
+- аудио/голос
+steps:
+- n: 1
+  action: ChatGPT пишет детальный промпт персонажа (лицо, тело, причёска). OpenArt → Tools → Create Image → Nano Banana Pro, 3:4, 2K/4K.
+  tool:
+  - Nano Banana
+  - GPT Image
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: '3:4'
+- n: 2
+  action: 'Лист персонажа: «front close-up, full-body front, and full-body back views against a plain grey background».'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Референсы: героиня в разных нарядах, позах, локациях (лист — как референс).'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: 'ChatGPT: разложить влог по сценам — действие, наряд, реплика и **какой референс в какой сцене**; длину реплик подогнать под длительность.'
+  tool:
+  - GPT Image
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 5
+  action: OpenArt → Video → Seedance 2.5 → Text to Video → загрузить референсы → промпт → **audio on, 30 seconds**, 9:16 или 16:9. Явно указать сохранять одну идентичность героя на всё видео.
+  tool:
+  - Seedance
+  mode: Text to Video
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: '9:16'
+prompts_verbatim: []
+output:
+  format: mp4
+  resolution: 4K
+  aspect: '9:16'
+done_criteria: unknown
+confidence: C
+prompt_completeness: gaps
+notes: конкретные промпты в посте не приведены
+source_url: https://x.com/geezmedia01/status/2109350381331353945
+duplicates_of: []

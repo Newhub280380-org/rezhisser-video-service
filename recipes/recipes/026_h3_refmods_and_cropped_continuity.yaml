@@ -1,0 +1,48 @@
+id: 026_h3_refmods_and_cropped_continuity
+source_file: 26_h3_refmods_and_cropped_continuity.md
+title: RefMods (латенты референсов), Prompt-Builder и кроп разрушенной стены как референс непрерывности
+intent_tags:
+- other
+use_when: RefMods (латенты референсов), Prompt-Builder и кроп разрушенной стены как референс непрерывности
+inputs:
+- видео-референс (движение/клип)
+steps:
+- n: 1
+  action: unknown (в источнике нет нумерованных шагов; см. prompts_verbatim)
+  tool:
+  - MiniMax H3
+  - ComfyUI
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  When MiniMax-H3 launched I found myself wanting to test how well it handled things. Specifically I wanted to look at cinematic realism, combat, and environment continuity. I shifted to a different project for a few weeks, but wanted to come back to this to edit it into a scene. This is what I ended up with.
+
+  Some take aways I found (most likely well known by now)
+
+  \- Realism is improved via prompt and generation MP. The higher the better. About 3/4 of the way through making these videos I switched to [PlagueKind's workflow](https://huggingface.co/Plaguekind/Minimax-H3) and a fast version of the model [minimax\_h3\_fastvideo\_vsa\_datafree\_1300step\_4step\_int8\_convrot](https://huggingface.co/Kijai/MiniMax-H3-experimental/blob/main/minimax_h3_fastvideo_vsa_datafree_1300step_4step_int8_convrot.safetensors) and found myself able to produce better overall quality videos at higher MP in less time. I can now produce a 1MP 10 second clip at 8 steps in under 6 minutes on my 5070ti. So happy with that!
+
+  \- Normal motion is handled great by the model, fast motion is a limitation. Deroping is a method introduced to help but at the cost of extra gen time. Frame interpolation can help a lot with smoothing frame jitter out with almost no extra cost to gen time.
+
+  \- Combat requires patience and a LORA or two. [This LORA ](https://civitai.com/models/2853878/minimax-h3-combat-base-fight-motion-impact-drama-booster)helped a lot. Editing helped with the rest.
+
+  \- Wide shots (from a distance) struggles with faces. [FaceRefine ](https://github.com/Carasibana/ComfyUI-H3-FaceRefine)helps but is best with only a single subject in the shot.
+
+  \- Expressions can be easily applied with additional references. At first when using just my character sheets it would give the character the basic neutral facial expression from the sheet. By adding a separate reference with an expression, adding it to retention\_analysis, and then calling it out directly in the shot description, it did a much better job.
+
+  \- Scene continuity was much easier to get the model to keep environment destruction consistent then I expected. I basically only had to take a cropped version of a shot showing the destroyed wall, use it as a reference image, and then ensure I instructed the model to take note of it within the retention\_analysis. It sometimes duplicated damage to the wrong wall, but it basically always keep it in the scene. I used the same sort of technique for character position consistency between shots.
+
+  Overall I am happy with the result. I have recently began testing refmod use and more detailed composition blocking. There is still so much to discover and improve with this model!
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: Новый кадр получает кроп прошлого кадра с повреждением и строку в retention_analysis — состояние сцены сохраняется.
+confidence: B
+prompt_completeness: partial
+notes: —
+source_url: https://huggingface.co/Plaguekind/Minimax-H3)
+duplicates_of: []

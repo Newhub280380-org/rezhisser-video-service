@@ -1,0 +1,54 @@
+id: 040_reference_photo_lock_dentist_ugc
+source_file: 40_reference_photo_lock_dentist_ugc.md
+title: Блокировка лица по референс-фото в 8-секундном UGC (ЗУБНОЙ ВРАЧ) — шаблон фразы
+intent_tags:
+- product_ad
+- talking_head
+- client_in_clip
+use_when: Блокировка лица по референс-фото в 8-секундном UGC (ЗУБНОЙ ВРАЧ) — шаблон фразы
+inputs:
+- стартовый кадр
+steps:
+- n: 1
+  action: unknown (в источнике нет нумерованных шагов; см. prompts_verbatim)
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "This dentist knows how to treat teeth better\U0001F601\n\nSeedance 2.5 on @makeugc \n\nPrompt:\n\nUse the attached reference photo of the young woman as the ONLY source for her face, eyes, pink hair,\
+  \ skin tone, freckles, lips, necklace and top. She must look like the exact same person, wearing the exact same top, as in the reference in every frame of the video.\n\nEight-second vertical 9:16 handheld\
+  \ phone video, one continuous take inside a crowded dental treatment room. A young woman reclines in a dental chair while an assistant lays a paper bib on her, then a dentist leans quickly into the frame,\
+  \ rips the bib off, throws it on the floor, and examines her open mouth. The clip ends mid-examination, with her mouth open and the dentist focused.\n\nREFERENCE LOCK\nThe woman in the video is the woman\
+  \ from the reference photo: same face shape, same light grey-blue eyes, same thick natural brows, same freckles, same full glossy lips, same warm tanned skin, same long pastel pink wavy hair with a centre\
+  \ parting. She wears the same top as in the reference photo: a fitted white ribbed cotton tank top with a rounded scoop neckline and thin shoulder straps, with the same fabric texture, same white colour,\
+  \ same fit. Her face, hair colour, hair length, skin tone and top do not change, age, morph or drift at any point, in any angle, including when the bib covers her face and when she opens her mouth. No\
+  \ face swap, no alternate look-alike, no beautification filter, no change of identity or top between shots.\n\nMAIN SUBJECT\nYoung woman, early twenties, exactly as in the reference photo. Long thick\
+  \ pastel baby-pink hair falling past her shoulders in soft loose waves, centre parting, slightly darker natural roots at the part. Light grey-blue eyes, long dark lashes, thick natural softly arched brows,\
+  \ light freckles across the nose and cheeks, warm golden tanned skin, peachy pink blush on the cheeks. Full lips with a glossy nude-pink finish, relaxed closed-mouth half-smile with a slight smirk. Thin\
+  \ silver chain necklace with one small round crystal solitaire pendant. Top exactly as in the reference: fitted white ribbed cotton tank top, rounded scoop neckline, thin straps, thick opaque fabric that\
+  \ stays in place. She also wears beige high-waisted wide-leg trousers and white sneakers. Athletic, toned, natural build. She sits reclined in the chair with arms resting along the armrests.\n\nLOCATION\n\
+  Small dental treatment room, about 3 by 3 metres. Foreground: a beige-and-grey dental chair with grey padded armrests, the woman seated in it, grey tiled floor beside the chair. Midground: a cabinet with\
+  \ a dark red cloth folded on it, a bright green dental tool unit. Background: pale walls and a doorway. Four people around her: an assistant in a pink ribbed top, a second assistant in blue scrubs carrying\
+  \ a white canvas tote bag, a dentist in a black T-shirt, surgical mask and magnifying loupes, and one more person in black trousers crouching at the left edge. A thin grey suction tube hangs from the\
+  \ chair.\n\nCAMERA AND LOOK\nHandheld phone camera, high three-quarter angle looking down at the chair from about 1.5 metres, vertical frame, woman always centred with her face, the chair and the floor\
+  \ beside it visible. Hand shake, delayed autofocus, mild bloom, faint noise, muted contrast. One light source: flat overhead clinic fluorescent light, soft shadows, natural skin tone. No glossy beauty\
+  \ lighting, no artificial rim light, no heavy grading. Camera and operator never appear.\n\nCONTINUOUS STORY\n\n00:00-00:02 THE BIB IS PLACED\nFirst frame already in motion. The woman from the reference\
+  \ looks into the lens with a calm, slightly amused expression, pink hair resting over both shoulders, white ribbed tank top as in the reference. The assistant in the pink top raises ONE white paper dental\
+  \ bib, ribbed and creased, in front of her face for a moment, then lays it flat across the front of her torso over the white tank top and smooths it down with both hands. When her face is uncovered it\
+  \ is the same face as in the reference. She does not move, only blinks.\n\n00:02-00:04 THE DENTIST RIPS IT OFF AND THROWS IT\nThe dentist in the black T-shirt, mask and loupes drops fast into the frame\
+  \ from the left, leaning over her. His left hand grips the top edge of the bib, rips it off her torso in one quick upward-and-sideways motion with a sharp tearing snap, and tosses it down to the floor\
+  \ on the lower left. The bib flutters for a moment, hits the tiled floor and lies there flat and crumpled. Her wh"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '9:16'
+done_criteria: Фраза «ONLY source for face, eyes, hair, skin tone…, she must look like the exact same person in every frame» + одно непрерывное вертикальное видео.
+confidence: B
+prompt_completeness: partial
+notes: Хвост промпта.
+source_url: https://x.com/ZentrixHQ/status/2109489902500901078
+duplicates_of: []

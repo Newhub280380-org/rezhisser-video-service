@@ -1,0 +1,138 @@
+id: 001_two_performers_swap_seedance_kling
+source_file: 01_two_performers_swap_seedance_kling.md
+title: 'Подмена двух исполнителей в вирусном клипе (Hotel Lobby): 2 фото + видео-референс'
+intent_tags:
+- client_in_clip
+- meme
+- motion_transfer
+use_when: 'Подмена двух исполнителей в вирусном клипе (Hotel Lobby): 2 фото + видео-референс'
+inputs:
+- фото лица/портрет человека
+- видео-референс (движение/клип)
+- стартовый кадр
+- логотип
+steps:
+- n: 1
+  action: 'Берёшь клип-образец (две фигуры, камера статичная) как Video 1; по одному фото на каждого человека (лицо открыто, свет ровный, один человек на фото) как Image 1 и Image 2. Фото загружать в порядке:
+    левый, потом правый.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Модель: Seedance 2.5 (ref-to-video) или Kling Omni (мульти-референс). Kling Motion Control берёт только ОДНОГО персонажа за прогон: для дуэта гонять дважды (по одному на сторону) и склеивать
+    в редакторе.'
+  tool:
+  - Seedance
+  - Kling
+  mode: ref-to-video
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Master-промпт (дословно со страницы, Seedance/другие модели с image+video референсом):
+
+    [PROMPT]'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt:
+  - |-
+    Recreate Video 1 exactly, replacing only its two performers with the two subjects from the uploaded photos. Image 1 and Image 2 are the identity references for the two replacement performers. Video 1 is the reference for everything else: location, background, set, lighting, composition, choreography, timing and camera work, including the microphone hanging between the performers.
+
+    REPLACEMENT:
+
+    The performer on the LEFT of Video 1 is replaced by the subject in Image 1 (LEFT PERFORMER). The performer on the RIGHT of Video 1 is replaced by the subject in Image 2 (RIGHT PERFORMER). Each uploaded subject stays matched to the same original performer for the entire clip; their identities never swap. Nothing about the people in Video 1 is used: not their faces, hair, skin tone, body shape, clothing or accessories.
+
+    Preserve each subject's exact face, hairstyle or fur, skin tone, outfit, accessories and body proportions from their photo, in every frame. Keep a natural height difference between the two consistent with their photos. They are two different individuals: their faces must never blend, merge or exchange features, and nobody else takes their place. If a subject is an animal, it stands upright like a performer and moves its head and paws to the beat, keeping its own fur, markings and eye color.
+
+    BACKGROUND:
+
+    Keep the background of Video 1 completely unchanged: the same walls, floor, architecture, decorations, lighting, colors, reflections, background objects and spatial arrangement. Do not redesign, regenerate or replace the environment.
+
+    MOVEMENT AND CAMERA:
+
+    Follow the two original performers' body posture, gestures, head nods, positions, spacing, interactions and movement timing exactly, adapting them naturally to the new subjects. Preserve the original camera angle, framing, camera movement and shot duration of Video 1. Each performer stays on their own side for the whole clip.
+
+    AVOID:
+
+    Identity swapping, merged or distorted faces, changing outfits, inconsistent accessories, wrong height difference, extra or duplicated limbs, warped hands or paws, flickering characters, an unstable or altered background, sudden camera jumps, and any text, captions, logos, brand marks or watermarks.
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: 'Короткая версия для Seedance 2.5 (дословно):
+
+    [PROMPT]'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt:
+  - |-
+    Replace the two performers in @Video1. The person in @Image1 takes the LEFT performer's place and the person in @Image2 takes the RIGHT performer's place, for the whole clip, never switching sides. Keep each person's face, hair, outfit and body shape exactly as in their photo; the two faces never blend. Keep everything else from @Video1: the orange booth, the microphone hanging between them, the lighting, the choreography, the timing and the locked camera. No text, captions, logos or watermarks.
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 5
+  action: 'Версия Kling Omni (дословно):
+
+    [PROMPT]'
+  tool:
+  - Kling
+  mode: Omni
+  prompt:
+  - |-
+    Replace both performers in the reference video with the characters from image 1 and image 2. The character from image 1 replaces the performer on the left and the character from image 2 replaces the performer on the right; they stay on those sides for the whole clip. Keep their faces, hairstyles and outfits exactly as in their images, and never blend the two faces. Preserve the original background, the hanging microphone, actions, poses, camera movement, lighting and timing.
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 6
+  action: 'Если модель принимает только текст + стартовый кадр: сначала собрать стартовый кадр двух людей в Nano Banana / GPT Image (промпт на странице: "Use the person from the first photo and the person
+    from the second photo. Keep their faces, hairstyles, skin tones, outfits and body proportions exactly as in their photos. Place them side by side in a seamless matte-orange studio booth ... Vertical
+    9:16, eye-level camera, realistic photo. No text, no logos, no extra people."), затем анимировать текстовым промптом.'
+  tool:
+  - Nano Banana
+  - GPT Image
+  mode: unknown
+  prompt:
+  - Use the person from the first photo and the person from the second photo. Keep their faces, hairstyles, skin tones, outfits and body proportions exactly as in their photos. Place them side by side in
+    a seamless matte-orange studio booth ... Vertical 9:16, eye-level camera, realistic photo. No text, no logos, no extra people.
+  input_source: previous_step_output
+  duration: unknown
+  aspect: '9:16'
+- n: 7
+  action: 'Настройки со страницы: 9:16 или 16:9 как у оригинала; ~10 с; пробный прогон 480p, финал 720/1080p; камера статичная; звук выключить и накладывать трек в TikTok.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: 10 с
+  aspect: '9:16'
+- n: 8
+  action: 'Таблица «одна строка-фикс» (на странице): лица меняются → "Keep each face identical to its reference photo in every frame."; стороны меняются местами → "The person from Image 1 stays on the LEFT
+    and the person from Image 2 stays on the RIGHT for the entire clip."; лица сливаются → "They are two different individuals; their faces never blend, merge or exchange features."; камера ползёт → "Locked-off
+    tripod shot; no zoom, no pan, no cuts."'
+  tool: unknown
+  mode: unknown
+  prompt:
+  - Keep each face identical to its reference photo in every frame.
+  - The person from Image 1 stays on the LEFT and the person from Image 2 stays on the RIGHT for the entire clip.
+  - They are two different individuals; their faces never blend, merge or exchange features.
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim: []
+output:
+  format: mp4
+  resolution: 480p
+  aspect: '9:16'
+done_criteria: 'Видео-референс даёт хореографию, фон, свет и камеру; фото дают только личность. Промпт явно запрещает брать что-либо от оригинальных людей и привязывает каждую личность к стороне кадра.
+  Питомцы: «стоит на задних лапах как исполнитель, сохраняет свой мех/окрас».'
+confidence: B
+prompt_completeness: complete
+notes: Видео-образец не доступен (у автора встроенные 3 референс-исполнения в его генераторе). Реальный выход модели не проверялся.
+source_url: https://flowlioai.com/prompts/hotel-lobby-ai-prompt
+duplicates_of: []

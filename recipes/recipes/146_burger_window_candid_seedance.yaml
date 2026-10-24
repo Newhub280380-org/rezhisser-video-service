@@ -1,0 +1,76 @@
+id: 146_burger_window_candid_seedance
+source_file: 146_burger_window_candid_seedance.md
+title: Шуточный ролик «застукали с бургером в окне» — 3 рефа (пакет бренда, бургер, герой) → Seedance 2.5
+intent_tags:
+- product_ad
+use_when: 'Ночной «случайный» ролик с телефона: камера через двор зумит в окно, парень ест бургер из фирменного пакета, замечает съёмку и задёргивает шторы. Под рекламу еды: подставить свой пакет и продукт.'
+inputs:
+- аудио/голос
+steps:
+- n: 1
+  action: 'Подготовить 3 референса: @image1 — бумажный пакет, @image2 — бургер, @image3 — персонаж (лицо и пропорции; одежда задаётся текстом).'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Загрузить в видеомодель, сверить метки в интерфейсе (если сервис присвоил другие — поменять в промпте).
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: Seedance 2.5, 9:16, около 10 с, загрузить три референса, вставить промпт.
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: 10 с
+  aspect: '9:16'
+- n: 4
+  action: 'Проверка: персонаж узнаваем, одежда — голубая пижама.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  Create a 10-second photorealistic vertical video (9:16), designed to feel like an amusing candid phone recording at night. Stage the scene as one uninterrupted shot filmed from outside an apartment building courtyard.
+
+  REFERENCE IMAGES
+  @image1 — the takeaway paper bag. Match its brown color, shape, artwork and printed details closely.
+  @image2 — the burger. Keep its visible ingredients, size and appearance consistent.
+  @image3 — the boy. Preserve his recognizable face, hairstyle, rosy round cheeks and body proportions. Dress him in light blue pajamas.
+
+  SETTING AND ACTION
+  0–2 seconds: A quiet apartment building at night. One window glows warmly. From across the courtyard, the phone camera quickly zooms in toward that window. Add subtle handheld shake, slight focus adjustment and realistic low-light grain.
+
+  2–4 seconds: Through the window, the boy sits at a table. The takeaway bag is beside an open burger box, clearly visible. He picks up the burger with both hands, takes a big bite and enjoys it.
+
+  4–8 seconds: He notices the camera outside. His cheerful expression quickly shifts to surprise: his eyes widen and eyebrows lift. Then he gives the camera a funny, mildly annoyed look and stares directly toward it.
+
+  8–10 seconds: He sets the burger down, stands up and pulls the curtains shut in one quick motion. The camera wobbles slightly as if the person filming has been caught. End as the curtains close.
+
+  CAMERA AND SOUND
+  Keep the camera outside throughout the entire video. Use only a digital zoom; do not move the camera into the room. Make the action feel like a single continuous phone recording, with no cuts.
+
+  Add quiet giggling from two people behind the phone at the beginning. Let them laugh more when the boy notices the camera and closes the curtains. Use natural phone-microphone audio. No dialogue, music, captions, extra text or end card.
+
+  Maintain visual consistency across the boy, his pajamas, the burger, the packaging and the room. Keep the humor light and playful.
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего; референсные фото автора — картинки на странице
+source_url: https://t.me/poleznoe_ai/776
+duplicates_of: []

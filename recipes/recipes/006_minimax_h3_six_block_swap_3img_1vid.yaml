@@ -1,0 +1,66 @@
+id: 006_minimax_h3_six_block_swap_3img_1vid
+source_file: 06_minimax_h3_six_block_swap_3img_1vid.md
+title: 'Шаблон 6 блоков для замены актёра: 3 картинки героя (лицо / в рост / профиль) + видео + аудио'
+intent_tags:
+- client_in_clip
+use_when: 'Шаблон 6 блоков для замены актёра: 3 картинки героя (лицо / в рост / профиль) + видео + аудио'
+inputs:
+- фото лица/портрет человека
+- фото в полный рост
+- видео-референс (движение/клип)
+- аудио/голос
+steps:
+- n: 1
+  action: 'Подключить в MiniMaxH3ReferenceToVideo: ref_image_1 = чёткий портрет (<Picture 1>), ref_image_2 = в полный рост спереди с одеждой (<Picture 2>), ref_image_3 = профиль/три четверти (<Picture 3>);
+    <Video 1> = исходное видео; <Audio 1> = его звук.'
+  tool:
+  - MiniMax H3
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Промпт строго в шести разделах (дословно; в [скобках] подставить свои описания):
+
+    [PROMPT]'
+  tool: unknown
+  mode: unknown
+  prompt:
+  - "subject_definitions:\n    <Subject 1> is the [age/gender, e.g., 30-year-old woman] shown across <Picture 1>, <Picture 2>, and <Picture 3>, featuring [facial structure, skin tone, eye color, and hairstyle\
+    \ from Picture 1], wearing [exact outfit, colors, and footwear shown in Picture 2 and Picture 3]. Ignore the background, lighting, and static poses in <Picture 1>, <Picture 2>, and <Picture 3>.\n  \
+    \  <Subject 2> is the original [man/woman/performer] in <Video 1> wearing [briefly describe original actor's hair and clothing so the model isolates who to remove].\n    <Video 1> is the source video\
+    \ for the target video edit, providing the exact environment, lighting, camera trajectory, framing, and action choreography.\n    <Audio 1> is the synchronized audio track of <Video 1> and is reused\
+    \ in the target video.\n    \n    summary:\n    [video editing + reference generation + audio reuse] The target video is an edited version of <Video 1>. <Subject 2> is completely replaced by <Subject\
+    \ 1>, who takes over their exact screen position, body mechanics, and facial performance while the background environment and camera work of <Video 1> remain unchanged.\n    \n    retention_analysis:\n\
+    \    <Subject 1> (appears in [Shot 1]): fully_preserved - facial identity, hairstyle, body proportions, and complete wardrobe from <Picture 1>, <Picture 2>, and <Picture 3> are retained throughout.\n\
+    \    <Subject 2> (appears in [Shot 1]): attribute_transfer - only their exact pose, movement, facial expressions, head rotations, and screen positioning are transferred to <Subject 1>; do not retain\
+    \ <Subject 2>'s face, hair, or clothing.\n    <Video 1> (source of video edit): partially_preserved - the background environment, scene geometry, lighting, shadows, camera movement, and timing are retained\
+    \ unchanged, with only <Subject 2> replaced by <Subject 1>.\n    <Audio 1>: fully_copy - the original audio signal is copied directly.\n    \n    detailed_description:\n    [Shot 1] Live-action, cinematic.\
+    \ The target video keeps <Video 1>'s original camera angle, lens behavior, lighting, and background environment completely intact. <Subject 1> stands in the exact position of <Subject 2> and performs\
+    \ the complete observable movement from <Video 1>, [briefly describe the primary physical action, e.g., walking forward, turning toward the lens, and gesturing with their right hand], matching every\
+    \ gesture, head turn, and expression without identity drift or background warping.\n    \n    overall_soundscape:\n    [Describe the ambient room tone or physical sounds present in the clip in one sentence,\
+    \ e.g., Soft indoor room tone with faint footsteps on wood, or write N/A if silent.]\n    \n    non_diegetic_music:\n    N/A"
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Правила автора: фраза «The target video is an edited version of <Video 1>.» дословно сразу после префикса в summary (триггер режима видео-редактирования); теги <Picture N> НЕ упоминать в detailed_description,
+    иначе в последнюю секунду видео «морфится» в статичное фото; ключевые слова retention_analysis: fully_preserved, attribute_transfer, partially_preserved.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim: []
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: Модель обучена на жёсткой схеме; точные теги связывают слоты референсов. Три ракурса героя отдельно от «заменяемого» Subject 2 дают чистое разделение «чья внешность / чья хореография».
+confidence: B
+prompt_completeness: complete
+notes: Картинка-пример (i.redd.it) не открывалась.
+source_url: https://reddit.com/r/StableDiffusion/comments/1x8scrg/
+duplicates_of: []

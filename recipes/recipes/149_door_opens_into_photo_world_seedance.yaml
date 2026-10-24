@@ -1,0 +1,67 @@
+id: 149_door_opens_into_photo_world_seedance
+source_file: 149_door_opens_into_photo_world_seedance.md
+title: Своё видео «открываю дверь» + фото любого мира → дверь открывается в этот мир, герой входит — Seedance 2.5
+intent_tags:
+- other
+use_when: Снимаете на телефон, как стоите у межкомнатной двери и открываете её. Даёте фото локации (лес, подземелье, луг). Модель сохраняет вас и движение камеры, а за дверью открывается и оживает мир с
+  фото, свет из проёма падает на лицо.
+inputs:
+- фото локации/города
+steps:
+- n: 1
+  action: 'Снять @video1: человек у двери, открывает её.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Подобрать @image1 — фото мира за дверью.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Seedance 2.5: 1080p, 10 с, 9:16; теги @ удалить и проставить вручную из подсказок.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: 10 с
+  aspect: '9:16'
+- n: 4
+  action: Вставить промпт.
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  ❗️Важно:
+  В промпте везде, где используются теги «@», сначала удалите их, затем вручную поставьте символ @ и выберите нужный вариант из предложенного списка.
+  ⠀
+  Мои настройки:
+  • 1080p
+  • Длительность -10секунд
+  • Формат-9:16
+  ⠀
+  ПРОМПТ:
+  [(@ video1): Original clip — a person standing in an interior room, facing an interior door. Preserve identity, face, wardrobe, body performance, framing, camera position and all original camera motion exactly. Change only what is visible through and beyond the doorway once it opens. (@ image1): Reference photo of the world beyond the door — exact environment, layout, lighting and color grade to use for what is revealed. Use this photo as the literal world being revealed and brought to life; do not invent, redesign or repaint any part of it — animate exactly this scene, whatever it depicts (nature, dungeon, meadow, or any other setting), do not create a new or different world. Specs: Photoreal. Match source clip duration (@ video1). Cinematic grade matching (@ image1) own lighting and color temperature. NON-IP — generic environment design, not based on any specific copyrighted game, film or character assets. SFX and source dialogue only (if any). Action, one continuous shot, same framing as the source: the person reaches for the door handle and opens the door exactly as in the original clip — same hand, same speed, same push or pull motion. As the door swings open, instead of the original room beyond it, the exact world shown in (@ image1) is revealed and brought to life, matching its composition and layout precisely. That world, otherwise static in the photo, now comes alive: whatever environmental elements are present move naturally — foliage sways, water ripples, flames flicker, dust or particles drift, animals shift their weight, light flickers or breathes — appropriate to exactly what (@ image1) depicts, with nothing added that isn't already in the reference photo. Directional light from beyond the doorway spills onto the person's face and body as the door opens, matching the key light direction and color temperature of (@ image1) exactly, with soft contact light wrapping the edge of the doorway and the person's silhouette. The person steps forward through the doorway into this world, their scale and proportions consistent with the environment, and continues walking in as the original camera motion carries through uninterrupted. Face, identity, wardrobe and performance remain unchanged throughout; only the environment beyond the threshold is transformed. SFX: soft creak of the door as it opens, a shift in ambient sound as the new world is revealed, ambience appropriate to exactly what (@ image1) depicts, footsteps as the person steps through.]
+  ⠀
+  Забегай еще в гости🥷🔥
+output:
+  format: mp4
+  resolution: 1080p
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: Сайт-агрегатор автора (реф-ссылка) не открывался — не нужен, модель доступна где угодно.
+source_url: https://t.me/reelsteacher/999
+duplicates_of: []

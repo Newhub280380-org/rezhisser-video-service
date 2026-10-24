@@ -1,0 +1,70 @@
+id: 103_family_photo_card_room_reveal_action_figure
+source_file: 103_family_photo_card_room_reveal_action_figure.md
+title: 'Три коротких рецепта «одно фото → кадр Seedream → Seedance»: семейная открытка-видео, «до/после» комнаты, фигурка в блистере с поворотом 360°'
+intent_tags:
+- product_ad
+- client_in_clip
+- family_photos
+use_when: 'Общая форма: фото клиента → Seedream 5 (фото как референс, лица точно те же, проверка лиц и надписей) → Seedance 2.5 по первому кадру (или первый = оригинал, последний = новый вариант для «до/после»).
+  Открытка: семья в свитерах на крыльце, снег, 6 с с колокольчиками. Комната: тот же ракурс, новый ст'
+inputs:
+- фото товара/продукта
+- фото лица/портрет человека
+- стартовый кадр
+steps:
+- n: 1
+  action: unknown (в источнике нет нумерованных шагов; см. prompts_verbatim)
+  tool:
+  - Seedance
+  - Seedream
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  ##### holiday-card-video | Family photo to holiday card and video card
+  What you provide
+  Your family photo (image)
+  How to sign it (the Rivera family) (text)
+  Sweater colours (red and cream) (text)
+  What Sensei does
+  A printable card, every face kept
+  Your name and greeting checked
+  A 6-second video card with falling snow
+  The brief Sensei follows
+  From the family photo {{family-photo}}, make a printable holiday card on Seedream 5 with the photo as the reference: the same people and pets with exactly the same faces, in matching {{sweater}} holiday sweaters on the porch of a snowy log cabin strung with warm lights, a decorated tree beside them, snow falling, everyone smiling at the camera, "Happy Holidays" in gold script at the top and "Love, {{family}}" at the bottom. Check every face against the photo and every word with pixeldojo_look; remake once if anyone looks different. Then animate the card on Seedance 2.5 at 1080p for 6 seconds: snow keeps falling, lights twinkle, the family laughs and waves, the pet wags, a slow push in, faces and lettering unchanged, sleigh bells and a music box melody.
+- |-
+  ##### room-makeover-reveal | Before and after room makeover
+  What you provide
+  Photo of the room as it is (image)
+  The new style, in a line or two (text)
+  What Sensei does
+  The redesign from the same camera position
+  Room shape checked against the original
+  A 5-second before-to-after reveal
+  The brief Sensei follows
+  From the room photo {{room-photo}}, make the redesigned version on Seedream 5 in this style: {{style}}. Keep the same camera position, room shape, window and door positions, and change everything else the brief asks for. Check that the room shape matches the original; remake if walls or windows moved. Then make a 5-second reveal on Seedance 2.5 with the original as the first frame and the redesign as the last frame: a smooth sweep of light across the room that replaces the old with the new, a soft whoosh and chime.
+- |-
+  ##### selfie-action-figure-spin | Selfie to boxed action figure, then a 360 spin
+  What you provide
+  Your selfie (image)
+  Accessories that fit you (coffee, camera, yoga mat) (text)
+  Packaging colours (text)
+  What Sensei does
+  You as a boxed action figure
+  Face checked against your selfie
+  A 5-second 360 turntable spin
+  The brief Sensei follows
+  From the selfie {{selfie}}, make a 3:4 studio photo on Seedream 5 with the selfie as the reference: a collectible action figure of the same person (same face, hair and outfit, glossy molded plastic, visible joints) sealed in a retail blister pack on a hanging card, with small accessories that fit {{accessories}}, packaging in {{colours}}, no brand names and no readable words, light grey studio background. Check the face against the selfie with pixeldojo_look and remake once if it drifts. Then animate it on Seedance 2.5 at 1080p for 5 seconds with the photo as the first frame: the package turns a full 360 degrees on a turntable while the camera stays still, the figure and accessories unchanged, a soft turntable hum and a chime.
+output:
+  format: mp4
+  resolution: 1080p
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: partial
+notes: агент Sensei — аккаунт PixelDojo
+source_url: https://pixeldojo.ai/recipes/holiday-card-video
+duplicates_of: []

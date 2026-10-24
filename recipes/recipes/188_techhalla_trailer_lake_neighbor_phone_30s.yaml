@@ -1,0 +1,61 @@
+id: 188_techhalla_trailer_lake_neighbor_phone_30s
+source_file: 188_techhalla_trailer_lake_neighbor_phone_30s.md
+title: 'Мини-ролик «соседская съёмка на телефон»: трейлер скатывается в озеро, кот выбивает полено, финальное селфи (Seedance 2.5, 30 с от первого кадра)'
+intent_tags:
+- client_in_clip
+- animal
+- object_alive
+use_when: 'Мини-ролик «соседская съёмка на телефон»: трейлер скатывается в озеро, кот выбивает полено, финальное селфи (Seedance 2.5, 30 с от первого кадра)'
+inputs:
+- фото лица/портрет человека
+- стартовый кадр
+- аудио/голос
+steps:
+- n: 1
+  action: '«Lock the initial frame using One» — первый кадр (описан в [IMAGE REFERENCE] видеопромпта: можно использовать это описание как промпт картинки).'
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: «then animate it with SD 2.5» — промпт ниже.
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  Lock the initial frame using One and then animate it with SD 2.5. here's the prompt
+
+  [STYLE + CAMERA]
+  Real raw phone video filmed by a neighbor from a porch across the road, one continuous 30-second take, no cuts. Fern top left and porch railing bottom left stay in frame. Handheld wobble, clumsy pinch-zooms that go soft and blocky. Golden-hour sun, compressed phone quality.
+
+  [IMAGE REFERENCE]
+  image1 is the exact first frame and identity lock: the old cream-and-brown trailer in side profile on a steep grassy slope, tongue uphill on the left, rear downhill on the right toward the lake, "LAKE LIFE" sign, a piece of firewood wedged under the downhill side of the single tire. Three heavy-set Alabama men in lawn chairs on the roof with a blue cooler.
+
+  [TIMELINE]
+  0-4s: The men clink cans and drink. Neighbor drawls: "Y'all are gonna die up there." Man in the ALABAMA tank top: "Hold my beer!"
+  4-12s: Clumsy zoom to the tire. A black house cat walks out from under the trailer, bats the firewood, drags it out like a toy. The trailer creaks; the cat flattens its ears and bolts uphill out of frame, never seen again.
+  12-20s: Zoom out. The trailer starts rolling backward down the slope, speeding up and bouncing. The men grab their chairs yelling "WHOA WHOA WHOA!" Neighbor: "Oh no, OH NO!"
+  20-23s: Just before the water the men look at each other, shrug, sit back and raise their cans as the trailer plunges rear-first into the lake with a big splash.
+  23-30s: Zoom in. The trailer sinks slowly. The men stay seated, calm, open fresh cans and toast as the water rises to their waists. The bearded man pulls a phone from his overalls and the three pose for a selfie, cans up, the sinking trailer behind them. Ends on three heads above the water, cans and phone held high.
+
+  [AUDIO]
+  Phone mic only: crickets, cans, laughter, the lines above, cat paw on wood, metal creak, rolling and scraping, splash, bubbling water, cans cracking, a camera shutter click, neighbor laughing hard. No music.
+
+  [QUALITY]
+  Photoreal raw phone footage, identity locked to image1, realistic trailer weight, rolling and water physics, realistic cat. Nobody gets hurt. No cinematic look, no slow motion, no text, no cuts.
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: промпт первого кадра (Magnific One) не опубликован текстом
+source_url: https://x.com/techhalla/status/2113557469804806495
+duplicates_of: []

@@ -1,0 +1,74 @@
+id: 021_startend_frames_8stage_timelapse
+source_file: 21_startend_frames_8stage_timelapse.md
+title: 8 картинок-стадий → 8 клипов Start/End Frame → один бесшовный таймлапс (проект «ферма»)
+intent_tags:
+- seamless_series
+use_when: 8 картинок-стадий → 8 клипов Start/End Frame → один бесшовный таймлапс (проект «ферма»)
+inputs:
+- стартовый кадр
+- финальный кадр
+steps:
+- n: 1
+  action: ChatGPT/любой генератор делает 8 картинок — стадии постройки (инструмент упомянут автором).
+  tool:
+  - GPT Image
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Для каждого клипа: Image N = Start Frame, Image N+1 = End Frame; 10 секунд; генератор — Grok video (start/end frame).'
+  tool:
+  - Grok Imagine
+  mode: start/end frame
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Каждый промпт содержит блоки «Start frame: …», «End frame: …», «Motion: …». Начало и последний кадр общей линией «Use a stable high-angle aerial view…».'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: last_frame
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: 'Полный текст ветки (как сохранён):
+
+    [PROMPT]'
+  tool: unknown
+  mode: unknown
+  prompt:
+  - |-
+    Watch This Tiny Farm Come to Life — Timelapse Build:
+
+    First, use ChatGPT to generate 8 images showing each stage of the farm construction process. Then, use the prompt below to turn those images into a seamless timelapse video.
+    Below is a set of 8 Grok AI video prompts, each 10 seconds long, using Start Frame / End Frame, designed to connect into one seamless miniature farm construction timelapse video.
+
+    Prompt 1 — Site Survey and Foundation Excavation
+    Use Image 1 as the Start Frame and Image 2 as the End Frame
+    Create an 10-second cinematic miniature farm construction timelapse video.  Start frame: A warm golden-hour handcrafted miniature farm construction site in its earliest phase. Use a stable high-angle aerial view that is slightly closer than the still image. Show the farmhouse footprint on the left as open excavation trenches with a small yellow mini excavator and a few workers. Show the larger barn footprint on the right with wooden form lines and early footing markers. The chicken coop area at the lower right is still simple and unfinished. The paddock at the top is empty and fenced. The pond remains calm at the bottom right.  End frame: Transition smoothly toward the next construction phase where both main structures have clean poured concrete slab foundations. The farmhouse slab on the left becomes clearly visible with raised perimeter edges, and the barn slab on the right becomes a large clean concrete foundation with column bases. The chicken coop area remains simple but slightly more defined.  Motion: workers measuring, digging, carrying boards, placing stakes, moving materials, excavator arm scooping and repositioning soil, wheelbarrows moving, wood piles being set down, foundation lines gradually becoming organized. The construction should visibly progress across the clip. Camera stays almost locked, with only a subtle micro drift. Motion level: medium.  Global continuity instruction: Create a seamless miniature farm construction timelapse with a locked high-angle aerial camera, slightly closer than the original still images, with only a very subtle cinematic micro-drift. Preserve the exact same farm layout across all clips: the farmhouse always on the left, the barn always on the right, the chicken coop area at the lower right, the paddock at the top, the pond at the bottom right, and the Y-shaped gravel road in the center. Keep the same warm golden-hour lighting direction, the same handcrafted miniature model realism, the same landscape, fences, stone walls, trees, proportions, and overall composition. Motion level: medium. Show realistic motion mainly from workers, materials, tools, and the structure evolving over time. Avoid sudden morphing, teleporting, random redesign, large camera movement, or layout changes. Make all 8 clips connect like one continuous cinematic miniature construction timelapse. No text, no watermark.
+
+    Prompt 2 — Pouring the Concrete Foundation
+    Use Image 2 as the Start Frame and Image 3 as the End Frame
+    Create an 10-second cinematic miniature farm construction timelapse video.  Start frame: Both the farmhouse on the left and the barn on the right already have clean concrete slab foundations. Workers are checking slab edges and moving small stacks of lumber and blocks. The chicken coop area remains basic and fenced. The paddock at the top is still empty.  End frame: Transition smoothly into the framing stage. The farmhouse on the left rises into a complex wooden wall frame with visible room divisions and roof trusses beginning to form. The barn on the right rises into a large timber frame with a tall rectangular structure. The small coop area at the lower right begins to show a simple wooden frame.  Motion: workers kneeling and smoothing concrete, rebar and slab edges becoming finished, lumber stacks sliding into place, workers lifting studs and wall frames, beams rising, wall sections locking together, roof trusses appearing piece by piece, workers climbing ladders and fastening timber. The transformation should feel like a realistic timelapse of construction. Camera remains stable. Motion level: medium.  Global continuity instruction: Create a seamless miniature farm construction timelapse with a locked high-angle aerial camera, slightly closer than the original still images, with only a very subtle cinematic micro-drift. Preserve the exact same farm layout across all clips: the farmhouse always on the left, the barn always on the right, the chicken coop area at the lower right, the paddock at the top, the pond at the bottom right, and the Y-shaped gravel road in the center. Keep the same warm golden-hour lighting direction, the same handcrafted miniature model realism, the same landscape, fences, stone walls, trees, proportions, and overall composition. Motion level: medium. Show realistic motion mainly from workers, materials, tools, and the structure evolving over time. Avoid sudden morphing, teleporting, random redesign, large camera movement, or layout changes. Make all 8 clips connect like one continuous cinematic miniature construction timelapse. No text, no watermark.
+
+    Prompt 3 — Building the Wooden Frame
+    Use Image 3 as the Start Frame and Image 4 as the End Frame
+    Create an 10-second cinematic miniature farm construction timelapse video.  Start frame: The farmhouse on the left is fully in exposed wooden framing with visible walls, internal divisions, and roof structure. The barn on the right is a strong timber frame. The small coop frame is also visible at the lower right. The paddock at the top remains empty and the road layout stays unchanged.  End frame: Transition to the enclosure stage. The farmhouse gains exterior wooden walls, windows, a completed roof, and a defined front porch. The barn gains exterior wall boards, a finished roof, open barn doors, and clear building mass. The small coop becomes enclosed with walls and a roof.  Motion: workers carrying timber bundles, hammering, installing beams, climbing ladders, roof trusses locking into place, wall panels lifting and attaching, roof shingles rapidly appearing, windows and doors being installed, coop walls closing in. Construction activity should be orderly and continuous. Camera stays nearly fixed with a slight cinematic micro drift. Motion level: medium.  Global continuity instruction: Create a seamless miniature farm construction timelapse with a locked high-angle aerial camera, slightly closer than the original still images, with only a very subtle cinematic micro-d
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim: []
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: End Frame клипа N = Start Frame клипа N+1 (одно и то же изображение), поэтому швы совпадают по определению.
+confidence: B
+prompt_completeness: partial
+notes: —
+source_url: https://x.com/Insiiderzzz/status/2103377100233453893
+duplicates_of: []

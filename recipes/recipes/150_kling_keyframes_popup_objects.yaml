@@ -1,0 +1,58 @@
+id: 150_kling_keyframes_popup_objects
+source_file: 150_kling_keyframes_popup_objects.md
+title: 'Предметы «выпрыгивают» по одному на пустую скамейку — Kling Keyframes (старт: пусто, финал: с предметами) 5 с'
+intent_tags:
+- product_ad
+- vfx_effect
+use_when: 'UI-эффект «поп-ап»: на кадре с героем на скамейке предметы появляются строго по одному из поверхности скамейки (0%→115%→100%, ~180 мс, пауза ~400 мс), камера неподвижна. Подходит для раскладки
+  товара бренда.'
+inputs:
+- стартовый кадр
+- финальный кадр
+steps:
+- n: 1
+  action: 'Подготовить два кадра: стартовый (пустая скамейка, герой неподвижен) и финальный (те же кадр и герой, на скамейке разложены предметы).'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Kling → модель Keyframes, 1080p, 5 с, загрузить старт и финал.
+  tool:
+  - Kling
+  mode: Keyframes
+  prompt: unknown
+  input_source: unknown
+  duration: 5 с
+  aspect: unknown
+- n: 3
+  action: Вставить промпт.
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "Офигенский эффект\U0001F525\U0001F9DE‍♂️\n\nДелаю всё на этом сайте\U0001F447 «Перейти на сайт»\n\nНейросеть: Kling\nМодель: Keyframes \n\nПромпт:\n [Animate a transition from the start frame to the\
+  \ end frame.\nThe start frame shows a completely empty bench with the subject perfectly still. Hold this empty frame for exactly 0.5 seconds.\nThen begin a strict sequential pop-up animation.\nObjects\
+  \ appear ONE AT A TIME ONLY. Never animate two objects simultaneously. Each object must fully complete its animation before the next object begins.\nEach object emerges directly from the surface of the\
+  \ bench at its exact final location. The object does not fly in from off-screen or from above. It originates from inside the bench surface, as if hidden beneath it.\nEach object starts at 0% scale while\
+  \ embedded in the bench surface, rises only a few centimeters upward while scaling to 115%, then immediately settles back down onto the bench to exactly 100% scale with a subtle soft impact bounce. The\
+  \ movement is short, crisp, and energetic, like a satisfying UI pop-up animation. Total animation time is approximately 180 milliseconds.\nThe order is strictly from the backmost object to the frontmost\
+  \ object according to the final composition. Wait approximately 400 milliseconds after each object has completely settled before the next object begins.\nEvery object finishes in its exact end-frame position\
+  \ with pixel-perfect alignment. No drifting, sliding, rolling, floating, rotation changes, or lateral movement. Shadows appear instantly together with each object.\nOnly one object may animate at any\
+  \ moment. Do not batch appearances. Do not overlap animations.\nThe camera remains completely locked with zero movement, zero zoom, and zero reframing. The subject remains perfectly still throughout.\n\
+  After the last object has settled, hold the completed end frame perfectly still for 1.5 seconds.]\n\nМои настройки:\n• 1080p\n• Длительность - 5 секунд\n\nP.S.: я зависим от ваших реакций\U0001F635‍\U0001F4AB"
+output:
+  format: mp4
+  resolution: 1080p
+  aspect: unknown
+done_criteria: unknown
+confidence: B/C
+prompt_completeness: complete
+notes: Сайт-агрегатор автора (реф-ссылка) не открывался — не нужен, модель доступна где угодно.
+source_url: https://t.me/reelsteacher/992
+duplicates_of: []

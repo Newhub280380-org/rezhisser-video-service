@@ -1,0 +1,69 @@
+id: 088_exploded_view_assembly_nbpro_kling_firstlast
+source_file: 88_exploded_view_assembly_nbpro_kling_firstlast.md
+title: Разбор объекта на детали и обратная сборка (exploded view → сборка)
+intent_tags:
+- product_ad
+- beauty_ad
+- client_in_clip
+- seamless_series
+- meme
+- vfx_effect
+use_when: 'Из одного фото товара (у автора часы Rolex на руке) делается кадр «взрыв-схемы»: все детали разлетелись, но ракурс и фон те же. Потом Kling анимирует переход от разобранного к собранному, где
+  первый кадр = exploded view, последний = исходное фото. Получается вирусный ролик «товар собирается из детал'
+inputs:
+- фото товара/продукта
+- стартовый кадр
+- финальный кадр
+steps:
+- n: 1
+  action: 'Nano Banana Pro: загрузить фото объекта + промпт exploded view (у автора под часы, слово Rolex/watch заменить на свой объект).'
+  tool:
+  - Nano Banana
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Kling 2.5 Turbo (в посте заголовок про Veo 3.1, но шаг 2 у автора — Kling 2.5 Turbo): режим первый+последний кадр. Первый кадр = exploded-картинка из шага 1, второй (последний) кадр = исходное
+    фото. Промпт сборки.'
+  tool:
+  - Kling
+  - Veo
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: last_frame
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Результат: короткий ролик сборки. Можно склеить «разбор → сборка».'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: previous_step_output
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "=== https://t.me/video_ai_prompt/148 2026-02-15T06:47:04+00:00\nТрендовый эффект разбора объектов в Veo 3.1\n\nДля этого тренда вам понадобится фото объекта, либо картинка.\n\n1️⃣ Переходим в Nano Banana\
+  \ Pro, загружаем свое фото и пишем этот промпт (этот промпт под часы, вам нужно адаптировать его под свой объект):\n\nCreate a photorealistic exploded view of a Rolex watch. Keep the angle, framing, perspective,\
+  \ lighting, background, and composition exactly unchanged from the original photo. The watch must remain positioned in the same way, with the wrist, hand, and fingers holding it steady. Disassemble the\
+  \ Rolex into its authentic internal and external components, floating them around the watch with clean, even spacing, aligned along its axis: case, crystal, bezel, dial, hands, movement (with all gears,\
+  \ screws, and springs), crown, pushers, bracelet links, clasp, and any other mechanical or decorative parts. Ensure accurate scale and realistic materials (metal, glass, leather, reflections), sharp edges,\
+  \ and consistent spacing. Only real parts of the watch should be included, with no additions, removals, or alterations. No text or overlays should be added.\n\n2️⃣ Выбираем KLing 2.5 Turbo и первым кадром\
+  \ добавляете разобранное фото, вторым кадром исходное изображение и пишем промпт (тоже надо адаптировать под свой объект):\n\nAnimate the exploded Rolex watch components smoothly assembling back into\
+  \ the fully built watch.\n\nAnchor rule: the wrist must keep holding the main watch case the entire time — it stays fixed in the hand and does not shift.\n\nAll separated parts move straight inward along\
+  \ the watch's axis and their original positions, gliding cleanly into place with precise alignment. The motion should be slow, controlled, and satisfying — like a high-end engineering assembly.\n\nNo\
+  \ rotations of parts, no camera shake, and no morphing. Parts should translate inward only and snap into their correct slots.\n\nNothing new appears and nothing disappears: no extra parts, no missing\
+  \ parts, no duplicates.\n\nKeep the hand, grip, camera angle, framing, lighting, background, and composition perfectly unchanged throughout the entire clip.\n\nEnd on the watch fully assembled, matching\
+  \ the original assembled state exactly.\n\n\U0001FA85 Подписаться\n  \n    Please open Telegram to view this post\n    VIEW IN TELEGRAM\n  \n\n  \n    Please open Telegram to view this post\n    VIEW\
+  \ IN TELEGRAM"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего, оба промпта в посте
+source_url: https://t.me/video_ai_prompt/148
+duplicates_of: []

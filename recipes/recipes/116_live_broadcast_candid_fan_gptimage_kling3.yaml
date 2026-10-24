@@ -1,0 +1,52 @@
+id: 116_live_broadcast_candid_fan_gptimage_kling3
+source_file: 116_live_broadcast_candid_fan_gptimage_kling3.md
+title: '«Поймали на трансляции матча»: фото лица → GPT Image 2 кадр «с ТВ-камеры» → Kling 3.0'
+intent_tags:
+- client_in_clip
+- object_alive
+use_when: 'Фото лица → GPT Image 2 делает «кадр прямой спортивной трансляции» с трибуны: шум компрессии, размытие, без бьюти-фильтра, человек не смотрит в камеру. Затем Kling 3.0 оживляет простым промптом
+  «Девушка смотрит матч». Механика переносится на любую «случайную съёмку» (концерт, каток, улица).'
+inputs:
+- фото лица/портрет человека
+steps:
+- n: 1
+  action: 'VeoSeeBot → работа с изображениями → GPT Image 2: своё фото + промпт ниже.'
+  tool:
+  - Veo
+  - GPT Image
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Создать видео → Kling 3.0: полученное фото + простой промпт своими словами («Девушка смотрит матч»).'
+  tool:
+  - Kling
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: previous_step_output
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "=== https://t.me/reels_by_alsi/652 2026-05-11T13:11:02+00:00\nЗимняя фотосессия прошла, теперь матч всей инстой \U0001F602  Туториал на этот чудо тренд нннааада?\n\n\U0001F520\U0001F520\U0001F520\U0001F520\
+  \n\nИнструкция:\n1. Переходим в VeoSeeBot \n2. Раздел «работа с изображениями» — gpt image 2\n3. Вставляем свое фото и данный промпт: \nGenerate a high-quality (4k) photo with the face of the person in\
+  \ the uploaded image, placed onto a realistic scene of a KBO baseball fan captured on live broadcast.\n\nKey Requirements:\n\n*   Scene:\n    *   Captured during a live SPOTV KBO broadcast.\n    *   Authentic\
+  \ broadcast camera angle (from the stands).\n    *   The fan is sitting in the stands, relaxing, maybe legs crossed.\n    *   Expression: Natural, not aware of the camera, looking at the game.\n\n*  \
+  \ Details:\n    *   Surrounded by other fans.\n    *   Include realistic elements: beer cups, cheering gear, portable fans.\n    *   Realistic skin texture (not smoothed), stray hairs, hints of sweat.\n\
+  \n*   Technical Style:\n    *   Captured on an actual broadcast camera.\n    *   Slight blur from live transmission, compression noise, subtle motion blur (especially in the background).\n    *   CRITICAL:\n\
+  \        *   NO excessive airbrushing/editing of the face.\n        *   NO eye enlargement.\n        *   NO jawline modification.\n        *   NO \"beauty\" filter or smoothing.\n        *   NO \"photo\
+  \ shoot\" look.\n        *   NO \"influencer\" aesthetic.\n\nObjective: Create a photo that looks like a real-world candid moment of the *person in the image*, caught on a live baseball broadcast, with\
+  \ all the natural flaws and atmosphere of the setting.\n4. Раздел «создать видео» — Kling 3.0. \n5. Вставляем получившееся фото на матче и пишем простой промпт своими словами. \n«Девушка смотрит матч»\n\
+  \nОтправляйте, что у вас получилось,\nв комментариях ⤵️\n  \n    Please open Telegram to view this post\n    VIEW IN TELEGRAM\n  \n\n  \n  Telegram\n  \n  VeoSeeBot | Neuroplace\n  Все топовые ИИ-модели\
+  \ в одном месте по одной подписке\nСайт: neuroplace.ai  \nТехподдержка: @neuroplace_support"
+output:
+  format: mp4
+  resolution: 4k
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://t.me/reels_by_alsi/652
+duplicates_of: []

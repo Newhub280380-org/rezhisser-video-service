@@ -1,0 +1,127 @@
+id: 178_original_character_lora_zimage_stills_seedance_clips_minimax_h3_t2v_dlss5
+source_file: 178_original_character_lora_zimage_stills_seedance_clips_minimax_h3_t2v_dlss5.md
+title: 'Свой персонаж для MiniMax H3 через LoRA: 8 кадров Z-Image Turbo + голос ElevenLabs + 14 клипов Seedance → обучение LoRA (Fizgig) → H3 t2v 864×480 → 3D latent upscale 2 МП → refine 0.4 → DLSS 5'
+intent_tags:
+- talking_head
+use_when: 'Создаёт «актёра» из ничего: стоп-кадры Z-Image Turbo (LoRA Smartphone Snapshot Photo Reality v8 — «как с телефона») → короткие говорящие клипы Seedance с этими кадрами как референсами + свой
+  голос ElevenLabs → датасет → LoRA для H3. Дальше герой генерится в t2v H3 (по словам автора, качество выше, ч'
+inputs:
+- аудио/голос
+steps:
+- n: 1
+  action: 'Z-Image Turbo: 8 стоп-кадров героини; LoRA Smartphone Snapshot Photo Reality v8 на 1.0; euler / simple, 9 шагов, ModelSamplingAuraFlow shift 3.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Голос в ElevenLabs (свой), 45 голосовых клипов, обрезанных под длины сетки.
+  tool:
+  - ElevenLabs
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 5 генераций Seedance с референсами Z-Image → 14 коротких клипов, где она говорит; нарезка под сетку 17n+5 кадров.
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: 'Обучение в Fizgig (headless): rank 16, Automagic v3, Circlestone adapter, EMA 0.98, 40 эпох (3 520 шагов) на pruned int8 fl2va; датасет = кадры + кропы лица + клипы + голос. 41 мин на H200.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 5
+  action: 'Рендер (RTX 3090): 864×480, 8 шагов с DMAD 4-step LoRA → 3D latent upscale до 2 МП → 2-шаговый refine на 0.4 denoise → DLSS 5 Enhancer на 0.8 (≈4,5 мин на 8 с).'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: 8 с
+  aspect: unknown
+- n: 6
+  action: 'Правила: LoRA на 0.8 (на 1.0 «слишком много тонального»; «no makeup» в промпте делает хуже); превью тренера не верить; для RefMod брать бытовые фото, не студийные (RefMod тянет освещение референсов);
+    второй проход теряет клонированный голос — сохранить аудио 1-го этапа и вернуть.'
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  # Original character LoRA for MiniMax H3 learnings. Workflows included.
+  r/StableDiffusion u/DeliciousGorilla 2026-10-21 score=350 comments=58 url=https://reddit.com/r/StableDiffusion/comments/1xbobrr/original_character_lora_for_minimax_h3_learnings/ link=https://v.redd.it/0xghi35astwh1
+
+  H3 t2v is just so damn good looking compared to ref2va/fl2va and even RefMod. So I attempted to create a LoRA of an original character, using 8 Z-Image Turbo stills, a custom ElevenLabs voice, and 14 short clips of her talking (from 5 Seedance gens with the Z-Image refs).
+
+  Left is H3 with a RefMod (photos and voice sample). Right is the same seed with the LoRA at 0.8, followed by DLSS 5. The RefMod keeps her face consistent, but everything looks a bit too polished. With the LoRA, she looks closer to t2v quality.
+
+  I trained her in Fizgig, running headless: rank 16, Automagic v3, Circlestone adapter, EMA 0.98, 40 epochs (3,520 steps) on the pruned int8 fl2va model. Dataset was the images plus face crops, 14 clips cut to the 17n+5 frame grid, and 45 voice clips trimmed to exact grid lengths. Training took 41 minutes on a rented H200 (free Modal credits).
+
+  Rendering on an RTX 3090: 864x480 at 8 steps with the DMAD 4-step LoRA, 3D latent upscale to 2 MP, 2-step refine at 0.4 denoise, then DLSS 5 at 0.8 intensity. About 4.5 minutes for an 8-second clip, plus 15 seconds for DLSS on a second card (5060 Ti).
+
+  A few things I figured out:
+
+  * LoRA at 0.8 is the sweet spot. At 1.0 she looked she was wearing too much foundation. Prompting "no makeup" somehow made it worse.
+  * Don't trust the trainer previews. Late epochs looked terrible there, then great in the actual workflow.
+  * RefMods pick up lighting from the reference photos. Studio lit stills made everything look like a moisturizer commercial, switching to candid photos fixed it. The strength slider did basically nothing.
+  * The second pass loses the cloned voice. Save the stage-1 audio and put it back afterward.
+  * Strong prior training data can still take over. Put her in an X-Files basement with Mulder and Scully, and suddenly she looks like Agent Reyes (the weird seasons) but with a British voice.
+
+  Workflows (API format, drag onto the canvas): H3 + LoRA, H3 + LoRA + RefMods on ref2va, DLSS 5, and both RefMod builders:
+
+  [https://drive.google.com/drive/folders/1T-ELnDiOQ2pOJOVaaL\_MvyfXcmeUdXeK?usp=sharing](https://drive.google.com/drive/folders/1T-ELnDiOQ2pOJOVaaL_MvyfXcmeUdXeK?usp=sharing)
+
+  Props to shootthesound (Fizgig), Luisacaotica (RefMod nodes), Blueforcer and Merserk (DLSS 5 Enhancer), ZhengmingYu and Kijai (DMAD), and circlestone-labs (training adapter).
+- "--- u/DeliciousGorilla score=15 parent=t3_1xbobrr\nhttps://preview.redd.it/llkdt6smwtwh1.jpeg?width=3108&format=pjpg&auto=webp&s=e3426f18eb9adf3afa9767a8d4a56f07de06d993\n\nZ-Image Turbo refs.\n--- u/DeliciousGorilla\
+  \ score=6 parent=t1_19rfthxexsd0k\nRefs are definitely the way to go for multiple characters, and if you don't mind the quality hit, makes sense to go that route. I'm not making narrative work so the\
+  \ best quality possible is what I'm after. The LoRA works great with ref images of \"sets\" too. By the way, that LoRA took less than 45mins to train on the free monthly [Modal.com](http://Modal.com)\
+  \ credits.\n--- u/DeliciousGorilla score=6 parent=t1_19rfuj740vkkh\nNo I used u/AI_Characters Smartphone Snapshot Photo Reality v8 LoRA at 1.0 strength. \n\neuler / simple, 9 steps, ModelSamplingAuraFlow\
+  \ shift 3\n--- u/DeliciousGorilla score=5 parent=t1_19rg1logp3ilf\nhttps://reddit.com/link/19rg6jo35tdcw/video/n1cku359kvwh1/player\n--- u/DeliciousGorilla score=3 parent=t1_19rg5zc4votet\nBy t2v I mean\
+  \ what H3 is conditioned on. The LoRA clips run on the fl2va model with only the text prompt, so the LoRA changes the weights but H3 is still generating from text. The RefMod clips run on ref2va with\
+  \ the reference tokens in the conditioning. DLSS comes after all of that, on the finished video, so it doesn’t change what H3 generated, and you could run it on a RefMod clip too.\n\nAnd yes, references\
+  \ can bring in a style H3 doesn’t know. I wanted the opposite: H3’s own t2v look. The RefMod pulled clips toward the look of its photos. Studio lit stills gave everything an overbaked look, and turning\
+  \ the strength down didn’t fix it. Candid photos got closer, but the LoRA clips still looked more like plain t2v to me.\n--- u/DeliciousGorilla score=2 parent=t1_19rfscr5le86d\nWorks for me in incognito?\n\
+  --- u/DeliciousGorilla score=2 parent=t1_19rfvh5bdbuu9\nhttps://reddit.com/link/19rfyus2tah2d/video/wv2m8vtrouwh1/player\n\nIt's not a drastic difference when the quality is already great, but it only\
+  \ costs 15 seconds for a little extra detail. If I wanted this to be perfect I'd color grade to remove the green it introduces in the skin.\n--- u/DeliciousGorilla score=2 parent=t1_19rg378meqsps\nEven\
+  \ if I were to make specific reference images with lighting for those specific scenes, the \"acting\"/motion still wouldn't be as natural as t2v generates.\n--- u/DeliciousGorilla score=2 parent=t1_19rg4z24sv5k3\n\
+  >I think properly trained LoRAs are still the best solution for character likeness.\n\nI agree, that's why I shared the examples and workflows. From my testing, the motion is much better too (with the\
+  \ same prompt and seed).\n\nI didn't see a ton of H3 LoRA work on here, so figured this may be helpful for anyone who wants similar results.\n\nOh by the way, I did mention \"switching to candid photos\
+  \ fixed\" Refmods for me. Just a tip for anyone not born with that knoweldge.\n--- u/DeliciousGorilla score=2 parent=t1_19rhixf5wgg6d\nIt’s mostly a LoRA test. I wanted to see if a character LoRA on H3\
+  \ could hold a face and voice better than a RefMod without losing H3’s normal t2v look. It did just that for me. If the only change you're seeing is \"rough camera movement\" in the clips, I'm not sure\
+  \ what video you're looking at. The side by sides are completely different.\n\nWhat breaks on your end? It needs ComfyUI 0.35 or newer (the sparse attention and attention backend nodes are core from there),\
+  \ VideoHelperSuite, the H3 latent upscaler pack, and MiniMaxH3Mod for the RefMod one. The Claire LoRA isn’t included, so you’d swap in your own. I ran it on 0.39.2.\n\nI'm on a 3090, so everything runs\
+  \ int8. It can load FP8 models but can’t do FP8 math natively. 8 steps at 864x480 + upscale to 2 MP + a 2-step refine = about 4.5 minutes for 8 seconds. A 5070 Ti can run FP8 and FP4 natively (and has\
+  \ \\~25% more int8 tensor throughput), which means you can get faster, but are you considering the upscaling and refining steps?\n\nAnd DLSS is post, yes, so I posted the RefMod with DLSS, and LoRA without\
+  \ DLSS clips in the comments too, you can see both. \n\nWhat’s the cc>ref>control workflow? Got a link? Lemme see some of your ref work.\n--- u/DeliciousGorilla score=1 parent=t1_19rfvvfdssxr6\nYup [https://elevenlabs.io/voice-design](https://elevenlabs.io/voice-design)\n\
+  --- u/DeliciousGorilla score=1 parent=t1_19rfypap1vw83\nYea, the RefMod copied whatever was in its photos, lighting included. My first set was studio-lit and every clip came out looking \"fake\" until\
+  \ I swapped in candid shots. The LoRA had no trouble with new outfits, new places, or her face in a wide shot.\n\nThe RefMod tokens do get attended to at every step of the first pass, though. They’re\
+  \ conditioning on ref2va, so I’d say the limit is that they’re stills, and that ref2va is meant to stay close to its references.\n--- u/DeliciousGorilla score=1 parent=t1_19rfuw4o0ucbk\nI've tried all\
+  \ the amateur/samsung/lenovo/etc LoRAs for Z-Image -- my favorite open weight model for fast realism -- yours is the best!\n--- u/DeliciousGorilla score=1 parent=t1_19rg73wezzt9h\nOh for sure, Refmod\
+  \ is great, I shared those workflows too. For me I just get that extra bit of realism from the LoRA.\n--- u/DeliciousGorilla score=1 parent=t1_19rhtqloh0hk2\nDLSS workflow is in the Drive [https://drive.google.com/drive/folders/1T-ELnDiOQ2pOJOVaaL\\\
+  _MvyfXcmeUdXeK](https://drive.google.com/drive/folders/1T-ELnDiOQ2pOJOVaaL_MvyfXcmeUdXeK)\n--- u/DeliciousGorilla score=1 parent=t1_19rhxzbzbwxr6\nYup, I used the Z-Image refs in Seedance 2.5 to generate\
+  \ several videos, and split them into 14 clips for Fizgig.\n\nhttps://preview.redd.it/522kzv9p13xh1.png?width=1658&format=png&auto=webp&s=676e82abba15e88490848f238216f9d06afcb1ca\n\n>cl4ir3, a woman in\
+  \ her living room in the evening, sitting sideways on a sofa with her knees pulled up, wearing an oversized grey knitted jumper, holding a mug, turning from profile to face the camera, medium close-up,\
+  \ handheld phone video. (S1) says: <d>\\[English\\] And that's when I realised I'd locked myself out in my slippers.</d>"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: Workflow (API-формат) лежат в папке Google Drive — не открывал. Обучение шло на арендованном H200 (бесплатные кредиты Modal) — не запускал. Видео не смотрел.
+source_url: https://reddit.com/r/StableDiffusion/comments/1xbobrr/
+duplicates_of: []

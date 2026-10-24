@@ -1,0 +1,60 @@
+id: 052_charsheet_then_outfit_poses_seedance
+source_file: 52_charsheet_then_outfit_poses_seedance.md
+title: '# 52 — Лист персонажа из селфи → Seedance 2.0: подходит к камере и позирует, на каждую позу новый наряд из Pinterest'
+intent_tags:
+- client_in_clip
+use_when: Селфи → лист персонажа (вид спереди/сбоку/сзади, 6 голов, 6 деталей) → Seedance 2.0 с листом + 4 фото одежды; короткий промпт с @image1…@image5.
+inputs:
+- фото лица/портрет человека
+- фото в полный рост
+steps:
+- n: 1
+  action: 'Nano Banana 2: селфи + промпт листа персонажа.'
+  tool:
+  - Nano Banana
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Seedance 2.0: лист (image1) + 4 фото одежды (image2–5) + промпт; ≥10 с.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: 10 с
+  aspect: unknown
+prompts_verbatim:
+- |-
+  🧘‍♂️Как создать трендовое видео?
+
+  Переходим в БОТ PromptX
+
+  Шаг 1: Работа с изображениями - Nano Banana 2, загружаем свое селфи фото и этот промпт:
+  Ultra-realistic minimalist character reference sheet on a pure white background, styled like a professional fashion photography and movie costume reference board. Left side: full-body front, side, and back standing views of the exact same person. Natural pose, arms relaxed, identical face, hairstyle, clothing, body proportions, and height. Eye-level camera, soft studio lighting, no background distractions.
+
+  Right side divided into two sections:
+  Top-right: 6 realistic head reference shots of the same person — front portrait, top/down angle, back of head, side profile, near-side angle, and 3/4 portrait.
+  Bottom-right: 6 close-up detail shots — clothing fabric texture, lower outfit detail, tailoring detail, skin texture, eyes/facial details, and shoes.
+
+  Style: ultra-realistic photography, premium fashion editorial quality, clean layout, sharp details, natural skin texture, realistic hair strands, accurate clothing materials, professional character identity sheet.
+  Шаг 2: Теперь чтобы сделать такое видео, находим раздел "Создать" и выбираем там "Видео", далее выбираем "Seedance 2.0", загружаем фото (из ШАГ 1) а также загружаем фото одежды, которую можно найти в ПИНТЕРЕСТ и пишем такой промпт:
+  Refer to the facial features of the model in @image1. The model, wearing the outfits in the @image2 @image3 @image4 @image5,  gets close to the camera and poses playfully, coolly, cutely, in surprise, and handsomely, with each pose wearing a different outfit.
+  *Обязательно выбираем длительность видео не менее 10секунд.
+  👉СОЗДАТЬ ФОТО
+
+  🟢VPN в обход белых списков
+
+  🤖 Генерировать такой контент можно здесь:➡️ PromptX
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://t.me/AlisPromptX/360
+duplicates_of: []

@@ -1,0 +1,56 @@
+id: 036_tv_screen_composite_h3
+source_file: 36_tv_screen_composite_h3.md
+title: Герой смотрит ТВ, на экране — ваш готовый клип (композитинг промптом, H3)
+intent_tags:
+- client_in_clip
+- animal
+- object_alive
+- motion_transfer
+use_when: Герой смотрит ТВ, на экране — ваш готовый клип (композитинг промптом, H3)
+inputs:
+- видео-референс (движение/клип)
+- аудио/голос
+steps:
+- n: 1
+  action: unknown (в источнике нет нумерованных шагов; см. prompts_verbatim)
+  tool:
+  - MiniMax H3
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "Obviously reference video is a thing, but I expected it to be a sort of garbled approximation of the input in this context. But MMH3 successfully super-imposed the reference clip in the scene unaltered.\
+  \ It also works in real-world scenes. This used to take compositing; it's awesome that it's doable with just a prompt now.\n\nPrompt:\n\n    subject_definitions:\n    <Subject 1> is a young adult woman\
+  \ in real-life American-anime street style: fair skin; sharp stylized makeup (bold winged eyeliner, glossy lips); wild neon-green hair in chaotic twin pigtails with loose flyaways and uneven bangs framing\
+  \ the face; exaggerated cute-but-edgy anime-IRL vibe without becoming 2D cartoon. Casual living-room outfit that fits the look (colorful layered street fashion). She sits on a couch facing a TV, back\
+  \ and near shoulder toward camera in over-the-shoulder framing. No Picture refs — appearance is text-defined only.\n    \n    <Video 0> is the full Castlevania S02E05 \"Last Spell\" ~10s clip (library\
+  \ scene): 2D animated gothic library with tall dark bookshelves; left — pale long platinum-blonde man in a dark high gold-lined collar coat holding/regarding a book (Alucard); right — short wavy orange-haired\
+  \ woman in a light-blue/teal hooded cloak with a large red/ornate book (Sypha). Warm firelight, hanging chains, conversation beats across the clip. <Video 0> is ONLY the content playing ON the television\
+  \ screen in the target — not a full-frame drive edit of the living room, not a character-swap source for <Subject 1>.\n    \n    <Audio 1> is the complete synchronized stereo soundtrack of <Video 0> (Castlevania\
+  \ dialogue, library ambience, and SFX from the same clip). <Audio 1> is directly reused 1:1 as the target video's complete final audio track. Do not rewrite, paraphrase, mumble, or re-synthesize the spoken\
+  \ lines. Do not invent a competing living-room bed that replaces <Audio 1>.\n    \n    summary:\n    [reference generation + audio reuse] Live-action cinematic 16:9 over-the-shoulder shot: <Subject 1>\
+  \ sits on a couch watching TV; the TV screen plays <Video 0> Castlevania library animation beat-for-beat; <Audio 1> is fully copied 1:1 as the complete soundtrack of the target video. Real-time ~10s.\
+  \ HQ.\n    \n    retention_analysis:\n    <Subject 1> (entire clip): attribute_transfer - wild neon-green pigtails, American-anime IRL styling, couch OTS pose from text; no Picture identity source.\n\
+  \    <Video 0> (entire clip): fully_preserved as the TV-screen picture only - Castlevania library Alucard/Sypha animation stays readable on the set; living-room camera, couch, and <Subject 1> are new\
+  \ and not from <Video 0>.\n    <Audio 1>: fully_copy - <Audio 1> is reused 1:1 as the target video's complete final audio track; intelligible Castlevania dialogue and SFX preserved verbatim; no re-spoken\
+  \ or garbled replacement track.\n    \n    detailed_description:\n    Live-action photoreal cinematic 16:9. Dim cozy living room at night. CAMERA stays locked over-the-shoulder behind <Subject 1>: her\
+  \ wild neon-green pigtails and near shoulder/head silhouette occupy the foreground (slightly soft), looking toward a glowing TV in the mid/background. The TV bezel and screen are clearly visible; screen\
+  \ content must match <Video 0> — gothic library, blonde Alucard left, orange-haired Sypha right, bookshelves, warm library light — updating in sync through the ~10s. Soft TV glow lights the back of her\
+  \ hair and the couch fabric. She watches attentively with small natural micro-movements (breath, slight head tilt); no cutaways; no zoom that loses the screen.\n    \n    [Shot 1] Static Shot, over-the-shoulder\
+  \ from behind and slightly beside <Subject 1> on the couch. Foreground: neon-green pigtails / shoulder / head edge. Midground: lit TV playing <Video 0> Castlevania library scene continuously. Background:\
+  \ soft living-room interior (couch cushions, low lamp, wall). Hold the same OTS composition through the final frame while the TV continues <Video 0>. When <Audio 1> carries Castlevania dialogue and library\
+  \ SFX, those lines remain the audible source from the soundtrack copy — do not invent a separate on-screen speaker ID for the TV characters, and do not replace <Audio 1> with newly generated speech.\n\
+  \    \n    overall_soundscape:\n    The copied soundtrack from <Audio 1> continues throughout the target video as the complete final mix (Castlevania dialogue, library ambience, and SFX preserved clearly).\
+  \ No additional non-TV spoken dialogue from <Subject 1>.\n    \n    non_diegetic_music:\n    N/A"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '1:1'
+done_criteria: <Video 0> объявлено «ТОЛЬКО то, что играет НА телевизоре, не заменой кадра», <Audio 1> копируется 1:1.
+confidence: B
+prompt_completeness: partial
+notes: —
+source_url: null
+duplicates_of: []
