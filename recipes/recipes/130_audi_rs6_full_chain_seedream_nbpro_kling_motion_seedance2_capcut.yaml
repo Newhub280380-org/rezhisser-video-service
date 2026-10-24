@@ -1,0 +1,112 @@
+id: 130_audi_rs6_full_chain_seedream_nbpro_kling_motion_seedance2_capcut
+source_file: 130_audi_rs6_full_chain_seedream_nbpro_kling_motion_seedance2_capcut.md
+title: 'Полная цепочка «я + моя машина» (шаг 4 теперь открыт): Seedream 4.5 модельный лист → Nano Banana Pro съёмка с авто → Kling Motion по видео-референсу → Seedance 2 (2×10 с) → CapCut'
+intent_tags:
+- client_in_clip
+- seamless_series
+- motion_transfer
+use_when: 'Пять звеньев: (1) Seedream 4.5 из селфи + фото одежды делает композитный модельный лист 16:9; (2) Nano Banana Pro — фото с машиной; (3) Kling Motion переносит движение из реального видео-референса;
+  (4) Seedance 2 по двум промптам на 10 с (девушка у Audi RS6 Avant на туманном мосту; движение машины) '
+inputs:
+- фото лица/портрет человека
+- видео-референс (движение/клип)
+steps:
+- n: 1
+  action: 'Seedream 4.5: селфи + фото одежды + промпт модельного листа (дословно в посте).'
+  tool:
+  - Seedream
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Nano Banana Pro: промпт съёмки с автомобилем (в посте).'
+  tool:
+  - Nano Banana
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Kling Motion: фото + видео-референс (автор приложила видео в комментариях).'
+  tool:
+  - Kling
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: 'Seedance 2: фото из шагов 1 и 2 (+ фото авто), 2 ролика по 10 с по двум промптам из комментария.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: 10 с
+  aspect: unknown
+- n: 5
+  action: 'CapCut: склеить.'
+  tool:
+  - CapCut
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "=== https://t.me/AlisPromptX/382 2026-06-03T18:14:29+00:00\nДорогие мои, извините меня за задержку\U0001F62D\nИнструкциия получилась очень большой и наверное не каждый сможет это повторить, но оставлю\
+  \ это здесь, как и обещала вам❤️\nЗдесь она поместиться не полностью, поэтому продолжение будет в коментариях, генерировать все строго по шагам в инструкциии\U0001F441️\n(Все фото и видеоматериалы будут\
+  \ ниже в комментарииях)\n\nВесь материал генерировала с помощью бота PromptX\n\nШаг 1: заходим в режим Seedream 4.5 и переодеваем себя, загружаем 2 фото - свое селфи + фотку с одеждой и пишем промпт:\n\
+  Используй моё лицо как референс. Сохрани его без изменений. Не меняй черты лица. Качество кожи — ультрареалистичное, цвет волос строго как на референсах!!! [Персонаж: @image1 ,композитный модельный лист\
+  \ в формате 16:9, строго соблюдая дистанцию и кадрирование референса.\n\nТОЧНАЯ КОМПОЗИЦИЯ СЕТКИ:\nБольшая левая панель: кадр в полный рост, вид с головы до ног, нейтральная поза\nЧетыре правые боковые\
+  \ панели: все кадры — средний план (от груди и выше), показывающие голову, шею, плечи и грудь.\n(1) Средний план спереди.\n(2) Средний план в профиль на 90 градусов.\n(3) Средний план в три четверти.\n\
+  (4) Средний план сверху.\n\nПЕРСОНАЖ И СТИЛЬ:\nГиперреалистичное изображение человека со слегка приоткрытыми губами. Кожа естественная, с едва заметными порами и мягкой, здоровой текстурой, освещённая\
+  \ мягким рассеянным естественным светом, создающим тонкие блики и тени. Чистая эстетика beauty. Одета в точности полностью образ с фото 2) . Позади модели — минималистичный ровный светло-серый фон.\n\n\
+  Технические параметры:\nСнято на iPhone 15 Pro, 8K, RAW-фото, ультрадетализированная текстура кожи, f/8 для глубокой резкости.\n\n--ar 16:9\n\nНегативный промпт (ВАЖНО):\nэкстремальный крупный план, макро,\
+  \ обрезанная голова, обрезанные плечи, обрезанные ноги, обрезанные ступни, только лицо крупным планом, другая одежда, сплошной студийный белый фон»\n\nНа всех фото!! Она одета в одежду с фото!\nНа всех\
+  \ фото одинаковый макияж:стрелки, глянцевые пудровые губы, пышные и длинные ресницы.\n\nВолосы на всех фото в точности как в референсе, объемные. Грудь пышная, 4 размера.\n \nШаг 2: Заходим в режим Nano\
+  \ Banana pro закидываем в него полученное фото из Seedream 4.5 и пишем промпт:\nUltra realistic luxury automotive fashion photoshoot.\n\nA beautiful young woman with short wavy brown bob haircut, light\
+  \ eyes, soft facial features, natural skin texture, confident luxury presence. She is standing beside a silver Audi RS6 Avant C8 with Russian license plate M666УР97.\n\nOutfit: premium black leather trench\
+  \ coat, fitted black corset bodysuit, black sheer tights, black thigh-high leather stiletto boots, luxury gold heart pendant necklace, luxury watch, elegant black designer handbag.\n\nLocation: modern\
+  \ architectural parking structure with clean white concrete beams, luxury urban environment, premium automotive showroom atmosphere.\n\nThe woman stands confidently next to the Audi RS6 Avant, one hand\
+  \ resting on the car, subtle mysterious smile, powerful feminine energy, luxury lifestyle aesthetic, old money meets modern performance.\n\nCinematic automotive advertising, Audi commercial style, glossy\
+  \ reflections on metallic paint, soft overcast daylight, premium color grading, shallow depth of field, 85mm lens, photorealistic skin, luxury editorial photography, Vogue quality, high-end fashion campaign,\
+  \ expensive and exclusive atmosphere, ultra detailed, 8k.\n\nШаг 3: Заходим в режим kling Motion , загружаем свое фото на фоне автомобиля и в видео референс загружаем видео, которое оставляю в комментах\
+  \ данном посте.\n\nШаг 4: ОСТАВИЛА В КОММЕНТАХ\U0001F9D8‍♂️\n \n*ПЕРЕД ГЕНЕРАЦИЕЙ ОБЯЗАТЕЛЬНО ПОЛНОСТЬ ОЗНАКОМИТЬСЯ С ПРОМПТАМИ, ПРИ НАДОБНОСТИ ПОДКОРЕКТИРОВАТЬ ПОД СЕБЯ ДЛЯ БОЛЕЕ ТОЧНОЙ ГЕНЕРАЦИИ!\n\n\
+  После всех успешных генераций, закидываем все ролики в CapCut и монтируем\U0001F970\n\n\U0001F7E2VPN в обход белых списков\n\n\U0001F916 Генерировать такой контент можно здесь:➡️ PromptX\n  \n    Please\
+  \ open Telegram to view this post\n    VIEW IN TELEGRAM"
+- "### comments AlisPromptX/382\n--- PromptX | идеи, промпты для фото и видео Kling 3.0, Nano banana, Grok, Veo 3, Sora, Seedream, Seedance 2.0, Sora | промт | promp\nШаг 1: заходим в режим Seedream 4.5\n\
+  --- PromptX | идеи, промпты для фото и видео Kling 3.0, Nano banana, Grok, Veo 3, Sora, Seedream, Seedance 2.0, Sora | промт | promp\nШаг 2: Заходим в режим Nano Banana pro\n--- PromptX | идеи, промпты\
+  \ для фото и видео Kling 3.0, Nano banana, Grok, Veo 3, Sora, Seedream, Seedance 2.0, Sora | промт | promp\nШаг 3: Заходим в режим kling Motion\n\nЗа референс брала вот это видео, по выходу получиилось\
+  \ так=\n--- PromptX | идеи, промпты для фото и видео Kling 3.0, Nano banana, Grok, Veo 3, Sora, Seedream, Seedance 2.0, Sora | промт | promp\nШаг 4: теперь выбираем режим Seedance 2 загружаем туда 2 фото\
+  \ (1 фото из Seedream 4.5 + 2е фото из Nano Banana pro) и создаем 2 видео по 10 секунд по двум промптам:\nПромпт (девушка возле машины):\nглавная героиня девушка изображена на image1 и image2 это один\
+  \ человек, также на image3 находится ее автомобиль.\nMacro shot — девушка держит ключ AUDI RS 6 AVANT перед камерой, капли дождя на пальцах, туманный мост на фоне, cinematic focus pull, slow motion.\n\
+  l, slow motion.\n\nWide shot — она идет вдоль Audi rs6 avant номерами м666ур97  по мокрому мосту, ветер развевает волосы, фары светят сквозь туман.\ntic focus pull, sLow angle tracking shot — камера скользит\
+  \ вдоль кузова Audi, девушка подходит к двери, отражения дождя на машине.\n, cinematic focusClose-up — она открывает дверь автомобиля, медленно садится внутрь, leather jacket texture, luxury aesthetic.\n\
+  оне, cinematic foMacro shot — взгляд девушки в зеркало заднего вида, soft eye movement, cinematic depth of field, sensual expression.\nnematic focus pulInterior shot — рука на руле Audi rs6 avant, ambient\
+  \ dashboard glow, rain drops on windows.\nинный мост на фоне Side profile through wet window — девушка слегка улыбается, неоновые отражения и туман вокруг.\nанный мост на фонCinematic exterior shot —\
+  \ Audi  медленно трогается по мосту, aggressive headlights, wet asphalt reflections.\nа фоне, cinematicDrone-like wide shot — автомобиль едет в густом тумане, атмосфера luxury car commercial.\nх, туманный\
+  \ мост Final aesthetic shot — close-up лица девушки за рулем, холодный взгляд в камеру, fade to black, ultra cinematic mood.\nematic focusultra realistic, sexy aesthetic, luxury automotive commercial,\
+  \ anamorphic lens, moody foggy bridge, smooth transitions, photorealistic, dark cinematic tones, 4K.\n \nПромпт 2 (движение автомобиля):\nтуманный мост, городская атмосфера, пасмурная погода   image1—\
+  \ автомобиль (audi rs 6 avant) с номерами м666ур97, ключевые детали авто    Формат кадра: широкоформатный, 9:16   Кинематографичная сцена рекламного ролика автомобиля в утреннем тумане на мосту. Атмосфера\
+  \ — чистый холодный воздух, автомобиль динамично выделяется на фоне серо-голубого города, мокрого асфальта и мостовых тросов. Детализация кузова, бликов воды, макро деталей, движения, дрифта.    0–2 сек:\
+  \ Slow push-in, общий план — автомобиль из  image1 (без людей) стоит посередине мокрого туманного моста, фары включены, блики на капоте. Камера двигается низко, отражение мостовых тросов и тумана в кузове.\
+  \   2–5 сек: Смена на средний план — машина трогается с места. Камера плавно едет сбоку, крупно фиксирует движение колес и динамику кузова, акцент на водяных каплях.   5–7 сек: Макро — молниеносный монтаж:\
+  \ блеск фар, агрессивная решетка радиатора, детали капота. Свечение фар в тумане, глянцевые отблески на лаке.   7–9 сек: Камера в легком handheld — угловой ракурс, автомобиль входит в дрифт на повороте\
+  \ моста. Сильный брызг воды из-под колес, динамика мокрого асфальта.   9–10 сек: Медленный динамичный орбитальный проезд вокруг авто — выделить формы, дизайн и чистоту линий на фоне мостовой геометрии,\
+  \ исчезающей в тумане. Атмосфера свежести и мощности.    Стабильное лицо на протяжении всего видео. Без деформаций. Без морфинга. Без мерцания. Реалистичная физика движения. Кинематографичное качество,\
+  \ высокая детализация.\n--- D\nА почему у вас ауди а не бмв? \U0001F914\n--- PromptX | идеи, промпты для фото и видео Kling 3.0, Nano banana, Grok, Veo 3, Sora, Seedream, Seedance 2.0, Sora | промт |\
+  \ promp\nЧтобы больше вопросов было\U0001F602"
+output:
+  format: mp4
+  resolution: 4K
+  aspect: '16:9'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: видео-референс для Kling Motion и готовые видео (медиа в Telegram); бот PromptX платный — у нас не запускалось
+source_url: https://t.me/AlisPromptX/382
+duplicates_of: []

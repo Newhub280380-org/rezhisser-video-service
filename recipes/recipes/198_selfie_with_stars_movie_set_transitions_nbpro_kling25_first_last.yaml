@@ -1,0 +1,62 @@
+id: 198_selfie_with_stars_movie_set_transitions_nbpro_kling25_first_last
+source_file: 198_selfie_with_stars_movie_set_transitions_nbpro_kling25_first_last.md
+title: '«Селфи со звёздами на съёмках разных фильмов» с бесшовными переходами: своё фото → Nano Banana Pro (5–6 селфи) → Kling 2.5 Pro, начальный/конечный кадр попарно → склейка в CapCut'
+intent_tags:
+- client_in_clip
+- seamless_series
+- animal
+use_when: '«Селфи со звёздами на съёмках разных фильмов» с бесшовными переходами: своё фото → Nano Banana Pro (5–6 селфи) → Kling 2.5 Pro, начальный/конечный кадр попарно → склейка в CapCut'
+inputs:
+- фото лица/портрет человека
+steps:
+- n: 1
+  action: '**Nano Banana Pro** (у автора через @syntxaibot → «Дизайн с ИИ»): загрузить своё фото, задать формат, промпт ниже. Сделать 5–6 селфи: разные фильмы, разные звёзды, одно и то же лицо.'
+  tool:
+  - Nano Banana
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: '**Kling 2.5, режим Pro** (раздел «Создать видео»): «Начальное изображение» = селфи №1, «Конечное изображение» = селфи №2, промпт анимации ниже. Нейросеть сама придумывает, как герой перебегает
+    из одной локации в другую.'
+  tool:
+  - Kling
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: Повторить для пар 2→3, 3→4 и т.д. — получится серия коротких переходов; каждый следующий клип начинается ровно с того кадра, которым закончился предыдущий.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: previous_step_output
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: Собрать в любом редакторе (у автора CapCut).
+  tool:
+  - CapCut
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  Реалистичное POV-селфи, снятое с вытянутой руки, в той же одежде, что на фото. Крупный план. Молодая девушка с лёгкой улыбкой позирует рядом с главным актёром. Локация: съёмочная площадка фильма “название фильма”. Фотореализм, высокое качество 8K.
+- |-
+  Девушка снимает селфи, быстро бежит и переходит в другое место, где идёт съёмка другого фильма и снова делает селфи.
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: нет (бот @syntxaibot платный, не запускал; шаги можно сделать в любом сервисе с Nano Banana Pro и Kling 2.5 first/last frame)
+source_url: https://t.me/neiroseti/716
+duplicates_of: []

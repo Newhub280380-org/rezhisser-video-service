@@ -1,0 +1,96 @@
+id: 138_gangnam_style_three_people_location_ref_video_seedance25
+source_file: 138_gangnam_style_three_people_location_ref_video_seedance25.md
+title: 'Gangnam Style с друзьями: 3 фото людей + фото локации + @video1 → Seedance 2.5'
+intent_tags:
+- seamless_series
+use_when: 'Тот же шаблон «New Video, Not Source Editing»: трое друзей (@image1–3, жёсткие роли PERSON_A/B/C, B держит телефон) снимают влог в локации @image4, повторяя камеру, whip-pan переходы, танец и
+  мимику из @video1.'
+inputs:
+- фото локации/города
+steps:
+- n: 1
+  action: Фото (см. пост) в хорошем качестве.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Seedance 2.5 с параметрами из поста (длительность, формат).
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: 5 с
+  aspect: unknown
+- n: 3
+  action: 'Фото + промпт из комментария → генерация; звук — по посту (часть шаблонов: без звука, трек добавить в редакторе).'
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "=== https://t.me/nercpa/332 2026-10-23T09:50:15+00:00\n\U0001F1F0\U0001F1F7Тренд под gangnam style\n\n1. Заходите в бота @neyrosetkabot\n2. Выбираете 3 фото людей (первый - слева, второй - посередине,\
+  \ третий - справа) и фото локации в хорошем качестве\n3. Выбираете режим Видео - Seedance 2.5 (длина ролика как у реф-видео, без звука) и отправляете ваши фото с реф-видео и текстом из комментариев\n\
+  4. В любом редакторе добавьте звук, который находится в комментариях\n\nПРОМПТ В КОММЕНТАРИЯХ \n⬇️⬇️⬇️\n\n⚡️Генерация в один клик \n\n#видео #тренд\n  \n    Please open Telegram to view this post\n  \
+  \  VIEW IN TELEGRAM"
+- |-
+  ### comments nercpa/332
+  --- Нейросетка |Промты | Обновления Chat
+  [Generation Task — New Video, Not Source Editing]
+  Generate a NEW photorealistic vlog of three friends filmed on one phone in the location from @image4, using @video1 as a reference for the camera movement, framing, whip-pan transitions, dance moves, gestures, head movements, facial expressions, mouth movements and pacing. The person on the left is from @image1, the person in the middle is from @image2, and the person on the right is from @image3, in every frame, including every close-up, solo shot and motion-blurred transition. Do NOT edit or repaint the original video frames, and do NOT place a face from the photos onto any original performer’s head or body. Build three people, each as one complete, coherent person from their own photo, a unified head and body, not a face mask, and render them naturally within the location from @image4. The video feels like one continuous phone take swung between the friends: every transition is a fast whip pan with heavy motion blur, about a third of a second long. Duration: about 20 seconds, aspect ratio of @video1.
+
+  [Character Assignments]
+  PERSON_A, from @image1: the friend on the left in the group selfies; has a solo moment filmed by PERSON_B in one spot of the location.
+  PERSON_B, from @image2: the friend in the middle who holds the phone at arm’s length for the whole video, films the selfie close-ups and films the two friends’ solo moments; PERSON_B’s face streaks past the lens in the whip pans.
+  PERSON_C, from @image3: the friend on the right in the group selfies; has a solo moment filmed by PERSON_B in another spot of the same location.
+  These assignments never change. Each person keeps their own face, hair, body and outfit in every frame. No identity blending, no exchanged outfits. Only these three people are the friends in the video.
+
+  [Reference Roles and Priority]
+  @image1, @image2 and @image3 = the ONLY sources of each person’s appearance: face, facial features, hair, skin tone, body build and proportions, hands, tattoos, outfit, accessories and eyewear.
+  @image4 = the ONLY source of the location: the place, its architecture, surfaces, objects, time of day, weather and light. Only the place is taken from @image4, never any people in it.
+  @video1 = reference for each person’s actions in the same position, the order of moments, approximate timing, camera framing and movement.
+  @video1 is NOT a reference for any of the three people’s face, head shape, facial features, lip colour, makeup, hair, skin, apparent age, gender, body build, clothing, accessories or eyewear, and NOT a reference for the location. The original performers are only motion guides.
+  If an original performer’s body conflicts with a photo, the photo wins. Even when a photo looks similar in type to the original performer in the same position, the person is still rebuilt entirely from the photo. The original performers give only movement, never body shape or hair shape: each person’s head, hair, neck, jaw, shoulders and build come only from their own photo. Adapt the moves to each person, never distort a person to fit them.
+
+  [Face Identity]
+  Each face is built entirely from its own photo in every frame: head shape and proportions, face width and length, forehead, eyebrows, eye shape, color and spacing, nose, mouth, lip shape and lip colour, cheekbones, jawline, chin, ears, skin tone and texture, apparent age and gender, hairline, hairstyle, hair length and hair color. The head and hair look as in their photo in every frame, through head tosses and fast moves. Expressions come from @video1 — joy, playful faces, confident smiles, laughter — performed with each person’s own features. Do not copy the photos’ backgrounds, framing, crop, poses, lighting or frozen expressions.
+
+  [Body and Outfit]
+  Each body follows its own photo: the same build, proportions, neck, jaw and shoulders as in the photo. Each person wears the outfit, accessories and eyewear from their own photo, in the photo’s real colors, with the clothing continued naturally below the photo’s crop in the same style.
+
+  [Identity in Motion]
+  --- Нейросетка |Промты | Обновления Chat
+  In fast moves, in profile, partly out of frame and inside the motion blur of the whip pans, every person is still the person from their own photo.
+
+  [Location and Look]
+  The whole video takes place in the location from @image4, in its own time of day, weather and light. The selfie shots, PERSON_A’s solo and PERSON_C’s solo each show a different part or angle of this same place, as a phone camera would see it while being swung around. Handheld phone look, wide angle, slightly low angle, natural grain, the light and colors of @image4 on the people. Recreate the location as a real, explorable place rather than copying the photo flat.
+
+  [Mouth]
+  All three sing along to the music. Each person’s mouth follows the rhythm of the original performer’s mouth in the same position in @video1 — the openings, closures and pauses, approximately — while the lips themselves are each person’s own lips from their own photo: their own lip shape, lip colour and teeth.
+
+  [Timeline — follow @video1’s order and rhythm, approximate timing]
+  - [00:00–00:01.5] Group selfie, PERSON_B (@image2) holds the phone at arm’s length in the middle; all three sing along; PERSON_A (@image1) on the left gives a quick head toss and runs a hand over their head; PERSON_C (@image3) on the right makes playful faces, tongue out, and throws one hand up. Whip pan toward PERSON_B.
+  - [00:01.5–00:04.2] Selfie close-up of PERSON_B (@image2) alone: sings along straight into the lens with big smiles and small head tilts. Whip pan: PERSON_B swings the phone away, their face streaking past the edge of the frame.
+  - [00:04.2–00:08] PERSON_A (@image1) filmed by PERSON_B, close and waist-up, in one spot of the location from @image4: a hand pressed to the chest, swaying to the beat, hands dancing near the shoulders, a quick head toss, a wave, singing along, leaning toward the lens at the end. Whip pan through PERSON_B’s blurred face.
+  - [00:08–00:12.0] PERSON_C (@image3) filmed by PERSON_B, close and waist-up, in another spot of the same location: spins into the shot, sings along with a pout, waves a hand close to the lens, steps closer playfully. Whip pan back to PERSON_B.
+  - [00:12.0–00:16.0] Selfie close-up of PERSON_B (@image2): pushes an open palm toward the lens, then sings along with a wide grin.
+  - [00:16.0–00:20] PERSON_A (@image1) and PERSON_C (@image3) burst into the frame from both sides; all three sing along and laugh with quick head tosses; PERSON_B pushes an open palm toward the lens; arms thrown up at the end.
+  Only the moves of this timeline are performed.
+
+  Negatives:
+  face-swap look, mask-like face, pasted face, identity blend between the three people, exchanged outfits, facial features that differ from the photos, mismatched head and body proportions, outfits different from the photos, a different person in the solo shots, a fourth friend, extra limbs, extra fingers, watermark, captions.
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: превью-видео (медиа); бот @neyrosetkabot платный — у нас не запускалось; промпт годится для любой площадки с Seedance 2.5
+source_url: https://t.me/nercpa/332
+duplicates_of: []

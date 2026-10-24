@@ -1,0 +1,54 @@
+id: 017_kling3_real_estate_photo_pairs_walkthrough
+source_file: 17_kling3_real_estate_photo_pairs_walkthrough.md
+title: 'Фото недвижимости → кинематографичный «обход» дома: перекрывающиеся пары фото в Kling 3.0'
+intent_tags:
+- seamless_series
+use_when: 'Фото недвижимости → кинематографичный «обход» дома: перекрывающиеся пары фото в Kling 3.0'
+inputs:
+- финальный кадр
+steps:
+- n: 1
+  action: 'Фото выстроить как маршрут: улица → вход → гостиная → кухня → патио → финальный внешний вид.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Видео-режим Kling 3.0 (start+end frame): НЕ по одному фото, а пары с перекрытием: 1+2, 2+3, 3+4 … до конца.'
+  tool:
+  - Kling
+  mode: start+end frame
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Для каждой пары общая формула: «Smoothly blend from the first image into the second image and keep the camera stable and make the transitions seamless». Далее направление камеры для каждого клипа:
+    первый — к входу, потом поворот вправо внутрь, затем назад-вправо, вперёд, назад, вперёд, назад; последний — вверх (внешний вид). Точные тексты по каждой паре — в документе по ссылке в описании (закрыто).'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: previous_step_output
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: Сгенерировать каждый клип, сложить в том же порядке, посмотреть как один тур.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim: []
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: Конец клипа N = начало клипа N+1 (общее фото), поэтому швы совпадают; порядок фото = маршрут.
+confidence: B
+prompt_completeness: gaps
+notes: Google-док с промптами по парам из описания видео.
+source_url: https://www.youtube.com/watch?v=ReASV_e1mwc
+duplicates_of: []

@@ -1,0 +1,131 @@
+id: 023_h3_four_ref_anime_multishot_prompt
+source_file: 23_h3_four_ref_anime_multishot_prompt.md
+title: Мультишот-аниме на 4 референсах (Skater Girl 90s) и 4-шотовая последовательность по 3 с с жёсткими склейками
+intent_tags:
+- seamless_series
+use_when: Мультишот-аниме на 4 референсах (Skater Girl 90s) и 4-шотовая последовательность по 3 с с жёсткими склейками
+inputs:
+- логотип
+steps:
+- n: 1
+  action: unknown (в источнике нет нумерованных шагов; см. prompts_verbatim)
+  tool:
+  - MiniMax H3
+  - ComfyUI
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  Workflow: [https://drive.google.com/file/d/1B4kODxXQgJ1QOKRsEIkxHbgYmdruPpTK/view?usp=sharing](https://drive.google.com/file/d/1B4kODxXQgJ1QOKRsEIkxHbgYmdruPpTK/view?usp=sharing)
+
+  **Prompt:**
+
+  Create a \*\*15-second multi-shot anime sequence (90s style 15fps hand drawn)\*\* using the provided references:
+
+  Image 1 = the girl character reference
+
+  Image 2 = skateboard reference
+
+  Image 3 = downhill Japanese alley / neighborhood background
+
+  Image 4 = Walkman + headphones reference
+
+
+
+  Preserve the girl’s exact character design, face, hair, outfit, proportions, and overall look from Image 1. Preserve the skateboard design from Image 2. Preserve the same downhill Japanese alley environment from Image 3. Add the Walkman and headphones from Image 4: the girl is wearing the headphones, and the \*\*Walkman is clipped or hanging at her hip\*\* while she skates.
+
+
+
+  Visual style: authentic 1990s hand-drawn anime, traditional cel animation, painted backgrounds, visible linework, cel shading, slight brush/stroke texture, subtle analog feel. \*\*Very important:\*\* the houses and environment must stay \*\*2D and hand-painted\*\*, \*\*not 3D\*\*, \*\*not CGI\*\*, \*\*not game-engine looking\*\*, \*\*not volumetric\*\*. The buildings should look like classic anime background art with painted depth, not like 3D models.
+
+  Animation feel should be low frame rate, like 90s anime at around 15 fps, with controlled in-betweens and natural held-frame timing. No jittery morphing.
+
+
+
+  No dialogue, no text, no subtitles.
+
+
+
+  \### Shot 1 — 0s to 3s
+
+
+
+  \*\*Rear tracking shot\*\* from behind. The girl is skateboarding fast downhill through the steep Japanese alley. Camera follows behind her at a low-to-medium height. She rides confidently and smoothly, hair and oversized clothing moving in the wind. The headphones are on her head, and the Walkman is visible attached at her hip. The alley rushes past with a strong sense of speed. Keep the environment clearly \*\*2D anime background art\*\*, not 3D.
+
+
+
+  \### Shot 2 — 3s to 6s
+
+
+
+  \*\*Close-up shot of the Walkman at her hip\*\* while she continues skating. The camera stays focused on the Walkman and part of her side torso and arm. We can clearly see the \*\*cassette tape reels spinning/rolling inside the Walkman window\*\*. The headphone wire moves naturally with the motion. Background and street pass by in blurred motion.
+
+
+
+  \### Shot 3 — 6s to 9s
+
+
+
+  \*\*Medium profile tracking shot\*\* of the girl skating. She is wearing the headphones, listening to music, with wind moving across her face and pushing her hair backward. She is \*\*nodding her head subtly to the music\*\* while riding. Her expression is relaxed, immersed, and unbothered. The background is blurred from motion, but it must still read as a \*\*painted 2D Japanese neighborhood\*\*, not 3D.
+
+
+
+  \### Shot 4 — 9s to 12s
+
+
+
+  \*\*Close-up shot of her feet and skateboard.\*\* Her \*\*right foot stays on the board\*\*, while her \*\*left foot pushes against the road\*\* in a natural skating motion. Show one clean push cycle: left foot comes down, pushes backward against the pavement, then lifts. Wheels spin quickly. Asphalt and road markings streak by with motion blur.
+
+
+
+  \### Shot 5 — 12s to 15s
+
+
+
+  \*\*Ground-level fisheye shot\*\* looking upward from the road. The skateboard approaches fast, and she \*\*jumps over the camera\*\*. The board and her body pass overhead in one clean motion. Hair, pants, and headphone wire react naturally during the jump. Keep the motion readable and stylish, with a strong sense of speed and a dynamic anime finish.
+
+
+
+  \### Important constraints
+
+
+
+  \* Keep the whole video in \*\*classic 90s anime cel-animation style\*\*
+
+  \* \*\*15 fps feel\*\*, smooth low-frame-rate animation
+
+  \* \*\*No 3D-looking houses or background\*\*
+
+  \* No photorealism
+
+  \* No modern glossy digital anime rendering
+
+  \* No character redesign
+
+  \* No extra accessories beyond the headphones and Walkman
+
+  \* Keep all motion natural and consistent across shots
+- "I tried a multishot workflow with MiniMax H3 Ref2Vid: I generated a separate reference image for each shot, then used them to build a short anime montage.\n\nThe interesting part was seeing how well\
+  \ H3 kept the character, colours and hand-painted style consistent as the framing changed from wide shots to close-ups.\n\nThe music is my track “What’s Coming Is Better Than What’s Gone,” produced and\
+  \ performed by yours truly using the Teenage Engineering EP-133 KO II.\n\nWorkflow:  \n[https://drive.google.com/file/d/1M1XgXv8h4NQDSikVpAebB7FGu-TeHZQT/view?usp=drive\\_link](https://drive.google.com/file/d/1M1XgXv8h4NQDSikVpAebB7FGu-TeHZQT/view?usp=drive_link)\n\
+  \nPrompt:  \nCreate one 12-second video using Images 1–4 as four consecutive shots. Each image defines its shot’s composition and details. Make a clean hard cut every 3 seconds. Keep the camera locked\
+  \ in every shot. Preserve the same boy, orange headphones, single orange cable, outfit, painted cloud setting, colours, fine ink lines, textured paint and flat cel shadows throughout.\n\n0–3   \nThe boy\
+  \ sits quietly on the beam, looking at the clouds. His hair and loose shirt move faintly in a breeze; his dangling feet begin one small, relaxed swing. The clouds billow slowly.\n\n3–6   \nExtreme close-up\
+  \ of the cassette player. The two reels turn slowly beneath the clear window. The warm sky reflection shifts slightly across the plastic without hiding the tape. The single orange cable stays plugged\
+  \ into the player; keep its path and all controls stable.\n\n6–9  \nClose-up of both dangling shoes. They complete one gentle swing and settle. Keep the jeans, laces and shoe shapes consistent. The beam\
+  \ stays fixed behind the legs, while the distant clouds remain softly out of focus.\n\n9–12  \nStatic side-profile close-up. The boy looks into the distance and blinks once. A few hair tips move in the\
+  \ breeze; his mouth stays closed. Keep the headphone blank and unchanged, with softly blurred clouds behind him.\n\nAnimate like hand-drawn 1990s cel anime with a deliberate 15 fps feel: held drawings,\
+  \ distinct key poses and subtle stepped motion. No smooth interpolation, camera moves, dissolves, morphing between shots, realism, semi-realism, 3D, extra cables, logos or text."
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: Каждый шот имеет собственный блок и прибит к тайм-коду; образы — через теги <Picture N> в retention_analysis.
+confidence: B
+prompt_completeness: partial
+notes: —
+source_url: https://drive.google.com/file/d/1B4kODxXQgJ1QOKRsEIkxHbgYmdruPpTK/view?usp=sharing](https://drive.google.com/file/d/1B4kODxXQgJ1QOKRsEIkxHbgYmdruPpTK/view?usp=sharing)
+duplicates_of: []

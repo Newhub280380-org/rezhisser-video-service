@@ -1,0 +1,50 @@
+id: 059_win11_living_wallpaper_funny_ending
+source_file: 59_win11_living_wallpaper_funny_ending.md
+title: '# 59 — «Живые обои Windows 11» со смешной концовкой: героиня разбивает экран битой и прячется, выключая яркость (Seedance 2.0, 15 с, одна камера)'
+intent_tags:
+- meme
+use_when: 'Готовый сюжет с поворотом: 0–4 с трюки с битой, 4–6 с удар по стеклу экрана, 9–14 с она тянет слайдер яркости, 14–15 с чёрный экран. Подходит как шаблон «персонаж внутри интерфейса».'
+inputs:
+- стартовый кадр
+- логотип
+steps:
+- n: 1
+  action: Сделать картинку рабочего стола Windows 11 с вашим персонажем (любым генератором; в посте не расписано).
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: 11 с
+  aspect: unknown
+- n: 2
+  action: 'Seedance 2.0: эта картинка как Image1 и первый кадр, 16:9, 15 с, промпт ниже.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: 15 с
+  aspect: '16:9'
+prompts_verbatim:
+- "\U0001F7E5Win11 Living Wallpaper (Seedance 2.0) \n\n- Reference(s): Yes\n- Styles Support:  Realism (Tested)\n\n\" Use the newly created Windows 11 desktop image as <<<Image1>>>  and the exact first\
+  \ frame. 16:9, 15 seconds, fixed camera, one continuous shot. The woman is part of the wallpaper but can move and interact with the desktop interface. Preserve her face, short highlighted hair, shark-tooth\
+  \ cap, navy-and-white outfit, baseball bat, and plain blue background. Keep the desktop icons on the left and the Windows 11 taskbar along the bottom.\n\n0–4s: Still holding the same baseball bat from\
+  \ the first frame, she casually flips it upward and catches it twice near her shoulder. Her movements are natural and controlled; her expression stays cool.\n\n4–6s: On the third flip, her grip slips.\
+  \ The barrel of the bat, not a new object, flies toward the viewer and strikes the screen. A sharp glass impact rings out. Spiderweb cracks spread across the foreground, over both the woman and the Windows\
+  \ interface. The screen jolts once; the camera remains fixed.\n\n6–9s: She freezes, then looks from the cracks to the viewer in alarm. She tries to cover the damage with her hands, but the cracks stay\
+  \ fixed on the screen’s glass plane.\n\n9–14s: She spots the Windows 11 system tray at the bottom right. Reaching over the taskbar, she opens Quick Settings and drags its sun-marked brightness slider\
+  \ steadily to the left. The entire display dims in sync: woman, background, desktop icons, taskbar, panel, and cracks. She glances guiltily at the viewer as she lowers it to minimum.\n\n14–15s: Brightness\
+  \ reaches zero. Hold on a completely black screen for one second, with no text or logo.\n\nSound: Playful, energetic instrumental music accompanies the bat flips. The music cuts off instantly when the\
+  \ bat hits the glass, leaving the crack, brief rattle, hurried clothing movement, and subtle Windows UI clicks. End in silence.\n\nConstraints: One take, no cuts or camera movement. One woman and one\
+  \ baseball bat throughout. No knife, swordsman costume, Apple menu bar, Mac Dock, new scenery, physical monitor frame, or keyboard. The cracks remain on the foreground glass plane. The final blackout\
+  \ happens only as she moves the brightness slider.\"\n\n✨ Get access to Seedance 2.0 at OpenArt  \n(20% discount /w code \"L1TMGOQ2\" from all plans)"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '16:9'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: как сделать первую картинку «рабочий стол Win11 с героиней» — в посте не описано («Use the newly created Windows 11 desktop image»), только видео-промпт
+source_url: https://t.me/TheProPrompts/314
+duplicates_of: []

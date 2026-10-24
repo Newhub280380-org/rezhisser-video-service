@@ -1,0 +1,81 @@
+id: 007_minimax_h3_fl2va_sam3_silhouette_dialogue
+source_file: 07_minimax_h3_fl2va_sam3_silhouette_dialogue.md
+title: 'Замена «силуэта» FL2VA-моделью MiniMax H3: персонаж по 2 картинкам, диалог из референс-аудио'
+intent_tags:
+- talking_head
+- client_in_clip
+- seamless_series
+- motion_transfer
+use_when: 'Замена «силуэта» FL2VA-моделью MiniMax H3: персонаж по 2 картинкам, диалог из референс-аудио'
+inputs:
+- фото лица/портрет человека
+- фото в полный рост
+- видео-референс (движение/клип)
+- стартовый кадр
+- аудио/голос
+steps:
+- n: 1
+  action: Модель FL2VA (не ref-версия — автор считает качество лучше). SAM3 закрашивает оригинального человека силуэтом, к инвертированной картинке добавлен шум; можно делать multi-replace, добавив ещё
+    Subject.
+  tool:
+  - SAM3
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Референсы: <Picture 1> = портрет (лицо и крупные детали), <Picture 2> = 3-панельный лист (фронт по пояс, профиль по пояс, фронт в рост).'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Промпт «omni» (дословно, диалог — единственная не-omni часть в конце):
+
+    [PROMPT]'
+  tool: unknown
+  mode: omni
+  prompt:
+  - "How the reference video and pictures align with the target video — the target video is an edited version of <Video 1>, replacing the silhouette with <Subject 1>.\n\nsummary:\n\n\\[video editing\\]\
+    \ The target video replaces the silhouette in <Video 1> with <Subject 1>, who performs the exact same motion, dialogue, positions and facial expressions of the silhouette while maintaining the original\
+    \ camera work, environment, and lighting of <Video 1>.\n\nsubject\\_definitions:\n\n<Subject 1> is the person in <Picture 1> and <Picture 2>; <Picture 1> supplies facial features and close-up details,\
+    \ while <Picture 2> provides 3-panel image of front mid shot, profile mid shot, and front full body view, identity follows these reference assets, only appearance is retained.\n\n<Subject 2> is the\
+    \ environment and setting established in <Video 1>. The scene follows this layout, materials, and light; camera position and framing.\n\n<Subject 3> is the silhouette in <Video 1> which provides the\
+    \ motion sequence to be copied.\n\nintegrated\\_multimodal\\_description:\n\nVideo editing, the target video is in a live-action cinematic style with the interior lighting and background and environment\
+    \ atmosphere established in <Video 1> with the likness of <Subject 1> inserted.\n\n\\[Shot 1\\] The shot opens with <Subject 1> seamlessly replacing the silhouette <Subject 3> in <Video 1>, the outfit\
+    \ of and clothing of <Subject 1> exactly from reference, performing the exact same motion, dialogue and sounds, positions and facial expressions of silhouette. From the very first frame, <Subject 1>\
+    \ occupies the spatial coordinates of the silhouette replacing with their likness, initiating the same motion onset from rest. <Subject 1> mirrors the silhouette's weight shifts and momentum, body moving\
+    \ in perfect synchronization with the rhythm and pacing of the original footage but replaced with the likness of <Subject 1>. As they navigates the space, <Subject 1> mimics every nuanced gesture—the\
+    \ way the silhouette's head tilts, arm movement, and the micro-movements of facial muscles. The face, defined by <Picture 1>, conveys the same emotional depth as the silhouette, while their full body,\
+    \ as seen in <Picture 2>, provides the physical presence outfit an appearance. The camera follows the exact movement, angle, and cutting rhythm of <Video 1>, maintaining a consistent focal length and\
+    \ distance from the subject at all times. The light from <Subject 2> interacts realistically with <Subject 1>'s skin and clothing, casting shadows that align with the movements of the original scene.\
+    \ The transition is perfect; the result is a fully realized <Subject 1> instead of a silhouette, but the soul of the performance—the timing, the pauses, and the dynamic energy—remains identical to <Video\
+    \ 1>. The movement progresses with a palpable sense of weight as <Subject 1> shifts their center of gravity, with clothes rippling in response to movements. The camera maintains exact framing and cuts\
+    \ as <Video 1>. The scene concludes as <Subject 1> reaches the final position of the silhouette, body settling into a pose that mirrors the original's final frame exactly, with face held in the same\
+    \ expression. <Subject 1> hair, accessories, wardrobe, lighting, and room layout remain unchanged and perfectly replace silhouette throughout.\n\noverall\\_soundscape:\n\nA low room tone establishes\
+    \ beneath the scene, mirroring the background audio environment of <Video 1>. \n\n<Subject 1> says <d>\\[English\\] Can you, can you spare change.</d>.\n\nnon\\_diegetic\\_music: N/A"
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: 'Автор: с более подробным описанием внешности, игры и диалога результат «почти безупречный».'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: previous_step_output
+  duration: unknown
+  aspect: unknown
+prompts_verbatim: []
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: Силуэт задаёт пространственные координаты и движение, второй референс-лист даёт полный образ; звук берётся из референс-аудио, поэтому диалог в теле не нужен.
+confidence: B
+prompt_completeness: complete
+notes: JSON на GitHub, видео-результат.
+source_url: https://reddit.com/r/StableDiffusion/comments/1w4g2da/
+duplicates_of: []

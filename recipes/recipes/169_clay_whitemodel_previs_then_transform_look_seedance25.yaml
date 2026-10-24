@@ -1,0 +1,96 @@
+id: 169_clay_whitemodel_previs_then_transform_look_seedance25
+source_file: 169_clay_whitemodel_previs_then_transform_look_seedance25.md
+title: '3D «белая модель» / clay-превиз в Seedance 2.5 (4 стиль-блока + 11 примеров: товар, драка, машина) → потом перевести в любой вид'
+intent_tags:
+- product_ad
+- client_in_clip
+- vfx_effect
+use_when: 'Приём: сначала генерируется «неготовая» 3D-анимация из матовой светло-серой глины — модель тратит силы только на движение, физику, камеру и монтаж. Стиль-блок ставится в начало любого промпта.
+  По описанию автора, такой клей-рендер потом полностью переводится в любой вид в Seedance 2.5.'
+inputs:
+- логотип
+steps:
+- n: 1
+  action: Шаг 1 — выбрать стиль-блок S1–S4 и поставить его в начало своего промпта (или взять готовый пример 01–11, где блок уже вшит).
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Шаг 2 — подогнать длительность видео под таймкоды промпта, заменить товар/сцену.
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: Шаг 3 — сгенерировать в Seedance 2.5 (автор — через Higgsfield).
+  tool:
+  - Seedance
+  - Higgsfield
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: Шаг 4 (по описанию видео, не дословно) — перевести клей-рендер в финальный вид в Seedance 2.5.
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 5
+  action: 'Темы примеров в документе: 01 Кроссовок — разборка конструкции; 02 Сыворотка — пипетка и жидкость; 03 Смартфон — архитектурные объёмы; 04 Ноутбук — петля и сборка; 05 Футболка — симуляция ткани;
+    06 Умные очки; 07 Двое бойцов с мечами; 08 Кулачный бой; 09 Ралли-машина; 10 Езда по городу; 11 Взрыв и восстановление здания.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "05T-Shirt — Fabric Simulation\n06Smart Glasses\n07Two Fighters with Swords\n08Fist Fight\n09Rally Car\n10Driving Through City\n11Building Explosion & Rebuild\nSECTION A\nStyle Templates\n\n\nPaste one\
+  \ of these at the very start of a prompt to lock in the colourless clay-render look. Pick the variation that fits your subject.\nS1   White-Model Previs\n\n\n■  STYLE BLOCK\nSTYLE / RENDERING — CRITICAL:\n\
+  Create the entire video as a professional white-model previs animation.\nUse one uniform smooth matte white or very light-grey material for every character, object, prop and environment.\nUse soft neutral\
+  \ studio-style lighting, simple contact shadows and basic ambient occlusion only.\nDo not add textures, realistic materials, reflections, surface imperfections, logos, text, micro-detail or decorative\
+  \ elements.\nKeep geometry clean and simplified, showing only the major forms needed to clearly identify each subject.\nThe finished result should deliberately look like an unfinished professional animation\
+  \ previs created before textures and final rendering.\nPrioritise animation quality, silhouette, composition, camera movement, physics and spatial clarity over visual detail.\n\tS2   Monochrome Clay\n\
+  \n\n■  STYLE BLOCK\nMaintain a premium monochrome clay-rendered white-model aesthetic throughout. Everything should be made from smooth matte light-grey clay with subtle tonal variation only. No colour,\
+  \ no text, no logos, no branding. Keep the geometry clean, simple and stylish so textures and materials can be added later. Use soft studio lighting, gentle ambient occlusion, shallow depth of field,\
+  \ polished cinematic camera movement and high-end commercial pacing.\n\tS3   Simple Clay-Render Previs\n\n\n■  STYLE BLOCK\nSTYLE / RENDERING: Create the entire video as an extremely simple 3D clay-render\
+  \ / white-model animation, similar to an early-stage product animation previs before textures and final materials are applied. Everything in the scene uses one uniform smooth matte light-grey material.\n\
+  Prioritise animation, silhouette, physics, composition, camera movement and basic shape information only. Keep product geometry clean and simplified, with only the major recognizable forms required to\
+  \ identify the object.\nUse a plain seamless light-grey studio environment, very soft neutral lighting, basic ambient occlusion and simple contact shadows. Lighting exists only to clearly define the shapes.\n\
+  \ \nDo not add: textures, realistic materials, metallic surfaces, glass shaders, transparency, reflections, fingerprints, surface imperfections, micro-detail, tiny particles, complex product seams, intricate\
+  \ mechanical details, labels, logos, text, colour or decorative background elements.\nThe finished video should look deliberately unfinished: a clean professional animation blockout showing only motion,\
+  \ timing, camera work, physics and basic 3D forms, ready for textures and materials to be applied afterward.\n\tS4   Product Blockout / Clay Previs\n\n\n■  STYLE BLOCK\nSTYLE / RENDERING — CRITICAL:\n\
+  Create the entire video as an extremely simple professional 3D animation blockout / clay previs.\nEverything must use exactly one uniform smooth matte light-grey material: shoe, floor, elastic surfaces,\
+  \ ribbons, pedestal and all surrounding objects.\nPrioritise animation timing, silhouette, deformation, physics, camera movement and basic shape information only.\nKeep the shoe very simple: broad sole,\
+  \ basic upper volume, simple tongue and a few large lace shapes. No fabric texture, stitching, tread micro-detail, logos, seams or realistic materials.\nSurfaces may squash, stretch and deform, but keep\
+  \ the shapes broad, smooth and visually readable.\nUse a plain seamless light-grey studio, soft neutral lighting, basic ambient occlusion and simple contact shadows.\nNo colour, textures, glass, metal,\
+  \ reflections, tiny particles, text or branding.\n\tSECTION B\nExample Prompts\n\n\nFull prompts from the YouTube video — the render-style block is already baked in. Adjust the length to match, and edit\
+  \ any prompt to fit your vision.\n01   Sneaker — Exploded Construction\n\n\n■  VIDEO PROMPT\nCreate a 15-second premium sneaker animation showing simplified product construction.\n \nSTYLE / RENDERING\
+  \ — CRITICAL:\nCreate the entire video as a professional white-model previs animation.\nUse one uniform smooth matte white or very light-grey material for every character, object, prop and environment.\n\
+  Use soft neutral studio-style lighting, simple contact shadows and basic ambient occlusion only.\nDo not add textures, realistic materials, reflections, surface imperfections, logos, text, micro-detail\
+  \ or decorative elements.\nKeep geometry clean and simplified, showing only the major forms needed to clearly identify each subject.\nThe finished result should deliberately look like an unfinished professional\
+  \ animation previs created before textures and final rendering.\nPrioritise animation quality, silhouette, composition, camera movement, physics and spatial clarity over visual detail.\n \nBreak shoe\
+  \ into only major pieces: upper shell, tongue, laces, midsole, outsole.\n \nMOTION:\nReal-time 30fps. Fast, mechanical, clean assembly.\n \n[0.0s–1.0s — 50mm HERO]\nComplete sneaker rotates.\n[1.0s–2.0s\
+  \ — 85mm SIDE]\nCamera races along silhouette.\n[2.0s–3.0s — 35mm EXPLOSION]\nUpper rapidly separates from sole.\n[3.0s–4.0s — 100mm MIDSOLE]\nMidsole moves outward.\n[4.0s–5.0s — 85mm LACES]\nLarge lace\
+  \ shapes lift away.\n[5.0s–6.1s — 24mm WIDE]\nAll major components suspended in exploded formation.\n[6.1s–7.2s — 35mm FLY-THROUGH]\nCamera flies between layers.\n[7.2s–8.2s — 50mm REVERSE]\nCamera whips\
+  \ around opposite side.\n[8.2s–9.3s — 85mm ASSEMBLY]\nLaces snap gently back toward upper."
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: Второй шаг (как именно «перекрашивают» клей-рендер в финальный вид) — в самом видео; субтитры 429. Папка с видеофайлами на Google Drive — не открывал. Skool-сообщество — нужен вход.
+source_url: https://www.youtube.com/watch?v=6arKHnBNJMI
+duplicates_of: []

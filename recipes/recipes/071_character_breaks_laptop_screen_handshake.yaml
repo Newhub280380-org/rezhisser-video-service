@@ -1,0 +1,56 @@
+id: 071_character_breaks_laptop_screen_handshake
+source_file: 71_character_breaks_laptop_screen_handshake.md
+title: '# 71 — Персонаж разбивает экран ноутбука изнутри и жмёт вам руку: своё видео касания экрана → скрин → Seedance 2.0'
+intent_tags:
+- product_ad
+use_when: Персонаж из «цифры» выходит в реальный мир (ваша рука в кадре); для рекламы маскота/героя бренда.
+inputs:
+- unknown
+steps:
+- n: 1
+  action: Снять, как касаетесь экрана с фото.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Скрин в момент касания.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Seedance 2.0: скрин + промпт.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "\U0001F520\U0001F520\U0001F520\U0001F520\U0001F520\n\nИнструкция:\n1. Снимаем видео, как прикасаемся к экрану с фотографией \n2. Делаем скрин на моменте прикосновения\n3. Переходим в VeoSeeBot \n4. Seedance\
+  \ 2.0 \nВставляем скрин из видео и пишем такой промпт:\nOn the laptop display stands the character in their recognizable appearance, inside their natural environment, perfectly framed within the screen.\n\
+  \nThe scene begins with the character slowly approaching the inside of the display. Their index finger gently reaches toward the glass. The moment the fingertip touches the screen, a realistic spiderweb\
+  \ crack instantly spreads from the point of contact across the display surface.\n\nThe character remains inside the laptop at first, while only their hand and arm gradually push through the cracked screen\
+  \ into the real world. Small glass fragments fall outward, and the cracks continue expanding naturally.\n\nIn the foreground, a real human hand is already extended toward the laptop for a handshake and\
+  \ remains perfectly still throughout the sequence.\n\nAs the character gets closer, they force their way through the screen. Their shoulder, torso, and entire body begin emerging from the laptop display,\
+  \ breaking the barrier between the digital and physical worlds. The glass shatters dramatically into larger fragments, exploding outward as the character climbs out of the screen. The cracks spread across\
+  \ the entire display, and broken shards scatter realistically around the laptop.\n\nThe character fully emerges into the real world and firmly shakes the human hand. The handshake feels tangible and realistic,\
+  \ emphasizing the impossible interaction between the two worlds.\n\nUltra-realistic cinematic lighting, photorealistic glass physics, highly detailed textures, realistic reflections, shallow depth of\
+  \ field, dramatic shadows, realistic hand interaction, dynamic flying glass particles, seamless transition between digital and physical space, Hollywood VFX quality, 4K HDR, hyperrealistic, natural motion,\
+  \ physically accurate destruction, immersive cinematic atmosphere"
+output:
+  format: mp4
+  resolution: 4K
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://t.me/reels_by_alsi/666
+duplicates_of: []

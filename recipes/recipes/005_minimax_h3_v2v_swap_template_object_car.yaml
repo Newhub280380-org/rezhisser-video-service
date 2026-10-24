@@ -1,0 +1,72 @@
+id: 005_minimax_h3_v2v_swap_template_object_car
+source_file: 05_minimax_h3_v2v_swap_template_object_car.md
+title: Шаблон V2V-подмены персонажа ИЛИ предмета (например, красной машины) в чужом видео
+intent_tags:
+- client_in_clip
+- motion_transfer
+use_when: Шаблон V2V-подмены персонажа ИЛИ предмета (например, красной машины) в чужом видео
+inputs:
+- видео-референс (движение/клип)
+- аудио/голос
+steps:
+- n: 1
+  action: 'ComfyUI, MiniMax H3 Ref2VA, режим V2V: видео-источник = <Video 1>, фото замены = <Picture 1>.'
+  tool:
+  - MiniMax H3
+  - ComfyUI
+  mode: V2V
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Главное правило автора: максимально подробно описать то, что вставляешь в <Subject 1> (одно предложение: «a sleek, glossy cherry-red sports car with black multi-spoke rims» или «a young woman
+    with short pink hair, purple eyes, wearing a dark blue cardigan»). Можно добавить больше картинок или второй Subject.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Шаблон (дословно; всё в [скобках] заменить):
+
+    [PROMPT]'
+  tool: unknown
+  mode: unknown
+  prompt:
+  - |-
+    subject_definitions:
+    <Video 1> is the source video providing the camera movement, environment, lighting, and action choreography.
+    <Subject 1> is the replacement [object/character] shown in <Picture 1>, which is [Insert 1-sentence description: e.g., "a sleek, glossy cherry-red sports car with black multi-spoke rims" OR "a young woman with short pink hair, purple eyes, wearing a dark blue cardigan"].
+
+    summary:
+    [video editing + reference generation] The target video is an edited version of <Video 1>. Throughout the video, replace the original [object/character] with <Subject 1> derived from <Picture 1>.
+
+    retention_analysis:
+    <Video 1> (source video): partially_preserved - preserve the background environment, camera path, lighting, non-target objects, and the original [object/character]'s screen-space motion path. Discard the original [object/character]'s visual identity.
+    <Subject 1> (appears in [Shot 1]): fully_preserved - preserve the visual identity, colors, materials, shape, and specific design details from <Picture 1>.
+
+    detailed_description:
+    The target video matches the [Insert overall style: e.g., live-action, cinematic, 3D CG] style, lighting, and camera movement of <Video 1>.
+    [Shot 1] The camera moves exactly as it does in <Video 1>. <Subject 1>, which is [Insert short descriptor: e.g., "the cherry-red sports car" OR "the girl with pink hair"], replaces the original [object/character]. It [Insert 1-sentence high-level action showing what the object/character does in the video: e.g., "speeds down the road, drifting around the corner while dust kicks up behind it" OR "stands in the center of the frame and looks toward the camera"]. The background environment, lighting, and all other non-target details are preserved exactly from <Video 1>.
+
+    overall_soundscape:
+    Preserve the synchronized source audio from <Video 1>, including [Optional: insert key sounds like "the engine roaring and tires squealing" or "the rustle of fabric"].
+
+    non_diegetic_music:
+    Preserve the non-diegetic background music from <Video 1> [or write N/A].
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim: []
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: Фраза «Discard the original object’s visual identity» + «preserve … screen-space motion path» разделяет траекторию и внешность; машина/объект подменяются тем же механизмом, что и человек.
+confidence: B
+prompt_completeness: complete
+notes: —
+source_url: https://reddit.com/r/StableDiffusion/comments/1vjf2v9/
+duplicates_of: []

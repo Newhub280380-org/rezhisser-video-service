@@ -1,0 +1,95 @@
+id: 144_recurring_character_360_turn_viral_frame_motion_swap
+source_file: 144_recurring_character_360_turn_viral_frame_motion_swap.md
+title: 'Постоянный персонаж для рилсов: 3 ярких черты → Nano Banana Pro лицо и лист → 360°-поворот → кадр из вирусного ролика 1M+ → Motion Control-подмена'
+intent_tags:
+- talking_head
+- client_in_clip
+- meme
+- motion_transfer
+use_when: 'Персонаж закрепляется листом (спереди, сбоку, сзади, крупные планы), из листа делается 360°-поворот — его используют как референс для каждого ролика. Дальше: скрин кадра из вирусного ролика,
+  генерация героя в том же ракурсе, подмена через Kling Motion Control / Higgsfield / Seedance с сохранением фо'
+inputs:
+- фото в полный рост
+- аудио/голос
+steps:
+- n: 1
+  action: Задать 3 «громкие» черты внешности.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Nano Banana Pro (Google Flow): лицо → лист персонажа.'
+  tool:
+  - Nano Banana
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Kling / Higgsfield / Seedance: лист как референс + промпт 1 (360° поворот, камера не движется).'
+  tool:
+  - Seedance
+  - Kling
+  - Higgsfield
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: Скрин кадра из ролика 1M+ → сгенерировать героя в этом ракурсе.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 5
+  action: 'Kling Motion Control / Higgsfield / Seedance: картинка героя + вирусное видео + промпт 2 (motion swap, звук и липсинк оригинала).'
+  tool:
+  - Seedance
+  - Kling
+  - Higgsfield
+  mode: Motion Control
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 6
+  action: 1–2 рилса в день, без текста на видео.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "This is f*cking gold, and most people will scroll right past it\n\nWhile everyone chases one viral AI clip, I built a character who exploded from 38K to 63.7K followers in a few days. 27 posts. That’s\
+  \ it.\n\nMeet Kaoru Hanayama 花山 薫 - my character. The anime yakuza from Baki brought to life. Massive build, irezumi tattoos across the shoulders and back, glasses, white gi pants, dead-calm expression.\
+  \ He doesn’t flinch. He doesn’t talk. He just hits harder.\n\nMy last post about him hit 8.8M views. This 360° turn is the real secret: one face, locked from every angle, so he looks the same in every\
+  \ video.\n\nThe exact workflow:\n\n→ Give him 3 loud traits. Massive Japanese fighter with traditional irezumi tattoos, thick-framed glasses, white gi pants. One look forever.\n\n→ Generate the face in\
+  \ Nano Banana Pro (Google Flow), then a character sheet: front, side, back, close-ups\n\n→ Turn the sheet into a 360° video like this one. Every clip pulls from it\n\n→ Screenshot a frame from a 1M+ clip,\
+  \ generate Hanayama in that angle, run both through Kling or Higgsfield\n\n→ Post 1-2 Reels a day. “I don’t dodge. I don’t block. I just hit harder.” in the bio, no text on the video\n\n→ Route traffic:\
+  \ bio → Linktree → your offer\n\nA viral clip gets watched once. A character gets followed \n\nBio: “I don’t dodge. I don’t block. I just hit harder. god-given strength.”\n\nThat’s not a caption. That’s\
+  \ a character bible. And anime fans are the most obsessive audience on the internet  they share, screenshot, tag friends, debate in the comments. 8.8M views on ONE clip.\n\nUpdate: a few days ago I posted\
+  \ about Hanayama at 38K followers. He just crossed 63.7K. +25K in days. Same face. Same sheet. The character did the work.\n\nPrompt 1: 360° turn (Kling / Higgsfield / Seedance)\nUpload your character\
+  \ sheet as the reference, not a single photo. The back view matters.\n\nPrompt: The same man from the reference stands on a plain light-grey studio background and slowly turns 360 degrees in place, clockwise,\
+  \ at a steady speed: front, side, back, side, front.\nThe person rotates, the camera does not move.\nFull body in frame, arms relaxed, neutral expression, feet stay on the same spot.\nSoft even studio\
+  \ light. Same face, hair, outfit and proportions in every frame.\n\nPrompt 2: motion swap (Kling Motion Control / Higgsfield / Seedance)\nInputs: your character image + a viral video with one person and\
+  \ a steady camera.\nPrompt:\nReplace the main person in the video with the character from the image.\nKeep the same face, hair, outfit and body proportions in every frame.\nCopy the original movement,\
+  \ gestures, expressions and timing exactly.\nKeep the original background, lighting, camera movement and audio. Lip sync if the person talks.\nMatch the source video quality, no glossy AI look.\nThe internet\
+  \ is full of fake faces. The money goes to the ones that never change."
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: результаты-видео не смотрели; цифры подписчиков — со слов автора
+source_url: https://x.com/0xAI42exe/status/2113800016309432559
+duplicates_of: []

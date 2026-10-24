@@ -1,0 +1,54 @@
+id: 207_drawn_camera_path_universal_prompt_loop_closure_seedance25
+source_file: 207_drawn_camera_path_universal_prompt_loop_closure_seedance25.md
+title: Траектория камеры маркером поверх фото + универсальный готовый промпт (без LLM-шага) → Seedance 2.5; замкнутая линия = последний кадр совпадает с первым (бесшовная петля)
+intent_tags:
+- seamless_series
+- animal
+use_when: Траектория камеры маркером поверх фото + универсальный готовый промпт (без LLM-шага) → Seedance 2.5; замкнутая линия = последний кадр совпадает с первым (бесшовная петля)
+inputs:
+- стартовый кадр
+- финальный кадр
+- аудио/голос
+- логотип
+- фото локации/города
+steps:
+- n: 1
+  action: Открыть фото в любом редакторе (хоть в галерее телефона). Яркий цвет, которого нет в кадре (красный/синий/жёлтый). Жирная точка — старт, линия — маршрут, стрелки — направление. Для облёта с возвратом
+    — замкнуть линию на точке старта. Сохранить.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Seedance 2.5 (у автора — бот Cyber AI → видео → Seedance 2.5): загрузить фото с разметкой, формат под пропорции исходника, вставить промпт, заполнить поля [DURATION], [MEDIUM AND ERA], [SOUND];
+    блок OPTIONAL — по желанию или удалить.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: Генерация; проверить, прошла ли камера по линии.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  FIRST FRAME: exactly the reference image, full composition, untouched -but WITHOUT any drawn line, arrow, dot or marking. The coloured path drawn on the image is a DIRECTOR'S ANNOTATION, not part of the scene. It is never rendered, never visible, never treated as an object, never lit and never reflected. Remove it completely from every single frame. READ THE DRAWN PATH AS THE CAMERA MOVE. The solid dot marks where the camera starts. The arrowheads mark the direction of travel. The line marks the exact trajectory the camera flies through the scene, in three dimensions -where the line passes in front of an object the camera is near, where it passes behind an object the camera is far, where it rises in frame the camera gains height, where it drops in frame the camera descends. The camera is already easing into motion from the very first frame. It never holds and never hovers. THE REFERENCE IMAGE IS A REAL 3D SPACE, not a flat picture. Read the depth: what is foreground, what is midground, what is background, what is behind what. Reconstruct the parts of the space the frame doesn't show - the sides and backs of subjects, the ground beneath them, the environment continuing past the edges of frame - inferring them from the light, perspective, materials and style already present. Everything invented must match the original exactly in lighting direction, colour palette, texture, medium and era. PRESERVE EVERYTHING IN THE IMAGE EXACTLY: every subject, face, body, pose, expression, garment, prop, surface, structure and background element, in the same position, at the same scale, in the same layout, with the same proportions. Same light direction, same colour grade, same texture, same medium, same grain. Faces never change. Nothing is added, removed, restyled or replaced. Every figure keeps exactly the pose, clothing and coverage shown in the reference. CAMERA, one unbroken [DURATION] second move, no cuts, following the drawn path from frame one to final frame: The camera traces the entire drawn line at an even, unhurried pace, spending the full duration on the path and arriving at the end of the line exactly as the shot ends. It keeps the main subject anchored in frame throughout, reframing naturally as the geometry changes. It moves through real space with real parallax - near objects sweeping past the lens fast, far objects drifting slowly. Depth layers separate visibly and continuously. IF THE DRAWN PATH RETURNS TO ITS STARTING DOT: the move closes the loop and the final frame matches the first frame exactly - same angle, same height, same distance, same layout still drifting gently as it settles rather than snapping into place. IF THE DRAWN PATH ENDS SOMEWHERE ELSE: the camera settles into a deliberate, composed final framing at the end of the line and the move decays into a slow drift. The shot ends still breathing, not frozen. CAMERA FEEL: real drone or crane operated by a human, not a CG rail. Subtle handheld float, low-amplitude gimbal drift, tiny lateral corrections, slow roll into every bank, uneven velocity with the middle of the move faster than the beginning and the end. Organic and breathing. Not robotic, not perfectly linear, not glassy. The move is one smooth continuous arc - it never reverses direction, never pauses and never crosses back over itself. MOTION IN THE SCENE - read the image and animate ONLY what would truly be moving, at the intensity the image implies: - Anything painted, drawn or photographed mid-action continues that action subtly and in place - a raised arm holds with faint tremor, taut rope or fabric carries strain, a mid-stride figure holds the stride. - Anything at rest stays at rest. Nobody walks, turns, gestures or changes expression unless the image clearly shows them doing it. - Environmental motion runs continuously and softly: drifting cloud, haze, smoke, dust in light, rippling water, swaying foliage, flickering flame, falling snow or rain, fabric and hair stirring, birds far off. - Light behaves live: slow shifts across surfaces, gentle flicker on flame-lit areas, atmosphere thickening and thinning with depth. - Micro-parallax between every depth layer at all times. - No new characters, objects, vehicles, animals or light sources ever appear. No morphing, warping, stretching or reshaping of faces, hands or bodies. [OPTIONAL -ADDED ELEMENT: describe here anything you want revealed during the move that isn't in the opening frame. State that it EXISTS IN THE SCENE FROM FRAME ONE and is simply outside the opening framing, so the camera discovers it rather than spawning it. Describe it in the same style, palette and light as the rest of the image. Delete this whole block if you don't want one.] STYLE: [MEDIUM AND ERA - e.g. Renaissance oil painting / 35mm film photograph / anime cel / 3D render / documentary footage], fully preserved. Cinematic, 24fps, shallow depth of field with focus riding the nearest subject, filmic grade true to the original palette, fine grain, no colour shift, no stylistic drift. NEGATIVE: no drawn line, no arrow, no dot, no coloured marking, no path overlay, no UI, no text, captions, watermarks, logos or on-screen writing. No cuts, no jump, no teleport, no camera reversal, no flicker, no morphing faces, no extra limbs or fingers, no duplicated subjects, no style change. AUDIO: no music, foley only - [SOUND, e.g. faint room tone, wind, distant murmur, brush on canvas].
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: нет (бот Cyber AI не запускал — шаги повторяются в любом сервисе с Seedance 2.5)
+source_url: https://pikabu.ru/story/neyroset_ozhivlyaet_foto_po_linii_narisovannoy_poverkh_kadra_razbor_prompta_dlya_seedance_25_14255685
+duplicates_of: []

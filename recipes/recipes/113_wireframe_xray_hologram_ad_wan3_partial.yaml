@@ -1,0 +1,87 @@
+id: 113_wireframe_xray_hologram_ad_wan3_partial
+source_file: 113_wireframe_xray_hologram_ad_wan3_partial.md
+title: 'Формат рекламы «голограммные каркасные люди + рентген причины»: Nano Banana Pro на Flow → 22 клипа WAN 3 480p → проверка клипов Gemini'
+intent_tags:
+- product_ad
+use_when: 'Формат: светящиеся каркасные люди в «чертёжной» спальне, хук — фраза партнёра, три неудачные попытки решить проблему, затем «рентген» настоящей причины; товар — единственный сплошной (не каркасный)
+  предмет в ролике. Автор оценил себестоимость в $4. Применимо к медицинским продуктам (показ механизма '
+inputs:
+- unknown
+steps:
+- n: 1
+  action: 'Nano Banana Pro на Flow: зафиксировать 2 каркасных персонажа по кадрам из рекламы-референса.'
+  tool:
+  - Nano Banana
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Сценарий: хук-фраза → 3 неудачные попытки → рентген реальной причины → товар (единственный сплошной объект).'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 22 клипа в WAN 3, 480p.
+  tool:
+  - Wan
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: Gemini просматривает каждый клип на глюки до монтажа.
+  tool:
+  - Gemini
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 5
+  action: Монтаж.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  STEAL this format before its everywhere on ur feed
+
+  nick theriot spent $54k in 30 days on this format
+
+  glowing hologram people. a blueprint bedroom. a husband who asks "are you cheating on me?"
+
+  then an x-ray of what's actually going on
+
+  so i built one for a menopause product. the whole thing cost me $4
+
+  quick workflow:
+  - locked 2 wireframe characters off frames from a reference ad (nano banana pro on flow, 0 credits)
+  - hook = the partner saying the thing she's scared he's thinking
+  - 3 failed fixes, then an x-ray of the real cause
+  - the product is the only solid object in the whole ad
+  - 22 clips in WAN 3 at 480p, gemini watched every clip for glitches before the edit
+
+  it works because nothing else in your feed looks like this...
+
+  RT + reply 'WIREFRAME' and i'll send you the full workflow
+
+  (must follow so i can DM)
+output:
+  format: mp4
+  resolution: 480p
+  aspect: unknown
+done_criteria: unknown
+confidence: C
+prompt_completeness: complete
+notes: 'полный воркфлоу — только в личке за ретвит + ответ «WIREFRAME» + подписку (не делал: запрещено писать и подписываться)'
+source_url: https://x.com/i/status/2113282571132178593
+duplicates_of: []

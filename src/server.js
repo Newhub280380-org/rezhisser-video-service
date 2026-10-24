@@ -7,7 +7,7 @@ const crypto = require('node:crypto');
 
 const { createLocalSimulationProvider } = require('./providers/local-simulation.js');
 const { createReplicateProvider } = require('./providers/replicate.js');
-const { createPlan, briefOptions, validateAdvisorSetting, BriefError, ENGINE } = require('./director.js');
+const { createPlan, briefOptions, validateAdvisorSetting, BriefError, RecipeError, ENGINE, createRecipeDirector } = require('./director.js');
 const {
   DEMO_PROFILES,
   RoutingError,
@@ -215,6 +215,18 @@ function loadConfig(env = process.env, overrides = {}) {
     paidDailyJobLimit: clamp(parseNumber(env.PAID_DAILY_JOB_LIMIT, 3), 1, 100),
     paidTotalJobLimit: clamp(parseNumber(env.PAID_TOTAL_JOB_LIMIT, 20), 1, 10000),
     quoteTtlMs: clamp(parseNumber(env.QUOTE_TTL_MS, 600000), 60000, 3600000),
+    // Recipe runner. Dry-run stays on unless RECIPE_DRY_RUN is exactly false.
+    // A per-job budget of 0 (or empty) is not a cap: live tool calls stay off.
+    recipeDryRun: !/^(0|false|off|no)$/i.test(String(env.RECIPE_DRY_RUN == null || String(env.RECIPE_DRY_RUN).trim() === '' ? 'true' : env.RECIPE_DRY_RUN).trim()),
+    recipeJobBudgetUsd: parseMoney(env.RECIPE_JOB_BUDGET_USD) || null,
+    recipeJobBudgetCredits: (() => {
+      const credits = Number.parseInt(env.RECIPE_JOB_BUDGET_CREDITS, 10);
+      return Number.isInteger(credits) && credits > 0 ? Math.min(credits, 100000) : null;
+    })(),
+    recipeStepHoldUsd: (() => {
+      const hold = Number.parseFloat(env.RECIPE_STEP_HOLD_USD);
+      return Number.isFinite(hold) && hold > 0 ? Math.min(hold, 100) : 1;
+    })(),
     sessionTtlMs: clamp(parseNumber(env.SESSION_TTL_MS, 28800000), 300000, 86400000),
     loginRateLimitMax: clamp(parseNumber(env.LOGIN_RATE_LIMIT_MAX, 5), 1, 100),
     loginRateLimitWindowMs: clamp(parseNumber(env.LOGIN_RATE_LIMIT_WINDOW_MS, 900000), 1000, 86400000),
@@ -546,6 +558,16 @@ function createApp(options = {}) {
       RoutingError,
     },
   });
+  // The director picks a recipe and walks it. Seedance is the only provider
+  // already implemented in this service; every other tool stays a stub.
+  // Dry-run is on unless RECIPE_DRY_RUN=false, and even then a job budget is required.
+  const recipeDirector = createRecipeDirector({
+    seedance: production.seedance,
+    dryRun: config.recipeDryRun !== false,
+    budgetUsd: config.recipeJobBudgetUsd,
+    budgetCredits: config.recipeJobBudgetCredits,
+    stepHoldUsd: config.recipeStepHoldUsd,
+  });
 
   // Paid generation is available only when every safeguard is configured.
   function paidStatus() {
@@ -619,6 +641,10 @@ function createApp(options = {}) {
       const body = { error: error.code, message: error.message };
       if (error.details) body.details = error.details;
       sendJson(res, status, body);
+      return true;
+    }
+    if (error instanceof RecipeError) {
+      sendJson(res, error.status || 400, { error: error.code, message: error.message });
       return true;
     }
     return false;
@@ -828,6 +854,12 @@ function createApp(options = {}) {
             engine: ENGINE,
             label: 'Режиссёр по правилам (без ИИ)',
             llmAdvisor: 'none',
+            recipes: {
+              engine: recipeDirector.engine,
+              count: recipeDirector.size,
+              dryRun: config.recipeDryRun !== false,
+              liveCallsEnabled: config.recipeDryRun === false,
+            },
           },
           options: briefOptions(),
           models: profiles.map(publicProfile),
@@ -905,8 +937,48 @@ function createApp(options = {}) {
         const payload = await readJson(req, res, 64 * 1024);
         if (!payload) return;
         try {
-          const { plan, selection } = planFromPayload(payload, payload.hasImage === true);
-          sendJson(res, 200, { plan, selection: describeSelection(selection) });
+          const hasBrief = payload.brief !== undefined && payload.brief !== null;
+          const hasRequest = typeof payload.request === 'string' && payload.request.trim();
+          if (!hasBrief && !hasRequest) planFromPayload(payload, payload.hasImage === true);
+          let plan = null;
+          let selection = null;
+          if (hasBrief) {
+            const planned = planFromPayload(payload, payload.hasImage === true);
+            plan = planned.plan;
+            selection = describeSelection(planned.selection);
+          }
+          let recipes = null;
+          if (hasRequest) {
+            recipes = await recipeDirector.handle({
+              text: payload.request,
+              files: payload.files,
+              dryRun: payload.dryRun,
+              budgetUsd: payload.budgetUsd,
+              budgetCredits: payload.budgetCredits,
+            });
+          }
+          sendJson(res, 200, {
+            ...(plan ? { plan, selection } : {}),
+            ...(recipes ? { recipes } : {}),
+          });
+        } catch (error) {
+          if (!sendDirectorError(res, error)) throw error;
+        }
+        return;
+      }
+
+      if (req.method === 'POST' && pathname === '/api/director/recipes') {
+        const payload = await readJson(req, res, 64 * 1024);
+        if (!payload) return;
+        try {
+          const recipes = await recipeDirector.handle({
+            text: payload.request,
+            files: payload.files,
+            dryRun: payload.dryRun,
+            budgetUsd: payload.budgetUsd,
+            budgetCredits: payload.budgetCredits,
+          });
+          sendJson(res, 200, recipes);
         } catch (error) {
           if (!sendDirectorError(res, error)) throw error;
         }

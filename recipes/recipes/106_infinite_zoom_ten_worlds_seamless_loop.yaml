@@ -1,0 +1,57 @@
+id: 106_infinite_zoom_ten_worlds_seamless_loop
+source_file: 106_infinite_zoom_ten_worlds_seamless_loop.md
+title: Бесконечный зум через 10 вложенных миров с бесшовной петлёй (один кадр Seedance 2.5, 30 с)
+intent_tags:
+- product_ad
+- seamless_series
+- vfx_effect
+use_when: 'Один 30-секундный план: каждый мир держит следующий в миниатюре (фонарь маяка → луг, иллюминатор → острова, жемчужина → фестиваль), камера влетает в деталь, пока её края не уйдут за кадр. Последний
+  мир открывает окно с первой сценой — петля для рилса. Под товар: «зум внутрь флакона/упаковки» по той '
+inputs:
+- unknown
+steps:
+- n: 1
+  action: 'Seedance 2.5, 30 с, без референсов: промпт ниже (по 3 с на мир, «следующий мир уже виден внутри», без растворений и морфинга, финал совпадает с началом).'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: 30 с
+  aspect: unknown
+prompts_verbatim:
+- |-
+  Seedance 2.5 Infinite Zoom: Ten Hand-Painted Worlds in One Loop
+  u/Tricky_Algae2625 r/Seedance_AI score 2 created_utc 1792511831
+  https://www.reddit.com/r/Seedance_AI/comments/1xavxzo/
+
+  made a new video with a lighthouse leads into green meadows, an airship window opens onto floating islands, and a glowing pearl contains a lantern festival.
+
+  Each world holds the next in miniature. The final transition returns to the opening scene.
+
+  **Prompt:**
+
+      Create a 30-second, single-shot infinite zoom through ten nested, original fantasy worlds. Hand-painted 2D animation, watercolor and gouache backgrounds, soft cel shading, warm nostalgic light, and gently moving characters and scenery.
+      Spend approximately three seconds per world. Maintain a steady perceived forward speed, gently curving toward each transition detail. The next world must already be visible inside it; enlarge that detail until its edges leave the frame. No dissolves or scene morphing.
+      0–3s: Sunset cliff town with cyclists, fishermen, and gulls. Enter a lighthouse’s glowing lantern glass.
+      3–6s: Green meadows with a gentle, moss-covered giant carrying trees on its back. Enter a small cloud.
+      6–9s: Cloud canyon with a propeller airship and winged foxes. Enter the ship’s round porthole.
+      9–12s: Floating villages, rope bridges, and a passing sky whale. Enter a shining island pond.
+      12–15s: Sunlit kelp forest around a submerged statue. Enter a pearl inside an open shell.
+      15–18s: Night river festival with masked townsfolk and lantern-headed spirits. Enter a rising lantern.
+      18–21s: Ancient forest with a cottage-bearing giant snail. Enter a glowing insect.
+      21–24s: Morning harbor town with a bread-delivery cyclist and crooked tower-house. Enter the pale moon.
+      24–27s: Nighttime wheat field beneath shooting stars. Enter a hilltop house’s illuminated attic window.
+      27–30s: Inventor’s workshop with a clockwork bird and hanging model aircraft. Enter a round window containing the opening lighthouse town.
+      Match the opening composition and motion for a seamless loop. Continuous piano-and-strings score, subtle ambience per world, no dialogue.
+      No cuts, fades, speed ramps, pauses, readable text, subtitles, or 3D CGI appearance.
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://www.reddit.com/r/Seedance_AI/comments/1xavxzo/
+duplicates_of: []

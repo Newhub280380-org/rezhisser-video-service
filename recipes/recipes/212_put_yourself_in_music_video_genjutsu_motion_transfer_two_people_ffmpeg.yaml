@@ -1,0 +1,108 @@
+id: 212_put_yourself_in_music_video_genjutsu_motion_transfer_two_people_ffmpeg
+source_file: 212_put_yourself_in_music_video_genjutsu_motion_transfer_two_people_ffmpeg.md
+title: '«Ты в клипе вместо обоих исполнителей»: обрезка до 30 с → полноростовое фото «в нужной одежде» → Higgsfield Genjutsu **Motion transfer** (не Objects swap) → вертикаль Reframe или blur-fill FFmpeg
+  → апскейл'
+intent_tags:
+- beauty_ad
+- client_in_clip
+use_when: '«Ты в клипе вместо обоих исполнителей»: обрезка до 30 с → полноростовое фото «в нужной одежде» → Higgsfield Genjutsu **Motion transfer** (не Objects swap) → вертикаль Reframe или blur-fill FFmpeg
+  → апскейл'
+inputs:
+- фото лица/портрет человека
+- фото в полный рост
+steps:
+- n: 1
+  action: "**Обрезать исходник до 4–30 с** (Genjutsu принимает 4–30 с; 31,7 с — отказ):\n   `ffmpeg -i input.mp4 -t 30 -c:v libx264 -crf 18 -c:a aac trimmed.mp4` (старт с другой точки: `-ss 1.7` перед `-i`)."
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: 4–30 с
+  aspect: unknown
+- n: 2
+  action: '**Референс-фото = весь образ, не только лицо.** Полный рост, голова-ноги, ровно та одежда и все аксессуары, что нужны на экране; однотонный фон; по одному фото на каждого заменяемого, в порядке
+    слева направо. (Портрет по плечи → модель «додумала» рубашку, брюки и браслеты; забытые часы = ещё один рендер.) Если полноростового фото нет — сгенерировать (~1,5 кредита):
+
+    [PROMPT]'
+  tool: unknown
+  mode: unknown
+  prompt:
+  - |-
+    Full-body photo of the person in the reference image, head to toe, standing straight, facing the camera, plain white background, even studio lighting. Wearing: [plain white t-shirt, blue jeans, white sneakers, gold watch on the left wrist]. Keep their face, hair and build exactly the same.
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: '**Режим Motion transfer, НЕ Objects swap.** Objects swap на клипе с чужим клипом вернул статус `ip_detected` (кредиты вернули). Рабочая «дверь»: Motion Library → вкладка Community → найти клип
+    как шаблон сообщества (кнопка **Recreate**, тег **Motion transfer**) → Motion transfer с этим клипом и своими фото.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: "**Промпт (дословно, 2 человека)** — Image 1 = человек слева, Image 2 = справа; 720p, 210 кредитов, ~10 мин:\n[PROMPT]\n   Варианты автора (сам не прогонял):\n[PROMPT]\n[PROMPT]\n   Свой исходник\
+    \ (права ваши): снять 10 с себя в движении →\n[PROMPT]"
+  tool: unknown
+  mode: unknown
+  prompt:
+  - |-
+    Replace the man on the left side of the source video with the person in image one, and replace the man on the right with the person in image two. The original sound and movements should remain the same. Just swapping characters.
+  - |-
+    Replace the person in the source video with the person in image one. The original sound and movements should remain the same. Just swapping the character.
+  - |-
+    Replace the person on the [left/right] side of the source video with the person in image one. Keep the other person exactly as they are. The original sound and movements should remain the same.
+  - |-
+    Replace the person in the source video with the person in image one. Keep every movement, gesture and camera move from the source exactly the same.
+  input_source: unknown
+  duration: 10 с
+  aspect: unknown
+- n: 5
+  action: '**Сверить одежду** с фото по каждому пункту (верх, низ, обувь, украшения, часы) до публикации.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 6
+  action: "**Вертикаль 9:16** (Genjutsu сохраняет исходный формат): не растягивать и не кропать жёстко. Вариант А: кроп до 4:3 вокруг обоих + Higgsfield **Reframe** до 9:16 (140 кредитов; иногда «придумывает»\
+    \ — кремовые брюки вместо джинсов). Вариант Б, бесплатно и ничего не выдумывает — blur-fill:\n   `ffmpeg -i input.mp4 -filter_complex \"[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=20:2[bg];[0:v]scale=1080:-2[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2\"\
+    \ -c:v libx264 -crf 18 -c:a copy vertical-blur-fill.mp4`\n   Кроп 4:3 по центру: `ffmpeg -i input.mp4 -vf \"crop=ih*4/3:ih:(iw-ih*4/3)/2:0\" -c:v libx264 -crf 18 -c:a copy cropped-4x3.mp4`"
+  tool:
+  - Higgsfield
+  mode: unknown
+  prompt:
+  - '[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=20:2[bg];[0:v]scale=1080:-2[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2'
+  input_source: unknown
+  duration: unknown
+  aspect: '9:16'
+- n: 7
+  action: '**Апскейл 720p→1080p** (бесплатно, деталей не добавляет): `ffmpeg -i input.mp4 -vf "scale=1920:1080:flags=lanczos" -c:v libx264 -crf 18 -c:a copy upscaled-1080p.mp4`. Для настоящего 1080p — рендер
+    в 1080p или ИИ-апскейлер.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: '20:10'
+- n: 8
+  action: 'Перед публикацией: пометка «ИИ», не выдавать за реальное участие, ждать копирайт-претензию при монетизации чужого трека.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim: []
+output:
+  format: mp4
+  resolution: 720p
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: 'ничего (ZIP открыт). Автор управлял Higgsfield через Claude Code, но прямо пишет: «каждый шаг работает кликами на сайте Higgsfield» — Claude в цепочке не нужен (под запрет брифа не попадает)'
+source_url: https://www.youtube.com/watch?v=4KNt5PrwXoE
+duplicates_of: []

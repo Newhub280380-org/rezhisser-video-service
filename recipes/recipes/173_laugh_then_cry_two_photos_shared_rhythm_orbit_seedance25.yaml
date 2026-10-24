@@ -1,0 +1,98 @@
+id: 173_laugh_then_cry_two_photos_shared_rhythm_orbit_seedance25
+source_file: 173_laugh_then_cry_two_photos_shared_rhythm_orbit_seedance25.md
+title: '«Боль под маской счастья»: два ваших фото в разных образах лицом к лицу — один смеётся, другой плачет в одном ритме, облёт камеры по кругу — Seedance 2.5, 15 с'
+intent_tags:
+- other
+use_when: 'Два фото (у автора — вы в двух образах) → A и B держат друг друга за одежду на чёрном фоне; общий судорожный ритм: сначала смех A, затем рыдания B; камера медленно облетает почти полный круг.'
+inputs:
+- аудио/голос
+- логотип
+steps:
+- n: 1
+  action: Шаг 1 — подготовить фото(ы) в хорошем качестве (см. пост).
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Шаг 2 — Seedance 2.5 с параметрами из поста (у автора — в боте @neyrosetkabot), фото + промпт из комментариев.
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: 5 с
+  aspect: unknown
+prompts_verbatim:
+- "=== https://t.me/nercpa/305 2026-10-18T05:45:07+00:00\n\U0001F3ADБоль под маской счастья\n\n1. Заходите в бота @neyrosetkabot\n2. Выбираете 2 ваших фото в разных образах в хорошем качестве \n3. Выбираете\
+  \ режим Видео - Seedance 2.5 (15 сек, формат 9:16) и отправляете ваши фото с текстом из комментариев\n\nПРОМПТ В КОММЕНТАРИЯХ \n⬇️⬇️⬇️\n\n⚡️Генерация в один клик\n\n#видео #тренд\n  \n    Please open\
+  \ Telegram to view this post\n    VIEW IN TELEGRAM"
+- |-
+  TASK & FORMAT
+  A 15-second photorealistic cinematic video, horizontal 16:9. One continuous shot, no cuts: a slow camera orbit around two people standing face to face. Black void background, soft dramatic studio light.
+
+  REFERENCES
+  @image1 = PERSON A, the one who laughs. Exact face, facial structure, eyes, brows, nose, lips, teeth, skin tone, apparent age and gender, hairstyle, hair length and color, body build, clothing and accessories.
+  @image2 = PERSON B, the one who cries. Same list of features from @image2.
+  Each person may be anyone — a man or a woman, any age; the bodies and heights match the photos. If a photo shows only the face or upper body, complete the rest logically in the same style. Do not alter gender presentation, age or ethnicity. @image1 and @image2 never mix: no feature of one appears on the other. Each keeps the same face, hair and outfit in every frame.
+
+  STAGING
+  Person A and person B stand very close, face to face, about a forearm apart, filmed from the chest up. They hold on to each other's clothing: A grips the collar or lapels of B's top with both fists; B holds the front of A's top at the chest with both hands. They keep this grip and this distance for the whole video. Pure black background, nothing else in the scene. A soft key light from above and to the side models their faces; deep shadows; shallow depth of field.
+
+  SHARED RHYTHM (CRITICAL)
+  The two bodies move as one. Both people jolt at the same moment, in the same fast pulsing rhythm — about four to five jolts per second — their shoulders, chests and heads jerking together, the grip on each other's clothes pulling them in sync, like one shaking unit.
+  - 0–2.6s: both shake to the rhythm of A's laughter — sharp convulsive jolts, heads bobbing back with each burst.
+  - 1.3–2.6s: one shared pause for A's gasp for breath.
+  - From 2.6s to the end: both shake to the rhythm of B's crying — the same fast convulsive jolts, now driven by the sobs: shoulders hitching, chests heaving, heads jerking with each sob.
+  The rhythm never stops and never becomes slow or calm. Both bodies always jolt together, never out of sync.
+
+  CAMERA
+  One smooth, slow, continuous orbit around the pair at chest-to-face height, close and intimate, gradually travelling almost a full circle over the 15 seconds. The camera always moves in the same direction, never stops, never cuts. At about 8–9.5s it passes very close behind A's head, so A's hair briefly fills the entire frame as a natural dark wipe. The camera itself stays smooth; only the two bodies shake.
+
+  TIMELINE
+  0–3.5s
+  The camera is on A's side: A's face is on the right of the frame in a three-quarter view toward the lens, B is seen from behind or in lost profile on the left, face hidden. A laughs hysterically: head thrown back, eyes squeezed shut, mouth wide open, completely helpless with laughter; both bodies jolt together with every burst. Around 1.3–2.6s A gasps for breath between laughs.
+
+  3.5–5s
+  The camera keeps orbiting toward B's side. B's face turns into view: B is crying convulsively, the face crumpled, both bodies still jolting together in the fast rhythm.
+
+  5–7.5s
+  B faces the lens in a three-quarter view, sobbing hard in fast, hitching, convulsive bursts: brows drawn up, eyes squeezed and wet, mouth stretched open and downward, tears streaming down the cheeks. A is now in profile on the other side of the frame, still laughing with the head thrown back, jolting in the same rhythm as B.
+
+  7.5–9.5s
+  The orbit carries the camera close behind A's head: A's hair sweeps across and fills the whole frame for a moment, dark and soft, still bouncing with the shared rhythm.
+
+  9.5–11.5s
+  Out of the hair, B is revealed again, now on the opposite side of the frame, crying even harder in rapid convulsive sobs, tears running down to the chin, A's hair soft and blurred in the foreground, both bodies jerking together.
+
+  11.5–15s
+  The orbit reaches a side view of both faces in profile, facing each other. A's face is visible again: A is still laughing, mouth open, but the laughter is becoming shakier, and a single clear tear now runs down A's cheek.
+
+  B keeps crying convulsively the whole time — hitching sobs, face crumpled, tears streaming — and never stops crying until the end. Both keep jolting together in the same rhythm. The camera keeps slowly orbiting until the end.
+
+  PERFORMANCE & REALISM
+  Raw, intense, believable emotions, never theatrical. Real tears catching the light, wet eyelashes, flushed skin, natural skin texture, real hair movement bouncing with every jolt. The two emotions happen at the same time: A laughs while B cries from start to finish, but their bodies share one convulsive rhythm. After 2.6s A's laughter continues visibly on the face and body but almost silently, so the crying dominates. Identity stays exact through every extreme expression: wide-open laughing mouth, crumpled crying face, profile, close-up.
+
+  AUDIO
+  Only the two voices and a quiet studio room tone.
+  0–1.3s: bursts of A's hysterical laughter — fast, rhythmic, convulsive.
+  1.3–2.6s: A gasping for breath between laughs.
+  2.6s onward: right after that gasp, B's crying begins and takes over the soundtrack — even before B's face turns into view. It is NOT quiet or calm crying: it is convulsive, rhythmic, hysterical sobbing in fast hitching bursts — "huh-huh-huh" pulses with sharp inhales, in almost the same rhythm and intensity as laughter, so at first it could almost be mistaken for laughing. It grows louder and more broken toward 8.7–11.5s. A's laughter is no longer heard clearly — at most a faint, breathy, muffled laugh far beneath the crying.
+  11.5–12.3s: a brief shaky breath, almost silence.
+  12.5–15s: B's fast, convulsive, hitching sobs continue to the end. Crying is the last sound of the video.
+  No music, no words, no speech, no text.
+
+  NEGATIVE
+  cuts, a shaky camera, a static camera, the camera changing direction, a background other than black, extra people, the two people swapping faces or outfits, @image1 features on B, @image2 features on A, A crying before 11.5s, B laughing or smiling at any moment, B stopping crying, no tears on B, both laughing at the end, quiet calm crying, slow soft sobbing, silent tears only, bodies moving out of sync, one person still while the other shakes, loud laughter after 2.6s, laughter louder than the crying, theatrical overacting, cartoon look, CGI look, music, spoken words, text, subtitles, logos, watermarks
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: 'Бот @neyrosetkabot платный — не запускался. Видео не смотрел. Расхождение: в посте указан формат 9:16, а в промпте — горизонтальный 16:9 (оставлено как у автора).'
+source_url: https://t.me/nercpa/305
+duplicates_of: []

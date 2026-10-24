@@ -1,0 +1,66 @@
+id: 159_talking_head_new_angles_seedream_seedance
+source_file: 159_talking_head_new_angles_seedream_seedance.md
+title: 'Один «говорящий» клип → вторая и третья камера: Gemini описывает 1-й кадр → Seedream 5.0 переснимает с 3 позиций → Seedance 2.5 (still + видео-реф)'
+intent_tags:
+- talking_head
+use_when: 'Из одного клипа с говорящей головой получаются новые ракурсы: движение берётся из исходника, камера — из нового still. Исходный звук — мастер-дорожка, новые ракурсы синхронизируются под него.'
+inputs:
+- стартовый кадр
+- аудио/голос
+steps:
+- n: 1
+  action: Gemini 3.5 Flash описывает первый кадр одним абзацем.
+  tool:
+  - Gemini
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Seedream 5.0 переснимает этот кадр с трёх позиций (от 24mm wide на уровне глаз до 50mm close-up снизу): тот же человек, поза, одежда, локация, свет — меняется только камера.'
+  tool:
+  - Seedream
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Seedance 2.5: один из still как reference, исходный клип как video reference (задаёт движение), слот first frame пустой; 10 с, 720p, без звука.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: 10 с
+  aspect: unknown
+- n: 4
+  action: 'Монтаж: исходный звук — мастер; по совету автора разбора важные реплики оставлять в исходном ракурсе, новые ракурсы — на паузы и реакции (липсинк может плыть).'
+  tool: unknown
+  mode: липсинк
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  Jerrod Lew built a workflow in Magnific Spaces that turns one talking-head clip into new camera angles.
+
+  The steps from his tutorial. Gemini 3.5 Flash describes the first frame in one paragraph. Seedream 5.0 re-shoots that frame from three positions, from a 24mm wide at eye height to a 50mm close-up from below. Same person, pose, clothes, location and light, only the camera moves. Seedance 2.5 then gets one of those stills as reference. The source clip goes in as video reference and drives the motion, with the first-frame slot left empty.
+
+  So the motion comes from the source and the camera from the still. For an editor that's a second camera on a shot that only had one.
+
+  The cut between angles is where it gets tested, and he shows the limits himself. Some motions don't match, and lip sync can drift. On a talking head the cuts often fall on the words, so drift shows on the first cut to a close-up. I'd keep the source angle for the lines that matter and use the new angles on pauses and reactions.
+
+  In his setup the Seedance pass is 10 seconds at 720p with no sound. The source audio stays the master track and every new angle has to sync back to it.
+output:
+  format: mp4
+  resolution: 720p
+  aspect: unknown
+done_criteria: unknown
+confidence: C
+prompt_completeness: complete
+notes: видео-туториал (без промптов текстом); среда Magnific Spaces — платная, не открывал
+source_url: https://x.com/jerrod_lew/status/2112889004928692268
+duplicates_of: []

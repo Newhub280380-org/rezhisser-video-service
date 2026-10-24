@@ -1,0 +1,120 @@
+id: 187_techhalla_transylvania_dracula_phone_30s
+source_file: 187_techhalla_transylvania_dracula_phone_30s.md
+title: 'Человек с фото → Дракула в Трансильвании: кадр Magnific One «снимок туриста» → Seedance 2.5 30 с с превращением в летучих мышей'
+intent_tags:
+- pov_one_take
+use_when: 'Шаблон автора: «It''s always the same. First lock the initial frame with Magnific One…» — снимок «туриста на телефон Samsung Galaxy A54» с мужчиной с фото в костюме Дракулы на башне замка → Seedance
+  2.5 (можно добавить character sheets) — 30 с одним дублем: крэш-зум на башню, тост, прыжок, превращени'
+inputs:
+- стартовый кадр
+- аудио/голос
+steps:
+- n: 1
+  action: Magnific One + промпт DIRECTIVE/SUBJECT/ACTION/SCENE/COMPOSITION/CAMERA PACK/LIGHT/PHOTOGRAPHIC CHARACTER (с референсом лица мужчины).
+  tool:
+  - Magnific
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Seedance 2.5: [ref_1] первый кадр, [ref_2] мужчина, [ref_3] женщина; промпт с таймлайном.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  It's always the same. First lock the initial frame with Magnific One and a prompt like this:
+
+  DIRECTIVE:
+  Produce one still that reads as an unpublished photograph taken by a tourist on holiday. Optical capture, available physics, lived-in detail.
+
+  SUBJECT:
+  The man from the reference image, same face, bald crown, long dark curly hair, greying beard and heavy build, dressed as Dracula: black cape with a high red-lined collar, black waistcoat, raising a gold chalice.
+  Beside him a woman with long black hair and dark lipstick lounges in a black wooden coffin turned into a steaming jacuzzi, bubbling water, also raising a gold chalice.
+  A black cat sits on the battlement next to them. A black speaker on the stones.
+  All of them small and far away, standing on the top terrace of the castle.
+
+  ACTION / BEAT:
+  They are toasting with the chalices up on the castle, while down in the square nobody has noticed yet.
+  A caught moment.
+
+  SCENE:
+  The cobbled main square of a small town in Transylvania, with pastel Saxon houses with steep tiled roofs. A dark medieval castle with towers stands on a steep rocky wooded hill right behind the square.
+  Tourists wander, take photos, eat ice cream. A young couple in the foreground of the square, hand in hand, looking at a shop window.
+  One of the shops has a hanging medieval wrought-iron sign, carved and painted wood, that reads TECHHALLA.
+  Late afternoon in autumn, overcast.
+
+  COMPOSITION:
+  Shot type: wide, the square in the lower part, the castle on the hill filling the upper half
+  Angle: eye level from the square, slightly tilted up
+  Placement: castle and the toasting group upper center, the young couple lower right, the TECHHALLA sign lower left
+  Foreground: the shoulder and a raised phone of another tourist, blurred
+  Crop: handheld, slightly imperfect.
+
+  CAMERA PACK:
+  Body: Samsung Galaxy A54
+  Lens / zoom: main camera, 1x
+  Aperture or phone mode: standard photo
+  Focus: sharp on the square and the castle
+  Film or sensor: small phone sensor, JPEG compression, mild noise
+
+  LIGHT:
+  Source: flat overcast sky, warm shop lights starting to glow
+  Quality: soft grey daylight
+  Color temperature: cool 6000K, warm accents from the shop windows
+  Shadows follow that source.
+
+  PHOTOGRAPHIC CHARACTER:
+  Worn cobblestones, damp stone, weathered plaster, fabric creases.
+  Grain or sensor texture that matches the camera pack.
+  Highlights a little hot, shadows a little closed.
+  Candid tourists, unaware of the camera.
+
+  Then use Seedance 2.5 to animate it, you can add extra character sheets if needed. Here's the prompt
+
+  [STYLE + CAMERA + ATMOSPHERE]
+  Real amateur phone video, one continuous 30-second take with no cuts, filmed by a tourist standing in the crowded cobbled main square of a medieval town in Transylvania. Handheld vertical phone, shaky grip, restless digital zoom pushing in and pulling back, smeary detail when zoomed, compression, autofocus hunting. Grey late-October afternoon, flat overcast light, a little haze around the castle hill.
+
+  [IMAGE REFERENCES]
+  [ref_1] is the first frame: the video starts exactly on it, and the square, the shops, the medieval hanging sign that reads "TECHHALLA" and the castle on its hill keep the look of [ref_1]. [ref_2] is the redneck man (face, bald crown, long dark curly hair at the back, greying beard, heavy build); in this video he wears a Count Dracula outfit: black cape with a high red-lined collar and a black waistcoat. [ref_3] is the woman (face, long wavy dirty-blonde hair). Ignore the grey backgrounds and the clothes of [ref_2] and [ref_3].
+
+  [TIMELINE]
+  0-3s: Exactly [ref_1], and the square is alive from the first frame: tourists stroll, eat chimney cakes, take selfies; a young couple holds hands near the camera. Faint death metal echoes from the top of the castle and a few people look up.
+
+  3-7s: [Crash digital zoom up to the top of the castle tower] Grainy and soft: on the open stone terrace at the top of the highest tower, the man from [ref_2] in his Dracula cape raises a golden chalice; the woman from [ref_3] lies in a black wooden coffin turned into a steaming hot tub, raising her own golden chalice. A big loudspeaker blasts death metal on the battlements. A black cat sits on the edge of the parapet.
+
+  7-11s: [Tight push-in] They clink their golden chalices and drink. He wipes his mouth with the cape, steps up onto the parapet next to the cat and spreads the cape wide like wings. The tourists below start pointing and shouting.
+
+  11-14s: [Medium] He and the black cat jump off the parapet together into the void. The woman stays in the coffin tub and raises her chalice to them.
+
+  14-18s: [Chasing, shaky zoom out] He falls along the castle wall with the cape flapping, the cat falling beside him. Halfway down, in a burst of black smoke, the man turns into a big black bat and the cat turns into a small black bat. The crowd screams.
+
+  18-22s: [Wide] The two bats swoop down the hill and over the red-tiled roofs, straight across the square, over the heads of the tourists, toward the young couple near the camera.
+
+  22-26s: [Close, phone shaking] Right in front of the couple, in another puff of black smoke, the bats turn back into the man in the Dracula cape and the black cat. He grabs the young man by the shoulders, bares his teeth and leans toward his neck; the cat hisses with its fangs out at the girl. The couple scream.
+
+  26-30s: [Wide, zoom out, chaos] Everyone in the square runs away in panic: tourists drop their chimney cakes, chairs tip over at the cafés, a souvenir stand of Dracula mugs topples. The phone whips around while the tourist filming runs too, the "TECHHALLA" sign swinging in the corner of the frame. Up on the tower, tiny, the woman in the coffin hot tub still raises her golden chalice.
+
+  [AUDIO]
+  Tourist chatter in several languages close to the phone, distant tinny death metal from the castle that gets louder when zoomed in, the clink of the chalices, wind and cape flapping during the fall, a whoosh of smoke at each transformation, bat wings flapping, a cat hiss, the couple screaming, the crowd screaming and running, chairs falling, footsteps on cobblestones. No subtitles, no score.
+
+  [STYLE & QUALITY BOOSTERS]
+  Photorealistic phone footage, everything real and grounded, real digital zoom artifacts, coherent physics, the transformations are quick puffs of black smoke like a real practical effect, exactly one vampire man, one woman, one black cat and one young couple, stable identities, natural motion blur, the bite never lands: nobody is hurt.
+
+  Let's go! 🧛‍♀️
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: character sheets героев (ref_2, ref_3) — только картинки
+source_url: https://x.com/techhalla/status/2113202586535018662
+duplicates_of: []

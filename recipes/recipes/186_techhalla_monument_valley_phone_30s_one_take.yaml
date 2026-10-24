@@ -1,0 +1,122 @@
+id: 186_techhalla_monument_valley_phone_30s_one_take
+source_file: 186_techhalla_monument_valley_phone_30s_one_take.md
+title: Фото «с телефона туриста» как первый кадр (Magnific One) → Seedance 2.5, один дубль 30 с с героями по референсам
+intent_tags:
+- product_ad
+- client_in_clip
+- pov_one_take
+- animal
+use_when: 'Сначала фиксируется первый кадр — «любительский снимок с телефона» на смотровой площадке Monument Valley, где на вершине скалы еле видны крошечные люди с грилем. Затем Seedance 2.5 одним дублем
+  30 с без склеек «зумит» телефоном к вершине и разыгрывает сюжет: стейк, кот приносит доллар, прыжок со ска'
+inputs:
+- стартовый кадр
+- аудио/голос
+steps:
+- n: 1
+  action: '**Magnific One** — первый кадр по промпту (ниже, блок 1). Автор: «Lock the first frame with Magnific One».'
+  tool:
+  - Magnific
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Подготовить референсы персонажей (у автора: ref_1 — женщина, ref_2 — мужчина). «Use character references if needed (like I did)».'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: '**Seedance 2.5** — 30 с, ref_3 = первый кадр, ref_2/ref_1 = лица, промпт ниже (блок 2).'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: 30 с
+  aspect: unknown
+- n: 4
+  action: 'Подмена декораций: локация/сюжет в TIMELINE, бренд — надпись на парашюте.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  Lock the first frame with Magnific One and a prompt like this:
+
+  A crowded overlook at the Monument Valley visitor center, Arizona-Utah border, in the late afternoon, with the iconic red sandstone buttes rising out of the flat desert valley so the viewer instantly recognizes the place. In the foreground, a handful of adult tourists lean on the low stone wall and wooden railing of the overlook: a man in a faded red baseball cap seen from behind holding up his phone, a woman in a wide straw sun hat and a sleeveless denim shirt in profile, a backpack strap and a shoulder cut by the edges. Across the valley stands the West Mitten Butte, a massive vertical red rock tower with a sheer flat summit hundreds of meters above the desert floor, with the East Mitten and Merrick Butte further back. On the flat top of the West Mitten, near the edge, a tiny group of adults is barely visible around a small barbecue grill, with a thin plume of grey smoke rising from that point into the pale blue sky. The people and the smoke are very small and distant, readable only as a few colored dots and a soft grey thread.
+
+  COMPOSITION:
+  Shot type: wide, distant
+  Angle: eye level from behind the railing crowd, looking across the valley, horizon tilted a few degrees
+  Placement: tourists filling the lower third and the left edge, the West Mitten in the upper center-right, the smoking summit in the upper right third, the other buttes fading into warm haze on both sides
+  Look-room: right
+  Foreground: mild occlusion, a blurred tourist shoulder and a raised phone at the bottom left edge
+  Crop: handheld, slightly imperfect.
+
+  CAMERA PACK:
+  Body: ordinary mid-range Android phone, held vertically at eye level over the heads of the crowd
+  Lens / zoom: 3x digital zoom from the main lens, the glass slightly smudged
+  Aperture or phone mode: normal photo mode, auto exposure set for the bright sky
+  Focus: the far butte reasonably sharp, the nearest tourists a little soft
+  Film or sensor: small-sensor phone texture, heavy processing from the digital zoom, JPEG compression
+
+  LIGHT:
+  Source: low late-afternoon desert sun from the left
+  Quality: warm, raking light on the red rock faces, long shadows across the valley floor, dusty haze
+  Color temperature: warm golden daylight, about 4500K
+  Shadows follow that source.
+
+  PHOTOGRAPHIC CHARACTER:
+  Fabric weave, seams and creases on the cap, hat and denim.
+  Grain or sensor texture that matches the camera pack.
+  Candid stance, catalog-unaware.
+  Highlights a little hot, the sky slightly clipped, the shaded rock faces blocked up and noisy.
+  Smeary watercolor detail from the digital zoom on the butte top, the tiny group and the smoke.
+  Crunchy phone sharpening halos along the butte edges and the railing, blocky compression in the haze.
+  Slight overall softness from the raised, shaky grip.
+  Plain, slightly over-saturated color straight out of the phone, an ordinary snapshot by a friend.
+
+  Use character references if needed (like I did) and animate it using seedance 2.5 and a prompt like this:
+
+  [STYLE + CAMERA + ATMOSPHERE]
+  Real amateur phone video, one continuous 30-second take with no cuts, filmed by a tourist at the crowded Monument Valley visitor center overlook. Handheld vertical phone, shaky grip, restless digital zoom that keeps pushing in and pulling back, smeary detail, compression and autofocus hunting. Warm late-afternoon desert light, dusty haze.
+
+  [IMAGE REFERENCES]
+  [ref_3] is the first frame: the video starts exactly on it. [ref_2] provides the redneck man's face, build, hair, beard and outfit. [ref_1] provides the woman's face, build and long wavy hair.
+
+  [CAST — LOCKED]
+  On the summit there are ONLY three living beings the whole video: the man, the woman and one black cat. Nobody else is on the butte: no friends, no family, no other people. The small figures seen from far away in [ref_3] are just these two. Everyone else is a tourist at the overlook, behind the phone.
+
+  [TIMELINE]
+  0-1s: Exactly [ref_3]. Tourists murmur in English, German and Japanese and point at the smoke on top of the West Mitten, surprised.
+  1-4s: [Crash digital zoom to medium] The phone zooms hard across the valley and settles on the flat summit of the butte, grainy and soft. Clearly visible: a big charcoal grill with one huge thick tomahawk steak sizzling and smoking, a big black studio monitor speaker on the rock, a dusty RV parked behind, an inflatable kiddie pool at the cliff edge with the woman sitting in it holding an empty glass bottle, and a red backpack lying on the rock. Only the man, the woman and the cat are up there.
+  4-8s: [Second push-in, tight] The man flips the giant steak at the grill. The woman lifts the empty glass bottle to her lips and finds it empty. She frowns, turns the empty bottle upside down and shakes it at him, with an annoyed shrug.
+  8-10s: [Zoom out to medium] The phone pulls back to reframe the whole camp. The man turns around toward her.
+  10-15s: [Pan to the RV, slow push-in] A black cat trots out from under the RV with a folded dollar bill in its mouth, walks up to the man, sits at his feet and drops the bill. The man picks up the bill, looks at it, nods at the cat.
+  15-19s: [Ease out to medium] He tucks the bill in his pocket, grabs the red backpack from the rock, slips it on and tightens the straps.
+  19-22s: [Quick half zoom out, chasing him] He runs straight to the edge of the butte and leaps off into the void. The tourists gasp and scream in shock.
+  22-28s: [Long free fall, jerky zoom out in steps] No parachute. He drops fast down the sheer red rock face, a tiny figure shrinking against the cliff, the phone fumbling back out step by step while the tourists scream louder and louder.
+  28-30s: [Wide] At the very last moment, just above the desert floor, the parachute bursts open, the word "TECHHALLA" readable on the canopy from afar. The tourists explode in relieved cheers, laughter and applause, phones raised.
+
+  [AUDIO]
+  Tourist chatter in English, German and Japanese, gasps, rising screams during the fall and relieved cheers close to the phone, desert wind. Heavy southern rock plays from the studio monitor the whole time, distant and tinny, louder while zoomed in. The steak sizzling. A small meow. No subtitles.
+
+  [STYLE & QUALITY BOOSTERS]
+  Photorealistic phone footage, real digital zoom artifacts, coherent physics, only the same two people and one cat on the summit, no other people up there, one empty glass bottle and one red backpack throughout, stable identities, natural motion blur, parachute fabric snapping open realistically.
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: референсы героев (ref_1/ref_2) — только картинки в посте, их промптов нет
+source_url: https://x.com/techhalla/status/2113670641333461003
+duplicates_of: []

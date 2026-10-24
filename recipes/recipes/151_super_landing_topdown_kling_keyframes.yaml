@@ -1,0 +1,59 @@
+id: 151_super_landing_topdown_kling_keyframes
+source_file: 151_super_landing_topdown_kling_keyframes.md
+title: «Супер-приземление» с высоты 2 км в твой кадр — NanoBanana 2 (вид сверху с локации) → Kling 3.0 Keyframes
+intent_tags:
+- other
+use_when: 'Из скриншота своего видео NanoBanana 2 делает кадр той же локации строго сверху с 2 км. Kling Keyframes связывает: кадр 1 — вид сверху, кадр 2 — исходный скриншот, получается стремительное падение
+  камеры прямо в вашу сцену.'
+inputs:
+- видео-референс (движение/клип)
+steps:
+- n: 1
+  action: 'Раздел Дизайн → NanoBanana 2: загрузить фото/скриншот, промпт 1.'
+  tool:
+  - Nano Banana
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Раздел видео → Kling, модель Keyframes, версия Kling 3.0, 5 с.
+  tool:
+  - Kling
+  mode: Keyframes
+  prompt: unknown
+  input_source: unknown
+  duration: 5 с
+  aspect: unknown
+- n: 3
+  action: Кадр 1 = полученное изображение, кадр 2 = скриншот, промпт 2.
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: previous_step_output
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: Дальше склеить с исходным видео (кадр 2 = реальный кадр исходника).
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "Супер приземление \U0001F9B9‍♂️\n\nЗаходим на «Сайт»\n\nРаздел Дизайн\nНейросеть: NanoBanana 2\nЗагружаем фото и пишем промпт: \n[Top-down shot captured with an iPhone camera at 0.5x zoom, with the camera\
+  \ pointed straight downward from a height of 2 kilometers above the ground. The location in the photo is centered in the frame.]\n\nДля анимации заходим в раздел видео\nНейросеть:Kling\nМодель: keyframes\
+  \ \nВерсия: Kling 3.0\nДлительность: 5 сек \n\nЗагружаем полученное изображение + скриншот и пишем промпт:\n[Fast camera fly-through from top to bottom, transitioning from frame 1 to frame 2. The movement\
+  \ should feel like a rapid fall.\nSmooth, seamless transition.]\n\nГотово ✅"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: Сайт-агрегатор автора (реф-ссылка) не открывался — не нужен, модель доступна где угодно.
+source_url: https://t.me/reelsteacher/899
+duplicates_of: []

@@ -1,0 +1,40 @@
+id: 076_comic_style_transfer_kling3_motion
+source_file: 76_comic_style_transfer_kling3_motion.md
+title: '# 76 — Своё видео → 2D-комикс по картинке-образцу стиля: Kling 3.0 Motion Control, все движения и губы 1:1'
+intent_tags:
+- motion_transfer
+use_when: Рестайл всего видео под картинку-референс стиля (комикс), с упором на временную стабильность.
+inputs:
+- unknown
+steps:
+- n: 1
+  action: 'Kling 3.0 Motion Control: своё видео + картинка-образец стиля + промпт.'
+  tool:
+  - Kling
+  mode: Motion Control
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "Инструкция:\n1. Переходим в VeoSeeBot \n2. Нейросеть Kling 3.0 Motion Control\nВставляем свое отснятое видео и такой промпт:\nTransform the entire uploaded video into the exact 2D comic-book illustration\
+  \ style of the provided reference image.\n\nKeep the original video completely unchanged in terms of motion, timing, performance, composition, and camera. Preserve every original movement, gesture, pose,\
+  \ head turn, hand movement, body movement, facial expression, eye movement, blinking, and lip movement exactly as in the source video.\n\nOnly change the visual appearance and rendering style.\n\nConvert\
+  \ the woman, her clothing, skin, face, hands, hair/hijab, accessories, objects, room, background, lighting, shadows, and every visible element of every frame into the same cohesive 2D illustrated comic-book\
+  \ style as the reference image.\n\nUse:\n\nclean hand-drawn outlines\ndetailed comic-style linework\nsubtle ink texture and cross-hatching\nsoft cel shading\nslightly textured 2D painted surfaces\ncinematic\
+  \ contrast and lighting\nrich deep shadows\nvivid but controlled colors\npolished modern graphic-novel aesthetic\n\nThe result must look like the original video was entirely drawn and animated in this\
+  \ 2D comic style, not like a filter placed over realistic footage.\n\nMaintain strong temporal consistency between frames. The illustration style, facial features, clothing details, proportions, outlines,\
+  \ colors, textures, and lighting must remain stable throughout the entire video with no flickering, morphing, warping, or style changes.\n\nDo not change the woman’s identity or facial structure. Do not\
+  \ beautify or redesign her face. Preserve her exact facial features and proportions while translating them into the illustrated style.\n\nDo not add new movements or objects. Do not remove anything. Do\
+  \ not change the background, framing, perspective, camera angle, camera movement, or crop.\n\nThe only transformation should be from realistic live-action footage into the exact 2D comic-book visual style\
+  \ of the reference image.\n3. В монтажной программе поменяем маску на сгенерированном видео и по точкам кадр за кадром двигаем за движением пальцев рук"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '1:1'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://t.me/reels_by_alsi/776
+duplicates_of: []

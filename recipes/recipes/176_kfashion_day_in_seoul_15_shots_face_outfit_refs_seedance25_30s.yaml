@@ -1,0 +1,81 @@
+id: 176_kfashion_day_in_seoul_15_shots_face_outfit_refs_seedance25_30s
+source_file: 176_kfashion_day_in_seoul_15_shots_face_outfit_refs_seedance25_30s.md
+title: '«День в Сеуле» в стиле K-fashion: ваше фото (@Image1) + фото образа (@Image2) → 15 планов за 30 с одним роликом, Seedance 2.5 (образ надевается с SHOT 6)'
+intent_tags:
+- client_in_clip
+use_when: 'Одна генерация 30 с, 16:9: 15 планов с указанием крупности и оптики (ECU 85mm, WS 35mm handheld, bird''s-eye…), SFX на каждый план. Лицо держится по @Image1 во всех планах, наряд из @Image2 появляется
+  в SHOT 5 (раскладка на кровати) и не меняется с SHOT 6 по SHOT 15. Сменные звенья: город, образ, каф'
+inputs:
+- unknown
+steps:
+- n: 1
+  action: Бот → /start → выбор модели → Seedance 2.5 480p → генерация по фото → формат 16:9 → 30 секунд.
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: '16:9'
+- n: 2
+  action: Отправить своё фото + фото образа и промпт из комментариев (файлом или через miniapp — там нет лимита символов).
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "=== https://t.me/veo3prompts/2778 2026-10-24T09:08:21+00:00\nКреативное видео с вами в главной роли.\n\n❗️Отправляй свое фото и фото образа(примеры будут в комментариях. \n\nПереходите в бот, /start\
+  \ -> выбор модели -> Seedance 2.5 480p -> генерация по фото -> формат 16:9 -> 30 секунд.\n\nПромпт будет в комментариях. Отправляйте его либо в файле, либо в miniapp, там нет ограничений по символам.\n\
+  \nСгенерировать можно тут: @Veo3_official_bot(Seedance 2.5)"
+- |-
+  ### comments veo3prompts/2778
+  --- Чат veo3
+  REFERENCES:
+  @Image1 — the main character. Keep her face, facial features, skin tone, hair color, hair length, hairstyle and body proportions exactly as in @Image1 in every shot. No face drift, no age or ethnicity change.
+  @Image2 — her outfit. From SHOT 6 to SHOT 15 she wears exactly the outfit from @Image2: same clothing items, colors, fabrics, fit, shoes, bag and accessories. The outfit must stay identical across all these shots.
+
+  STYLE: Hyper-realistic cinematic K-fashion editorial, Seoul street aesthetic, confident baddie energy, dynamic camera transitions, natural skin texture, glossy highlights, premium music-video cinematography, 4K.
+
+  SHOT 1: ECU, 85mm push-in / Close-up of a smartphone alarm vibrating beside the girl from @Image1, sleeping in a fitted crop top and shorts, hair spread on the pillow. She opens her eyes and gives the camera a confident, unbothered stare / SFX: alarm buzz, bedsheet rustle.
+
+  SHOT 2: WS, 35mm handheld / She sits up, stretches casually, tosses her hair back, and swings her legs off the bed. Morning sunlight illuminates her stylish bedroom, full of Korean beauty products and fashion accessories / SFX: mattress bounce, fabric rustle.
+
+  SHOT 3: MCU, 50mm mirror slide / She washes her face, applies skincare, and studies her reflection before beginning her beauty routine. Water droplets catch the bathroom lighting / SFX: faucet rush, skincare bottle clicks.
+
+  SHOT 4: ECU, 85mm macro / Match cuts of her applying eyeliner, shaping her brows, adding glossy lip tint, and putting on jewelry. Her facial features remain identical to @Image1. Every movement is precise and confident / SFX: makeup brush swishes, cosmetic cap clicks.
+
+  SHOT 5: Bird's-eye, 35mm overhead / Her wardrobe opens to reveal trendy streetwear. She picks out the exact clothing items, shoes and bag from @Image2 and lays them out / SFX: hanger clinks, fabric movement, zipper pull.
+
+  SHOT 6: MCU, 50mm push-in / She is now fully dressed in the outfit from @Image2. She adjusts it, puts on sunglasses, and gives herself a final look in the mirror. A subtle smirk reveals her confident attitude / SFX: heel click, jewelry jingle.
+
+  SHOT 7: WS, 24mm low-angle tracking / Wearing the @Image2 outfit, she walks through a stylish Seoul apartment corridor with effortless confidence as the camera tracks backward / SFX: rhythmic footsteps, door latch.
+
+  SHOT 8: MS, 35mm gimbal tracking / Whip-pan transition to the streets of Gangnam. She walks past fashionable boutiques, glowing Korean signs, and sleek storefronts while pedestrians blur behind her. Outfit unchanged from @Image2 / SFX: city ambience, traffic, footsteps.
+
+  SHOT 9: MCU, 85mm slow-motion push-in / She removes her sunglasses, looks directly into the camera, and brushes her hair over one shoulder. Her face clearly matches @Image1. Neon reflections shimmer across her glossy lips and jewelry / SFX: subtle whoosh, street ambience.
+
+  SHOT 10: MS, 35mm handheld / She enters a trendy Korean café, orders an iced Americano, and casually checks her phone while leaning against the counter / SFX: café chatter, espresso machine, ice clinking.
+
+  SHOT 11: Insert, 50mm macro / Close-up of manicured fingers holding an iced coffee cup, condensation sliding down the glass, followed by a stylish mirror selfie with her entire @Image2 outfit clearly visible head to toe / SFX: ice rattling, phone camera click.
+
+  SHOT 12: WS, 24mm cinematic tracking / She steps into a luxury shopping district, passing glass storefronts and fashionable pedestrians. The camera follows her confident walk with smooth lateral movement and strong foreground parallax / SFX: footsteps, distant traffic.
+
+  SHOT 13: MCU, 50mm snap zoom / She stops at a crosswalk, lowers her sunglasses slightly, and gives the camera a playful, intimidating stare before the pedestrian signal changes / SFX: crosswalk beep, traffic passing.
+
+  SHOT 14: WS, 35mm orbit / Golden-hour rooftop scene overlooking Seoul.
+  --- Чат veo3
+  She poses against the skyline in the @Image2 outfit, hair and fabric moving gently in the breeze, then turns toward the camera with a confident half-smile / SFX: rooftop wind, distant city ambience.
+
+  SHOT 15: ECU to WS, 85mm pull-out / Final beauty close-up of her eyes, glossy lips, and flawless makeup — face identical to @Image1. She puts her sunglasses back on and walks away as the camera slowly pulls back, revealing her full @Image2 outfit and the glowing Seoul skyline behind her / SFX: bass hit, footsteps fading, cinematic music ending.
+output:
+  format: mp4
+  resolution: 480p
+  aspect: '16:9'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: Бот @Veo3_official_bot платный — не запускался. Примеры фото «образа» в комментариях — картинки. Видео не смотрел.
+source_url: https://t.me/veo3prompts/2778
+duplicates_of: []

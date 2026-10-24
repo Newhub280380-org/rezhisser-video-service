@@ -1,0 +1,55 @@
+id: 084_realistic_character_from_seedance_frame
+source_file: 84_realistic_character_from_seedance_frame.md
+title: '# 84 — «Живой» персонаж без глянца ИИ: скрин реального видео (TikTok/Pinterest) → ChatGPT делает JSON-промпт → Seedance 2.5 генерирует 4 с 9:16 1080p → лучший кадр = референс персонажа'
+intent_tags:
+- other
+use_when: '# 84 — «Живой» персонаж без глянца ИИ: скрин реального видео (TikTok/Pinterest) → ChatGPT делает JSON-промпт → Seedance 2.5 генерирует 4 с 9:16 1080p → лучший кадр = референс персонажа'
+inputs:
+- unknown
+steps:
+- n: 1
+  action: Найти реалистичное видео в TikTok или Pinterest, скрин нужного кадра.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'ChatGPT: «turn the image into a detailed json prompt».'
+  tool:
+  - GPT Image
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Seedance 2.5: этот промпт, 4 с, 9:16, 1080p.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: 4 с
+  aspect: '9:16'
+- n: 4
+  action: 'Пауза на лучшем кадре, сохранить → это референс персонажа для дальнейших видео-промптов. Автор: поза/одежда/фон не важны, их меняют позже промптами; дороже, чем одна картинка, но лицо выглядит
+    «снятым», а не сгенерированным.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim: []
+output:
+  format: mp4
+  resolution: 1080p
+  aspect: '9:16'
+done_criteria: unknown
+confidence: C
+prompt_completeness: gaps
+notes: улучшенные промпты «v3 system»
+source_url: https://x.com/sixugc/status/2111831991385780492
+duplicates_of: []

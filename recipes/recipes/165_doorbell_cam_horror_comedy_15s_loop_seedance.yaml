@@ -1,0 +1,112 @@
+id: 165_doorbell_cam_horror_comedy_15s_loop_seedance
+source_file: 165_doorbell_cam_horror_comedy_15s_loop_seedance.md
+title: '«Она клялась, что пришла одна»: 15 с «слитое видео с дверного звонка», хоррор-шутка с петлёй — Seedance (через makeugc)'
+intent_tags:
+- product_ad
+- talking_head
+- client_in_clip
+- seamless_series
+use_when: 'Text-to-video без референса: фиксированная fisheye-камера звонка ночью, девушка в костюме на Хэллоуин, голос хозяйки из динамика, «фигура» появляется только на выпадении кадров, две жёсткие склейки
+  (2,0 и 13,0 с). Каркас «found footage»: CORE RULES / CHARACTER / FACE / VOICE / CAMERA / LOOK / сториб'
+inputs:
+- стартовый кадр
+- аудио/голос
+steps:
+- n: 1
+  action: 'Один шаг: Seedance (автор — «Unlimited Seedance» на makeugc), 15 с, 9:16, промпт ниже.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: 15 с
+  aspect: '9:16'
+- n: 2
+  action: 'Под замену: персонаж, костюм, реплики; оставить блоки CORE RULES / CAMERA / LOOK — они дают вид «реальной записи с камеры звонка».'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "She swore she came alone.\n\nMade with Unlimited Seedance on\n@makeugc \n\nPrompt\U0001F447\n\nCreate a native 15-second, vertical 9:16 real security-camera recording from a wide-angle smart doorbell\
+  \ camera mounted beside a front door at night. It must look like genuine leaked doorbell footage a homeowner posted online, not a film, not CGI, not animation. No reference image.\n\nCORE RULES\nOne fixed\
+  \ doorbell camera. The camera never moves, never zooms, never pans. Wide fisheye lens, about 160 degrees, slight barrel distortion at the edges, camera height about 1.4 m, looking slightly down and outward\
+  \ at the porch, steps and dark front lawn. Two characters only: LUNA and THE FIGURE. Nobody else appears. All characters are adults, 20+. One location only: the front porch of a suburban house at night.\
+  \ Two hard cuts only: at 2.0 s and at 13.0 s. Real-world physics, real human motion, real low-light camera quality. No music. Sound comes only from the doorbell microphone and the doorbell speaker.\n\n\
+  CHARACTER\nLUNA: 24-year-old woman, adult, slim natural build […], realistic body proportions. Halloween ghost costume: white lace midi dress with long sleeves and a modest scoop neckline, white tights,\
+  \ flat white ankle boots, a thin crown of dried pale flowers on her head. Long dark brown wavy hair over her shoulders, behind her ears, never covering her face. Pale costume makeup, soft grey shading\
+  \ under the eyes, dark berry lipstick. Small silver hoop earrings. In her RIGHT hand: one small orange plastic pumpkin basket with a black handle, holding a small handful of wrapped candies from other\
+  \ houses.\nTHE FIGURE: an adult woman who looks nothing like Luna: noticeably taller, very thin, pale grey skin on her hands and feet. Long plain off-white nightgown to the ankles, bare feet, arms hanging\
+  \ straight down along the body, palms facing her thighs. Long straight black hair falls forward over her whole face down to her chest; her face is never visible at any moment. She never walks on camera.\
+  \ She changes position only during a short digital frame drop, never in continuous footage. She never moves her arms, hands or body; her only movement is one slow head tilt described in the storyboard.\n\
+  \nFACE\nLuna's face stays identical in every shot: oval face, dark brown eyes, straight brows, small straight nose, berry lips. Mouth movement moderate and natural; only the upper teeth are briefly visible\
+  \ when she speaks or screams. Natural blinking every 2 to 4 seconds. Eyes look at real targets: the doorbell, the lens, over her shoulder. Head turns under 45 degrees. Nothing covers her face for more\
+  \ than 0.5 seconds.\n\nVOICE\nLUNA: young American woman, playful at first, then breathless and scared. Real voice recorded by a cheap doorbell microphone: slightly thin, a bit of hiss, no studio quality.\n\
+  HOMEOWNER (never seen): a woman's voice through the doorbell speaker, tinny, compressed, slightly crackling, like a phone speaker. Calm first, then a frightened whisper.\nEvery line is short, spoken no\
+  \ faster than 3 words per second, with natural pauses.\n\nCAMERA\nReal smart doorbell recording. Fixed position, no movement at all. Deep focus: porch, steps and lawn all equally soft-sharp. Luna is framed\
+  \ in the center and upper two thirds of the frame. When Luna stands at the door, she is seen from mid-thigh up, slightly from above and to her left side.\n\nCAMERA HAND\nNobody holds the camera. It is\
+  \ mounted on the wall. No hands, phones or operators are ever visible.\n\nHANDHELD\nNo handheld motion. The image is completely locked off, with only real compression flicker and sensor noise.\n\nLOOK\n\
+  Real low-light doorbell footage: visible digital noise and grain, soft detail, mild compression blocks in dark areas, slightly smeared motion on fast movement, a little blown highlight around the porch\
+  \ lamp, crushed blacks on the lawn. Colors slightly washed out. Small pale grey timestamp text in the top-left corner, small and unreadable, slightly blurred. Nothing looks polished.\n\nLIGHTING\nOne\
+  \ warm yellow wall lamp above the door, out of frame at the top right, lights the porch and Luna from above. Small orange string lights on the porch railing give a faint warm glow. The steps fade into\
+  \ shadow; the lawn and street are dark blue-black with almost no detail. A distant neighbor's window glows dim yellow far in the background. The lamp is never directly above Luna's face; her face stays\
+  \ readable at all times.\n\nVISUAL MATCH\nThe image must look exactly like this: a real vertical doorbell camera clip at night, wide fisheye with bent edges, fixed high angle, warm porch lamp versus cold\
+  \ dark yard, heavy digital grain, soft compressed detail, washed colors, small blurred timestamp in the corner, no graphics, no music, only microphone ambience.\n\nSETTING\nFront porch of a normal American\
+  \ suburban house, late October, around 9 pm. The white front door is just outside the frame on the RIGHT; only beige vinyl siding is visible on the RIGHT edge. The porch continues to the LEFT and ends\
+  \ at a white wooden railing on the far LEFT with orange string lights. A dark coir doormat in the foreground center. Three carved jack-o'-lanterns with small flickering candles: two on the LEFT side of\
+  \ the top step, one on the RIGHT side of the second step. Four wide wooden steps go straight down from the porch center to a dark lawn and a dark street.\n\nBACKGROUND\nThree layers: 1) foreground: porch\
+  \ boards, doormat, the top step; 2) middle: the steps with the pumpkins, the railing and string lights; 3) far: the dark lawn, a small bare tree on the LEFT, the street, and one dim neighbor window. The\
+  \ only background motion: candle flicker in the pumpkins and very slight movement of bare branches. These anchors stay identical in every shot. Background bait: THE FIGURE standing motionless far out\
+  \ on the dark lawn next to the bare tree, barely lit, easy to miss on first viewing.\n\nMOTION\nLuna moves like a real person: weight shifts from foot to foot, small breaths, a slight bounce while waiting,\
+  \ real hesitation before turning. Order of every turn: eyes first, then head, then shoulders, then torso, then feet. Her dress moves gently with her steps. THE FIGURE never moves her body except one slow\
+  \ head tilt; she changes position only inside a doorbell frame drop, like real glitchy footage.\n\nDEFECT PREVENTION\nHands: Luna's RIGHT hand holds the basket handle from 2.0 s to 11.4 s, fingers wrapped\
+  \ around the black handle, basket hanging by her right thigh. Her LEFT hand presses the doorbell once at 2.7 to 3.1 s: only her fingertips enter the bottom edge of the frame for under half a second, slightly\
+  \ blurred, never covering the lens. Her LEFT hand rests on her collarbone at 7.0 to 8.0 s, then drops. THE FIGURE's hands hang straight down and never move. Five fingers per hand; fingers never merge\
+  \ with each other, the basket or the body. No camera hand is ever visible.\nFace: when Luna screams at 11.2 s her face stays intact: mouth opens wide, eyes wide, brows up, then she turns away. THE FIGURE's\
+  \ face is always fully hidden by her hair. Luna's features, makeup and flower crown stay identical in every shot. Head turns under 45 degrees.\nBody and legs: Luna steps up onto the porch at 2.0 to 2.8\
+  \ s with RIGHT foot then LEFT foot, then stands with weight on her LEFT leg. At 8.0 s she turns toward the steps: LEFT foot pivots, then RIGHT foot. At 11.6 s she runs out of frame to the LEFT along the\
+  \ porch, past the end of the railing, never down the steps and never toward the door. Exactly two arms and two legs per person; knees bend only forward; feet never slide or float.\nObjects: one orange\
+  \ pumpkin basket only, with a few wrapped candies inside from the start. At 11.4 s it drops from her RIGHT hand, lands on the top step, tips over; the few candies spill down onto the next two steps only,\
+  \ then stay still. The basket stays lying on the top step until the end. Three jack-o'-lanterns stay in their exact places the whole video. Objects never vanish, duplicate, change shape or colour, or\
+  \ pass through bodies. No readable text anywhere except the tiny blurred timestamp.\nContinuity across cuts: same camera position, same porch, same pumpkins, same lamp light, same dress, hair and crown\
+  \ on Luna. THE FIGURE looks the same every time she appears. The shot at 13.0 to 15.0 s matches the shot at 0.0 to 2.0 s, plus the tipped basket on the step.\nPhysics and environment: the dress moves\
+  \ naturally; hair moves only slightly. Candle flames flicker softly. The porch lamp flickers only at 13.0 to 15.0 s. No glass, windows or mirrors near the camera; no reflections anywhere. Nobody else\
+  \ appears. The background never warps or shifts.\n\nSTORYBOARD\nSHOT 1 (0.0 to 2.0 s) — HOOK, the same fixed doorbell view, a moment from the end of the night.\nSTART POSE: THE FIGURE stands on the doormat\
+  \ about one meter from the lens, centered, seen from the chest up, black hair hanging over her whole face, off-white nightgown, arms straight down. The porch behind her is empty; the three pumpkins glow.\n\
+  0.0 to 0.8 s: totally still. Only grain and candle flicker.\n0.8 to 1.7 s: her head slowly tilts to her LEFT about 20 degrees; hair stays over her face.\n0.9 to 1.9 s: doorbell speaker, tinny, panicked:\
+  \ \"WHO is that?!\" (fast, breathy, not shouted; not calm)\nFACE: no face visible, only hair.\nSTAYS STILL: her arms, hands, feet and body.\n1.8 to 2.0 s: a quick grey compression glitch.\nHARD CUT at\
+  \ 2.0 s.\n\nSHOT 2 (2.0 to 13.0 s) — continuous recording, earlier the same night.\nSTART POSE at 2.0 s: empty porch. Luna is on the top step, RIGHT foot on the porch, LEFT foot still on the step, basket\
+  \ in her RIGHT hand, LEFT arm relaxed, face toward the camera, smiling.\n2.0 to 2.8 s: she steps up, LEFT foot joins the RIGHT on the doormat; weight settles on her LEFT leg. FACE: playful smile.\n2.7\
+  \ to 3.1 s: her LEFT fingertips briefly touch the doorbell at the very bottom edge of the frame, then her hand drops back. Doorbell chime.\n3.2 to 4.6 s: she looks into the lens, small bounce on her toes,\
+  \ basket swinging slightly: \"Trick or TREAT!\" (sing-song, happy; not shouted) FACE: bright smile, upper teeth briefly visible.\n4.6 to 5.0 s: she waits, head slightly tilted, breathing.\nBACKGROUND\
+  \ BAIT from 4.5 s: THE FIGURE is standing far out on the dark lawn next to the bare tree, behind Luna's LEFT shoulder, barely visible, completely still.\n5.0 to 6.8 s: doorbell speaker, tinny, calm: \"\
+  Sorry. We're out of candy.\"\n6.8 to 7.0 s: Luna pouts, shoulders drop. FACE: exaggerated disappointment.\n7.0 to 8.0 s: LEFT hand rests on her collarbone, small sigh: \"Okay... RUDE.\" (playful, joking;\
+  \ not angry)\n8.0 to 8.8 s: she turns to leave toward the steps: eyes, head, shoulders, torso, LEFT foot pivots, RIGHT foot. She is now in three-quarter back view, the side of her face still visible.\n\
+  8.8 to 9.0 s: a short doorbell frame drop: the image stutters and freezes for a few frames with grey blocks. When the image returns, THE FIGURE is gone from the lawn and stands on the BOTTOM step, much\
+  \ closer, hair over her face, arms down.\n9.0 to 9.6 s: Luna freezes mid-step, staring at the steps. Only her breathing moves.\n9.6 to 10.2 s: Luna slowly turns back toward the lens: eyes, head, shoulders.\
+  \ FACE: eyes wide, lips parted, all colour gone from her face.\n10.2 to 11.0 s: Luna, whispering into the lens: \"Is that... YOURS?\" (shaky whisper; not loud)\n11.0 to 11.5 s: doorbell speaker, a scared\
+  \ whisper: \"I thought she was WITH you.\"\n11.2 to 11.6 s: Luna screams, short and real, mouth wide, upper teeth visible.\n11.4 s: the basket drops from her RIGHT hand onto the top step and tips; the\
+  \ few candies spill down two steps.\n11.6 to 12.6 s: she runs out of frame to the LEFT along the porch past the end of the railing, arms pumping, dress swinging. She never goes down the steps.\n12.6 to\
+  \ 13.0 s: the porch is empty except the tipped basket and the candies. THE FIGURE still stands on the bottom step, completely still.\nSTAYS STILL: THE FIGURE's body, arms and head the whole shot; the\
+  \ pumpkins; the camera.\nHARD CUT at 13.0 s.\n\nSHOT 3 (13.0 to 15.0 s) — the hook frame again, a minute later.\nSTART POSE: identical to shot 1: THE FIGURE on the doormat about one meter from the lens,\
+  \ hair over her face, arms down, head tilted 20 degrees to her LEFT. The tipped basket and candies are visible on the top step behind her.\n13.0 to 14.4 s: the porch lamp flickers twice; the image darkens\
+  \ and brightens.\n14.0 to 15.0 s: very slowly she tilts her head back to straight. Total stillness otherwise.\nFACE: never visible.\nSTAYS STILL: arms, hands, feet, body.\nEnds on her still, straight\
+  \ silhouette, so the video loops back to the first frame.\n\nSOUND\nReal doorbell microphone audio only: crickets, distant wind, a faint car far away, soft rustle of Luna's dress, her footsteps on wooden\
+  \ boards, the doorbell chime at 2.9 s, the basket hitting the step and candies clicking at 11.4 s, her running footsteps fading to the left. A short digital crackle during the frame drop at 8.8 s. The\
+  \ speaker voice is tinny and crackling. Mild hiss under everything. No music, no sound effects, no stingers.\n\nHANDS AND FEET\nEvery hand and foot has a place at every moment as described. Luna's feet\
+  \ always fully on the boards or the step, never floating. THE FIGURE's bare feet stay flat and still. No extra fingers, no extra limbs, no hands merging with the basket or dress.\n\nCONTINUITY AND REALISM\n\
+  Same camera, same angle, same light, same porch in all shots. Luna's costume, hair, crown and makeup never change. Real human pacing, real hesitation, real fear. The footage must feel like an authentic\
+  \ clip someone pulled from their doorbell app.\n\nFINAL FEEL\nGenuine, creepy, slightly funny real doorbell footage that people believe actually happened. Raw, grainy, imperfect, unedited. Not polished\
+  \ influencer content."
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: Платформа makeugc не открывалась. Видео не смотрел.
+source_url: https://x.com/Zyvex_0x/status/2113318596965216439
+duplicates_of: []

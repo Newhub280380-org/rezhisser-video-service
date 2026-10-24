@@ -1,0 +1,49 @@
+id: 025_h3_char_portable_identity
+source_file: 25_h3_char_portable_identity.md
+title: 'Портативный «.char»: упаковать 2–9 референсов героя в файл и вызывать по имени'
+intent_tags:
+- other
+use_when: 'Портативный «.char»: упаковать 2–9 референсов героя в файл и вызывать по имени'
+inputs:
+- аудио/голос
+steps:
+- n: 1
+  action: unknown (в источнике нет нумерованных шагов; см. prompts_verbatim)
+  tool:
+  - MiniMax H3
+  - Flux
+  - Qwen
+  - ComfyUI
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "Hey Guys,\n\nBased on the [previous post](https://www.reddit.com/r/StableDiffusion/comments/1vyymwj/minimax_h3_portable_character_consistency_via/) on face consistency with MM-H3, Couple of people have\
+  \ asked me to build a full character workflow.\n\n**Mechanism**\n\n\\- Build .Char: You drop max 9 reference reference, I prefer to use a ratio 2:2:1(face:cloths:body). YuNet finds the face, SFace takes\
+  \ a per-reference face signature, DINOv2 takes a subject signature, and the references get cleaned and normalised. All of that packs into a single portable file, a .char.  \n*Only face/ref is required\
+  \ body & cloths link is optional.* \n\n\\- Generation: At generation, the file(.char) feeds its references into Minimax’s own native multi-reference channel and prepends a locked description to the prompt.\n\
+  \n**Prompting Guide**\n\n* **Name your character**: Give your character a name e.g. under encode character(Click adjust icon on the bottom side of the node), I have used name **emmy**, so when passing\
+  \ prompt, I only have to say, **emmy walking on the beach**. \n   * *Again providing prompt like a woman or any features specific details like black hairs etc will only mislead the generation.*\n* **Describe\
+  \ character features**: Encode all of the character features in encode character prompt & trigger your character with a name in generation prompt.\n   * *Avoid describing same things in generational prompt.*\
+  \ \n* **Handling Character drift**: e.g. if you want specific style or cloth e.g. half sleeves, sleeveless, add it to the generational prompt. There can be a slight drift in clothing as body shot also\
+  \ has cloths, which interferes with clothing references.\n   * *Each refs should be unique, face should not have body or vice versa, same applies for clothing.* \n* **Portability:** Once character is\
+  \ built, you can use the same character with only simple prompt & generation graph. \n\nI have generated all references with Flux Klein 4b, I had to blur the body ref, but workflow consists a example\
+  \ of body ref.  \n\nNote: For best result, pass cropped references, so that model takes the required shot, model gets confused if cloth slot also has a face or face slot has cloths.\n\n**Models**\n\n\
+  \    core/models/\n      diffusion_models/  minimax_h3_ref2va_pruned_fp8_scaled.safetensors\n      text_encoders/     qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors \n      vae/               minimax_h3_video_vae_fp16.safetensors\n\
+  \      vae/               minimax_h3_audio_vae_fp32.safetensors\n      annotators/        face_detection_yunet_2023mar.onnx\n      annotators/        face_recognition_sface_2021dec.onnx\n      annotators/\
+  \        dinov2-base/\n\n**Requirements**\n\nNvidia GPU: 24GB+ VRAM & 64 GB RAM(Run Locally)\n\n**Workflow link:** [https://inlinestudio.art/workflows/minimax-h3-guided-consistent-characters-via-reference-identity-face-body-cloths](https://inlinestudio.art/workflows/minimax-h3-guided-consistent-characters-via-reference-identity-face-body-cloths) (includes\
+  \ inputs & model details)\n\n**Github Repo:** [https://github.com/inlineresearch/Inline-Studio](https://github.com/inlineresearch/Inline-Studio) (GPLV3)\n\n**Limitation:** Reference conflicts e.g. if\
+  \ two reference/input images has two different faces, it might conflict in generation, provide well cropped body & cloth images. Face images are crossed automatically by Sface.\n\nPortable char comfy\
+  \ node is still on the backlog, would try to do it over the weekend.   \nHappy to hear any suggestions or feedbacks."
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: Лицо, одежда и тело подаются раздельными кропами; имя вместо описаний; фиксированное описание добавляется к промпту автоматически.
+confidence: B
+prompt_completeness: partial
+notes: —
+source_url: https://www.reddit.com/r/StableDiffusion/comments/1vyymwj/minimax_h3_portable_character_consistency_via/)
+duplicates_of: []

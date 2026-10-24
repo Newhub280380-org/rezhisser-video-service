@@ -8,6 +8,7 @@
 // produces the same plan.
 
 const crypto = require('node:crypto');
+const { createRecipeDirector, RecipeError } = require('./recipes/index.js');
 
 const ENGINE = 'rule-based-v1';
 const ENGINE_LABEL = 'Правила и шаблоны (без ИИ, бесплатно)';
@@ -396,15 +397,26 @@ function briefOptions() {
   };
 }
 
+// Recipe director: one call picks a library recipe and walks it. Dry-run is
+// the default, including this shared instance (no provider, no budget).
+const recipeDirector = createRecipeDirector();
+
+function directRequest(input = {}) {
+  return recipeDirector.handle(input);
+}
+
 module.exports = {
   ENGINE,
   ASPECTS,
   DURATIONS,
   BriefError,
+  RecipeError,
   cleanText,
   validateBrief,
   briefHash,
   createPlan,
   briefOptions,
   validateAdvisorSetting,
+  createRecipeDirector,
+  directRequest,
 };

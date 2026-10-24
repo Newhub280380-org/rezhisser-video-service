@@ -1,0 +1,97 @@
+id: 137_friend_song_two_photos_ref_video_new_video_not_source_editing
+source_file: 137_friend_song_two_photos_ref_video_new_video_not_source_editing.md
+title: '«Когда друг включил свою песню»: 2 фото + реф-видео → Seedance 2.5 по шаблону «[Generation Task — New Video, Not Source Editing]», звук потом'
+intent_tags:
+- client_in_clip
+- seamless_series
+- animal
+use_when: 'Двое людей (ваше фото и фото друга) и маленькая собака едут ночью в кабриолете — шоты, склейки, мимика и движения губ берутся из @video1 («motion guide only»). Шаблон переноса реальных людей
+  в чужой ролик: модели прямо говорят, что это новое видео, а не правка исходника (обход отказов на редактирова'
+inputs:
+- unknown
+steps:
+- n: 1
+  action: Фото (см. пост) в хорошем качестве.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Seedance 2.5 с параметрами из поста (длительность, формат).
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: 5 с
+  aspect: unknown
+- n: 3
+  action: 'Фото + промпт из комментария → генерация; звук — по посту (часть шаблонов: без звука, трек добавить в редакторе).'
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "=== https://t.me/nercpa/327 2026-10-23T02:14:51+00:00\n\U0001F3A4Когда друг включил свою песню\n\n1. Заходите в бота @neyrosetkabot\n2. Выбираете ваше фото и фото друга в хорошем качестве\n3. Выбираете\
+  \ режим Видео - Seedance 2.5 (длина ролика как у реф-видео, без звука) и отправляете ваши фото с реф-видео и текстом из комментариев\n4. В любом редакторе добавьте звук, который находится в комментариях\n\
+  \nПРОМПТ В КОММЕНТАРИЯХ \n⬇️⬇️⬇️\n\n⚡️Генерация в один клик\n\n#видео #развлекательное\n  \n    Please open Telegram to view this post\n    VIEW IN TELEGRAM"
+- |-
+  ### comments nercpa/327
+  --- Нейросетка |Промты | Обновления Chat
+  [Generation Task — New Video, Not Source Editing]
+  Generate a NEW photorealistic cinematic video of two people and a small dog riding in a convertible at night, using @video1 as a reference for the shots, cuts, camera framing, head movements, gestures, facial expressions, mouth movements and pacing. @video1 is a motion guide only. The passenger is the person from @image1 in every shot, including every close-up; the driver is the person from @image2 in every shot. Do NOT edit or repaint the original video frames, and do NOT place a face from the photos onto any original performer’s head or body. Build two people, each as one complete, coherent person from their own photo, and render them naturally within freshly generated scenes. Three shots with hard cuts at about 00:05.2 and 00:07.7. Duration: about 17.3 seconds, aspect ratio of @video1.
+
+  [Character Assignments]
+  PERSON_A, from @image1: the passenger on the left, holding a small fluffy dog.
+  PERSON_B, from @image2: the driver on the right, behind the steering wheel.
+  These assignments never change. Each person keeps their own face, hair, body and outfit in every frame. No identity blending, no exchanged outfits. Only these two people and the dog are in the car.
+
+  [Reference Roles and Priority]
+  @image1 and @image2 = the ONLY sources of each person’s appearance: face, facial features, hair, skin tone, body build and proportions, hands, tattoos, outfit and accessories.
+  @video1 = reference for each person’s actions in the same seat, the order of shots, approximate timing and camera framing.
+  @video1 is NOT a reference for either person’s face, head shape, facial features, hair, skin, apparent age, gender presentation, body build, clothing or accessories, and NOT a reference for colors or materials. The figures in @video1 are only motion guides.
+  If a figure’s shape conflicts with a photo, the photo wins. Even when a photo looks similar in type to the figure in the same seat — similar hair length, gender or outfit — the person is still rebuilt entirely from the photo: the exact face, hair color and texture, skin tone and body build from the photo.
+  The figures in @video1 give only movement, never body shape or hair shape: each person’s hairstyle, hair length and hair volume, neck, jaw, head size, shoulders and build come only from their own photo. Adapt the movements to each person, never distort a person to fit them.
+
+  [Face Identity]
+  Each face is built entirely from its own photo in every frame: head shape and proportions, face width and length, forehead, eyebrows, eye shape, color and spacing, nose, mouth and lips, cheekbones, jawline, chin, ears, skin tone and texture, apparent age and gender, hairline, hairstyle, hair length and hair color, facial hair only if the photo has it. The hairstyle is exactly as in the photo: hair worn down stays down, hair pulled back stays pulled back, short hair stays short. Expressions come from @video1, performed with each person’s own features. Do not stretch, compress or resize the features to fit another head. Do not copy the photos’ backgrounds, framing, crop, camera distance, poses, lighting or frozen expressions.
+
+  [Body and Outfit]
+  Each body follows its own photo: a woman gets a woman’s body, a man gets that man’s body, a slim person stays slim, a fuller person stays fuller; the neck, jaw and shoulders match the photo exactly. Each person wears exactly the outfit and accessories from their own photo, in the photo’s real colors; tattoos, marks and hair accessories only where their photo has them.
+  Partial photo rule: if a photo shows only the face, build the visible shoulders and upper body by restrained, plausible continuation: a body of matching build and the visible clothing continued in the same style and colors. Do not invent distinctive accessories.
+
+  [The Dog]
+  A small fluffy dog with light fur sits in PERSON_A’s arms, held against their chest: a clear little head with dark eyes, a short muzzle and soft ears, real fur and natural dog movement. It looks around and turns its head while the car drives.
+
+  [Identity at Distance]
+  --- Нейросетка |Промты | Обновления Chat
+  In the wide shot through the windshield the faces are smaller; each person reads as their own photo through hair color, hairstyle, head silhouette, skin tone and the outfit’s colors and shape. In profile, in head turns and in close-ups, every person is still the person from their own photo.
+
+  [Location and Look]
+  An open convertible driving at night, dark leather seats, the shiny windshield frame and hood edge in the wide shot, large round bokeh lights behind. Colour grade, the same in every shot: a cinematic night look — deep black shadows and a dark background, natural skin tones on the faces with soft, slightly warm light, large round bokeh lights in peach and soft orange, rich but natural saturation, deep contrast with gentle highlights, subtle film grain, shallow depth of field. The colour grade comes only from this description, never from the photos’ lighting or white balance. Create the car and the night as a fresh, plausible scene.
+
+  [Mouth]
+  Each person’s mouth follows the rhythm of the mouth of the figure in the same seat in @video1 — the openings, closures and pauses, approximately — performed with each person’s own lips and teeth from their own photo. PERSON_B sings along to the music; PERSON_A keeps the lips closed and only reacts with the face.
+
+  [Timeline — follow @video1’s order and rhythm, approximate timing]
+  - [00:00–00:05.2] Shot 1, wide shot through the windshield: PERSON_A (@image1) sits stiffly holding the small dog, wide-eyed, uneasy; PERSON_B (@image2) drives, grinning and singing along to the music, then turns his head toward PERSON_A.
+  - [00:05.2–00:07.7] Shot 2, close-up of PERSON_A (@image1): turns the head toward PERSON_B with an awkward, pained grimace.
+  - [00:07.7–00:17.3] Shot 3, close-up of PERSON_B (@image2), starting in profile: turns toward the lens and sings along with full passion — eyebrows playing, a wink, a big grin — turns away and back again, raises a finger to the ear, then points a finger up with a cheeky look.
+  Only the movements of this timeline are performed.
+
+  Negatives:
+  face-swap look, mask-like face, pasted face, identity blend between the two people, exchanged outfits, facial features that differ from the photos, mismatched head and body proportions, outfits different from the photos, a different person in the wide shot, a third person, extra limbs, extra fingers, watermark, captions.
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: превью-видео (медиа); бот @neyrosetkabot платный — у нас не запускалось; промпт годится для любой площадки с Seedance 2.5
+source_url: https://t.me/nercpa/327
+duplicates_of: []

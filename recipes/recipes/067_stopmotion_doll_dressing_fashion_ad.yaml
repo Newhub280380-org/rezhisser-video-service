@@ -1,0 +1,52 @@
+id: 067_stopmotion_doll_dressing_fashion_ad
+source_file: 67_stopmotion_doll_dressing_fashion_ad.md
+title: '# 67 — Стоп-моушен «гигантские руки одевают куклу-вас»: 7 референсов (вы в рост + вещи) → Seedance 2.0, 6 шотов по таймкодам'
+intent_tags:
+- other
+use_when: 'Шаблон для витрины одежды/украшений: каждая вещь отдельным референсом с @-именем, по шотам надевается, в конце «кукла оживает».'
+inputs:
+- фото в полный рост
+- аудио/голос
+steps:
+- n: 1
+  action: 'Фото: в рост до/после, лицо, руки с кольцами, ноги с обувью, сумка, колье/хиджаб/кепка.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Seedance 2.0: всё в референсы + промпт.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "Промпт закинуть?\n\nИнструкция:\n1. Переходим в VeoSeeBot \n2. Нейросеть Seedance 2.0\nВ раздел с референсами вставляем свои фотографии:\n- во весь рост с одеждой до\n- во весь рост с одеждой после\n\
+  - крупным планом лицо\n- руки с кольцами\n- ноги с обувью\n- сумка\n- колье, хиджаб, кепка и тд.\n\nПишем такой промпт (обязательно подстройте под себя)\nStyle: Photorealistic stop-motion animation with\
+  \ handcrafted movement. Slightly jerky motion, short frame holds, quick snappy transitions, tactile fabric movement, and realistic lighting.\n\nComposition: Medium to full-body framing. The doll occupies\
+  \ most of the frame while oversized hands enter from the edges, remaining visible throughout the dressing process.\n\nCharacter: A tiny doll version of the young woman standing inside a bright, sunlit\
+  \ apartment. Large human hands carefully dress her piece by piece as if she were a collectible figure. Every clothing item is physically pulled into place with incremental stop-motion movements, allowing\
+  \ the fabric to naturally slide and wrap over her body. Maintain the exact same identity, facial proportions, hairstyle, and appearance as the reference images in every shot.\n\nReference order:\n@doll\
+  \ (full-body reference)\n@blue cape\n@red bag\n@shoes\n@hijab\n@rings\n@necklace\n\nShot 1 (0–2s)\nThe oversized hands gently enter the frame and position the tiny doll upright, preparing her for dressing.\n\
+  locked-off static shot.\n\nShot 2 (2–5s)\nThe hands carefully stretch the @hijab over her head, lowering it little by little until it settles perfectly into place. The fabric realistically folds and conforms\
+  \ to her shape.\nstatic shot\n\nShot 3 (5–8s)\nThe hands lift the @blue cape and gradually pull it over her grey dress in several stop-motion increments until it fits naturally.\nStatic shot\n\nShot 4\
+  \ (8–10.5s)\nEach foot is gently guided into the @shoes one after the other. Small stop-motion adjustments make the shoes fit snugly.\nstatic shot\n\nShot 5 (10.5–12.5s)\nThe hands place the @red bag\
+  \ onto her arm, carefully slide the @rings onto her fingers, and finally attach the @necklace around her neck, completing the outfit.\nstatic shot\n\nShot 6 (12.5–15s)\nOne hand lightly lifts her wrist.\
+  \ She suddenly comes to life, softly blinks, smiles with confidence, and finishes in a graceful fashion pose.\nCamera: slow push-in toward the final pose.\n\nAudio:\nDistinct stop-motion clicks, subtle\
+  \ fabric rustling as each garment slides into place, soft foot taps while putting on the shoes, a gentle metallic jingle from the jewelry, a delicate bag swing sound, and a satisfied \"mmm.\" No background\
+  \ music. No dialogue. No spoken words.\n\n  Telegram\n\n  VeoSeeBot | Neuroplace\n  Все топовые ИИ-модели в одном месте по одной подписке\nСайт: neuroplace.ai  \nТехподдержка: @neuroplace_support"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://t.me/reels_by_alsi/754
+duplicates_of: []

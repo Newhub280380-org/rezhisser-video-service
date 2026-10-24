@@ -1,0 +1,84 @@
+id: 031_talking_animals_lipsync_tutorial
+source_file: 31_talking_animals_lipsync_tutorial.md
+title: 'Говорящие животные и маскоты: сценарий → картинки персонажей → lip-sync неживых персонажей → монтаж'
+intent_tags:
+- talking_head
+- client_in_clip
+- seamless_series
+- animal
+use_when: 'Говорящие животные и маскоты: сценарий → картинки персонажей → lip-sync неживых персонажей → монтаж'
+inputs:
+- unknown
+steps:
+- n: 1
+  action: Сценарий (автор попросил у чат-бота 2-минутную историю о говорящих собаках, с точки зрения собак, с фактами), правки вручную.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Картинки героев в платформе, где есть Nano Banana/Sora/VEO/Kling/face swap/lip-sync/consistent characters (в транскрипте название платформы искажено, «design»; не удалось установить).
+  tool:
+  - Kling
+  - Veo
+  - Sora
+  - Nano Banana
+  mode: lip-sync
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Lip-sync неживых персонажей — отдельный инструмент платформы; автор подчёркивает: мордочка/клюв/мультяшное лицо — самое сложное.'
+  tool: unknown
+  mode: Lip-sync
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: Сборка в Canva.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 5
+  action: 'Промпты X (только начала, остальное обрезано в публикации):
+
+    [PROMPT]
+
+    [PROMPT]'
+  tool: unknown
+  mode: unknown
+  prompt:
+  - |-
+    Kling 4.0 Prompt share:
+
+    A 15-second continuous cinematic selfie-style video of an anthropomorphic tabby cat vlogger walking down a modern city street while holding a front-facing camera. The cat is wearing black headphones and a blue plaid shirt, speaking directly to the camera in a casual, confident tone like a daily street vlogger. Mouth movement synced to speech throughout.
+    The camera remains in selfie mode the entire time with slight handheld shake for realism. Natural daylight lighting. Background includes passing cars, pedestrians, and tall buildings softly blurred with shallow depth of field.
+    As the cat walks forward, it talks continuously, occasionally nodding, blinking, and slightly adjusting its headphones mid-sentence. Subtle fabric movement from wind. Natural whisker and ear motion. The cat briefly laughs near the end while still speaking, then gives a friendly wink at the c
+  - |-
+    Midnight drives hit different when your passengers are this adorable🐾
+
+    Made with Seedance 2.5
+
+    Prompt:
+    A high-definition 4K cinematic video of a white and orange tabby cat sitting in the driver's seat of a classic convertible car at night, looking expressively toward the passenger side while "singing" with natural lip-sync movement. In the passenger seat, a fluffy blue-gray British Shorthair cat and a tiny white Pomeranian dog sit close together, watching with wide, emotional eyes. The background features soft, blurred bokeh city lights of a downtown street. Moody, cinematic lighting reflecting off the polished black car hood. Shot with a shallow depth of field, playful yet dramatic tone, seamless character consistency across cuts.
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim: []
+output:
+  format: mp4
+  resolution: 4K
+  aspect: unknown
+done_criteria: Реплики и мимика создаются отдельным lip-sync шагом на неподвижной картинке, поэтому лицо животного остаётся тем же.
+confidence: C
+prompt_completeness: complete
+notes: Название платформы; полные X-промпты.
+source_url: https://www.youtube.com/watch?v=PskPJPe_Dq8
+duplicates_of: []

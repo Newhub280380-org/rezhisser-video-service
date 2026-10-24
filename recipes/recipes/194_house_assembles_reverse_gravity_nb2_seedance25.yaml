@@ -1,0 +1,90 @@
+id: 194_house_assembles_reverse_gravity_nb2_seedance25
+source_file: 194_house_assembles_reverse_gravity_nb2_seedance25.md
+title: '«Дом собирается сам» для застройщиков/агентов недвижимости: Nano Banana 2 убирает дом с фото → Seedance 2.5 (пустая сцена = первый кадр, исходное фото = последний кадр), 15 с, обратная гравитация'
+intent_tags:
+- seamless_series
+- pov_one_take
+use_when: '«Дом собирается сам» для застройщиков/агентов недвижимости: Nano Banana 2 убирает дом с фото → Seedance 2.5 (пустая сцена = первый кадр, исходное фото = последний кадр), 15 с, обратная гравитация'
+inputs:
+- стартовый кадр
+- финальный кадр
+- аудио/голос
+- логотип
+steps:
+- n: 1
+  action: Взять реальное фото готового объекта (дом с бассейном). Сохранить — это **конечный кадр**.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: "**Nano Banana 2**: загрузить фото + Промпт №1 → тот же кадр без дома (бассейн, сад, небо, ракурс на месте). Это **начальный кадр**.\n   Проверка: на пустом кадре нет частей дома; ракурс и бассейн\
+    \ совпадают на обоих фото."
+  tool:
+  - Nano Banana
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: '**Higgsfield → Seedance 2.5**: пустая сцена = First Frame / image reference; исходное фото = Last Frame / end image. 15 с, 9:16, 1080p. Промпт №2 целиком.'
+  tool:
+  - Seedance
+  - Higgsfield
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: last_frame
+  duration: 15 с
+  aspect: '9:16'
+- n: 4
+  action: 'Результат: один непрерывный FPV-план, детали взлетают вверх и собирают ровно этот дом, финал совпадает с реальным фото.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: previous_step_output
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  Edit this image to create the same property before the house was built. Remove only the entire modern house structure, including its white walls, roof forms, windows, balconies and attached architectural elements. Keep the swimming pool, pool water, tiled edge, paving, garden, trees, sky, lighting, colors, camera position, framing and perspective unchanged. Naturally reconstruct the background in the area previously occupied by the house, continuing the existing sky, distant trees and garden. The result should look like the same photograph taken from the same camera position before construction, with the pool and surroundings intact. Photorealistic. Do not add another building, construction machinery, people, text, logos or watermark.
+- |-
+  Create a 15-second photorealistic architectural construction sequence in one continuous FPV shot.
+
+  IMAGE ROLES:
+  Image 1 is the empty property with the swimming pool. Use it as the starting scene reference.
+  Image 2 is the finished house. Use it as the exact final building reference and end image.
+
+  BUILDING:
+  Recreate the exact modern house shown in Image 2: a sculptural multi-storey luxury home with bold white curved concrete forms, projecting upper volumes, large dark-framed floor-to-ceiling windows, open balconies, dark horizontal slatted details, and warm interior lighting. Preserve its recognizable silhouette, proportions, placement, materials and architectural details. Do not invent a different house.
+
+  ENVIRONMENT:
+  Keep the swimming pool, pool edge, water, paving, garden, trees, sky, lighting and composition consistent with Image 1. The house assembles on the land behind the pool. The pool and garden are fixed background elements and must remain unchanged. Do not make construction materials rise from the water or damage the pool.
+
+  00:00–00:03 — The camera glides low above the pool edge toward the empty building site. Dust and small fragments begin to lift from the ground behind the pool. The pool and garden remain still.
+
+  00:03–00:06 — Gravity reverses. Structural columns, concrete slabs and large white architectural sections shoot upward from the site. They rotate into position and lock together, forming the distinctive frame and curved volumes of the house.
+
+  00:06–00:10 — The camera makes a fast, controlled orbit around the rising structure. White facade sections, balconies, dark window frames and slatted details fly upward and attach to the building in clearly visible stages. Keep the pool in the foreground as a stable visual anchor.
+
+  00:10–00:13 — Large glass panels and remaining facade pieces rise into place. Warm interior lights switch on as the house nears completion. Preserve the exact architecture shown in Image 2.
+
+  00:13–00:15 — The final roof and facade elements snap into place with one strong impact. The camera pulls back slightly into a dramatic low-angle hero view that matches the finished-house reference.
+
+  One continuous shot, no cuts. Make the upward direction of gravity clearly visible. Use realistic material weight, strong but readable motion, cinematic dust, motion blur, wind and structural impacts. Keep the house consistent throughout the sequence.
+
+  No morphing, no duplicated floors, no changing architecture, no extra buildings, no floating pool, no materials emerging from the water, no text, captions, logos or watermark.
+
+  Audio: no music and no voiceover; only cinematic construction sounds, rising debris, rushing wind, concrete impacts, glass and facade elements locking into place, and a final low impact.
+output:
+  format: mp4
+  resolution: 1080p
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего; видео-результат (hf_20261019_…mp4) не просматривал
+source_url: https://t.me/poleznoe_ai/785
+duplicates_of: []

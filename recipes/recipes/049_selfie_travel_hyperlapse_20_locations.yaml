@@ -1,0 +1,65 @@
+id: 049_selfie_travel_hyperlapse_20_locations
+source_file: 49_selfie_travel_hyperlapse_20_locations.md
+title: '# 49 — Одно селфи → 10-секундный гиперлапс-влог по 20 странам (жёсткая склейка на каждый бит)'
+intent_tags:
+- client_in_clip
+- seamless_series
+use_when: Одна фотография человека → один ролик, где он «снимает себя на селфи-палку» у 20 достопримечательностей; у каждой локации своя одежда и поза. Локации и наряды задаются таблицей «Город | одежда
+  | поза».
+inputs:
+- фото лица/портрет человека
+steps:
+- n: 1
+  action: Gemini Omni (режим видео), 10 с, 9:16, 1080p.
+  tool:
+  - Gemini
+  mode: Omni
+  prompt: unknown
+  input_source: user_input
+  duration: 10 с
+  aspect: '9:16'
+- n: 2
+  action: Загрузить своё селфи, вставить промпт ниже (таблицу локаций можно заменить своей).
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: Длительность не меньше 10 с (так пишет автор).
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: 10 с
+  aspect: unknown
+prompts_verbatim:
+- "\U0001F9D8‍♂️Как создать трендовое видео с путешествием?\n\nПереходим в БОТ PromptX\n\nШаг 1: Работа с видео - Gemini Omni,\n\U0001F535Длительность: 10 секунд \n\U0001F535Соотношение: 9:16\n\U0001F535\
+  Качество: 1080p\n\nЗагружаем свое фото селфи и этот промпт:\n\nПромпт:\nUse the uploaded photo as the primary identity reference. Preserve the person's face, facial features, skin tone, hairstyle, body\
+  \ proportions, age, and overall appearance with strict identity consistency throughout the entire video. The same recognizable person must appear in every scene.\nCreate a 10-second hyper-lapse selfie\
+  \ travel video featuring the person from the uploaded image visiting 20 famous destinations around the world. Ultra-realistic travel influencer vlog style. Handheld selfie-stick camera, wide-angle lens,\
+  \ natural camera movement, cinematic lighting, vibrant color grading, realistic facial expressions, smooth motion, social-media-quality footage. Hard-cut transition on every beat.\nLOCATIONS, OUTFITS\
+  \ & POSES:\nParis, Eiffel Tower | chic red beret, beige trench coat | smiling, classic hand wave\nTokyo, Shibuya Crossing | modern neon cyberpunk streetwear jacket | peace sign, playful wink\nNew York,\
+  \ Times Square | bright yellow oversized puffer jacket | wide-eyed excited grin\nRome, Colosseum | elegant white linen summer outfit | thoughtful look, looking back at camera\nCairo, Pyramids | beige\
+  \ safari utility shirt, wide-brimmed sun hat | amazed expression, blocking the sun\nRio de Janeiro, Christ the Redeemer | vibrant tropical patterned Hawaiian shirt | joyful laugh, head tilted back\nLondon,\
+  \ Big Ben | classic plaid wool blazer, emerald green scarf | subtle smirk, checking wristwatch\nSydney, Opera House | casual summer tank top, stylish sunglasses | sunny smile, looking at camera\nAgra,\
+  \ Taj Mahal | elegant embroidered pastel tunic shawl | serene positive expression, hands in namaste\nBeijing, Great Wall of China | traditional red hanfu-inspired modern jacket | triumphant fist-pump,\
+  \ determined look\nMoscow, Red Square | heavy fur-trimmed winter coat, matching ushanka hat | cozy smile, visible breath in cold air\nIstanbul, Hagia Sophia | elegant silk scarf draped over shoulders,\
+  \ modest blouse | warm welcoming smile\nVenice, Grand Canal | classic blue-and-white striped sailor top | charming smile, slight head tilt\nDubai, Burj Khalifa | luxurious metallic gold evening blazer\
+  \ | impressed grin, looking upward in awe\nPeru, Machu Picchu | colorful traditional Andean wool poncho | happy amazed smile\nAthens, Acropolis | white draped Greek-style outfit | proud confident expression,\
+  \ wind-blown hair\nBerlin, Brandenburg Gate | edgy black leather motorcycle jacket | friendly nod, direct eye contact\nAmsterdam, Windmills | casual denim jacket with floral accents | relaxed smile, gentle\
+  \ breeze\nBarcelona, Sagrada Familia | artistic colorful patterned outfit | open-mouthed amazed expression\nSeoul, Gyeongbokgung Palace | elegant pastel pink-and-white hanbok | finger heart gesture, final\
+  \ cute smile\nAdditional instructions: maintain perfect facial identity consistency across all 20 locations, realistic skin texture, natural eye movement, authentic landmark scale and perspective, cinematic\
+  \ travel-vlog aesthetic, dynamic motion, highly detailed backgrounds, smooth stabilization, ultra-realistic rendering, vertical 9:16 format, viral social media quality, professional travel influencer\
+  \ content.\n*Обязательно выбираем длительность видео не менее 10секунд.\n\U0001F449СОЗДАТЬ ФОТО\n\n\U0001F7E2VPN в обход белых списков\n\n\U0001F916 Генерировать такой контент можно здесь:➡️ PromptX"
+output:
+  format: mp4
+  resolution: 1080p
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего; генерация в стороннем боте (в нём «Gemini Omni»), можно повторить в любом сервисе с этой моделью
+source_url: https://t.me/AlisPromptX/386
+duplicates_of: []

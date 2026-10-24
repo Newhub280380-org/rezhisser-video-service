@@ -1,0 +1,52 @@
+id: 164_boutique_window_display_to_runway_outfit_change_wan3
+source_file: 164_boutique_window_display_to_runway_outfit_change_wan3.md
+title: 'Витрина бутика: девушка снимает комплект с витрины, исчезает за подиумом и выходит уже в нём — реклама одежды, Wan 3.0 (Picsart)'
+intent_tags:
+- product_ad
+- client_in_clip
+use_when: 'Статичная камера с тротуара смотрит в стеклянную витрину; комплект висит на витрине; модель входит, «разбирает» витрину почти тайм-лапсом, уходит за пьедестал и возвращается одетой в этот комплект,
+  финальная поза. Под замену: свой бренд, вещи, модель.'
+inputs:
+- стартовый кадр
+- логотип
+steps:
+- n: 1
+  action: Wan 3.0 (у автора — в Picsart), 9:16, 12 с, промпт ниже.
+  tool:
+  - Wan
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: 12 с
+  aspect: '9:16'
+- n: 2
+  action: 'Советы автора: камера неподвижна (смена образа лучше удаётся моделям на статичном кадре); если надписи «плывут» — добавить «no text other than the LIRESSE logo»; для image-to-video дать первый
+    кадр как референс-картинку, а смену образа описать в промпте (конец фразы обрезан).'
+  tool: unknown
+  mode: image-to-video
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "From display to runway in one step. The new chocolate-brown tailoring is at LIRESSE. \n\nMade with Wan 3.0 on @picsartai \n\n#picsartpartner @Picsart \n\nPrompt:\n\nVertical 9:16, 12 seconds, photorealistic\
+  \ luxury fashion boutique ad. Static, locked-off camera shot from the sidewalk at night, looking straight through a floor-to-ceiling black-framed glass storefront. Inside is a warm, cream-and-gold boutique\
+  \ with travertine pedestals, brass fixtures, recessed track lighting, vertical wood-panel accents and a round black sign reading \"LS LIRESSE\". The window display shows a dark chocolate-brown military-style\
+  \ jacket with gold buttons on a hanger, matching tailored shorts, a black bandeau top, tall black leather knee-high boots, and a burgundy structured handbag. A circular stone platform sits at center.\n\
+  Action: a brunette woman with long wavy hair, wearing a grey tank top and light-wash jeans, walks into the display from the left. She takes the jacket, shorts and top off the rack and starts \"dressing\
+  \ the window\" in a smooth, almost time-lapse style. The display empties, and she steps behind a pedestal and disappears from view.\nShe then reappears wearing the full outfit: the brown jacket over the\
+  \ black bandeau, the shorts, sheer black tights and the knee-high boots. She carries the burgundy bag and walks confidently onto the circular platform. She ends in a fashion-model pose, one hand in her\
+  \ pocket and the bag in the other, looking straight at the camera.\nStyle: warm golden interior lighting against cool blue-grey pavement, soft reflections on the glass, shallow cinematic depth, smooth\
+  \ natural motion, high-end editorial look. A small stylized \"NM\" watermark sits at bottom center on the pavement. Ambient city sound and soft music, no dialogue.\nTips:\nKeep the camera locked off.\
+  \ Most AI video models handle the transformation better with a static shot.\nAdd \"no text other than the LIRESSE logo\" if the model scrambles lettering.\nFor image-to-video models, use the first frame\
+  \ as the reference image and put the outfit change in the"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: Конец последнего совета (обрезан). Видео не смотрел. Picsart — партнёрский пост.
+source_url: https://x.com/TaliaAariz/status/2113627042566553717
+duplicates_of: []

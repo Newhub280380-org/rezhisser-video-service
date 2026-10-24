@@ -1,0 +1,52 @@
+id: 013_replace_guy_in_car_two_step
+source_file: 13_replace_guy_in_car_two_step.md
+title: 'Двухшаговая замена: кадр-картинка через GPT-Image 2.5, видео через Seedance 2.5 с видео-референсом'
+intent_tags:
+- client_in_clip
+- motion_transfer
+use_when: 'Двухшаговая замена: кадр-картинка через GPT-Image 2.5, видео через Seedance 2.5 с видео-референсом'
+inputs:
+- видео-референс (движение/клип)
+steps:
+- n: 1
+  action: unknown (в источнике нет нумерованных шагов; см. prompts_verbatim)
+  tool:
+  - Seedance
+  - GPT Image
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  don’t believe what you see on the internet.
+
+  today i’m showing you how easy it is to larp with AI videos and pics.
+
+  > i took a video from TJR
+  > replaced him with jean phil
+  > did the same with the money pic
+
+  now imagine if i sold a course using a realistic AI character…
+
+  i literally just used:
+
+  > GPT-Image 2.5 with a pic reference
+  > Seedance 2.5 with a video reference
+
+  this is the prompt:
+
+  “replace the guy in the car in {video} with the person in {image}.”
+
+  don’t trust anyone.
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: 'Минимальный промпт: источник движения/сцены — видео, личность — картинка. Автор явно называет это методом «ларпа».'
+confidence: B
+prompt_completeness: partial
+notes: Видео-результат.
+source_url: https://x.com/simonecanciello/status/2108579887883727211
+duplicates_of: []

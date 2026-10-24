@@ -1,0 +1,3411 @@
+[
+ {
+  "id": "001_two_performers_swap_seedance_kling",
+  "title": "Подмена двух исполнителей в вирусном клипе (Hotel Lobby): 2 фото + видео-референс",
+  "intent_tags": [
+   "client_in_clip",
+   "meme",
+   "motion_transfer"
+  ],
+  "use_when": "Подмена двух исполнителей в вирусном клипе (Hotel Lobby): 2 фото + видео-референс",
+  "inputs": [
+   "фото лица/портрет человека",
+   "видео-референс (движение/клип)",
+   "стартовый кадр",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "002_minimax_h3_silhouette_mask_swap",
+  "title": "Замена человека в видео: SAM3 заливает его чёрным силуэтом, MiniMax H3 вписывает нового персонажа в силуэт",
+  "intent_tags": [
+   "client_in_clip",
+   "seamless_series"
+  ],
+  "use_when": "Замена человека в видео: SAM3 заливает его чёрным силуэтом, MiniMax H3 вписывает нового персонажа в силуэт",
+  "inputs": [
+   "видео-референс (движение/клип)",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "003_minimax_h3_dummy_strategy_swap",
+  "title": "«Стратегия манекена»: сначала заменить оригинального актёра зелёным манекеном, потом манекен на нужного персонажа",
+  "intent_tags": [
+   "client_in_clip"
+  ],
+  "use_when": "«Стратегия манекена»: сначала заменить оригинального актёра зелёным манекеном, потом манекен на нужного персонажа",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "gaps",
+  "duplicates_of": []
+ },
+ {
+  "id": "004_minimax_h3_inverted_color_mask_swap_pet",
+  "title": "Подмена на питомца/персонажа: SAM3-маска с инвертированными цветами (негатив) вместо чёрной",
+  "intent_tags": [
+   "client_in_clip",
+   "animal"
+  ],
+  "use_when": "Подмена на питомца/персонажа: SAM3-маска с инвертированными цветами (негатив) вместо чёрной",
+  "inputs": [
+   "видео-референс (движение/клип)"
+  ],
+  "confidence": "C",
+  "prompt_completeness": "gaps",
+  "duplicates_of": []
+ },
+ {
+  "id": "005_minimax_h3_v2v_swap_template_object_car",
+  "title": "Шаблон V2V-подмены персонажа ИЛИ предмета (например, красной машины) в чужом видео",
+  "intent_tags": [
+   "client_in_clip",
+   "motion_transfer"
+  ],
+  "use_when": "Шаблон V2V-подмены персонажа ИЛИ предмета (например, красной машины) в чужом видео",
+  "inputs": [
+   "видео-референс (движение/клип)",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "006_minimax_h3_six_block_swap_3img_1vid",
+  "title": "Шаблон 6 блоков для замены актёра: 3 картинки героя (лицо / в рост / профиль) + видео + аудио",
+  "intent_tags": [
+   "client_in_clip"
+  ],
+  "use_when": "Шаблон 6 блоков для замены актёра: 3 картинки героя (лицо / в рост / профиль) + видео + аудио",
+  "inputs": [
+   "фото лица/портрет человека",
+   "фото в полный рост",
+   "видео-референс (движение/клип)",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "007_minimax_h3_fl2va_sam3_silhouette_dialogue",
+  "title": "Замена «силуэта» FL2VA-моделью MiniMax H3: персонаж по 2 картинкам, диалог из референс-аудио",
+  "intent_tags": [
+   "talking_head",
+   "client_in_clip",
+   "seamless_series",
+   "motion_transfer"
+  ],
+  "use_when": "Замена «силуэта» FL2VA-моделью MiniMax H3: персонаж по 2 картинкам, диалог из референс-аудио",
+  "inputs": [
+   "фото лица/портрет человека",
+   "фото в полный рост",
+   "видео-референс (движение/клип)",
+   "стартовый кадр",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "008_minimax_h3_character_swap_lora",
+  "title": "LoRA «Character Swap» для MiniMax H3: усиление «следуй за референс-видео» на быстрых движениях; три источника практики",
+  "intent_tags": [
+   "client_in_clip",
+   "motion_transfer"
+  ],
+  "use_when": "LoRA «Character Swap» для MiniMax H3: усиление «следуй за референс-видео» на быстрых движениях; три источника практики",
+  "inputs": [
+   "видео-референс (движение/клип)"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "gaps",
+  "duplicates_of": []
+ },
+ {
+  "id": "009_cat_fiction_genjutsu_clone_h3",
+  "title": "Клон «Genjutsu»-спама из TikTok локально: вирусный танец → персонаж/животное, покадрово через H3 + Qwen 2.1",
+  "intent_tags": [
+   "client_in_clip",
+   "seamless_series",
+   "meme",
+   "animal"
+  ],
+  "use_when": "Клон «Genjutsu»-спама из TikTok локально: вирусный танец → персонаж/животное, покадрово через H3 + Qwen 2.1",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "gaps",
+  "duplicates_of": []
+ },
+ {
+  "id": "010_wan_animate_comfy_replace_move",
+  "title": "Wan 2.2 Animate в ComfyUI: замена персонажа в видео, перенос движения в новую сцену, рестайл",
+  "intent_tags": [
+   "client_in_clip",
+   "object_alive",
+   "motion_transfer"
+  ],
+  "use_when": "Wan 2.2 Animate в ComfyUI: замена персонажа в видео, перенос движения в новую сцену, рестайл",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "gaps",
+  "duplicates_of": []
+ },
+ {
+  "id": "011_higgsfield_recast_swap_dub",
+  "title": "Higgsfield Recast: заменить героя в готовом видео и одновременно дублировать голос на другой язык",
+  "intent_tags": [
+   "product_ad",
+   "talking_head",
+   "client_in_clip"
+  ],
+  "use_when": "Higgsfield Recast: заменить героя в готовом видео и одновременно дублировать голос на другой язык",
+  "inputs": [
+   "видео-референс (движение/клип)",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "gaps",
+  "duplicates_of": []
+ },
+ {
+  "id": "012_character_sheet_wan3_swap_visuracode",
+  "title": "Character swap по лист-референсу и видео-референсу в Wan 3.0 (разбор против маркетинга Higgsfield)",
+  "intent_tags": [
+   "beauty_ad",
+   "client_in_clip",
+   "meme",
+   "motion_transfer"
+  ],
+  "use_when": "Character swap по лист-референсу и видео-референсу в Wan 3.0 (разбор против маркетинга Higgsfield)",
+  "inputs": [
+   "фото в полный рост",
+   "видео-референс (движение/клип)",
+   "стартовый кадр",
+   "аудио/голос",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "013_replace_guy_in_car_two_step",
+  "title": "Двухшаговая замена: кадр-картинка через GPT-Image 2.5, видео через Seedance 2.5 с видео-референсом",
+  "intent_tags": [
+   "client_in_clip",
+   "motion_transfer"
+  ],
+  "use_when": "Двухшаговая замена: кадр-картинка через GPT-Image 2.5, видео через Seedance 2.5 с видео-референсом",
+  "inputs": [
+   "видео-референс (движение/клип)"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "014_dog_to_person_master_template_h3",
+  "title": "Мастер-шаблон «переснять видео 1:1, заменив собаку/животное на человека с фото» (MiniMax H3)",
+  "intent_tags": [
+   "talking_head",
+   "client_in_clip",
+   "seamless_series",
+   "animal",
+   "motion_transfer"
+  ],
+  "use_when": "Мастер-шаблон «переснять видео 1:1, заменив собаку/животное на человека с фото» (MiniMax H3)",
+  "inputs": [
+   "фото в полный рост",
+   "видео-референс (движение/клип)",
+   "стартовый кадр",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "015_kling_motion_control_first_frame_swap",
+  "title": "Kling Motion Control: swap = правка первого кадра + видео-референс; голос через ElevenLabs",
+  "intent_tags": [
+   "talking_head",
+   "client_in_clip",
+   "object_alive",
+   "motion_transfer"
+  ],
+  "use_when": "Kling Motion Control: swap = правка первого кадра + видео-референс; голос через ElevenLabs",
+  "inputs": [
+   "видео-референс (движение/клип)",
+   "стартовый кадр",
+   "аудио/голос"
+  ],
+  "confidence": "C",
+  "prompt_completeness": "gaps",
+  "duplicates_of": []
+ },
+ {
+  "id": "016_h3_video_reference_location_house",
+  "title": "Видео-референс ДОМА: прокатываешь камеру по реальным комнатам, H3 переносит локацию в сцену",
+  "intent_tags": [
+   "animal",
+   "motion_transfer"
+  ],
+  "use_when": "Видео-референс ДОМА: прокатываешь камеру по реальным комнатам, H3 переносит локацию в сцену",
+  "inputs": [
+   "видео-референс (движение/клип)"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "017_kling3_real_estate_photo_pairs_walkthrough",
+  "title": "Фото недвижимости → кинематографичный «обход» дома: перекрывающиеся пары фото в Kling 3.0",
+  "intent_tags": [
+   "seamless_series"
+  ],
+  "use_when": "Фото недвижимости → кинематографичный «обход» дома: перекрывающиеся пары фото в Kling 3.0",
+  "inputs": [
+   "финальный кадр"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "gaps",
+  "duplicates_of": []
+ },
+ {
+  "id": "018_h3_last_2s_continuation_chain",
+  "title": "Бесшовные длинные видео в MiniMax H3: последние 2 секунды предыдущего клипа как <Video 1> + Motion-Context ноды",
+  "intent_tags": [
+   "seamless_series"
+  ],
+  "use_when": "Бесшовные длинные видео в MiniMax H3: последние 2 секунды предыдущего клипа как <Video 1> + Motion-Context ноды",
+  "inputs": [
+   "видео-референс (движение/клип)",
+   "стартовый кадр",
+   "финальный кадр",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "019_h3_keyframe_anchor_chain_3d_character",
+  "title": "Цепочка клипов без дрейфа: последний кадр предыдущего клипа (ffmpeg) как <Picture>-якорь, префикс «keyframe completion + reference generation»",
+  "intent_tags": [
+   "seamless_series"
+  ],
+  "use_when": "Цепочка клипов без дрейфа: последний кадр предыдущего клипа (ffmpeg) как <Picture>-якорь, префикс «keyframe completion + reference generation»",
+  "inputs": [
+   "фото в полный рост",
+   "финальный кадр",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "020_h3_30s_seamless_12gb",
+  "title": "30 секунд бесшовного image-to-video в H3 на 12 ГБ: три шота подряд в одном проходе",
+  "intent_tags": [
+   "product_ad",
+   "seamless_series"
+  ],
+  "use_when": "30 секунд бесшовного image-to-video в H3 на 12 ГБ: три шота подряд в одном проходе",
+  "inputs": [
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "021_startend_frames_8stage_timelapse",
+  "title": "8 картинок-стадий → 8 клипов Start/End Frame → один бесшовный таймлапс (проект «ферма»)",
+  "intent_tags": [
+   "seamless_series"
+  ],
+  "use_when": "8 картинок-стадий → 8 клипов Start/End Frame → один бесшовный таймлапс (проект «ферма»)",
+  "inputs": [
+   "стартовый кадр",
+   "финальный кадр"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "022_kling3_long_animation_storyboard_pipeline",
+  "title": "Длинная анимация с постоянными героями: Nano Banana → character sheet → сторибоард → Kling 3.0 start/end → sync аудио",
+  "intent_tags": [
+   "talking_head",
+   "seamless_series"
+  ],
+  "use_when": "Длинная анимация с постоянными героями: Nano Banana → character sheet → сторибоард → Kling 3.0 start/end → sync аудио",
+  "inputs": [
+   "аудио/голос"
+  ],
+  "confidence": "C",
+  "prompt_completeness": "gaps",
+  "duplicates_of": []
+ },
+ {
+  "id": "023_h3_four_ref_anime_multishot_prompt",
+  "title": "Мультишот-аниме на 4 референсах (Skater Girl 90s) и 4-шотовая последовательность по 3 с с жёсткими склейками",
+  "intent_tags": [
+   "seamless_series"
+  ],
+  "use_when": "Мультишот-аниме на 4 референсах (Skater Girl 90s) и 4-шотовая последовательность по 3 с с жёсткими склейками",
+  "inputs": [
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "024_h3_multi_character_portal_multiverse",
+  "title": "Несколько персонажей из разных вселенных в одной сцене (R2V с subject_definitions/retention_analysis)",
+  "intent_tags": [
+   "other"
+  ],
+  "use_when": "Несколько персонажей из разных вселенных в одной сцене (R2V с subject_definitions/retention_analysis)",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "025_h3_char_portable_identity",
+  "title": "Портативный «.char»: упаковать 2–9 референсов героя в файл и вызывать по имени",
+  "intent_tags": [
+   "other"
+  ],
+  "use_when": "Портативный «.char»: упаковать 2–9 референсов героя в файл и вызывать по имени",
+  "inputs": [
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "026_h3_refmods_and_cropped_continuity",
+  "title": "RefMods (латенты референсов), Prompt-Builder и кроп разрушенной стены как референс непрерывности",
+  "intent_tags": [
+   "other"
+  ],
+  "use_when": "RefMods (латенты референсов), Prompt-Builder и кроп разрушенной стены как референс непрерывности",
+  "inputs": [
+   "видео-референс (движение/клип)"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "027_h3_all_in_one_360_environment_minidrama",
+  "title": "Конвейер мини-драмы: character sheets (Krea-2 Turbo) → 360° панорамы (Qwen-Image 2512 + LoRA) → композиция → H3 → апскейл",
+  "intent_tags": [
+   "vfx_effect"
+  ],
+  "use_when": "Конвейер мини-драмы: character sheets (Krea-2 Turbo) → 360° панорамы (Qwen-Image 2512 + LoRA) → композиция → H3 → апскейл",
+  "inputs": [
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "028_nano_banana_3x3_grid_sequence",
+  "title": "Одна картинка 3×3 = 9 кадров одной сцены с одним героем; затем каждый кадр анимируется",
+  "intent_tags": [
+   "seamless_series"
+  ],
+  "use_when": "Одна картинка 3×3 = 9 кадров одной сцены с одним героем; затем каждый кадр анимируется",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "gaps",
+  "duplicates_of": []
+ },
+ {
+  "id": "029_kling3_elements_orbit_soul",
+  "title": "Постоянное лицо «себя»: Soul ID/Soul 2.0 → Kling 3 Elements для орбит и смены ракурсов",
+  "intent_tags": [
+   "client_in_clip"
+  ],
+  "use_when": "Постоянное лицо «себя»: Soul ID/Soul 2.0 → Kling 3 Elements для орбит и смены ракурсов",
+  "inputs": [
+   "стартовый кадр"
+  ],
+  "confidence": "C",
+  "prompt_completeness": "gaps",
+  "duplicates_of": []
+ },
+ {
+  "id": "030_animal_color_leg_proxy_blender_seedance",
+  "title": "Оживить животное с правильной походкой: 3D-модель → «манекен» с цветными лапами в Blender → Seedance по стартовому кадру",
+  "intent_tags": [
+   "animal",
+   "object_alive",
+   "motion_transfer"
+  ],
+  "use_when": "Оживить животное с правильной походкой: 3D-модель → «манекен» с цветными лапами в Blender → Seedance по стартовому кадру",
+  "inputs": [
+   "видео-референс (движение/клип)",
+   "стартовый кадр"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "031_talking_animals_lipsync_tutorial",
+  "title": "Говорящие животные и маскоты: сценарий → картинки персонажей → lip-sync неживых персонажей → монтаж",
+  "intent_tags": [
+   "talking_head",
+   "client_in_clip",
+   "seamless_series",
+   "animal"
+  ],
+  "use_when": "Говорящие животные и маскоты: сценарий → картинки персонажей → lip-sync неживых персонажей → монтаж",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "C",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "032_seedance_20s_continuous_mapped_refs",
+  "title": "20 секунд одним непрерывным планом: сюжет/действия поминутно + строгий список референсов",
+  "intent_tags": [
+   "beauty_ad",
+   "client_in_clip",
+   "seamless_series"
+  ],
+  "use_when": "20 секунд одним непрерывным планом: сюжет/действия поминутно + строгий список референсов",
+  "inputs": [
+   "фото в полный рост",
+   "стартовый кадр"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "033_fan_blade_outfit_transition_seedance",
+  "title": "Смена нарядов эффектом «лопасть вентилятора» (фиксированная камера сверху, 20 секунд)",
+  "intent_tags": [
+   "beauty_ad",
+   "seamless_series",
+   "vfx_effect"
+  ],
+  "use_when": "Смена нарядов эффектом «лопасть вентилятора» (фиксированная камера сверху, 20 секунд)",
+  "inputs": [
+   "стартовый кадр",
+   "аудио/голос",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "034_uno_card_swipe_transition_template",
+  "title": "Шаблон «карточка UNO закрывает объектив»: 1 видео-референс + 3 заменяемых переменных (персонаж/машина/локация)",
+  "intent_tags": [
+   "product_ad",
+   "client_in_clip",
+   "seamless_series",
+   "motion_transfer"
+  ],
+  "use_when": "Шаблон «карточка UNO закрывает объектив»: 1 видео-референс + 3 заменяемых переменных (персонаж/машина/локация)",
+  "inputs": [
+   "фото товара/продукта",
+   "фото в полный рост",
+   "видео-референс (движение/клип)",
+   "стартовый кадр",
+   "аудио/голос",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "035_split_screen_vfx_breakdown_prompt",
+  "title": "Сплит-скрин «VFX-разбор»: сверху готовый кадр, снизу съёмочная площадка/мокап",
+  "intent_tags": [
+   "product_ad",
+   "talking_head",
+   "vfx_effect",
+   "motion_transfer"
+  ],
+  "use_when": "Сплит-скрин «VFX-разбор»: сверху готовый кадр, снизу съёмочная площадка/мокап",
+  "inputs": [
+   "видео-референс (движение/клип)"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "036_tv_screen_composite_h3",
+  "title": "Герой смотрит ТВ, на экране — ваш готовый клип (композитинг промптом, H3)",
+  "intent_tags": [
+   "client_in_clip",
+   "animal",
+   "object_alive",
+   "motion_transfer"
+  ],
+  "use_when": "Герой смотрит ТВ, на экране — ваш готовый клип (композитинг промптом, H3)",
+  "inputs": [
+   "видео-референс (движение/клип)",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "037_h3_transformation_timeline_structure",
+  "title": "Превращение одним планом по таймкодам (одежда/образ меняются, камера неподвижна) — структура промпта",
+  "intent_tags": [
+   "other"
+  ],
+  "use_when": "Превращение одним планом по таймкодам (одежда/образ меняются, камера неподвижна) — структура промпта",
+  "inputs": [
+   "фото в полный рост",
+   "стартовый кадр"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "038_anime_to_live_action_lora",
+  "title": "Аниме → живое видео: исходное видео как референс + LoRA Anime_2_Realism",
+  "intent_tags": [
+   "motion_transfer"
+  ],
+  "use_when": "Аниме → живое видео: исходное видео как референс + LoRA Anime_2_Realism",
+  "inputs": [
+   "видео-референс (движение/клип)"
+  ],
+  "confidence": "C",
+  "prompt_completeness": "gaps",
+  "duplicates_of": []
+ },
+ {
+  "id": "039_ugc_ads_factory_7steps",
+  "title": "UGC-фабрика: один актёр (Soul ID) + стиль + скрипты из CSV + Seedance + субтитры + трекинг",
+  "intent_tags": [
+   "product_ad",
+   "talking_head"
+  ],
+  "use_when": "UGC-фабрика: один актёр (Soul ID) + стиль + скрипты из CSV + Seedance + субтитры + трекинг",
+  "inputs": [
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "040_reference_photo_lock_dentist_ugc",
+  "title": "Блокировка лица по референс-фото в 8-секундном UGC (ЗУБНОЙ ВРАЧ) — шаблон фразы",
+  "intent_tags": [
+   "product_ad",
+   "talking_head",
+   "client_in_clip"
+  ],
+  "use_when": "Блокировка лица по референс-фото в 8-секундном UGC (ЗУБНОЙ ВРАЧ) — шаблон фразы",
+  "inputs": [
+   "стартовый кадр"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "041_h3_syncTile_background_replace",
+  "title": "Замена фона в длинном 4K-видео (600+ кадров): SyncTile — одна траектория шумоподавления без швов",
+  "intent_tags": [
+   "client_in_clip",
+   "seamless_series",
+   "vfx_effect"
+  ],
+  "use_when": "Замена фона в длинном 4K-видео (600+ кадров): SyncTile — одна траектория шумоподавления без швов",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "042_film_once_new_world_background_prompts",
+  "title": "Снял себя на пустыре → тот же исполнитель в другом мире: промпты «keep motion, replace environment»",
+  "intent_tags": [
+   "talking_head",
+   "client_in_clip",
+   "seamless_series",
+   "pov_one_take",
+   "motion_transfer"
+  ],
+  "use_when": "Снял себя на пустыре → тот же исполнитель в другом мире: промпты «keep motion, replace environment»",
+  "inputs": [
+   "фото в полный рост",
+   "видео-референс (движение/клип)"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "043_blender_previs_3d_blueprint_remake",
+  "title": "Ремейк вирусного видео через 3D-предвизуализацию: покадровая разборка → Blender-манекены → Seedance заменяет манекенов на вашего героя",
+  "intent_tags": [
+   "product_ad",
+   "talking_head",
+   "client_in_clip",
+   "meme",
+   "motion_transfer"
+  ],
+  "use_when": "Ремейк вирусного видео через 3D-предвизуализацию: покадровая разборка → Blender-манекены → Seedance заменяет манекенов на вашего героя",
+  "inputs": [
+   "видео-референс (движение/клип)"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "044_viral_clip_swap_character_ip",
+  "title": "Свой персонаж в чужих вирусных клипах (метод Casper): motion transfer каждый день",
+  "intent_tags": [
+   "client_in_clip",
+   "meme",
+   "animal"
+  ],
+  "use_when": "Свой персонаж в чужих вирусных клипах (метод Casper): motion transfer каждый день",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "C",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "045_face_region_fix_character_sheet_seedance",
+  "title": "Починить лицо внутри уже готового клипа: региональное редактирование в Seedance 2.5 + заранее сделанный лист персонажа",
+  "intent_tags": [
+   "object_alive"
+  ],
+  "use_when": "Починить лицо внутри уже готового клипа: региональное редактирование в Seedance 2.5 + заранее сделанный лист персонажа",
+  "inputs": [
+   "фото в полный рост"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "046_split_screen_mirror_love_story_series",
+  "title": "Двойной экран с золотой линией: пары сцен «лево/право» в Seedance 2.5, героев фиксируют в Elements",
+  "intent_tags": [
+   "object_alive"
+  ],
+  "use_when": "Двойной экран с золотой линией: пары сцен «лево/право» в Seedance 2.5, героев фиксируют в Elements",
+  "inputs": [
+   "стартовый кадр"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "047_qwen21_face_head_swap_images",
+  "title": "Подмена лица/головы на фото в Qwen Image 2.1 Edit (+ BFS-LoRA)",
+  "intent_tags": [
+   "beauty_ad",
+   "client_in_clip"
+  ],
+  "use_when": "Подмена лица/головы на фото в Qwen Image 2.1 Edit (+ BFS-LoRA)",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "048_seedance_reference_contract_one_clip_per_scene",
+  "title": "Seedance: «контракт референсов» и «один клип = одна сцена»",
+  "intent_tags": [
+   "other"
+  ],
+  "use_when": "Seedance: «контракт референсов» и «один клип = одна сцена»",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "C",
+  "prompt_completeness": "gaps",
+  "duplicates_of": []
+ },
+ {
+  "id": "049_selfie_travel_hyperlapse_20_locations",
+  "title": "# 49 — Одно селфи → 10-секундный гиперлапс-влог по 20 странам (жёсткая склейка на каждый бит)",
+  "intent_tags": [
+   "client_in_clip",
+   "seamless_series"
+  ],
+  "use_when": "Одна фотография человека → один ролик, где он «снимает себя на селфи-палку» у 20 достопримечательностей; у каждой локации своя одежда и поза. Локации и наряды задаются таблицей «Город | одежда | поза».",
+  "inputs": [
+   "фото лица/портрет человека"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "050_ufc_fight_two_refs_any_subject_seedance",
+  "title": "# 50 — Бой UFC двух любых героев (люди, животные, маскоты): 2 листа персонажей → Seedance 2.0 15 с с нокаутом в конце",
+  "intent_tags": [
+   "animal"
+  ],
+  "use_when": "Два фото → два «листа бойца» (разные ракурсы на белом) в Nano Banana Pro → Seedance 2.0 Fast с двумя картинками-референсами и таймкод-промптом: 15 секунд боя, на 14-й секунде нокаут. Автор прямо пишет, что промпт рассчитан на людей, животных, маскотов и мультяшек.",
+  "inputs": [
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "051_giant_animal_at_home_nb2_kling3",
+  "title": "# 51 — Огромное животное у вас дома «как живое»: селфи → Nano Banana 2 (сцена с жирафом/лошадью) → Kling 3.0 медитативное оживление",
+  "intent_tags": [
+   "client_in_clip",
+   "animal",
+   "object_alive"
+  ],
+  "use_when": "Вставка реалистичного большого животного в домашнюю сцену с вашим лицом, стиль «случайное фото на iPhone», затем мягкая анимация (дыхание, поворот головы, ухо).",
+  "inputs": [
+   "фото лица/портрет человека"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "052_charsheet_then_outfit_poses_seedance",
+  "title": "# 52 — Лист персонажа из селфи → Seedance 2.0: подходит к камере и позирует, на каждую позу новый наряд из Pinterest",
+  "intent_tags": [
+   "client_in_clip"
+  ],
+  "use_when": "Селфи → лист персонажа (вид спереди/сбоку/сзади, 6 голов, 6 деталей) → Seedance 2.0 с листом + 4 фото одежды; короткий промпт с @image1…@image5.",
+  "inputs": [
+   "фото лица/портрет человека",
+   "фото в полный рост"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "053_swap_self_screenshot_nbpro_kling_motion",
+  "title": "# 53 — Заменить себя на любого персонажа: скрин своего видео → Nano Banana Pro (замена человека, комната та же) → Kling Motion с исходным видео",
+  "intent_tags": [
+   "talking_head",
+   "client_in_clip",
+   "animal",
+   "motion_transfer"
+  ],
+  "use_when": "Вариант схемы 15 (Kling Motion Control), но с полным дословным промптом замены для первого кадра, который сохраняет комнату, свет и «фронталку».",
+  "inputs": [
+   "видео-референс (движение/клип)",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "054_slime_face_asmr_nbpro_veo31",
+  "title": "# 54 — ASMR «лицо из слайма»: фото → Nano Banana Pro (мокрая голова на мраморе) → Veo 3.1 (руки мнут лицо как слайм)",
+  "intent_tags": [
+   "client_in_clip",
+   "meme",
+   "vfx_effect"
+  ],
+  "use_when": "Двухшаговый вирусный эффект: изолированная «голова» с глянцевой мокрой кожей → видео, где руки с маникюром сжимают её как слайм.",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "055_add_people_into_your_photo_then_kling_o3",
+  "title": "# 55 — Добавить людей в своё фото (или себя в чужое) → Kling o3 pro: «качают головой под музыку» / «страхуют в зале»",
+  "intent_tags": [
+   "client_in_clip",
+   "seamless_series",
+   "object_alive"
+  ],
+  "use_when": "Склейка: Nano Banana Pro вписывает людей в существующее фото (машина / поле / спортзал), затем Kling o3 pro оживляет со статичной камерой. Вариант «спортзал» — полный пошаговый.",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "056_car_driving_nbpro_kling26_locked",
+  "title": "# 56 — «Катаюсь на Audi RS6 по ночному городу»: селфи → Nano Banana Pro (салон, 35 мм) → Kling 2.6 со строгим запретом на движения лица и камеры",
+  "intent_tags": [
+   "client_in_clip"
+  ],
+  "use_when": "Шаблон «человек за рулём»: картинка с блоком identity-lock и негативами, затем анимация, где двигается только улица за окном, микро-руль и моргание.",
+  "inputs": [
+   "фото лица/портрет человека",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "057_talking_child_greeting_nb_sora_veo",
+  "title": "# 57 — Говорящий ребёнок / человек за дверью с поздравлением: фото → Nano Banana (замена ребёнка в сцене) → Sora (реплика детским голосом) / Veo 3.1 (глазок)",
+  "intent_tags": [
+   "talking_head",
+   "client_in_clip",
+   "object_alive"
+  ],
+  "use_when": "Оживить фото с ролью и речью: Nano Banana ставит ребёнка с вашего фото за стеклянную дверь с тортом и букетом; Sora генерирует видео с репликой прямо из промпта («Говорит детским голосом: …»). Третий вариант: вид через дверной глазок (фишай), Veo 3.1 fast без речи.",
+  "inputs": [
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "058_walk_away_from_explosion_nb_video",
+  "title": "# 58 — Уверенно идёт на камеру на фоне взрыва G-Class: Nano Banana Pro (кадр) → видео-промпт со статичной камерой",
+  "intent_tags": [
+   "vfx_effect"
+  ],
+  "use_when": "Киношный трюк «не оглядываясь на взрыв»: кадр с вашим лицом + видео, где машина горит и взрывается, а герой идёт дальше.",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "C",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "059_win11_living_wallpaper_funny_ending",
+  "title": "# 59 — «Живые обои Windows 11» со смешной концовкой: героиня разбивает экран битой и прячется, выключая яркость (Seedance 2.0, 15 с, одна камера)",
+  "intent_tags": [
+   "meme"
+  ],
+  "use_when": "Готовый сюжет с поворотом: 0–4 с трюки с битой, 4–6 с удар по стеклу экрана, 9–14 с она тянет слайдер яркости, 14–15 с чёрный экран. Подходит как шаблон «персонаж внутри интерфейса».",
+  "inputs": [
+   "стартовый кадр",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "060_rhythm_reference_5_environments_audio_sync",
+  "title": "# 60 — Один персонаж + аудио → 15-секундный бёрст-монтаж в 5 разных локациях, склейки по битам (Seedance 2.0, Image1 + Audio1)",
+  "intent_tags": [
+   "client_in_clip",
+   "seamless_series",
+   "family_photos"
+  ],
+  "use_when": "Ровно 5 локаций × 6 планов = 30 склеек, ритм задаёт загруженный трек. Под «N фото клиента → ролик в разных местах» и рилсы под музыку.",
+  "inputs": [
+   "фото лица/портрет человека",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "061_over_the_frames_popout_letterbox",
+  "title": "# 61 — Эффект «вылезает за рамку»: персонаж перекрывает чёрные полосы letterbox (Seedance 2.5, 15 с, одна камера)",
+  "intent_tags": [
+   "client_in_clip",
+   "vfx_effect"
+  ],
+  "use_when": "Иллюзия 3D-pop-out: чёрные полосы сверху и снизу 15% неподвижны, меч/руки/кроссовки героя заходят на них. Описание внешности в промпте — под конкретную героиню, его надо заменить своим.",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "062_kling4_multikeyframe_7_images_fight",
+  "title": "# 62 — Kling 4.0: 7 ключевых кадров (первый/последний + промежуточные) → 19-секундный бой с монтажом между ракурсами",
+  "intent_tags": [
+   "seamless_series"
+  ],
+  "use_when": "Новая возможность Kling 4.0: загрузить first/last frame + несколько промежуточных кадров; промпт описывает переходы между ними («Keep the action moving between the keyframes rather than pausing on them»).",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "C",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "063_llama_on_invisible_leash_seedance25_edit",
+  "title": "# 63 — Своё видео «веду невидимый поводок» → Seedance 2.5 Edit дорисовывает ламу (любое животное), которая в конце нюхает объектив",
+  "intent_tags": [
+   "client_in_clip",
+   "animal"
+  ],
+  "use_when": "Видео-редактирование реальной съёмки: камера, человек и комната не меняются, добавляется животное на поводке; финал — крупный план морды в объектив.",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "064_spiderman_ceiling_hang_video_edit",
+  "title": "# 64 — Своё видео прыжка → Seedance 2.5: пальцы прилипают к потолку, висите как Человек-паук",
+  "intent_tags": [
+   "vfx_effect",
+   "motion_transfer"
+  ],
+  "use_when": "Короткий V2V-эффект на реальной съёмке, промпт из двух фраз.",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "065_product_drop_web_catch_4refs_ad",
+  "title": "# 65 — Реклама товара «паутиной»: 4 фото (стоите / жест паука / держите товар / товар крупно) → Seedance 2.5, товар падает, slow-mo, паутина притягивает его в руку",
+  "intent_tags": [
+   "product_ad"
+  ],
+  "use_when": "Товар-герой в вашей комнате: падение сверху, перевод фокуса, «паутина» и возврат в руку; без музыки, только SFX. Второй вариант (792) — студийный белый фон, рука в костюме Spider-girl ловит стакан кофе (один референс товара).",
+  "inputs": [
+   "фото товара/продукта",
+   "аудио/голос",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "066_rigid_doll_fall_first_last_kling3",
+  "title": "# 66 — «Падаю как кукла»: фото в рост → Nano Banana Pro (вы — пластиковая кукла на полу) → Kling 3.0 первый/последний кадр, падение одним куском",
+  "intent_tags": [
+   "seamless_series"
+  ],
+  "use_when": "Start/End-frame приём: последний кадр заранее генерируется картинкой, Kling 3.0 делает падение между ними, ручная камера «реагирует».",
+  "inputs": [
+   "фото в полный рост",
+   "стартовый кадр",
+   "финальный кадр"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "067_stopmotion_doll_dressing_fashion_ad",
+  "title": "# 67 — Стоп-моушен «гигантские руки одевают куклу-вас»: 7 референсов (вы в рост + вещи) → Seedance 2.0, 6 шотов по таймкодам",
+  "intent_tags": [
+   "other"
+  ],
+  "use_when": "Шаблон для витрины одежды/украшений: каждая вещь отдельным референсом с @-именем, по шотам надевается, в конце «кукла оживает».",
+  "inputs": [
+   "фото в полный рост",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "068_character_enters_your_room_nbpro_kling3",
+  "title": "# 68 — Персонаж (панда) заходит в вашу реальную комнату: фото помещения → Nano Banana Pro (вписать персонажа) → Kling 3.0 первый/второй кадр → CapCut по ракурсам",
+  "intent_tags": [
+   "object_alive"
+  ],
+  "use_when": "Вставка 3D/реального персонажа в снимок своего помещения с правильными тенями и масштабом, затем оживление между «пустая дверь» → «панда в двери»; повторить на каждом ракурсе и склеить.",
+  "inputs": [
+   "стартовый кадр"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "069_family_adults_to_kids_daisy_field_orbit",
+  "title": "# 69 — Семья: 4 фото (взрослые и дети) + видео-референс → Seedance 2.0, одна дуга крана 15 с, за спиной взрослые «превращаются» в детей",
+  "intent_tags": [
+   "client_in_clip",
+   "family_photos",
+   "motion_transfer"
+  ],
+  "use_when": "Подмена героя на окклюзии камерой: камера проходит за спиной героя и выходит уже с ребёнком на месте взрослого. Готовый трёхфазный промпт.",
+  "inputs": [
+   "фото лица/портрет человека",
+   "видео-референс (движение/клип)"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "070_drawn_drone_path_on_photo_fpv_seedance",
+  "title": "# 70 — Нарисовать путь дрона на фото → Seedance 2.0 FPV-пролёт по нарисованной траектории (негатив убирает красные линии)",
+  "intent_tags": [
+   "pov_one_take"
+  ],
+  "use_when": "Управление камерой рисунком: в галерее телефона нарисовать линию траектории на фото, загрузить в Seedance; в негативе — «Red lines, red markings…», чтобы линия не попала в кадр.",
+  "inputs": [
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "071_character_breaks_laptop_screen_handshake",
+  "title": "# 71 — Персонаж разбивает экран ноутбука изнутри и жмёт вам руку: своё видео касания экрана → скрин → Seedance 2.0",
+  "intent_tags": [
+   "product_ad"
+  ],
+  "use_when": "Персонаж из «цифры» выходит в реальный мир (ваша рука в кадре); для рекламы маскота/героя бренда.",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "072_frozen_time_product_orbit_seamless_loop",
+  "title": "# 72 — «Застывшее время» с товаром в воздухе: скрин подброшенного предмета → Seedance 2, камера облетает и макро, последний кадр = первый (бесшовный луп)",
+  "intent_tags": [
+   "product_ad",
+   "seamless_series",
+   "pov_one_take"
+  ],
+  "use_when": "Bullet-time рекламного продукта, всё застыло, двигается только камера; механические звуки объектива. Поля [PRODUCTO], [DETALLE 1/2], [COLOR] заполнить.",
+  "inputs": [
+   "стартовый кадр",
+   "финальный кадр",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "073_childhood_birthday_swap_kling_motion",
+  "title": "# 73 — «Я в детстве задуваю торт»: своё видео → скрин → Nano Banana Pro (замена на вас-ребёнка + торт) → Kling 3.0 Motion с исходным видео → CapCut с детскими фото",
+  "intent_tags": [
+   "client_in_clip"
+  ],
+  "use_when": "Семейный/эмоциональный формат: из 3 фото (скрин, детское фото, фото торта) и своего видео получается ролик, где вместо вас ребёнок с тем же движением.",
+  "inputs": [
+   "фото лица/портрет человека",
+   "видео-референс (движение/клип)"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "074_face_stretch_rubber_video_edit",
+  "title": "# 74 — Резиновое лицо: своё видео «растягиваю щёки» → Seedance 2.0 превращает жест в мультяшное растяжение, речь сохраняется",
+  "intent_tags": [
+   "talking_head",
+   "vfx_effect",
+   "motion_transfer"
+  ],
+  "use_when": "V2V-эффект на говорящем видео (можно в разговорном формате): лицо растягивается за руками и пружинит обратно, губы остаются синхронными с речью.",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "075_outpaint_room_overlay_capcut_mask",
+  "title": "# 75 — Расширить комнату вокруг своего видео: скрин → GPT Image 2 (дорисовать студию) → CapCut: видео поверх фото, маска с растушёвкой",
+  "intent_tags": [
+   "other"
+  ],
+  "use_when": "Дешёвый «отъезд камеры»: генерация только картинки, видео остаётся настоящим; шов прячется маской.",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "076_comic_style_transfer_kling3_motion",
+  "title": "# 76 — Своё видео → 2D-комикс по картинке-образцу стиля: Kling 3.0 Motion Control, все движения и губы 1:1",
+  "intent_tags": [
+   "motion_transfer"
+  ],
+  "use_when": "Рестайл всего видео под картинку-референс стиля (комикс), с упором на временную стабильность.",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "077_charsheet_seedance_windowsill_two_parts",
+  "title": "# 77 — Лист персонажа из своих фото (Nano Banana Pro) → две генерации Seedance 2.0 с листом в референсах → CapCut",
+  "intent_tags": [
+   "other"
+  ],
+  "use_when": "Лист персонажа (5–6 портретов + 5–6 в рост) как единый референс для нескольких клипов; первый клип — сцена на подоконнике, «падает назад в окно».",
+  "inputs": [
+   "фото лица/портрет человека",
+   "фото в полный рост"
+  ],
+  "confidence": "C",
+  "prompt_completeness": "complete",
+  "duplicates_of": [
+   "111_charsheet_spider_drone_part2_seedance_continuation"
+  ]
+ },
+ {
+  "id": "078_director_mode_one_image_9_keyframes_kling26",
+  "title": "# 78 — «Director Mode»: ОДНА картинка → Nano Banana Pro (Gemini 3 Thinking) пишет 9 кейфреймов + сетку 3×3 → каждый кадр отдельно в 16:9 → Kling 2.6 по 5 с → CapCut",
+  "intent_tags": [
+   "talking_head"
+  ],
+  "use_when": "# 78 — «Director Mode»: ОДНА картинка → Nano Banana Pro (Gemini 3 Thinking) пишет 9 кейфреймов + сетку 3×3 → каждый кадр отдельно в 16:9 → Kling 2.6 по 5 с → CapCut",
+  "inputs": [
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "079_swap_character_any_video_nb2_kling_motion_voice_changer",
+  "title": "# 79 — Подмена персонажа в любом видео + подмена голоса: Nano Banana 2 → Kling 2.6 Motion Control («match video») → ElevenLabs Voice Changer",
+  "intent_tags": [
+   "talking_head",
+   "client_in_clip",
+   "motion_transfer"
+  ],
+  "use_when": "# 79 — Подмена персонажа в любом видео + подмена голоса: Nano Banana 2 → Kling 2.6 Motion Control («match video») → ElevenLabs Voice Changer",
+  "inputs": [
+   "стартовый кадр",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "gaps",
+  "duplicates_of": []
+ },
+ {
+  "id": "080_infinitetalk_v2v_lipsync_comfyui_free",
+  "title": "# 80 — Бесплатно и локально: перепеть/переозвучить готовое видео — InfiniteTalk V2V (Wan 2.1) в ComfyUI по новой аудиодорожке",
+  "intent_tags": [
+   "talking_head",
+   "motion_transfer"
+  ],
+  "use_when": "# 80 — Бесплатно и локально: перепеть/переозвучить готовое видео — InfiniteTalk V2V (Wan 2.1) в ComfyUI по новой аудиодорожке",
+  "inputs": [
+   "видео-референс (движение/клип)",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "gaps",
+  "duplicates_of": []
+ },
+ {
+  "id": "081_insert_self_into_movie_scene_nbpro_kling_seedance",
+  "title": "# 81 — Вставить себя в сцену из фильма: стоп-кадр + своё фото → Nano Banana Pro → Kling 3.0 / Seedance 2.5 (@Video1 повторяет камеру и темп сцены)",
+  "intent_tags": [
+   "client_in_clip",
+   "seamless_series",
+   "motion_transfer"
+  ],
+  "use_when": "# 81 — Вставить себя в сцену из фильма: стоп-кадр + своё фото → Nano Banana Pro → Kling 3.0 / Seedance 2.5 (@Video1 повторяет камеру и темп сцены)",
+  "inputs": [
+   "стартовый кадр",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "082_talking_pet_free_flow_elevenlabs",
+  "title": "# 82 — Говорящий питомец бесплатно: картинка в Google Flow (кот в подкаст-студии, 9:16) → реплика в ElevenLabs → картинка + голос в видео-генератор → монтаж",
+  "intent_tags": [
+   "talking_head",
+   "meme",
+   "animal"
+  ],
+  "use_when": "# 82 — Говорящий питомец бесплатно: картинка в Google Flow (кот в подкаст-студии, 9:16) → реплика в ElevenLabs → картинка + голос в видео-генератор → монтаж",
+  "inputs": [
+   "аудио/голос"
+  ],
+  "confidence": "C",
+  "prompt_completeness": "gaps",
+  "duplicates_of": []
+ },
+ {
+  "id": "083_ai_influencer_vlog_charsheet_seedance25_30s",
+  "title": "# 83 — Влог AI-инфлюенсера 30 с с несколькими сценами, сменой нарядов и репликами: Nano Banana Pro → лист персонажа → референсы образов → ChatGPT раскладывает по сценам → Seedance 2.5 (audio, 30 с) одним проходом",
+  "intent_tags": [
+   "other"
+  ],
+  "use_when": "# 83 — Влог AI-инфлюенсера 30 с с несколькими сценами, сменой нарядов и репликами: Nano Banana Pro → лист персонажа → референсы образов → ChatGPT раскладывает по сценам → Seedance 2.5 (audio, 30 с) одним проходом",
+  "inputs": [
+   "фото в полный рост",
+   "аудио/голос"
+  ],
+  "confidence": "C",
+  "prompt_completeness": "gaps",
+  "duplicates_of": []
+ },
+ {
+  "id": "084_realistic_character_from_seedance_frame",
+  "title": "# 84 — «Живой» персонаж без глянца ИИ: скрин реального видео (TikTok/Pinterest) → ChatGPT делает JSON-промпт → Seedance 2.5 генерирует 4 с 9:16 1080p → лучший кадр = референс персонажа",
+  "intent_tags": [
+   "other"
+  ],
+  "use_when": "# 84 — «Живой» персонаж без глянца ИИ: скрин реального видео (TikTok/Pinterest) → ChatGPT делает JSON-промпт → Seedance 2.5 генерирует 4 с 9:16 1080p → лучший кадр = референс персонажа",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "C",
+  "prompt_completeness": "gaps",
+  "duplicates_of": []
+ },
+ {
+  "id": "085_rooftop_mast_banner_logo_nbpro_seedance",
+  "title": "# 85 — Вы на шпиле Эмпайр-Стейт с флагом-логотипом бренда: 4 референса (лицо, лого, сцена) → Nano Banana Pro стартовый кадр → Seedance 2.0 подъём, флаг, поза",
+  "intent_tags": [
+   "product_ad",
+   "client_in_clip",
+   "meme"
+  ],
+  "use_when": "Брендовый вирусный формат: человек на огромной высоте держит большой баннер с вашим логотипом, логотип читается чётко. Промпты дословно, лого и одежда меняются.",
+  "inputs": [
+   "стартовый кадр",
+   "аудио/голос",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "086_maglev_selfie_to_pluto_24s_one_take",
+  "title": "# 86 — Селфи-влог 24 с одним дублем: поезд-маглев взлетает из атмосферы к Плутону (Seedance 2.5, @image1, таймкоды по 3 с)",
+  "intent_tags": [
+   "client_in_clip",
+   "pov_one_take"
+  ],
+  "use_when": "Шаблон «невозможное событие, снятое на телефон»: герой в левой трети кадра, окно справа, 8 фаз по 3 с, звук без разборчивой речи. Менять можно маршрут (окно) и транспорт.",
+  "inputs": [
+   "фото лица/портрет человека",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "087_desktop_girl_minimax_h3_two_part_continuation",
+  "title": "# 87 — «Девушка на рабочем столе» в 2 частях с бесшовным продолжением: MiniMax H3 (локально, open weights), структурный промпт subject_definitions / retention_analysis / timeline + часть 2 «Continue seamlessly from the automatically inherited final second»",
+  "intent_tags": [
+   "seamless_series"
+  ],
+  "use_when": "# 87 — «Девушка на рабочем столе» в 2 частях с бесшовным продолжением: MiniMax H3 (локально, open weights), структурный промпт subject_definitions / retention_analysis / timeline + часть 2 «Continue seamlessly from the automatically inherited final second»",
+  "inputs": [
+   "стартовый кадр"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "088_exploded_view_assembly_nbpro_kling_firstlast",
+  "title": "Разбор объекта на детали и обратная сборка (exploded view → сборка)",
+  "intent_tags": [
+   "product_ad",
+   "beauty_ad",
+   "client_in_clip",
+   "seamless_series",
+   "meme",
+   "vfx_effect"
+  ],
+  "use_when": "Из одного фото товара (у автора часы Rolex на руке) делается кадр «взрыв-схемы»: все детали разлетелись, но ракурс и фон те же. Потом Kling анимирует переход от разобранного к собранному, где первый кадр = exploded view, последний = исходное фото. Получается вирусный ролик «товар собирается из детал",
+  "inputs": [
+   "фото товара/продукта",
+   "стартовый кадр",
+   "финальный кадр"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "089_construction_timelapse_remove_building_veo31",
+  "title": "Таймлапс стройки: стереть здание с фото → Veo 3.1 первый/последний кадр",
+  "intent_tags": [
+   "seamless_series"
+  ],
+  "use_when": "Берётся фото готового здания (своего или заказчика). Nano Banana Pro удаляет здание, оставляет пустую площадку с тем же ракурсом. Veo 3.1 получает пустую площадку первым кадром и исходное фото последним, плюс таймкодированный промпт таймлапса. Выходит 8-секундный ролик «здание вырастает». Автор пише",
+  "inputs": [
+   "стартовый кадр",
+   "финальный кадр"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "090_carousel_little_me_adult_nbpro_kling26",
+  "title": "Карусель «я маленький и я взрослый»: Nano Banana Pro → Kling 2.6 ×2 → CapCut",
+  "intent_tags": [
+   "client_in_clip",
+   "seamless_series"
+  ],
+  "use_when": "Ностальгический рилс: человек сидит на советской карусели во дворе зимой, фон крутится. Делается дважды — со взрослым фото и с детским фото, затем склейка: «тогда и сейчас».",
+  "inputs": [
+   "фото лица/портрет человека"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "091_pet_replaces_human_keep_audio_seedance25",
+  "title": "Питомец вместо человека в известной сцене, с оригинальным звуком и липсинком (Seedance 2.5)",
+  "intent_tags": [
+   "talking_head",
+   "client_in_clip",
+   "animal",
+   "motion_transfer"
+  ],
+  "use_when": "Берётся короткий фрагмент из сериала/мема (у автора «Реальные пацаны») и фото кота или собаки. Seedance 2.5 заменяет человека на питомца, сохраняя движения, актёрскую игру и ОРИГИНАЛЬНУЮ звуковую дорожку: питомец «говорит» голосом актёра с липсинком. Тот же приём годится для любой узнаваемой сцены и",
+  "inputs": [
+   "видео-референс (движение/клип)",
+   "аудио/голос",
+   "фото питомца"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "092_hidden_camera_lecture_gptimage_wan30",
+  "title": "«Скрытая съёмка на лекции»: фото человека → телефото-кадр → Wan 3.0",
+  "intent_tags": [
+   "client_in_clip",
+   "object_alive",
+   "vfx_effect"
+  ],
+  "use_when": "Из обычного фото девушки делается «папарацци»-кадр на лекции (ChatGPT Image 2.5, 1:1), затем Wan 3.0 оживляет его на 5 секунд с поминутной раскадровкой 0–1/1–3/3–5 с. Эффект «тайно сняли на телефон».",
+  "inputs": [
+   "фото лица/портрет человека"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "093_two_cats_zombie_drama_seedance25",
+  "title": "Драма двух котиков (зомби-сюжет) из двух фото, 24 с одним промптом",
+  "intent_tags": [
+   "client_in_clip",
+   "animal"
+  ],
+  "use_when": "Два фото своих котов → Seedance 2.5 делает 24-секундную мини-драму: у одного кота «зомби-превращение» поверх его реальной внешности, потом развязка. Блок CHARACTER REFERENCE RULE держит морды и окрас по фото.",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "094_rescue_on_sea_stack_two_photos_seedance25",
+  "title": "«Спасаем того, кто дорог»: два фото людей → 19-секундная спасательная сцена",
+  "intent_tags": [
+   "client_in_clip"
+  ],
+  "use_when": "Два фото (пара, друзья, родители) → эмоциональная сцена: один карабкается и вытаскивает другого. Теги <Climber>/<Survivor> привязаны к @Image 1/2, фон фото не используется, одежда фиксирована.",
+  "inputs": [
+   "фото в полный рост",
+   "аудио/голос",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "095_baby_mcdonalds_drivethru_funny_seedance25",
+  "title": "«Новый сотрудник McDonald’s»: ребёнок на окне раздачи, смешной финал",
+  "intent_tags": [
+   "client_in_clip",
+   "meme"
+  ],
+  "use_when": "Фото малыша → 10-секундное «айфонное» видео с водительского места: ребёнок работает на окне выдачи драйв-тру. Один шаг, один промпт, рассчитан на вирусный семейный рилс.",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "096_pixeldojo_drivein_seedream_seedance_charswap",
+  "title": "PixelDojo «Drive-In Day»: Character Studio → Seedream 5 кадры → Seedance 2.5 движение+звук → WAN Character Swap → Seed Audio",
+  "intent_tags": [
+   "client_in_clip",
+   "vfx_effect"
+  ],
+  "use_when": "25-секундный ролик в стиле ТВ-сериала 80-х: надувной трёхголовый дракон громит автокинотеатр. Каждый план — сначала неподвижный кадр Seedream 5 с персонажами из Character Studio (реальные фото людей + персонажи), потом Seedance 2.5 добавляет движение и звуковые эффекты (5 с, 1080p), из каждого клипа",
+  "inputs": [
+   "аудио/голос",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "097_pixeldojo_frame_one_reference_consistency_seedance",
+  "title": "PixelDojo «Sinkhole/Glacier»: первый кадр как референс для всех остальных → Seedance 2.5 → Seed Audio (один герой-объект во всех планах)",
+  "intent_tags": [
+   "vfx_effect"
+  ],
+  "use_when": "Как удержать один и тот же объект (оранжевый внедорожник) в 7 разных планах. Генерируется «кадр номер один» (Qwen Image 2.1, 2K, 9:16), затем он прикладывается как image 1 ко всем остальным кадрам, и в каждом промпте заново перечисляются детали героя (форма, цвет, каркас, фары, шины). Потом каждый к",
+  "inputs": [
+   "стартовый кадр",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "098_kling40_one_prompt_talking_product_ugc",
+  "title": "Kling 4.0: говорящий UGC-ролик с товаром одним промптом (без фото, без озвучки отдельно)",
+  "intent_tags": [
+   "product_ad",
+   "talking_head",
+   "client_in_clip"
+  ],
+  "use_when": "Один промпт в Kling 4.0 (10 с, 1080p, 9:16) даёт селфи-видео: девушка в студии упаковки показывает флакон и говорит реплику, с голосом и звуком комнаты. Шаблон: кто/где/что держит + реплика в кавычках + «Audio: … no music, no subtitles».",
+  "inputs": [
+   "фото товара/продукта",
+   "фото лица/портрет человека",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "099_seedance25_extend_forward_backward_firstlast_templates",
+  "title": "Seedance 2.5: шаблоны продления видео вперёд/назад, первый+последний кадр с доп. референсами, мульти-ключевые кадры, бесшовный переход между двумя видео",
+  "intent_tags": [
+   "product_ad",
+   "seamless_series"
+  ],
+  "use_when": "Готовые формулировки для склейки без швов: (1) продлить @Video 1 вперёд — первый кадр нового куска продолжает последний кадр исходника; (2) продлить назад — последний кадр нового куска стыкуется с первым кадром исходника; (3) первый+последний кадр в мультимодальном режиме плюс отдельные референсы ге",
+  "inputs": [
+   "видео-референс (движение/клип)",
+   "стартовый кадр",
+   "финальный кадр",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "100_restore_old_photo_hug_younger_self",
+  "title": "Старое фото: реставрация → «я сегодняшний обнимаю себя маленького» → Seedance первый/последний кадр",
+  "intent_tags": [
+   "client_in_clip",
+   "seamless_series",
+   "family_photos"
+  ],
+  "use_when": "Старое фото → реставрация одной правкой (gpt-image-2-edit) → кадр Seedream 5, где человек сегодня обнимает себя на старом фото → 6-секундный Seedance 2.5 1080p: первый кадр = отреставрированное фото, последний = объятие. Сегодняшний «я» входит сбоку и обнимает.",
+  "inputs": [
+   "фото лица/портрет человека",
+   "стартовый кадр",
+   "финальный кадр",
+   "старое фото"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "101_listing_photos_earth_zoom_reel",
+  "title": "Фото объекта → рилс: строка поиска → зум с орбиты к двери (первый/последний кадр) → проход по комнатам",
+  "intent_tags": [
+   "seamless_series",
+   "animal"
+  ],
+  "use_when": "Конвейер «папка фото → вертикальный рилс»: интро со строкой поиска, которая печатает мечту; кадр Земли с орбиты (Seedream 5); Seedance 2.5 с Землёй первым кадром и фото фасада последним — непрерывный зум из космоса к двери; каждая комната 5 с одним плавным движением камеры; кроссфейды и музыка. Для ",
+  "inputs": [
+   "стартовый кадр",
+   "финальный кадр",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "102_clone_viral_ad_product_swap",
+  "title": "Клон вирусной рекламы под свой товар: видео-правка с заменой товара + проверка утечки старого",
+  "intent_tags": [
+   "product_ad",
+   "client_in_clip",
+   "meme"
+  ],
+  "use_when": "Два варианта: (1) clone — правка исходного ролика: все планы, люди, руки, тайминг те же, товар полностью заменён; (2) remake — новый вертикальный дубль на Seedance 2.0 Reference с исходником и фото товара, новая реплика в том же ритме. В обоих в промпте явно: «nothing from the old product, its colou",
+  "inputs": [
+   "фото товара/продукта",
+   "логотип"
+  ],
+  "confidence": "B/C",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "103_family_photo_card_room_reveal_action_figure",
+  "title": "Три коротких рецепта «одно фото → кадр Seedream → Seedance»: семейная открытка-видео, «до/после» комнаты, фигурка в блистере с поворотом 360°",
+  "intent_tags": [
+   "product_ad",
+   "client_in_clip",
+   "family_photos"
+  ],
+  "use_when": "Общая форма: фото клиента → Seedream 5 (фото как референс, лица точно те же, проверка лиц и надписей) → Seedance 2.5 по первому кадру (или первый = оригинал, последний = новый вариант для «до/после»). Открытка: семья в свитерах на крыльце, снег, 6 с с колокольчиками. Комната: тот же ракурс, новый ст",
+  "inputs": [
+   "фото товара/продукта",
+   "фото лица/портрет человека",
+   "стартовый кадр"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "104_self_acting_wan_animate_voice_changer_collage",
+  "title": "Сыграть сцену самому → герой с фото повторяет игру (Wan Animate) → смена голоса ElevenLabs; + коллаж-метод для второго персонажа, ракурсы через Nano Banana, экшен Kling 2.5, апскейл Topaz",
+  "intent_tags": [
+   "talking_head",
+   "client_in_clip",
+   "seamless_series",
+   "object_alive"
+  ],
+  "use_when": "Говорящий персонаж с живой мимикой без липсинка-«болванки»: снимаешь себя на телефон, как играешь реплику; отдельно фото себя в той же позе. Seedream (или Nano Banana) ставит персонажа в новую сцену в твоей позе. Wan «photo animate» переносит твои движения, жесты и губы на персонажа (до 15 с, pro mo",
+  "inputs": [
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "105_pop_the_balloon_dating_show_meme_seedance25",
+  "title": "Мем «Pop The Balloon»: 7 референсов → один 30-секундный промпт шоу знакомств со смешным финалом",
+  "intent_tags": [
+   "talking_head",
+   "meme"
+  ],
+  "use_when": "Пародия на интернет-шоу знакомств: 5 девушек с шариками, ведущая и «жених» 44 лет из маминого подвала. Структура мема в таймкодах: представление → нелепый ответ → реакции → все пять шариков лопаются → финальная фраза «Was it the basement?». Шесть персонажей сделаны в Grok, один реф — кадр реальной с",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "106_infinite_zoom_ten_worlds_seamless_loop",
+  "title": "Бесконечный зум через 10 вложенных миров с бесшовной петлёй (один кадр Seedance 2.5, 30 с)",
+  "intent_tags": [
+   "product_ad",
+   "seamless_series",
+   "vfx_effect"
+  ],
+  "use_when": "Один 30-секундный план: каждый мир держит следующий в миниатюре (фонарь маяка → луг, иллюминатор → острова, жемчужина → фестиваль), камера влетает в деталь, пока её края не уйдут за кадр. Последний мир открывает окно с первой сценой — петля для рилса. Под товар: «зум внутрь флакона/упаковки» по той ",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "107_3d_blockout_one_gen_29s_seedance25",
+  "title": "29 секунд одной генерацией: 3D-блокинг (цветные болванки) как видео-референс камеры и мизансцены + 5 референсов",
+  "intent_tags": [
+   "seamless_series",
+   "motion_transfer"
+  ],
+  "use_when": "Сцена собирается в 3D (Higgsfield 3D Jutsu) плоскими цветными блоками в реальном масштабе; анимируется 29-секундный блокинг-ролик с камерой и склейками по секундам, у каждой фигуры свой цвет (синий — герой, оранжевый — охотники, серый/красный — жители). Seedance 2.5 получает 5 референсов: стартовый ",
+  "inputs": [
+   "видео-референс (движение/клип)",
+   "стартовый кадр",
+   "аудио/голос"
+  ],
+  "confidence": "C",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "108_version_a_b_younger_self_rocks_seedance25",
+  "title": "«Я тогдашний и я сегодняшний»: два фото одного человека (до/после) → драма на скалах, Seedance 2.5, 15 с",
+  "intent_tags": [
+   "client_in_clip"
+  ],
+  "use_when": "Две фотографии одного человека в разные периоды (до/после). Версия A (первое фото) мокрая, выбирается из штормового моря, версия B (второе фото) сухая, стоит на скале и протягивает руку; A отказывается и уходит в воду. Символичный 15-секундный рилс «я сегодняшний и я прошлый». Промпт строго держит л",
+  "inputs": [
+   "фото лица/портрет человека",
+   "аудио/голос",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "109_bag_throw_outfit_transitions_gptimage_seedance",
+  "title": "Смена образов через бросок сумки в камеру: GPT Image 2 образы → Seedance 2.0 с 6 рефами (образ1, сумка1 … образ3, сумка3)",
+  "intent_tags": [
+   "product_ad",
+   "beauty_ad",
+   "client_in_clip",
+   "seamless_series",
+   "vfx_effect"
+  ],
+  "use_when": "Статичная «камера на штативе»: девушка бросает сумку в объектив, сумка заслоняет кадр, крутится, «бумерангом» морфится в следующую сумку — и девушка уже в новом образе. Три образа за 15 с, вторая часть так же. Образы делаются из одного реального фото в GPT Image 2 (замена одежды, фон один и тот же),",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "110_object_falls_through_worlds_nbpro_seedance_insta",
+  "title": "Предмет падает сквозь разные «миры» + анимация ленты Instagram: Nano Banana Pro → Seedance 2.0 → CapCut",
+  "intent_tags": [
+   "product_ad"
+  ],
+  "use_when": "Фото товара → Nano Banana Pro ставит его в тематический мир (бумажный, пластилин, LEGO, вязаный…, список подстановок готов) → Seedance 2.0: статичная камера, предмет падает сверху вниз сквозь кадр в стоп-моушн манере, фон оживает. 4–5 стилей, затем в CapCut — как пролистывание постов Instagram, плюс",
+  "inputs": [
+   "фото товара/продукта"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "111_charsheet_spider_drone_part2_seedance_continuation",
+  "title": "Продолжение схемы 77: вторая часть ролика (непрерывный дрон-пролёт за героиней по городу) — открытый промпт из комментария",
+  "intent_tags": [
+   "client_in_clip",
+   "seamless_series",
+   "pov_one_take"
+  ],
+  "use_when": "Схема 77 делала из листа персонажа (Nano Banana Pro) первую часть ролика (подоконник, герой выпадает из окна). Вторая часть — 15 с одним «rear-follow drone shot»: героиня с паутиной летит по улицам Нью-Йорка, отталкивается от стен и машин, финал на закате. Автор просит менять одежду, город и описани",
+  "inputs": [
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": [
+   "077_charsheet_seedance_windowsill_two_parts"
+  ]
+ },
+ {
+  "id": "112_nightclub_two_people_json_seedance25_partial",
+  "title": "Двое в ночном клубе «взгляд через танцпол»: JSON-промпт Seedance 2.5 на 4 референса (частично)",
+  "intent_tags": [
+   "client_in_clip",
+   "meme",
+   "dance"
+  ],
+  "use_when": "Тренд: ваше фото и фото человека на танцполе → Seedance 2.5 (15 с, 720p в боте; в JSON указано 1080p, 9:16). План 1: герой A на балконе смеётся, затем серьёзный взгляд в камеру; план 2: через плечо вниз на тёмно-синий танцпол, где B стоит неподвижно и ярко освещён; план 3: B крупно. @image3/@image4 ",
+  "inputs": [
+   "фото лица/портрет человека"
+  ],
+  "confidence": "C",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "113_wireframe_xray_hologram_ad_wan3_partial",
+  "title": "Формат рекламы «голограммные каркасные люди + рентген причины»: Nano Banana Pro на Flow → 22 клипа WAN 3 480p → проверка клипов Gemini",
+  "intent_tags": [
+   "product_ad"
+  ],
+  "use_when": "Формат: светящиеся каркасные люди в «чертёжной» спальне, хук — фраза партнёра, три неудачные попытки решить проблему, затем «рентген» настоящей причины; товар — единственный сплошной (не каркасный) предмет в ролике. Автор оценил себестоимость в $4. Применимо к медицинским продуктам (показ механизма ",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "C",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "114_dance_video_face_swap_nbpro_seedance_camera_recreate",
+  "title": "Вставить себя в чужой танцевальный ролик с той же камерой: скрин 1-го кадра → Nano Banana Pro замена человека → Seedance 2.0 (картинка + видео-референс)",
+  "intent_tags": [
+   "client_in_clip",
+   "meme",
+   "dance",
+   "motion_transfer"
+  ],
+  "use_when": "Берётся вирусное видео с танцем (у автора — её же ролик на фоне гор, дрон отлетает назад-вверх). Скрин первой секунды → Nano Banana Pro меняет человека на тебя (лучше коллаж своего лица со всех сторон). Затем Seedance 2.0 получает этот кадр как <<<image_1>>> (персонаж) и исходное видео как <<<video_",
+  "inputs": [
+   "фото в полный рост",
+   "видео-референс (движение/клип)"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "115_fan_blade_outfit_change_overhead_rug_seedance25",
+  "title": "Смена образов «лопастью вентилятора»: вид сверху на ковре, каждое перекрытие лопастью = новый образ (Seedance 2.5, 15 с, один план)",
+  "intent_tags": [
+   "client_in_clip",
+   "vfx_effect"
+  ],
+  "use_when": "Статичная камера строго сверху: девушка лежит на персидском ковре (иллюзия стены), на переднем плане размытая лопасть потолочного вентилятора. Каждый раз, когда лопасть перекрывает героиню, её образ мгновенно меняется — без морфинга и вспышек. Входные данные: фото себя в разных нарядах на одном фоне",
+  "inputs": [
+   "фото лица/портрет человека",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "116_live_broadcast_candid_fan_gptimage_kling3",
+  "title": "«Поймали на трансляции матча»: фото лица → GPT Image 2 кадр «с ТВ-камеры» → Kling 3.0",
+  "intent_tags": [
+   "client_in_clip",
+   "object_alive"
+  ],
+  "use_when": "Фото лица → GPT Image 2 делает «кадр прямой спортивной трансляции» с трибуны: шум компрессии, размытие, без бьюти-фильтра, человек не смотрит в камеру. Затем Kling 3.0 оживляет простым промптом «Девушка смотрит матч». Механика переносится на любую «случайную съёмку» (концерт, каток, улица).",
+  "inputs": [
+   "фото лица/портрет человека"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "117_travel_photo_add_2d_cartoon_characters_kling3",
+  "title": "Фото из путешествия + 2D-мультперсонажи вокруг: Nano Banana Pro → Kling 3.0",
+  "intent_tags": [
+   "client_in_clip"
+  ],
+  "use_when": "Своё фото из поездки + картинки 2D-персонажей → Nano Banana Pro вписывает персонажей в фото (плавают в воде, улитка на накидке) → Kling 3.0: человек неподвижен, персонажи двигаются.",
+  "inputs": [
+   "фото лица/портрет человека"
+  ],
+  "confidence": "B/C",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "118_multicam_from_one_phone_video_seedance_edit_chinese",
+  "title": "Мультикамера из одного видео с телефона: LLM пишет китайский промпт → Seedance 2.5 Edit (4 ракурса, губы и звук оригинала)",
+  "intent_tags": [
+   "talking_head",
+   "seamless_series"
+  ],
+  "use_when": "Снимаешь говорящую голову с одного ракурса → Seedance 2.5 в режиме Edit пересобирает то же выступление с 2–4 разных ракурсов (фронтальный средний → боковой 60° крупный → широкий с другой стороны → фронтальный ближе) с жёсткими сменами камеры, сохраняя жесты, взгляд и синхрон губ с исходной дорожкой.",
+  "inputs": [
+   "видео-референс (движение/клип)",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "119_viral_whippan_one_take_pet_room_photo_seedance25",
+  "title": "Вирусный «один дубль с резкими сменами ракурсов под бит» с вашим питомцем/товаром: видео-референс + фото героя + фото комнаты → Seedance 2.5 Omni",
+  "intent_tags": [
+   "product_ad",
+   "client_in_clip",
+   "meme",
+   "animal",
+   "motion_transfer"
+  ],
+  "use_when": "Берётся трендовый ролик, где камера рывками (whip-pan) меняет ракурсы в такт музыке вокруг неподвижного героя. Seedance 2.5 повторяет траекторию и тайминг @video1, но героем становится ваша собака (@image1), а комната — ваша (@image2), чтобы модель не дорисовывала локацию на новых ракурсах. Музыку у",
+  "inputs": [
+   "фото лица/портрет человека",
+   "видео-референс (движение/клип)",
+   "стартовый кадр",
+   "аудио/голос",
+   "фото питомца",
+   "фото локации/города"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "120_meme_any_character_first_frame_swap_seedance_edit_lipsync",
+  "title": "Мем с любым персонажем: скрин 1-го кадра → Nano Banana Pro замена героя → LLM пишет промпт → Seedance Edit с аудио (липсинк и эмоции оригинала)",
+  "intent_tags": [
+   "talking_head",
+   "client_in_clip",
+   "animal"
+  ],
+  "use_when": "Видео с реальным человеком и живыми эмоциями (у автора — мальчик с удочкой) → первый кадр перерисовывается в Nano Banana Pro с новым героем (бенгальский кот в той же позе и свете) → LLM по видео пишет промпт замены → Seedance Edit с включённым звуком сохраняет липсинк, мимику и движения, меняя героя",
+  "inputs": [
+   "видео-референс (движение/клип)",
+   "стартовый кадр",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "121_adapt_viral_video_nb_frame_seedance_omni_image_video",
+  "title": "Адаптация чужого вирусного ролика под своих героев: скрин → Nano Banana (новые герои и интерьер) → Seedance 2.5 Omni (картинка + исходное видео)",
+  "intent_tags": [
+   "meme",
+   "animal",
+   "motion_transfer"
+  ],
+  "use_when": "Берёшь «аномально» вирусный ролик, перерисовываешь ключевой кадр (новые породы собак, интерьер, свет) и отдаёшь Seedance 2.5 картинку + оригинал видео: модель повторяет все действия и звуки с вашими героями. В комментариях автор: Kling Motion Control тоже можно, но он обычно отказывается работать с ",
+  "inputs": [
+   "видео-референс (движение/клип)"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "122_meme_or_reality_own_video_plus_kittens_video_seedance25",
+  "title": "«Мем или реальность»: своё живое видео с речью (@Video1) + видео котят (@Video2) + лицо → Seedance 2.5 16 с, смешная концовка",
+  "intent_tags": [
+   "talking_head",
+   "client_in_clip",
+   "meme",
+   "animal",
+   "dance"
+  ],
+  "use_when": "Снимаешь себя до 15 с: часы «3:00» → заспанное селфи → камера к окну → оклик. Seedance 2.5 переносит движение камеры, порядок действий и вашу речь из @Video1, а в окне генерирует двор, где три котёнка из @Video2 танцуют на задних лапах, один «снимает» на телефон на штативе; на ваш оклик они замирают",
+  "inputs": [
+   "фото лица/портрет человека",
+   "видео-референс (движение/клип)",
+   "аудио/голос",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "123_inside_painting_drawn_trajectory_gemini_template_seedance",
+  "title": "«Внутри картины»: рисуешь траекторию камеры на картине → Gemini по шаблону пишет промпт 3D-облёта → Seedance 2.0",
+  "intent_tags": [
+   "other"
+  ],
+  "use_when": "Развитие приёма 70 (нарисованный путь дрона), но с мета-промптом: Gemini переводит нарисованную на картине стрелку в физическое 3D-движение камеры с параллаксом (передний план быстрее, фон медленнее), запрещает зум/рывки и требует убрать линию из кадра. Готовый промпт + картина с линией → Seedance.",
+  "inputs": [
+   "стартовый кадр"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "124_food_cgi_ad_llm_nb_llm_seedance25_3shots_6s",
+  "title": "CGI-реклама блюда для кафе: LLM адаптирует фото-промпт → Nano Banana «левитирующий продукт» → LLM-шаблон на 3 шота → Seedance 2.5 6 с",
+  "intent_tags": [
+   "product_ad",
+   "seamless_series",
+   "vfx_effect"
+  ],
+  "use_when": "Фото блюда → редакционный «левитирующий» кадр в Nano Banana → LLM по шаблону пишет промпт на 6 с из 3 шотов: 360° левитация с CGI-ингредиентами → супер-макро стекающего соуса → эффектный финал; EN + ZH версии, защита от морфинга. В комментариях: делали также во Flow Omni Flash; цена за такое видео «",
+  "inputs": [
+   "стартовый кадр",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "125_family_cartoon_pixar_nb_gemini_script_seedance25",
+  "title": "Мультик с вашими домочадцами: Nano Banana Pro «3D-героиня в стиле Pixar» → Gemini-сценарист по таймлайну 15 с → Seedance 2.5 с тегами @image",
+  "intent_tags": [
+   "client_in_clip",
+   "animal"
+  ],
+  "use_when": "Фото ребёнка и кота → мультяшные 3D-персонажи → Gemini по жёсткой 6-тактовой структуре (stare-down → burst → combo → slow-mo climax → millimeter stop → punchline) пишет английский промпт под вашу идею в одну строку → Seedance 2.5 15 с со звуком.",
+  "inputs": [
+   "аудио/голос",
+   "фото локации/города"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "126_ai_blogger_nb_two_refs_edit_veo_russian_speech",
+  "title": "ИИ-блогер с речью на русском: Nano Banana (лицо + образ из Pinterest) → правки образа/света → Veo (реплика в кавычках)",
+  "intent_tags": [
+   "talking_head",
+   "object_alive"
+  ],
+  "use_when": "Два референса (лицо крупно + образ) → фото блогера с микрофоном-петличкой → бесконечные вариации образа, локации и света правкой текста → Veo оживляет фото с репликой на чистом русском без жестикуляции и титров.",
+  "inputs": [
+   "фото лица/портрет человека"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "127_birthday_card_person_car_sheets_seedance25_freeze",
+  "title": "Видео-открытка ко дню рождения: лист персонажа + лист автомобиля (Nano Banana Pro) → Seedance 2.5 9 с → CapCut «Зависание» + ЧБ",
+  "intent_tags": [
+   "client_in_clip"
+  ],
+  "use_when": "Готовые промпты листов: человек (3 панели: спереди, сзади, портрет) и машина (3/4 спереди и сзади). С листами внешность и авто переносятся точнее. Seedance 2.5 Omni 9 с, затем в CapCut — стоп-кадр в самый красивый момент «в воздухе», ЧБ-фильтр и надписи.",
+  "inputs": [
+   "фото лица/портрет человека",
+   "фото в полный рост",
+   "аудио/голос"
+  ],
+  "confidence": "C",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "128_charsheet_emotions_4x2_and_8_panel_angles_nbpro",
+  "title": "Подготовка героя для всех генераций: лист эмоций 4×2 и лист 8 ракурсов (Nano Banana Pro) — дословные промпты",
+  "intent_tags": [
+   "client_in_clip"
+  ],
+  "use_when": "Два промпта на русском: (1) 8 портретов по плечи в сетке 4×2 с одинаковым кадром и светом, меняется только эмоция (нейтральное → подмигивание), с негативом; (2) вертикальный лист 9:16 из 8 панелей (4 в рост: спереди/профиль/сзади/¾; 2 крупных; затылок; ¾ крупно). Используются как @image во всех след",
+  "inputs": [
+   "фото лица/портрет человека",
+   "фото в полный рост"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "129_product_sheet_ad_nbpro_seedance25_omni",
+  "title": "Реклама любого товара из 1 фото: лист товара (ракурсы, текстуры, макро) в Nano Banana Pro → Seedance 2.5 Omni",
+  "intent_tags": [
+   "product_ad"
+  ],
+  "use_when": "Перед видео товар упаковывается в «лист товара» — одно изображение со всеми ракурсами, текстурами и макро-деталями; его подают в Seedance 2.5 Omni. Из ответов автора: достаточно одного фото с одного ракурса; промпт адаптировать под товар в LLM; генерируется одним роликом.",
+  "inputs": [
+   "фото товара/продукта",
+   "аудио/голос"
+  ],
+  "confidence": "C",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "130_audi_rs6_full_chain_seedream_nbpro_kling_motion_seedance2_capcut",
+  "title": "Полная цепочка «я + моя машина» (шаг 4 теперь открыт): Seedream 4.5 модельный лист → Nano Banana Pro съёмка с авто → Kling Motion по видео-референсу → Seedance 2 (2×10 с) → CapCut",
+  "intent_tags": [
+   "client_in_clip",
+   "seamless_series",
+   "motion_transfer"
+  ],
+  "use_when": "Пять звеньев: (1) Seedream 4.5 из селфи + фото одежды делает композитный модельный лист 16:9; (2) Nano Banana Pro — фото с машиной; (3) Kling Motion переносит движение из реального видео-референса; (4) Seedance 2 по двум промптам на 10 с (девушка у Audi RS6 Avant на туманном мосту; движение машины) ",
+  "inputs": [
+   "фото лица/портрет человека",
+   "видео-референс (движение/клип)"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "131_meme_pov_party_you_as_hero_9_memes_seedance25_30s",
+  "title": "«Оживи легендарный мем с собой»: дом (@image1) + ваше фото (@image2) + 7 мем-персонажей → Seedance 2.5 30 с, POV-дубль с бесконечной вечеринки",
+  "intent_tags": [
+   "client_in_clip",
+   "pov_one_take"
+  ],
+  "use_when": "Непрерывный ручной POV на iPhone в 4:30 утра в доме «где вечеринка не закончилась»: HERO (@image2) проходит по комнатам, встречая персонажей мемов @image3…@image9, реалистичная тряска, whip-pan, зум с потерей качества, без музыки — только живой звук. Один ролик 30 с.",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "B/C",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "132_escalator_outfits_showcase_your_photo_3_flatlays_seedance25",
+  "title": "Показ образов на эскалаторе: ваше фото + 3 флэтлея одежды → Seedance 2.5 13 с одним планом",
+  "intent_tags": [
+   "client_in_clip"
+  ],
+  "use_when": "«INFINITE ESCALATOR — premium cinematic fashion editorial»: одна неизменная внешность (ваше фото), три строго изолированных образа по трём флэтлеям (обязательно с обувью) и три разные позы; 13 с, 9:16.",
+  "inputs": [
+   "фото лица/портрет человека",
+   "стартовый кадр",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "133_brand_object_on_stunt_ramp_object_identity_lock_seedance25",
+  "title": "Ваш товар/логотип на трюковой рампе: @Image1 объект (OBJECT IDENTITY LOCK) + @Image2 дорога (ROAD GEOMETRY LOCK) → Seedance 2.5",
+  "intent_tags": [
+   "product_ad"
+  ],
+  "use_when": "Кинореалистичный вертикальный ролик 8 с из двух референсов: объект бренда (@Image1, OBJECT IDENTITY LOCK — форма, цвета, брендинг, надписи без изменений) движется по необычной трюковой дороге-рампе (@Image2, ROAD GEOMETRY LOCK — изгиб, вертикальная рампа, красно-оранжевые светящиеся кромки, стальные",
+  "inputs": [
+   "аудио/голос",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "134_car_born_from_smoke_car_sheet_emblem_fpv_seedance25",
+  "title": "Автомобиль рождается из дыма: лист авто + эмблема → Seedance 2.5, FPV один дубль",
+  "intent_tags": [
+   "pov_one_take"
+  ],
+  "use_when": "20 с, один непрерывный FPV-пролёт без склеек: на заснеженной горной дороге в метель живой чёрный дым «крадёт» эмблему (@image2), бьётся бесформенным облаком, и из него спереди назад материализуется автомобиль по листу ракурсов (@image1, 1:1 во всех кадрах).",
+  "inputs": [
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "135_dinner_under_observation_neighbor_zoom_food_seedance25",
+  "title": "Ужин под наблюдением: ваше фото + фото еды → Seedance 2.5 15 с, «сосед снимает с зумом в окно»",
+  "intent_tags": [
+   "product_ad",
+   "client_in_clip"
+  ],
+  "use_when": "15 с, один план «сосед тайком снимает с максимальным зумом окно дома напротив в сумерках»: герой (@image1) ест ваше блюдо/напиток (@image2) так, как его едят на самом деле (блок EATING LOGIC); блюдо и упаковку не менять.",
+  "inputs": [
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "136_neighbor_peeping_window_zoom_mirror_curtain_seedance25",
+  "title": "«Сосед подглядывает»: 12 с, один ручной дубль из окна напротив — зум в окно стеклянной башни, герой дурачится у зеркала и задёргивает штору",
+  "intent_tags": [
+   "other"
+  ],
+  "use_when": "Шаблон «скрытая съёмка с телефона»; в виджете обсуждения рядом показан и промпт соседнего поста 328 («Моя боль — моя сила», 25 с, 10 шотов, притча о замке из камней) — оба промпта ниже дословно, нужный — блок про «window of a glass tower».",
+  "inputs": [
+   "аудио/голос",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "137_friend_song_two_photos_ref_video_new_video_not_source_editing",
+  "title": "«Когда друг включил свою песню»: 2 фото + реф-видео → Seedance 2.5 по шаблону «[Generation Task — New Video, Not Source Editing]», звук потом",
+  "intent_tags": [
+   "client_in_clip",
+   "seamless_series",
+   "animal"
+  ],
+  "use_when": "Двое людей (ваше фото и фото друга) и маленькая собака едут ночью в кабриолете — шоты, склейки, мимика и движения губ берутся из @video1 («motion guide only»). Шаблон переноса реальных людей в чужой ролик: модели прямо говорят, что это новое видео, а не правка исходника (обход отказов на редактирова",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "138_gangnam_style_three_people_location_ref_video_seedance25",
+  "title": "Gangnam Style с друзьями: 3 фото людей + фото локации + @video1 → Seedance 2.5",
+  "intent_tags": [
+   "seamless_series"
+  ],
+  "use_when": "Тот же шаблон «New Video, Not Source Editing»: трое друзей (@image1–3, жёсткие роли PERSON_A/B/C, B держит телефон) снимают влог в локации @image4, повторяя камеру, whip-pan переходы, танец и мимику из @video1.",
+  "inputs": [
+   "фото локации/города"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "139_baby_first_steps_parent_pov_seedance25_12s",
+  "title": "Первые шаги ребёнка от лица родителя: фото папы + фото ребёнка → Seedance 2.5 12 с",
+  "intent_tags": [
+   "pov_one_take"
+  ],
+  "use_when": "Один план 12 с, 16:9, POV от первого лица родителя, без музыки: @image1 — ребёнок (лицо, возраст, одежда из фото), второе фото — родитель; первые шаги малыша к камере.",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "140_little_knight_pet_and_person_seedance25_20s_4x3",
+  "title": "Маленький рыцарь: ваше фото + фото питомца → Seedance 2.5 20 с, 4:3",
+  "intent_tags": [
+   "client_in_clip",
+   "animal"
+  ],
+  "use_when": "«Высокобюджетный фильм на ARRI Alexa, 35-мм плёнка, 4:3»: питомец (@Image 1) и человек (@Image 2) — два рыцаря (правило доспехов ARMOR RULE), @Image 3 — локация, @Image 4 — зомби; 20 с. В посте указаны только ваше фото и фото питомца — локацию и зомби, видимо, даёт бот; при запуске вне бота нужны 4 ",
+  "inputs": [
+   "фото питомца"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "141_atm_jackpot_cctv_bw_seedance25_10s",
+  "title": "Джекпот в банкомате: ваше фото → Seedance 2.5 10 с, ЧБ камера видеонаблюдения",
+  "intent_tags": [
+   "client_in_clip"
+  ],
+  "use_when": "10 с, ЧБ «настоящая запись камеры видеонаблюдения», статичный план в тесной комнате с банкоматом, абсурдный комедийный поворот (джекпот); звук — из комментариев, добавить в редакторе.",
+  "inputs": [
+   "аудио/голос",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "142_doll_outfit_change_giant_hand_nb21_first_last_seedance25",
+  "title": "Смена образа «кукла и гигантская рука»: Nano Banana 2.1 первый/последний кадр из одного фото → Seedance 2.5 10 с по таймкодам 0,8 с",
+  "intent_tags": [
+   "product_ad",
+   "client_in_clip",
+   "seamless_series"
+  ],
+  "use_when": "Из одного фото в полный рост делаются два кадра в той же комнате и ракурсе: «только проснулась, пижама» и «готовый образ с сумкой». Seedance 2.5 с первым/последним кадром анимирует, как огромная рука «одевает» живую миниатюрную куклу: каждые ~0,8 с одно действие с микро-отскоком под игрушечную музык",
+  "inputs": [
+   "фото в полный рост",
+   "стартовый кадр",
+   "финальный кадр"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "143_scail2_character_prop_swap_first_frame_edit_local_free",
+  "title": "Замена персонажа/предмета в реальном видео бесплатно и локально: правка 1-го кадра (Flux Klein 9B / Krea 2 Identity Edit) → SCAIL 2 по ведущему видео (+ приёмы кропа и реверса)",
+  "intent_tags": [
+   "client_in_clip",
+   "vfx_effect"
+  ],
+  "use_when": "Первый кадр ведущего видео редактируется в нового героя (в той же позе и кадре) → SCAIL 2 (на базе Wan 2.1) переносит движение, сохраняя физику (жидкость в бокале, преломление), постоянство объектов и даже дорисовывая эффекты (огонь из кулака). Слабое место — текст в кадре. Комментарии: для дальних ",
+  "inputs": [
+   "стартовый кадр"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "144_recurring_character_360_turn_viral_frame_motion_swap",
+  "title": "Постоянный персонаж для рилсов: 3 ярких черты → Nano Banana Pro лицо и лист → 360°-поворот → кадр из вирусного ролика 1M+ → Motion Control-подмена",
+  "intent_tags": [
+   "talking_head",
+   "client_in_clip",
+   "meme",
+   "motion_transfer"
+  ],
+  "use_when": "Персонаж закрепляется листом (спереди, сбоку, сзади, крупные планы), из листа делается 360°-поворот — его используют как референс для каждого ролика. Дальше: скрин кадра из вирусного ролика, генерация героя в том же ракурсе, подмена через Kling Motion Control / Higgsfield / Seedance с сохранением фо",
+  "inputs": [
+   "фото в полный рост",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "145_fruit_drama_talking_characters_cliffhanger_start_frames_veo_kling",
+  "title": "Говорящая фруктовая мини-драма с клиффхэнгером (11M просмотров): сценарий → нарезка на сцены с описанием 1-го кадра → лист героев → стартовые кадры → Veo 3.1 / Kling start-end → CapCut",
+  "intent_tags": [
+   "talking_head",
+   "client_in_clip",
+   "seamless_series"
+  ],
+  "use_when": "Конвейер на серию: LLM пишет весь сценарий сразу (сцена = одна эмоция, короткие реплики, клиффхэнгер в конце) → сценарий режется на клипы с описанием первого кадра → каждый персонаж генерится один раз (спереди и сбоку) → из листа стартовый кадр на каждый клип (10–20 вариантов, берётся лучший) → аним",
+  "inputs": [
+   "стартовый кадр",
+   "финальный кадр",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "146_burger_window_candid_seedance",
+  "title": "Шуточный ролик «застукали с бургером в окне» — 3 рефа (пакет бренда, бургер, герой) → Seedance 2.5",
+  "intent_tags": [
+   "product_ad"
+  ],
+  "use_when": "Ночной «случайный» ролик с телефона: камера через двор зумит в окно, парень ест бургер из фирменного пакета, замечает съёмку и задёргивает шторы. Под рекламу еды: подставить свой пакет и продукт.",
+  "inputs": [
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "147_knight_dragon_charsheet_seedance",
+  "title": "Рыцарь и дракон из фото лица — карта персонажа (NanoBanana Pro) → Seedance 2.0/2.5 14 с (видеопромпт не загрузился)",
+  "intent_tags": [
+   "client_in_clip"
+  ],
+  "use_when": "Сюжет 14 с: рыцарь пьёт кофе, бросает стакан и камеру за спину, камера падает набок, герой достаёт меч, дракон открывает глаз. Лицо — с фото клиента через карту персонажа.",
+  "inputs": [
+   "фото лица/портрет человека",
+   "фото в полный рост"
+  ],
+  "confidence": "C",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "148_crowd_replacement_hero_clones_seedance",
+  "title": "Замена героя и всей массовки в чужом видео (главный — @image1, толпа — клоны @image2) — Seedance 2.5 Omni Reference 30 с",
+  "intent_tags": [
+   "client_in_clip",
+   "meme",
+   "animal",
+   "dance"
+  ],
+  "use_when": "Берётся вирусное видео с толпой (у автора — собаки танцуют у входа в школу). Первого идущего героя меняют на ваш реф, всех остальных — на клонов второго рефа; хореография, камера и окружение сохраняются.",
+  "inputs": [
+   "видео-референс (движение/клип)"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "149_door_opens_into_photo_world_seedance",
+  "title": "Своё видео «открываю дверь» + фото любого мира → дверь открывается в этот мир, герой входит — Seedance 2.5",
+  "intent_tags": [
+   "other"
+  ],
+  "use_when": "Снимаете на телефон, как стоите у межкомнатной двери и открываете её. Даёте фото локации (лес, подземелье, луг). Модель сохраняет вас и движение камеры, а за дверью открывается и оживает мир с фото, свет из проёма падает на лицо.",
+  "inputs": [
+   "фото локации/города"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "150_kling_keyframes_popup_objects",
+  "title": "Предметы «выпрыгивают» по одному на пустую скамейку — Kling Keyframes (старт: пусто, финал: с предметами) 5 с",
+  "intent_tags": [
+   "product_ad",
+   "vfx_effect"
+  ],
+  "use_when": "UI-эффект «поп-ап»: на кадре с героем на скамейке предметы появляются строго по одному из поверхности скамейки (0%→115%→100%, ~180 мс, пауза ~400 мс), камера неподвижна. Подходит для раскладки товара бренда.",
+  "inputs": [
+   "стартовый кадр",
+   "финальный кадр"
+  ],
+  "confidence": "B/C",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "151_super_landing_topdown_kling_keyframes",
+  "title": "«Супер-приземление» с высоты 2 км в твой кадр — NanoBanana 2 (вид сверху с локации) → Kling 3.0 Keyframes",
+  "intent_tags": [
+   "other"
+  ],
+  "use_when": "Из скриншота своего видео NanoBanana 2 делает кадр той же локации строго сверху с 2 км. Kling Keyframes связывает: кадр 1 — вид сверху, кадр 2 — исходный скриншот, получается стремительное падение камеры прямо в вашу сцену.",
+  "inputs": [
+   "видео-референс (движение/клип)"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "152_floating_jacket_nb2_kling",
+  "title": "«Парящая куртка» сама надевается на идущего человека — NanoBanana 2 (снять куртку, повесить в воздухе) → Kling 3.0 i2v",
+  "intent_tags": [
+   "other"
+  ],
+  "use_when": "Скриншот, где человек идёт в куртке. NanoBanana 2 снимает с него куртку и вешает её в воздухе на переднем плане. Kling анимирует: человек подходит, куртка облетает его плащом и надевается.",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "153_symbiote_liquid_to_your_car_seedance",
+  "title": "Чёрный жидкий «симбиот» собирается в вашу машину — Seedance 2.5, 20 с (480p → апскейл 1080)",
+  "intent_tags": [
+   "client_in_clip"
+  ],
+  "use_when": "Глянцевая чёрная жидкость течёт по пустому паркингу, захватывает эмблему и превращается в автомобиль с фото клиента. Подходит для дилеров, детейлинга, тюнинга; машину можно менять.",
+  "inputs": [
+   "фото лица/портрет человека"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "154_realism_gas_station_dashcam_seedance",
+  "title": "«Реализм»: вы на своей машине на заправке, потом съёмка с регистратора на трассе — Seedance 2.5, 15 с, 16:9",
+  "intent_tags": [
+   "client_in_clip"
+  ],
+  "use_when": "Три рефа: ваше фото, фото машины, фото локации (заправки). Ночью вы подъезжаете к заправке, заправляетесь, садитесь и уезжаете; затем любительская съёмка с регистратора на трассе.",
+  "inputs": [
+   "логотип",
+   "фото локации/города"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "155_space_to_your_car_one_shot_seedance",
+  "title": "Один кадр из космоса через атмосферу в город к вашей машине (номер сохраняется) — Seedance 2.5, 10 с",
+  "intent_tags": [
+   "pov_one_take"
+  ],
+  "use_when": "Непрерывный пролёт камеры: космос → атмосфера → Манхэттен → ваша машина с фото, оригинальный номер — абсолютный приоритет. Город и авто меняются в промпте.",
+  "inputs": [
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "156_bullet_time_fashion_hero_object_seedance",
+  "title": "Эффект заморозки времени (bullet time) с вами и предметом-героем (очки) — Seedance 2.5, 13 с",
+  "intent_tags": [
+   "client_in_clip",
+   "vfx_effect"
+  ],
+  "use_when": "Три рефа: ваше фото (персонаж), фото локации (только окружение), фото очков (предмет-герой). Модная bullet-time сцена, где время замирает, камера облетает, предмет в центре; жёсткий контроль числа предметов.",
+  "inputs": [
+   "фото товара/продукта",
+   "фото в полный рост",
+   "фото локации/города"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "157_birthday_jump_over_car_capcut_freeze",
+  "title": "Видео на ДР за 30 сек: прыжок в шпагат над своей машиной + стоп-кадр Ч/Б и надпись HB — Seedance 2.5 6 с → CapCut",
+  "intent_tags": [
+   "client_in_clip",
+   "pov_one_take"
+  ],
+  "use_when": "Ваше фото и фото машины. Герой прыгает (шпагат) над машиной, над ним пролетает самолёт; в CapCut замедлить полёт, в конце «зависание» в Ч/Б и надпись HB.",
+  "inputs": [
+   "фото лица/портрет человека",
+   "стартовый кадр",
+   "аудио/голос",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "158_h3_change_angle_sketch_22frames",
+  "title": "Сменить ракурс любой картинки: MiniMax H3 Ref2Vid на 22 кадра + скетч-раскадровка как реф → берёте один кадр",
+  "intent_tags": [
+   "other"
+  ],
+  "use_when": "Ref2Vid-модель используется как генератор кадров: длина ровно 22 кадра, выход VAE Decode сразу в Save Image. Простой скетч нового ракурса добавляется как ещё один реф и объявляется раскадровкой Shot 1. Из 22 кадров берёте лучший — получается та же сцена и тот же персонаж под новым углом (ключевой ка",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "159_talking_head_new_angles_seedream_seedance",
+  "title": "Один «говорящий» клип → вторая и третья камера: Gemini описывает 1-й кадр → Seedream 5.0 переснимает с 3 позиций → Seedance 2.5 (still + видео-реф)",
+  "intent_tags": [
+   "talking_head"
+  ],
+  "use_when": "Из одного клипа с говорящей головой получаются новые ракурсы: движение берётся из исходника, камера — из нового still. Исходный звук — мастер-дорожка, новые ракурсы синхронизируются под него.",
+  "inputs": [
+   "стартовый кадр",
+   "аудио/голос"
+  ],
+  "confidence": "C",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "160_safari_natgeo_photo_edit_then_animate_lion_kling",
+  "title": "Своё фото → кадр сафари-фильма National Geographic (правка фото) → оживление: лев проходит у камеры — 2 шага",
+  "intent_tags": [
+   "client_in_clip",
+   "object_alive"
+  ],
+  "use_when": "Из обычного фото человека делается кадр «вас сняли в сафари-экспедиции» (саванна, закат, львы, слоны), затем этот кадр оживляется: лев проходит мимо камеры на переднем плане, вдали слоны, трава и пыль в воздухе.",
+  "inputs": [
+   "фото лица/портрет человека",
+   "стартовый кадр"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "161_stadium_broadcast_capture_photo_edit_then_animate_16x9",
+  "title": "«Тебя случайно показали на стадионе»: фото → кадр ТВ-трансляции бейсбола (анти-«ИИ-красота») → оживление в горизонтальный эфирный кадр 16:9",
+  "intent_tags": [
+   "beauty_ad",
+   "client_in_clip",
+   "animal",
+   "object_alive"
+  ],
+  "use_when": "Фото превращается в «захват» спортивной трансляции: обычный зритель на трибуне, которого случайно поймала камера; явные запреты на улучшение лица, глаз, подбородка, блеск кожи; добавлены шум сжатия и размытие. Затем кадр оживляется как горизонтальный ТВ-эфир.",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "162_boss_notification_phone_frame_then_driver_throws_phone_car_flies_seedance25_omni",
+  "title": "Стартовый кадр «уведомление от босса» на экране телефона → Seedance 2.5 omni: ваше лицо за рулём, телефон летит в окно, родстер взлетает с рампы (смешная концовка)",
+  "intent_tags": [
+   "client_in_clip",
+   "seamless_series",
+   "meme"
+  ],
+  "use_when": "Трёхсоставной omni-референс: @Image1 — стартовый кадр (крупно телефон с уведомлением «Boss: Quick call? I have 47 slides»), @Image2 — ваше лицо, @Video1 — видео взлёта машины (поза, салон, рампа, камера). 4 шота с жёсткими склейками: вибрация телефона → водитель «всё, хватит», выдох → телефон летит ",
+  "inputs": [
+   "фото лица/портрет человека",
+   "видео-референс (движение/клип)",
+   "стартовый кадр",
+   "аудио/голос",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "163_zombie_alien_donut_time_freeze_comedy_30s_seedance25",
+  "title": "Комедия 30 с: зомби и пришелец в пончиковой в 2 ночи, заморозка времени, драка, перемирие и панчлайн в последнем кадре — Seedance 2.5 одним промптом",
+  "intent_tags": [
+   "talking_head",
+   "client_in_clip",
+   "seamless_series",
+   "vfx_effect"
+  ],
+  "use_when": "Шаблон короткого комедийного скетча на 30 с: FORMAT / NO ON-SCREEN TEXT / IDENTITY LOCK / два персонажа с голосами / окружение / таймлайн по секундам с репликами / LAST FRAME (панчлайн) / CAMERA / LIGHT / VFX / ACTING / AUDIO / LOCKS. Меняя персонажей и место, получаем серию скетчей.",
+  "inputs": [
+   "аудио/голос",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "164_boutique_window_display_to_runway_outfit_change_wan3",
+  "title": "Витрина бутика: девушка снимает комплект с витрины, исчезает за подиумом и выходит уже в нём — реклама одежды, Wan 3.0 (Picsart)",
+  "intent_tags": [
+   "product_ad",
+   "client_in_clip"
+  ],
+  "use_when": "Статичная камера с тротуара смотрит в стеклянную витрину; комплект висит на витрине; модель входит, «разбирает» витрину почти тайм-лапсом, уходит за пьедестал и возвращается одетой в этот комплект, финальная поза. Под замену: свой бренд, вещи, модель.",
+  "inputs": [
+   "стартовый кадр",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "165_doorbell_cam_horror_comedy_15s_loop_seedance",
+  "title": "«Она клялась, что пришла одна»: 15 с «слитое видео с дверного звонка», хоррор-шутка с петлёй — Seedance (через makeugc)",
+  "intent_tags": [
+   "product_ad",
+   "talking_head",
+   "client_in_clip",
+   "seamless_series"
+  ],
+  "use_when": "Text-to-video без референса: фиксированная fisheye-камера звонка ночью, девушка в костюме на Хэллоуин, голос хозяйки из динамика, «фигура» появляется только на выпадении кадров, две жёсткие склейки (2,0 и 13,0 с). Каркас «found footage»: CORE RULES / CHARACTER / FACE / VOICE / CAMERA / LOOK / сториб",
+  "inputs": [
+   "стартовый кадр",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "166_turtle_mini_story_9_scenes_fail_and_closing_text_seedance25_30s",
+  "title": "Мини-история 30 с в 9 сценах: черепашка мечтает полететь на листе, неудача и финальная плашка «Same dream. Next attempt!» — Seedance 2.5",
+  "intent_tags": [
+   "other"
+  ],
+  "use_when": "Каркас «полноценная история за 30 с одним промптом»: блок стиля + блок постоянства героя → 9 сцен по 3–4 с с таймкодами → финальный текст → Global Instructions (что сохранять и чего избегать).",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "167_selfie_handheld_phone_ugc_timeline_15s_seedance25",
+  "title": "Селфи «снято на телефон»: таймлайн 15,2 с с низким ракурсом, рывками к лицу, расфокусом и тряской — Seedance 2.5",
+  "intent_tags": [
+   "product_ad",
+   "talking_head",
+   "client_in_clip"
+  ],
+  "use_when": "Не «красивый рекламный кадр», а ритм ручной селфи-съёмки: камера низко на теле → резко вверх к лицу → отъезд/опускание → внезапный экстремально крупный план. Тряска, потеря фокуса, руки перекрывают кадр. Годится как блок «снято на телефон» для UGC-рекламы (подставить своего героя/товар).",
+  "inputs": [
+   "фото лица/портрет человека"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "168_soul_id_character_into_hollywood_scenes_seedance2_4k_higgsfield",
+  "title": "Себя в голливудские сцены: обучить персонажа Soul ID (≈20 фото) в Higgsfield → вызывать его как элемент в Seedance 2.0 4K (5 сцен с промптами)",
+  "intent_tags": [
+   "talking_head",
+   "client_in_clip",
+   "seamless_series",
+   "animal",
+   "vfx_effect"
+  ],
+  "use_when": "Автор говорит, что Seedance 2.0 блокирует загрузку своего лица напрямую, поэтому лицо идёт через персонажа Soul ID в Higgsfield: обучаешь на ~20 фото, и персонаж становится элементом, который вызывается в промпте (в файле — токен вида <<<b9e9949f-…>>>). Дальше в промпте описываешь, во что одет и что",
+  "inputs": [
+   "финальный кадр",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "169_clay_whitemodel_previs_then_transform_look_seedance25",
+  "title": "3D «белая модель» / clay-превиз в Seedance 2.5 (4 стиль-блока + 11 примеров: товар, драка, машина) → потом перевести в любой вид",
+  "intent_tags": [
+   "product_ad",
+   "client_in_clip",
+   "vfx_effect"
+  ],
+  "use_when": "Приём: сначала генерируется «неготовая» 3D-анимация из матовой светло-серой глины — модель тратит силы только на движение, физику, камеру и монтаж. Стиль-блок ставится в начало любого промпта. По описанию автора, такой клей-рендер потом полностью переводится в любой вид в Seedance 2.5.",
+  "inputs": [
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "170_birthday_number_candles_fpv_forest_chase_your_photo_seedance25_24s",
+  "title": "День рождения: вы на «вампирской скорости» гоняетесь в лесу за свечами-цифрами вашего возраста, они влетают в торт — FPV-погоня, Seedance 2.5, 24 с",
+  "intent_tags": [
+   "pov_one_take"
+  ],
+  "use_when": "Одно фото + число (возраст) → 24 с FPV-погони: свечи-цифры вылетают из-за спины, удар ногой, поимка, бросок, обе свечи по очереди втыкаются в торт, загораются, герой задувает. Число задаётся строкой NUMBER.",
+  "inputs": [
+   "аудио/голос",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "171_traffic_jam_car_takes_off_flips_coffee_chaos_your_photo_car_sheet_seedance25",
+  "title": "Пробка в большом городе: вы за рулём футуристичной машины жмёте красную кнопку — машина неуклюже взлетает и кувыркается, кофе по салону (абсурдная концовка), Seedance 2.5, 13 с",
+  "intent_tags": [
+   "client_in_clip"
+  ],
+  "use_when": "@image1 — водитель (ваше фото), @image2 — машина (может быть лист с ракурсами — собрать в одну машину). 4 шота: улица спереди → салон, скука, нажатие кнопки → взлёт на струях пара и кувырок → хаос в салоне и крик.",
+  "inputs": [
+   "аудио/голос",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "172_friday_6pm_backpack_parachute_office_roof_gta_style_seedance25",
+  "title": "Пятница 18:00 в стиле GTA: офисный рюкзак оказывается парашютом, вы прыгаете с крыши бизнес-центра и планируете к пляжному бару — Seedance 2.5, 15 с",
+  "intent_tags": [
+   "pov_one_take"
+  ],
+  "use_when": "Одно фото → один непрерывный кадр от третьего лица в графике «некст-ген открытого мира» без интерфейса: персонаж в своей одежде (жёсткий CHARACTER LOCK), рюкзак раскрывается в парашют, полёт над городом к бару на пляже.",
+  "inputs": [
+   "стартовый кадр",
+   "аудио/голос",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "173_laugh_then_cry_two_photos_shared_rhythm_orbit_seedance25",
+  "title": "«Боль под маской счастья»: два ваших фото в разных образах лицом к лицу — один смеётся, другой плачет в одном ритме, облёт камеры по кругу — Seedance 2.5, 15 с",
+  "intent_tags": [
+   "other"
+  ],
+  "use_when": "Два фото (у автора — вы в двух образах) → A и B держат друг друга за одежду на чёрном фоне; общий судорожный ритм: сначала смех A, затем рыдания B; камера медленно облетает почти полный круг.",
+  "inputs": [
+   "аудио/голос",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "174_stones_thrown_become_castle_motivational_parable_your_photo_seedance25_25s",
+  "title": "«Моя боль — моя сила»: толпа бросает в вас камни, вы складываете из них стену, которая вырастает в готический замок — 10 шотов, Seedance 2.5, 25 с",
+  "intent_tags": [
+   "seamless_series",
+   "animal"
+  ],
+  "use_when": "Одно фото → мотивационная притча из 10 шотов с жёсткими склейками на заданных секундах: злая толпа, вы стоите неподвижно, камни отскакивают (без крови), вы собираете камни, стена растёт в замок, финал — вы смотрите из окна замка.",
+  "inputs": [
+   "аудио/голос",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "175_blow_out_pumpkin_light_moves_into_face_jump_scare_seedance25_10s",
+  "title": "Хэллоуин: задуваете свечу в тыкве — свет переходит в ваши глаза и рот, лицо становится живым фонарём, скример в камеру — Seedance 2.5, 10 с",
+  "intent_tags": [
+   "seamless_series"
+  ],
+  "use_when": "Одно фото → один непрерывный кадр по грудь в полной темноте: свеча в тыкве гаснет, свет загорается внутри лица, проступает текстура тыквы, пауза, резкий выпад к камере с криком, обрыв в чёрное на 9,7 с.",
+  "inputs": [
+   "аудио/голос",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "176_kfashion_day_in_seoul_15_shots_face_outfit_refs_seedance25_30s",
+  "title": "«День в Сеуле» в стиле K-fashion: ваше фото (@Image1) + фото образа (@Image2) → 15 планов за 30 с одним роликом, Seedance 2.5 (образ надевается с SHOT 6)",
+  "intent_tags": [
+   "client_in_clip"
+  ],
+  "use_when": "Одна генерация 30 с, 16:9: 15 планов с указанием крупности и оптики (ECU 85mm, WS 35mm handheld, bird's-eye…), SFX на каждый план. Лицо держится по @Image1 во всех планах, наряд из @Image2 появляется в SHOT 5 (раскладка на кровати) и не меняется с SHOT 6 по SHOT 15. Сменные звенья: город, образ, каф",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "177_local_music_video_qwen_image_keyframes_minimax_h3_ref2va_latentsync_seedvr2_beat_grid",
+  "title": "Клип на 4 минуты полностью локально: Qwen-Image 2.1 (мудборд, лист персонажа на 8 ракурсов, 3 ключевых кадра на план) → MiniMax H3 Ref2VA (ключевой кадр = первый кадр, стем ударных/вокала как reference audio) → LatentSync 1.6 → SeedVR2 7B → авто-QA → монтаж по сетке тактов",
+  "intent_tags": [
+   "talking_head",
+   "seamless_series",
+   "vfx_effect"
+  ],
+  "use_when": "Конвейер «музыка → клип»: стемы (Demucs htdemucs_ft + BS-RoFormer) и бит (beat_this) → 74 плана, по одному на такт (3,42 с) → кадры Qwen-Image → видео H3 с аудио-референсом нужного стема → липсинк на поющих планах → апскейл → автоматическая проверка каждого дубля (ArcFace — лицо, DINOv2 — скрытые ск",
+  "inputs": [
+   "стартовый кадр",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "178_original_character_lora_zimage_stills_seedance_clips_minimax_h3_t2v_dlss5",
+  "title": "Свой персонаж для MiniMax H3 через LoRA: 8 кадров Z-Image Turbo + голос ElevenLabs + 14 клипов Seedance → обучение LoRA (Fizgig) → H3 t2v 864×480 → 3D latent upscale 2 МП → refine 0.4 → DLSS 5",
+  "intent_tags": [
+   "talking_head"
+  ],
+  "use_when": "Создаёт «актёра» из ничего: стоп-кадры Z-Image Turbo (LoRA Smartphone Snapshot Photo Reality v8 — «как с телефона») → короткие говорящие клипы Seedance с этими кадрами как референсами + свой голос ElevenLabs → датасет → LoRA для H3. Дальше герой генерится в t2v H3 (по словам автора, качество выше, ч",
+  "inputs": [
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "179_image_to_video_long_take_3x10s_real_last_frame_stitch_rules_ilang",
+  "title": "Длинный «один дубль» 30 с из одной картинки: 3 сегмента × 10 с, вход каждого следующего — реальный последний кадр предыдущего, приёмка по правилам J1–J4, жёсткая склейка ffmpeg (спецификация iLang IML v1.0)",
+  "intent_tags": [
+   "seamless_series",
+   "animal"
+  ],
+  "use_when": "Это не промпт сцены, а регламент-«ТЗ» для агента или оператора, который собирает длинный ролик из одной картинки: сначала из картинки фиксируются константы (палитра, якорь, именованные объекты, эмоция начала/конца, напряжение, масштаб героя, камера). Потом 3 сегмента по 10 с: Seg1 — 3 с статики → ме",
+  "inputs": [
+   "стартовый кадр",
+   "финальный кадр"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "180_minimax_h3_singularity_v2_selflift_progressive_upscale_vosr2_face_refine_comfyui",
+  "title": "Починка MiniMax H3 одним workflow ComfyUI: базовая модель Singularity V2 (быстрое действие без slow-mo, матовая кожа) → SelfLift (low-res → 3D latent upscale → refine в одной ноде) → YOLOv8 + VOSR 2.0 1.0x для лиц",
+  "intent_tags": [
+   "beauty_ad",
+   "seamless_series"
+  ],
+  "use_when": "Звено «доводки» для конвейера на MiniMax H3: решает три проблемы — «пластиковая» глянцевая кожа на длинных клипах, «плавающее» замедленное движение и долгий рендер в высоком разрешении. Две сборки: r2va (генерация) и face_refine (лица).",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "C",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "181_your_photo_character_sheet_nbpro_remake_into_trend_reel_veoseebot",
+  "title": "Вставить себя в чужой трендовый рилс: своё фото + фото образа → модельный лист Nano Banana Pro (1 большой кадр + 4 ракурса) → VeoSeeBot Remake по ссылке на рилс («Найти людей» → подставить карточку)",
+  "intent_tags": [
+   "product_ad",
+   "client_in_clip",
+   "seamless_series",
+   "meme"
+  ],
+  "use_when": "Двухшаговая цепочка «замена человека в готовом вирусном ролике». Шаг 1: из своего фото и фото одежды делается композитный модельный лист 16:9 (полный рост слева + 4 средних плана: анфас, профиль 90°, 3/4, сверху) на светло-сером фоне. Шаг 2: в режиме Remake даётся ссылка на чужой Instagram-рилс, бот",
+  "inputs": [
+   "фото товара/продукта",
+   "фото лица/портрет человека"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "182_two_looks_plain_to_transformed_cards_remake_trend_reel_veoseebot",
+  "title": "Трансформация «обычная ↔ образ» в трендовом рилсе: два портрета Nano Banana Pro (обычный + демон / Веном / ангел-демон) → VeoSeeBot Remake по ссылке на рилс",
+  "intent_tags": [
+   "product_ad",
+   "client_in_clip",
+   "seamless_series",
+   "meme",
+   "vfx_effect"
+  ],
+  "use_when": "Тот же приём замены человека в чужом рилсе, но на два персонажа ролика подставляются два разных образа одного человека: обычный портрет и «трансформированный» (демон на Хэллоуин, полулицо Венома в стиле Y2K, ангел/демон). Получается трендовый переход «я → монстр» без ручного монтажа.",
+  "inputs": [
+   "фото товара/продукта",
+   "фото лица/портрет человека"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "183_neo_noir_sniper_window_three_refs_your_photo_seedance25_15s",
+  "title": "Нео-нуар «снайпер»: героиня (@Image1) + жених на горящем полароиде (@Image2) + цель в окне (@Image3) — один 15-секундный ролик 9:16 по таймлайну, Seedance 2.5 с тремя фото-референсами",
+  "intent_tags": [
+   "other"
+  ],
+  "use_when": "Одношаговая схема «свои фото как референсы → кино-сцена 15 с». Фото генерировать не нужно: 3 реальных фото (главная героиня, мужчина, девушка в окне) прикрепляются как референсные изображения, промпт расписан по секундам.",
+  "inputs": [
+   "аудио/голос",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "184_birthday_rolls_royce_sunroof_champagne_shot_two_selfies_seedance25_15s",
+  "title": "Видео-поздравление «С Днём Рождения меня!»: два селфи (вы + вторая половинка-водитель) → Seedance 2.5, 15 с 9:16 — ночное шоссе, Rolls-Royce Cullinan, шампанское из люка, выстрел по бутылке, воздушный поцелуй, титр",
+  "intent_tags": [
+   "product_ad",
+   "client_in_clip"
+  ],
+  "use_when": "Два реальных селфи → один 15-секундный ролик с таймкодами 0–4 / 4–8 / 8–12 / 12–15 с: съёмка с соседней машины, шампанское, бросок и выстрел по бутылке, воздушный поцелуй, обгон, уход в люк, белый курсивный титр «С Днём Рождения меня!». Отдельные блоки фиксируют цвет машины, номера и неизменность ли",
+  "inputs": [
+   "фото лица/портрет человека",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "185_two_looks_cards_umbrella_transition_ugc_template_veoseebot",
+  "title": "Переход «зонтик»: две карточки с разными образами (Nano Banana Pro, модельный лист) → шаблон «Umbrella Transition ☂️» в разделе UGC-контент VeoSeeBot",
+  "intent_tags": [
+   "product_ad",
+   "talking_head",
+   "client_in_clip",
+   "seamless_series",
+   "vfx_effect"
+  ],
+  "use_when": "Шаг 1 — две карточки-модельных листа одного человека в двух образах (промпт тот же, что в 181, с правками: приоткрытые губы, серьёзное лицо, маникюр в цвет юбки). Шаг 2 — UGC-шаблон бота «Umbrella Transition», куда грузятся обе карточки в нужном порядке; по названию — переход между образами через зо",
+  "inputs": [
+   "фото товара/продукта"
+  ],
+  "confidence": "C",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "186_techhalla_monument_valley_phone_30s_one_take",
+  "title": "Фото «с телефона туриста» как первый кадр (Magnific One) → Seedance 2.5, один дубль 30 с с героями по референсам",
+  "intent_tags": [
+   "product_ad",
+   "client_in_clip",
+   "pov_one_take",
+   "animal"
+  ],
+  "use_when": "Сначала фиксируется первый кадр — «любительский снимок с телефона» на смотровой площадке Monument Valley, где на вершине скалы еле видны крошечные люди с грилем. Затем Seedance 2.5 одним дублем 30 с без склеек «зумит» телефоном к вершине и разыгрывает сюжет: стейк, кот приносит доллар, прыжок со ска",
+  "inputs": [
+   "стартовый кадр",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "187_techhalla_transylvania_dracula_phone_30s",
+  "title": "Человек с фото → Дракула в Трансильвании: кадр Magnific One «снимок туриста» → Seedance 2.5 30 с с превращением в летучих мышей",
+  "intent_tags": [
+   "pov_one_take"
+  ],
+  "use_when": "Шаблон автора: «It's always the same. First lock the initial frame with Magnific One…» — снимок «туриста на телефон Samsung Galaxy A54» с мужчиной с фото в костюме Дракулы на башне замка → Seedance 2.5 (можно добавить character sheets) — 30 с одним дублем: крэш-зум на башню, тост, прыжок, превращени",
+  "inputs": [
+   "стартовый кадр",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "188_techhalla_trailer_lake_neighbor_phone_30s",
+  "title": "Мини-ролик «соседская съёмка на телефон»: трейлер скатывается в озеро, кот выбивает полено, финальное селфи (Seedance 2.5, 30 с от первого кадра)",
+  "intent_tags": [
+   "client_in_clip",
+   "animal",
+   "object_alive"
+  ],
+  "use_when": "Мини-ролик «соседская съёмка на телефон»: трейлер скатывается в озеро, кот выбивает полено, финальное селфи (Seedance 2.5, 30 с от первого кадра)",
+  "inputs": [
+   "фото лица/портрет человека",
+   "стартовый кадр",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "189_techhalla_mended_midjourney_sheets_two_clips_still_ref",
+  "title": "«Mended»: 2 character sheet + окружение (Midjourney) → клип 1 (20 с) → стоп-кадр из клипа 1 как референс пространства для клипа 2 (30 с, бой)",
+  "intent_tags": [
+   "other"
+  ],
+  "use_when": "«Mended»: 2 character sheet + окружение (Midjourney) → клип 1 (20 с) → стоп-кадр из клипа 1 как референс пространства для клипа 2 (30 с, бой)",
+  "inputs": [
+   "фото товара/продукта"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "190_techhalla_piano_midi_threejs_seedance_finger_sync",
+  "title": "Синхрон пальцев по нотам: Suno → MIDI → Three.js (один HTML) 3D-видео → первый кадр в Magnific One → Seedance 2.5 с двумя референсами",
+  "intent_tags": [
+   "other"
+  ],
+  "use_when": "Синхрон пальцев по нотам: Suno → MIDI → Three.js (один HTML) 3D-видео → первый кадр в Magnific One → Seedance 2.5 с двумя референсами",
+  "inputs": [
+   "видео-референс (движение/клип)",
+   "стартовый кадр"
+  ],
+  "confidence": "C",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "191_ivanka_humeniuk_romantic_dramedy_12_maps_6x30s_seedance",
+  "title": "Короткий фильм ~3 мин с диалогами: 12 «карт» (листы персонажей, реквизит в 2 состояниях, локации, схема рассадки) → 6 сцен Seedance 2.5 по 30 с с FOV, жёсткими склейками и фиксированными голосами",
+  "intent_tags": [
+   "talking_head",
+   "seamless_series"
+  ],
+  "use_when": "Автор: «Dropping all the prompt maps + animation (Seedance 2.5) settings for Scene 1 in the thread below! Full workflow for the rest of the scenes is in my G-Drive link.» Принцип: каждая сцена получает только нужные «карты» (@image1…@imageN): трёхпанельные листы персонажей (портрет — единственный ре",
+  "inputs": [
+   "фото лица/портрет человека",
+   "фото в полный рост",
+   "стартовый кадр",
+   "аудио/голос",
+   "фото локации/города"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "192_dankieft_ctlt_stills_seedance_camera_tricks_voice_ref",
+  "title": "Реалистичная «съёмка с рук»: кадры по формуле CTLT (Camera→Tone→Lighting→Texture) + character sheet → Seedance 2.5 1080p шаблоны «поведения камеры» (handheld, crash zoom, скрытая съёмка, whip pan, отход назад, перекрытие кадра, экспозиция, промах фокуса) с голосом героя из аудио-референса",
+  "intent_tags": [
+   "talking_head"
+  ],
+  "use_when": "Реалистичная «съёмка с рук»: кадры по формуле CTLT (Camera→Tone→Lighting→Texture) + character sheet → Seedance 2.5 1080p шаблоны «поведения камеры» (handheld, crash zoom, скрытая съёмка, whip pan, отход назад, перекрытие кадра, экспозиция, промах фокуса) с голосом героя из аудио-референса",
+  "inputs": [
+   "фото в полный рост",
+   "аудио/голос",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "193_neurothobrain_cartoon_seedance_template_voices_shots",
+  "title": "ИИ-мультик по ролику-образцу: лист персонажей → идея 30 с → заполняемый шаблон Seedance 2.5 с @голосами и раскадровкой по секундам (+ телефонное видео → Seedance 2.5)",
+  "intent_tags": [
+   "talking_head",
+   "client_in_clip",
+   "motion_transfer"
+  ],
+  "use_when": "ИИ-мультик по ролику-образцу: лист персонажей → идея 30 с → заполняемый шаблон Seedance 2.5 с @голосами и раскадровкой по секундам (+ телефонное видео → Seedance 2.5)",
+  "inputs": [
+   "видео-референс (движение/клип)",
+   "аудио/голос"
+  ],
+  "confidence": "C",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "194_house_assembles_reverse_gravity_nb2_seedance25",
+  "title": "«Дом собирается сам» для застройщиков/агентов недвижимости: Nano Banana 2 убирает дом с фото → Seedance 2.5 (пустая сцена = первый кадр, исходное фото = последний кадр), 15 с, обратная гравитация",
+  "intent_tags": [
+   "seamless_series",
+   "pov_one_take"
+  ],
+  "use_when": "«Дом собирается сам» для застройщиков/агентов недвижимости: Nano Banana 2 убирает дом с фото → Seedance 2.5 (пустая сцена = первый кадр, исходное фото = последний кадр), 15 с, обратная гравитация",
+  "inputs": [
+   "стартовый кадр",
+   "финальный кадр",
+   "аудио/голос",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "195_ugc_selfie_cosmetics_russian_speech_seedance25",
+  "title": "UGC-ролик косметики «снято на фронталку» с русской речью: фото девушки (@Image1) + фото продукта (@Image2) → один промпт Seedance 2.5 на 15 с, 4 сцены с репликами + правила, как заставить Seedance говорить по-русски",
+  "intent_tags": [
+   "product_ad",
+   "beauty_ad",
+   "talking_head"
+  ],
+  "use_when": "UGC-ролик косметики «снято на фронталку» с русской речью: фото девушки (@Image1) + фото продукта (@Image2) → один промпт Seedance 2.5 на 15 с, 4 сцены с репликами + правила, как заставить Seedance говорить по-русски",
+  "inputs": [
+   "фото товара/продукта",
+   "аудио/голос",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "196_perfume_ad_from_bottle_photo_seedance25_one_prompt",
+  "title": "Имиджевая реклама парфюма из одного фото флакона: @Image1 (флакон) → один промпт Seedance 2.5 на 15 с («Красная Москва» в современной московской квартире)",
+  "intent_tags": [
+   "product_ad",
+   "beauty_ad",
+   "client_in_clip"
+  ],
+  "use_when": "Имиджевая реклама парфюма из одного фото флакона: @Image1 (флакон) → один промпт Seedance 2.5 на 15 с («Красная Москва» в современной московской квартире)",
+  "inputs": [
+   "фото товара/продукта",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "197_own_photo_witch_flight_over_real_city_seedance25",
+  "title": "«Ты летишь на метле над своим городом»: одно фото человека (@Image1) + название города → Seedance 2.5, 15 с, FPV-полёт мимо реальных достопримечательностей (хэллоуин-тренд)",
+  "intent_tags": [
+   "client_in_clip",
+   "meme",
+   "pov_one_take",
+   "animal"
+  ],
+  "use_when": "«Ты летишь на метле над своим городом»: одно фото человека (@Image1) + название города → Seedance 2.5, 15 с, FPV-полёт мимо реальных достопримечательностей (хэллоуин-тренд)",
+  "inputs": [
+   "фото лица/портрет человека",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "198_selfie_with_stars_movie_set_transitions_nbpro_kling25_first_last",
+  "title": "«Селфи со звёздами на съёмках разных фильмов» с бесшовными переходами: своё фото → Nano Banana Pro (5–6 селфи) → Kling 2.5 Pro, начальный/конечный кадр попарно → склейка в CapCut",
+  "intent_tags": [
+   "client_in_clip",
+   "seamless_series",
+   "animal"
+  ],
+  "use_when": "«Селфи со звёздами на съёмках разных фильмов» с бесшовными переходами: своё фото → Nano Banana Pro (5–6 селфи) → Kling 2.5 Pro, начальный/конечный кадр попарно → склейка в CapCut",
+  "inputs": [
+   "фото лица/портрет человека"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "199_talking_object_character_nbpro_veo31_russian_speech",
+  "title": "«Говорящий предмет» (вирусный формат): Nano Banana Pro — 3D-персонаж из предмета → Veo 3.1, фото + реплика на русском",
+  "intent_tags": [
+   "talking_head",
+   "client_in_clip",
+   "meme",
+   "object_alive"
+  ],
+  "use_when": "«Говорящий предмет» (вирусный формат): Nano Banana Pro — 3D-персонаж из предмета → Veo 3.1, фото + реплика на русском",
+  "inputs": [
+   "unknown"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "200_service_banner_from_selfie_nb_then_veo3_talking_ad",
+  "title": "Рекламный баннер услуги со своим лицом → оживление с речью: фото-промпт баннера (сохранить лицо 1:1, вёрстка, кнопка) + negative → Veo 3, крупный план, синхрон губ, реплика на русском",
+  "intent_tags": [
+   "product_ad",
+   "talking_head",
+   "client_in_clip",
+   "object_alive"
+  ],
+  "use_when": "Рекламный баннер услуги со своим лицом → оживление с речью: фото-промпт баннера (сохранить лицо 1:1, вёрстка, кнопка) + negative → Veo 3, крупный план, синхрон губ, реплика на русском",
+  "inputs": [
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "201_animate_marketplace_card_keep_text_static_hailuo02",
+  "title": "Оживить готовую карточку товара (маркетплейс-инфографика), не трогая текст и вёрстку: карточка → Hailuo MiniMax 02, анимируется только модель",
+  "intent_tags": [
+   "product_ad",
+   "client_in_clip",
+   "object_alive"
+  ],
+  "use_when": "Оживить готовую карточку товара (маркетплейс-инфографика), не трогая текст и вёрстку: карточка → Hailuo MiniMax 02, анимируется только модель",
+  "inputs": [
+   "фото товара/продукта",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "202_old_photo_restore_seedream_then_veo3_fast_hug_two_images",
+  "title": "Старое фото → современный портрет → оживление «обнимаются и машут»: Seedream (реставрация, лицо 99%) → Veo 3 fast с двумя сгенерированными изображениями",
+  "intent_tags": [
+   "object_alive",
+   "family_photos"
+  ],
+  "use_when": "Старое фото → современный портрет → оживление «обнимаются и машут»: Seedream (реставрация, лицо 99%) → Veo 3 fast с двумя сгенерированными изображениями",
+  "inputs": [
+   "фото лица/портрет человека",
+   "старое фото"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "203_cartoon_character_x_brand_sneaker_ad_nbpro_kling3_motion_control",
+  "title": "Рекламный ролик «персонаж × бренд» (Tom × Puma): Nano Banana Pro — стабильный персонаж в одежде бренда → отдельно чистое фото продукта → Kling 3.0 Motion Control, 15 с селфи-ролик с диалогом и смешной концовкой («Tom! Come here!» — «Coming, Mom. Bye.») → сборка в InVideo AI",
+  "intent_tags": [
+   "product_ad",
+   "talking_head",
+   "client_in_clip",
+   "meme",
+   "motion_transfer"
+  ],
+  "use_when": "Рекламный ролик «персонаж × бренд» (Tom × Puma): Nano Banana Pro — стабильный персонаж в одежде бренда → отдельно чистое фото продукта → Kling 3.0 Motion Control, 15 с селфи-ролик с диалогом и смешной концовкой («Tom! Come here!» — «Coming, Mom. Bye.») → сборка в InVideo AI",
+  "inputs": [
+   "фото товара/продукта",
+   "фото лица/портрет человека",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "204_luxury_product_ad_from_reference_frames_seedance20_shot_timeline_docs",
+  "title": "Премиальная предметная реклама одним промптом: референс из 3–5 кадров + покадровый таймлайн-промпт (Shot 1 (0:00–0:02) … hero shot) → Seedance 2.0, 15 с — 4 разобранных ролика (Tom Ford, Monster, Apple, Rolex) с полными промптами в открытых Google Docs",
+  "intent_tags": [
+   "product_ad"
+  ],
+  "use_when": "Премиальная предметная реклама одним промптом: референс из 3–5 кадров + покадровый таймлайн-промпт (Shot 1 (0:00–0:02) … hero shot) → Seedance 2.0, 15 с — 4 разобранных ролика (Tom Ford, Monster, Apple, Rolex) с полными промптами в открытых Google Docs",
+  "inputs": [
+   "аудио/голос",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "205_brand_logo_balloons_over_night_city_nb_then_veo3",
+  "title": "Логотип бренда зеркальными шарами над вечерним городом: Nano Banana (фото, [ваш бренд]) → Veo 3 (статичная камера, шары колышутся, неон отражается)",
+  "intent_tags": [
+   "product_ad",
+   "beauty_ad"
+  ],
+  "use_when": "Логотип бренда зеркальными шарами над вечерним городом: Nano Banana (фото, [ваш бренд]) → Veo 3 (статичная камера, шары колышутся, неон отражается)",
+  "inputs": [
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "206_tiny_cosmetologists_on_own_face_flux_lora_kling16_sfx",
+  "title": "«Мини-человечки работают на твоём лице» (крошечные косметологи наносят пудру/крем): Flux LoRA на 30–50 своих фото → фото 9:16 по шаблону → Kling 1.6 Pro (оживить) → «Видео в аудио» (звуки)",
+  "intent_tags": [
+   "beauty_ad",
+   "object_alive"
+  ],
+  "use_when": "«Мини-человечки работают на твоём лице» (крошечные косметологи наносят пудру/крем): Flux LoRA на 30–50 своих фото → фото 9:16 по шаблону → Kling 1.6 Pro (оживить) → «Видео в аудио» (звуки)",
+  "inputs": [
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "207_drawn_camera_path_universal_prompt_loop_closure_seedance25",
+  "title": "Траектория камеры маркером поверх фото + универсальный готовый промпт (без LLM-шага) → Seedance 2.5; замкнутая линия = последний кадр совпадает с первым (бесшовная петля)",
+  "intent_tags": [
+   "seamless_series",
+   "animal"
+  ],
+  "use_when": "Траектория камеры маркером поверх фото + универсальный готовый промпт (без LLM-шага) → Seedance 2.5; замкнутая линия = последний кадр совпадает с первым (бесшовная петля)",
+  "inputs": [
+   "стартовый кадр",
+   "финальный кадр",
+   "аудио/голос",
+   "логотип",
+   "фото локации/города"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "208_one_take_arch_six_worlds_loop_morph_prompt_6_models_test",
+  "title": "Один непрерывный план без склеек: арка перестраивается через 6 миров и петлёй возвращается в первый кадр — промпт-ТЗ по секундам + тест на 6 моделях (FLUX 3, Seedance 2.5, MiniMax H3, Wan 3.0, Kling 3.0, Vidu Q3)",
+  "intent_tags": [
+   "other"
+  ],
+  "use_when": "Один непрерывный план без склеек: арка перестраивается через 6 миров и петлёй возвращается в первый кадр — промпт-ТЗ по секундам + тест на 6 моделях (FLUX 3, Seedance 2.5, MiniMax H3, Wan 3.0, Kling 3.0, Vidu Q3)",
+  "inputs": [
+   "стартовый кадр",
+   "логотип"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "partial",
+  "duplicates_of": []
+ },
+ {
+  "id": "209_own_photo_famous_football_goal_one_take_nbpro_kling4_omni_video_ref",
+  "title": "«Ты забиваешь знаменитый гол»: своё фото → Nano Banana Pro (портрет 1:1) → Kling 4.0 omni с видео-референсом гола, 15 с 9:16, один непрерывный план «телетрансляции»",
+  "intent_tags": [
+   "client_in_clip",
+   "motion_transfer"
+  ],
+  "use_when": "«Ты забиваешь знаменитый гол»: своё фото → Nano Banana Pro (портрет 1:1) → Kling 4.0 omni с видео-референсом гола, 15 с 9:16, один непрерывный план «телетрансляции»",
+  "inputs": [
+   "фото лица/портрет человека",
+   "видео-референс (движение/клип)",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "210_3d_interactive_site_style_reference_tripo_agent_perf_budget",
+  "title": "3D-интерактивный сайт за день (для заказов «3D/моушн для сайта»): эталон стиля одной картинкой → серия объектов по эталону → Tripo AI (картинка → 3D glb) → сборка агентом по мастер-промпту с бюджетом производительности (≤6 МБ на модель, 50 fps)",
+  "intent_tags": [
+   "other"
+  ],
+  "use_when": "3D-интерактивный сайт за день (для заказов «3D/моушн для сайта»): эталон стиля одной картинкой → серия объектов по эталону → Tripo AI (картинка → 3D glb) → сборка агентом по мастер-промпту с бюджетом производительности (≤6 МБ на модель, 50 fps)",
+  "inputs": [
+   "фото товара/продукта"
+  ],
+  "confidence": "C",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "211_pov_longboard_three_worlds_bg_sheets_seedance25_30s_one_take",
+  "title": "Бесшовный 30-секундный POV-«аттракцион» через 3 мира: 3 фона-листа (по одному на каждую смену места) → Seedance 2.5 одним дублем, всё между фонами — промптом; продление — прошлым видео как референсом",
+  "intent_tags": [
+   "seamless_series",
+   "pov_one_take"
+  ],
+  "use_when": "Бесшовный 30-секундный POV-«аттракцион» через 3 мира: 3 фона-листа (по одному на каждую смену места) → Seedance 2.5 одним дублем, всё между фонами — промптом; продление — прошлым видео как референсом",
+  "inputs": [
+   "стартовый кадр",
+   "финальный кадр",
+   "аудио/голос"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ },
+ {
+  "id": "212_put_yourself_in_music_video_genjutsu_motion_transfer_two_people_ffmpeg",
+  "title": "«Ты в клипе вместо обоих исполнителей»: обрезка до 30 с → полноростовое фото «в нужной одежде» → Higgsfield Genjutsu **Motion transfer** (не Objects swap) → вертикаль Reframe или blur-fill FFmpeg → апскейл",
+  "intent_tags": [
+   "beauty_ad",
+   "client_in_clip"
+  ],
+  "use_when": "«Ты в клипе вместо обоих исполнителей»: обрезка до 30 с → полноростовое фото «в нужной одежде» → Higgsfield Genjutsu **Motion transfer** (не Objects swap) → вертикаль Reframe или blur-fill FFmpeg → апскейл",
+  "inputs": [
+   "фото лица/портрет человека",
+   "фото в полный рост"
+  ],
+  "confidence": "B",
+  "prompt_completeness": "complete",
+  "duplicates_of": []
+ }
+]

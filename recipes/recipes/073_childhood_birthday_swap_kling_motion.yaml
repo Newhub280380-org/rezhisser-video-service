@@ -1,0 +1,60 @@
+id: 073_childhood_birthday_swap_kling_motion
+source_file: 73_childhood_birthday_swap_kling_motion.md
+title: '# 73 — «Я в детстве задуваю торт»: своё видео → скрин → Nano Banana Pro (замена на вас-ребёнка + торт) → Kling 3.0 Motion с исходным видео → CapCut с детскими фото'
+intent_tags:
+- client_in_clip
+use_when: 'Семейный/эмоциональный формат: из 3 фото (скрин, детское фото, фото торта) и своего видео получается ролик, где вместо вас ребёнок с тем же движением.'
+inputs:
+- фото лица/портрет человека
+- видео-референс (движение/клип)
+steps:
+- n: 1
+  action: Снять себя за столом, удивляетесь торту; скрин, где смотрите в камеру.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'NB Pro: скрин + детское фото + фото торта; промпт ниже.'
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Kling 3.0 Motion: картинка + исходное видео, промпт «вместо девушки ребенок».'
+  tool:
+  - Kling
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: 'CapCut: склеить 2 части + детские фото.'
+  tool:
+  - CapCut
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "\U0001F520\U0001F520\U0001F520\U0001F520\U0001F520\U0001F520\U0001F520\n\nИнструкция:\nСначала снимаем себя на камеру, как сидим за столом, смотрим на торт и удивляемся. Потом делаем скрин из этого видео,\
+  \ желательно где вы смотрите прямо в камеру. \n\n1. Переходим в VeoSeeBot \n2. Nano banana Pro\nВставляете скрин из видео, ваше детское фото, фото торта со свечами и пишите запрос:\n«Замени человека на\
+  \ первом фото на ребёнка из второго фото. На столе стоит торт с зажженными свечами, как из третьего фото»\n\n3. Kling 3.0 Motion\nВставляете получившееся фото, где вы уже как ребенок. Также прикрепляете\
+  \ отдельно видео, которое вы сняли изначально. Пишите похожий запрос: \n«вместо девушки ребенок»\n\nДальше остается 2 части соединить в капкате и наложить ваши детские фотографии, как у меня в примере.\n\
+  \nЕсли хочешь ещё больше погрузиться в мир нейросетей и создавать необычный контент, то приходи на мое обучение по ИИ. Подробная информация в этом посте."
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://t.me/reels_by_alsi/584
+duplicates_of: []

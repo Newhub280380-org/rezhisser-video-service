@@ -1,0 +1,55 @@
+id: 082_talking_pet_free_flow_elevenlabs
+source_file: 82_talking_pet_free_flow_elevenlabs.md
+title: '# 82 — Говорящий питомец бесплатно: картинка в Google Flow (кот в подкаст-студии, 9:16) → реплика в ElevenLabs → картинка + голос в видео-генератор → монтаж'
+intent_tags:
+- talking_head
+- meme
+- animal
+use_when: '# 82 — Говорящий питомец бесплатно: картинка в Google Flow (кот в подкаст-студии, 9:16) → реплика в ElevenLabs → картинка + голос в видео-генератор → монтаж'
+inputs:
+- аудио/голос
+steps:
+- n: 1
+  action: 'Google Flow: промпт картинки «cat sitting in a podcast studio», вертикальный формат.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'ElevenLabs: короткая смешная реплика с характером (не «я говорящий кот»), выбрать голос, скачать. Голос делать отдельно, хотя видео-модель умеет сама.'
+  tool:
+  - ElevenLabs
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Видео-генератор: картинка + аудио → губы под реплику; если плохо, поправить и перегенерировать.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: 'Не выкладывать сырую генерацию: монтаж под шортс (субтитры, обрезка). Подходит для любого животного.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim: []
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '9:16'
+done_criteria: unknown
+confidence: C
+prompt_completeness: gaps
+notes: дословных промптов в транскрипте нет; инструмент шага 3 по субтитрам не назван явно (только «the video generation tool»)
+source_url: https://www.youtube.com/watch?v=eAF80r4FOGs
+duplicates_of: []

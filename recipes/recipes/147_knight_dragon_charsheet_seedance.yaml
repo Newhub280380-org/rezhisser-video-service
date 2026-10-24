@@ -1,0 +1,66 @@
+id: 147_knight_dragon_charsheet_seedance
+source_file: 147_knight_dragon_charsheet_seedance.md
+title: Рыцарь и дракон из фото лица — карта персонажа (NanoBanana Pro) → Seedance 2.0/2.5 14 с (видеопромпт не загрузился)
+intent_tags:
+- client_in_clip
+use_when: 'Сюжет 14 с: рыцарь пьёт кофе, бросает стакан и камеру за спину, камера падает набок, герой достаёт меч, дракон открывает глаз. Лицо — с фото клиента через карту персонажа.'
+inputs:
+- фото лица/портрет человека
+- фото в полный рост
+steps:
+- n: 1
+  action: 'Изображения → NanoBanana Pro (или GPT Image 2): 16:9, 2K, загрузить чёткое фото лица, промпт ниже → карта персонажа (3 вертикальные панели + вставка HELMET).'
+  tool:
+  - Nano Banana
+  - GPT Image
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: '16:9'
+- n: 2
+  action: 'Higgsfield → создать видео → Seedance 2.0 или 2.5: 720p, 9:16, 14 с, загрузить карту персонажа, вставить видеопромпт (не прочитан).'
+  tool:
+  - Seedance
+  - Higgsfield
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: 14 с
+  aspect: '9:16'
+- n: 3
+  action: После вставки промпта удалить каждое текстовое @image1 и поставить тег заново из подсказки.
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  Take the person's appearance from the uploaded photos and create a character reference sheet, divided into three vertical panels on a neutral white or light-gray background.
+
+  RIGHT PANEL (close-up):
+  A close-up portrait of the person's face, cropped at the shoulders (bust shot). Face front-facing, looking directly at the camera, neutral expression, natural even lighting. The person is NOT wearing a helmet — the face is fully visible. IMPORTANT: the person is dressed in the same medieval knight plate armor as in the other panels — the polished steel gorget, pauldrons and upper chest plate of the armor set are visible on the shoulders and neck area in this bust shot; NOT their everyday clothing, no t-shirt, no casual clothes. Preserve all facial features and details as accurately as possible: eye shape, nose, lips, eyebrows, face shape, eye color, skin tone and texture, hair shape and color, as well as any unique features (moles, freckles, ear shape). High detail, realism, portrait quality.
+
+  LEFT PANEL (front view, full body):
+  The person standing at full height, front view, dressed in beautiful, elegant, expensive-looking medieval knight plate armor — richly crafted polished steel with fine engraved ornamentation, luxurious noble detailing, a high-status knightly look. No helmet on the head. Arms along the body, feet shoulder-width apart. IMPORTANT: the head and face are completely absent — the figure is cropped at the neck/shoulder line, no head. Only the figure from the neck down is shown. Preserve body build and proportions; the armor fits the body naturally.
+
+  MIDDLE PANEL (back view, full body):
+  The same person, back view, in the same knight armor, at full height, including the head and hair (viewed from behind, no helmet). Preserve the hairstyle, body build, and all armor details consistent with the front view — same engraving, same materials, same design from behind.
+
+  HELMET INSET:
+  In one corner of the sheet, add a small separate square panel with a thin border, labeled "HELMET". Inside it: the knight's helmet belonging to this exact armor set, shown on its own (not worn), three-quarter view — matching the armor perfectly in material, color, engraving and style. Elegant, rich, noble design. The helmet appears ONLY in this inset; in all three main panels the person wears no helmet and the face/hair remain visible where specified.
+
+  GENERAL REQUIREMENTS:
+  Unified style, consistent lighting and figure scale across all panels, consistency of appearance and armor between panels — the armor in the close-up portrait is the exact same armor set as in the full-body panels. Clean background, clear vertical dividers between panels. Realistic photographic style, high resolution.
+output:
+  format: mp4
+  resolution: 720p
+  aspect: '16:9'
+done_criteria: unknown
+confidence: C
+prompt_completeness: complete
+notes: видеопромпт шага 2
+source_url: https://t.me/poleznoe_ai/689
+duplicates_of: []

@@ -1,0 +1,61 @@
+id: 167_selfie_handheld_phone_ugc_timeline_15s_seedance25
+source_file: 167_selfie_handheld_phone_ugc_timeline_15s_seedance25.md
+title: 'Селфи «снято на телефон»: таймлайн 15,2 с с низким ракурсом, рывками к лицу, расфокусом и тряской — Seedance 2.5'
+intent_tags:
+- product_ad
+- talking_head
+- client_in_clip
+use_when: 'Не «красивый рекламный кадр», а ритм ручной селфи-съёмки: камера низко на теле → резко вверх к лицу → отъезд/опускание → внезапный экстремально крупный план. Тряска, потеря фокуса, руки перекрывают
+  кадр. Годится как блок «снято на телефон» для UGC-рекламы (подставить своего героя/товар).'
+inputs:
+- фото лица/портрет человека
+steps:
+- n: 1
+  action: 'Один шаг: Seedance 2.5 (автор — через Atlas Cloud), ~15 с, промпт-таймлайн ниже.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: 15 с
+  aspect: unknown
+- n: 2
+  action: 'Под UGC: оставить ритм и блок «Overall rhythm», поменять героиню, одежду и фон, добавить товар в руку.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "# Seedance2.5 is kind of absurd… why is this selfie-style motion so convincing? \U0001F62D\nu/Fresh-Resolution182 https://reddit.com/comments/1xcltep\n\nI know this sounds dramatic, but clips like this\
+  \ are getting weirdly good.\n\nThe handheld movement, the sudden push-ins, the messy framing, the off-timing, the little focus slips — it all feels way more like an actual phone recording than I expected.\n\
+  \nThe whole rhythm is basically:  \n**camera low on the body → sudden lift straight to the face → pull back / dip again → sudden extreme close-up**\n\nwhat surprised me most is that it doesn’t feel like\
+  \ a polished commercial shot. It feels like an actual person holding a phone, changing angles on impulse, leaning in, adjusting hair, drifting in and out of frame, and reacting to the beat.\n\nThe new\
+  \ model is seriously strong at this kind of thing.\n\n**Prompt in the comments \U0001F447**"
+- "0.0–1.5s: Low-angle medium close-up. The camera is aimed at the chin, neck, and chest, with most of the face out of frame. She tilts her head slightly back. The cardigan is open, and the camisole neckline\
+  \ and necklace are clearly visible. Background includes a white wall, picture frame, and dark door. The phone is obviously being held too low.\n    \n    1.5–3.0s: The camera suddenly lifts upward into\
+  \ a close face shot. She looks into the camera with her lips slightly parted, raises her right hand behind her ear to adjust her hair, and the cardigan sleeve occupies the right side of the frame. Her\
+  \ expression shifts from slightly open-mouthed to a soft smile.\n    \n    3.0–4.5s: Tight close-up stays steady on the face. Her right hand remains behind her head, head slightly tilted, faint smile,\
+  \ eyes locked on the lens. A few loose strands of hair rest against her cheek.\n    \n    4.5–6.0s: She leans forward and the camera follows slightly downward. The cardigan, camisole, and jeans become\
+  \ visible. Her right hand moves from behind her ear to in front of her chest, as if pointing toward the camera or adjusting the phone. She keeps looking into the camera with a faint smile.\n    \n   \
+  \ 6.0–7.5s: She continues leaning forward, gaze dropping lower. Her right hand reaches toward the lens direction. The frame shakes noticeably and briefly loses focus, as if the phone is being set down\
+  \ or pulled closer. The doorframe in the background becomes clearer.\n    \n    7.5–9.0s: The camera lifts back up to above chest level. Both arms cross the lower part of the frame, and the sleeves are\
+  \ visually prominent. Her mouth is slightly open, as if humming softly to the rhythm, with no clearly readable spoken dialogue. Her hair is slightly looser.\n    \n    9.0–10.5s: Pull back into a normal\
+  \ selfie medium shot. She stands upright and smiles at the camera. The background now includes a dark cabinet surface, a chair, and a silver bag, suggesting she has turned or moved slightly. Her left\
+  \ hand reaches toward the camera.\n    \n    10.5–12.0s: Suddenly moves into an extreme close-up of the lower half of the face. Her hand props against her cheek. The tip of the nose, lips, and pearl earring\
+  \ fill the frame. She smiles faintly and looks slightly off-camera. Motion blur is noticeable.\n    \n    12.0–13.5s: Still extreme close-up, now from the lower side of the face. Her mouth is open with\
+  \ teeth visible, and her hand rises to her ear to adjust her hair. Head slightly lowered, as if laughing or speaking softly, but with no intelligible dialogue.\n    \n    13.5–15.2s: Returns to a front-facing\
+  \ close-up for the ending. She looks into the camera with a faint smile. The cream-colored sleeve blocks the lower half of the frame, covering the chest area. Slight motion blur remains, ending on an\
+  \ intimate eye-contact moment.\n    \n    Overall rhythm: not a single continuous take, but rather “camera low on the body → suddenly lifted into the face → lowered / pulled back slightly → suddenly pushed\
+  \ into extreme close-up.” Handheld shake, beat-synced cuts, natural casual phone-shot energy.\n\nmade with [seedance 2.5](https://www.atlascloud.ai/models/seedance-2.5) the output is really fantasy"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: Ничего. Видео не смотрел. Последний вопрос в ветке (как обходить фильтр на реалистичных людей) без ответа.
+source_url: https://reddit.com/comments/1xcltep
+duplicates_of: []

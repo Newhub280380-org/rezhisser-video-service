@@ -1,0 +1,53 @@
+id: 027_h3_all_in_one_360_environment_minidrama
+source_file: 27_h3_all_in_one_360_environment_minidrama.md
+title: 'Конвейер мини-драмы: character sheets (Krea-2 Turbo) → 360° панорамы (Qwen-Image 2512 + LoRA) → композиция → H3 → апскейл'
+intent_tags:
+- vfx_effect
+use_when: 'Конвейер мини-драмы: character sheets (Krea-2 Turbo) → 360° панорамы (Qwen-Image 2512 + LoRA) → композиция → H3 → апскейл'
+inputs:
+- аудио/голос
+steps:
+- n: 1
+  action: unknown (в источнике нет нумерованных шагов; см. prompts_verbatim)
+  tool:
+  - MiniMax H3
+  - Qwen
+  - Krea
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  I've been making short AI films and got tired of jumping between 5 different workflows, so I combined the whole pipeline into one modular workflow. Here's how it's structured, in case it's useful for your own setups:
+
+  **1. Character sheets (Krea-2 Turbo):** front, side, back and close-up views of the same character, used later as references for consistency.
+
+  **2. 360° environments (Qwen-Image 2512 + 360 LoRAs):** equirectangular panoramas, so you can crop different camera angles from the same location and keep backgrounds consistent between shots.
+
+  **3. Multi-character composition (Qwen Rapid AIO):** places specific characters into the environment while keeping their faces intact.
+
+  **4. Video (MiniMax H3):** I2V, reference-to-video and T2V, with 32kHz stereo audio (ambience, voice, SFX) generated in the same pass.
+
+  **5. Upscale:**
+
+  * Two-stage latent upscale 768p → 2K with short-sigma refinement (3–5 steps). It sharpens skin and fabric texture without changing motion or identity.
+  * Temporal chunking enabled to avoid OOM on consumer GPUs with long sequences.
+  * Optional SeedVR2 pass for the final upscale.
+
+  **It took me 1 day to prepare a complete 3 minute minidrama episode from scratch!**
+
+  Video Tutorial: [https://www.youtube.com/watch?v=rMR7VFXL8WY](https://www.youtube.com/watch?v=rMR7VFXL8WY)
+
+  **The workflow** is in the Youtube video description
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: 360° панорама из одной локации даёт любой ракурс без смены фона; листы персонажей фиксируют лицо.
+confidence: B
+prompt_completeness: partial
+notes: JSON воркфлоу (в описании видео).
+source_url: https://www.youtube.com/watch?v=rMR7VFXL8WY
+duplicates_of: []

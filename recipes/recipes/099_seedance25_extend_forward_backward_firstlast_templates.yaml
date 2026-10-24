@@ -1,0 +1,187 @@
+id: 099_seedance25_extend_forward_backward_firstlast_templates
+source_file: 99_seedance25_extend_forward_backward_firstlast_templates.md
+title: 'Seedance 2.5: шаблоны продления видео вперёд/назад, первый+последний кадр с доп. референсами, мульти-ключевые кадры, бесшовный переход между двумя видео'
+intent_tags:
+- product_ad
+- seamless_series
+use_when: 'Готовые формулировки для склейки без швов: (1) продлить @Video 1 вперёд — первый кадр нового куска продолжает последний кадр исходника; (2) продлить назад — последний кадр нового куска стыкуется
+  с первым кадром исходника; (3) первый+последний кадр в мультимодальном режиме плюс отдельные референсы ге'
+inputs:
+- видео-референс (движение/клип)
+- стартовый кадр
+- финальный кадр
+- аудио/голос
+steps:
+- n: 1
+  action: Сгенерировать первый клип (@Video 1).
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Для продолжения: загрузить его как @Video 1 и вставить шаблон «Extend @Video 1 forward…», описав, что держать (поза, предмет, фон, камера, свет, направление движения) и новое действие.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: Если нужен «пролог» — шаблон «Extend @Video 1 backward…».
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: Если есть заранее сделанные кадры начала и конца — шаблон First and last frames with additional references (каждую опорную картинку описывать отдельной строкой; одинаковое соотношение сторон).
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: last_frame
+  duration: unknown
+  aspect: unknown
+- n: 5
+  action: Для стыка двух разных сцен — шаблон seamless transition.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 6
+  action: На проверке смотреть обе стороны стыка.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  Forward extension (after the original video)
+  First describe the continuous state of the source video’s last frame, then describe what happens afterward.
+  Basic template
+  Copy
+  @Video 1 is the source video to extend forward.
+  Extend @Video 1 forward. The first frame of the extended segment directly continues from the last frame of @Video 1. Maintain continuity in <subject pose and orientation>, <prop position>, <background and spatial relationships>, <camera position and composition>, <lighting>, and <motion direction>.
+  Then, <describe the new action, event, camera treatment, or audio to add>.
+  Throughout the extension, maintain continuity in <character identity and clothing>, <key props>, <background layout>, and <axis of action>.
+  Keep each subject as the same continuous instance throughout: do not duplicate or split it, and keep the person's appearance or the object's number of parts stable.
+  Example
+  Copy
+  Extend @Video 1 forward. The first frame of the extended segment directly continues from the last frame of @Video 1. Maintain the same locked-off medium shot, the orange paper airplane's position and orientation, the classroom-window background, the afternoon lighting, and its movement toward the right side of the frame.
+  Then, the orange paper airplane continues gliding toward the right and exits the frame while the white curtain beside the window sways slightly. Keep the camera and classroom background in the state established by the source video's last frame.
+  Forward extension with additional references
+  Define the role of every additional material first, then state that the source video controls the extension boundary. New materials may supplement characters, props, or audio, but they must not override the source video’s last-frame control over the extension’s opening image.
+  Example
+  Copy
+  @Image 1 defines <Gardener>'s facial features.
+  @Image 2 defines <Gardener>'s light green work apron.
+  @Image 3 defines <Wicker Flower Basket>'s structure and material.
+  Extend @Video 1 forward. The first frame of the extended segment directly continues from the last frame of @Video 1. Maintain the greenhouse workbench, <Gardener>'s position, and <Wicker Flower Basket>'s position.
+  Then, <Gardener> lifts <Wicker Flower Basket> with both hands and places it on the middle shelf of the wooden rack behind them.
+  Throughout the extension, maintain continuity in <Gardener>'s face, apron, greenhouse layout, and camera direction.
+  Backward extension (before the original video)
+  First describe what happens before the source video begins, then define the source video’s first frame as the explicit end state of the extended segment. Writing only "then connect to the source video" may introduce later characters or effects too early, or cause the image to keep changing after it reaches the target state.
+  Basic template
+  Copy
+  @Video 1 is the source video to extend backward.
+  Extend @Video 1 backward. Before the source video begins, <describe the preceding action, event, camera treatment, or audio>.
+  The last frame of the extended segment naturally connects to the first frame of @Video 1: <subject pose and orientation>, <prop position>, and <background and spatial relationships>. Match the <camera position and composition>, <lighting>, and <motion direction> of @Video 1's first frame.
+  <Materials that should appear only after the source video begins> must not appear early in the backward extension.
+  Example
+  Copy
+  Extend @Video 1 backward. Before the source video begins, show an empty establishing shot of the same glass greenhouse. Morning mist drifts slowly near the floor, the overhead shade rises gradually, and no people are present yet.
+  The last frame of the extended segment naturally connects to the first frame of @Video 1. Match the greenhouse's central aisle, planting tables on both sides, glass frame, soft morning light, and locked-off wide composition. At the end, the shade is fully raised, the aisle is empty, and the leaves still sway slightly.
+  Boundary frames should connect naturally at a visual level. That does not mean they will be pixel-identical. During review, inspect both sides of the boundary and the complete extended segment.
+  Keyframes, Storyboards, and Blockouts
+  First and last frames with additional references
+  In multimodal reference mode, state in the first line that @Image 1 is the first frame and @Image 2 is the last frame. There is no need to switch to a separate first/last-frame mode. The output aspect ratio locks to the first image, and duration is set on the generation page or through the API. The first and last images should use the same aspect ratio, since mismatched ratios may stretch the last frame. Additional images can still define characters, props, scenes, and materials.
+  Basic template
+  Copy
+  @Image 1 is the first frame. It defines the opening composition, subject position, pose, prop state, scene, and camera direction.
+  @Image 2 is the last frame. It defines the ending composition, subject position, pose, prop state, scene, and camera direction.
+  @Image 3 defines <Subject A>'s <appearance, clothing, structure, or material>. Do not change the first-frame composition defined by @Image 1 or the last-frame composition defined by @Image 2.
+  @Image 4 defines <specified attributes> of <Subject B, prop, or scene>. Do not change the first-frame composition defined by @Image 1 or the last-frame composition defined by @Image 2.
+  <Describe one continuous action or event>.
+  The video begins naturally from the first frame defined by @Image 1 and reaches the last frame defined by @Image 2 after the continuous action.
+  Between the first and last frames, maintain continuity in <character identity, prop structure and ownership, scene layout, and camera direction>.
+  Example
+  Copy
+  @Image 1 is the first frame. It defines the opening composition, character positions, poses, tabletop prop states, perfume-workshop scene, and camera direction.
+  @Image 2 is the last frame. It defines the ending composition, character positions, poses, tabletop prop states, perfume-workshop scene, and camera direction.
+  @Image 3 defines <Perfumer>'s face, hairstyle, and dark green apron. Do not change the first-frame composition defined by @Image 1 or the last-frame composition defined by @Image 2.
+  @Image 4 defines <Glass Perfume Bottle>'s shape, material, and label position. Do not change the first-frame composition defined by @Image 1 or the last-frame composition defined by @Image 2.
+  Starting from the first-frame pose, <Perfumer> picks up a dropper and <Glass Perfume Bottle>, drips amber fragrance oil into the bottle, swirls it gently, closes the stopper, places the finished bottle in the center of the table, and naturally reaches the last frame defined by @Image 2.
+  Between the first and last frames, maintain continuity in <Perfumer>'s identity and clothing, bottle count and structure, wooden-table layout, warm side lighting, and camera direction.
+  Describe each anchor image separately. Do not combine them into a sentence such as "@Images 1 and 2 are the first and last frames." Other references should supplement only their specified attributes and must not replace the first-frame or last-frame composition.
+  Multi-keyframe sequence control
+  When separate images define different stages of a process, begin with "Use @Image 1 through @Image N as keyframes in this order", then describe the key state each image represents. Independent keyframe images are usually easier to align than several frames combined into one grid. They control stage order and key states. They do not reproduce every frame exactly.
+  Basic template
+  Copy
+  Use @Image 1 through @Image N as keyframes in this order.
+  @Image 1 is the first frame. It defines <opening composition, subject position, pose, prop state, and camera direction>.
+  @Image 2 defines the second keyframe: <visible end state of Stage 1>.
+  @Image 3 defines the third keyframe: <visible end state of Stage 2>.
+  @Image N is the last frame. It defines <ending composition, subject position, pose, prop state, and camera direction>.
+  The video passes through the states defined by @Image 1, @Image 2, @Image 3, and @Image N in order, using continuous action to transition naturally between stages.
+  Maintain continuity in <subject identity, prop structure and ownership, scene layout, lighting, and axis of action> throughout.
+  Example
+  Copy
+  Use @Image 1 through @Image 4 as keyframes in this order.
+  @Image 1 is the first frame. It shows an orange paper airplane resting on the left side of a classroom desk, pointed toward the right, in a locked-off medium shot.
+  @Image 2 defines the second keyframe: one hand lifts the same orange paper airplane from the desk without changing its direction.
+  @Image 3 defines the third keyframe: the same orange paper airplane passes the window while the curtain moves slightly to the right.
+  @Image 4 is the last frame. It shows the same orange paper airplane resting on the middle shelf of the bookcase on the right, still pointed toward the right.
+  The video passes through the states defined by @Image 1, @Image 2, @Image 3, and @Image 4 in order. Keep flight direction and speed continuous between stages.
+  Maintain the paper airplane's orange material, size, and folds, as well as the classroom layout, afternoon side lighting, and camera axis.
+  Storyboard grids
+  A storyboard grid communicates the overall story, shot order, and approximate compositions. It is not meant for strict reproduction of every detail in every panel. Prefer no more than 15 panels, use clean line art or simple diagrams, and minimise text labels. State the reading order, then describe each panel’s subject action, shot size or camera movement, final visual style, and audio.
+- |-
+  A seamless transition generates continuous bridge content between two videos. Identify the before-transition and after-transition clips first, then describe the trigger action, camera movement, visual transformation, arrival state, and audio transition.
+  Before Video → After Video → Trigger Action → Camera Movement → Visual Transformation → Arrival State → Audio
+  Transition method
+  What to specify
+  Dive or reverse movement
+  Camera direction, speed change, and when the next scene begins
+  Character rotation
+  Pose, rotation direction, and how clothing or background changes continuously
+  Foreground occlusion
+  When the foreground object fills the frame and the composition that follows
+  Object morph
+  Corresponding shapes, materials, and the transformation process
+  Push/pull or focus change
+  Camera movement, focus target, and continuous spatial relationship
+  Basic template
+  Copy
+  @Video 1 is the before-transition clip. Use its <ending subject, action, composition, camera direction, and audio>.
+  @Video 2 is the after-transition clip. Use its <opening subject, composition, camera direction, and audio>.
+  Keep <character identity, product structure, scene, and primary action> stable in the original portions of @Video 1 and @Video 2.
+  At the end of @Video 1, <subject or foreground object> triggers the transition through <action>.
+  The camera <movement direction and speed change>, while <shape, material, light, or space> gradually transforms into <corresponding element> at the start of @Video 2.
+  The transition ends naturally at @Video 2's opening composition, preserving continuity in <subject position, camera direction, and motion trend>.
+  Audio transitions smoothly from <before audio> to <after audio>.
+  Example
+  Copy
+  @Video 1 is the before-transition clip. Use its rainy night street, red umbrella, slow push-in, and rain sound.
+  @Video 2 is the after-transition clip. Use its circular gallery skylight, upward camera movement, and quiet interior reverberation.
+  Keep the people, street, gallery structure, and primary actions in the two original videos stable.
+  At the end of @Video 1, the red umbrella approaches the camera and gradually fills the entire frame, triggering the transition.
+  The camera continues moving forward. The umbrella's circular edge gradually becomes the skylight's metal ring, and the red fabric transitions into white daylight passing through the skylight.
+  The transition ends naturally at @Video 2's upward-looking opening composition, with the camera movement changing smoothly from forward motion to an upward rise.
+  The rain gradually fades into footsteps reverberating inside the gallery.
+  The goal of a seamless transition is visual and audio continuity. A prompt may ask to preserve the primary content of both source videos, but a generated bridge is not a pixel-identical edit splice.
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://pixeldojo.ai/guides/seedance-2-5-prompting-guide
+duplicates_of: []

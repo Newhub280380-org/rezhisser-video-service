@@ -1,0 +1,53 @@
+id: 098_kling40_one_prompt_talking_product_ugc
+source_file: 98_kling40_one_prompt_talking_product_ugc.md
+title: 'Kling 4.0: говорящий UGC-ролик с товаром одним промптом (без фото, без озвучки отдельно)'
+intent_tags:
+- product_ad
+- talking_head
+- client_in_clip
+use_when: 'Один промпт в Kling 4.0 (10 с, 1080p, 9:16) даёт селфи-видео: девушка в студии упаковки показывает флакон и говорит реплику, с голосом и звуком комнаты. Шаблон: кто/где/что держит + реплика в
+  кавычках + «Audio: … no music, no subtitles».'
+inputs:
+- фото товара/продукта
+- фото лица/портрет человека
+- аудио/голос
+steps:
+- n: 1
+  action: 'Kling 4.0, text-to-video, 10 с, 1080p, 9:16: промпт ниже (заменить героя, место, товар, реплику).'
+  tool:
+  - Kling
+  mode: text-to-video
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: 10 с
+  aspect: '9:16'
+- n: 2
+  action: Для своего товара — приложить фото товара как референс (у автора без фото).
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  --- https://x.com/PixelDojoAI/status/2113717097423606094 2026-10-23T19:40:01.000Z conv 2113717097423606094
+  She says our line word for word, holds the bottle up to the lens, and smiles on cue.
+  One Kling 4.0 prompt: 10 seconds at 1080p, voice and room sound included. Now on Pixel Dojo, up to 30 s per clip. https://t.co/SDlIQMaBxy
+
+  --- https://x.com/PixelDojoAI/status/2113717254189994081 2026-10-23T19:40:39.000Z conv 2113717097423606094
+  The whole prompt, first take on Kling 4.0 (10 s, 1080p, 9:16, sound made with the picture):
+
+  Vertical selfie video. A woman in her late twenties with curly auburn hair holds her phone at arm's length in a bright packing studio, shelves of small amber glass bottles behind her. She holds up one bottle to the lens and says in warm, natural American English at a relaxed pace: "We pack every order by hand. This one is going to Portland." She smiles at the end. Audio: her clear close voice, quiet room tone, no music, no subtitles.
+
+  More examples in the guide: https://t.co/eVOlI464ws
+output:
+  format: mp4
+  resolution: 1080p
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://x.com/PixelDojoAI/status/2113717254189994081
+duplicates_of: []

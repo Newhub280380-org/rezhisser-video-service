@@ -1,0 +1,81 @@
+id: 111_charsheet_spider_drone_part2_seedance_continuation
+source_file: 111_charsheet_spider_drone_part2_seedance_continuation.md
+title: 'Продолжение схемы 77: вторая часть ролика (непрерывный дрон-пролёт за героиней по городу) — открытый промпт из комментария'
+intent_tags:
+- client_in_clip
+- seamless_series
+- pov_one_take
+use_when: 'Схема 77 делала из листа персонажа (Nano Banana Pro) первую часть ролика (подоконник, герой выпадает из окна). Вторая часть — 15 с одним «rear-follow drone shot»: героиня с паутиной летит по
+  улицам Нью-Йорка, отталкивается от стен и машин, финал на закате. Автор просит менять одежду, город и описани'
+inputs:
+- аудио/голос
+steps:
+- n: 1
+  action: Шаги 1–3 — как в схеме 77 (лист персонажа → часть 1 в Seedance 2.0).
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Seedance 2.0: лист персонажа в референсы + промпт части 2 (ниже), заменить внешность/одежду/город.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'CapCut: склеить 2 части.'
+  tool:
+  - CapCut
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "13 июля 2026 г., 13:59 МСК\nShe is a small figure dead center against the enormous glowing sky. City rooftops, water towers, streets below. The frame holds. She begins to fall back down. [END]\n⚠️\n\
+  \ CRITICAL — EMOTION AND SOUND. NON-NEGOTIABLE: She is fully alive in every frame. Not blank. Not neutral. Not AFK. Her face and body express genuine real-time emotion throughout:\nDuring the first swing\
+  \ — wide eyes, slight grin, pure focus\nWhen feet skim the car — quick surprised laugh, instinctive\nRunning on the wall — jaw set, determined, intense concentration\nLow between taxis — teeth showing,\
+  \ adrenaline grin, leaning into it\nThe taxi honk — she laughs out loud, head tips back slightly\n\"WOOHOO!\" — completely uncontrolled, mouth open, genuine scream of joy\nFinal wide shot at peak — arms\
+  \ open, head back, eyes closed, face of pure freedom — not blank, not posed, just a person at the best moment of their life.\nAUDIO: SFX ONLY. ABSOLUTELY NO BACKGROUND MUSIC. Wind rushing. Web snap and\
+  \ twang. Feet hitting car roof. Feet hitting pavement — real impact sounds. Taxi horn. Her genuine laugh. \"WOOHOO!\" echoing between buildings. Wind cutting as she rises. Then — silence at the peak.\n\
+  RED Monstro 8K, anamorphic, 165cm 47kg controlled athletic body throughout, physical contact with walls/cars/surfaces at every opportunity, detailed body mechanics per movement type — swing/run/push-off/sprint,\
+  \ NO ragdoll NO float, severe Dutch angle during swings, golden hour sunset sky warm orange pink, dramatic volumetric clouds, subject at rooftop level NOT high altitude, subject tiny in center of wide\
+  \ final frame, residential NYC brownstones, continuous single drone follow, no cuts, photorealistic.\n\n--- (следующий комментарий автора) ---\n\n13 июля 2026 г., 13:59 МСК\nМеняйте промпт под себя (нужно\
+  \ заменить одежду, город, описание персонажа в целом)\nCHARACTER REFERENCE — MANDATORY: Face matches \n@Image1\n. Outfit — short dark bob, black fitted crop jacket, distressed dark cargo denim shorts,\
+  \ gray hoodie tied at waist, teal satin ballet pointe shoes, pink tights, black headphones ON EARS, white gloves.\n⚠️\n CRITICAL — CHARACTER ANATOMY. NON-NEGOTIABLE: 165cm, 47kg. Athletic, lean, controlled.\
+  \ NEVER ragdoll. NEVER limp. NEVER floppy. Core always engaged. Every movement has muscle intention. She moves like a trained gymnast/dancer who happens to have superpowers — precise, casual, effortless.\
+  \ Minimal spinning. Body follows physics of each movement logically.\n⚠️\n CRITICAL — PHYSICAL CONTACT WITH ENVIRONMENT. NON-NEGOTIABLE: She does NOT just fly through the air. She interacts with the city\
+  \ physically — feet push off walls, hands grab ledges, body grazes building surfaces. Every contact point: knees absorb impact, muscles engage, body reacts to the surface. This is parkour + web-swinging,\
+  \ not floating.\n⚠️\n CRITICAL — BODY POSITIONS PER MOVEMENT TYPE:\nWeb swing: arms extended forward gripping web, legs together trailing, core tight, back straight, chin up — clean rope-swing athlete\
+  \ position.\nWall push-off: both feet plant flat on wall, knees bend deep to absorb, then legs explode into full extension at launch, arms punch forward for momentum.\nRunning on wall: body leans 45 degrees\
+  \ toward wall, feet striking surface in running gait, arms pumping, hair and hoodie pulled sideways by momentum.\nFree flight peak: arms naturally open to sides, body slightly arched back, relaxed — not\
+  \ posed, just physically released.\nStreet level run: full sprint, arms driving, head forward, ballet pointe shoes striking pavement, body leaning into direction of travel.\n⚠️\n CRITICAL — REALISM. NON-NEGOTIABLE:\
+  \ Real Hollywood film. RED Monstro 8K, anamorphic lens. Real motion blur, real fabric physics, real atmospheric NYC haze. REAL.\n⚠️\n CRITICAL — CAMERA. NON-NEGOTIABLE: ONE continuous rear-follow drone\
+  \ shot. ZERO cuts. ZERO teleporting. Tilts, banks, rolls physically. Wide enough to always show her AND environment.\n15-second continuous rear-follow drone shot. DIRECT CONTINUATION — starts from black.\
+  \ 0–1 sec: Black. Then — CLOSE-UP — white-gloved hand. Fingers open. Wrist snaps. Web shoots. Camera pulls back immediately. 1–4 sec: Wide — residential NYC street. Brownstones, fire escapes, bodegas.\
+  \ She swings LOW — 3 meters above street. Body: arms extended gripping web, legs together trailing, core tight, back straight. At the bottom of the swing arc her feet skim the roof of a parked car — brief\
+  \ physical contact, feet bounce off lightly, she uses it to redirect. Camera banks 40 degrees. 4–7 sec: Rear-follow camera. She releases the web at peak — body opens, arms out, legs extend. Then instead\
+  \ of firing a new web immediately — she runs along the side of a brownstone wall. Feet strike the brick surface in a real running gait — body angled 45 degrees toward the wall, arms pumping, 4–5 quick\
+  \ steps along the vertical surface — then she pushes off hard with both feet, knees fully extending, and fires a new web mid-air toward a building across a wide intersection. Swing pulls her hard sideways\
+  \ — camera rolls 60 degrees. 7–10 sec: She comes in LOW down a narrow street packed with yellow taxis. 2 meters off the ground, body streamlined — arms forward, legs trailing like an arrow. Web releases.\
+  \ Her feet hit the ground — full sprint, body leaning forward, arms driving — she runs 3–4 steps between taxis, using the momentum, feet striking the wet pavement. A taxi honks. She laughs. Then plants\
+  \ one foot on the side of a taxi cab, pushes off the car roof with a single explosive step, fires a web upward at a tall building, and rockets HIGH. \"WOOHOO!\" 10–15 sec: WIDE SHOT — rooftop level, not\
+  \ too high. She hangs at the peak — arms slightly open, body naturally arched, completely still for one breathless moment. Golden hour sky — warm orange and pink light across the horizon. Massive dramatic\
+  \ clouds lit from below with gold."
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего (в пакете 49–87 часть 2 числилась закрытой)
+source_url: https://t.me/reels_by_alsi/755
+duplicates_of:
+- 077_charsheet_seedance_windowsill_two_parts

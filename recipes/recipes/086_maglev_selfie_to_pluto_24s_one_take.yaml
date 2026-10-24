@@ -1,0 +1,61 @@
+id: 086_maglev_selfie_to_pluto_24s_one_take
+source_file: 86_maglev_selfie_to_pluto_24s_one_take.md
+title: '# 86 — Селфи-влог 24 с одним дублем: поезд-маглев взлетает из атмосферы к Плутону (Seedance 2.5, @image1, таймкоды по 3 с)'
+intent_tags:
+- client_in_clip
+- pov_one_take
+use_when: 'Шаблон «невозможное событие, снятое на телефон»: герой в левой трети кадра, окно справа, 8 фаз по 3 с, звук без разборчивой речи. Менять можно маршрут (окно) и транспорт.'
+inputs:
+- фото лица/портрет человека
+- аудио/голос
+steps:
+- n: 1
+  action: Seedance 2.5, 24 с.
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: 24 с
+  aspect: unknown
+- n: 2
+  action: Своё фото (@image1).
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: Промпт ниже.
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "Этот тренд сейчас реально везде. Все, кто его повторяют, набирают миллионные просмотры. А собирается он проще, чем кажется. \n\nПоказываю, как повторить:\n\n1. Заходи на soyuzlab.ai\n2. Выбери Seedance\
+  \ 2.5, 24 секунды\n3. Загрузи своё фото\n4. Вставь промпт из комментов и генерируй — через пару минут готовый ролик\n\n[DURATION: 24 seconds — single continuous take]\nRealistic amateur smartphone vlog.\
+  \ The person from @image1 — gender, face, hair, and wardrobe taken 100% from this reference — holds the phone at arm's length in selfie mode. They stay in the LEFT THIRD of the vertical frame for the\
+  \ entire take; the maglev train window fills the right two thirds and the outside view is continuously visible. One unbroken take, no cuts, no transitions.\n0-3s — the person boards a packed maglev carriage,\
+  \ sits at the left-side window, adjusts framing; the train accelerates and their torso pushes back from inertia.\n3-6s — clouds rush past the window, vapour trails streak the glass, sunlight strobes through\
+  \ gaps; the person braces and glances between camera and window.\n6-9s — clouds fall away revealing Earth's curvature, oceans and continents below, sky darkening blue to black; the person turns to profile.\n\
+  9-12s — the train exits the atmosphere, Earth shrinks, satellites drift past, the carriage falls quiet, passengers react with small restrained amazement.\n12-15s — the train enters an asteroid field,\
+  \ fragments streak by, a massive asteroid passes close and violent shake throws the phone downward; the person drags framing back with effort.\n15-18s — the field thins away, a faint blue-white particle\
+  \ haze wraps the train in the heliosphere.\n18-21s — deep space, black and silent; a tiny point grows into Pluto; the person turns fully to the window, breath fogging the cold glass.\n21-24s — Pluto swells\
+  \ into a massive detailed world: reddish terrain, dark regions, the heart-shaped Tombaugh Regio; cold reflected light washes the person's face.\nHandheld phone shake throughout, natural autofocus hunting,\
+  \ compressed smartphone image quality, amateur exposure, real physics, impossible event captured realistically.\nAudio: carriage hum, wind and low structural rumble, faint passenger murmur, muffled indistinct\
+  \ PA chimes with unintelligible words at the start and at the very end. No intelligible speech at any point.\nMaintain the same gender, face and wardrobe from @image1 throughout, subject locked to the\
+  \ left third with the window view always visible, dark areas remain dark, one continuous unbroken take; avoid cuts, avoid smooth cinematic camera moves, avoid spoken dialogue, avoid on-screen text.\n\n\
+  Все топовые нейросети и свежие тренды — на soyuzlab.ai, в одном окне. Заходи и погнали"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://t.me/directorsoyuz/3627
+duplicates_of: []

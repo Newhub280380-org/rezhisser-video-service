@@ -1,0 +1,50 @@
+id: 072_frozen_time_product_orbit_seamless_loop
+source_file: 72_frozen_time_product_orbit_seamless_loop.md
+title: '# 72 — «Застывшее время» с товаром в воздухе: скрин подброшенного предмета → Seedance 2, камера облетает и макро, последний кадр = первый (бесшовный луп)'
+intent_tags:
+- product_ad
+- seamless_series
+- pov_one_take
+use_when: Bullet-time рекламного продукта, всё застыло, двигается только камера; механические звуки объектива. Поля [PRODUCTO], [DETALLE 1/2], [COLOR] заполнить.
+inputs:
+- стартовый кадр
+- финальный кадр
+- аудио/голос
+steps:
+- n: 1
+  action: Снять, как подбрасываете товар; скрин в момент полёта.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Seedance 2: скрин в референс + промпт.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "\U0001F520\U0001F520\U0001F520\U0001F520\U0001F520\n\nИнструкция:\n1. Переходим в VeoSeeBot \n2. Seedance 2\nВставляем в раздел с референсом скрин из своего видео, где вы уже подкинули предмет. Также\
+  \ вводим такой промпт:\nAnimate this image as one continuous cinematic shot, no cuts. The subject, the environment\nand the lighting stay perfectly still — frozen. Only the camera moves.\nCamera sequence\
+  \ (one fluid unbroken move): start on the opening frame exactly as the\nsource image. The camera pushes in slowly toward [PRODUCTO], closing distance until it\nfills the frame. It makes a slow tight orbit\
+  \ around [PRODUCTO], the object as the pivot,\ncircling to reveal its sides — not a wide orbit around the room. It eases into an extreme\nmacro across the details — [DETALLE 1], then drifting to [DETALLE\
+  \ 2] — with cinematic\n[COLOR] light reflections and soft bokeh behind. Then the camera smoothly pulls back out\nalong the same path, returning to the exact opening framing. The final frame matches the\n\
+  first frame.\nCinematic product-film lighting throughout — [COLOR] reflections on the surface, soft\nbokeh highlights, shallow depth of field, subject sharp and background soft. Ultra-stable,\nslow, smooth,\
+  \ no shake, no jitter.\nPreserve composition, colors, subject and lighting of the original image. Keep [PRODUCTO]\nand the environment exactly as in the source. No extra objects, no warped geometry.\n\
+  Audio: mechanical camera sound design — motorized lens zooms, focus-motor whirrs, subtle\nservo movements, soft mechanical clicks and whooshes synced to the push-in, orbit and\nmacro. Clean high-end tech\
+  \ product-reveal feel, no music, no voice.\n\nГотово ✅"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://t.me/reels_by_alsi/698
+duplicates_of: []

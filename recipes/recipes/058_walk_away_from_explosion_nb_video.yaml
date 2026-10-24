@@ -1,0 +1,50 @@
+id: 058_walk_away_from_explosion_nb_video
+source_file: 58_walk_away_from_explosion_nb_video.md
+title: '# 58 — Уверенно идёт на камеру на фоне взрыва G-Class: Nano Banana Pro (кадр) → видео-промпт со статичной камерой'
+intent_tags:
+- vfx_effect
+use_when: 'Киношный трюк «не оглядываясь на взрыв»: кадр с вашим лицом + видео, где машина горит и взрывается, а герой идёт дальше.'
+inputs:
+- unknown
+steps:
+- n: 1
+  action: 'Nano Banana Pro: image 1 = лицо + промпт сцены.'
+  tool:
+  - Nano Banana
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Видео-модель (в посте не указана): картинка + «Промт для видео».'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "Закрой гештальт \U0001F525\n\nПромт для Nano Banana pro:\nИспользуй image 1 как лицо девушки\\.\nСтрого сохрани лицо без изменений \\(100% идентичность: черты, глаза, губы, форма лица\\)\\.\n\nСоздай\
+  \ кинематографичную ночную сцену на улице\\.\n\nДевушка идёт прямо на камеру уверенной, спокойной походкой\\.\nКамера расположена немного снизу \\(low angle\\), полный рост\\.\n\nОдежда:\nчёрный обтягивающий\
+  \ короткий топ без рукавов \\(crop top\\), открывающий живот,\nобъёмные свободные карго\\-штаны с большими боковыми карманами, слегка приспущенные и собирающиеся складками,\nлёгкая укороченная куртка\
+  \ или бомбер, надетая небрежно и спущенная с плеч,\nчёрные массивные кожаные ботинки на толстой подошве\\.\n\nПозади неё стоит чёрный внедорожник \\(Mercedes G\\-Class\\), слегка под углом \\(полубоком\
+  \ к камере\\)\\.\n\nЗа машиной происходит мощный взрыв:\nогромное огненное облако, яркие языки пламени, искры, густой дым\\.\n\nОгонь создаёт сильный тёплый контровой свет сзади,\nпередняя часть девушки\
+  \ остаётся в мягкой тени\\.\n\nОгонь не касается девушки, не повреждает её, она спокойно продолжает идти вперёд\\.\n\nДобавь атмосферу:\nискры в воздухе, частицы, дым, лёгкое зерно,\nкинематографичный\
+  \ “грязный” стиль, без глянца\\.\n\nОсвещение динамичное и реалистичное от взрыва\\.\n\nСтиль: эпичный, контрастный, насыщенный, киношный\\.\n\nФотореализм, высокая детализация, 8k\\.\nБез искажений,\
+  \ лицо не менять\\.\nПромт для видео:\nStatic camera, cinematic style.\n\nThe girl walks toward the camera with a calm, confident walk.\nHer face remains unchanged, no distortion.\nShe looks directly\
+  \ into the camera with a neutral, emotionless expression.\n\nBehind her is a black SUV (Mercedes G-Class), already on fire.\nFlames are coming out of the windows, intense fire inside the car.\nFire is\
+  \ realistic with smoke and sparks.\n\nThe fire creates strong warm backlight, lighting her silhouette.\n\nShe keeps walking forward without reacting.\n\nAfter a short moment, a powerful explosion occurs:\n\
+  a large fireball expands outward,\nwindows shatter and fly out,\ndoors burst open from pressure,\nsparks, debris, and smoke spread into the air.\n\nExplosion is realistic with proper physics and volume.\n\
+  \nThe girl remains unharmed and continues walking calmly.\n\nNormal speed (no slow motion).\nNo camera movement.\n\nStyle: cinematic, realistic, epic.\n#промт #NanoBanana \n\n\U0001F449СОЗДАТЬ ФОТО\U0001F449\
+  \n\nДля заказа фото и видео пишите сюда @tttempty"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: C
+prompt_completeness: complete
+notes: видео-модель в посте не названа (бот ai_mini_app); промпт для видео — дословно
+source_url: https://t.me/ai_mini_app/316
+duplicates_of: []

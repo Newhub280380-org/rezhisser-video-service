@@ -1,0 +1,77 @@
+id: 131_meme_pov_party_you_as_hero_9_memes_seedance25_30s
+source_file: 131_meme_pov_party_you_as_hero_9_memes_seedance25_30s.md
+title: '«Оживи легендарный мем с собой»: дом (@image1) + ваше фото (@image2) + 7 мем-персонажей → Seedance 2.5 30 с, POV-дубль с бесконечной вечеринки'
+intent_tags:
+- client_in_clip
+- pov_one_take
+use_when: 'Непрерывный ручной POV на iPhone в 4:30 утра в доме «где вечеринка не закончилась»: HERO (@image2) проходит по комнатам, встречая персонажей мемов @image3…@image9, реалистичная тряска, whip-pan,
+  зум с потерей качества, без музыки — только живой звук. Один ролик 30 с.'
+inputs:
+- unknown
+steps:
+- n: 1
+  action: Площадка с Seedance 2.5 (у автора soyuzlab.ai), 30 с.
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: 30 с
+  aspect: unknown
+- n: 2
+  action: 'Загрузить: @image1 — дом, @image2 — ваше фото, @image3–9 — выбранные мемы.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: Вставить промпт из комментариев → генерация.
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  === https://t.me/directorsoyuz/3619 2026-08-29T14:24:06+00:00
+  Оживи легендарный мем — с собой в главной роли 🔥
+
+  Тренд, который сейчас разлетается: берёшь культовый мем и превращаешь его в живое видео, где ты — тот самый герой. Смешно, вирусно, залетает на ура.
+
+  Показываю, как повторить:
+
+  1. Заходи на soyuzlab.ai
+  2. Выбери Seedance 2.5, 30 секунд
+  3. Загрузи своё фото и выбранные мемы
+  4. Вставь промпт из комментов и генерируй — через пару минут готовый ролик
+
+  Отдаю всё, чтобы повторить. Референсы и промпт — в комментариях 👇
+
+  Все топовые нейросети и свежие тренды — на soyuzlab.ai, в одном окне. Заходи и погнали
+- "### comments directorsoyuz/3619\n--- Anastasiya Mikhnevich\nMain character / protagonist: @image2, referred to as HERO throughout.\n\nVERTICAL 9:16 | iPhone 16 | continuous handheld POV take, no cuts\n\
+  Time: pre-dawn LA, 4:30 AM. Pale sky, streetlights on, empty quiet street outside; warm lamps and shadow pockets inside @image1 (the house where the party never ended).\nCamera style throughout: realistic\
+  \ handheld shake, walking bounce, whip pans with motion blur, autofocus hunting, digital zoom quality-drop, mild high-ISO noise. Deep focus, no bokeh, no color grade. Photorealistic. No music — only live\
+  \ sound (voice, crowd murmur, footsteps, first birds).\n\n[HERO = @image2 — the protagonist and camera operator. The phone is his eyes: on front camera he is visible on screen; on rear camera he is off-screen,\
+  \ but his movement, actions and voice drive every shot]\n\n1. [HERO, front camera / selfie] @image2  films himself at arm's length, glowing house behind his shoulder. He says: \"Итак, народ......\" —\
+  \ flips to rear camera.\n\n2. [HERO, rear camera, POV] @image2 now standing at the front door. Knocks.\n\n3. @image3 old man opens the door, forced toothy smile, thumbs-up, hollow tired eyes, silent,\
+  \ doing nothing else.\n\n4. [HERO, POV] @image2 mutters \"Что за...?\", slips past him inside.\n\n5. Packed living room: crowd with red cups turns in sync toward the lens — judgmental, disgusted faces,\
+  \ one mid-sip.\n\n6. a boy about ten @image9 years old, tousled brown hair, stands still amid the chaos, giving an exaggerated sarcastic smirk — one eyebrow raised, lips pressed into a knowing half-smile,\
+  \ head tilted slightly, radiating deadpan \"yeah, sure\" energy. \n\n7. Silent dancing crowd, only sneakers squeaking. Center: @image4 boy ~10, dark sunglasses, deadpan serious, sharp confident moves.\
+  \ laughs (his voice, off-screen).\n\n8. Round table: @image5 two women — one screams silently, finger jabbing straight at the lens; other recoils in mock horror.\n\n9. @image6 man taps his temple twice,\
+  \ smug smirk.\n\n10. @image7 second man narrows one eye, two fingers up, sizing up the lens with a suspicious smirk.\n\n11. @image2 says: \"Ладно, нам нужно выбираться отсюда\" — turns, moves fast through\
+  \ the house, shaky pans.\n\n12. Narrow hallway: two men frozen nose-to-nose, unblinking. squeezes between them @image8.\n\n13. @image2 spots lit \"EXIT\" sign, slips out past the still-smiling old man\
+  \ @image3.\n\n14. @image2  jogs onto the empty pale-dawn street, party noise cutting off behind him, camera settling as he walks. Take ends.\n--- \U0001F1F7\U0001F1FA\nНе получается сделать пишут вот\
+  \ так\n--- @directoreels Chat\nДелай на @soyuzlab.ai\n--- Татьяна Бубаева\n30 секунд нету, только 5 сек"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B/C
+prompt_completeness: complete
+notes: картинки-референсы мемов (медиа); soyuzlab.ai — платная площадка, не запускалась
+source_url: https://t.me/directorsoyuz/3619
+duplicates_of: []

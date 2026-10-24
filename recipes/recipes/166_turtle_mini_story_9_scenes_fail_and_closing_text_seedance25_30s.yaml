@@ -1,0 +1,113 @@
+id: 166_turtle_mini_story_9_scenes_fail_and_closing_text_seedance25_30s
+source_file: 166_turtle_mini_story_9_scenes_fail_and_closing_text_seedance25_30s.md
+title: 'Мини-история 30 с в 9 сценах: черепашка мечтает полететь на листе, неудача и финальная плашка «Same dream. Next attempt!» — Seedance 2.5'
+intent_tags:
+- other
+use_when: 'Каркас «полноценная история за 30 с одним промптом»: блок стиля + блок постоянства героя → 9 сцен по 3–4 с с таймкодами → финальный текст → Global Instructions (что сохранять и чего избегать).'
+inputs:
+- unknown
+steps:
+- n: 1
+  action: 'Один шаг: Seedance 2.5, 30 с, 16:9, промпт ниже (из комментария автора).'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: 30 с
+  aspect: '16:9'
+- n: 2
+  action: 'Для серии: менять героя (описание в первом абзаце) и сцены, оставить каркас и Global Instructions.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  # A tiny turtle, a giant leaf, and one big dream 🐢🍃 | AI Animation + Full Prompt
+  u/Fresh-Resolution182 https://reddit.com/comments/1xc4jjh
+
+  Not every little hero wears a cape. 🐢
+
+  Some ride wooden carts, dive into piles of autumn leaves, and try to fly with a giant leaf. Sometimes the adventure doesn't go as planned — but the dream is still worth chasing.
+
+  **“Same dream. Next attempt!”** 🍃
+
+  I created this little cinematic adventure with **Seedance 2.5**, brought to life through Atlas Cloud.
+
+  The goal was to tell a complete mini-story in just 30 seconds, with a consistent turtle character, cinematic camera movements, and a playful ending.
+
+  I've included the full storyboard and generation prompt below for anyone interested in experimenting with AI animation.
+
+  **The Little Turtle’s Big Adventure**
+
+  👇 Full prompt below. I'd love to hear your thoughts!
+- |-
+  **Style & Visual Direction**
+
+  Cinematic 3D animation, expressive character acting, vibrant fantasy landscapes, smooth camera movements, detailed textures, and 16:9 widescreen composition.
+
+  Maintain a consistent turtle design throughout the entire video: green skin, a brown patterned shell, large brown eyes, and a red scarf. Keep the character's proportions, colors, facial features, and accessories identical across all scenes.
+
+  **Scene 1 (0–4s): The Journey Begins**
+
+  A tiny turtle walks along a rocky trail through a breathtaking green valley surrounded by towering cliffs and distant mountains. Golden sunlight illuminates the landscape. A low-angle tracking shot follows the turtle, emphasizing its small size against the vast environment.
+
+  **Scene 2 (4–7s): A Pile of Autumn Leaves**
+
+  The turtle discovers a pile of golden autumn leaves. Curious, it dives into the pile and pops back out with leaves scattered across its head. A close-up captures its adorable, surprised expression.
+
+  **Scene 3 (7–10s): Eyes on the Horizon**
+
+  The turtle smiles, shakes off the leaves, and looks toward the winding path ahead. Cinematic close-up, soft lighting, subtle facial animation, and a sense of renewed determination.
+
+  **Scene 4 (10–14s): The Wooden Cart**
+
+  The turtle climbs into a small wooden cart. The cart rolls down the winding dirt trail, with its wheels rotating naturally. The turtle looks excited as a smooth tracking shot follows alongside the moving cart.
+
+  **Scene 5 (14–17s): The Giant Leaf**
+
+  Near a dramatic cliff, the turtle discovers an enormous green leaf. It lifts the leaf overhead as the wind gently catches it. The turtle gazes toward a distant mountain peak, imagining the possibilities.
+
+  **Scene 6 (17–21s): A Leap of Faith**
+
+  The turtle leaps from the ledge, holding the giant leaf like a glider. Its red scarf flutters in the wind as it floats above the spectacular valley. A sweeping aerial camera movement reveals the towering cliffs and breathtaking scenery below.
+
+  **Scene 7 (21–24s): Unexpected Turbulence**
+
+  The turtle glides between rocky formations but approaches a sharp mountain peak. Its expression shifts from excitement to surprise as it struggles to steer the leaf. A dynamic tracking shot captures the playful tension without losing visual continuity.
+
+  **Scene 8 (24–27s): Ready to Try Again**
+
+  The turtle lands safely beside lush foliage, with the giant leaf resting nearby. After a thoughtful pause, it smiles with renewed determination. Gentle close-up, warm cinematic lighting, and expressive character animation.
+
+  **Scene 9 (27–30s): The Dream Continues**
+
+  At sunset, the turtle looks toward a distant checkered flag atop a mountain. The camera slowly pulls back across the glowing valley, creating an emotional and uplifting ending.
+
+  Display the closing text:
+
+  **“Same dream. Next attempt!”**
+
+  **Global Instructions**
+
+  * Preserve character identity, proportions, colors, and accessories across all scenes.
+  * Maintain consistent environmental details and visual continuity.
+  * Use smooth transitions, believable motion, natural physics, and expressive animation.
+  * Keep camera movements cinematic and purposeful.
+  * Avoid distorted anatomy, flickering textures, inconsistent character designs, duplicated limbs, abrupt cuts, and sudden changes in lighting or scale.
+  * Keep the narrative cohesive, charming, adventurous, and emotionally uplifting.
+  * Total duration: approximately 30 seconds.
+  * Aspect ratio: 16:9 widescreen.
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '16:9'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: Ничего. Видео не смотрел. Генерировал через Atlas Cloud (API).
+source_url: https://reddit.com/comments/1xc4jjh
+duplicates_of: []

@@ -1,0 +1,53 @@
+id: 038_anime_to_live_action_lora
+source_file: 38_anime_to_live_action_lora.md
+title: 'Аниме → живое видео: исходное видео как референс + LoRA Anime_2_Realism'
+intent_tags:
+- motion_transfer
+use_when: 'Аниме → живое видео: исходное видео как референс + LoRA Anime_2_Realism'
+inputs:
+- видео-референс (движение/клип)
+steps:
+- n: 1
+  action: Исходное аниме-видео подаётся в H3 как видео-референс (кейфреймы не генерировались).
+  tool:
+  - MiniMax H3
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Включить LoRA Anime_2_Realism; в промпте просто «convert it to live action».
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: Нет листа референсов → консистентность героя зависит от интерпретации модели; следующий шаг автора — добавить лист.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: 'Источник идеи: r/StableDiffusion 1x1kvmg (Omnitrix).'
+  tool: unknown
+  mode: Omni
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim: []
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: Нет.
+confidence: C
+prompt_completeness: gaps
+notes: Точный промпт.
+source_url: null
+duplicates_of: []

@@ -1,0 +1,133 @@
+id: 170_birthday_number_candles_fpv_forest_chase_your_photo_seedance25_24s
+source_file: 170_birthday_number_candles_fpv_forest_chase_your_photo_seedance25_24s.md
+title: 'День рождения: вы на «вампирской скорости» гоняетесь в лесу за свечами-цифрами вашего возраста, они влетают в торт — FPV-погоня, Seedance 2.5, 24 с'
+intent_tags:
+- pov_one_take
+use_when: 'Одно фото + число (возраст) → 24 с FPV-погони: свечи-цифры вылетают из-за спины, удар ногой, поимка, бросок, обе свечи по очереди втыкаются в торт, загораются, герой задувает. Число задаётся
+  строкой NUMBER.'
+inputs:
+- аудио/голос
+- логотип
+steps:
+- n: 1
+  action: Шаг 1 — подготовить фото(ы) в хорошем качестве (см. пост).
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Шаг 2 — Seedance 2.5 с параметрами из поста (у автора — в боте @neyrosetkabot), фото + промпт из комментариев.
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: 5 с
+  aspect: unknown
+- n: 3
+  action: В промпте поменять цифры в строке NUMBER (у автора — подстановка "user_text_0"), звук из комментариев добавить в редакторе (так в посте).
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "=== https://t.me/nercpa/317 2026-10-21T02:45:54+00:00\n\U0001F44CПогоня за свечами\n\n1. Заходите в бота @neyrosetkabot\n2. Выбираете ваше фото в хорошем качестве\n3. Выбираете режим Видео - Seedance\
+  \ 2.5 (24 сек, формат 9:16) и отправляете ваше фото с текстом из комментариев\n4. Не забудьте поменять цифры на свечах в строке NUMBER\n5. В любом редакторе добавьте звук, который находится в комментариях\n\
+  \nПРОМПТ В КОММЕНТАРИЯХ \n⬇️⬇️⬇️\n\n⚡️Генерация в один клик \n\n#видео #развлекательное\n  \n    Please open Telegram to view this post\n    VIEW IN TELEGRAM"
+- |-
+  TASK & FORMAT
+  A 24-second photorealistic vertical video (9:16) of a birthday action stunt in a pine forest, shot like a fast FPV-drone chase: low, fast, flying camera with strong motion blur. Hard cuts only at 4.0s and 8.7s; all other changes of view are done by the camera itself — a fast whip turn or a tree trunk passing right in front of the lens as a natural wipe. No transitions, no crossfades.
+
+  REFERENCES
+  @image1 = the main character. Exact face, facial structure, eyes, brows, nose, lips, skin tone, apparent age and gender, hairstyle, hair length and color, body build, clothing and accessories from @image1. The person may be anyone — a man or a woman, a child or an adult; the body and its proportions match @image1. If @image1 shows only the face or upper body, complete the rest of the body and outfit logically in the same style as the visible clothing, with sneakers. Do not alter gender presentation, age or ethnicity. Same face, hair and outfit in every frame.
+
+  NUMBERS
+  NUMBER = "user_text_0"
+  There are exactly two candles in the whole video: the FIRST-DIGIT CANDLE shows the first digit of NUMBER, the SECOND-DIGIT CANDLE shows the second digit of NUMBER. On the cake the first-digit candle stands on the left and the second-digit candle on the right, so the cake reads NUMBER from left to right.
+  Each candle is a classic birthday number candle: a solid wax digit with a shiny metallic silver coating, thick and chunky, with smoothly rounded bevelled edges, a short white wick on top, standing on one thin white stick. On the cake each candle is about the height of the cake; they look huge in flight only because they fly close to the lens. The digits are always shown exactly as in NUMBER, never mirrored, never replaced with other digits.
+  CANDLE ORDER: the first-digit candle is launched at 1.5s, kicked at 7.5s and finally drops from the sky into the cake at 15.8s (left position). The second-digit candle is launched at 1.5s, caught at 11.0s, thrown at 12.0s and lands in the cake first at 14.5s (right position).
+
+  LOCATION
+  A tall pine forest: straight reddish-brown pine trunks, green ferns covering the ground, a dirt path covered with reddish pine needles. A small clearing with a small black table; on it a silver cake stand with a tall single-tier cake covered in smooth white buttercream with a piped shell border at the top and bottom. Soft, even overcast daylight.
+
+  THE RUN
+  Every time the person runs, it is a supernatural vampire-speed run: impossibly fast, smooth and gliding, with no up-and-down bounce, the head perfectly steady, the legs a blur, hair and clothes whipped back by the wind, the forest streaking past. In the opening shot it is also an anime ninja run: torso leaning far forward, both arms stretched straight back behind the body.
+
+  TIMELINE
+  0.0–1.5s — VAMPIRE NINJA RUN AT THE CAMERA
+  The @image1 person runs straight toward the camera along the forest path, filmed close: framed from the knees up, filling most of the frame. Torso leaning far forward, both arms stretched straight back and rigid behind the body, palms open; the run is superhumanly fast and gliding, the head not bobbing at all, the legs blurred. Serious, focused face, eyes locked on the lens. The camera flies low and backward just in front of them at the same high speed; the ferns and trunks at the frame edges streak past in heavy motion blur.
+
+  1.5–3.0s — THE NUMBERS BURST OUT FROM THE SIDES, WHIP TURN
+  At 1.5s, still running, they swing both straight arms from behind the back forward in one sharp move, as if flinging something. At that instant the two candles burst out from behind their body at hip level: the first-digit candle from their left side, the second-digit candle from their right side. They start small, right next to the body, and physically fly forward through 3D space past the person toward the lens, growing with real perspective, upright and not spinning, digits facing the camera, light glinting on their metallic surfaces, motion-blurred. By 2.
+
+  2s they are close to the lens on the left and right edges of the frame, with the person still running between them; then both fly past the camera and up out of the frame. At 2.3s the camera whips to the side and a pine trunk sweeps across the lens. From 2.5s: a side tracking shot — the person streaks in profile from left to right through the ferns at vampire speed, and high in the sky at the top of the frame only the first-digit candle flies away to the right, upright, not spinning. The second-digit candle is gone and does not appear again until 9.0s.
+
+  3.0–4.5s — CHASE AND WALL RUN UP A TREE
+  Fast side tracking shot, the person gliding at vampire speed, pine trunks flashing past in the foreground, only the first-digit candle flying upright in the sky ahead, not spinning. At 3.8s they leap and plant a foot on a thick pine trunk. HARD CUT at 4.0s: the camera is low at the ground and to the side of the tree, seeing the person from the side and below as they run straight up the vertical trunk, feet pushing against the bark. As they climb higher, the camera smoothly sinks and swings under them, so by 4.8s it looks straight up from the base of the trunk at the person against the sky and treetops.
+
+  4.5–7.5s — SIDE FLIP AND SPINNING KICK (ONE CONTINUOUS SHOT, NO CUT)
+  At 5.0s, high on the trunk, they push off sideways with both feet and do a full side flip in the air — the body rotating sideways like an aerial cartwheel, legs swinging over the head. The camera does not cut: it keeps flying and swings around the person during the flip, so the whole rotation is visible from start to finish. At 6.0s they come out of the flip still in the air, sideways to the camera, and turn the momentum into a spinning jump kick: the body twists around and one leg whips around toward the camera. At 6.6s the action nearly freezes in slow motion: they hang horizontally in the air, the sole of their sneaker filling a third of the frame in the foreground, the first-digit candle falling upright from the sky right beside their head, not spinning, its digit facing the camera — the only candle in the frame; they look straight into the lens with a sly half-smile, one arm stretched out to the side.
+
+  7.5–9.0s — THE KICK HITS THE CANDLE, SUPERHERO LANDING
+  At 7.5s speed returns: the spinning kick follows through and the foot smacks the first-digit candle. From the hit it starts spinning fast around its own stick like a spinning top — staying upright, the stick pointing down, turning its front, its edge and its back to the camera in turn — and flies high up out of the frame. It does not appear again until 15.8s. Still in the same continuous shot, they land with their back to the camera in a low superhero crouch, one hand touching the ground. HARD CUT at 8.7s: a close side tracking shot of their legs in a blurred vampire-speed sprint as they take off running again.
+
+  9.0–10.5s — CHASE, TURN TOWARD THE CAMERA
+  Side tracking shot: they streak in profile through the ferns, only the second-digit candle flying upright high in the sky ahead of them, not spinning. At 10.0s a pine trunk sweeps across the lens, and after it the person is running straight toward the camera from far down the path.
+
+  10.5–12.0s — CATCH AND INSTANT SPIN
+  They run closer. Only the second-digit candle drops from the sky toward them, upright, not spinning, its digit facing the camera, and at 11.0s they catch it with the right hand, on the run, without stopping. They immediately spin their whole body around on the spot; on the turn the throwing arm swings toward the camera — open palm and the second-digit candle at the wrist in the extreme foreground, a cheeky, confident face looking into the lens. The camera is very close and slightly low.
+
+  12.0–13.5s — THE THROW, CHASING THE CANDLE
+  Completing the spin, they release the second-digit candle with a fast sidearm throw away from the camera, deep into the forest, flicking the stick.
+
+  From the throw it starts spinning fast around its own stick like a spinning top — staying upright, the stick pointing down, turning its front, its edge and its back to the camera in turn. The person grows smaller in the frame; the candle flies low over the ground, spinning. At 13.2s the second-digit candle whips past right next to the lens, and the camera turns and flies after it.
+
+  13.5–15.0s — FLYING TO THE CAKE
+  The camera chases the upright, spinning second-digit candle between the pine trunks toward the clearing with the black table and the cake. At 14.5s it stops spinning, drops stick-first and sticks upright into the cake, slightly right of center, its digit facing the camera. The camera swoops quickly into a close, steady shot of the cake with this single candle.
+
+  15.0–16.5s — THE FIRST-DIGIT CANDLE DROPS FROM THE SKY, THE CANDLES LIGHT UP
+  Static close shot: the cake with only the second-digit candle in it. At 15.8s the first-digit candle falls from above, upright, still spinning around its stick from the kick, slows to face the camera and sticks stick-first into the cake to the left of the second-digit candle. Now the cake reads NUMBER from left to right. At 16.3s both wicks ignite by themselves with small warm flames.
+
+  16.5–18.0s — MACRO OF THE CANDLES
+  The camera pushes in: the two candles with their flames fill the frame, sharp; the background falls into a dark blur, a soft out-of-focus figure standing behind the cake.
+
+  18.0–19.5s — THE PERSON BEHIND THE CAKE
+  The camera slowly pulls back and the focus shifts to the @image1 person standing behind the table, arms down along the body, smiling calmly and warmly at the camera.
+
+  19.5–21.0s — LEANING TO THE CAKE
+  The person bends forward over the table, bringing their face down closer to the candles. The camera moves in to a close shot: the face and the lit candles together in one frame. They smile into the lens.
+
+  21.0–22.5s — BLOWING OUT THE CANDLES
+  They take a deep breath, mouth wide open, then purse their lips and blow on the candles, their face close behind the flames.
+
+  22.5–24.0s — FINAL
+  The flames go out, thin wisps of smoke curl up from both wicks. The candles stay sharp in the foreground, the face slightly soft behind them. The person straightens up and smiles happily at the camera. End.
+
+  CAMERA
+  FPV-drone style throughout the action: low, fast, constantly flying, strong motion blur on the ferns and trunks, trunks passing close to the lens. From 4.0s to 8.7s one continuous flying shot that moves from the side of the tree to below it and then orbits around the flip and the kick. Calmer, smooth handheld movement from 15.0s, with a shallow depth of field and a focus shift from the candles to the person.
+
+  REALISM
+  Photorealistic, real weight and momentum in every jump, flip, kick and landing; the running speed is superhuman but the body stays real. The candles are solid wax objects with weight, thickness and metallic reflections, moving through real space with perspective and motion blur, always upright in flight. Real candle flames and real thin smoke. Real forest light, no glow effects, no magic sparkles.
+
+  AUDIO
+  No music.
+  Fast soft footsteps on forest ground, rushing wind of the vampire-speed run, fast whooshes as the camera and the candles fly past the lens, a sharp double whoosh as the candles burst out at 1.5s, feet thumping on bark at 4.0–5.0s, a swirl of air during the flip, a solid thud as the kick hits the candle at 7.5s, the crunch of the landing in pine needles, the slap of the catch at 11.0s, a whirring whoosh of the spinning throw, two soft thumps as the candles stick into the cake at 14.5s and 15.8s, a small soft "fwump" of the wicks igniting at 16.3s, quiet forest birds and a light breeze in the calm part, a breath and a soft blow at 21.0–22.5s, a quiet happy exhale at the end.
+  No speech, no words.
+
+  NEGATIVE
+
+  kicking the second-digit candle, catching the first-digit candle, both candles in the sky at the same time, candles spinning before the kick or before the throw, candles tumbling end over end, candles flipping forward or backward, candles flying lying flat, candles spinning like a wheel or a frisbee, balloons, foil balloons, inflatable digits, an ordinary jogging run, a bouncing run, arms swinging forward during the opening run, the candles appearing as flat stickers or a flat overlay in front of the frame, candles popping into the frame from nowhere, a backflip instead of a side flip, a cut between the flip and the kick, catching both candles, the first-digit candle landing in the cake first, the digits in the wrong order on the cake, wrong digits, mirrored digits, a third candle, extra numbers, a candle duplicating, candles changing shape or color, the cake being lifted or held in hands, the cake falling, smooth slow camera during the action, crossfades, morphing, the person's face, hair or outfit changing, a second person, music, speech, singing, subtitles, text, logos, watermarks, cartoon look, CGI look, magic glow, sparkles
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: Бот @neyrosetkabot платный — не запускался. Видео не смотрел.
+source_url: https://t.me/nercpa/317
+duplicates_of: []

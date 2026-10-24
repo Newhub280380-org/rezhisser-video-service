@@ -1,0 +1,55 @@
+id: 035_split_screen_vfx_breakdown_prompt
+source_file: 35_split_screen_vfx_breakdown_prompt.md
+title: 'Сплит-скрин «VFX-разбор»: сверху готовый кадр, снизу съёмочная площадка/мокап'
+intent_tags:
+- product_ad
+- talking_head
+- vfx_effect
+- motion_transfer
+use_when: 'Сплит-скрин «VFX-разбор»: сверху готовый кадр, снизу съёмочная площадка/мокап'
+inputs:
+- видео-референс (движение/клип)
+steps:
+- n: 1
+  action: unknown (в источнике нет нумерованных шагов; см. prompts_verbatim)
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "\U0001F525This Is What an Avatar Chase Scene Actually Looks Like on Set\n\nMade with Seedance 2.5 on @makeugc \n\nPrompt\U0001F447:\nA cinematic 10-second VERTICAL 9:16 split-screen VFX breakdown video\
+  \ inspired by Avatar and the attached reference video.\n\nREFERENCE AND COMPOSITION:\nUse the attached video as the primary visual reference for the blue alien protagonist, luminous jungle, creature design,\
+  \ practical film studio, and behind-the-scenes atmosphere. Compress the concept into a coherent 10-second sequence.\nThe frame is divided horizontally into TWO equal halves by a thin, fixed line:\nTOP\
+  \ HALF: the finished cinematic scene in a bioluminescent alien jungle.\nBOTTOM HALF: the corresponding raw motion-capture studio footage.\n\nBoth halves show the SAME performance, camera angle, screen\
+  \ position, and timing, perfectly synchronised frame to frame. The human actor in the bottom half drives the blue alien character in the top half. Match their gestures, head turns, footsteps, and body\
+  \ orientation precisely.\nMAIN SUBJECT — TOP HALF:\nAn adult male Na’vi warrior with an athletic, lean muscular build, blue skin with darker stripes, subtle luminous freckles, yellow eyes, pointed ears,\
+  \ long dark braided hair, and a long expressive tail. He wears a brown woven loincloth, a diagonal leather chest strap, simple tribal arm bands, and a small beaded necklace. His appearance remains identical\
+  \ throughout.\nMAIN SUBJECT — BOTTOM HALF:\nThe same adult male performer with matching facial structure and long dark hair secured beneath a motion-capture head rig. He wears a fitted grey motion-capture\
+  \ suit with small black tracking markers, practical shoes, and a head-mounted facial camera. His human appearance remains visible. A concealed stunt harness connects to two overhead safety wires for the\
+  \ final dive.\n\nCREATURE — TOP HALF:\nA massive alien jungle predator matching the visual character of the attached reference: dark blue-black armoured skin, a broad angular head, ridged plates along\
+  \ its neck and back, bright amber eyes, sharp teeth, and orange luminous markings between its armour plates. Powerful limbs, heavy footfalls, and believable animal movement. Maintain one consistent creature\
+  \ design and size.\n\nCREATURE — BOTTOM HALF:\nA practical foam-and-silicone creature head and partial torso on a clearly visible mechanical support, operated by crew members wearing black. Its head position,\
+  \ turns, and lunges correspond exactly to the finished creature above. The support remains attached throughout. Crew stay outside the actor’s stunt path.\nLOCATION — TOP HALF:\nA dense tropical alien\
+  \ jungle at blue twilight. Huge tree trunks, hanging vines, moss-covered roots, broad purple leaves, glowing cyan mushrooms, and luminous magenta plants. Pale blue mist creates depth between the trees.\
+  \ Small floating spores drift through the air.\n\nA large moss-covered fallen tree trunk sits in the lower centre-right, creating a sheltered hiding space behind it. Keep this trunk in the same location\
+  \ throughout the shot.\nLOCATION — BOTTOM HALF:\nA large motion-capture studio with blue and green screen walls, tracking crosses, overhead lighting trusses, rectangular LED panels, and a visible stunt\
+  \ rig. Practical artificial foliage, foam roots, and a padded green obstacle reproduce the layout of the jungle and fallen trunk.\n\nFour to six crew members work around the perimeter. A cinema camera\
+  \ sits on a dolly at the foreground edge, with a monitor showing the finished jungle scene. A large fan moves the performer’s hair and nearby practical leaves. Equipment must not obscure the essential\
+  \ action.\nCAMERA AND LOOK:\nBoth halves use the same three-quarter side angle and matched framing. The protagonist travels from LEFT TO RIGHT in both halves.\n\nTOP: realistic cinematic jungle photography,\
+  \ gentle camera movement, textured skin, convincing creature weight, soft blue environmental light, restrained bioluminescence, subtle atmospheric haze, and natural motion blur.\nBOTTOM: candid behind-the-scenes\
+  \ footage, slight handheld vibration, flat practical studio lighting, muted contrast, faint sensor noise, and occasional mild autofocus adjustment. Keep this movement subtle enough to preserve the matched\
+  \ composition.\n\nNo cuts within either half. One continuous action sequence.\nCONTINUOUS STORY:\n\n00:00–00:02 — THE THREAT\nTOP: The Na’vi warrior is already moving cautiously toward the right. He hears\
+  \ something, turns his head over his left shoulder, and freezes in fear. The predator emerges from the foliage roughly"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '9:16'
+done_criteria: 'Сюжетный приём: разбор «как снято» — зрительский интерес, и заодно два параллельных кадра дают разные ракурсы одного действия.'
+confidence: B
+prompt_completeness: partial
+notes: Хвост промпта.
+source_url: https://x.com/Orvexiumx/status/2109315805078843552
+duplicates_of: []

@@ -1,0 +1,87 @@
+id: 015_kling_motion_control_first_frame_swap
+source_file: 15_kling_motion_control_first_frame_swap.md
+title: 'Kling Motion Control: swap = правка первого кадра + видео-референс; голос через ElevenLabs'
+intent_tags:
+- talking_head
+- client_in_clip
+- object_alive
+- motion_transfer
+use_when: 'Kling Motion Control: swap = правка первого кадра + видео-референс; голос через ElevenLabs'
+inputs:
+- видео-референс (движение/клип)
+- стартовый кадр
+- аудио/голос
+steps:
+- n: 1
+  action: 'Видео-референс: один персонаж, весь корпус виден, до 30 с.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: 30 с
+  aspect: unknown
+- n: 2
+  action: 'Кадр 1 извлечь и переделать в Nano Banana Pro / Flux 2: «replace the man in image 1 with the woman in image 2 in exactly the same pose.» Положение персонажа не менять; фон можно менять.'
+  tool:
+  - Nano Banana
+  - Flux
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: В Kling Motion Control загрузить видео + новый первый кадр; промпт пустой (или только про сцену/свет/стиль, действие описывать не надо); поставить галочку «Character Orientation Matches Video».
+  tool:
+  - Kling
+  mode: Motion Control
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: 'Голос: загрузить видео/аудио в ElevenLabs Voice Changer — сохранит подачу и тайминг, поменяет голос.'
+  tool:
+  - ElevenLabs
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 5
+  action: 'Wan 2.2 Animate: стартовый кадр должен быть «чистым» (нет лишних людей, пропорции точно как в видео); Move = перенести движение в новую сцену; Replace = заменить только персонажа.'
+  tool:
+  - Wan
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 6
+  action: 'Из страницы Kling: «не нужно описывать действие; опиши сцену: cinematic shot, neon lighting, cyberpunk city, 4K, volumetric fog».'
+  tool:
+  - Kling
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 7
+  action: Для двоих — запускать Motion Control отдельно на каждого и компоновать в редакторе (из страницы flowlioai).
+  tool: unknown
+  mode: Motion Control
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim: []
+output:
+  format: mp4
+  resolution: 4K
+  aspect: unknown
+done_criteria: Первый кадр фиксирует личность и позу; видео — движение. Голос отдельным шагом.
+confidence: C
+prompt_completeness: gaps
+notes: Полный текст X Article, остальные разделы гайда.
+source_url: null
+duplicates_of: []

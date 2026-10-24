@@ -1,0 +1,152 @@
+id: 203_cartoon_character_x_brand_sneaker_ad_nbpro_kling3_motion_control
+source_file: 203_cartoon_character_x_brand_sneaker_ad_nbpro_kling3_motion_control.md
+title: 'Рекламный ролик «персонаж × бренд» (Tom × Puma): Nano Banana Pro — стабильный персонаж в одежде бренда → отдельно чистое фото продукта → Kling 3.0 Motion Control, 15 с селфи-ролик с диалогом и смешной
+  концовкой («Tom! Come here!» — «Coming, Mom. Bye.») → сборка в InVideo AI'
+intent_tags:
+- product_ad
+- talking_head
+- client_in_clip
+- meme
+- motion_transfer
+use_when: 'Рекламный ролик «персонаж × бренд» (Tom × Puma): Nano Banana Pro — стабильный персонаж в одежде бренда → отдельно чистое фото продукта → Kling 3.0 Motion Control, 15 с селфи-ролик с диалогом
+  и смешной концовкой («Tom! Come here!» — «Coming, Mom. Bye.») → сборка в InVideo AI'
+inputs:
+- фото товара/продукта
+- фото лица/портрет человека
+- логотип
+steps:
+- n: 1
+  action: '**Nano Banana Pro — персонаж** (промпт 1). Персонаж должен всегда выглядеть одинаково, иметь чёткий стиль и работать как «актёр».'
+  tool:
+  - Nano Banana
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: '**Продукт** — отдельно готовится реалистичное фото кроссовка: правильные пропорции, чистый свет, чёткий логотип.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: '**Kling 3.0 Motion Control** — объединить персонаж + продукт → видео (промпт 2). Формула автора: персонаж + продукт + движение = рекламный ролик.'
+  tool:
+  - Kling
+  mode: Motion Control
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: '**InVideo AI** — сборка видео.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  Ultra cinematic 3D render of Tom in Pixar-style stylized realism, maintaining 100% original identity.
+  Tom is sitting comfortably on a luxury beige sofa in a modern high-end living room.
+
+  👕 OUTFIT (NOW PERFECT)
+  Premium Puma layered streetwear:
+  • Outer layer: Puma jacket (beige / off-white / soft grey / muted olive)
+  • Clean fit, premium fabric
+  • Single visible Puma logo on jacket only
+  • Inner layer: Plain oversized t-shirt
+  • No logo, no graphics
+  • Neutral tone (white / cream / soft grey)
+  • Minimal, clean, luxury aesthetic
+
+  👉 Key line:
+  Inner t-shirt must be completely plain to keep the look premium and uncluttered.
+
+  😄 EXPRESSION + 👀 EYES (LOCKED)
+  • Bright, lively, wide-open eyes with strong reflections
+  • Confident, happy smile
+  • Slight mischievous Tom attitude
+  • Energetic, charismatic face
+
+  🎨 COLOR BALANCE (IMPORTANT)
+  • Outfit must contrast softly with the sofa and background
+  • Avoid pure black
+  • Keep tones warm, premium, and aesthetic
+
+  📸 FRAMING
+  • Medium-wide shot (clearly showing seated pose on sofa)
+  • Slight zoom out for breathing space
+  • Cinematic composition
+
+  💡 LIGHTING
+  • Soft daylight hitting face (for eye highlights)
+  • Warm ambient interior lighting
+  • Balanced shadows
+
+  🚫 NEGATIVE PROMPT ADD
+  No logos on t-shirt
+  No multiple logos
+  No pure black outfit
+  No cluttered styling
+- |-
+  Ultra cinematic 15-second selfie-style video of Tom sitting on a sofa in a modern luxury living room. Tom must look exactly like his original character from Tom and Jerry, but rendered in high-end Pixar-style stylized realism. His identity, face shape, eyes, expressions, and proportions must remain 100% accurate and instantly recognizable while existing naturally in a cinematic 3D environment.
+  The character is wearing a premium Puma jacket in a soft neutral tone like off-white, beige, or light grey. The jacket has a single clean Puma logo. Inside, he is wearing a plain oversized t-shirt with no logo or design. The outfit should feel like a real premium fashion campaign with natural fabric folds and realistic material response.
+
+  Framing:
+  Medium close-up selfie angle, slightly zoomed out to clearly show Tom sitting on the sofa. The framing must feel natural and balanced, with enough space to showcase both Tom and the sneaker without crowding the frame.
+
+  Lighting:
+  Soft natural daylight from the front window combined with warm indoor ambient lighting. Lighting must be physically accurate and consistent across both character and product. Strong, sharp catchlights must be visible in Tom’s eyes. The sneaker must receive clean highlights that define its shape and materials.
+
+  Action:
+  Tom lifts a black and white Puma sneaker into frame and slowly rotates it. He brings it slightly closer to the camera, creating a natural focus shift, then lowers it slightly while maintaining eye contact.
+  The character looks at the camera, then briefly at the shoe, then back at the camera with confident, playful energy.
+
+  Dialogue (voice style):
+  Smooth, confident, slightly mischievous male voice that feels like Tom brought to life in a modern premium ad. Natural, calm, controlled.
+
+  Dialogue:
+  "Just got these Puma sneakers."
+  (slight pause, rotates shoe)
+  "...clean."
+
+  (off-screen voice — Tom’s mother, slightly distant)
+  "Tom! Come here!"
+
+  (Tom reacts naturally, slight eye shift, relaxed smile)
+  "Coming, Mom."
+
+  (looks back at camera, small wave or nod)
+  "Bye."
+
+  Expression:
+  Happy, confident smirk with bright, wide-open expressive eyes. Subtle eyebrow lift, slight head movement, and natural reaction to the off-screen voice. Eyes must feel sharp, vibrant, and full of life with strong reflections.
+
+  Realism:
+  The sneaker must be exactly accurate to the real Puma product — correct shape, proportions, sole structure, stitching, logo placement, and material textures. No redesign, no distortion.
+
+  The Puma logo must be perfectly sharp and correctly positioned.
+
+  Camera:
+  Slight handheld motion, shallow depth of field, realistic focus shift when the shoe moves closer, cinematic lens feel.
+
+  Quality:
+  Ultra high quality, photorealistic cinematic rendering, clean color grading, no artifacts, no flicker, no warping, no character distortion.
+
+  Tone:
+  Premium lifestyle product video with a playful narrative ending, feeling like a real Puma campaign blended with Tom’s world.
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: нет; в канале есть платный «Клуб ИИ» — не открывал
+source_url: https://t.me/aivideo_ru/37
+duplicates_of: []

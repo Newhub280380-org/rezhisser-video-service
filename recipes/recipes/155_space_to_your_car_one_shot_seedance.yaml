@@ -1,0 +1,80 @@
+id: 155_space_to_your_car_one_shot_seedance
+source_file: 155_space_to_your_car_one_shot_seedance.md
+title: Один кадр из космоса через атмосферу в город к вашей машине (номер сохраняется) — Seedance 2.5, 10 с
+intent_tags:
+- pov_one_take
+use_when: 'Непрерывный пролёт камеры: космос → атмосфера → Манхэттен → ваша машина с фото, оригинальный номер — абсолютный приоритет. Город и авто меняются в промпте.'
+inputs:
+- логотип
+steps:
+- n: 1
+  action: 'Seedance 2.5 (у автора на агрегаторе): 1080p, 10 с, 9:16.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: 10 с
+  aspect: '9:16'
+- n: 2
+  action: Загрузить фото авто (@Image1); теги @ проставить вручную.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: Вставить промпт; при желании поменять город и автомобиль.
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "\U0001FA90 Видео прямо из космоса\n\nНа создание этого ролика ушло всего несколько минут. Всё делаю на одном сервисе-ссылка ниже \U0001F447 \n«Перейти на сайт»\n\n\U0001F4E5 Промпт тут\n\n⚠️ Важно:\n\
+  В промпте встречается символ «@», не копируй его. Удали этот символ, затем поставь «@» вручную и выбери нужный вариант из появившихся подсказок.\nТак же в промпте можно изменить город и автомобиль\n\n\
+  Настройки, которые использовал:\n• 1080p\n• 10секунд\n• Формат 9:16\n\nЕсли такой формат разборов тебе интересен-дай знать любой реакцией\U0001F525❤️"
+- "One continuous cinematic shot. One uninterrupted take with no cuts, transitions, or changes of camera angle. Total duration: 10 seconds.\n\nThe main subject throughout the entire video is the car shown\
+  \ in @Image1. Do not alter its design, model, generation, body shape, color, wheels, headlights, windows, mirrors, proportions, or any exterior details. The vehicle must remain visually identical to the\
+  \ reference image.\n\nCRITICAL: Preserve the exact original license plate shown on @Image1 throughout the entire video. Keep the exact same letters, numbers, characters, layout, proportions, colors, and\
+  \ appearance of the license plate. Do not replace, blur, distort, redesign, or generate a different license plate. The license plate must remain clearly recognizable and identical to the reference image,\
+  \ especially in the final shot.\n\nSHOT 01 — 0:00–0:02\n\nDeep outer space. Earth hangs silently below, enormous and majestic.\n\nThe camera begins moving almost imperceptibly forward toward Earth. Continents\
+  \ gradually become visible through layers of clouds. Stars begin stretching into long light trails as the camera slowly accelerates.\n\nThe camera approaches North America and naturally aligns toward\
+  \ the northeastern United States.\n\nUltra-wide anamorphic lens. Epic cinematic scale. Photorealistic Earth, realistic cloud formations, physically accurate atmospheric lighting.\n\nSound: deep low-frequency\
+  \ rumble, almost complete vacuum silence.\n\nSHOT 02 — 0:02–0:05\n\nThe camera rapidly enters Earth’s atmosphere.\n\nIntense plasma glow appears around the edges of the frame. Speed dramatically increases\
+  \ to approximately 800%. Clouds rush past at extreme speed.\n\nThe northeastern United States becomes visible below. The Atlantic coastline appears, followed by New York City.\n\nThe camera rapidly focuses\
+  \ on Manhattan and begins an extremely fast descent toward the city.\n\nThe geography gradually becomes recognizable: Manhattan, the Hudson River, the East River, dense urban development, bridges, and\
+  \ the distinctive New York City skyline.\n\nSound: powerful atmospheric impact, intense re-entry noise, rapidly increasing wind rush.\n\nSHOT 03 — 0:05–0:07\n\nThe camera dives rapidly over New York City.\n\
+  \nBelow, recognizable elements flash past: Manhattan skyscrapers, Central Park, the Brooklyn Bridge, dense city blocks, and the New York urban landscape.\n\nThe camera smoothly changes direction while\
+  \ remaining part of the same continuous physical camera movement, with absolutely no cut or transition.\n\nIt flies between skyscrapers while rapidly descending toward street level.\n\nThe car from @Image1\
+  \ gradually appears in the distance.\n\nThe camera rapidly approaches the vehicle while reducing speed from approximately 800% down to 40%.\n\nThe car must remain completely faithful to @Image1.\n\nSound:\
+  \ authentic New York City ambience, distant traffic, occasional car horns, wind rushing between skyscrapers.\n\nSHOT 04 — 0:07–0:08\n\nThe camera smoothly glides at approximately car height, gradually\
+  \ slowing to almost walking speed.\n\nThe car from @Image1 is parked on a New York City street.\n\nCold late-winter overcast lighting. Slightly damp asphalt with subtle realistic reflections. Soft reflections\
+  \ of surrounding buildings appear naturally across the car’s glossy yellow bodywork.\n\nThe background contains recognizable New York architecture, tall buildings, urban streets, and muted cold-weather\
+  \ daylight.\n\nThe camera continues smoothly toward the front of the vehicle.\n\nSHOTS 05–06 — 0:08–0:10\n\nThe camera slowly approaches the car from @Image1 and nearly comes to a complete stop directly\
+  \ in front of it.\n\nThe car is the sole main character of the final shot.\n\nThe vehicle must preserve every original visual characteristic from @Image1:\n\n\t•\texact original car model and generation;\n\
+  \t•\texact yellow body color;\n\t•\texact body shape and proportions;\n\t•\texact headlights;\n\t•\texact kidney grille;\n\t•\texact air intakes;\n\t•\texact wheels;\n\t•\texact tires;\n\t•\texact brake\
+  \ calipers;\n\t•\texact mirrors;\n\t•\texact windows;\n\t•\texact aerodynamic bodywork;\n\t•\texact exterior details;\n\t•\texact proportions and geometry.\n\nLICENSE PLATE — ABSOLUTE PRIORITY\n\nThe\
+  \ original license plate from @Image1 must be preserved exactly.\n\nKeep the same letters, numbers, characters, formatting, placement, dimensions, colors, and visual appearance as the reference image.\n\
+  \nDo not invent a new plate.\nDo not replace the plate.\nDo not blur the plate.\nDo not modify the characters.\nDo not change the plate format.\nDo not add random text or symbols.\n\nThe license plate\
+  \ must remain clearly visible and identical to the reference image, particularly in the final frame.\n\nA subtle cold breeze moves through the surrounding environment. Natural cinematic reflections of\
+  \ New York architecture glide across the car’s bodywork.\n\nThe final composition should closely reproduce the camera angle, vehicle position, framing, scale, and visual feel of @Image1, while placing\
+  \ the vehicle naturally within New York City.\n\nNew York skyscrapers and urban architecture remain visible in the background.\n\nThe camera comes to a complete stop at the very end of the video.\n\n\
+  ⸻\n\nVISUAL STYLE\n\n4K Ultra HD, photorealistic, extremely high detail, cinematic texture, realistic materials, physically accurate reflections, realistic automotive paint, natural winter lighting, overcast\
+  \ New York atmosphere, anamorphic lens, subtle anamorphic lens flares, realistic depth of field, cinematic motion blur, volumetric atmosphere, highly detailed urban environment.\n\nThe car must look completely\
+  \ photorealistic. No stylization, no artificial CGI appearance, no redesign of the vehicle.\n\nThe car from @Image1 remains visually identical to the reference image throughout the entire video.\n\nOne\
+  \ continuous physical camera flight from outer space all the way down to the car.\n\nNo cuts. No edits. No transitions. No jump cuts. No scene changes. No teleportation. No camera reset. No vehicle replacement.\
+  \ No vehicle transformation. No change of car model. No change of body color. No change of wheels. No change of license plate.\n\nNo subtitles, captions, titles, watermarks, logos, or additional text\
+  \ overlays.\n\nFinal frame: the exact car from @Image1, in New York City, with the exact original license plate preserved, in a composition as close as possible to the reference image."
+output:
+  format: mp4
+  resolution: 1080p
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: Сайт-агрегатор автора (реф-ссылка) не открывался — не нужен, модель доступна где угодно.
+source_url: https://t.me/reelsteacher/1013
+duplicates_of: []

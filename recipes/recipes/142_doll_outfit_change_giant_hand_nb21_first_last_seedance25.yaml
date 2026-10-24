@@ -1,0 +1,102 @@
+id: 142_doll_outfit_change_giant_hand_nb21_first_last_seedance25
+source_file: 142_doll_outfit_change_giant_hand_nb21_first_last_seedance25.md
+title: 'Смена образа «кукла и гигантская рука»: Nano Banana 2.1 первый/последний кадр из одного фото → Seedance 2.5 10 с по таймкодам 0,8 с'
+intent_tags:
+- product_ad
+- client_in_clip
+- seamless_series
+use_when: 'Из одного фото в полный рост делаются два кадра в той же комнате и ракурсе: «только проснулась, пижама» и «готовый образ с сумкой». Seedance 2.5 с первым/последним кадром анимирует, как огромная
+  рука «одевает» живую миниатюрную куклу: каждые ~0,8 с одно действие с микро-отскоком под игрушечную музык'
+inputs:
+- фото в полный рост
+- стартовый кадр
+- финальный кадр
+steps:
+- n: 1
+  action: 'Nano Banana 2.1: референс-фото + промпт первого кадра (пижама).'
+  tool:
+  - Nano Banana
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Nano Banana 2.1: тот же референс + промпт последнего кадра (новый образ; заменить описание одежды на свою).'
+  tool:
+  - Nano Banana
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: last_frame
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Seedance 2.5: image 1 = первый кадр, image 2 = последний, видео-промпт 10 с с таймкодами.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: 10 с
+  aspect: unknown
+prompts_verbatim:
+- |-
+  AI Doll Outfit Changes: A Playful Way to Make Fashion Videos
+
+  A giant hand styles a lifelike miniature model, one outfit detail at a time 🪆
+
+  For anyone exploring fashion content without appearing on camera, this is a fun format to try. Create the before-and-after images, then animate the outfit change between them.
+
+  Here’s the workflow and prompt set. Replace the outfit descriptions with your own. For product content, check the generated clothing against the actual item before posting.
+
+  **Step 1: Create the first and last frames**
+
+  Upload a full-body reference photo of an adult woman with **Nano Banana 2.1**. Use the same reference for both images.
+
+  **First-frame prompt:**
+
+      Create a 9:16 vertical, full-body photorealistic image. Preserve the reference living room’s warm cream palette, furniture, decorations, lighting, and camera position.
+      Keep the same adult woman’s facial identity, black hair, skin tone, and natural body proportions. Dress her in pale-yellow-and-blue checked cotton pajamas with small cartoon motifs and matching socks.
+      She has just woken up: slightly tousled hair, a sleepy expression, head lowered, torso leaning forward slightly, and both arms hanging loosely in front. Keep her entire body and feet visible.
+      Use soft, warm daylight, natural skin texture, and clearly defined fabric checks. No text or watermark.
+
+  **Last-frame prompt:**
+
+      Create a 9:16 vertical, full-body photorealistic image using exactly the same woman, living room, lighting, framing, and camera position as the first frame.
+      Dress her in an ivory knitted cardigan with small dog embroidery, olive-green cargo shorts with large pockets, a white open-knit hat, colorful slouch socks, and ivory plush platform shoes.
+      She stands upright on the same spot on the rug. Her left hand gently touches the hat brim; her right hand holds a large brown leather tote. Her expression is relaxed, with a subtle natural smile.
+      Keep every garment and accessory fully visible, with believable fabric texture, folds, and proportions. No text or watermark.
+
+  **Step 2: Animate the outfit change**
+
+  Use the generated images as the first and last frames in **Seedance 2.5**.
+
+  **Video prompt:**
+
+      Create a 10-second, 9:16 photorealistic doll-styling video. Use image 1 as the opening frame and image 2 as the final appearance.
+      Fixed camera, one continuous shot. Preserve the same living room, furniture, lighting, character identity, black hairstyle, skin tone, body proportions, and position throughout.
+      The adult woman appears as a lifelike miniature doll. Only one oversized adult female right hand enters from screen right. Show anatomically correct fingers and a naturally connected wrist. The hand must complete each action before beginning the next; never duplicate it.
+      Use a playful toy-music rhythm. From 0.8 to 8 seconds, complete one styling action approximately every 0.8 seconds. At each contact, briefly settle for about 0.15 seconds with a subtle natural rebound.
+      0–0.8s: Hold the opening pajama look. The woman leans forward slightly and blinks sleepily.
+      0.8–1.6s: The oversized hand gently supports her shoulder and upper back, straightening her posture. Her feet stay planted.
+      1.6–2.4s: The hand gently raises her left forearm toward the future hat-brim position, then releases it.
+      2.4–3.2s: The hand brings in the ivory embroidered cardigan and settles it over her shoulders. As the fabric settles, the pajama top changes cleanly into the final cardigan look, with no exposed intermediate state.
+      3.2–4s: A small upward bounce marks a clean, beat-matched replacement of the pajama bottoms and socks with olive cargo shorts, colorful slouch socks, and ivory plush shoes. She lands on the same spot.
+      4–4.8s: The hand lightly smooths the cardigan front and hem. Preserve the embroidery and natural knit texture.
+      4.8–5.6s: The hand places the white open-knit hat on her head. It settles with a tiny rebound.
+      5.6–6.4s: The hand gently adjusts her left hand so her fingers rest naturally against the hat brim.
+      6.4–7.2s: The hand places the brown tote handles into her right hand. The bag swings slightly, then settles.
+      7.2–8s: The hand makes one final adjustment to the cardigan hem, then exits screen right.
+      8–10s: Match image 2’s outfit and pose. She looks toward the camera, blinks, and gives a faint smile. Hold the final composition for the last second.
+      Keep garment changes clean and opaque. Preserve hand contact, accessory shapes, and clothing continuity. Use playful instrumental toy music without vocals.
+      No cuts, camera movement, flashes, lens-covering transitions, text, or watermarks. No second hand, extra person, extra fingers, distorted joints, face changes, fabric melting, clipping, floating accessories, or prolonged obstruction of the face.
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего (видео на Reddit не смотрели)
+source_url: https://www.reddit.com/r/Seedance_AI/comments/1xc5gb4/
+duplicates_of: []

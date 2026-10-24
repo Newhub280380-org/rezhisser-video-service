@@ -1,0 +1,44 @@
+id: 075_outpaint_room_overlay_capcut_mask
+source_file: 75_outpaint_room_overlay_capcut_mask.md
+title: '# 75 — Расширить комнату вокруг своего видео: скрин → GPT Image 2 (дорисовать студию) → CapCut: видео поверх фото, маска с растушёвкой'
+intent_tags:
+- other
+use_when: 'Дешёвый «отъезд камеры»: генерация только картинки, видео остаётся настоящим; шов прячется маской.'
+inputs:
+- unknown
+steps:
+- n: 1
+  action: 'GPT Image 2: скрин своего видео + промпт.'
+  tool:
+  - GPT Image
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'CapCut: фон — сгенерированное фото, наложение — видео, подогнать размер, маска с размытием краёв.'
+  tool:
+  - CapCut
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "Инструкция:\n1. Переходим в VeoSeeBot \n2. GPT image 2\nВставляем скрин из своего видео и пишем такой промпт:\nContinue and expand the room naturally beyond the original frame.\n\nGenerate a spacious\
+  \ professional photography studio with a modern minimalist interior.\n\nExtend the walls, wooden floor, and ceiling naturally. Add a comfortable sofa on one side, elegant floor-to-ceiling curtains, decorative\
+  \ plants and flowers, photography backdrops, additional studio equipment, and plenty of empty open space.\n\nEverything must match the existing lighting, shadows, perspective, and color grading so that\
+  \ the room looks like a seamless continuation of the original photograph.\n\nThe result should look as if the camera simply moved farther away, revealing more of the same studio without changing anything\
+  \ inside the original image\n\n3. Переходим в капкат, вставляем фото с Ии дорисовкой и в наложении добавляем видео, подравниваем его по размеру. Чтобы стык был незаметен, применяем маску и размазываем\
+  \ края"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://t.me/reels_by_alsi/752
+duplicates_of: []

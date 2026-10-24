@@ -1,0 +1,100 @@
+id: 163_zombie_alien_donut_time_freeze_comedy_30s_seedance25
+source_file: 163_zombie_alien_donut_time_freeze_comedy_30s_seedance25.md
+title: 'Комедия 30 с: зомби и пришелец в пончиковой в 2 ночи, заморозка времени, драка, перемирие и панчлайн в последнем кадре — Seedance 2.5 одним промптом'
+intent_tags:
+- talking_head
+- client_in_clip
+- seamless_series
+- vfx_effect
+use_when: 'Шаблон короткого комедийного скетча на 30 с: FORMAT / NO ON-SCREEN TEXT / IDENTITY LOCK / два персонажа с голосами / окружение / таймлайн по секундам с репликами / LAST FRAME (панчлайн) / CAMERA
+  / LIGHT / VFX / ACTING / AUDIO / LOCKS. Меняя персонажей и место, получаем серию скетчей.'
+inputs:
+- аудио/голос
+- логотип
+steps:
+- n: 1
+  action: 'Один шаг: Seedance 2.5, text-to-video 30 с, промпт ниже.'
+  tool:
+  - Seedance
+  mode: text-to-video
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: 30 с
+  aspect: unknown
+- n: 2
+  action: 'Для серии: заменить блоки CHARACTERS, ENVIRONMENT и реплики, оставить каркас (заморозка → реплики → драка → перемирие → возобновление времени → панчлайн).'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  A zombie and an alien walk into a donut shop at 2am only one donut left
+
+  Seedance 2.5 Prompt ⤵️
+
+  FORMAT: 30 seconds | 24fps cinematic | ultra photorealistic live action | studio comedy action | practical prosthetic creature makeup | VFX time freeze | 2am fluorescent night interior. Real-time, no random slow motion.
+
+  NO ON-SCREEN TEXT - CRITICAL: no captions, subtitles, titles, logos, watermarks, timecode or UI at any point. Menu board and case labels are blank coloured panels, never legible.
+
+  IDENTITY LOCK: the same two leads in every shot, never changing face, skin, height, wardrobe or props. No morphing, no extra fighters. The cashier and four customers become frozen statues after 0:03 and never move, blink or react until 0:27.
+
+  CHARACTERS
+  THE ZOMBIE: 6 foot 2, gaunt, grey-green mottled skin with dry cracked patches, cloudy pale eyes, sunken sockets, lank dark hair, no wounds, no blood. Torn navy night-shift security uniform, crooked clip-on tie, one shoe untied. Moves stiff and heavy, then surprisingly quick. Voice: deep gravelly rasp, slow, every word an effort.
+  THE ALIEN: 4 foot 10, slender, smooth pale lilac skin, large glossy black almond eyes, small nostril slits, narrow bald cranium, long four-fingered hands. Oversized yellow tourist rain poncho, small cross-body camera. Voice: light, clipped, overly correct English with a faint electronic flutter.
+
+  ENVIRONMENT: a narrow 24-hour donut shop at 2am. Cream tile floor, chrome stools, a lit glass display case along the right wall, all trays empty except exactly ONE glazed donut on a paper doily, glowing under the case light. Rain streaking the front window, a red traffic light outside.
+
+  0:00-0:03 THE FREEZE
+  Handheld medium down the counter. A customer drops a coffee cup, coffee arcing. The zombie and the alien lunge at the case from opposite ends. Sound drops out. Everything stops: coffee hangs as a glossy brown ribbon, raindrops pinned on the glass, the cashier's yawn locked open. Only the two leads keep moving.
+
+  0:03-0:08 REALIZATION
+  Both straighten, look at the hanging coffee, then each other. Slow 30 degree orbit.
+  ALIEN: "I have crossed four galaxies for this donut."
+  ZOMBIE: "I... died... for this donut."
+  ALIEN: "That is not the same thing."
+
+  0:08-0:13 FIRST EXCHANGE
+  The zombie swings a long stiff arm, the alien ducks, slides on wet tile and kicks a stool into his shins. He topples, catches the counter, groans. Whip pan as she vaults onto the counter.
+
+  0:13-0:18 THE FLASH
+  She snaps her camera in his face, a hard white flash. He staggers, then pulls a folded umbrella from a frozen customer with real effort, the customer staying rigid.
+  ZOMBIE: "Rude."
+
+  0:18-0:23 COUNTER FIGHT
+  Fast tracking shot. She leaps stool to stool over frozen shoulders, he swings the umbrella, she parries with a frozen customer's rolled newspaper. Three crisp readable exchanges. His clip-on tie pops off. Her hood flops over her eyes.
+
+  0:23-0:27 TRUCE
+  Both stop, breathing hard, hands on knees, coffee ribbon between them.
+  ALIEN: "Share?"
+  ZOMBIE: "Share."
+  They shake hands, four lilac fingers in a grey palm. Micro pause. Both eyes flick to the donut.
+
+  0:27-0:30 TIME RESUMES
+  Both dive at the case. The world unfreezes: coffee splashes down, the cashier finishes the yawn, customers jolt, rain runs, fridge hum slams back.
+
+  LAST FRAME: locked medium wide down the counter. The zombie and the alien pressed cheek to cheek at the open case, both gripping the one donut, glaze stretching between their hands, both grinning, coffee spraying through the light. Cashier and customers turn to stare. No text, captions, subtitles, signage lettering, logos or watermarks anywhere in frame.
+
+  CAMERA: controlled handheld in exchanges, smooth dolly and orbit on freeze reveals, low angle for the zombie, eye level for the alien, fast whip pans. Shallow depth on dialogue, consistent screen direction.
+
+  LIGHT AND COLOUR: cold overhead fluorescent key, warm amber case glow on faces and the donut, red street light through the rainy window. 70% cool tile and skin, 20% case amber, 10% red.
+
+  VFX AND PHYSICS: frozen liquid holds surface tension and highlights. The resume restores gravity in one continuous frame, no morphing, no dissolve. Stools scrape and tip, his heavy fall shakes the counter, she lands light, poncho crackling and lagging, true contact shadows. Nothing floats except the deliberately frozen.
+
+  ACTING: natural blinking, active brows on the zombie, the alien's eyes narrowing and widening, dry deadpan timing. Only the speaker's mouth forms words.
+
+  AUDIO, DIEGETIC ONLY: fridge hum and rain before the freeze. During it near-silence: breathing, a dry groan, sneaker squeak on wet tile, poncho crackle, stool scrape, umbrella whoosh, shutter clack. At resume: splash, gasps, rain and hum return. These are the only words spoken. No music, no score, no humming, no swell, no drone.
+
+  LOCKS: No blood, no gore, no wounds. No duplicated people, no extra limbs, the alien always has four fingers. No wardrobe or face changes, no cartoon physics, no excessive shake. Dry comedy, readable fight, coherent physics.
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: Ничего (промпт целиком в посте). Видео не смотрел.
+source_url: https://x.com/bmx_ai13/status/2112946391878393917
+duplicates_of: []

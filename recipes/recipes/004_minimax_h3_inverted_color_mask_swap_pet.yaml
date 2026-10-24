@@ -1,0 +1,65 @@
+id: 004_minimax_h3_inverted_color_mask_swap_pet
+source_file: 04_minimax_h3_inverted_color_mask_swap_pet.md
+title: 'Подмена на питомца/персонажа: SAM3-маска с инвертированными цветами (негатив) вместо чёрной'
+intent_tags:
+- client_in_clip
+- animal
+use_when: 'Подмена на питомца/персонажа: SAM3-маска с инвертированными цветами (негатив) вместо чёрной'
+inputs:
+- видео-референс (движение/клип)
+steps:
+- n: 1
+  action: SAM3 строит маску человека в видео; вместо чёрной заливки человек перекрашивается в негатив цветов (инверсия) — так сохраняется информация о его позе и мимике (лицо видно как инвертированное).
+  tool:
+  - SAM3
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Эта «негативная» версия идёт как референс-видео в ref2video MiniMax H3; рядом — референс-картинки персонажа (у автора это его собака).
+  tool:
+  - MiniMax H3
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: Промпт «примерно такой» — автор дал только скриншот (imgur.com/FNX4wsu.png, imgur.com/bUYkWk0.jpeg) — картинки не прочитаны; руководствоваться промптом из схемы minimax_h3_silhouette_mask_swap
+    (структура та же).
+  tool:
+  - MiniMax H3
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: 'Воркфлоу: Google Drive автора (не открывал). В нём есть нода Character LoRA, выключена.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 5
+  action: 'Аргумент автора против чёрной маски (Sheedy): чёрная теряет всю информацию о лице; негатив «намного лучше».'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim: []
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: Негатив-маска оставляет движение лица и губ, поэтому артикуляция/мимика переносится на нового персонажа, при этом оригинальная внешность не читается напрямую.
+confidence: C
+prompt_completeness: gaps
+notes: Скриншот промпта и скриншот SAM3-настроек (imgur), JSON на Drive.
+source_url: https://reddit.com/r/StableDiffusion/comments/1x4k7sq/
+duplicates_of: []

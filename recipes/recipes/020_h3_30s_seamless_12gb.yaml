@@ -1,0 +1,75 @@
+id: 020_h3_30s_seamless_12gb
+source_file: 20_h3_30s_seamless_12gb.md
+title: '30 секунд бесшовного image-to-video в H3 на 12 ГБ: три шота подряд в одном проходе'
+intent_tags:
+- product_ad
+- seamless_series
+use_when: '30 секунд бесшовного image-to-video в H3 на 12 ГБ: три шота подряд в одном проходе'
+inputs:
+- аудио/голос
+steps:
+- n: 1
+  action: "`comfyui-h3-multishot` (By Joey Gambino)\n   * *Provides essential components:* `H3MultishotMemorySampler`, `H3ScriptSplit`, `H3ClipLoaderAny`."
+  tool:
+  - MiniMax H3
+  - ComfyUI
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: "`ComfyUI-Spectrum-MiniMax-H3`\n   * *Provides essential components:* `SpectrumApplyMiniMaxH3` (Deploys advanced history parameters and signal stabilization to completely neutralize visual flickering)."
+  tool:
+  - MiniMax H3
+  - ComfyUI
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: "`ComfyUI-FreeMemory`\n   * *Provides essential components:* `FreeMemoryImage` (Acts as the system traffic cop to violently drop massive video models from memory prior to the video save cycle)."
+  tool:
+  - ComfyUI
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: "`comfyui-kjnodes`\n   * *Provides essential components:* `PathchSageAttentionKJ` (Integrat\n```"
+  tool:
+  - ComfyUI
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "**ComfyUI MiniMax H3 30-Second Long-Form Generation Workflow**\n\n# Deeply Optimized for Low/Mid-Range GPUs (12GB VRAM)\n\n**CivitAi workflow link:** [**https://civitai.com/models/2882332/minimax-h3-30-second-seamless-image-to-video-w-full-audio-workflow-for-12gb-gpus**](https://civitai.com/models/2882332/minimax-h3-30-second-seamless-image-to-video-w-full-audio-workflow-for-12gb-gpus)\n\
+  \n**Mega link for those who cannot access CivitAi:** /file/DmJy3LhA#i1iF7IxR-7ju-uXWyLMhZ8AsovH9ykOJv8nCKHuUl9s\n\n**How to use:**\n\n* 1: Open ComfyUI and load the JSON\n* 2: Load the starting image\
+  \ in the big green box\n* 3: Type out your prompt int he big green box\n* 4: Click on \"Run\" to generate a 30 second image to video\n\n>**Warning:** Your prompt has to be detailed. If it's something\
+  \ simple, it will just kind of rubberband on whatever simple inputs you describe, like \"A man just sitting in the chair\". The more details you add, the more it stitches together a seamless transition\
+  \ between the three independent shots to create a cohesive 30-second video in a single runtime pass. Then again, if all you wanted to do was make a simple generation, you wouldn't need a 30-second workflow.\
+  \   \n  \nThe only thing the three shot separates do is dictate WHERE in the 30 seconds the actions take place. So the first set of quotations takes place within ten seconds; the second set of quotations\
+  \ take place within 20 seconds; the third set of quotations takes place after the 20 second mark.\n\nCompromises had to be made to get this to run and generate in an acceptable time. It's possible to\
+  \ boost the image-to-video output for a sharper image, but you're looking at an average 21 minute render time at a step up in quality. Is it worth it? Depends on your workflow and if it's time sensitive.\
+  \ \n\nThis production-grade, crash-proof ComfyUI pipeline leverages Joey Gambino's advanced `H3MultishotMemorySampler` subgraph infrastructure. It has been systematically tuned to shatter the native 15-second\
+  \ tracking boundaries of the local MiniMax H3 architecture—successfully compiling up to **30 continuous seconds of 3-shot cinematic video with synced native audio tracks in under 15 minutes** on a standard\
+  \ 12GB NVIDIA graphics card (such as an RTX 5070).\n\n\U0001F6E0️ Required Custom Node Packages\n\nIf any node blocks present a red warning threshold on your interface canvas, navigate to your **ComfyUI\
+  \ Manager**, execute **Install Missing Custom Nodes**, and restart your server environment. Alternatively, verify that the following core repository directories are fully initialized and updated:\n\n\
+  1. `comfyui-h3-multishot` (By Joey Gambino)\n   * *Provides essential components:* `H3MultishotMemorySampler`, `H3ScriptSplit`, `H3ClipLoaderAny`.\n2. `ComfyUI-Spectrum-MiniMax-H3`\n   * *Provides essential\
+  \ components:* `SpectrumApplyMiniMaxH3` (Deploys advanced history parameters and signal stabilization to completely neutralize visual flickering).\n3. `ComfyUI-FreeMemory`\n   * *Provides essential components:*\
+  \ `FreeMemoryImage` (Acts as the system traffic cop to violently drop massive video models from memory prior to the video save cycle).\n4. `comfyui-kjnodes`\n   * *Provides essential components:* `PathchSageAttentionKJ`\
+  \ (Integrat"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: Цепочка внутри одного воркфлоу с «memory sampler», а не склейка вручную.
+confidence: B
+prompt_completeness: complete
+notes: JSON воркфлоу.
+source_url: https://civitai.com/models/2882332/minimax-h3-30-second-seamless-image-to-video-w-full-audio-workflow-for-12gb-gpus**](https://civitai.com/models/2882332/minimax-h3-30-second-seamless-image-to-video-w-full-audio-workflow-for-12gb-gpus)
+duplicates_of: []

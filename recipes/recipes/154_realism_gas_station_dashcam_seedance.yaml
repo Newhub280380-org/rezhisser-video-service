@@ -1,0 +1,76 @@
+id: 154_realism_gas_station_dashcam_seedance
+source_file: 154_realism_gas_station_dashcam_seedance.md
+title: '«Реализм»: вы на своей машине на заправке, потом съёмка с регистратора на трассе — Seedance 2.5, 15 с, 16:9'
+intent_tags:
+- client_in_clip
+use_when: 'Три рефа: ваше фото, фото машины, фото локации (заправки). Ночью вы подъезжаете к заправке, заправляетесь, садитесь и уезжаете; затем любительская съёмка с регистратора на трассе.'
+inputs:
+- логотип
+- фото локации/города
+steps:
+- n: 1
+  action: 'Seedance 2.5: 1080p, 16:9, 15 с.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: 15 с
+  aspect: '16:9'
+- n: 2
+  action: 'Загрузить: своё фото, фото автомобиля, фото локации.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: Вставить промпт; символ @ не копировать — удалить и поставить вручную, выбрав из подсказок.
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "Реализм в ИИ \U0001F916 \nЗаходим на «сайт»\nВыбираем нейросеть Seedance 2.5\nНастройки: \nКачество- на выбор (у меня 1080)\nФормат: 16:9\nПродолжительность: 15сек\n\nЗагружаем:\n1. Свое фото\n2. Фото\
+  \ автомобиля \n3. Фото локации\n\nПромпт копируем тут\n\n⚠️ Важно:\nВ промпте встречается символ «@», не копируй его. Удали этот символ, затем поставь «@» вручную и выбери нужный вариант из появившихся\
+  \ подсказок.\n\nНе забудь оставить реакцию\U0001F525\U0001F447"
+- "At night, a man in a black T‑shirt drives his yellow BMW M4 up to a brightly lit gas station, parks, refuels, gets back behind the wheel, and drives away. Then, without slowing down, he speeds along\
+  \ an open highway in the style of amateur footage shot with a dashcam, until the car disappears into the darkness on a winding road. Only 15 seconds, 12 segments with timing, a highly compressed runtime\
+  \ across two locations.\nACTIVE LINKS\n@img1: face as a reference for identification @img2: yellow BMW M4\n@img3: reference for refueling\nLOCALITY MAP\nSegments 1–6 (refueling): nighttime area before\
+  \ refueling.\nForeground: painted concrete with barely noticeable tire marks. Medium shot: the camera is focused on the gas station on the right; the car is parked parallel with a gap of approximately\
+  \ 0.6 m. Background: a dark parking lot that fades into blackness at a distance of 15 m; the facade of a convenience store with warm light coming from the windows, located about 20 m behind; a parked\
+  \ pickup truck near the exit from the parking lot, about 8 m from the station. The main light source is the floodlights under the canopy, mounted at a height of approximately 3.5 m and creating a clearly\
+  \ defined rectangular light circle.\nSegments 7-12 (highway): An open nighttime highway, dry asphalt, sections with concrete barriers, sparse streetlights, and occasional shadows from structures (bridge\
+  \ trusses, overpasses) crossing the lane. Interior: a dark cabin illuminated only by the dim glow of the dashboard, shadows from structures forming parallel stripes on the windshield. In segment 11, a\
+  \ road bridge appears overhead, with illuminated green exit signs, and the taillights of two or three other vehicles are visible ahead and to the side.\nFORMAT MODE\nSynchronized multi-shot, 12 sharp\
+  \ frames within the specified seconds, with internal intermediate frames within segment 5 for more precise image detail. Shooting is performed only at the specified points; the camera does not perform\
+  \ shooting on its own.\n0.0–1.35\nA wide low-angle shot (field of view 63º) is taken from a tripod positioned 1.2 meters above the ground, 6 meters from the pump.\nThe BMW M4 slowly pulls into the gas\
+  \ station at a speed of 5 km/h, brakes smoothly, and stops with the headlights on.\n\n1.3–2.5 seconds\nA medium rear shot from a hand‑held angle at three‑quarter view (viewing angle 47°) follows @img1\
+  \ from a distance of 1.5 metres. He walks around the back of the BMW, heading towards the fuel pump, with a natural gait and relaxed body movements.\n2.5–3.7 s\nA wide static shot from behind (viewing\
+  \ angle 63°) covers the BMW and the fuel pump area. @img1 approaches the pump, picks up the red fueling gun, and removes it from the holder without touching the car. \n3.7–4.9 s\nMacro shot from an extremely\
+  \ close distance (viewing angle 18°) focuses on the fuel filler opening. @img1 inserts the gun into the fuel tank neck, and the camera captures the precise mechanical movement with a shallow depth of\
+  \ field. \n4.9–6.65 s\nWide frame in profile (viewing angle 47°) shows the BMW in its entirety. @img1 approaches the driver’s door, opens it, gets into the car, and slams the door shut with a sharp movement.\n\
+  6.6–7.85 s\nWide frame with side tracking (viewing angle 29°) follows the BMW at a constant distance of 5 meters. The car accelerates smoothly as it pulls away from the gas station and briefly drives\
+  \ behind a parked pickup truck before moving into the exit lane.\n7.8–8.9 s\nThe photo, taken with a low-angle handheld shot from behind (viewing angle 63°), shows the BMW moving along the highway. The\
+  \ camera shakes aggressively as the car maintains high speed, slightly adjusting the steering, while its rear lights glow against the dark road.\n\n8.9-10.0s\nIn the close-up of the interior (viewing\
+  \ angle 18°), @img1's face is visible from the front at a three-quarter angle. He's still focused on the road, glancing briefly in the rearview mirror as the low beam flashes through the cabin.\n10.0-11.0c\n\
+  The close-up image (viewing angle 12°) shows the BMW logo on the steering wheel. A slight camera shake and engine vibration are visible, and the chrome emblem briefly reflects the passing light.\n11.0–12.0s\n\
+  The image taken from a very close distance (viewing angle of 12°) captures the driver’s feet. The left foot is near the brake pedal, while the right foot firmly presses the brake, noticeably gripping\
+  \ the sole of the sneaker.\n12.0–13.5 s\nThe rear-view camera (viewing angle 47°) follows the BMW that is driving behind it. The car continues to move at high speed; cars on the highway and the illuminated\
+  \ exit ramp from the overpass flash across the frame. \n13.5–15.0 s\nWide-angle shooting with a three‑quarter rear camera (viewing angle 63°) shows the BMW merging onto the highway. The road turns to\
+  \ the right, the surroundings become darker, and the car gradually moves away; the rear headlights become the main object in the frame. \nGlobal limitation: no snowdrifts on all sections.\nwardrobe\n\
+  A black tank top with a round neckline, emphasizing the natural drape and movement of the fabric; black joggers with a slight taper at the bottom; gray sneakers that demonstrate natural flexibility and\
+  \ compression when pressing the pedal; a seat belt that crosses the chest and is properly taut during movement. \nOUTPUT SETTINGS\n Real‑time playback speed without slowdown, aspect ratio 16:9."
+output:
+  format: mp4
+  resolution: 1080p
+  aspect: '16:9'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: Сайт-агрегатор автора (реф-ссылка) не открывался — не нужен, модель доступна где угодно.
+source_url: https://t.me/reelsteacher/1017
+duplicates_of: []

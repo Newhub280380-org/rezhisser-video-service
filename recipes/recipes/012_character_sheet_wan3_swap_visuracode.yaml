@@ -1,0 +1,56 @@
+id: 012_character_sheet_wan3_swap_visuracode
+source_file: 12_character_sheet_wan3_swap_visuracode.md
+title: Character swap по лист-референсу и видео-референсу в Wan 3.0 (разбор против маркетинга Higgsfield)
+intent_tags:
+- beauty_ad
+- client_in_clip
+- meme
+- motion_transfer
+use_when: Character swap по лист-референсу и видео-референсу в Wan 3.0 (разбор против маркетинга Higgsfield)
+inputs:
+- фото в полный рост
+- видео-референс (движение/клип)
+- стартовый кадр
+- аудио/голос
+- логотип
+steps:
+- n: 1
+  action: unknown (в источнике нет нумерованных шагов; см. prompts_verbatim)
+  tool:
+  - Seedance
+  - Wan
+  - Higgsfield
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "Quick Tutorial: Character Swaps in Video\n\nI'm creating this in response to Higgsfield's intense marketing on their \"Viral AI Influencer\" campaign.\n\nHere I'm referencing a video from [audreyfrog33]\
+  \ on TikTok, please follow them\n\nQuick takeaway:\n- You don't need Genjutsu\n- You don't need Seedance 2.5\n- You don't need Higgsfield\nAll you need to is an understanding of the tools\n\nI created\
+  \ this with WAN 3.0 because it was blocked by Seedance 2.5\n\nRequired Items:\n- Character Sheet\n- Video Reference\n\nCharacter Sheet Prompt\n-----------------------------------------------\nprofessional\
+  \ photo character sheet in flat gray background #7B7B7C, left side as an extreme close up of the subjects face, right side is front and back view from head to toe. \nSubject is: [ Japanese woman in her\
+  \ early 20's, long straight purple fading hair, arm tattoos, boss suit sleeves rolled up, gloves ]\n-----------------------------------------------\n\nTutorial:\n- Find a video to use for character swap\
+  \ \n- Video must be less than 15 seconds\n- Load the video into WAN 3.0 as a reference\n- Load your character sheet into WAN 3.0 as a reference\n- Set duration for 15 seconds or exact duration of video\n\
+  - Set Aspect Ratio to match (9:16)\n- Set output to 480p (use higher if you wish)\n- Add prompt and create\n\nVideo Prompt:\n[START PROMPT]\n---------------------------\nGLOBAL STYLE\nPhotoreal 30-second\
+  \ clip, 16:9. Same grade, lighting, and lens as the source video. Adults 21+ only. No text, no logos, no character-sheet grid.\n\nSCENE\nReplace the person in the source video with the woman from the\
+  \ character sheet. Keep her action, timing, and path. Do not keep the original face, hair, body, or clothes.\n\nREFERENCE ROLES\n@Video1 = motion path, timing, camera, and location ONLY. Do not copy the\
+  \ original person's face, hair, body, wardrobe, or identity.\n@Image1 = character-sheet woman, face + body + wardrobe ONLY. Do not copy the sheet layout, turnaround poses, labels, crop, or background.\n\
+  \nCHARACTERS\nWoman, 21+, identity locked to @Image1: same face, hair, skin, proportions, and outfit from the sheet in every frame. One person only. No extra limbs, no face morph, no blend with the original\
+  \ actor.\n\nLOCATION\nSame room, props, and background as @Video1. Do not import the sheet backdrop.\n\nFIRST FRAME AND BLOCKING\nFrame 1 already in motion, matching the source action. She is fully the\
+  \ sheet character from the first frame, not a fade or morph.\n\nSHOTS\n[0-30s] She performs the same action and blocking as the person in @Video1. Camera matches the source. Identity stays locked to @Image1.\
+  \ Last 3 seconds hold the finished pose.\n\nOPTICS\nMatch the source lens and depth of field. No beauty filter.\n\nCAMERA\nFollow @Video1 camera path only. Do not restage.\n\nPHYSICS\nWeight, cloth, and\
+  \ hair match her real motion. No sliding feet, no rubber limbs.\n\nLIGHTING\nMatch the source practicals and shadows. Her face takes the same light direction as the original person.\n\nAUDIO\n<same diegetic\
+  \ room and movement SFX as the source>\nno music, no score, no subtitles, no on-screen text\n\nCONSTRAINTS\nDo not copy the original person's identity. Do not paste the character sheet as a picture-in-picture\
+  \ or grid. Do not change the action. Faces stay on-model. No text.\n-------------------------------------------------\n[END PROMPT]"
+output:
+  format: mp4
+  resolution: 480p
+  aspect: '9:16'
+done_criteria: Лист персонажа (крупный план лица + фронт/спина в рост на сером фоне) даёт модели полный образ; видео задаёт движение/тайминг/камеру/локацию; в промпте роли каждого референса прописаны через
+  «ONLY».
+confidence: B
+prompt_completeness: partial
+notes: Полный промпт автора, если он был длиннее сохранённого текста.
+source_url: https://x.com/VisuraCode/status/2107300051143811576
+duplicates_of: []

@@ -1,0 +1,98 @@
+id: 133_brand_object_on_stunt_ramp_object_identity_lock_seedance25
+source_file: 133_brand_object_on_stunt_ramp_object_identity_lock_seedance25.md
+title: 'Ваш товар/логотип на трюковой рампе: @Image1 объект (OBJECT IDENTITY LOCK) + @Image2 дорога (ROAD GEOMETRY LOCK) → Seedance 2.5'
+intent_tags:
+- product_ad
+use_when: 'Кинореалистичный вертикальный ролик 8 с из двух референсов: объект бренда (@Image1, OBJECT IDENTITY LOCK — форма, цвета, брендинг, надписи без изменений) движется по необычной трюковой дороге-рампе
+  (@Image2, ROAD GEOMETRY LOCK — изгиб, вертикальная рампа, красно-оранжевые светящиеся кромки, стальные'
+inputs:
+- аудио/голос
+- логотип
+steps:
+- n: 1
+  action: Фото (см. пост) в хорошем качестве.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Seedance 2.5 с параметрами из поста (длительность, формат).
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: 5 с
+  aspect: unknown
+- n: 3
+  action: 'Фото + промпт из комментария → генерация; звук — по посту (часть шаблонов: без звука, трек добавить в редакторе).'
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "=== https://t.me/nercpa/312 2026-10-19T12:58:33+00:00\n\U0001F6CDБренд на рампе\n\n1. Заходите в бота @neyrosetkabot\n2. Выбираете фото вашего продукта в хорошем качестве \n3. Выбираете режим Видео -\
+  \ Seedance 2.5 (13 сек, формат 9:16) и отправляете ваше фото с фото и текстом из комментариев\n\nПРОМПТ В КОММЕНТАРИЯХ \n⬇️⬇️⬇️\n\n⚡️Генерация в один клик \n\n#видео #профсъемка\n  \n    Please open Telegram\
+  \ to view this post\n    VIEW IN TELEGRAM"
+- |-
+  ### comments nercpa/312
+  --- Нейросетка |Промты | Обновления Chat
+  Create an 8-second ultra-realistic cinematic video in vertical 9:16 format using the two provided reference images.
+
+  @Image1 — OBJECT IDENTITY LOCK
+
+  Use the exact object from @Image1. Preserve its original shape, proportions, dimensions, colors, material, texture, branding, printed graphics, handles, structural details, and every visible feature. The object must remain instantly recognizable and visually identical to the reference throughout the entire video. No deformation, morphing, redesign, melting, stretching, or changes to its appearance.
+
+  @Image2 — ROAD GEOMETRY LOCK
+
+  Reproduce the road from @Image2 with maximum accuracy. Preserve its exact unusual curved trajectory, vertical stunt-ramp structure, road width, gray asphalt/concrete surface, pale lane markings, glowing red-orange edge strips, exposed steel truss structure, and overall proportions. Do not redesign, simplify, straighten, or alter the road geometry.
+
+  ACTION AND TIMING — 8 SECONDS
+
+  0–2 seconds: The object begins moving upward along the road's ascending trajectory, maintaining continuous contact with the road surface. It follows the exact trajectory and curvature of the road in @Image2, moving upward along the ramp rather than downward. The camera tracks the object smoothly, keeping it sharp, clearly visible, and recognizable.
+
+  2–4 seconds: The object continues traveling upward along the road's ascending trajectory, following its unusual curved trajectory precisely. At the midpoint, the camera smoothly pulls back into a wider tracking composition to reveal the extraordinary shape and trajectory of the road while keeping the object clearly visible and large enough to recognize. Do not make the object tiny or lose it against the background. This is the only wider establishing composition in the sequence.
+
+  CRITICAL — THE OBJECT MUST REACH THE VERY END OF THE ROAD BEFORE TAKING OFF.
+
+  The object must travel all the way upward along the road's trajectory and physically reach its absolute endpoint before becoming airborne. It must remain in continuous contact with the road surface throughout the entire journey, following the exact road trajectory from @Image2 while progressing upward toward the end of the ramp. No jumping, launching, lifting off, floating, or becoming airborne before reaching the very end of the road. Do not trigger the jump early, in the middle of the curve, or before the final edge.
+
+  Only after the object has fully reached the absolute endpoint of the road may it take off. The takeoff must occur precisely at the end of the road, with a clearly visible separation between the object and the road edge.
+
+  4–6 seconds: Immediately after reaching the road's endpoint, the object launches into the air and performs exactly ONE complete 360-degree flip in slow motion. The camera moves into a cinematic close-up during the flip, capturing the rotation clearly while preserving the object's exact appearance, proportions, branding, and details. The object completes one full rotation only: no extra spins, no partial rotations, and no mid-air morphing.
+
+  6–7 seconds: After completing exactly one 360-degree flip, the object lands gently and upright on a flat-looking surface. The landing surface must have the exact same gray color, matte concrete/asphalt material, grain, texture, stains, and natural imperfections as the road in @Image2. The surface should look like a flat continuation of the same road material, but the curved ramp and its steel structure must be completely outside the camera frame. Do not show the curved section of the road behind the object during the landing shot. The object remains stable, intact, upright, and recognizable after landing.
+
+  7–8 seconds — FINAL SMOKE SHOT: An extremely abundant, dense, voluminous cloud of smoke rapidly surrounds the object, filling most of the frame. The smoke must be thick, dramatic, and cinematic, with layered swirling billows. Despite the heavy smoke, the object must remain sharp, recognizable, and visually consistent with @Image1. Do not let the smoke permanently obscure the object completely.
+  --- Нейросетка |Промты | Обновления Chat
+  CAMERA AND COMPOSITION
+
+  Cinematic photorealism, physically plausible motion, smooth tracking, realistic lighting, natural motion blur, detailed materials, and high visual fidelity.
+
+  Keep the object as the main visual subject throughout the video. Use the wider tracking composition only around the midpoint to show the unusual road trajectory while keeping the object clearly visible. Use a close-up during the single 360-degree flip. Avoid unnecessary wide establishing shots at the beginning or end.
+
+  During the final landing and smoke sequence, show only the object and the flat-looking road-material surface. Keep the curved road and its structure outside the frame.
+
+  AUDIO DESIGN
+
+  Use immersive cinematic crowd ambience throughout: a low crowd rumble, anticipation, audible gasps as the object reaches the end and launches, rising cheers during the slow-motion flip, and loud cheering, applause, and ovation synchronized with the landing and dramatic smoke burst. Make the sound build naturally with the action. No dialogue or narration.
+
+  STRICT NEGATIVE CONSTRAINTS
+
+  No downward movement along the road. No early takeoff. No airborne movement before the absolute end of the road. No skipping any part of the road trajectory. No premature jump. No changes to the road geometry. No changes to the object's identity, shape, colors, branding, material, or proportions. No object deformation. No extra flips or spins. Exactly one 360-degree flip, performed only after reaching the end of the road. No hard or unstable landing. No curved ramp visible behind the final landing shot. No weak or sparse smoke. No smoke that completely hides the object. No unnecessary opening or closing wide shots.
+
+  PRIORITY ORDER: First, preserve the object's identity and the exact road geometry. Second, ensure the object travels all the way to the absolute end of the road while maintaining contact with the surface and moving upward along the ascending trajectory. Third, allow takeoff only after reaching the endpoint. Fourth, complete exactly one 360-degree flip in slow motion. Fifth, land upright on a matching flat surface and finish with extremely dense smoke. Do not sacrifice the required action sequence for camera effects.
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: превью-видео (медиа); бот @neyrosetkabot платный — у нас не запускалось; промпт годится для любой площадки с Seedance 2.5
+source_url: https://t.me/nercpa/312
+duplicates_of: []

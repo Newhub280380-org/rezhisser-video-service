@@ -1,0 +1,88 @@
+id: 039_ugc_ads_factory_7steps
+source_file: 39_ugc_ads_factory_7steps.md
+title: 'UGC-фабрика: один актёр (Soul ID) + стиль + скрипты из CSV + Seedance + субтитры + трекинг'
+intent_tags:
+- product_ad
+- talking_head
+use_when: 'UGC-фабрика: один актёр (Soul ID) + стиль + скрипты из CSV + Seedance + субтитры + трекинг'
+inputs:
+- аудио/голос
+steps:
+- n: 1
+  action: '@ky_scaling (пост целиком):
+
+    [PROMPT]'
+  tool: unknown
+  mode: unknown
+  prompt:
+  - "ai ugc is about to flood every platform. here's the exact process to make it without filming yourself:\n\nstep 1: create one actor\nbuild your character in higgsfield and lock the face with soul id.\
+    \ this is the step most people skip. same face every video means people recognise her and trust her like a real creator.\n\nstep 2: define the vibe\nwrite it once and reuse it. for example: \"natural\
+    \ light, handheld, casual, real not polished.\"\n\nstep 3: get claude code to write the scripts\nput your hooks in a csv. tell claude code: \"write an 8 second script for every row. open with a real\
+    \ everyday moment, then move to the product, end with a cta.\" you get 20 scripts in a minute.\n\nstep 4: generate the video\npaste each script into seedance, with your locked character as the reference.\
+    \ add \"handheld camera micro-movement\" to every prompt. dead-still shots are the #1 giveaway that it's ai.\n\nstep 5: add captions and speed\ncaptions make people watch with the sound off. a slight\
+    \ speed-up (1.1x) tightens the pacing. claude code can automate both.\n\nstep 6: put the offer behind it\npick a glitchy offer that fits the character. then give every video its own @affrev tracking\
+    \ link (code DMA15 = 15% off).\n\nstep 7: post, track, repeat\npost 3-5 variations of the same angle. check affrev after 24 hours. kill what got views but no clicks. take the winning hook and make 20\
+    \ more like it.\n\nthat's it. one actor, one vibe, one list of hooks.\n\nthe creators winning at ai ugc aren't better on camera. they just built a system that makes the videos for them.\n\nbookmark\
+    \ this before you forget the steps, and comment \"UGC\" and i'll send you the full workflow \U0001F447 \n\n(must be following for auto dm)"
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: '@Ecombos_Ai (15-секундный UGC-промпт):
+
+    [PROMPT]'
+  tool: unknown
+  mode: unknown
+  prompt:
+  - |-
+    GPT Image 2.5 + Seedance 2.5 is INSANE for ultra-realistic AI UGC.
+
+    We turned a single image into a realistic 15-second lifestyle video.
+
+    Here's the exact prompt we used 👇
+
+    Tools: EcomBos (GPT Image 2.5 for the image, Seedance 2.5 for the video)
+    Format: 9:16 vertical, 15 seconds
+    Reference: the image shown beside the video
+
+    "Create a 15-second ultra-realistic lifestyle video in vertical 9:16 format, using the attached image as the visual reference for the woman's appearance, outfit, car interior, lighting, and overall aesthetic.
+
+    SCENE AND ACTION:
+
+    0-3 seconds:
+    The video starts mid-action. The woman is getting into the driver's seat of the parked car. She pulls her second leg inside, settles into the seat, and firmly closes the driver's door. Capture the natural movement of her body and the door closing with a realistic thud.
+
+    3-6 seconds:
+    From a natural passenger-side interior angle, she adjusts herself comfortably in the seat, takes off her sunglasses, and places them beside her handbag.
+
+    6-10 seconds:
+    She reaches for her iced green matcha drink, lifts it naturally, takes a relaxed sip through the straw, and lowers the cup.
+
+    10-15 seconds:
+    She gazes out of the side window, enjoying a quiet moment. Soft natural sunlight falls across her face and the car interior. End with her relaxed, holding the drink.
+
+    VISUAL STYLE:
+    Authentic, ultra-realistic smartphone lifestyle footage. Natural skin texture, realistic facial features, believable body movements, accurate hands and fingers, natural hair movement, physically accurate lighting and reflections, and consistent character appearance throughout.
+
+    CAMERA:
+    Natural handheld smartphone perspective with subtle movement. Use a smooth, believable transition from the exterior door-closing moment to the interior shot. Avoid dramatic camera movements or artificial cinematic effects.
+
+    AUDIO:
+    Natural car-door closing sound, subtle parking-lot ambience, and realistic drink-handling sounds only. Leave out voiceover, captions, on-screen text and music.
+
+    IMPORTANT:
+    The car remains parked and stationary. Do not show her walking toward the car. Do not change her face, hairstyle, outfit, drink, or car interior. Avoid distorted hands, warped objects, artificial skin, exaggerated expressions, or unnatural movements."
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim: []
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '9:16'
+done_criteria: Лицо актёра зафиксировано ID/референсом; micro-движение камеры убирает «ИИ-неподвижность».
+confidence: B
+prompt_completeness: complete
+notes: Полный текст воркфлоу «UGC» (автор рассылает по DM после подписки; не делал).
+source_url: null
+duplicates_of: []

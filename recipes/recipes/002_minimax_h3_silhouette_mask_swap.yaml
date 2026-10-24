@@ -1,0 +1,96 @@
+id: 002_minimax_h3_silhouette_mask_swap
+source_file: 02_minimax_h3_silhouette_mask_swap.md
+title: 'Замена человека в видео: SAM3 заливает его чёрным силуэтом, MiniMax H3 вписывает нового персонажа в силуэт'
+intent_tags:
+- client_in_clip
+- seamless_series
+use_when: 'Замена человека в видео: SAM3 заливает его чёрным силуэтом, MiniMax H3 вписывает нового персонажа в силуэт'
+inputs:
+- видео-референс (движение/клип)
+- аудио/голос
+steps:
+- n: 1
+  action: 'Установка (локально, ComfyUI): обновить VideoHelperSuite (в ноде Load Video должен быть Format = H3), модель SAM3 (Comfy-Org/sam3.1 multiplex_fp16) в models/checkpoints, LoRA lightx2v ref2v turbo
+    4step от Kijai (MiniMax-H3_comfy). Других кастомных нод не нужно.'
+  tool:
+  - MiniMax H3
+  - SAM3
+  - ComfyUI
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'В воркфлоу (minimax-char-swap-2.json — сам JSON не скачивал, закрыто для чтения): картинка персонажа в Load Image, видео в Load Video, при желании меняешь текст в ноде «Select Character from
+    Video Prompt» (кого именно вырезать SAM3). Запуск.'
+  tool:
+  - MiniMax H3
+  - SAM3
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: SAM3 по текстовому запросу ищет человека и закрашивает его сплошным чёрным силуэтом; это видео идёт как <Video 1>, фото персонажа — <Picture 1>.
+  tool:
+  - SAM3
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: 'Мимику возвращают текстом (маска стирает эмоции): добавить в конец subject_definitions «is smiling throughout the video.» или строку в detailed_description, напр. «<Subject 1> has a huge smile
+    the entire video».'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 5
+  action: 'Промпт целиком (дословно):
+
+    [PROMPT]'
+  tool: unknown
+  mode: unknown
+  prompt:
+  - |-
+    subject_definitions:
+    <Subject 1> is the individual whose visual identity, facial features, skin tone, hairstyle, body build, and attire are strictly derived from <Picture 1>.
+    <Video 1> is the source video providing the scene environment, camera motion, perspective, and lighting. It contains a dynamic solid black silhouette mask that designates the exact spatial coordinates, scale, and movement bounds where <Subject 1> must be placed.
+
+    summary:
+    [video inpainting + subject replacement + reference synthesis] The target video synthesizes <Subject 1> (from <Picture 1>) directly into the black masked area of <Video 1>. The solid black mask is completely eliminated and replaced by <Subject 1>, who seamlessly integrates into the environment, matching the position, scale, lighting, and camera motion of <Video 1>.
+
+    retention_analysis:
+    <Subject 1> (appears in [Shot 1]): fully_preserved - identity, facial anatomy, hair, and wardrobe originate entirely from <Picture 1>.
+    <Video 1>: background_preserved - all non-masked surroundings, camera trajectory, depth of field, and ambient lighting are retained 1:1; the black masked region is completely replaced and filled by <Subject 1>.
+
+    detailed_description:
+    The target video matches the cinematography, camera motion, frame rate, lens characteristics, and color grading of <Video 1>.
+    [Shot 1] <Subject 1> is synthesized precisely within the area occupied by the black mask in <Video 1>. The black mask functions as the spatial footprint and scale reference: <Subject 1> fills this designated space continuously from the first to the final frame, replacing the black silhouette entirely. Their attire, hair, and facial appearance from <Picture 1> are fully rendered and illuminated by the ambient and directional light sources present in <Video 1>.   Seamless edge blending, ambient light wrap, contact shadows, and realistic occlusion ensure natural integration with the surrounding unmasked background, leaving no residual black borders or artifacts.
+
+    <Subject 1> has a huge smile the entire video
+
+    overall_soundscape:
+    Complete ambient silence. No dialogue, no speech, no vocals.
+
+    non_diegetic_music:
+    N/A
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim: []
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '1:1'
+done_criteria: Лицо оригинала физически удалено маской, поэтому его черты не «просачиваются» в результат; фон/камера/свет берутся 1:1 из видео вне маски. Контактные тени и свет описаны в промпте.
+confidence: B
+prompt_completeness: partial
+notes: JSON воркфлоу (ссылка minimax-char-swap-2.json на сайте), аудио-примеры на Google Drive.
+source_url: https://patricksheedy.com/posts/minimax-h3-character-swap-part-2/
+duplicates_of: []

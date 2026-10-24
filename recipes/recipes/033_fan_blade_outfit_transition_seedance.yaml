@@ -1,0 +1,324 @@
+id: 033_fan_blade_outfit_transition_seedance
+source_file: 33_fan_blade_outfit_transition_seedance.md
+title: Смена нарядов эффектом «лопасть вентилятора» (фиксированная камера сверху, 20 секунд)
+intent_tags:
+- beauty_ad
+- seamless_series
+- vfx_effect
+use_when: Смена нарядов эффектом «лопасть вентилятора» (фиксированная камера сверху, 20 секунд)
+inputs:
+- стартовый кадр
+- аудио/голос
+- логотип
+steps:
+- n: 1
+  action: unknown (в источнике нет нумерованных шагов; см. prompts_verbatim)
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  The transition 🔥
+  Made on Seedance 2.5
+  Prompt:
+  Using the supplied first frame as the exact opening image, create a 20-second horizontal 4:3 ultra-photorealistic autumn fashion film.
+
+  CORE CONCEPT
+
+  Yuna Bell remains lying on the same rug beneath a continuously rotating walnut ceiling fan.
+
+  The fixed overhead camera never moves.
+
+  Every time one fan blade physically sweeps across Yuna’s body, her outfit changes seamlessly into the next established autumn look. The blade is the only transition device.
+
+  The effect must resemble an expertly planned practical in-camera fashion transition, not a magical body transformation.
+
+  IDENTITY LOCK
+
+  Preserve Yuna’s exact:
+  - Face
+  - Eye shape
+  - Beauty mark
+  - Skin tone
+  - Hair color
+  - Hair length
+  - Body proportions
+  - Hand structure
+  - Age impression
+
+  Her body remains in the same location and orientation throughout the video.
+
+  Only these elements may change during fan-blade transitions:
+  - Clothing
+  - Shoes
+  - Handbag
+  - Jewelry
+  - Minor editorial pose details
+
+  Do not morph her face or body.
+
+  CAMERA LOCK
+
+  - Fixed 90-degree overhead camera
+  - Horizontal 4:3
+  - No cuts
+  - No camera movement
+  - No zoom
+  - No rotation
+  - No reframing
+  - No focus breathing
+  - No angle changes
+  - No slow motion
+  - Real-time fan rotation
+
+  FAN CONTINUITY
+
+  Use one three-blade walnut ceiling fan rotating clockwise at a constant moderate speed.
+
+  The fan must:
+  - Preserve the same blade shape and wood texture
+  - Maintain a fixed central axis
+  - Rotate at constant speed
+  - Cast a consistent moving shadow
+  - Pass between the camera and Yuna
+  - Create exactly three complete wardrobe transitions
+
+  Each transition occurs only behind the passing blade. The new clothing is revealed progressively at the blade’s trailing edge.
+
+  No dissolve, flash, smoke, particles, digital glitch or body morphing.
+
+  0.0–3.5 SECONDS — LOOK 1
+
+  Continue directly from the first frame.
+
+  Yuna lies in LOOK 1.
+
+  She presses the small wooden remote once with her right thumb.
+
+  She makes subtle editorial movements:
+  - Turns her chin slightly toward camera-right
+  - Extends her left wrist
+  - Straightens her right leg
+  - Gives a restrained half-smile
+  - Returns her eyes directly to the camera
+
+  Her cinnamon leather jacket creases naturally beneath her shoulders.
+  Her breathing creates a subtle rise and fall in her torso.
+
+  The fan continues rotating overhead.
+
+  3.5–5.0 SECONDS — TRANSITION TO LOOK 2
+
+  The first broad walnut blade enters from the lower-left and sweeps clockwise across Yuna’s body.
+
+  As the blade crosses:
+  - LOOK 1 disappears only within the area hidden by the blade
+  - LOOK 2 is revealed immediately behind the trailing edge
+  - Her face, body, hair and physical position remain unchanged
+
+  Reveal LOOK 2:
+  - Oatmeal cable-knit sweater
+  - Green-and-cream checked pleated skirt
+  - Chocolate tights
+  - Burgundy loafers
+  - Cream socks
+  - Dark green top-handle bag
+  - Gold necklace
+
+  The burgundy bag from LOOK 1 becomes the dark green bag only while fully covered by the same blade sweep.
+
+  No accessory may remain duplicated.
+
+  5.0–8.0 SECONDS — LOOK 2
+
+  Yuna now wears LOOK 2 completely.
+
+  She changes pose naturally:
+  - Brings both hands lightly together over her waist
+  - Bends both knees slightly
+  - Tilts her head toward camera-left
+  - Smooths the edge of the pleated skirt with two fingers
+  - Maintains direct upward eye contact
+
+  The cable-knit sweater compresses realistically against the rug.
+  The skirt pleats spread naturally around her hips.
+
+  The fan shadow moves consistently over her face and clothing.
+
+  8.0–9.5 SECONDS — TRANSITION TO LOOK 3
+
+  A second fan blade sweeps across the frame from upper-left toward lower-right as part of the same clockwise rotation.
+
+  Behind the blade, reveal LOOK 3:
+  - Muted plum asymmetric knit top
+  - Oversized charcoal wool blazer
+  - Taupe wide-leg trousers
+  - Pointed black ankle boots
+  - Oxblood rectangular handbag
+  - Sculptural gold earrings
+
+  The pleated skirt and tights disappear only under blade occlusion.
+  The wide-leg trousers emerge with correct continuity around both legs.
+
+  Yuna’s legs, knees and feet remain in the same anatomical positions.
+
+  9.5–13.0 SECONDS — LOOK 3
+
+  Yuna performs a more structured editorial pose:
+
+  - Extends her left leg
+  - Bends her right knee outward slightly
+  - Places her left hand on the blazer lapel
+  - Moves her right hand beside the oxblood bag
+  - Turns her face back toward the camera
+  - Gives a composed, serious expression
+
+  The blazer spreads naturally over the rug.
+  The wide trousers retain realistic folds and fabric weight.
+  The handbag stays beside her right hip.
+
+  No item floats or slides without contact.
+
+  13.0–14.5 SECONDS — TRANSITION TO LOOK 4
+
+  The third walnut fan blade passes over Yuna from lower-right toward upper-left.
+
+  Reveal LOOK 4 behind its trailing edge:
+  - Moss-green fitted cardigan
+  - Chocolate satin camisole
+  - Espresso leather midi skirt
+  - Charcoal socks
+  - Burgundy heeled loafers
+  - Cherry-red handbag
+  - Narrow charcoal headband
+  - Gold index-finger ring
+
+  The charcoal blazer, trousers, boots and oxblood bag disappear completely beneath the blade before the new items appear.
+
+  Hair remains the same length and arrangement except for the charcoal headband being added during full blade occlusion.
+
+  14.5–18.0 SECONDS — LOOK 4
+
+  Yuna now wears LOOK 4 completely.
+
+  She performs the final pose adjustment:
+  - Extends both legs diagonally toward camera-right
+  - Crosses her ankles
+  - Places the cherry-red handbag beside her left waist
+  - Raises her right hand near her collarbone
+  - Places her left arm above her head
+  - Turns her chin slightly toward camera-left
+  - Returns her eyes directly to the camera
+
+  She gives a very subtle confident smile.
+
+  The leather skirt shows restrained natural highlights.
+  The satin camisole responds softly to her breathing.
+  The cardigan fibers remain visible.
+
+  18.0–20.0 SECONDS — FINAL HOLD
+
+  Yuna becomes completely still in LOOK 4.
+
+  Only the following continue moving:
+  - Natural breathing
+  - One or two loose hair strands
+  - Rotating ceiling fan
+  - Soft moving fan shadow
+  - Subtle sunlight variation
+
+  The fan completes another partial rotation but does not trigger an additional outfit change.
+
+  End with Yuna looking directly upward, framed symmetrically on the autumn rug.
+
+  Hold the final image for the last half-second.
+
+  MOTION QUALITY
+
+  - Real-time movement only
+  - Subtle editorial posing
+  - Natural joint movement
+  - Accurate finger anatomy
+  - Realistic breathing
+  - Physically correct fabric compression
+  - Consistent fan speed
+  - Stable room geometry
+  - No sliding body
+  - No changing body scale
+  - No sudden pose teleportation
+
+  FASHION MATERIAL QUALITY
+
+  Render materials distinctly:
+
+  - Cable knit: visible yarn and soft thickness
+  - Leather jacket: matte grain and natural creases
+  - Wool blazer: dense soft texture
+  - Satin camisole: controlled highlights
+  - Leather skirt: structured weight and subtle reflection
+  - Tights: opaque woven appearance
+  - Handbags: firm construction and believable straps
+  - Shoes: stable shape, soles and closures
+
+  LIGHTING AND COLOR
+
+  Maintain consistent late-afternoon sunlight throughout.
+
+  Color palette:
+  - Walnut brown
+  - Burnt sienna
+  - Burgundy
+  - Moss green
+  - Charcoal
+  - Oatmeal
+  - Muted plum
+
+  Use premium but natural autumn color grading.
+  Preserve real skin tone.
+  No extreme orange cast or crushed shadows.
+
+  AUDIO
+
+  Use subtle realistic apartment sound:
+  - Quiet ceiling-fan motor
+  - Soft blade movement through air
+  - Remote-button click
+  - Gentle clothing rustle
+  - Low room ambience
+
+  Optional minimal original ambient fashion soundtrack at very low volume.
+
+  No dialogue.
+  No narration.
+  No transition sound effects.
+  No camera shutter sounds.
+
+  NEGATIVE CONSTRAINTS
+
+  No cuts, camera movement, zoom, camera rotation, angle change, morphing face, changing body, identity drift, changing hair length, duplicated clothing, overlapping outfits, extra shoes, duplicated handbags, disappearing limbs, extra fingers, warped hands, broken legs, floating accessories, sliding props, unstable rug pattern, changing floorboards, fan changing shape, fan changing direction, inconsistent fan speed, blade passing through the body, dissolve transition, flash transition, smoke, particles, digital glitch, excessive fabric movement, artificial wind, beauty filter, text, subtitles, labels, logos or watermark.
+
+  FINAL OUTPUT
+
+  20 seconds.
+  Horizontal 4:3.
+  One fixed 90-degree overhead shot.
+  One consistent adult female model.
+  Four original premium autumn outfits.
+  Exactly three fan-blade wardrobe transitions.
+  Warm realistic apartment.
+  Photorealistic fabric, skin and lighting.
+  Premium editorial fashion-campaign realism.
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: Единственное устройство перехода — физический объект, перекрывающий героиню; камера и тело зафиксированы, меняются только одежда/аксессуары.
+confidence: B
+prompt_completeness: partial
+notes: —
+source_url: https://x.com/im_shahid7/status/2104946416804155777
+duplicates_of: []

@@ -1,0 +1,70 @@
+id: 077_charsheet_seedance_windowsill_two_parts
+source_file: 77_charsheet_seedance_windowsill_two_parts.md
+title: '# 77 — Лист персонажа из своих фото (Nano Banana Pro) → две генерации Seedance 2.0 с листом в референсах → CapCut'
+intent_tags:
+- other
+use_when: Лист персонажа (5–6 портретов + 5–6 в рост) как единый референс для нескольких клипов; первый клип — сцена на подоконнике, «падает назад в окно».
+inputs:
+- фото лица/портрет человека
+- фото в полный рост
+steps:
+- n: 1
+  action: 'NB Pro: свои фото с разных сторон + промпт листа.'
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Seedance 2.0: лист в референсы + промпт части 1.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Seedance 2.0: лист + промпт части 2 (в комментариях, закрыто).'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: 'CapCut: склеить, наложить звук.'
+  tool:
+  - CapCut
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "\U0001F520\U0001F520\U0001F520\U0001F520\U0001F520\U0001F520\U0001F520   \U0001F520\U0001F520\U0001F520\U0001F520\n\nИнструкция:\n1. Переходим в VeoSeeBot \n2. Nano Banana Pro\nВставляем фото себя с\
+  \ разных сторон и пишем такой промпт \nCreate a professional character sheet of the person from the reference image on a white solid collage.\nThe face must remain 100% identical to the reference image.\
+  \ Preserve the exact facial identity with no changes whatsoever. Do not reinterpret, beautify, stylize, age, de-age, or alter any facial features. Keep the exact eyes, eyebrows, nose, lips, jawline, cheekbones,\
+  \ ears, skin tone, facial proportions, expression, hairstyle, and hairline. Identity lock is the highest priority.\nShow:\n5–6 close-up portraits from different angles (front, 3/4 left, 3/4 right, left\
+  \ profile, right profile, slightly high/low angle).\n5–6 full-body views from different angles (front, back, left side, right side, 3/4 front, 3/4 back).\nKeep the body proportions, clothing, hairstyle,\
+  \ and accessories identical to the reference unless otherwise specified.\nNeutral standing pose with relaxed arms. Consistent lighting across every view. Plain light gray studio background. Clean character\
+  \ turnaround layout similar to a professional game or animation model sheet.\nUltra-sharp, highly detailed, photorealistic, perfect facial consistency across every panel. No face drift, no identity changes,\
+  \ no extra accessories, no cropped body parts, no duplicate poses, no artistic stylization, no text, no watermark\n3. Seedance 2.0\nВставляем коллаж персонажа в разделе с референсами и пишем такой промпт:\n\
+  @img1 sits centered on a wide windowsill in a cluttered teenage bedroom, framed by a large window that fills the frame with a hazy red-brick city skyline under flat overcast daylight.\nMotion sequence:\
+  \ @img1 begins seated looking off to the side in profile, then turns to face the camera and brings hand up to make a peace sign then raises his arms overhead to pull a pair of over-ear headphones down\
+  \ onto his ears — and finally flops backward out the window.\nCamera: completely static locked-off wide shot, eye-level, centered and symmetrical on the window, no pans or zooms.\nStyle: cinematic indie\
+  \ film look, slightly desaturated muted color grade, soft natural window light, shallow depth, 35mm filmic texture, music-video energy. Background buildings stay sharp through the window\n4. Снова Seedance\
+  \ 2.0\nВставляем коллаж персонажа в разделе с референсами и пишем следующий промпт (оставила в комментариях) \n5. В капкате склеиваем 2 части, накладываем звуковую дорожку и ролик готов ✅"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: C
+prompt_completeness: complete
+notes: промпт части 2 (комментарии к посту)
+source_url: https://t.me/reels_by_alsi/755
+duplicates_of:
+- 111_charsheet_spider_drone_part2_seedance_continuation

@@ -1,0 +1,78 @@
+id: 091_pet_replaces_human_keep_audio_seedance25
+source_file: 91_pet_replaces_human_keep_audio_seedance25.md
+title: Питомец вместо человека в известной сцене, с оригинальным звуком и липсинком (Seedance 2.5)
+intent_tags:
+- talking_head
+- client_in_clip
+- animal
+- motion_transfer
+use_when: 'Берётся короткий фрагмент из сериала/мема (у автора «Реальные пацаны») и фото кота или собаки. Seedance 2.5 заменяет человека на питомца, сохраняя движения, актёрскую игру и ОРИГИНАЛЬНУЮ звуковую
+  дорожку: питомец «говорит» голосом актёра с липсинком. Тот же приём годится для любой узнаваемой сцены и'
+inputs:
+- видео-референс (движение/клип)
+- аудио/голос
+- фото питомца
+steps:
+- n: 1
+  action: Подготовить видео-референс (фрагмент сцены, до 14 с) и фото питомца.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: 14 с
+  aspect: unknown
+- n: 2
+  action: 'Seedance 2.5, 480p, генерация по фото, 9:16, 14 секунд: @Image1 = питомец, @Video1 = сцена + промпт ниже.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: '9:16'
+- n: 3
+  action: 'Результат: та же сцена с питомцем, звук оригинала.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: previous_step_output
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  === https://t.me/veo3prompts/2716 2026-10-08T14:16:57+00:00
+  Трендовое видео с питомцем из сериала «Реальные пацаны»
+
+  ❗️Отправляй референс видео(в комментариях), фото питомца(промпт для нужного фото в комментариях) и промпт.
+
+  Переходите в бот, /start -> выбор модели -> Seedance 2.5 480p -> генерация по фото -> формат 9:16 -> 14 секунд.
+
+
+  @Image1 — the exact appearance reference for the pet (a cat or a dog). @Video1 — the reference for the movements and acting performance.
+
+  Replace the human from @Video1 with the pet from @Image1, while preserving the original scene, camera, camera angle, framing, composition, background, lighting, and overall atmosphere.
+
+  The pet must accurately reproduce the human's performance from @Video1: body movements, front-limb movements, gestures, head turns and tilts, gaze direction, eye movements, facial expressions, mouth and muzzle movements, and emotional delivery. Naturally adapt the human's hand and body movements to the pet's real anatomy: use paws, head, ears, whiskers, tail, and posture in place of hands and fingers. Movements must stay physically plausible for the species (a cat moves like a real cat, a dog like a real dog).
+
+  Use the original audio track from @Video1 exactly as it is, without any changes. Synchronize the pet's mouth and facial movements precisely with the speech, including pauses, intonation, timing, and emotional emphasis. The pet must not produce its own voice or add any sounds (no meowing, barking, purring, panting, or whining). The voice must remain exactly the original voice from @Video1.
+
+  Keep the pet's natural anatomy and realistic appearance. Do not create human hands, a human body, human teeth or lips, or any hybrid anatomy. The pet must remain a completely realistic animal, convincingly reproducing the human's acting performance through its body, paws, head, eyes, ears, whiskers, facial expressions, and posture.
+
+  Do not alter the appearance of the pet from @Image1. Preserve its exact species, breed, coloration, markings, body and facial proportions, fur length and texture, eyes, ears, nose, whiskers, tail, and all distinctive physical characteristics.
+
+  The final video must look like realistic footage of the actual pet placed naturally into the original scene from @Video1. No cartoon style, no stylization, no anatomical distortions, no extra objects, no text, and no subtitles. Preserve the original pacing, duration, editing, camera movement, and overall atmosphere of @Video1.
+
+
+  Сгенерировать можно тут: @Veo3_official_bot(Seedance 2.5)
+
+  Veo3 | Banana News
+output:
+  format: mp4
+  resolution: 480p
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: референс-видео и промпт для «нужного фото питомца» — в комментариях Telegram
+source_url: https://t.me/veo3prompts/2716
+duplicates_of: []

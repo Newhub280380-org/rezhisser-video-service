@@ -1,0 +1,65 @@
+id: 029_kling3_elements_orbit_soul
+source_file: 29_kling3_elements_orbit_soul.md
+title: 'Постоянное лицо «себя»: Soul ID/Soul 2.0 → Kling 3 Elements для орбит и смены ракурсов'
+intent_tags:
+- client_in_clip
+use_when: 'Постоянное лицо «себя»: Soul ID/Soul 2.0 → Kling 3 Elements для орбит и смены ракурсов'
+inputs:
+- стартовый кадр
+steps:
+- n: 1
+  action: 'Снять набор фото себя: чёткие крупные планы лица, разные ракурсы/выражения, аксессуары, часть без аксессуаров, несколько в полный рост.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Higgsfield → Create image → Soul 2.0 → «Add character» → загрузить фото → Create (Soul ID). Пресет стиля; аксессуары можно уточнить: «ensure the bearded man is wearing the same rounded rectangular
+    glasses with a gold rim and gray backwards baseball cap shown within the reference images».'
+  tool:
+  - Higgsfield
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: Стартовый кадр из Soul 2.0/Nano Banana Pro.
+  tool:
+  - Nano Banana
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: Kling 3 в Higgsfield + новая функция Elements (создание Element из лица) — «секретное оружие» для постоянного лица при смене ракурса/актёрской игры.
+  tool:
+  - Kling
+  - Higgsfield
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 5
+  action: Орбиты/боковые ракурсы — через Elements; детали настроек читал частично.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim: []
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: Element = выученная идентичность, а не подсказка в тексте.
+confidence: C
+prompt_completeness: gaps
+notes: Описание видео с промптами.
+source_url: https://www.youtube.com/watch?v=DJsprWiw130
+duplicates_of: []

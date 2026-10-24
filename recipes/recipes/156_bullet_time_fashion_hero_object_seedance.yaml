@@ -1,0 +1,527 @@
+id: 156_bullet_time_fashion_hero_object_seedance
+source_file: 156_bullet_time_fashion_hero_object_seedance.md
+title: Эффект заморозки времени (bullet time) с вами и предметом-героем (очки) — Seedance 2.5, 13 с
+intent_tags:
+- client_in_clip
+- vfx_effect
+use_when: 'Три рефа: ваше фото (персонаж), фото локации (только окружение), фото очков (предмет-герой). Модная bullet-time сцена, где время замирает, камера облетает, предмет в центре; жёсткий контроль
+  числа предметов.'
+inputs:
+- фото товара/продукта
+- фото в полный рост
+- фото локации/города
+steps:
+- n: 1
+  action: 'Seedance 2.5: 1080p, 13 с, 9:16.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: 13 с
+  aspect: '9:16'
+- n: 2
+  action: Загрузить своё фото (@Image1), фото локации (@Image2), фото очков (@Image3).
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: Вставить промпт.
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "Крутой эффект заморозки времени⏳\nПереходим на сайт\nНейросеть: seedance 2.5\nКачество ставим на свое усмотрение(у меня 1080)\nПродолжительность: 13 сек\nФормат: 9:16\nДобавляем: \n-свое фото\n-фото\
+  \ локации\n-фото очков\nДалее вставляем промпт (промпт тут)\nИ все готово ✅ \nНе забудь поставить любую реакцию\U0001F447"
+- |-
+  @Image1 = PRIMARY CHARACTER REFERENCE.
+  Use @Image1 for the exact identity, facial structure, natural eyes, hairstyle, body proportions, clothing, footwear, jewelry and accessories of the main character.
+  Preserve the SAME character throughout the entire video.
+  Do not copy the original background from @Image1.
+  ---
+  @Image2 = ENVIRONMENT REFERENCE ONLY.
+  Use @Image2 only for the visual language, architecture, atmosphere, lighting direction, materials and environmental character of the location.
+  Do NOT reproduce its exact composition, exact street layout or original camera angle.
+  Create a new believable cinematic space inspired by @Image2 with enough PEDESTRIAN SPACE for the protagonist to walk naturally and for the collision to happen.
+  Respect real-world spatial logic:
+  pedestrians remain in pedestrian areas;
+  vehicles remain in vehicle areas;
+  architecture maintains realistic scale and perspective.
+  ---
+  @Image3 = HERO OBJECT REFERENCE.
+  Use @Image3 as the exact visual reference for the primary wearable/removable object featured in the bullet-time sequence.
+  Preserve its recognizable:
+  shape,
+  proportions,
+  materials,
+  construction,
+  colours,
+  surface details,
+  and important design features.
+  The SAME @Image3 object must remain recognizable when worn by the protagonist, when released, during macro inspection, and after landing.
+  The HERO OBJECT begins naturally worn by or attached to the protagonist and can physically separate during the collision.
+  ---
+  # MASTER VISUAL CONCEPT
+  Generate one continuous 12-second, 9:16, ultra-photorealistic LIVE-ACTION luxury fashion film.
+  The result feels like a high-budget international fashion campaign or premium cinematic music video photographed with real actors, practical physical props, premium cinema lenses and real high-speed photography.
+  The central visual concept is a dramatic BULLET-TIME accident.
+  At the collision, physical objects receive short realistic release impulses.
+  Then time slows to approximately 2-3% of normal speed.
+  The objects become almost stationary in three-dimensional WORLD SPACE while the CAMERA remains free to move through the frozen event and inspect them.
+  The objects DO NOT fly toward the camera to create close-ups.
+  The CAMERA physically approaches the objects.
+  REAL-WORLD PHYSICS, CAUSALITY AND SPATIAL CONTINUITY ARE CRITICAL.
+  ---
+  # EXACT OBJECT COUNT
+  Exactly ONE protagonist.
+  Exactly ONE secondary passing person.
+  Exactly ONE Labrador.
+  Exactly ONE leash.
+  Exactly ONE @Image3 HERO OBJECT.
+  Exactly ONE takeaway coffee cup.
+  Exactly ONE plastic drinking lid.
+  Exactly ONE silver-grey OPEN CLAMSHELL FLIP PHONE.
+  No duplicate props appear at any point.
+  ---
+  # PERSISTENT PHONE PROP - CRITICAL
+  There is exactly ONE phone in the entire video.
+  It is always the SAME physical phone:
+  a compact early-2000s silver-grey OPEN CLAMSHELL FLIP PHONE with two rectangular hinged halves.
+  Upper half:
+  small illuminated display,
+  speaker above the display.
+  Lower half:
+  physical numeric keypad,
+  navigation buttons,
+  microphone.
+  A visible central mechanical hinge connects both halves.
+  The phone is already OPEN before the video begins.
+  LOCK its physical appearance throughout the entire sequence:
+  same silver-grey colour,
+  same dimensions,
+  same thickness,
+  same hinge,
+  same display,
+  same keypad,
+  same buttons,
+  same materials,
+  same open clamshell angle.
+  The phone remains the SAME physical prop during:
+  wide walking shot,
+  collision,
+  release from the hand,
+  bullet-time suspension,
+  macro inspection,
+  return to wide shot,
+  final fall,
+  ground impact.
+  Wide shot -> medium shot -> macro shot = THE SAME PHONE VIEWED FROM DIFFERENT CAMERA DISTANCES.
+  Do not reinterpret or redesign the phone when camera distance changes.
+  ---
+  # PERSISTENT COFFEE PROP - CRITICAL
+  There is exactly ONE takeaway coffee cup.
+  It is a real medium-sized disposable PAPER coffee cup with a lightweight plastic drinking lid.
+  LOCK throughout:
+  same cup,
+  same size,
+  same paper material,
+  same proportions,
+  same plastic lid,
+  same amount of dark coffee.
+  Before collision the lid is properly attached.
+  The coffee remains physically inside the cup.
+  The liquid cannot pass through solid plastic.
+  ---
+  # HAND OWNERSHIP
+  Before collision:
+  RIGHT HAND = ONE OPEN FLIP PHONE.
+  LEFT HAND = ONE COFFEE CUP.
+  @Image3 HERO OBJECT = naturally worn/attached to the protagonist.
+  At release:
+  the fingers physically release the props.
+  Immediately afterward:
+  RIGHT HAND = COMPLETELY EMPTY.
+  LEFT HAND = COMPLETELY EMPTY.
+  The empty hands remain anatomically normal.
+  Nothing replaces the phone.
+  Nothing replaces the cup.
+  Nothing remains attached to either palm.
+  No new prop appears in either hand for the remainder of the video.
+  ---
+  # 0.0-2.0s - CINEMATIC CHARACTER REVEAL
+  Begin with an extreme low close-up of the protagonist's footwear walking naturally through the @Image2-inspired pedestrian environment.
+  The camera performs one elegant continuous movement:
+  smooth crane upward + gentle backward tracking.
+  Reveal progressively:
+  footwear -> legs -> clothing -> torso -> jewelry/accessories -> face -> nearly full-body composition.
+  Give the audience enough time to clearly recognize @Image1 as the protagonist.
+  The protagonist naturally wears the SAME @Image3 HERO OBJECT.
+  The protagonist holds the SAME OPEN silver-grey clamshell flip phone to the RIGHT ear.
+  The protagonist carries the SAME realistic paper coffee cup in the LEFT hand.
+  The protagonist is actively having a phone conversation.
+  Show subtle but clearly visible natural speech articulation:
+  realistic lip movement,
+  subtle jaw movement,
+  natural mouth opening and closing,
+  relaxed facial muscles.
+  Maintain exact @Image1 facial identity.
+  Premium live-action fashion cinematography.
+  ---
+  # 2.0-3.7s - WALK THROUGH THE ENVIRONMENT
+  Maintain the smooth frontal tracking composition.
+  The protagonist continues walking naturally through the pedestrian area.
+  Respect @Image2 only as environmental inspiration.
+  The protagonist remains the visual focus.
+  Exactly ONE secondary person approaches from the opposite direction.
+  That person holds the leash of exactly ONE Labrador.
+  The Labrador walks slightly ahead and gently pulls the secondary person forward.
+  No additional dogs.
+  No additional handlers.
+  The secondary person and Labrador remain supporting elements rather than new protagonists.
+  Maintain:
+  stable @Image1 identity,
+  stable facial anatomy,
+  stable hairstyle,
+  stable clothing,
+  stable @Image3 geometry,
+  same open flip phone,
+  same coffee cup.
+  ---
+  # 3.7-4.4s - ACCIDENTAL COLLISION
+  As the two people pass, the secondary person's ELBOW accidentally clips the protagonist's arm/upper torso.
+  The contact is small, accidental and physically believable.
+  The protagonist naturally recoils backward.
+  Three physical release events happen because of this SAME collision.
+  ## HERO OBJECT
+  The @Image3 HERO OBJECT receives ONE short physical outward impulse.
+  It separates naturally from the protagonist.
+  It travels only a short realistic distance away from its original position.
+  It does NOT launch toward the camera.
+  ## COFFEE
+  The SAME coffee cup leaves the LEFT hand.
+  The cup receives one short outward/downward rotational impulse.
+  The cup begins to tilt and rotate.
+  Because of the sudden rotation and internal liquid inertia, ONE EDGE of the lightweight plastic lid partially pops loose from the rim.
+  The lid does NOT instantly disappear.
+  The lid does NOT explode away.
+  A physical gap forms between the cup rim and the partially lifted edge of the lid.
+  ONLY THEN does the dark coffee begin escaping through this real physical opening.
+  The first liquid movement is small and restrained.
+  ## PHONE
+  The SAME OPEN clamshell flip phone leaves the RIGHT hand.
+  It receives one short outward/upward impulse.
+  It preserves exactly the SAME phone design and SAME open clamshell geometry.
+  The instant the phone physically separates from the fingers:
+  RIGHT HAND = EMPTY.
+  The instant the cup physically separates:
+  LEFT HAND = EMPTY.
+  ---
+  # FACE / HAIR CONTINUITY DURING RELEASE
+  Preserve @Image1 identity continuously through the collision.
+  If @Image3 is worn on the face or head, the protagonist's anatomically complete face already exists underneath it.
+  The face does NOT regenerate after the object separates.
+  If eyewear is used:
+  the natural eyes already exist behind the lenses before separation.
+  When the glasses leave, reveal the same normal human eyes with:
+  stable pupils,
+  natural eyelids,
+  correct gaze direction,
+  facial symmetry,
+  stable brow,
+  stable nose,
+  stable cheekbones.
+  Maintain realistic hairstyle structure and volume throughout the collision.
+  Hair responds only with subtle physically plausible inertia.
+  The hairstyle does not suddenly reshape when @Image3 separates.
+  ---
+  # 4.4-5.2s - ESTABLISH THE FROZEN WORLD
+  Time decelerates dramatically to approximately 2-3% of normal speed.
+  DO NOT immediately move to a macro object close-up.
+  FIRST HOLD a clear medium-wide view of the complete physical accident.
+  The audience must understand the spatial geometry before the object inspections begin.
+  The protagonist is beginning to fall backward.
+  BOTH HANDS ARE EMPTY.
+  The @Image3 HERO OBJECT is suspended a short physically plausible distance from its original release point.
+  The coffee cup is suspended lower and toward the side corresponding to the LEFT-hand release position.
+  The partially detached lid remains physically connected to or immediately beside the cup.
+  A restrained amount of coffee is beginning to escape through the opened gap.
+  The OPEN flip phone is suspended toward the opposite side near its RIGHT-hand release position.
+  These positions now become FIXED WORLD-SPACE ANCHORS.
+  The objects move only microscopically.
+  They do NOT continue travelling toward the camera.
+  They do NOT artificially grow in frame.
+  THE CAMERA IS THE PRIMARY MOVING ELEMENT.
+  ---
+  # 5.2-6.8s - @Image3 HERO OBJECT INSPECTION
+  The @Image3 HERO OBJECT remains almost stationary at its world-space anchor.
+  THE CAMERA performs a controlled cinematic dolly toward it.
+  The object becomes larger in frame ONLY because the CAMERA physically reduces camera-to-object distance.
+  Once close:
+  slow the camera dramatically.
+  HOLD.
+  Give the audience enough time to study the object.
+  Perform a restrained approximately 20-30 degree orbital/parallax CAMERA movement around the almost-stationary @Image3 object.
+  Reveal:
+  physical construction,
+  real material thickness,
+  surface texture,
+  reflections,
+  edges,
+  small manufacturing details,
+  recognizable @Image3 design.
+  Use shallow photographic depth of field.
+  The protagonist and environment remain softly recognizable behind the object.
+  The object still clearly exists inside the SAME physical scene.
+  It looks like a real manufactured product photographed practically with a macro cinema lens.
+  The object does NOT behave like CGI product animation.
+  Complete the inspection before moving to the next object.
+  ---
+  # 6.8-8.3s - COFFEE / LIQUID INSPECTION
+  Only after completing the @Image3 inspection, the CAMERA leaves the hero object behind at its existing world-space position.
+  The CAMERA travels diagonally through the frozen scene toward the SAME coffee cup.
+  THE CUP DOES NOT APPROACH THE CAMERA.
+  The camera physically approaches the cup's existing location.
+  HOLD a photographic macro close-up.
+  Show the SAME realistic paper takeaway cup.
+  Its lightweight plastic lid is partially detached along ONE EDGE.
+  The opening between lid and rim is clearly physically understandable.
+  Coffee escapes ONLY through this opening.
+  Show restrained real liquid behavior:
+  a thin irregular stream,
+  an imperfect liquid sheet,
+  several differently sized droplets,
+  realistic surface tension,
+  realistic liquid volume,
+  subtle natural reflections.
+  The coffee does NOT explode.
+  The liquid does NOT form a perfect decorative CGI splash.
+  The coffee advances only microscopically during bullet time.
+  Perform a small restrained lateral/parallax CAMERA move around the cup, lid and suspended droplets.
+  HOLD.
+  Give the audience enough time to observe:
+  paper texture,
+  plastic lid,
+  physical opening,
+  liquid thickness,
+  individual droplets,
+  real-world material reflections.
+  Complete the coffee inspection before leaving.
+  ---
+  # 8.3-9.8s - FLIP PHONE INSPECTION
+  Only after completing the coffee inspection, the CAMERA moves away.
+  The cup, lid and coffee remain behind at their existing world-space anchors.
+  The CAMERA travels through the same frozen three-dimensional scene toward the SINGLE suspended OPEN CLAMSHELL FLIP PHONE.
+  THE PHONE DOES NOT APPROACH THE CAMERA.
+  The phone remains near the physical position where it left the RIGHT hand.
+  The CAMERA physically closes the distance.
+  First show enough of the phone to establish continuity.
+  It is unmistakably the SAME OPEN FLIP PHONE seen earlier:
+  same silver-grey housing,
+  same upper display half,
+  same lower keypad half,
+  same central hinge,
+  same clamshell angle.
+  HOLD briefly on the complete phone silhouette.
+  Then the CAMERA moves closer to the existing upper display.
+  Extreme photographic macro close-up.
+  The illuminated incoming-call display reads:
+  BOSS
+  with one small realistic phone number underneath.
+  HOLD on the screen.
+  Show:
+  real plastic/metal housing,
+  physical hinge,
+  keypad texture,
+  tiny scratches,
+  surface wear,
+  realistic screen reflections.
+  The phone does NOT transform to reveal its screen.
+  The phone does NOT become another phone model.
+  The CAMERA simply approaches the SAME screen that has existed on the SAME phone since the beginning.
+  Exactly ONE phone exists.
+  The protagonist's RIGHT HAND remains completely EMPTY in the background.
+  ---
+  # 9.8-10.4s - RECONSTRUCT THE COMPLETE FROZEN TABLEAU
+  After the phone inspection, the CAMERA performs a fast but perfectly smooth dolly backward.
+  The phone itself remains at its established world-space position.
+  The coffee remains at its established world-space position.
+  The @Image3 HERO OBJECT remains at its established world-space position.
+  Reveal the complete accident again.
+  Same @Image1 protagonist still falling backward.
+  Both hands empty.
+  Same @Image3 HERO OBJECT.
+  Same coffee cup.
+  Same partially detached lid.
+  Same suspended coffee droplets.
+  Same OPEN flip phone.
+  Exactly one secondary person.
+  Exactly one Labrador.
+  All objects occupy positions spatially consistent with their original release points and trajectories.
+  No object has followed the camera.
+  No object has teleported.
+  No prop has been regenerated.
+  HOLD the complete frozen tableau briefly.
+  ---
+  # 10.4-12.0s - TIME RETURNS / PHYSICAL PAYOFF
+  Time suddenly snaps back to normal speed.
+  Gravity and existing momentum resume simultaneously.
+  Every object continues FROM ITS OWN EXISTING WORLD-SPACE POSITION.
+  The protagonist completes the backward fall naturally.
+  The @Image3 HERO OBJECT continues from its suspended position and lands where its existing momentum and gravity physically lead it.
+  The coffee cup continues from its own separate suspended position.
+  The cup impacts the ground.
+  The partially detached lid reacts naturally to impact.
+  The remaining real coffee spills irregularly from the actual cup opening and impact point.
+  The open flip phone continues from its own separate suspended position.
+  It strikes the ground and makes one small physically believable bounce.
+  The objects land at DIFFERENT physically plausible locations.
+  They do NOT suddenly converge beside the protagonist.
+  The CAMERA rapidly tilts/drops toward ground level to follow the final physical impact.
+  Finish with a cinematic low-angle composition connecting the fallen protagonist and scattered objects inside the same believable environment.
+  Hard cut.
+  ---
+  # NON-NEGOTIABLE BULLET-TIME CAMERA RULE
+  BULLET TIME = ALMOST-FROZEN PHYSICAL WORLD + FREELY MOVING CAMERA.
+  During bullet time:
+  OBJECTS STAY IN WORLD SPACE.
+  CAMERA MOVES THROUGH WORLD SPACE.
+  Close-up is created by REDUCING CAMERA-TO-OBJECT DISTANCE.
+  Never create a close-up by moving the object toward the lens.
+  Never enlarge the object artificially.
+  Never teleport an object to the camera.
+  STRICT CAMERA ROUTE:
+  FULL FROZEN TABLEAU
+  -> CAMERA DOLLIES TO @Image3 HERO OBJECT
+  -> HOLD
+  -> SMALL 20-30 degree CAMERA ORBIT
+  -> CAMERA TRAVELS TO COFFEE
+  -> HOLD
+  -> SMALL CAMERA PARALLAX
+  -> CAMERA TRAVELS TO OPEN FLIP PHONE
+  -> ESTABLISH COMPLETE PHONE
+  -> MOVE CLOSER TO DISPLAY
+  -> HOLD
+  -> CAMERA DOLLIES BACK TO COMPLETE TABLEAU
+  -> TIME RETURNS.
+  ---
+  # PERSISTENT PROP CONTINUITY - CRITICAL
+  The macro camera NEVER receives newly generated versions of the objects.
+  It visits the SAME objects that were physically released earlier.
+  Wide shot -> medium shot -> macro shot = SAME PHYSICAL OBJECT viewed from different distances.
+  @Image3:
+  same object,
+  same design,
+  same trajectory,
+  same world-space identity.
+  COFFEE:
+  same cup,
+  same lid,
+  same coffee,
+  same rotation,
+  same world-space identity.
+  PHONE:
+  same open clamshell phone,
+  same housing,
+  same hinge,
+  same keypad,
+  same display,
+  same open angle,
+  same world-space identity.
+  Changing camera distance must NOT change object design.
+  ---
+  # PHYSICAL CAUSALITY RULE
+  Every visible change requires a physical cause.
+  The protagonist recoils because of the elbow contact.
+  The HERO OBJECT moves because collision momentum separates it.
+  The phone changes position because the fingers release it.
+  The cup moves because the hand releases it and collision momentum gives it rotation.
+  The lid partially opens because cup rotation and internal liquid inertia apply force to the lightweight lid.
+  Coffee escapes because a REAL PHYSICAL GAP now exists.
+  Objects become larger in frame because the CAMERA approaches them.
+  Objects fall because normal gravity resumes.
+  Nothing transforms simply because the camera gets closer.
+  Treat the entire sequence as ONE real practical-effects event photographed continuously with a motion-control cinema camera.
+  ---
+  # OBJECT OWNERSHIP LOCK
+  ONE protagonist.
+  ONE secondary person.
+  ONE Labrador.
+  ONE leash.
+  ONE @Image3 HERO OBJECT.
+  ONE coffee cup.
+  ONE lid.
+  ONE open clamshell phone.
+  Before collision:
+  RIGHT HAND = phone.
+  LEFT HAND = coffee.
+  After collision:
+  RIGHT HAND = EMPTY.
+  LEFT HAND = EMPTY.
+  No second phone.
+  No second cup.
+  No second HERO OBJECT.
+  No additional dog.
+  No prop appearing inside an empty hand.
+  No prop duplication during macro shots.
+  No object teleportation.
+  No unexplained object-scale changes.
+  ---
+  # IDENTITY PRIORITY
+  Maintain @Image1 identity throughout, especially during collision and @Image3 separation.
+  Prioritize:
+  1. stable facial identity;
+  2. anatomically correct natural eyes;
+  3. stable hairstyle silhouette and realistic hair texture;
+  4. stable body proportions;
+  5. stable clothing;
+  6. accurate @Image3 geometry;
+  7. stable persistent phone geometry;
+  8. empty hands after release;
+  9. continuous object trajectories.
+  ---
+  # PHOTOGRAPHIC REALISM
+  Ultra-photorealistic LIVE-ACTION photography.
+  Premium international luxury fashion campaign.
+  High-budget cinematic music-video realism.
+  Real human anatomy.
+  Real skin pores and natural facial micro-expressions.
+  Anatomically correct eyes.
+  Detailed realistic hair.
+  Real practical physical props.
+  Real manufactured @Image3 object.
+  Real paper coffee cup.
+  Real plastic lid.
+  Real liquid coffee.
+  Real open clamshell flip phone.
+  Real object mass.
+  Real inertia.
+  Real gravity.
+  Real surface tension.
+  Realistic momentum.
+  ARRI Alexa 35 cinematic character.
+  Premium cinema optics.
+  Motivated natural environmental lighting.
+  Controlled highlights.
+  Natural skin tones.
+  Realistic optical depth of field.
+  Shallow macro depth of field during object inspections.
+  Subtle 35mm film texture.
+  Restrained luxury editorial colour grade.
+  The bullet-time sequence feels like a real practical high-speed photography shoot using a motion-control cinema camera, NOT CGI product animation.
+  4K, Ultra HD, maximum facial detail, maximum hair detail, maximum material fidelity, rich photographic detail, sharp optical clarity, cinematic texture, natural colours, stable identity, stable geometry, stable prop continuity.
+output:
+  format: mp4
+  resolution: 1080p
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: Сайт-агрегатор автора (реф-ссылка) не открывался — не нужен, модель доступна где угодно.
+source_url: https://t.me/reelsteacher/1009
+duplicates_of: []

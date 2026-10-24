@@ -1,0 +1,53 @@
+id: 199_talking_object_character_nbpro_veo31_russian_speech
+source_file: 199_talking_object_character_nbpro_veo31_russian_speech.md
+title: '«Говорящий предмет» (вирусный формат): Nano Banana Pro — 3D-персонаж из предмета → Veo 3.1, фото + реплика на русском'
+intent_tags:
+- talking_head
+- client_in_clip
+- meme
+- object_alive
+use_when: '«Говорящий предмет» (вирусный формат): Nano Banana Pro — 3D-персонаж из предмета → Veo 3.1, фото + реплика на русском'
+inputs:
+- unknown
+steps:
+- n: 1
+  action: '**Nano Banana Pro** (у автора: НейроБот → Дизайн с ИИ → Nano Banana Pro): сгенерировать персонажа из предмета (промпт 1; у автора текст сокращён многоточием — так и опубликован).'
+  tool:
+  - Nano Banana
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: '**Veo 3.1** (НейроБот → Видео будущего → Veo 3.1): загрузить полученное изображение, дать текстовую инструкцию с репликой на русском (промпт 2).'
+  tool:
+  - Veo
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: previous_step_output
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: Предмет меняется одной заменой (брокколи → флакон, шприц-ручка, кофе и т.д.), реплика — под задачу.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  Очаровательный и дружелюбный антропоморфный персонаж-брокколи, стоящий на деревенской деревянной кухонной стойке. У персонажа большие, выразительные мультяшные глаза, широкая, радостная улыбка и румяные щеки. Его голова представляет собой большую, гипердетализированную корону из соцветий брокколи... Стиль — высокодетализированный 3D-рендеринг, напоминающий анимацию Pixar.
+- |-
+  Броколи говорит на русском языке: «В канале Саша про нейросети  узнаете как создавать такие видео, для этого не нужны сложные программы или команда аниматоров»
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: нет (бот автора «НейроБот» не запускал; цепочка повторяется в любом сервисе с Nano Banana Pro и Veo 3.1)
+source_url: https://t.me/neiroseti/755
+duplicates_of: []

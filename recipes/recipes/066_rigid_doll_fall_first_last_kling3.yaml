@@ -1,0 +1,47 @@
+id: 066_rigid_doll_fall_first_last_kling3
+source_file: 66_rigid_doll_fall_first_last_kling3.md
+title: '# 66 — «Падаю как кукла»: фото в рост → Nano Banana Pro (вы — пластиковая кукла на полу) → Kling 3.0 первый/последний кадр, падение одним куском'
+intent_tags:
+- seamless_series
+use_when: 'Start/End-frame приём: последний кадр заранее генерируется картинкой, Kling 3.0 делает падение между ними, ручная камера «реагирует».'
+inputs:
+- фото в полный рост
+- стартовый кадр
+- финальный кадр
+steps:
+- n: 1
+  action: 'NB Pro: фото в рост + шаблон (поля в [скобках] заполнить).'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Kling 3.0: первый кадр — оригинал, второй кадр — картинка-кукла, промпт ниже.'
+  tool:
+  - Kling
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "\U0001F520\U0001F520\U0001F520\U0001F520\U0001F520\U0001F520\U0001F520\n\nИнструкция:\n1. Переходим в VeoSeeBot \n2. Nano banana Pro\nВставляем фото себя во весь рост и пишем такой промпт:\nLife-size\
+  \ plastic fashion doll version of a young woman with [HAIF ESCRIPTION], lying completely rigid on her side on the [FLOOR SURFACE] directly in the same spot where she was standing, body stif as one solid\
+  \ piece, glossy doll skin and painted features, brown eyes face looking upward to the side, wearing [OUTFIT DESCRIPTION INCLUDING SHOES AND ACCESSORIES], legs perfectly straight together locked, arms\
+  \ completely straight and stiff against body [SPECIFIC HAND DETAIL IF NEEDED], no bending anywhere, fully rigid from head to toe, same camera distance and framing as original photo, [BACKGROUND DESCRIPTION],\
+  \ photorealistic, hyper-detailed plastic texture\n\n3. Kling 3.0\nВставляем первый кадр — фото вас в оригинале и второй кадр — сгенерированное фото с куклой\nПишем такой промпт: \nThe woman instantly\
+  \ drops as one completely solid rigid unit, like a plastic toy doll tipped over, no warning, no anticipation. Arms and legs do not move independently at any point, entire body locks as one single piece\
+  \ and crashes onto the [FLOOR/SURFACE] directly where she was standing. [SPECIFIC BODY DETAIL IF NEEDED e.g. right hand stays raised, falls sideways/forward/backward]. Handheld camera naturally reacts\
+  \ to the sudden drop, jolting slightly then following her body down to the floor, settling on her lying rigid. Eyes remain brown, expression fixed throughout. [BACKGROUND] visible throughout."
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://t.me/reels_by_alsi/713
+duplicates_of: []

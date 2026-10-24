@@ -1,0 +1,332 @@
+id: 192_dankieft_ctlt_stills_seedance_camera_tricks_voice_ref
+source_file: 192_dankieft_ctlt_stills_seedance_camera_tricks_voice_ref.md
+title: 'Реалистичная «съёмка с рук»: кадры по формуле CTLT (Camera→Tone→Lighting→Texture) + character sheet → Seedance 2.5 1080p шаблоны «поведения камеры» (handheld, crash zoom, скрытая съёмка, whip pan,
+  отход назад, перекрытие кадра, экспозиция, промах фокуса) с голосом героя из аудио-референса'
+intent_tags:
+- talking_head
+use_when: 'Реалистичная «съёмка с рук»: кадры по формуле CTLT (Camera→Tone→Lighting→Texture) + character sheet → Seedance 2.5 1080p шаблоны «поведения камеры» (handheld, crash zoom, скрытая съёмка, whip
+  pan, отход назад, перекрытие кадра, экспозиция, промах фокуса) с голосом героя из аудио-референса'
+inputs:
+- фото в полный рост
+- аудио/голос
+- логотип
+steps:
+- n: 1
+  action: unknown (в источнике нет нумерованных шагов; см. prompts_verbatim)
+  tool:
+  - Seedance
+  - MiniMax H3
+  - Higgsfield
+  - Nano Banana
+  - GPT Image
+  - Flux
+  - Seedream
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "02\nThe CTLT method\nThink in four parts\nCamera → Tone → Lighting → Texture. In that order, camera first\nFill in one sentence per part, that's your prompt\nGrab the template: \nFile → Make a copy\n\
+  . The LLM helper is at the bottom of it\nThe blank table\nExample: skeleton running\nFlux 2.0 Pro. Just the four sentences from the table, pasted in.\nCopy prompt\nGenerate on Higgsfield\nCopy & open\
+  \ Higgsfield\nCamera: Candid 35mm film photograph with a 12mm fisheye lens, slightly elevated side view, wide full-body framing, tilted horizon and slight motion blur.\nTone: Frantic, absurd and darkly\
+  \ comic, like an unexpected chase caught by a passerby. A skeleton wearing a dress made of raw meat sprints down a Los Angeles street at night, with three dogs chasing close behind.\nLighting: Harsh direct\
+  \ on-camera flash lights the skeleton and nearby dogs, casting hard shadows across the asphalt while the parked cars and street behind them fall into darkness.\nDetails: Matte ivory bones, glossy marbled\
+  \ meat with visible fat and uneven edges flapping with each stride, coarse dog fur, rough asphalt and visible film grain.\nShow full prompt\n...\n04\nThe idea and levels of contrast\nStart simple, then\
+  \ add something unexpected\nLevel 0: a robot in a factory. That's what you'd expect\nLevel 1: same robot at a charging station with a low battery\nLevel 2: give him diamonds and a rapper attitude. Now\
+  \ he has personality\nLevel 3: put that iced-out robot in flowers, powered off. Hard metal, soft flowers. Different feeling\nLevel 0 → Level 3\nAll Nano Banana Pro with Bruiser's character sheet. Each\
+  \ one builds on the last."
+- |-
+  05
+  Video prompting
+  Make it feel like someone is holding the camera
+  Small shakes, focus changes and framing corrections. That's what sells it
+  All of these are straight out of Seedance 2.5 at 1080p
+  Swap in your own scene, keep the camera paragraph
+  The camera handover
+  Steady start, handover, handheld finish. Watch what the camera does the moment it changes hands.
+  Handheld
+  Small shakes and framing corrections make it feel physically held.
+  Copy prompt
+  Generate on Higgsfield
+  Copy & open Higgsfield
+  【Generation Goal】
+  Generate a photorealistic spontaneous office-party recording that clearly demonstrates handheld reaction through the camera's visible behavior. Present a clean full-frame recording image. No camcorder overlay, REC indicator, timestamp, battery icon, focus brackets, viewfinder grid, border or subtitles. The recording device stays outside its own field of view.
+  【Reference Asset Roles】
+  @Image 1 supplies only Dan's identity and exact orange quilted vest, green short-sleeved shirt over white long sleeves, beige trousers and off-white sneakers. The sheet's multiple views all show this one man, not additional characters. Copy none of its studio layout or background. Only Dan adopts its facial features.
+  @Image 2 supplies only the single Bruiser robot's chunky orange-and-silver body, cyan visor eyes, two antennae and physical metal limbs. Copy none of its studio background.
+  @Audio 1 supplies Dan's vocal identity, tone, timbre, accent and cadence. Use it for Dan's audible English speech in this scene, not as music or playback of the recording's old words.
+  【Subjects and Relationships】
+  On-screen cast: exactly one Dan, one Bruiser and one gorilla at the punch bowl. Dan is the only human visible. A separate party guest operates the camera and stays entirely unseen. Dan is in front of the lens, never the person holding the camera. His face, orange vest, both arms and cup are visible throughout.
+  Keep Dan's orange-vest outfit exclusive to Dan. Each individual keeps their own face and outfit throughout; never use Dan's reference to populate the supporting cast.
+  【Event Script】
+  In a wrecked office kitchen, Dan stands on the left and Bruiser stands on the right, both framed from the waist up. Dan holds a tiny paper cup at his own chest, well away from the camera. Bruiser pours champagne from a garden watering can into Dan's cup. It overflows onto Dan's hand and he lifts the wet cup with a startled laugh. Bruiser lowers the can with a sheepish head tilt. A gorilla tends a punch bowl in the background. Finish on Dan's visible amused face and wet cup beside Bruiser.
+  【Camera and Sound】
+  Handheld reaction: a third-person medium two-shot, filmed by a separate unseen guest standing in front of Dan and Bruiser. Keep Dan's face and upper body on the left of the picture, Bruiser on the right, and the cup between them. The image has continuous small irregular hand tremor. When Dan's cup suddenly overflows, the camera operator instinctively jerks backward and rolls the frame slightly sideways, then manually corrects the tilted framing to center Dan and Bruiser again. Keep Dan visible while the camera flinches. The operator's hands and cup never enter the foreground. The perspective moves with a person holding the camera; the shot never becomes smooth or stabilized.
+  Dan audibly speaks a brief surprised English reaction to Bruiser overfilling the cup, then laughs. His visible mouth movements match the actual spoken words. Use @Audio 1 for his vocal identity. Require actual intelligible spoken words; laughter accompanies his speech instead of replacing it. Dan is the only featured speaker. Keep his voice clearly audible above the party noise and synchronize every visible speaking mouth. Preserve natural room noise and the action's own sounds.
+  One continuous photorealistic shot with natural skin, real clothing and physical props in the same light. An intimate spontaneous recording by an unseen party guest, unpolished consumer-camera footage with visible fine grain. Camera imperfections come from the specified movement, focus or exposure, not graphics on the picture.
+  【Maintain Consistency】
+  Preserve the stated cast count, separate identities, outfits, prop ownership, room geography and the action direction throughout. Start as the main action begins, follow the camera behavior once, and finish on its clear result. Present a clean full-frame recording image. No camcorder overlay, REC indicator, timestamp, battery icon, focus brackets,
+  Show full prompt
+  Crash zoom
+  A sudden zoom and a short focus change. Feels like a surprised operator.
+  Copy prompt
+  Generate on Higgsfield
+  Copy & open Higgsfield
+  【Generation Goal】
+  Generate a photorealistic spontaneous office-party recording that clearly demonstrates optical crash zoom through the camera's visible behavior. Present a clean full-frame recording image. No camcorder overlay, REC indicator, timestamp, battery icon, focus brackets, viewfinder grid, border or subtitles. The recording device stays outside its own field of view.
+  【Reference Asset Roles】
+  @Image 1 supplies only Dan's identity and exact orange quilted vest, green short-sleeved shirt over white long sleeves, beige trousers and off-white sneakers. The sheet's multiple views all show this one man, not additional characters. Copy none of its studio layout or background. Only Dan adopts its facial features.
+  @Image 2 supplies only the single Bruiser robot's chunky orange-and-silver body, cyan visor eyes, two antennae and physical metal limbs. Copy none of its studio background.
+  @Audio 1 supplies Dan's vocal identity, tone, timbre, accent and cadence. Use it for Dan's audible English speech in this scene, not as music or playback of the recording's old words.
+  【Subjects and Relationships】
+  On-screen cast: exactly one Dan, one Bruiser and two supporting women: an elderly woman with cropped silver hair in a purple bathrobe and a middle-aged woman with a straight black bob in a cobalt-blue suit. Both women have clearly different facial structures from Dan. No additional party crowd. The operator remains unseen.
+  Keep Dan's orange-vest outfit exclusive to Dan. Each individual keeps their own face and outfit throughout; never use Dan's reference to populate the supporting cast.
+  【Event Script】
+  Bruiser opens a corporate briefcase beside Dan across a boardroom buffet table. Spaghetti spills onto the table as Dan reacts. The two supporting women dance behind them. End with Dan, Bruiser and the open case visible together.
+  【Camera and Sound】
+  Optical crash zoom: start with a genuinely wide view of the boardroom showing Dan and Bruiser small across the room. Keep the operator's feet planted in this one location. As the first spaghetti emerges, rapidly change the lens focal length to snap into a medium two-shot of Dan and Bruiser with the open case between them. The background magnifies with the zoom, without forward camera travel. Show a short radial smear, slight framing overshoot and obvious temporary loss of focus, then regain focus with both complete heads and the spilling case in frame. Finish on this settled view.
+  Dan audibly speaks a brief incredulous English reaction to the spaghetti in the briefcase, then laughs, with synchronized mouth movements. Use @Audio 1 for his vocal identity. Require actual intelligible spoken words; laughter accompanies his speech instead of replacing it. Dan is the only featured speaker. Keep his voice clearly audible above the party noise and synchronize every visible speaking mouth. Preserve natural room noise and the action's own sounds.
+  One continuous photorealistic shot with natural skin, real clothing and physical props in the same light. An intimate spontaneous recording by an unseen party guest, unpolished consumer-camera footage with visible fine grain. Camera imperfections come from the specified movement, focus or exposure, not graphics on the picture.
+  【Maintain Consistency】
+  Preserve the stated cast count, separate identities, outfits, prop ownership, room geography and the action direction throughout. Start as the main action begins, follow the camera behavior once, and finish on its clear result. Present a clean full-frame recording image. No camcorder overlay, REC indicator, timestamp, battery icon, focus brackets,
+  Show full prompt
+  Voyeuristic
+  Foreground cover makes the moment feel caught secretly.
+  Copy prompt
+  Generate on Higgsfield
+  Copy & open Higgsfield
+  【Generation Goal】
+  Generate a photorealistic spontaneous office-party recording that clearly demonstrates hidden observation through the camera's visible behavior. Present a clean full-frame recording image. No camcorder overlay, REC indicator, timestamp, battery icon, focus brackets, viewfinder grid, border or subtitles. The recording device stays outside its own field of view.
+  【Reference Asset Roles】
+  @Image 1 supplies only Dan's identity and exact orange quilted vest, green short-sleeved shirt over white long sleeves, beige trousers and off-white sneakers. The sheet's multiple views all show this one man, not additional characters. Copy none of its studio layout or background. Only Dan adopts its facial features.
+  @Audio 1 supplies Dan's vocal identity, tone, timbre, accent and cadence. Use it for Dan's audible English speech in this scene, not as music or playback of the recording's old words.
+  【Subjects and Relationships】
+  On-screen cast: exactly one Dan and one tuxedo-wearing raccoon. Dan is the only human; the party doorway and storage-door gap contain no additional people. The operator remains unseen behind the storage-room door.
+  Keep Dan's orange-vest outfit exclusive to Dan. Each individual keeps their own face and outfit throughout; never use Dan's reference to populate the supporting cast.
+  【Event Script】
+  In a copier alcove beside the office party, Dan slips cash under a table to a tuxedo-wearing raccoon, who slides him a tiny gold trophy. Dan glances toward the separate party doorway away from the hidden operator while taking the trophy. The observer peeks and retreats behind the storage-room door. Dan and the raccoon remain unaware of the person filming.
+  【Camera and Sound】
+  Hidden observation: the operator stays concealed behind a partly closed storage-room door, filming through a narrow gap toward the copier alcove. Dark door edges cover much of the foreground. Slowly lean sideways just enough to uncover Dan, the raccoon and the cash exchange, then pull back behind the door again. The camera peeks from cover rather than tracking openly. Dan glances toward a different party doorway on the opposite side of the alcove, away from the concealed lens, remaining unaware of the filming.
+  Dan quietly speaks a brief conspiratorial English reaction to the raccoon during their exchange. His speech is audible without addressing or noticing the hidden operator. Use
+  @Audio 1 for his vocal identity. Require actual intelligible spoken words; laughter accompanies his speech instead of replacing it. Dan is the only featured speaker. Keep his voice clearly audible above the party noise and synchronize every visible speaking mouth.
+  Preserve natural room noise and the action's own sounds.
+  One continuous photorealistic shot with natural skin, real clothing and physical props in the same light. An intimate spontaneous recording by an unseen party guest, unpolished consumer-camera footage with visible fine grain. Camera imperfections come from the specified movement, focus or exposure, not graphics on the picture.
+  【Maintain Consistency】
+  Preserve the stated cast count, separate identities, outfits, prop ownership, room geography and the action direction throughout. Start as the main action begins, follow the camera behavior once, and finish on its clear result. Present a clean full-frame recording image. No camcorder overlay, REC indicator, timestamp, battery icon, focus brackets,
+  Show full prompt
+  Whip pan
+  A quick turn towards something unexpected. The camera reacts.
+  Copy prompt
+  Generate on Higgsfield
+  Copy & open Higgsfield
+  【Generation Goal】
+  Generate a photorealistic spontaneous office-party recording that clearly demonstrates reactive whip pan through the camera's visible behavior. Present a clean full-frame recording image. No camcorder overlay, REC indicator, timestamp, battery icon, focus brackets, viewfinder grid, border or subtitles. The recording device stays outside its own field of view.
+  【Reference Asset Roles】
+  @Image 1 supplies only Dan's identity and exact orange quilted vest, green short-sleeved shirt over white long sleeves, beige trousers and off-white sneakers. The sheet's multiple views all show this one man, not additional characters. Copy none of its studio layout or background. Only Dan adopts its facial features.
+  @Audio 1 supplies Dan's vocal identity, tone, timbre, accent and cadence. Use it for Dan's audible English speech in this scene, not as music or playback of the recording's old words.
+  【Subjects and Relationships】
+  On-screen cast: exactly one Dan, an older woman with long blonde hair, exposed shoulders and bare arms wearing ONLY a sleeveless white wedding dress and an elderly bald man with a full grey beard in a navy suit. The woman's entire torso is white bridal satin, with no orange vest, no green shirt and no undershirt. Her face has a broad jaw and deep smile lines, unlike Dan. The woman rides a small actual motorcycle with two motorcycle wheels and handlebars; the bearded man is seated in its sidecar. The three people have different faces and hairstyles. Streamers and party debris suggest the gathering without additional people. The operator remains unseen.
+  Keep Dan's orange-vest outfit exclusive to Dan. Each individual keeps their own face and outfit throughout. Dan alone has any orange or green garment. The bride keeps bare shoulders and bare arms throughout, with the sleeveless white gown as her only clothing. The sidecar man's entire outfit is navy. Never use Dan's reference to dress either rider or supply their faces.
+  【Event Script】
+  Dan stands beside an improvised office bar. An engine rev makes him turn toward the sound. The woman in a wedding dress rides the small motorcycle with the navy-suited bearded man in its sidecar past the operator and along the office aisle. The camera turns to catch them passing and settles as they continue away.
+  【Camera and Sound】
+  Reactive whip pan: start in a medium close view of Dan at the office bar. When the motorcycle engine revs, respond with one rapid horizontal rotation toward the aisle. Intervening desks smear sideways across the frame during the turn. Overshoot the passing riders slightly, correct once, then settle on the wedding-dressed rider and navy-suited sidecar passenger continuing down the aisle. This is a physical camera turn in the same continuous space, not a cut, zoom or forward push. Dan's spontaneous reaction remains audible after he leaves the frame.
+  Dan audibly speaks a brief surprised English reaction as the engine interrupts him. Continue hearing his voice naturally from beside the operator when the camera turns away from his face. Use @Audio 1 for his vocal identity. Require actual intelligible spoken words; laughter accompanies his speech instead of replacing it. Dan is the only featured speaker. Keep his voice clearly audible above the party noise and synchronize every visible speaking mouth. Preserve natural room noise and the action's own sounds.
+  One continuous photorealistic shot with natural skin, real clothing and physical props in the same light. An intimate spontaneous recording by an unseen party guest, unpolished consumer-camera footage with visible fine grain. Camera imperfections come from the specified movement, focus or exposure, not graphics on the picture.
+  【Maintain Consistency】
+  Preserve the stated cast count, separate identities, outfits, prop ownership, room geography and the action direction throughout. Start as the main action begins, follow the camera behavior once, and finish on its clear result. Present a clean full-frame recording image. No camcorder overlay, REC indicator, timestamp, battery icon, focus brackets,
+  Show full prompt
+  Walking backward
+  Uneven footsteps and shifting perspective put the operator in the room.
+  Copy prompt
+  Generate on Higgsfield
+  Copy & open Higgsfield
+  【Generation Goal】
+  Generate a photorealistic spontaneous office-party recording that clearly demonstrates walking backward through the camera's visible behavior. Present a clean full-frame recording image. No camcorder overlay, REC indicator, timestamp, battery icon, focus brackets, viewfinder grid, border or subtitles. The recording device stays outside its own field of view.
+  【Reference Asset Roles】
+  @image1 supplies only Dan's identity and exact orange quilted vest, green short-sleeved shirt over white long sleeves, beige trousers and off-white sneakers. The sheet's multiple views all show this one man, not additional characters. Copy none of its studio layout or background. Only Dan adopts its facial features.
+  @image2 supplies only the single Bruiser robot's chunky orange-and-silver body, cyan visor eyes, two antennae and physical metal limbs. Copy none of its studio background.
+  @audio1 supplies Dan's vocal identity, tone, timbre, accent and cadence. Use it for Dan's audible English speech in this scene, not as music or playback of the recording's old words.
+  【Subjects and Relationships】
+  On-screen cast: exactly one Dan and one Bruiser. Dan is the only human in the aisle. The operator remains unseen.
+  Keep Dan's orange-vest outfit exclusive to Dan. Each individual keeps their own face and outfit throughout; never use Dan's reference to populate the supporting cast.
+  【Event Script】
+  Dan advances through an office aisle carrying an enormous gold trophy full of punch. Bruiser follows just behind his shoulder and makes one clumsy attempt to scoop punch with an oversized ladle. Dan keeps walking toward the retreating observer and laughs. Finish still facing Dan, with Bruiser behind him and the punch trophy clearly visible.
+  【Camera and Sound】
+  Walking backward: Dan walks directly toward the lens while the operator physically retreats down the same office aisle. Keep Dan's face, punch trophy and Bruiser behind his shoulder in view. Each backward footstep produces uneven vertical bob and a small roll; nearby cubicle edges slide past faster than the distant background. Correct the framing once while continuing backward. Dan's size stays approximately steady because both people move. Do not replace this retreat with a stationary lens zoom or a smooth tracking rig.
+  Dan audibly speaks a brief amused English reaction to Bruiser trying to scoop his punch while he walks, with synchronized mouth movements. Use @audio1 for his vocal identity. Require actual intelligible spoken words; laughter accompanies his speech instead of replacing it. Dan is the only featured speaker. Keep his voice clearly audible above the party noise and synchronize every visible speaking mouth. Preserve natural room noise and the action's own sounds.
+  One continuous photorealistic shot with natural skin, real clothing and physical props in the same light. An intimate spontaneous recording by an unseen party guest, unpolished consumer-camera footage with visible fine grain. Camera imperfections come from the specified movement, focus or exposure, not graphics on the picture.
+  【Maintain Consistency】
+  Preserve the stated cast count, separate identities, outfits, prop ownership, room geography and the action direction throughout. Start as the main action begins, follow the camera behavior once, and finish on its clear result. Present a clean full-frame recording image. No camcorder overlay, REC indicator, timestamp, battery icon, focus brackets,
+  Show full prompt
+  Blocking the frame
+  Someone passes close to the lens and the focus has to recover. Makes the space feel busy.
+  Copy prompt
+  Generate on Higgsfield
+  Copy & open Higgsfield
+  【Generation Goal】
+  Generate a photorealistic spontaneous office-party recording that clearly demonstrates foreground obstruction and autofocus recovery through the camera's visible behavior. Present a clean full-frame recording image. No camcorder overlay, REC indicator, timestamp, battery icon, focus brackets, viewfinder grid, border or subtitles. The recording device stays outside its own field of view.
+  【Reference Asset Roles】
+  @image1 supplies only Dan's identity and exact orange quilted vest, green short-sleeved shirt over white long sleeves, beige trousers and off-white sneakers. The sheet's multiple views all show this one man, not additional characters. Copy none of its studio layout or background. Only Dan adopts its facial features.
+  @audio1 supplies Dan's vocal identity, tone, timbre, accent and cadence. Use it for Dan's audible English speech in this scene, not as music or playback of the recording's old words.
+  【Subjects and Relationships】
+  On-screen cast: exactly one Dan, one tuxedo-wearing raccoon and an older woman with short silver curls wearing the purple blazer and carrying the blue folders. Her face is clearly unlike Dan's. The operator remains unseen.
+  Keep Dan's orange-vest outfit exclusive to Dan. Each individual keeps their own face and outfit throughout; never use Dan's reference to populate the supporting cast.
+  【Event Script】
+  Dan plays beer pong against a tuxedo-wearing raccoon on a messy office table. He misses a throw as a coworker in a purple blazer crosses close to the lens carrying bright blue folders. The folders briefly hide Dan, then clear. Dan laughs and gestures at the raccoon. The coworker continues out of view.
+  【Camera and Sound】
+  Brief foreground obstruction and focus recovery: start looking across the beer-pong table at Dan and the raccoon. The purple-clad coworker makes one continuous crossing directly in front of the lens. Bright blue folders fill the near foreground and briefly block Dan. Autofocus briefly grabs the close folders, leaving Dan blurry. After her folders have cleared the lens completely, the operator immediately corrects focus directly onto Dan's eyes and speaking mouth. Dan's face visibly changes from blurry to crisp, with his moustache, eyes and clothing seams clearly resolved. Hold Dan sharply in the final composition; the raccoon stays slightly behind him. The operator reframes slightly upward to center Dan's face during recovery. Keep the same viewpoint and uninterrupted moment.
+  Dan audibly speaks a brief amused English reaction to his missed throw and the raccoon as the folders clear, with synchronized mouth movements. Use @audio1 for his vocal identity. Require actual intelligible spoken words; laughter accompanies his speech instead of replacing it. Dan is the only featured speaker. Keep his voice clearly audible above the party noise and synchronize every visible speaking mouth. Preserve natural room noise and the action's own sounds.
+  One continuous photorealistic shot with natural skin, real clothing and physical props in the same light. An intimate spontaneous recording by an unseen party guest, unpolished consumer-camera footage with visible fine grain. Camera imperfections come from the specified movement, focus or exposure, not graphics on the picture.
+  【Maintain Consistency】
+  Preserve the stated cast count, separate identities, outfits, prop ownership, room geography and the action direction throughout. Start as the main action begins, follow the camera behavior once, and finish on its clear result. Present a clean full-frame recording image. No camcorder overlay, REC indicator, timestamp, battery icon, focus brackets,
+  Show full prompt
+  Exposure adjustment
+  Brightness taking a second to settle. That's a real camera reacting.
+  Copy prompt
+  Generate on Higgsfield
+  Copy & open Higgsfield
+  【Generation Goal】
+  A photorealistic candid recording at an absurd office party, demonstrating the camera adjusting from a dark room to harsh rooftop sunlight.
+  【Reference Asset Roles】
+  @image1 is only Dan's character sheet: keep his face and orange quilted vest, green short sleeves over white long sleeves, beige trousers and off-white shoes. The views all show the same single Dan. Create a new scene.
+  @audio1 supplies Dan's voice, accent and cadence for his audible English reaction, not the old recording's words.
+  【Subjects and Relationships】
+  Four different people: Dan; his elderly bald boss with a round face, full grey beard and purple bathrobe; a tall black-curled woman in a blue suit; a short silver-haired older woman in a burgundy jumpsuit. Only Dan resembles @image1 or wears his outfit. The boss sits in a blue inflatable pool of cereal; the women stand beside a shopping cart carrying a disco ball.
+  【Event Script】
+  Dan carries a tray of paper cups out of a dim office storeroom onto the sunlit rooftop. His boss is directly ahead. Dan spots him in the cereal pool, looks down at the boss's face, and gives him an incredulous amused spoken reaction in English. He keeps walking toward the boss and laughs while still looking at him.
+  【Camera and Sound】
+  One uninterrupted handheld shot from behind Dan's left shoulder, following him through the doorway. Keep the boss in front of Dan, along his gaze. Outdoors we see the back and left side of Dan's head; his head, eyes and shoulders stay directed at the boss while he speaks. He never turns toward the operator.
+  The camera starts correctly exposed for the dark room. Entering sunlight briefly washes the entire image nearly white. Automatic exposure then visibly lowers the brightness until Dan and the cereal pool become readable together. Natural footstep bob, small framing corrections and fine film grain. Audible Dan speech using @audio1, followed by laughter and rooftop ambience.
+  【Maintain Consistency】
+  Keep all four identities and outfits distinct, the cups in Dan's hands and his gaze on the boss throughout the outdoor reaction. Clean camera image without REC, timestamps, viewfinder graphics, text or subtitles. The filming camera and operator stay out of view.
+  Show full prompt
+  Focus fail
+  Mockumentary zoom with the autofocus hunting. Awkward on purpose.
+  Copy prompt
+  Generate on Higgsfield
+  Copy & open Higgsfield
+  【Generation Goal】
+  Generate a photorealistic spontaneous office-party recording that clearly demonstrates a mockumentary-style awkward zoom through the camera's visible behavior. Present a clean full-frame recording image. No camcorder overlay, REC indicator, timestamp, battery icon, focus brackets, viewfinder grid, border or subtitles. The recording device stays outside its own field of view.
+  【Reference Asset Roles】
+  <<<image_1>>> supplies only Dan's identity and exact orange quilted vest, green short-sleeved shirt over white long sleeves, beige trousers and off-white sneakers. The sheet's multiple views all show this one man, not additional characters. Copy none of its studio layout or background. Only Dan adopts its facial features.
+  <<<image_2>>> supplies only the single Bruiser robot's chunky orange-and-silver body, cyan visor eyes, two antennae and physical metal limbs. Copy none of its studio background.
+  <<<audio_1>>> supplies Dan's vocal identity, tone, timbre, accent and cadence. Use it only for Dan's audible English speech in this scene, not as music, not for Bruiser, and not as playback of the recording's old words.
+  【Subjects and Relationships】
+  On-screen cast: exactly one Dan, one Bruiser and one gorilla at the punch bowl. Dan is the only human visible. A separate party guest operates the camera and stays entirely unseen. Dan is in front of the lens, never the person holding the camera. His face and orange vest are visible throughout.
+  Keep Dan's orange-vest outfit exclusive to Dan. Each individual keeps their own face and outfit throughout; never use Dan's reference to populate the supporting cast. The cable bouquet belongs to Bruiser at the start and to Dan after the handover.
+  【Event Script】
+  In the same wrecked office kitchen, Dan stands on the left and Bruiser stands on the right, both framed from the waist up. A gorilla tends a punch bowl in the background, ladling punch throughout. Bruiser holds out a bouquet made of tangled colorful electrical cables, their plugs and connectors fanned out like flower heads, the stems bound with silver tape. Bruiser says "Here is a gift." Dan takes the bouquet with both hands and says "Oh, thank you, Bruiser." Dan pauses, holding the cable bouquet at his chest, then slowly turns his head and looks directly into the lens with an awkward, uncomfortable half-smile. Bruiser stays beside him with a proud head tilt. Finish on Dan's awkward face staring into the lens, holding the bouquet.
+  【Camera and Sound】
+  Mockumentary handheld: a third-person medium two-shot, filmed by a separate unseen guest standing in front of Dan and Bruiser. Keep Dan on the left of the picture, Bruiser on the right, and the bouquet between them during the handover. The image has continuous small irregular hand tremor. The moment Dan looks into the lens, the camera performs a fast, slightly clumsy optical zoom toward Dan's face, ending in a tight close-up. The camera body stays where it is; only the lens zooms in. During the zoom the autofocus fails: Dan's face goes soft and blurry, the focus hunts past him once, then snaps back sharp on his awkward expression. Bruiser drifts out of frame on the right as the zoom tightens. The operator's hands never enter the foreground. The shot never becomes smooth or stabilized.
+  Bruiser speaks first with a distinct synthetic robotic voice, clearly different from Dan's: "Here is a gift." Dan then answers in English: "Oh, thank you, Bruiser." Use <<<audio_1>>> for Dan's vocal identity only. Require actual intelligible spoken words for both lines. Each line comes only from its own speaker, and Bruiser's visor flickers in time with his speech. Dan's visible mouth movements match his spoken words exactly. During the awkward look and zoom, there is no dialogue. Keep both voices clearly audible above the party noise.
+  Preserve natural room noise, a faint lens-zoom motor whir and the action's own sounds.
+  One continuous photorealistic shot with natural skin, real clothing and physical props in the same light. An intimate spontaneous recording by an unseen party guest, unpolished consumer-camera footage with visible fine grain. Camera imperfections come from the specified movement, zoom and focus failure, not graphics on the picture.
+  【Maintain Consistency】
+  Preserve the stated cast count, separate identities, outfits, prop ownership, room geography and the action direction throughout. Start as Bruiser offers the bouquet, follow the zoom and focus failure once, and finish on Dan's awkward look into the lens. Present a clean full-frame recording image. No camcorder overlay, REC indicator, timestamp, battery icon, focus brackets, viewfinder grid, border or subtitles. The recording device stays outside its own field of view.
+  Show full prompt
+- |-
+  Video test: monkey gang, no reference
+  This is the Seedance 2.5 result. Same prompt went into Minimax H3 and Flux 3, and Seedance draft mode at 480p.
+  Copy prompt
+  Generate on Higgsfield
+  Copy & open Higgsfield
+  [GOAL] Raw found-footage fail compilation of a gang of street monkeys causing chaos in everyday human places, Jackass energy, 7 hard-cut clips of about 1.5 seconds each, filmed badly by random bystanders on phones and old camcorders, total 10 seconds.
+  [CONTINUITY]
+  The gang, real monkeys that keep their animal anatomy, fur and behavior but wear human street clothes:
+  - Monkey A "Smoke": capuchin, cigarette always in its mouth, small white tank top.
+  - Monkey B "Ice", the boss: large long-tailed macaque, heavy iced-out diamond chain with a big blank pendant, small dark sunglasses, diamond grills.
+  - Monkey C "Black Bandana": macaque, black paisley bandana tied on its head, tiny black hoodie.
+  - Monkey D "Red": capuchin, red paisley bandana tied over its face like a mask, oversized baggy jeans sagging low.
+  The getaway car: an old candy-red sedan with one mismatched grey door.
+  Each monkey keeps exactly the same outfit in every clip. Locations are ordinary, unglamorous and unbranded. The person filming is never seen.
+  [RHYTHM]
+  Each clip shows one action from its start to its impact, then hard-cuts immediately. No build-up, no aftermath, no clip longer than its time range.
+  [SHOT 1 | 0-1.5s] At a gas station, Ice jumps into the driver's seat of the red sedan and floors it, tires smoking, the car fishtailing away with the driver door flapping open, the filmer running after it. HARD CUT.
+  [SHOT 2 | 1.5-3s] At a bus stop, Red rips a handbag off an old lady's arm and sprints away on all fours, baggy jeans sagging, the old lady swinging her umbrella and missing. HARD CUT.
+  [SHOT 3 | 3-4.5s] Black Bandana on a rolling office chair shoots down a steep sidewalk at full speed and smashes straight through a shop window, glass exploding everywhere. HARD CUT.
+  [SHOT 4 | 4.5-6s] Clumsy crash zoom onto Smoke at a bus shelter, focus hunts and snaps back, he turns to the lens, bares his teeth, screeches and flips his middle finger. HARD CUT.
+  [SHOT 5 | 6-7.5s] Smoke runs off a garage roof and belly-flops into an above-ground pool, the pool wall bursts open and a wave floods the yard. HARD CUT.
+  [SHOT 6 | 7.5-9s] Ice sits on a worn couch surrounded by cash, turns slowly to the lens and spreads a smug grin showing his full diamond grills, a woman walking behind him leans down and kisses the top of his head, he doesn't even move. HARD CUT.
+  [SHOT 7 | 9-10s] Red's masked face rushes the lens and slaps it. Black frame.
+  [VISUAL STYLE] Raw real footage, mix of cheap smartphone video and 2000s consumer camcorder, handheld and unstable, clumsy digital crash zooms, autofocus hunting, focus loss and focus retakes, heavy motion blur, auto-exposure pumping, blown highlights, flat available light, washed-out colors, low bitrate softness, digital noise, occasional dropped frames. Normal field of view, no wide-angle distortion. Ugly accidental framing, subjects half out of frame, the camera often late on the action. Documentary realism, nothing cinematic, nothing staged.
+  [CAMERA AND PERFORMANCE] Whip pans that overshoot, crash zooms that go too far, running footsteps shaking the frame, the camera almost dropped. Monkeys move like real animals: fast, twitchy, darting, bared teeth, screeching. The clothing and attitude are the only human elements. Ice, the boss, is the only one who is slow and calm.
+  [AUDIO] Raw phone microphone sound for each clip: tires screeching, engine roaring, glass exploding, monkey screeching, huge splash, wind noise and mic distortion, cut abruptly at every hard cut.
+  Wordless bystander reactions only: gasps, screams, laughter.
+  No dialogue. No spoken words. No music. No subtitles.
+  [EXCLUSIONS] No on-screen interface, no player bar, no timestamp, no REC icon, no text, no watermark, no logos or brand names on clothes, cars, shops or products. No humanlike monkey faces, no cartoon style, no CGI look. No injuries shown to animals or people. The woman stays fully clothed and is never sexualized.
+  [MAINTAIN CONSISTENCY] Same four gang monkeys with identical outfits wherever they appear, exactly one action per clip, the same raw amateur found-footage look across all seven clips.
+  Show full prompt
+- "\uFEFFRealistic Image Prompt Template\nCamera → Tone → Lighting → Texture\nUse this guide to turn your idea into a photograph-like image, even when the scene is surreal.\n1. Blank template - CTLT - formula\n\
+  Choose File → Make a copy, then fill in the empty right-hand cells. Optional details can be left out.\n\n\n\n\nPart\n\tWhat to think about\n\tYour sentence\n\tCamera\n\tLock down the camera settings,\
+  \ such as the lens size (e.g., 35 mm lens) and framing (e.g., waist up).\n\t\n\n\tTone\n\tSet the mood, atmosphere and emotional energy first. Then describe who is in the image, what they are doing and\
+  \ where it happens. \n\t\n\n\tLighting\n\tDefine the lighting direction and quality (e.g., warm sunset from camera right).\n\t \n\tTexture\n\tSpecify physical details and materials that interact with\
+  \ the environment (e.g., silk catching motion, stray hair across the face).\n\t\n\n\t\n\n\n\nYour final prompt\nCombine the completed rows in order: Camera → Tone → Lighting → Texture .\n2. Filled-in\
+  \ demo\nThe same template, completed for the skeleton chase example.\n\n\nPart\n\tWhat to think about\n\tYour sentence\n\tCamera\n\tLock down the camera settings, such as the lens size (e.g., 35 mm lens)\
+  \ and framing (e.g., waist up).\n\t35mm film photograph, 12mm fisheye lens, slightly elevated side view, full-body framing, crooked composition and slight motion blur. \n\tTone\n\tSet the mood, atmosphere\
+  \ and emotional energy first. Then describe who is in the image, what they are doing and where it happens. \n\tFrantic, absurd and darkly comic, like an unexpected chase caught by a passerby.\n\n\nA skeleton\
+  \ wearing a dress made of raw meat sprints down a Los Angeles street at night, with three dogs chasing close behind the skeleton.\n\tLighting\n\tDefine the lighting direction and quality (e.g., warm sunset\
+  \ from camera right).\n\tHarsh direct flash, hard shadows on the road, bright foreground and dark background. \n\tTexture\n\tSpecify physical details and materials that interact with the environment (e.g.,\
+  \ silk catching motion, stray hair across the face).\n\tMatte bones, glossy marbled meat, visible fat, meat flapping with movement, coarse dog fur, rough asphalt and film grain. \n\t\n\n\n\nReady-to-paste\
+  \ prompt\nCandid 35mm film photograph with a 12mm fisheye lens, slightly elevated side view, wide full-body framing, tilted horizon and slight motion blur. \n\n\nFrantic, absurd and darkly comic, like\
+  \ an unexpected chase caught by a passerby.\nA skeleton wearing a dress made of raw meat sprints down a Los Angeles street at night, with three dogs chasing close behind the skeleton.\n\n\nHarsh direct\
+  \ on-camera flash lights the skeleton and nearby dogs, casting hard shadows across the asphalt while the parked cars and street behind them fall into darkness.\n\n\nMatte ivory bones, glossy marbled meat\
+  \ with visible fat and uneven edges flapping with each stride, coarse dog fur, rough asphalt and visible film grain.\n\n\n3. Optional: let an LLM tidy up your idea\nCopy the text below into your preferred\
+  \ LLM, replace the final placeholder with your idea, then paste the resulting image prompt into your image generator.\nTurn my idea into an image-generation prompt that feels like a real moment caught\
+  \ by a photographer.\nUse the CTLT structure in this exact order:\n1. Camera: photographic style, lens, shot size, viewpoint and framing. Keep the camera choices coherent.\n2. Tone: start with the mood,\
+  \ atmosphere and emotional energy. Then describe the subject, action and setting within the same paragraph.\n3. Lighting: light source, direction and quality, and how the light falls on the subject and\
+  \ surroundings.\n4. Texture: physical details, materials and surfaces, and how they interact with the environment. Include two or three visible qualities that support realism.\nPreserve my idea. Add only\
+  \ what helps the image; don't invent extra subjects, props or elaborate backstories.\nUse grain, flash, motion blur or imperfect framing only when they suit the scene and photographic style. Avoid generic\
+  \ claims like “masterpiece” or “8K.”\nDon't add reference-image tags unless I supplied reference images. If I supplied references, preserve their actual @image1, @image2 labels and state what each reference\
+  \ contributes.\nReturn one ready-to-paste prompt in four short paragraphs: Camera → Tone → Lighting → Texture. Keep the subject, action and setting inside Tone, with no separate Scene paragraph. Do not\
+  \ include headings inside the prompt.\nThen add a brief Camera / Tone / Lighting / Texture breakdown.\n\n\n\n\nMy idea: [PASTE YOUR IDEA]"
+- "\uFEFFSeven Ways to Capture an Idea\nStart with your own subject, action and setting. Then choose one camera sentence and its supporting details. No character sheet or reference image is required.\n\
+  Fill in this table, then join the rows in order. Use one style at a time; do not stack incompatible camera instructions.\n(for simple prompts)\nPart\n\tYour sentence\n\tCamera\n\t\n\n\tTone\n\t\n\n\t\
+  Lighting\n\t\n\n\tTexture\n\t\n\n\t\n\nCopyable structure\nCamera\n[Photographic style + lens, if useful + viewpoint + framing.]\nTone\n[Mood + atmosphere. Subject + action + setting.]\nLighting\n[Light\
+  \ source + direction + quality + effect on the subject and background.]\nTexture\n[Materials + visible surface details + interaction with movement or the environment + grain or noise, if appropriate.]\n\
+  The examples below use one simple text-only scene so the capture choices are easy to compare. Replace that scene with your own idea. Our demo images used Nano Banana Pro and a costume reference for character\
+  \ consistency; your text-only result will differ.\nFor complex prompts :\n\nKeep in mind the CTLT method but think like this \noverall look → subjects → decor → finish\n1. Close skate-camera\n  \n\nCTLT\
+  \ Structure\nCamera → Tone → Lighting → Texture\n\n\nCamera:\nCandid film photography shot close to the subject from knee height with a 12mm fisheye lens, wide framing, curved edges and a crooked horizon.\n\
+  Tone:\nRaw, spontaneous and slightly absurd. One person wearing a mascot costume with an oversized head and moustache, a black T-shirt and jeans sits on a laundromat doorstep at night, holding a carton\
+  \ of fries and looking away from the camera.\nLighting:\nHarsh direct on-camera flash lights the costume and nearby pavement, casting hard shadows behind the subject. Cool fluorescent light glows inside\
+  \ the laundromat while the street beyond remains dark.\nTexture:\nA real wearable costume with visible fabric and foam textures, creased denim, scuffed shoes, rough pavement and noticeable film grain.\n\
+  2. Phone snapshot\n  \n\nCTLT Structure\nCamera → Tone → Lighting → Texture\n\n*Set the aspect ratio to 9:16 in the image generator.\n\nCamera:\nQuick vertical phone snapshot taken at eye level while\
+  \ walking past, slightly tilted and loosely framed, with a little movement blur from the photographer’s motion.\nTone:\nCasual, fleeting and unposed. One person wearing a mascot costume with an oversized\
+  \ head and moustache, a black T-shirt and jeans sits on a laundromat doorstep at night, holding a carton of fries and looking away from the camera.\nLighting:\nAvailable fluorescent light spills from\
+  \ the laundromat onto one side of the costume. Weak street lighting leaves uneven illumination and noisy shadows around the subject.\nTexture:\nA real wearable costume with visible fabric and foam textures,\
+  \ folds in the cotton T-shirt, creased denim and phone-camera noise in the darker areas.\n\n\n3. Intimate documentary\n\n\n  \n\nCTLT Structure\nCamera → Tone → Lighting → Texture\n\n\nCamera:\nClose\
+  \ handheld documentary photograph on 35mm film with a 35mm lens, taken at the seated subject’s eye level, with waist-up framing and a slightly uneven crop.\nTone:\nQuiet, observational and unguarded.\
+  \ One person wearing a mascot costume with an oversized head and moustache, a black T-shirt and jeans sits on a laundromat doorstep at night, holding a carton of fries and turning their head away from\
+  \ the camera.\nLighting:\nUneven fluorescent light from the laundromat entrance falls across one side of the costume, fading into soft shadow on the other side. The background remains dim but visible.\n\
+  Texture:\nA real wearable costume with visible fabric seams and foam textures, folds around the elbows, grease marks on the fries carton and fine film grain.\n4. Motion-blurred photo dump\n  \nCTLT Structure\n\
+  Camera → Tone → Lighting → Texture\n\n\nCamera:\nA badly shaken handheld phone snapshot with strong diagonal camera-shake blur across the whole image, doubled edges and smeared shapes. The subject remains\
+  \ recognizable, with blur affecting both the subject and background.\nTone:\nChaotic, accidental and slightly absurd. One person wearing a mascot costume with an oversized head and moustache, a black\
+  \ T-shirt and jeans sits on a laundromat doorstep at night, holding a carton of fries and looking away from the camera.\nLighting:\nAvailable fluorescent light from the laundromat and weak street lighting\
+  \ illuminate the scene. Bright areas smear into diagonal streaks in the same direction as the camera shake.\nTexture:\nFabric, foam and denim read as soft blocks of texture, with coarse digital noise\
+  \ in the shadows and rough pavement smeared by the camera movement.\n5. Low curbside\n  \n\nCTLT Structure\nCamera → Tone → Lighting → Texture\n\n\nCamera:\nCandid photograph shot from curb level with\
+  \ a 24mm wide-angle lens, full-body framing, shoes close to the camera, the oversized costume head farther back and pavement filling the foreground.\nTone:\nMundane, unposed and quietly comic. One person\
+  \ wearing a mascot costume with an oversized head and moustache, a black T-shirt and jeans sits on a laundromat doorstep at night, holding a carton of fries and looking away from the camera.\nLighting:\n\
+  Cool fluorescent light spills from the laundromat across the seated figure and curb. Weak street lighting catches the foreground pavement, with deeper shadows beneath the legs.\nTexture:\nA real wearable\
+  \ costume with visible fabric and foam textures, denim bunching around the knees, scuffed shoes and coarse pavement close to the lens.\n6. Disposable Camera look\n  \n\nCTLT Structure\nCamera → Tone →\
+  \ Lighting → Texture\n\n\nCamera:\nFound footage flash photograph. Shot at night on a cheap digital point-and-shoot camera, with everything mostly in focus, a quick unplanned composition and an imperfect\
+  \ crop.\nTone:\nCandid, mundane and slightly absurd. One person wearing a mascot costume with an oversized head and moustache, a black T-shirt and jeans sits on a laundromat doorstep at night, holding\
+  \ a carton of fries and looking away from the camera.\nLighting:\nHarsh built-in flash lights the costume from the front, casting a hard shadow behind it and clipping the brightest highlights. The laundromat\
+  \ glows faintly in the darker background.\nTexture:\nA real wearable costume with visible fabric and foam textures, creased denim, slightly crunchy digital detail, mild compression artifacts and noisy\
+  \ shadows.\n7. Concealed observation\n  \nCTLT Structure\nCamera → Tone → Lighting → Texture\n\n\nCamera:\nTelephoto photograph taken from inside a parked car, with compressed perspective and slightly\
+  \ soft focus. A blurred window edge and dashboard partially obscure the foreground.\nTone:\nQuiet, distant and unposed. One person wearing a mascot costume with an oversized head and moustache, a black\
+  \ T-shirt and jeans sits on a laundromat doorstep at night, holding a carton of fries and looking away, unaware of the camera.\nLighting:\nAvailable fluorescent light from the laundromat illuminates the\
+  \ subject across the street. The car interior stays dark, with weak street lighting falling unevenly across the surrounding pavement.\nTexture:\nA real wearable costume with fabric and foam textures,\
+  \ creased denim, rough pavement and visible grain, with faint reflections on the window glass.\nTreat these phrases as directions, not exact camera settings. Inspect the result: did the viewpoint, framing,\
+  \ texture or blur actually change?"
+output:
+  format: mp4
+  resolution: 1080p
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: partial
+notes: на странице каждый видеопромпт обрезан автором кнопкой «Show full prompt» (конец блока Maintain Consistency виден целиком в последнем промпте Focus fail); LLM-помощник автора («ChatGPT or Claude»)
+  по брифу НЕ берём — формулу CTLT заполнять вручную по шаблону; модель GPT Image из его сравнения не берём
+source_url: https://www.youtube.com/watch?v=2hJsvDSPWYM
+duplicates_of: []

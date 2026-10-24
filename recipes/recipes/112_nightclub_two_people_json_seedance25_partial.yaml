@@ -1,0 +1,78 @@
+id: 112_nightclub_two_people_json_seedance25_partial
+source_file: 112_nightclub_two_people_json_seedance25_partial.md
+title: 'Двое в ночном клубе «взгляд через танцпол»: JSON-промпт Seedance 2.5 на 4 референса (частично)'
+intent_tags:
+- client_in_clip
+- meme
+- dance
+use_when: 'Тренд: ваше фото и фото человека на танцполе → Seedance 2.5 (15 с, 720p в боте; в JSON указано 1080p, 9:16). План 1: герой A на балконе смеётся, затем серьёзный взгляд в камеру; план 2: через
+  плечо вниз на тёмно-синий танцпол, где B стоит неподвижно и ярко освещён; план 3: B крупно. @image3/@image4 '
+inputs:
+- фото лица/портрет человека
+steps:
+- n: 1
+  action: VeoSeeBot (5 бесплатных кредитов) → приложение → AI видео → Seedance 2.5.
+  tool:
+  - Seedance
+  - Veo
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Референсы: ваше фото и фото человека на танцполе (+ по JSON ещё 2 рефа композиции).'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: Промпт из комментария, 15 с, 720p.
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: 15 с
+  aspect: unknown
+prompts_verbatim:
+- "=== https://t.me/s_golovoj/8876 2026-10-02T13:34:05+00:00\nТуториал на вирусный тренд\U0001F380\n\n1. Заходим в бот \U0001F525VeoSeeBot (дают 5 бесплатных кредитов);\n2. В правом нижнем углу открываем\
+  \ приложение —> раздел AI видео —> выбираем нейросеть Seedance 2.5 —> в референс изображения вставляем ваше фото и фото человека на танцполе —> вставляем промт, длительность 15 секунд, качество 720. \n\
+  3. Отправляем на генерацию\n\nПромт в комментариях \U0001F5A4\n  \n    Please open Telegram to view this post\n    VIEW IN TELEGRAM"
+- "id=\"comments\" class=\"mt-3 px-4 sm:px-0\" aria-label=\"Комментарии\">\n            Комментарии\n8\n            Р\nРодион Рябцев | психолог по тревоге\n2 октября 2026 г., 16:35 МСК\nА Seedance 2.5 хорошо\
+  \ справляется с анатомией в танцах или всё ещё бывают странные изгибы рук? Хочется попробовать, но боюсь слить бесплатные кредиты на кривой результат.\n\U0001F44D\n1\n            Н\nНастя | ИИ-РОЛИКИ\
+  \ И ПАРТНЁРКА\n2 октября 2026 г., 16:52 МСК\nКруто, спасибо за гайд! \n✨\n            С\nС ГОЛОВОЙ \U0001F39E\n2 октября 2026 г., 16:52 МСК\nВыше прислала\n            С\nС ГОЛОВОЙ \U0001F39E\n2 октября\
+  \ 2026 г., 16:52 МСК\nУ меня все получилось с первой попытки\n            С\nС ГОЛОВОЙ \U0001F39E\n2 октября 2026 г., 16:51 МСК\nУниверсальный промпт для Seedance 2.5 \n⬇️\n{\n  \"model\": \"seedance-2.5\"\
+  ,\n  \"duration\": 15,\n  \"aspect_ratio\": \"9:16\",\n  \"resolution\": \"1080p\",\n  \"references\": {\n    \"\n@image1\n\": \"CHARACTER_A: keep gender, face, hairstyle, body type AND exact outfit exactly\
+  \ as shown in the reference; do not change or assume gender\",\n    \"\n@image2\n\": \"CHARACTER_B: keep gender, face, hair, body type AND exact outfit exactly as shown in the reference; do not change\
+  \ or assume gender\",\n    \"\n@image3\n\": \"composition and lighting reference for shot 2 only, not the characters\",\n    \"\n@image4\n\": \"composition and lighting reference for shot 3 only, not\
+  \ the characters\"\n  },\n  \"global_style\": {\n    \"look\": \"cinematic nightclub drama, photorealistic, shot on anamorphic lens, shallow depth of field, natural skin texture\",\n    \"location\":\
+  \ \"large multi-level nightclub atrium: upper balcony with chrome railing overlooking a packed dance floor below, tiers of balconies with small warm table lamps\",\n    \"lighting\": \"shot 1: warm amber\
+  \ low-key light, backlit bar shelves with glowing bottles; shots 2-3: deep blue low-key club light, crowd sinks into dark blue shadow; \n@image2\n is exposed noticeably brighter in clean neutral-white\
+  \ tones in shots 2-3, soft and natural, with no visible light beam or cone\",\n    \"color_grade\": \"teal-blue shadows, warm amber highlights, soft film grain, slightly desaturated\",\n    \"consistency\"\
+  : \"each character's gender, appearance and identity match their own reference image exactly; characters wear exactly the clothes, colors, fabrics and accessories shown in their reference images in every\
+  \ shot; no outfit changes, no face morphing, no gender swap\"\n  },\n  \"shots\": [\n    {\n      \"id\": 1,\n      \"time\": \"0-6.6s\",\n      \"subject\": \"\n@image1\n in the exact outfit from the\
+  \ reference, standing on the upper balcony, leaning forward with forearms on a chrome railing, hands loosely clasped\",\n      \"background\": \"out-of-focus bar wall with rows of backlit bottles and\
+  \ warm bokeh\",\n      \"action\": \"0-3s: \n@image1\n laughs and smiles broadly, looking off-camera to frame left as if at a friend; 3-4.5s: \n@image1\n slowly turns the head to look directly into the\
+  \ camera, still smiling; 4.5-6.6s: the smile gradually fades, \n@image1\n lowers the chin slightly and gives a serious, heavy, intense stare from under the brows, holding eye contact\",\n      \"camera\"\
+  : \"eye level, starts as medium shot (waist up, railing visible), continuous slow smooth dolly push-in ending on a tight chest-up close-up; locked, no shake\",\n      \"emotion\": \"carefree joy turning\
+  \ into quiet, meaningful seriousness\"\n    },\n    {\n      \"id\": 2,\n      \"time\": \"6.6-12s\",\n      \"subject\": \"back of \n@image1\n's head on the left edge and \n@image1\n's shoulder across\
+  \ the bottom of the frame (same outfit as reference), heavily blurred, dark foreground frame\",\n      \"background\": \"steep top-down view from a high balcony onto a huge packed dance floor, hundreds\
+  \ of people dancing with raised arms, all tinted deep dark blue; upper tiers of balconies with small glowing table lamps at the top of the frame\",\n      \"action\": \"6.6-8.5s: camera starts close behind\
+  \ \n@image1\n's head and slowly arcs to the left, revealing the dance floor below; 8.5-12s: \n@image2\n, wearing the exact outfit from the reference, stands perfectly still in the center of the frame\
+  \ with hands on hips, head raised, looking straight up at the balcony; a small empty gap in the crowd surrounds \n@image2\n; \n@image2\n is the brightest element in the frame, rendered in clean neutral-white\
+  \ tones and sharp, while everyone around is dark blue, dimmer and keeps dancing\",\n      \"camera\": \"high angle over-the-shoulder, slow arc left around \n@image1\n's head, then focus settles on \n\
+  @image2\n in the center, slow subtle push-in toward \n@image2\n\",\n      \"emotion\": \"their eyes meet across the club\"\n    },\n    {\n      \"id\": 3,\n      \"time\": \"12-15s\",\n      \"subject\"\
+  : \"\n@image2\n in the exact outfit from the reference, fabric texture and accessories preserved, standing in the middle of the dance floor\",\n            O\nOlga Petrova\n2 октября 2026 г., 16:42 МСК\n\
+  и где промт?)\n            В\nВалентинка\n2 октября 2026 г., 16:41 МСК\nв чём суть тренда?\n            В\nВалентинка\n2 октября 2026 г., 16:41 МСК\nбригаду"
+output:
+  format: mp4
+  resolution: 720p
+  aspect: '9:16'
+done_criteria: unknown
+confidence: C
+prompt_completeness: complete
+notes: окончание JSON (shot 3) — только в Telegram-комментариях
+source_url: https://t.me/s_golovoj/8876
+duplicates_of: []

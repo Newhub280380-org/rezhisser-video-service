@@ -1,0 +1,82 @@
+id: 189_techhalla_mended_midjourney_sheets_two_clips_still_ref
+source_file: 189_techhalla_mended_midjourney_sheets_two_clips_still_ref.md
+title: '«Mended»: 2 character sheet + окружение (Midjourney) → клип 1 (20 с) → стоп-кадр из клипа 1 как референс пространства для клипа 2 (30 с, бой)'
+intent_tags:
+- other
+use_when: '«Mended»: 2 character sheet + окружение (Midjourney) → клип 1 (20 с) → стоп-кадр из клипа 1 как референс пространства для клипа 2 (30 с, бой)'
+inputs:
+- фото товара/продукта
+steps:
+- n: 1
+  action: unknown (в источнике нет нумерованных шагов; см. prompts_verbatim)
+  tool:
+  - Seedance
+  - Midjourney
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  First, generate the reference images with Midjourney: 2 character sheets and the environment. You'll find the prompts on the cards.
+
+  Then animate 2 clips with Seedance 2.5: a 20s one to set the tone and a 30s one for the fight.
+
+  Here they are, hope they help!
+
+  PROMPT 1⃣ · SETTING THE TONE (20s)
+  Refs: [Image1] environment · [Image2] nun sheet · [Image3] fallen angel sheet
+
+  Dark-fantasy standoff filmed like an epic Hollywood blockbuster, real footage look, anamorphic lens, crushed blacks, saturated magenta flesh walls, sulfur yellow and acid green pools, thick god rays, no dialogue, no fighting, overwhelming tension and awe. Setting: the living-flesh cave of [Image1]. Nun: [Image2], white habit, cracked porcelain kintsugi mask with no mouth, big rusty machete. Fallen angel: [Image3], rusted iron body, burning wings, cracked dry porcelain face with no tears, barbed-wire halo, so colossal that the nun barely reaches its ankle and its wings touch both walls of the cave.
+  Spatial continuity: one fixed geography for the whole film. The nun enters from the near end of the cave and stops in the center of the sulfur arena. The dark far end of the cave lies straight ahead of her, and that is where the angel rises. The angel is always in front of her, never behind or beside her. Keep screen direction consistent in every shot: the nun on the left side of the frame facing right, the angel on the right side facing left.
+
+  Shot 1 (0-2s): Extreme wide abyssal shot from high in the cave ceiling, the tiny white nun walks into the empty arena far below, god rays falling around her.
+  Shot 2 (2-4s): Slow tracking at ground level beside her boots, sulfur crust cracking under each step, machete hanging from her hand.
+  Shot 3 (4-6s): Close-up, her porcelain mask turns slowly, scanning the cave. The ground trembles, dust and spores rain from the ceiling, the acid pools ripple.
+  Shot 4 (6-8s): Over-the-shoulder from behind the nun looking ahead into the darkness at the far end of the cave: deep in the gloom, two burning points ignite high above, far higher than she expected.
+  Shot 5 (8-11s): Slow push-in toward the far end: out of the penumbra the colossal fallen angel steps forward, its body emerging from the shadows piece by piece, rusted iron catching the god rays, each step shaking the floor and sending ripples across the acid pools.
+  Shot 6 (11-14s): Extreme low angle from the floor in front of the angel: its giant wings unfold and ignite one after the other in a massive burst of flame that turns the whole cave orange, the god rays turn red, a storm of embers fills the air. The camera tilts up and up along its body to reveal its full impossible height, the barbed-wire halo flaring red-hot.
+  Shot 7 (14-16s): Reverse shot from high behind the angel's shoulder looking down at the tiny nun far below, she holds her ground in the center of the arena, embers falling around her.
+  Shot 8 (16-18s): Extreme close-up of the angel's cracked porcelain face lowering toward her, dry and expressionless, firelight flickering in the cracks.
+  Shot 9 (18-20s): Wide shot in profile, held: the tiny white nun on the left raises her machete, the colossal burning angel on the right towers over her with its wings spread wall to wall, an empty floor of sulfur between them. End on this held image, no fade, no cut to black.
+
+  Real footage look, epic scale, heavy atmosphere, no fighting, no blood, no tears, stable characters, consistent spatial continuity and colossal scale throughout.
+
+  PROMPT 2⃣ · THE FIGHT (30s)
+  Refs: [Image1] nun sheet · [Image2] fallen angel sheet · [Image3] still from clip 1
+
+  Brutal dark-fantasy battle filmed like an epic Hollywood blockbuster, real footage look, anamorphic lens, crushed blacks, saturated magenta flesh walls, sulfur yellow and acid green pools, burning orange firelight, god rays, speed ramps from full speed into razor-sharp slow motion, rapid-fire hard cuts every 1 second in the action beats, whip pans, crash zooms, constant motion, no pauses. [Image3] is the reference for the cave, the lighting and the positions of both characters; the video does not open on that exact frame. Nun: [Image1], white habit, cracked porcelain kintsugi mask with no mouth, big rusty machete that she grips firmly in her hand in every single shot, she never drops or releases it. Fallen angel: [Image2], rusted iron body, burning wings, cracked dry porcelain face mask with no tears, barbed-wire halo, colossal, many times taller than the nun.
+  Spatial continuity: one fixed geography as in [Image3]. The nun starts on the left of the arena facing right, the angel stands on the right facing left, the big dark boulder on the far right, the cave opening behind them. Keep screen direction consistent: the nun moves left to right toward the angel, the angel attacks right to left.
+
+  Shot 1 (0-2s): Over-the-shoulder from behind the nun, her white veil and machete in the foreground, the colossal angel in the background at the far end of the arena starts charging its attack, wings igniting; the nun breaks into a sprint toward it, the angel sweeps its burning wing down and a towering tidal wave of roaring fire, twenty meters high, races across the floor toward her, swirling with molten embers and black smoke.
+  Shot 2 (2-3s): She leaps sideways onto the flesh wall and runs along it horizontally, defying gravity, the wave of fire passing below her.
+  Shot 3 (3-4s): Whip pan, a second burning wing strike smashes the wall where she was, she kicks off and flips across the cave to the opposite wall, landing crouched on it sideways.
+  Shot 4 (4-5s): Crash zoom, she springs up and thrusts the machete forward without letting go of it: a blinding spell of white holy light bursts from the tip of the blade in a spear of light.
+  Shot 5 (5-6s): The colossal angel twists aside at the last instant, the spear of light misses by inches and blasts a glowing crater into the flesh wall behind it.
+  Shot 6 (6-7s): Close-up of the angel's porcelain mask turning toward her, its halo heating white-hot.
+  Shot 7 (7-8s): The halo fires a blazing vortex of white-hot fire and molten gold that spirals across the cave; she bounces from wall to wall to ceiling like a ricochet, the fire vortex chasing her and scorching the rock behind her.
+  Shot 8 (8-9s): The angel stamps its giant iron foot, the floor cracks open, acid pools erupt as columns of green liquid.
+  Shot 9 (9-10s): She leaps between the rising acid columns and falling slabs, each jump longer and higher than humanly possible, gaining speed.
+  Shot 10 (10-11s): The angel beats both wings: thousands of burning feathers shoot at her like a meteor shower of fiery blades, each leaving a trail of flame.
+  Shot 11 (11-12s): She spins the machete in a blur, feathers sliced in half exploding into sparks around her.
+  Shot 12 (12-13s): She runs straight up the cave wall toward the ceiling, the angel's huge hand crushes the rock just below her heels, she pushes off the ceiling and dives down toward it with full momentum.
+  Shot 13 (13-15s): Wide, the angel rears back and its whole body ignites: a colossal inferno of fire spirals into its chest and halo like a miniature sun, flames erupting from every crack in its iron, the walls glowing red-hot, while the nun dives at it from above.
+  Shot 14 (15-20s): Frozen time. The nun leaps and rises into the air as if levitating, body arched in attack position, machete raised over her head toward the angel's face. At the peak of the leap time locks completely. Slow 360 orbit around her suspended in mid-air: embers hang as perfect beads of light, burning feathers float motionless like glowing blades, acid droplets hang as glassy green spheres with perfect surface tension, the angel's charged fire frozen as a still sphere of flame in its chest, the angel's face frozen inches from her blade. Only she moves: her head tilts slightly toward the mask. Time snaps back to full speed.
+  Shot 15 (20-21s): Slow motion impact, her machete strikes the angel's porcelain mask: the mask shatters into hundreds of porcelain shards that spin through the firelight, the charged attack collapses in a burst of sparks.
+  Shot 16 (21-22s): Reverse shot, the shards rain down around the nun as she lands on the angel's shoulder.
+  Shot 17 (22-24s): Wide, the colossal angel staggers, its halo dims, it crashes down onto both knees, the impact shakes the whole cave, rocks fall from the ceiling.
+  Shot 18 (24-26s): Rapid-fire cuts: she yanks the angel's head back by the barbed-wire halo, slams her boot onto its chest, forcing it down, the angel's broken face looks up at her, embers exploding around them.
+  Shot 19 (26-30s): Final shot: the nun leaps high one last time, spins in the air and comes down with a savage two-handed overhead swing of the rusty machete straight at the angel's neck, full speed, all her weight behind it, a shockwave of dust and embers bursting outward from the force of the swing. Crash zoom on the blade, hard cut exactly at the instant before the blade touches, the last frame is the blade about to hit. No fade, the blow never lands on screen.
+
+  Real footage look, epic scale, heavy atmosphere, no blood, no gore, no tears, the nun always holding her machete, stable characters, consistent spatial continuity and colossal scale throughout.
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: partial
+notes: промпты Midjourney для листов персонажей и окружения — только на картинках-карточках (не текст), не прочитаны
+source_url: https://x.com/techhalla/status/2113776391485333867
+duplicates_of: []

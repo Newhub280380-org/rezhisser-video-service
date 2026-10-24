@@ -1,0 +1,50 @@
+id: 201_animate_marketplace_card_keep_text_static_hailuo02
+source_file: 201_animate_marketplace_card_keep_text_static_hailuo02.md
+title: 'Оживить готовую карточку товара (маркетплейс-инфографика), не трогая текст и вёрстку: карточка → Hailuo MiniMax 02, анимируется только модель'
+intent_tags:
+- product_ad
+- client_in_clip
+- object_alive
+use_when: 'Оживить готовую карточку товара (маркетплейс-инфографика), не трогая текст и вёрстку: карточка → Hailuo MiniMax 02, анимируется только модель'
+inputs:
+- фото товара/продукта
+- логотип
+steps:
+- n: 1
+  action: Готовая карточка товара с инфографикой (текст, логотипы, фон).
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: '**Hailuo MiniMax 02** image-to-video (у автора через бота → «Видео Будущего»): загрузить карточку, промпт ниже — анимируется только ключевой персонаж, инфографика остаётся статичной.'
+  tool:
+  - MiniMax H3
+  mode: image-to-video
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: Для своей карточки заменить описание персонажа/действия («girl in the striped dress … spins»), оставив блок про неподвижность текста.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  Animate the image, leaving all text and graphic elements, background, style and layout unchanged. The only animated element is the girl in the striped dress. Add smooth animation: the girl smiles and spins, holds the skirt of the dress with her hands. Important: everything else - inscriptions, logos, colors and background - remains completely static.
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: нет
+source_url: https://t.me/neiroseti/561
+duplicates_of: []

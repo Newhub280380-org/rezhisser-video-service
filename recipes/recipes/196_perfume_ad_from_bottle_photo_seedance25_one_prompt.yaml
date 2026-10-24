@@ -1,0 +1,79 @@
+id: 196_perfume_ad_from_bottle_photo_seedance25_one_prompt
+source_file: 196_perfume_ad_from_bottle_photo_seedance25_one_prompt.md
+title: 'Имиджевая реклама парфюма из одного фото флакона: @Image1 (флакон) → один промпт Seedance 2.5 на 15 с («Красная Москва» в современной московской квартире)'
+intent_tags:
+- product_ad
+- beauty_ad
+- client_in_clip
+use_when: 'Имиджевая реклама парфюма из одного фото флакона: @Image1 (флакон) → один промпт Seedance 2.5 на 15 с («Красная Москва» в современной московской квартире)'
+inputs:
+- фото товара/продукта
+- логотип
+steps:
+- n: 1
+  action: Фото флакона → @Image 1 (строгий референс бутылки, кириллица, крышка).
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: Seedance 2.5, 9:16, 15 с, промпт ниже.
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: 15 с
+  aspect: '9:16'
+- n: 3
+  action: 'Для своего товара: заменить абзац о флаконе и концепцию (героиня/интерьер) — вручную.'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  Cinematic editorial perfume campaign, 15 seconds, vertical 9:16. Use @Image 1 as the strict authoritative reference for the perfume “Красная Москва” by Новая Заря. Preserve the exact historical bottle identity: rectangular transparent glass bottle with softly rounded shoulders and corners, pale golden-yellow perfume liquid, characteristic bright red sculptural cap, transparent glass neck, original red-and-gold ornamental front label, exact Cyrillic lettering “Красная Москва”, smaller Cyrillic text beneath it, exact label placement and proportions, exact glass proportions and cap-to-bottle ratio. Do not redesign, modernize, simplify or reinterpret the bottle. Do not replace the Cyrillic typography, logo, cap, liquid color or proportions. Do not turn it into a generic modern luxury perfume bottle. The charm must come from the authentic historical object existing inside a contemporary fashion world.
+
+  The concept: a contemporary young woman, approximately 25–30 years old, is getting ready for an evening out in an elegant old Moscow apartment. The visual language subtly references Soviet romantic cinema, but this is not historical reconstruction and not retro cosplay. She is unmistakably modern: refined natural beauty, intelligent expressive face, contemporary makeup, natural skin texture, soft brown or dark brown hair with natural movement, no rigid vintage curls. Makeup is polished but restrained, with luminous natural skin, softly defined eyes and muted deep red or berry lipstick. Wardrobe is modern minimalist eveningwear with a slight echo of classic femininity: an ivory silk blouse, satin top or elegant minimalist dress with clean contemporary lines, soft fluid fabric, subtle neckline, small gold earrings and minimal jewelry. No headscarves, no polka-dot dresses, no theatrical 1950s styling, no Soviet uniforms.
+
+  The apartment should feel timeless and cinematic: tall ceilings, warm parquet floor, cream walls, dark walnut dressing table, large vintage mirror, linen curtains, aged brass details, a small jewelry box, a hairbrush, a crystal or glass tray, one warm table lamp and restrained furniture with subtle Soviet-modernist references. No propaganda, political symbols, flags, portraits, military imagery or kitschy Soviet memorabilia. The Soviet reference should come only through domestic atmosphere, architecture, furniture, light and emotional memory.
+
+  The mood is contemporary high-fashion fragrance cinema crossed with restrained Soviet romanticism: intimate, feminine, slightly melancholic, sensual without overt sexuality, elegant, quiet and observational. It should feel like a private moment rather than a conventional commercial. The emotional idea is that “Красная Москва” is a familiar fragrance carried into a completely new generation. The perfume is the final invisible layer of dressing. The woman does not perform for the camera, does not pose, does not stare into the lens, does not exaggerate facial expressions. Her gestures are casual, precise and self-assured.
+
+  Cinematography: handheld with subtle natural micro-tremor and human camera breathing, never perfectly stabilized. 35–50mm lenses for medium shots, 65–85mm for portrait details, 85–100mm macro for perfume close-ups, T2–T4, shallow depth of field, organic 35mm-style film grain, soft halation, gentle highlight roll-off, slightly lifted blacks and realistic skin texture. Avoid hyper-clean digital sharpness, HDR and glossy beauty-commercial perfection.
+
+  Lighting: early Moscow evening. Cool bluish natural light enters through tall windows while warm tungsten light from the room creates a soft contrast between the city outside and the intimate interior. Window light touches cheekbones, collarbone and hair; warm light catches the red perfume cap and pale golden liquid. No beauty-dish lighting, no artificial product spotlight, no glowing skin. Color palette: warm ivory, cream, dark walnut, aged brass, muted burgundy, faded crimson, black, warm skin and pale golden perfume liquid. The red cap and label of “Красная Москва” are the main visual accent.
+  No sepia filter, no fake vintage yellow, no oversaturated gold, no excessive orange or brown grading.
+
+  0:00–0:02 — medium shot through the reflection of an old dressing-room mirror, handheld 50mm. The woman stands at the mirror in a modern ivory silk blouse or minimalist evening dress. She puts on one small gold earring or adjusts her neckline. Her movement is relaxed and natural. Warm room light touches one side of her face while cool evening light comes from the window. The perfume bottle is visible out of focus on the dressing table but is not emphasized yet.
+
+  0:02–0:04 — intimate 65–85mm close-up. She applies muted deep-red lipstick and gently presses her lips together. Natural skin texture, soft film grain, partial mirror reflection, no posing. She lowers the lipstick and pauses for a fraction of a second.
+
+  0:04–0:06 — detail shot of her hand moving across the wooden dressing table past a jewelry box, hairbrush and glass tray. Her fingers reach for the exact “Красная Москва” bottle from @Image 1. The recognizable red sculptural cap becomes the visual focal point. The gesture is casual and familiar, not a deliberate advertising move.
+
+  0:06–0:08 — extreme product macro, 85–100mm. She lifts the perfume bottle. Show the exact transparent rectangular glass, pale golden perfume liquid, red sculptural cap, original red-and-gold label and readable Cyrillic “Красная Москва”. Light passes naturally through the liquid and glass, slightly distorting the room behind it. Fine fingerprints and tiny realistic imperfections are acceptable. No CGI perfection, no floating bottle, no changed label.
+
+  0:08–0:10 — intimate side-profile close-up. She removes the red cap and gently moves her hair away from her neck. Preserve the authentic physical use of the exact bottle. Do not invent a modern spray nozzle if it is not present in the reference. She applies a small amount of perfume naturally to the side of her neck or wrist according to the real bottle mechanism. No giant mist, no magical fragrance cloud.
+
+  0:10–0:12 — very close observational shot. Her fingers briefly touch the point where the fragrance was applied. She lowers her hand and looks into the mirror, not admiring herself theatrically, simply checking that she is ready. The muted red lipstick and red perfume cap subtly echo each other. Her expression is calm, composed and quietly confident.
+
+  0:12–0:14 — medium shot from behind. She takes a dark coat or minimalist evening bag and walks toward the doorway. The camera remains inside the dressing room. Her reflection disappears from the mirror as she leaves the frame. Soft movement of fabric, subtle evening ambience.
+
+  0:14–0:15 — final product shot. The exact “Красная Москва” bottle remains on the wooden dressing table in the foreground, clearly recognizable. The original label and red cap are visible. In the background: empty mirror, soft curtains and cool Moscow evening outside the window. Warm light passes through the pale golden perfume. Slight handheld camera breathing. Hold naturally for one second.
+
+  Keep the balance approximately 70% contemporary fashion editorial and 30% Soviet romantic visual memory. Modern elements: woman, makeup, styling, wardrobe, framing, pacing and cinematography. Historical echoes: perfume bottle, apartment details, mirror, furniture, warm domestic light and emotional atmosphere. Avoid historical cosplay, stereotypical Soviet woman styling, headscarves, exaggerated retro curls, pin-up aesthetics, propaganda, kitschy nostalgia, fake scratched-film overlays, heavy sepia, excessive slow motion, red rose petals, CGI flowers, fragrance ribbons, glowing particles, theatrical sensuality, exaggerated perfume spraying, product morphing, mirrored typography, incorrect Cyrillic lettering, changed cap, generic luxury packaging, sterile modern penthouse aesthetics and plastic skin. The final result should feel like a modern woman’s private evening ritual captured through the emotional language of classic Moscow cinema: nostalgic, feminine, cinematic and fully contemporary.
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего. Автор пишет «под свой продукт адаптируйте в ChatGPT или Claude» — **этот шаг под запрет брифа, адаптировать вручную** (меняются блоки описания флакона, героини, квартиры)
+source_url: https://t.me/reely_channel/1216
+duplicates_of: []

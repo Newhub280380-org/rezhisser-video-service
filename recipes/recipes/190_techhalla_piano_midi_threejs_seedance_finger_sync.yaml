@@ -1,0 +1,45 @@
+id: 190_techhalla_piano_midi_threejs_seedance_finger_sync
+source_file: 190_techhalla_piano_midi_threejs_seedance_finger_sync.md
+title: 'Синхрон пальцев по нотам: Suno → MIDI → Three.js (один HTML) 3D-видео → первый кадр в Magnific One → Seedance 2.5 с двумя референсами'
+intent_tags:
+- other
+use_when: 'Синхрон пальцев по нотам: Suno → MIDI → Three.js (один HTML) 3D-видео → первый кадр в Magnific One → Seedance 2.5 с двумя референсами'
+inputs:
+- видео-референс (движение/клип)
+- стартовый кадр
+steps:
+- n: 1
+  action: unknown (в источнике нет нумерованных шагов; см. prompts_verbatim)
+  tool:
+  - Seedance
+  - Suno
+  - Magnific
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  Perfect finger sync 👌
+  · Suno for the music
+  · Three.js in a single HTML file to turn MIDI into 3D
+  · One for the images
+  · Seedance 2.5 for the video conversion
+- |-
+  If you make music with Suno, you can export the MIDI and generate the 3D video just like I did using the HTML I shared.
+  Then, we extract the first frame and transform it with Magnific One! It's my go-to model for pretty much everything right now.
+  Prompts in the space.
+- |-
+  Now we just give Seedance 2.5 both references (the video and the first frame) and ask it to use the 3D animation as a reference for the notes our main character is playing.
+  Add extra details like moving waves... whatever you can think of! Once again, the prompt is in the Space.
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: C
+prompt_completeness: partial
+notes: промпты и HTML — в Magnific Space по ссылке-приглашению (нужен вход), не открыто
+source_url: https://x.com/techhalla/status/2113385095260151857
+duplicates_of: []

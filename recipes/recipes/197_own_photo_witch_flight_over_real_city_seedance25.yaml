@@ -1,0 +1,174 @@
+id: 197_own_photo_witch_flight_over_real_city_seedance25
+source_file: 197_own_photo_witch_flight_over_real_city_seedance25.md
+title: '«Ты летишь на метле над своим городом»: одно фото человека (@Image1) + название города → Seedance 2.5, 15 с, FPV-полёт мимо реальных достопримечательностей (хэллоуин-тренд)'
+intent_tags:
+- client_in_clip
+- meme
+- pov_one_take
+- animal
+use_when: '«Ты летишь на метле над своим городом»: одно фото человека (@Image1) + название города → Seedance 2.5, 15 с, FPV-полёт мимо реальных достопримечательностей (хэллоуин-тренд)'
+inputs:
+- фото лица/портрет человека
+- логотип
+steps:
+- n: 1
+  action: Фото человека → @Image1.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'В первой строке заменить CITY: [SAINT PETERSBURG, RUSSIA] на свой город (например, [ALMATY, KAZAKHSTAN]).'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: Seedance 2.5, 9:16, 15 с — промпт целиком.
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: 15 с
+  aspect: '9:16'
+prompts_verbatim:
+- |-
+  CITY: [SAINT PETERSBURG, RUSSIA]
+
+  @Image1 — CHARACTER IDENTITY REFERENCE
+
+  Use the uploaded photograph @Image1 as the sole and mandatory identity reference for the main character.
+
+  Preserve the exact recognizable identity of the person in @Image1 throughout the entire video:
+
+  • Original facial structure, eyes, nose, lips, jawline and cheekbones.
+  • Natural skin tone, age and distinctive facial features.
+  • Exact natural hair color, including roots and highlights.
+  • Recognizable hairstyle and hair texture, adapted only to realistic wind movement.
+  • Original gender presentation and overall physical appearance.
+
+  The character must look like the actual person from @Image1, not a generic model or a similar-looking actor.
+
+  Do not beautify, reshape, rejuvenate, feminize, masculinize or substitute their face.
+
+  Do not copy the clothing, background or pose from the reference photograph.
+
+  AUTOMATIC CHARACTER TRANSFORMATION
+
+  Transform the person from @Image1 into an elegant, mysterious modern witch or wizard.
+
+  Dress the character in a luxurious flowing black gothic outfit inspired by Victorian fashion, with layered dark fabrics, sophisticated tailoring and dramatic wind movement.
+
+  Keep the person’s original face and hair completely recognizable.
+
+  The character rides an authentic old wooden flying broomstick with natural bristles trailing behind.
+
+  No pointed witch hat. No cartoon costume. No wings.
+
+  LOCATION — [CITY]
+
+  The entire video takes place in the real city of [CITY].
+
+  Reconstruct its actual historic architecture, iconic landmarks, streets, rooftops, rivers, bridges and skyline with exceptional geographical and visual accuracy.
+
+  Every visible landmark must belong to [CITY].
+
+  VIDEO FORMAT
+
+  15 seconds, vertical 9:16, ultra-photorealistic cinematic fantasy, high-budget movie production quality.
+
+  0–3 SECONDS — TAKEOFF
+
+  The character from @Image1 stands on the steep rooftop of a historic building overlooking [CITY].
+
+  Lavender-pink twilight illuminates the scene.
+
+  The camera briefly captures the character’s face in a dramatic cinematic three-quarter close-up, clearly establishing their identity.
+
+  Wind moves their hair and dark clothing naturally.
+
+  The character mounts the wooden broomstick, pushes off the rooftop and launches forward.
+
+  The camera immediately follows.
+
+  3–6 SECONDS — HIGH-SPEED FLIGHT
+
+  A spectacular FPV-style tracking shot follows the character flying between the historic buildings of [CITY].
+
+  The broomstick accelerates dramatically.
+
+  The camera moves closely behind and slightly to the side, occasionally revealing the person’s recognizable facial profile.
+
+  The character maneuvers between rooftops, chimneys and architectural details.
+
+  The flight is fast, smooth and physically coherent.
+
+  6–10 SECONDS — ICONIC LANDMARK
+
+  The character rises above the city rooftops.
+
+  The camera performs a sweeping cinematic orbit, briefly revealing the person’s face before moving behind them.
+
+  One of the most iconic and architecturally accurate landmarks of [CITY] fills the background.
+
+  The character flies past it at breathtaking speed.
+
+  Hair and black fabric stream naturally in the wind.
+
+  The city below feels enormous, authentic and alive.
+
+  10–13 SECONDS — DRAMATIC DIVE
+
+  The character suddenly dives toward a beautiful historic passage, canal, riverfront or architectural corridor characteristic of [CITY].
+
+  The camera follows seamlessly.
+
+  Strong perspective, natural motion blur and realistic speed create an immersive sensation of flight.
+
+  The person’s face, outfit and broomstick remain consistent.
+
+  13–15 SECONDS — FINAL REVEAL
+
+  The character flies out into a spectacular panoramic view of [CITY].
+
+  The camera briefly moves alongside them, capturing their recognizable face illuminated by the sunset.
+
+  Then it pulls backward into a cinematic wide shot.
+
+  The character accelerates toward the distant skyline, becoming smaller against the twilight sky.
+
+  VISUAL STYLE
+  Premium dark fantasy realism, romantic gothic atmosphere, atmospheric lavender-pink sunset, subtle fog, amber architectural lighting, sophisticated cinematic color grading, natural skin texture, accurate facial anatomy, realistic hair physics, physically believable fabric movement.
+
+  Dynamic aerial cinematography, smooth sweeping tracking shots, dramatic perspective, seamless visual transitions.
+
+  STRICT CONSISTENCY RULES
+
+  • The person in @Image1 is the ONLY main character.
+  • Their identity must remain recognizable in every facial close-up.
+  • Never change their face or hair color.
+  • Never introduce another witch or wizard.
+  • The character must remain seated on the same broomstick throughout the flight.
+  • Every landmark must belong to [CITY].
+  • No teleportation, random scene changes or impossible camera cuts.
+  • The character must fly in a continuous logical trajectory.
+  • No text, titles, watermarks or logos.
+
+  NEGATIVE PROMPT
+
+  Different face, generic beauty model, identity drift, altered facial features, changing hair color, face morphing, cartoon, anime, artificial CGI, waxy skin, extra limbs, deformed hands, disappearing broomstick, duplicated character, incorrect architecture, invented landmarks, inconsistent geography, teleportation, abrupt camera resets, unnatural flying physics, distorted buildings, excessive motion blur.
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '9:16'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: промпт к 1236 и 1238 (Tesla-доставка, «файл с трассой») — виджет показывает «Please open Telegram to view this comment» (медиа/файл)
+source_url: https://t.me/reely_channel/1247
+duplicates_of: []

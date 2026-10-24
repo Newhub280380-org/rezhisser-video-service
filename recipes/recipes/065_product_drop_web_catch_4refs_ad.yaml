@@ -1,0 +1,60 @@
+id: 065_product_drop_web_catch_4refs_ad
+source_file: 65_product_drop_web_catch_4refs_ad.md
+title: '# 65 — Реклама товара «паутиной»: 4 фото (стоите / жест паука / держите товар / товар крупно) → Seedance 2.5, товар падает, slow-mo, паутина притягивает его в руку'
+intent_tags:
+- product_ad
+use_when: 'Товар-герой в вашей комнате: падение сверху, перевод фокуса, «паутина» и возврат в руку; без музыки, только SFX. Второй вариант (792) — студийный белый фон, рука в костюме Spider-girl ловит стакан
+  кофе (один референс товара).'
+inputs:
+- фото товара/продукта
+- аудио/голос
+- логотип
+steps:
+- n: 1
+  action: unknown (в источнике нет нумерованных шагов; см. prompts_verbatim)
+  tool:
+  - Seedance
+  - Veo
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "Инструкция:\n1. Переходим в VeoSeeBot \n2. Нейросеть Seedance 2.5\n3. В раздел с референсами вставляем 4 фото: человек просто стоит, человек стоит и рука в позе спайдер мена, человек держит предмет и\
+  \ крупный план самого предмета.\nИ в раздел с промптом вставляем такой запрос:\nUse [IMAGE 1] only as the visual reference for the item/object. The object should match the item shown in [IMAGE 1] accurately,\
+  \ including its design, proportions, colors,\nmaterials, shape, surface details, and overall appearance. Do not use [IMAGE 1] as the\nscene composition or background. The object must be recreated and\
+  \ integrated naturally into the main scene.\nUse [IMAGE 2], [IMAGE 3], and [IMAGE 4] as the primary scene and action references. Preserve the same room, background ighting mood, subject identity, clothing,\
+  \ and overall environment. The animation should happen in my scene, not in the object reterence image\nCreate one continuous cinematic shot.\nThe scene starts with the model standing in a normal neutral\
+  \ position in the room. Then the object drops down into frame from above camera, entering from the top of the frame. It should appear large, close to the lens, and in the foreground, as if falling dire\
+  \ front of the camera. Make this moment feel dynamic and intentional, not static. The camera should shift focus onto the falling obje so that the object is tack sharp and in focus, while the background\
+  \ and the model become softly blurred with shallow depth of field and bokeh.\nAs ine objectalls, it slows down in midair and enters a dramatic slow-motion moment. It should feel like it is floatina brieflv\
+  \ in front of the camera. The object must look realistic, professionally lit, sharp, and naturally part of the environment, with believable reflections, shadows, and perspective matching the room.\nAt\
+  \ that moment, the model performs the Spider-Man web-shooting hand gesture. A visible, realistic Spider-Man-style web shoots out from the hand in slow motion. The web should shoot forward quickly, attach\
+  \ clearly onto the object, and wrap onto it in a\none dad me a ve mis de visible ana strandlike, sinlar to a opider vian wee\nical, not fabric-like, cloth-like, or thick like ribbon. Avoid a soft fabric\
+  \ app\nstretch isnould reelike a strona sviere wee ume wima clean solder-Man aesmerc, nounke ciom or smaune siranos snould loc\nslightly glossy and tight, with natural tension as they shoot forward, latch\
+  \ onto the object, and retract. Keep the web elegant, sharp, and cinematic while still feeling grounded and bellevable.\nThen the web retracts and pulls the floating object all the way back toward the\
+  \ model's hand. The motion should feel fast smooth, and satisfying, with the object traveling from the foreground back\nscene.\nImportant:\n- [IMAGE 1] is only for the object design reference\n[IMAGE\
+  \ 2), [IMAGE 3], and [IMAGE 4] define the main scene, subject, and action\n• Do not anenor too neavily to ine object reterence traming\n- The object must actually fall in from the top of frame and exist\
+  \ inside the main environment\nKeep the result as one continuous shot\n- Ivo jumo culs, no teleporne, no sudden appearance drune oulec\n• No fake fade transitions\n- The object motion, focus pulls, and\
+  \ web interaction should feel cinematic, smooth, and physically believable\nStyle: cinematic, sharp, professional lighting, realistic integration, shallow depth of field, dramatic slow motion, clean VFX,\
+  \ strong foreground-background separation.\nAUdIO:\nNo music at all. No soundtrack, no background music, and no chimes. Use only professional sound effects and natural ambient audio. The audio should\
+  \ include subtle room ambience, clean slow-motion sound design, and a satisfying Spider-Man-style web sound design should feel polished, cinematic, and professional, but strictly SFX only with no music\
+  \ or melodic elements"
+- "Инструкция:\n1. Переходим в VeoSeeBot \n2. Нейросеть Seedance 2.5\n3. Вставляем фото своего продукта и такой промпт:\n\nA playful, high-energy 4K commercial video on a seamless solid white studio backdrop\
+  \ with bright high-key lighting.\n\nA hand wearing a classic textured pink-and-white Spider-girl suit extends from the left edge of the frame, striking a web-shooting gesture.\n\nIt fires a taut, light-orange\
+  \ braided yarn web horizontally across the screen.\n\nThe camera smoothly tracks the yarn as it travels through mid-air and rapidly expands into a woven mesh net on the right, perfectly wrapping around\
+  \ a floating clear plastic Starbucks takeaway cup filled with light-brown iced coffee. The cup has a transparent flat plastic lid, visible ice cubes inside, the classic green-and-white Starbucks logo\
+  \ centered on the front, and a single long white paper straw extending upward through the lid. The drink has a slightly darker coffee layer toward the bottom and a thin light foam layer near the top.\
+  \ The cup should closely match the provided reference image in shape, proportions, drink color, lid, straw, and overall appearance.\n\nThe Spider-girl gloved hand immediately reaches back into the frame,\
+  \ grabs the netted cup, and pulls it toward the left.\n\nFast, snappy commercial motion, crisp focus on the ice and condensation, clean minimalist aesthetic."
+output:
+  format: mp4
+  resolution: 4K
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: partial
+notes: ничего
+source_url: https://t.me/reels_by_alsi/773
+duplicates_of: []

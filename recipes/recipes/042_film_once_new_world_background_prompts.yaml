@@ -1,0 +1,136 @@
+id: 042_film_once_new_world_background_prompts
+source_file: 42_film_once_new_world_background_prompts.md
+title: 'Снял себя на пустыре → тот же исполнитель в другом мире: промпты «keep motion, replace environment»'
+intent_tags:
+- talking_head
+- client_in_clip
+- seamless_series
+- pov_one_take
+- motion_transfer
+use_when: 'Снял себя на пустыре → тот же исполнитель в другом мире: промпты «keep motion, replace environment»'
+inputs:
+- фото в полный рост
+- видео-референс (движение/клип)
+steps:
+- n: 1
+  action: '@ledger599 (пост целиком):
+
+    [PROMPT]'
+  tool: unknown
+  mode: unknown
+  prompt:
+  - |-
+    Here's exactly how to film yourself in a field and end up on a private beach.
+
+    step 1. shoot one clean video of yourself. a simple location is best, an empty field, a parking lot, a blank wall. good daylight, steady camera, your full body in frame. walk, talk, gesture naturally. this is your motion reference, so the movement matters more than the background.
+
+    step 2. go to an AI video tool that supports video-to-video with a reference (OpenArt, Runway, Kling, Higgsfield all do this). upload your clip.
+
+    step 3. tell it to keep your motion but rebuild the world. the prompt is the whole trick: "keep the exact body motion, timing and gestures from the reference video. replace the entire environment with a luxury tropical beach, white sand, turquoise water, a white modern villa and a yacht in the background, bright sunny daylight, cinematic." your movement stays, the field disappears.
+
+    step 4. match the lighting or it looks fake. if you filmed in flat daylight, ask for "bright midday sun" so the shadows on you line up with the new scene. mismatched light is the number one thing that gives it away.
+
+    step 5. generate, then fix. first result is usually 80 percent there. push back: "more realistic sand texture," "keep my face consistent," "remove the warping on my hands." 2 to 3 passes and it's clean.
+
+    step 6. export, cut to 15 seconds, post. the swap between your real field and the fake beach IS the hook, so show both.
+
+    the whole thing is one principle: film the performance once, generate the world as many times as you want. one take, infinite locations.
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: '@TawohAwa:
+
+    ```text'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'REPLACE THE BACKGROUND
+
+
+    Put yourself somewhere completely different.
+
+
+    PROMPT:
+
+
+    “Replace the background of this video with [NEW LOCATION].
+
+
+    Keep the main subject consistent with the original footage.
+
+
+    Match the new environment to the camera perspective, lighting, shadows, depth, and overall color of the original clip.
+
+
+    Add subtle environmental movement like [TREES SWAYING/PEOPLE WALKING/MOVING LIGHTS].
+
+
+    Make the subject feel naturally integrated into the new environment.”
+
+    ```'
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: '@rewind02:
+
+    [PROMPT]'
+  tool: unknown
+  mode: unknown
+  prompt:
+  - |-
+    larping just got 4.5x cheaper...
+
+    wan 3.0 is now on higgsfield, and it costs 4.5x less than seedance 2.5
+
+    below: filmed in a backyard next to a trampoline
+    above: same guy, same moves, same words, on a rooftop with a pool and a skyline
+
+    how it works:
+
+    - step 1: film yourself talking anywhere: backyard, bedroom, parking lot
+    - step 2: upload the clip to higgsfield and pick wan 3.0
+    - step 3: describe the new scene: “rooftop terrace, infinity pool, city skyline at sunset”
+    - step 4: wan 3.0 keeps your face, gestures and timing, and swaps the world around you
+
+    the rule that changes everything... at 4.5x cheaper, you can test 5 scenes for the price of 1
+
+    the cheaper it gets, the more you can experiment
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  4. REPLACE THE BACKGROUND
+
+  Put yourself somewhere completely different.
+
+  PROMPT:
+
+  “Replace the background of this video with [NEW LOCATION].
+
+  Keep the main subject consistent with the original footage.
+
+  Match the new environment to the camera perspective, lighting, shadows, depth, and overall color of the original clip.
+
+  Add subtle environmental movement like [TREES SWAYING/PEOPLE WALKING/MOVING LIGHTS].
+
+  Make the subject feel naturally integrated into the new environment.”
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: Движение берётся из снятого видео, окружение пишется текстом; свет должен совпадать с новым миром (пункт 4 у ledger599).
+confidence: B
+prompt_completeness: complete
+notes: —
+source_url: null
+duplicates_of: []

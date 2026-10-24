@@ -1,0 +1,127 @@
+id: 211_pov_longboard_three_worlds_bg_sheets_seedance25_30s_one_take
+source_file: 211_pov_longboard_three_worlds_bg_sheets_seedance25_30s_one_take.md
+title: 'Бесшовный 30-секундный POV-«аттракцион» через 3 мира: 3 фона-листа (по одному на каждую смену места) → Seedance 2.5 одним дублем, всё между фонами — промптом; продление — прошлым видео как референсом'
+intent_tags:
+- seamless_series
+- pov_one_take
+use_when: 'Бесшовный 30-секундный POV-«аттракцион» через 3 мира: 3 фона-листа (по одному на каждую смену места) → Seedance 2.5 одним дублем, всё между фонами — промптом; продление — прошлым видео как референсом'
+inputs:
+- стартовый кадр
+- финальный кадр
+- аудио/голос
+steps:
+- n: 1
+  action: 'Сделать 3 фона (любой генератор картинок; промптов автор не дал): Image1 — горная дорога на закате (это первый кадр), Image2 — туннель, превращающийся в межпространственный проход, Image3 — фэнтези-лесная
+    дорога с замком.'
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Seedance 2.5 / 30 с / 16:9 / 720p. Загрузить референсы строго в этом порядке: <<<Image1>>>, <<<Image2>>>, <<<Image3>>>.'
+  tool:
+  - Seedance
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: 30 с
+  aspect: '16:9'
+- n: 3
+  action: 'Вставить промпт ниже (дословно). Тайминги использования фонов: Image1 0–14,6 с, Image2 14,6–24,3 с, Image3 24,3–30 с.'
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: 6 с
+  aspect: unknown
+- n: 4
+  action: Для продолжения — подать полученный ролик референсом и генерировать дальнейший участок.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: previous_step_output
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  참조 (이 순서로 업로드)
+  - <<<Image1>>> 배경 — 해 질 녘 산악 도로 (첫 프레임)
+  - <<<Image2>>> 배경 — 차원 통로로 변하는 터널 안
+  - <<<Image3>>> 배경 — 판타지 숲길과 성
+
+  설정: Seedance 2.5 / 30초 / 16:9 / 720p
+
+  PROMPT
+  [GLOBAL]
+  30 seconds, 16:9, photoreal first-person POV experience video, ONE continuous shot with no cuts. A downhill longboard rider races down a mountain road at sunset; a meteor falls far away, its blast wave chases the rider, who escapes into a road tunnel that becomes a dimensional passage and comes out on a cobblestone road in a high-fantasy world, still racing. No dialogue, no voice, no music, no subtitles, no text.
+  POV RULE: the camera is the rider's eyes, low and close to the board, looking forward down the road. Only the tip of the longboard's nose, a wooden deck with black grip tape, is visible at the bottom center of the frame for the entire 30 seconds. No feet, no legs, no body, no face, no third-person view.
+  SPEED RULE: aggressive downhill speed of about 70 km/h from the first frame to the last frame, like a real high-speed downhill longboard run. The lane dashes and road texture stream toward the camera in a fast blur, roadside reflector posts and guardrail posts snap past every fraction of a second, strong motion blur at the edges of the frame while the center stays readable, the board chatters with vibration. Never slow down. The clip ends mid-motion.
+
+  [CAMERA CONTRACT]
+  Single continuous low POV shot, very close to the asphalt. The view leans hard into each curve, tilting 10 to 15 degrees with the carve, with constant high-frequency vibration from the wheels. Speed shown by the road surface, lane dashes, guardrail posts, rocks and trees whipping past very close to the lens; the far background moves slowly, which makes the near motion feel even faster.
+
+  [SCENE CONTEXT]
+  Escape story in three places: a real mountain road at sunset (threat), a road tunnel that turns into a violet-teal dimensional passage (passage), a fantasy forest road leading to a castle (arrival).
+
+  [REFERENCE USAGE]
+  <<<Image1>>> locks the mountain road at sunset: the road, the rock wall on the left, the guardrail and valley on the right, the far flat horizon straight ahead; it is the first frame. Used 0–14.6 s.
+  <<<Image2>>> locks the inside of the tunnel: ordinary concrete and orange lights at first, then walls and floor turning into violet and teal light rings and a glowing floor leading to a white exit. Used 14.6–24.3 s.
+  <<<Image3>>> locks the arrival world: cobblestone road between mossy rocks and pines, a fantasy castle at the far end, snowy mountains, a large pale moon. Used 24.3–30 s.
+  Do not copy the still look: everything in the video moves.
+
+  [FIRST FRAME]
+  <<<Image1>>> seen from the rider's low eyes, already rolling fast downhill: only the tip of the board nose at the bottom center, the road curving down ahead, empty sunset sky over the far horizon.
+
+  [SPATIAL BLOCKING]
+  The rider travels forward the whole time. Rock wall on the left, guardrail and valley on the right until the tunnel. The meteor falls and hits exactly at the far horizon straight ahead, beyond the valley. From 10 s a stone road tunnel is visible far ahead on the mountainside on the right, its dark inside glowing violet, and the road leads into it. Inside the tunnel the exit is always straight ahead. In the fantasy world the castle is straight ahead at the end of the road.
+
+  [SHOT FORMAT]
+  One shot, 0–30 s, no cuts.
+
+  [CAMERA]
+  SHOT 1 0–30 s. Purpose: the viewer rides the whole escape. Low POV close to the board, wide natural action-camera lens, looking forward down the road, horizon in the upper third; move: fast forward travel with hard 10–15 degree leans into curves. End frame: still racing down the cobblestone road at full speed, rocks and pines whipping past, the castle ahead; the clip ends mid-motion.
+
+  [CONTINUITY LEDGER]
+  Only the tip of the board nose is ever visible, always at the bottom center. Same longboard throughout. The meteor impact point stays on the far horizon straight ahead. The fire and dust wall only grows and comes closer until 14.6 s. Asphalt road until the tunnel; glowing light floor inside the passage; cobblestone road in the fantasy world. Speed never drops.
+
+  [LIGHTING]
+  0–3 s: warm gold sunset from ahead. 3–14.6 s: the impact turns the whole scene burning orange from the horizon. 14.6–15.2 s: dark tunnel with orange ceiling lights. 15.2–24.3 s: violet and teal light from the rings, white light from the exit growing from 21.5 s. 24.3–30 s: golden forest light with god rays and the pale moon above the castle.
+
+  [PERFORMANCE]
+  The rider is never seen; the riding is felt through the board: quick carves left and right on the mountain road, a hard lean toward the tunnel, a steady straight line inside the passage, then carving fast down the cobblestone road in the fantasy world.
+
+  [EFFECTS]
+  Meteor: a small burning rock with a long thin trail of fire and smoke, small in the frame, descending to the far horizon. Impact: a white-orange flash on the horizon, a rising column of fire and smoke about one sixth of the frame width, then a low wall of dust and fire spreading across the valley toward the mountains. Passage: walls and floor dissolve into violet and teal light rings that stream past; the white exit grows into a flash that reveals the new world. Fantasy world: rocks, pines and cobblestones whipping past.
+
+  [EVENT TRACK]
+  1.5 s fiery point appears above the far horizon. 2.0 s meteor streaks down. 3.0 s impact flash. 4.0 s fire column rises and grows. 6–14 s dust and fire wall spreads across the valley and comes closer after each curve. 10.0 s tunnel visible far ahead on the right, glowing violet inside. 14.6 s enter the tunnel. 15.2 s walls and floor begin to dissolve into light rings. 21.5 s white exit starts to grow. 24.3 s white flash, fantasy world revealed. 24.3–30 s full speed to the last frame.
+
+  [TIMELINE]
+  0–1.5 s: rolling fast down the sunset mountain road, guardrail posts flicking past on the right, rock wall on the left, carving through a curve.
+  1.5–3 s: a small fiery point appears above the far horizon straight ahead and streaks down at a steep angle, two or three tiny fragments splitting off.
+  3–4 s: it hits the horizon: a white-orange flash, then a column of fire and smoke starts to rise; the light turns burning orange.
+  4–10 s: the fire column grows into a towering cloud on the horizon while the rider carves through two curves; a low wall of dust and fire spreads across the far valley toward the mountains.
+  10–14.6 s: rounding a bend, a stone road tunnel appears far ahead on the mountainside on the right, its dark inside glowing violet; the dust wall comes closer after each curve; the rider leans hard toward the tunnel and at 14.6 s the board rolls into it.
+  14.6–15.2 s: inside the ordinary tunnel, orange ceiling lights flash overhead, the roar outside cuts off.
+  15.2–21.5 s: the walls and the asphalt floor dissolve into violet and teal light rings and a glowing floor streaming past; the board rides straight toward a white point far ahead.
+  21.5–24.3 s: the white exit grows in concentric rings until it fills the frame.
+  24.3–30 s: out onto a cobblestone road in a high-fantasy forest at full speed, mossy rocks and pines whipping past on both sides, carving through a curve, a grand castle on a cliff at the end of the road and a large pale moon above it; still racing at the last frame.
+
+  [AUDIO]
+  Wheels humming on asphalt and rushing wind, a low rumble growing as the meteor falls, a deep boom at 3 s, a rising roar of the blast wave, silence and a deep hum inside the passage, a soft whoosh at the white exit, wheels rattling fast on cobblestones and rushing wind to the end. No music, no voice.
+
+  [LOCAL CONSTRAINTS]
+  One continuous shot, no cuts. First-person only; only the tip of the board nose is ever visible. No feet, no legs. Never slow down; full speed to the very last frame, the clip ends mid-motion. The meteor and impact stay far away on the horizon, never close or overhead. No people, no cars, no text, no subtitles, no music.
+output:
+  format: mp4
+  resolution: 720p
+  aspect: '16:9'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: 'промпты для самих 3 фон-листов автор не дал (картинки в посте); шаг 4 автора «промпт всегда шлифую через Claude или GPT» — **под запрет брифа**, исключён: готовый промпт ниже дан целиком, шлифовать
+  вручную / любым разрешённым LLM'
+source_url: https://x.com/EEJ_OOXO/status/2113979619577917830
+duplicates_of: []

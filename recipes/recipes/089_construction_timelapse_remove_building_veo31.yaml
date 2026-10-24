@@ -1,0 +1,65 @@
+id: 089_construction_timelapse_remove_building_veo31
+source_file: 89_construction_timelapse_remove_building_veo31.md
+title: 'Таймлапс стройки: стереть здание с фото → Veo 3.1 первый/последний кадр'
+intent_tags:
+- seamless_series
+use_when: Берётся фото готового здания (своего или заказчика). Nano Banana Pro удаляет здание, оставляет пустую площадку с тем же ракурсом. Veo 3.1 получает пустую площадку первым кадром и исходное фото
+  последним, плюс таймкодированный промпт таймлапса. Выходит 8-секундный ролик «здание вырастает». Автор пише
+inputs:
+- стартовый кадр
+- финальный кадр
+steps:
+- n: 1
+  action: 'Nano Banana Pro (у автора через VeoSeeBot): фото здания + промпт удаления (рус.).'
+  tool:
+  - Veo
+  - Nano Banana
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'Veo 3.1, режим кадров: первый кадр = пустая площадка, второй = оригинал со зданием, длинный промпт с таймкодами [00:00–00:01]… до 8 с.'
+  tool:
+  - Veo
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: 8 с
+  aspect: 00:00
+- n: 3
+  action: Готовый таймлапс, при желании ускорение/музыка в монтаже.
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- "=== https://t.me/video_ai_prompt/124 2026-01-20T07:37:09+00:00\nСтроительный таймлапс в Veo 3\n\nСоздаем крутой эффект таймплапса стройки здания, видел в Тредс, что за это берут даже деньги. Вот пошаговая\
+  \ инструкция.\n\n1. Находим фотографию нужного здания или используем свое. Далее переходим в VeoSeeBot и выбираем Nano Banana Pro, загружаем фото и пишем этот промпт:\n\nУдали все здания с загруженной\
+  \ фотографии и сооружения с этой локации, оставь только пустую площадку для строительства. Не меняй угол камеры и ракурс.\n\n2. Далее там же в боте, выбираем Veo 3.1. Первым кадром загружаем фото без\
+  \ здания, второе фото со зданием и вставляем этот промпт:\n\nUltra-realistic cinematic timelapse, daylight progression from sunrise to sunset, adaptive static camera, natural lighting and shadows, realistic\
+  \ construction machinery and human motion. \n\n[00:00–00:01] Wide static shot of an empty construction site at dawn. The camera is positioned slightly elevated, showing the entire area where the future\
+  \ building will rise. Workers and vehicles arrive, fencing and markings appear. Excavators begin digging the pit. Ambient: light wind, distant city hum, engine start sounds. \n\n[00:01–00:03] Excavation\
+  \ deepens, dump trucks haul away soil. The foundation outline becomes visible. Rebar grids are installed, and concrete is poured. Construction lights flicker on briefly as morning transitions into bright\
+  \ daylight. SFX: machinery rumble, metal clanks, worker coordination. \n\n[00:03–00:05] The building frame gradually rises. Cranes lift steel beams, scaffolding expands, floors are added one by one. Workers\
+  \ move in fast-paced but smooth motion — a true construction rhythm. Sunlight shifts naturally with the passing hours. Emotion: determination and progress. \n\n[00:05–00:07] Walls are completed, windows\
+  \ and roofing appear. The site becomes tidier, vehicles leave. Shadows lengthen as the day nears sunset. Warm golden tones fill the frame, reflecting off glass and metal surfaces. SFX: quieter, the rhythmic\
+  \ sound of tools and wind. \n\n[00:07–00:08] The finished building stands complete. The lighting transitions gently to dusk. Cars move on nearby roads — a subtle hint of life. The windows light up briefly.\
+  \ Camera remains stable to the very end. SFX: soft evening ambience, subtle orchestral swell. Camera behavior: Adaptive static timelapse camera — remains nearly fixed but gently adjusts framing and focal\
+  \ length to keep the entire building visible from foundation to completion. Subtle parallax and depth preserved. No sudden jumps or cuts. Mood & Aesthetic: Realistic time progression, smooth tempo, sense\
+  \ of growth and accomplishment, natural light evolution throughout the scene. Total duration: 8 seconds (balanced: ~7s construction, 1s final reveal).\n\nПолучаем крутой результат. Если не понравилось,\
+  \ прогоняем еще раз. Если хотите больше промптов для видео, у меня есть второй канал с промптами для видео, буду раз вас видеть.\n\n❤ Примерами своих генераций вы можете поделиться в нашем уютном чатике\
+  \ @neuro_smoking\n\n#туториал@dailyprompts\n  \n    Please open Telegram to view this post\n    VIEW IN TELEGRAM\n  \n\n  \n    Please open Telegram to view this post\n    VIEW IN TELEGRAM"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего; бот VeoSeeBot платный по кредитам — можно заменить любым Nano Banana Pro и Veo 3.1 с режимом frames
+source_url: https://t.me/video_ai_prompt/124
+duplicates_of: []

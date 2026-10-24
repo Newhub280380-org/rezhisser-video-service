@@ -1,0 +1,60 @@
+id: 008_minimax_h3_character_swap_lora
+source_file: 08_minimax_h3_character_swap_lora.md
+title: 'LoRA «Character Swap» для MiniMax H3: усиление «следуй за референс-видео» на быстрых движениях; три источника практики'
+intent_tags:
+- client_in_clip
+- motion_transfer
+use_when: 'LoRA «Character Swap» для MiniMax H3: усиление «следуй за референс-видео» на быстрых движениях; три источника практики'
+inputs:
+- видео-референс (движение/клип)
+steps:
+- n: 1
+  action: 'Базовый воркфлоу ComfyUI ref2va, видео-референс = исходное видео, картинка = замена. Для BFS-варианта: источник подключать через ноду Add Guide (LoRA обучена «на guide latents»), ComfyUI Planner
+    в комплекте, но не обязателен.'
+  tool:
+  - ComfyUI
+  mode: unknown
+  prompt: unknown
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'arthan1011: swap умеет и сама модель H3 ref2va (и стилизованных, и реалистичных) без адаптеров; LoRA на силе 1.0 нужна, чтобы усилить «следовать референс-видео» на быстрых движениях (сравнение:
+    LoRA 1.0 слева / без LoRA справа, тот же промпт).'
+  tool:
+  - MiniMax H3
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Better-Interview-793: настройки — обычный comfy-воркфлоу, оригинальная ref2va int8 pruned, 1.2 MP, 20 шагов, speed-up LoRA использовать лучше НЕ надо; промпт: сначала описать заменяемого человека
+    в видео, затем свой персонаж подробнее, плюс пара инструкций под конкретный клип; если людей несколько — указать, кого заменить, по одежде/положению. Проблема: «просачивание» мелких деталей оригинала
+    (руки, пальцы, зубы, ногти). 26 минут на 5090.'
+  tool:
+  - ComfyUI
+  mode: unknown
+  prompt: unknown
+  input_source: previous_step_output
+  duration: unknown
+  aspect: unknown
+- n: 4
+  action: 'Alissonerdx: LoRA заменяет главного героя guide-видео, сохраняя движение, мимику, камеру и сцену; лучше работает на людях и человекоподобных; «экспериментальна, далека от идеала».'
+  tool: unknown
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim: []
+output:
+  format: mp4
+  resolution: unknown
+  aspect: unknown
+done_criteria: LoRA повышает «приклеенность» движения к референсу; прокомпозитить подробным описанием «кого заменить / чем заменить».
+confidence: B
+prompt_completeness: gaps
+notes: Файлы LoRA/страницы HF/Civitai, примеры видео.
+source_url: null
+duplicates_of: []

@@ -1,0 +1,99 @@
+id: 078_director_mode_one_image_9_keyframes_kling26
+source_file: 78_director_mode_one_image_9_keyframes_kling26.md
+title: '# 78 — «Director Mode»: ОДНА картинка → Nano Banana Pro (Gemini 3 Thinking) пишет 9 кейфреймов + сетку 3×3 → каждый кадр отдельно в 16:9 → Kling 2.6 по 5 с → CapCut'
+intent_tags:
+- talking_head
+use_when: '# 78 — «Director Mode»: ОДНА картинка → Nano Banana Pro (Gemini 3 Thinking) пишет 9 кейфреймов + сетку 3×3 → каждый кадр отдельно в 16:9 → Kling 2.6 по 5 с → CapCut'
+inputs:
+- аудио/голос
+steps:
+- n: 1
+  action: 'Nano Banana Pro в Gemini, **режим Thinking** (автор: «this matters a lot»): референс-картинка + промпт Director Mode. Больше 9 кадров не советует («up to 16 or 20 … you''re really pushing the
+    AI»). Альтернатива: Higgsfield → Apps → Shots → upload image.'
+  tool:
+  - Higgsfield
+  - Nano Banana
+  - Gemini
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: user_input
+  duration: unknown
+  aspect: unknown
+- n: 2
+  action: 'В том же чате: загрузить сетку + промпт извлечения, меняя номер кадра 1…9. Если кадр «ушёл» — перегенерировать или вырезать панель вручную.'
+  tool: unknown
+  mode: unknown
+  prompt: see prompts_verbatim (verbatim block(s) below, from source)
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+- n: 3
+  action: 'Kling AI → AI video generator → модель 2.6 → image to video: кадр + текст кадра из раздела D (убрать строку длительности), 5 с.'
+  tool:
+  - Kling
+  mode: image to video
+  prompt: unknown
+  input_source: unknown
+  duration: 5 с
+  aspect: unknown
+- n: 4
+  action: 'CapCut: клипы по порядку. Голос персонажа — ElevenLabs (указан в описании).'
+  tool:
+  - ElevenLabs
+  - CapCut
+  mode: unknown
+  prompt: unknown
+  input_source: unknown
+  duration: unknown
+  aspect: unknown
+prompts_verbatim:
+- |-
+  1️⃣ THE "DIRECTOR MODE" PROMPT (Step 1)
+  Copy and paste this into Nano Banana Pro to generate your initial analysis and storyboard structure.
+
+  You are a professional film trailer director, cinematographer, and storyboard artist. Your task is to take ONE single reference image and expand it into a coherent, cinematic storyboard suitable for AI video generation.
+
+  Before generating anything: First, carefully analyze the entire scene in the reference image. Identify: – All visible subjects (people, vehicles, animals, objects, environment) – Their positions, orientation, gaze direction, and interactions – The environment, time of day, and lighting style
+
+  Important rules you must follow: – Do not guess identities or invent information – Do not add new characters or objects – Keep the same subjects, clothing, environment, time of day, and lighting across all shots – Only vary framing, camera angle, camera movement, and action – Maintain realistic cinematic logic: Wide shots = deeper depth of field Close-ups = shallower depth of field – Use a consistent cinematic color grade across all shots
+
+  Your goal: Create a 20–50 second cinematic sequence with a clear narrative arc: Setup → Escalation → Turning Point → Resolution
+
+  Output the following sections in this exact order:
+
+  A) Scene Breakdown Describe subjects, environment, lighting, atmosphere, and visual anchors.
+
+  B) Theme & Story Provide a concise theme, a cinematic logline, and a four-beat emotional arc.
+
+  C) Cinematic Approach Explain shot progression, camera movement, lens choices, depth of field, and lighting strategy.
+
+  D) Keyframe List Generate exactly 9 cinematic keyframes. Each keyframe must include: – Duration – Shot type – Composition – Action – Camera movement – Lens and depth of field – Lighting and color grade – Optional sound or atmosphere cue – Story dialogue or voice line
+
+  Include at least: – One wide establishing shot – One intimate close-up – One extreme detail shot – One visually impactful angle (high or low)
+
+  E) Master Storyboard Grid Create ONE 3×3 storyboard grid image containing all 9 keyframes. Label each panel with keyframe ID, shot type, and duration. After the grid, include a detailed textual breakdown of each keyframe.
+
+  2️⃣ THE "FORCED GENERATION" PROMPT (Troubleshooting)
+  If the AI writes the text but forgets to draw the image, simply reply with this:
+
+  "generate the 3x3 grid image here based on the above keyframes" ;
+
+  If the AI only generate image but no text ,add this before Section E (Master Storyboard Grid)::
+
+  ONLY AFTER all text sections above are fully completed,
+  generate ONE single master storyboard contact sheet image.
+
+  3️⃣ THE EXTRACTION PROMPT (Step 2)
+  Use this when isolating/upscaling a specific panel to ensure it stays 16:9 and full screen (Replace '1' with your desired frame number).
+
+  "The keyframe 1 of the scene，16:9 aspect ratio, full frame, no letter boxing, no black bars"
+output:
+  format: mp4
+  resolution: unknown
+  aspect: '16:9'
+done_criteria: unknown
+confidence: B
+prompt_completeness: complete
+notes: ничего
+source_url: https://www.youtube.com/watch?v=zRtEovFgFjs
+duplicates_of: []
