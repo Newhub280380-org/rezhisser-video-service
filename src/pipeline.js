@@ -96,8 +96,16 @@ function createVideoPipeline({ db, provider, storage, billing, logger = console,
     try {
       updated = await db.updateVideoJob(job.id, { status: 'processing', providerTaskId: taskId });
     } catch (error) {
+      // The task already runs at the provider: cancel it so it is not billed
+      // orphaned, and fail the job so the reservation is refunded.
       release();
-      throw error;
+      try {
+        await provider.cancel(taskId);
+      } catch (cancelError) {
+        logger.error(`seedance cancel for job ${job.id} failed: ${cancelError.code || 'error'}`);
+      }
+      logger.error(`updateVideoJob after submit for job ${job.id} failed: ${error.code || 'error'}`);
+      return fail(job, { code: 'internal_error', message: 'Не удалось сохранить задачу после отправки в сервис генерации.' });
     }
     return poll(updated, Date.parse(job.createdAt) || now(), release);
   }
